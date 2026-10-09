@@ -6,11 +6,36 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-// מילון הדגמים האישי שלנו - משודרג! אפשר לשים פה מספרי רישוי, קודי דגם או שמות דגם
-const customSpecs = {
-    "12934003": { hp: 300, modelName: "CUPRA LEON VZ", gimur: "VZ" }, // הרכב שלך! יזוהה בוודאות לפי הלוחית
-    "KL1CIZ": { hp: 300, modelName: "CUPRA LEON VZ", gimur: "VZ" }  // גיבוי למקרה שיחפשו רכב אחר מאותו דגם
-};
+// הקוד שואב את המפתח בצורה מאובטחת מההגדרות של השרת ב-Render
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+
+async function getHpFromAI(manufacturer, modelName, year, engineCode) {
+    if (!GEMINI_API_KEY) return null;
+    
+    const prompt = `מה כוח הסוס (HP) של רכב מתוצרת ${manufacturer} דגם ${modelName} שנת ${year} עם קוד מנוע ${engineCode}? תחזיר רק את המספר המדויק בספרות, ללא שום מילה נוספת.`;
+    
+    try {
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                contents: [{ parts: [{ text: prompt }] }]
+            })
+        });
+        
+        const data = await response.json();
+        if (data && data.candidates && data.candidates.length > 0) {
+            let hp = data.candidates[0].content.parts[0].text.trim();
+            hp = hp.replace(/[^0-9]/g, '');
+            if (hp && parseInt(hp) > 0) {
+                return `${hp} כ"ס (AI)`;
+            }
+        }
+    } catch (error) {
+        console.error("שגיאה ב-AI:", error);
+    }
+    return null;
+}
 
 app.get('/api/car/:plate', async (req, res) => {
     const plate = req.params.plate;
@@ -28,31 +53,15 @@ app.get('/api/car/:plate', async (req, res) => {
             
             const tozeretCd = car.tozeret_cd;
             const degemCd = String(car.degem_cd).trim();
+            const manufacturer = car.shem_yatzran || car.tozeret_nm || "לא ידוע";
+            const year = car.shnat_yitzur || "לא ידוע";
             
             let hpValue = "";
             let displayModel = car.toar_degem || car.כינוי_מסחרי || car.degem_nm || degemCd;
             let gimur = car.ramat_gimur || "";
+            let engineCode = car.degem_manoa || "";
 
-            // 1. חיפוש חכם במילון האישי (לפי מספר רכב, לפי קוד דגם או לפי שם דגם)
-            let customMatch = customSpecs[plate] || customSpecs[degemCd] || customSpecs[displayModel];
-            
-            // חיפוש חלקי - אם שם הדגם כולל את המילה "KL1CIZ" בתוכו
-            if (!customMatch) {
-                for (const key in customSpecs) {
-                    if (displayModel.includes(key)) {
-                        customMatch = customSpecs[key];
-                        break;
-                    }
-                }
-            }
-
-            if (customMatch) {
-                hpValue = `${customMatch.hp} כ"ס`;
-                displayModel = customMatch.modelName;
-                if (customMatch.gimur) gimur = customMatch.gimur;
-            } 
-            // 2. אם לא במילון, מחפשים כ"ס במאגר משרד התחבורה
-            else if (tozeretCd && degemCd) {
+            if (tozeretCd && degemCd) {
                 try {
                     const specsResource = "142aee44-ac7c-4db4-b426-8eaf28f13fb0";
                     const specsUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${specsResource}&q=${degemCd}`;
@@ -80,24 +89,32 @@ app.get('/api/car/:plate', async (req, res) => {
                 }
             }
 
-            // 3. מסדרים את התצוגה - שורה של כוח סוס ושורה של גימור
+            if (!hpValue && engineCode) {
+                const aiHp = await getHpFromAI(manufacturer, displayModel, year, engineCode);
+                if (aiHp) {
+                    hpValue = aiHp;
+                }
+            }
+
             let finalOutput = "";
             if (hpValue && gimur) {
                 finalOutput = `${hpValue}\nגימור: ${gimur}`;
             } else if (hpValue) {
                 finalOutput = hpValue;
             } else if (gimur) {
-                finalOutput = `גימור: ${gimur}\n(הספק חסר במאגר)`;
+                finalOutput = `גימור: ${gimur}\n(הספק חסר)`;
+            } else if (engineCode) {
+                finalOutput = `מנוע: ${engineCode}`;
             } else {
-                finalOutput = car.degem_manoa ? `מנוע: ${car.degem_manoa}` : "לא זמין";
+                finalOutput = "לא זמין";
             }
 
             res.json({
                 success: true,
                 data: {
-                    manufacturer: car.shem_yatzran || car.tozeret_nm || "לא ידוע",
+                    manufacturer: manufacturer,
                     model: displayModel,
-                    year: car.shnat_yitzur || "לא ידוע",
+                    year: year,
                     color: car.zeva_rechev || car.rechev_col || car.tzeva_rechev || "לא ידוע",
                     horsepower: finalOutput, 
                     testExpiry: car.tokef_dt || null
