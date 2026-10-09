@@ -10,12 +10,19 @@ const part1 = "AQ.Ab8RN6KeHzKJ8KrRuU8";
 const part2 = "96ECD7Ez_qVt1ZlLYT8FTbKOBfGKutw";
 const GEMINI_API_KEY = part1 + part2;
 
-// הפונקציה ששואלת את ה-AI כשאין נתון רשמי
 async function getHpFromAI(manufacturer, modelName, year, engineCode) {
-    if (!GEMINI_API_KEY) return null;
+    if (!GEMINI_API_KEY) {
+        console.log("AI Error: Missing API Key");
+        return null;
+    }
     
-    const prompt = `מה כוח הסוס המקורי (HP) של רכב מתוצרת ${manufacturer} דגם ${modelName} שנת ${year} קוד מנוע ${engineCode}? החזר אך ורק את המספר של כוח הסוס (לדוגמה: 300), בלי שום מילים מסביב.`;
+    // ניקוי והתאמת שמות ל-AI כדי שיבין שמדובר ברכב ביצועים
+    let cleanManufacturer = manufacturer.includes("סיאט") ? "Seat / Cupra" : manufacturer;
     
+    const prompt = `What is the exact original horsepower (HP) of a ${cleanManufacturer} Leon model ${modelName}, year ${year}, engine code ${engineCode}? Return ONLY the numeric horsepower value (for example: 300), with no extra text.`;
+    
+    console.log("שולח פרומפט ל-AI:", prompt);
+
     try {
         const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
             method: 'POST',
@@ -26,21 +33,26 @@ async function getHpFromAI(manufacturer, modelName, year, engineCode) {
         });
         
         const data = await response.json();
+        console.log("תשובת גולמית מה-AI:", JSON.stringify(data));
+        
         if (data && data.candidates && data.candidates.length > 0) {
             let text = data.candidates[0].content.parts[0].text.trim();
             let hp = text.replace(/[^0-9]/g, '');
+            console.log("מספר כוח סוס שחלץ ה-AI:", hp);
             if (hp && parseInt(hp) > 50) {
                 return `${hp} כ"ס (AI)`;
             }
         }
     } catch (error) {
-        console.error("שגיאה בחיבור ל-AI:", error);
+        console.error("שגיאה בתקשורת עם ה-AI:", error);
     }
     return null;
 }
 
 app.get('/api/car/:plate', async (req, res) => {
     const plate = req.params.plate;
+    console.log(`\n--- חיפוש חדש לרכב: ${plate} ---`);
+    
     const activeVehiclesResource = "053cea08-09bc-40ec-8f7a-156f0677aff3";
     const govUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${activeVehiclesResource}&q=${plate}`;
 
@@ -61,9 +73,9 @@ app.get('/api/car/:plate', async (req, res) => {
             let hpValue = "";
             let displayModel = car.toar_degem || car.כינוי_מסחרי || car.degem_nm || degemCd;
             let gimur = car.ramat_gimur || "";
-            let engineCode = car.degem_manoa || "";
+            let engineCode = car.degem_manoa || "לא ידוע";
 
-            // 1. מנסים לשלוף קודם מהמאגר הרשמי של משרד התחבורה
+            // 1. חיפוש במאגר משרד התחבורה
             if (tozeretCd && degemCd) {
                 try {
                     const specsResource = "142aee44-ac7c-4db4-b426-8eaf28f13fb0";
@@ -88,12 +100,13 @@ app.get('/api/car/:plate', async (req, res) => {
                         }
                     }
                 } catch (specErr) {
-                    console.error("שגיאה בסריקת מפרט:", specErr);
+                    console.error("שגיאה בסריקת מפרט משרד התחבורה:", specErr);
                 }
             }
 
-            // 2. אם משרד התחבורה לא יודע מה הספק הרכב – ה-AI נכנס לפעולה באופן אוטומטי לחלוטין!
+            // 2. אם משרד התחבורה לא מצא, מפעילים את ה-AI
             if (!hpValue) {
+                console.log("הספק חסר במשרד התחבורה, מפעיל חיפוש AI...");
                 const aiHp = await getHpFromAI(manufacturer, displayModel, year, engineCode);
                 if (aiHp) {
                     hpValue = aiHp;
@@ -128,6 +141,7 @@ app.get('/api/car/:plate', async (req, res) => {
             res.json({ success: false, message: "המספר אינו קיים במאגר משרד התחבורה" });
         }
     } catch (error) {
+        console.error("שגיאה ראשית בשרת:", error);
         res.status(500).json({ success: false, error: "שגיאה כללית בשליפה" });
     }
 });
