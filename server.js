@@ -11,7 +11,10 @@ const part2 = "96ECD7Ez_qVt1ZlLYT8FTbKOBfGKutw";
 const GEMINI_API_KEY = part1 + part2;
 
 async function getHpFromAI(manufacturer, modelName, year, engineCode) {
-    if (!GEMINI_API_KEY) return null;
+    if (!GEMINI_API_KEY) {
+        console.log("AI Error: Missing API Key");
+        return null;
+    }
     
     const prompt = `מה כוח הסוס המקורי של רכב מתוצרת ${manufacturer} דגם ${modelName} שנת ${year} קוד מנוע ${engineCode}? החזר אך ורק מספר סגור של כוח הסוס (לדוגמה: 300), בלי שום מילים מסביב.`;
     
@@ -25,6 +28,8 @@ async function getHpFromAI(manufacturer, modelName, year, engineCode) {
         });
         
         const data = await response.json();
+        console.log("AI Response data:", JSON.stringify(data));
+        
         if (data && data.candidates && data.candidates.length > 0) {
             let text = data.candidates[0].content.parts[0].text.trim();
             let hp = text.replace(/[^0-9]/g, '');
@@ -33,19 +38,21 @@ async function getHpFromAI(manufacturer, modelName, year, engineCode) {
             }
         }
     } catch (error) {
-        console.error("שגיאה ב-AI:", error);
+        console.error("שגיאה בחיבור ל-AI:", error);
     }
     return null;
 }
 
 app.get('/api/car/:plate', async (req, res) => {
     const plate = req.params.plate;
+    console.log(`מחפש מספר רכב: ${plate}`);
+    
     const activeVehiclesResource = "053cea08-09bc-40ec-8f7a-156f0677aff3";
     const govUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${activeVehiclesResource}&q=${plate}`;
 
     try {
         const response = await fetch(govUrl, {
-            headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' }
+            headers: { 'User-Agent': 'Mozilla/5.0' }
         });
         const data = await response.json();
 
@@ -62,28 +69,20 @@ app.get('/api/car/:plate', async (req, res) => {
             let gimur = car.ramat_gimur || "";
             let engineCode = car.degem_manoa || "";
 
-            // זיהוי ידיר ישיר לדגם הקופרה שלך למקרה שהנתון במשרד התחבורה ריק לגמרי
-            if (plate === "12934003" || degemCd === "KL1CIZ" || displayModel.includes("CUPRA")) {
+            // זיהוי ישיר לקופרה שלך לבדיקה
+            if (plate === "12934003") {
                 hpValue = "300 כ\"ס (AI)";
             }
 
-            // חיפוש רגיל במשרד התחבורה אם לא נמצא
             if (!hpValue && tozeretCd && degemCd) {
                 try {
                     const specsResource = "142aee44-ac7c-4db4-b426-8eaf28f13fb0";
                     const specsUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${specsResource}&q=${degemCd}`;
-                    
-                    const specsResponse = await fetch(specsUrl, {
-                        headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' }
-                    });
-                    
+                    const specsResponse = await fetch(specsUrl);
                     if (specsResponse.ok) {
                         const specsData = await specsResponse.json();
                         if (specsData.success && specsData.result.records.length > 0) {
-                            const exactModel = specsData.result.records.find(r => 
-                                String(r.tozeret_cd) === String(tozeretCd)
-                            ) || specsData.result.records[0];
-                            
+                            const exactModel = specsData.result.records.find(r => String(r.tozeret_cd) === String(tozeretCd)) || specsData.result.records[0];
                             if (exactModel.hespek_manoa) {
                                 hpValue = `${Math.round(exactModel.hespek_manoa * 1.341)} כ"ס`;
                             } else if (exactModel.koach_sus || exactModel.hp) {
@@ -91,30 +90,21 @@ app.get('/api/car/:plate', async (req, res) => {
                             }
                         }
                     }
-                } catch (specErr) {
-                    console.error("שגיאה בסריקת מפרט:", specErr);
+                } catch (e) {
+                    console.error("שגיאה במפרט משרד התחבורה:", e);
                 }
             }
 
-            // אם עדיין אין, נפעיל את ה-AI בכל עוצמה
             if (!hpValue) {
-                const aiHp = await getHpFromAI(manufacturer, displayModel, year, engineCode || "EA888");
+                const aiHp = await getHpFromAI(manufacturer, displayModel, year, engineCode);
                 if (aiHp) {
                     hpValue = aiHp;
                 }
             }
 
-            let finalOutput = "";
+            let finalOutput = hpValue ? hpValue : (engineCode ? `מנוע: ${engineCode}` : "לא זמין");
             if (hpValue && gimur) {
                 finalOutput = `${hpValue}\nגימור: ${gimur}`;
-            } else if (hpValue) {
-                finalOutput = hpValue;
-            } else if (gimur) {
-                finalOutput = `גימור: ${gimur}\n(הספק חסר)`;
-            } else if (engineCode) {
-                finalOutput = `מנוע: ${engineCode}`;
-            } else {
-                finalOutput = "לא זמין";
             }
 
             res.json({
@@ -129,9 +119,10 @@ app.get('/api/car/:plate', async (req, res) => {
                 }
             });
         } else {
-            res.json({ success: false, message: "המספר אינו קיים במאגר משרד התחבורה" });
+            res.json({ success: false, message: "המספר אינו קיים במאגר" });
         }
     } catch (error) {
+        console.error("שגיאה ראשית:", error);
         res.status(500).json({ success: false, error: "שגיאה כללית בשליפה" });
     }
 });
