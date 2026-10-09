@@ -17,14 +17,19 @@ app.get('/api/car/:plate', async (req, res) => {
 
         if (data && data.success && data.result && data.result.records && data.result.records.length > 0) {
             const car = data.result.records[0];
+            
+            // נסיון לאתר כוח סוס ממגוון שדות אפשריים במאגר
+            let hp = car.koach_sus || car.mispar_mekamot || car. הספק_מנוע || car.balam_koach || car.nefach_manoa || car.engine_power || car.p_poten || car.koach || null;
+            
+            // אם יש נפח מנוע או סמ"ק אבל אין כוח סוס ישיר, נוכל להציג את נתוני המנוע הקיימים
             res.json({
                 success: true,
                 data: {
                     manufacturer: car.shem_yatzran || car.tozeret_nm || "לא ידוע",
                     model: car.toar_degem || car.כינוי_מסחרי || car.degem_nm || "לא ידוע",
                     year: car.shnat_yitzur || "לא ידוע",
-                    color: car.zeva_rechev || car.rechev_col || car.tzeva_rechev || car.color || "לא ידוע",
-                    horsepower: car.koach_sus || car.mispar_mekamot || car. הספק_מנוע || car.balam_koach || car.nefach_manoa || car.engine_power || "לא ידוע",
+                    color: car.zeva_rechev || car.rechev_col || car.tzeva_rechev || "לא ידוע",
+                    horsepower: hp ? `${hp} כ"ס` : (car.nefach_manoa ? `נפח: ${car.nefach_manoa} סמ"ק` : "לא זמין במאגר זה"),
                     testExpiry: car.tokef_dt || null
                 }
             });
