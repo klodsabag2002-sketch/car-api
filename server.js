@@ -12,9 +12,7 @@ app.get('/api/car/:plate', async (req, res) => {
     const govUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${activeVehiclesResource}&q=${plate}`;
 
     try {
-        const response = await fetch(govUrl, {
-            headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
-        });
+        const response = await fetch(govUrl);
         const data = await response.json();
 
         if (data && data.success && data.result && data.result.records.length > 0) {
@@ -24,50 +22,48 @@ app.get('/api/car/:plate', async (req, res) => {
             const degemCd = car.degem_cd;
             const year = car.shnat_yitzur;
 
-            let horsepowerText = "לא זמין";
+            let horsepowerText = "ממתין לנתונים";
 
             if (tozeretCd && degemCd) {
                 try {
                     const specsResource = "14283188-4357-463d-a7a2-ee851b22e177";
+                    // שימוש ב-filters תקני של CKAN למניעת שגיאות URL
+                    const filters = encodeURIComponent(JSON.stringify({ tozeret_cd: tozeretCd, degem_cd: degemCd }));
+                    const specsUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${specsResource}&filters=${filters}`;
                     
-                    // התיקון הקריטי: קידוד ה-URL כדי למנוע שגיאות רשת וקריסות של שרת ה-API
-                    const safeQuery = encodeURIComponent(String(degemCd).trim());
-                    const specsUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${specsResource}&q=${safeQuery}`;
+                    const specsResponse = await fetch(specsUrl);
                     
-                    const specsResponse = await fetch(specsUrl, {
-                        headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
-                    });
+                    if (!specsResponse.ok) {
+                        throw new Error(`HTTP ${specsResponse.status}`);
+                    }
                     
-                    const specsData = await specsResponse.json();
-
-                    if (specsData.success && specsData.result.records.length > 0) {
-                        // חיפוש מדויק כדי למנוע טעויות בין שנתונים שונים של אותו דגם
-                        const exactModel = specsData.result.records.find(r => 
-                            String(r.tozeret_cd) === String(tozeretCd) && 
-                            String(r.degem_cd) === String(degemCd) &&
-                            r.shnat_yitzur == year
-                        ) || specsData.result.records.find(r => 
-                            String(r.tozeret_cd) === String(tozeretCd) && 
-                            String(r.degem_cd) === String(degemCd)
-                        ) || specsData.result.records[0];
-                        
-                        const hp = exactModel.koach_sus || exactModel.hp || exactModel.הספק_מנוע;
-                        
-                        if (hp) {
-                            horsepowerText = `${hp} כ"ס`;
-                        } else if (exactModel.kw) {
-                            horsepowerText = `${Math.round(exactModel.kw * 1.341)} כ"ס`;
+                    const textData = await specsResponse.text();
+                    
+                    try {
+                        const specsData = JSON.parse(textData);
+                        if (specsData.success && specsData.result.records.length > 0) {
+                            // חיפוש הדגם המדויק לפי שנתון
+                            const exactModel = specsData.result.records.find(r => r.shnat_yitzur == year) || specsData.result.records[0];
+                            const hp = exactModel.koach_sus || exactModel.hp || exactModel.הספק_מנוע;
+                            
+                            if (hp) {
+                                horsepowerText = `${hp} כ"ס`;
+                            } else if (exactModel.kw) {
+                                horsepowerText = `${Math.round(exactModel.kw * 1.341)} כ"ס`;
+                            } else {
+                                horsepowerText = "הספק חסר ברשומת הדגם";
+                            }
                         } else {
-                            horsepowerText = "נתון הספק חסר במאגר הממשלתי";
+                            horsepowerText = "לא נמצא במאגר מפרטים";
                         }
-                    } else {
-                        horsepowerText = "דגם זה לא נמצא במאגר המפרטים";
+                    } catch (parseErr) {
+                        horsepowerText = "שגיאת פענוח תשובה מהמאגר";
                     }
                 } catch (specErr) {
-                    horsepowerText = "תקלת קידוד/רשת בשליפת הדגם";
+                    horsepowerText = `שגיאת רשת: ${specErr.message}`;
                 }
             } else {
-                horsepowerText = "חסר קוד דגם בסיסי";
+                horsepowerText = "קוד יצרן/דגם חסר";
             }
 
             res.json({
