@@ -16,8 +16,9 @@ async function getHpFromAI(manufacturer, modelName, year, engineCode) {
     let cleanManufacturer = manufacturer.includes("סיאט") ? "Seat / Cupra" : manufacturer;
     const prompt = `What is the exact original horsepower (HP) of a ${cleanManufacturer} Leon model ${modelName}, year ${year}, engine code ${engineCode}? Return ONLY the numeric horsepower value (for example: 300), with no extra text.`;
     
+    console.log("שולח פרומפט ל-AI:", prompt);
+
     try {
-        // שימוש בכתובת היציבה והמעודכנת של Gemini API
         const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${GEMINI_API_KEY}`;
         const response = await fetch(url, {
             method: 'POST',
@@ -28,9 +29,12 @@ async function getHpFromAI(manufacturer, modelName, year, engineCode) {
         });
         
         const data = await response.json();
+        console.log("תשובה גולמית מה-AI:", JSON.stringify(data));
+
         if (data && data.candidates && data.candidates.length > 0) {
             let text = data.candidates[0].content.parts[0].text.trim();
             let hp = text.replace(/[^0-9]/g, '');
+            console.log("הספק שחולץ:", hp);
             if (hp && parseInt(hp) > 50) {
                 return `${hp} כ"ס (AI)`;
             }
@@ -43,6 +47,8 @@ async function getHpFromAI(manufacturer, modelName, year, engineCode) {
 
 app.get('/api/car/:plate', async (req, res) => {
     const plate = req.params.plate;
+    console.log(`\n--- חיפוש חדש לרכב: ${plate} ---`);
+    
     const activeVehiclesResource = "053cea08-09bc-40ec-8f7a-156f0677aff3";
     const govUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${activeVehiclesResource}&q=${plate}`;
 
@@ -53,7 +59,7 @@ app.get('/api/car/:plate', async (req, res) => {
         const data = await response.json();
 
         if (data && data.success && data.result && data.result.records.length > 0) {
-            const car = data.result.records.find(r => r.mispar_rechev == plate) || data.result.records[0];
+            const car = data.result.records.find(r => r.mispar_rechev == plate) || data.result.records.find(r => r.mispar_rechev.includes(plate)) || data.result.records[0];
             
             const tozeretCd = car.tozeret_cd;
             const degemCd = String(car.degem_cd).trim();
@@ -91,6 +97,7 @@ app.get('/api/car/:plate', async (req, res) => {
             }
 
             if (!hpValue) {
+                console.log("אין הספק במשרד התחבורה, מפעיל פונקציית AI...");
                 const aiHp = await getHpFromAI(manufacturer, displayModel, year, engineCode);
                 if (aiHp) {
                     hpValue = aiHp;
@@ -125,6 +132,7 @@ app.get('/api/car/:plate', async (req, res) => {
             res.json({ success: false, message: "המספר אינו קיים במאגר" });
         }
     } catch (error) {
+        console.error("שגיאה ראשית:", error);
         res.status(500).json({ success: false, error: "שגיאה כללית בשליפה" });
     }
 });
