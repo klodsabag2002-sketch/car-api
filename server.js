@@ -20,10 +20,10 @@ app.get('/api/car/:plate', async (req, res) => {
             res.json({
                 success: true,
                 data: {
-                    manufacturer: car.shem_yatzran || "לא ידוע",
-                    model: car.toar_degem || "לא ידוע",
+                    manufacturer: car.shem_yatzran || car.tozeret_nm || car.miktza || "לא ידוע",
+                    model: car.toar_degem || car.כינוי_מסחרי || car.degem_nm || car.degem_des || "לא ידוע",
                     year: car.shnat_yitzur || "לא ידוע",
-                    color: car.zeva_rechev || "לא ידוע",
+                    color: car.zeva_rechev || car.rechev_col || car.tzeva_rechev || "לא ידוע",
                     testExpiry: car.tokef_dt || null
                 }
             });
