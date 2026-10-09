@@ -22,7 +22,6 @@ async function getHpFromAI(manufacturer, modelName, year, engineCode) {
     console.log("שולח פרומפט ל-AI:", prompt);
 
     try {
-        // תיקון לשימוש במודל gemini-pro הנתמך ביציבות בגרסת v1beta
         const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${GEMINI_API_KEY}`;
         const response = await fetch(url, {
             method: 'POST',
@@ -85,7 +84,6 @@ app.get('/api/car/:plate', async (req, res) => {
             let gimur = car.ramat_gimur || "";
             let engineCode = car.degem_manoa || "לא ידוע";
 
-            // חיפוש במשרד התחבורה
             if (tozeretCd && degemCd) {
                 try {
                     const specsResource = "142aee44-ac7c-4db4-b426-8eaf28f13fb0";
@@ -111,7 +109,6 @@ app.get('/api/car/:plate', async (req, res) => {
                 }
             }
 
-            // אם אין, מפעילים את ה-AI
             if (!hpValue) {
                 console.log("אין הספק במשרד התחבורה, מפעיל פונקציית AI...");
                 const aiHp = await getHpFromAI(manufacturer, displayModel, year, engineCode);
