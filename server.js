@@ -8,26 +8,17 @@ app.use(express.json());
 
 app.get('/api/car/:plate', async (req, res) => {
     const plate = req.params.plate;
-    
-    // מזהה מאגר רכבים פעילים
-    const activeVehiclesResource = "053cea08-09bc-40ec-8f7a-156f0677aff3";
-    const govUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${activeVehiclesResource}&filters={"mispar_rechev":${plate}}`;
+    const resourceId = "053cea08-09bc-40ec-8f7a-156f0677aff3";
+    const govUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${resourceId}&filters={"mispar_rechev":${plate}}`;
 
     try {
         const response = await fetch(govUrl);
         const data = await response.json();
 
-        if (data && data.success && data.source_type !== 'datastore_search' && data.result && data.result.records && data.result.records.length > 0) {
+        if (data && data.success && data.result && data.result.records && data.result.records.length > 0) {
             const car = data.result.records[0];
             
-            let hp = car.koach_sus || car.הספק_מנוע || car.mispar_mekamot || car.engine_power || null;
-            let horsepowerText = hp ? `${hp} כ"ס` : "לא זמין";
-
-            // אם אין כוח סוס ישיר במאגר הפעילים, ננסה לשלוף ממפתח נפח מנוע או שדות נלווים אם קיימים
-            if (!hp && car.nefach_manoa) {
-                horsepowerText = `נפח: ${car.nefach_manoa} סמ"ק`;
-            }
-
+            // המאגר הראשי אינו כולל כוח סוס, נציג חיווי מדויק למצב המאגר
             res.json({
                 success: true,
                 data: {
@@ -35,7 +26,7 @@ app.get('/api/car/:plate', async (req, res) => {
                     model: car.toar_degem || car.כינוי_מסחרי || car.degem_nm || "לא ידוע",
                     year: car.shnat_yitzur || "לא ידוע",
                     color: car.zeva_rechev || car.rechev_col || car.tzeva_rechev || "לא ידוע",
-                    horsepower: horsepowerText,
+                    horsepower: "דורש מאגר מפרטים טכניים",
                     testExpiry: car.tokef_dt || null
                 }
             });
