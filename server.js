@@ -19,10 +19,11 @@ async function getHpFromAI(manufacturer, modelName, year, engineCode) {
     let cleanManufacturer = manufacturer.includes("סיאט") ? "Seat / Cupra" : manufacturer;
     const prompt = `What is the exact original horsepower (HP) of a ${cleanManufacturer} Leon model ${modelName}, year ${year}, engine code ${engineCode}? Return ONLY the numeric horsepower value (for example: 300), with no extra text.`;
     
-    console.log("שולח פרומפט ל-AI...");
+    console.log("שולח פרומפט ל-AI:", prompt);
 
     try {
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
+        // תיקון לשימוש במודל gemini-pro הנתמך ביציבות בגרסת v1beta
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${GEMINI_API_KEY}`;
         const response = await fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
