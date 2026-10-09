@@ -23,8 +23,8 @@ app.get('/api/car/:plate', async (req, res) => {
                     manufacturer: car.shem_yatzran || car.tozeret_nm || "לא ידוע",
                     model: car.toar_degem || car.כינוי_מסחרי || car.degem_nm || "לא ידוע",
                     year: car.shnat_yitzur || "לא ידוע",
-                    color: car.zeva_rechev || car.rechev_col || "לא ידוע",
-                    horsepower: car.koach_sus || car.mispar_mekamot || car. הספק_מנוע || car.balam_koach || "לא ידוע",
+                    color: car.zeva_rechev || car.rechev_col || car.tzeva_rechev || car.color || "לא ידוע",
+                    horsepower: car.koach_sus || car.mispar_mekamot || car. הספק_מנוע || car.balam_koach || car.nefach_manoa || car.engine_power || "לא ידוע",
                     testExpiry: car.tokef_dt || null
                 }
             });
