@@ -22,8 +22,8 @@ async function getHpFromAI(manufacturer, modelName, year, engineCode) {
     console.log("שולח פרומפט ל-AI:", prompt);
 
     try {
-        // מעבר לכתובת המודל המעודכנת והנכונה ל-API החדש
-        const url = `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
+        // שימוש במודל gemini-pro בנתיב ה-v1 היציב לחלוטין
+        const url = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${GEMINI_API_KEY}`;
         const response = await fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
