@@ -141,7 +141,7 @@ app.get('/api/car/:plate', async (req, res) => {
                     testExpiry: car.tokef_dt || null
                 }
             });
-        } else {
+        } else {j
             res.json({ success: false, message: "המספר אינו קיים במאגר" });
         }
     } catch (error) {
