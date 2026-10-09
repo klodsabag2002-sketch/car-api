@@ -6,9 +6,10 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-// מילון הדגמים האישי שלנו - שומר גם על כוח סוס וגם על הגימור
+// מילון הדגמים האישי שלנו - משודרג! אפשר לשים פה מספרי רישוי, קודי דגם או שמות דגם
 const customSpecs = {
-    "KL1CIZ": { hp: 300, modelName: "CUPRA LEON VZ", gimur: "VZ" }
+    "12934003": { hp: 300, modelName: "CUPRA LEON VZ", gimur: "VZ" }, // הרכב שלך! יזוהה בוודאות לפי הלוחית
+    "KL1CIZ": { hp: 300, modelName: "CUPRA LEON VZ", gimur: "VZ" }  // גיבוי למקרה שיחפשו רכב אחר מאותו דגם
 };
 
 app.get('/api/car/:plate', async (req, res) => {
@@ -32,11 +33,23 @@ app.get('/api/car/:plate', async (req, res) => {
             let displayModel = car.toar_degem || car.כינוי_מסחרי || car.degem_nm || degemCd;
             let gimur = car.ramat_gimur || "";
 
-            // 1. קודם בודקים במילון האישי שלנו
-            if (customSpecs[degemCd]) {
-                hpValue = `${customSpecs[degemCd].hp} כ"ס`;
-                displayModel = customSpecs[degemCd].modelName;
-                if (customSpecs[degemCd].gimur) gimur = customSpecs[degemCd].gimur;
+            // 1. חיפוש חכם במילון האישי (לפי מספר רכב, לפי קוד דגם או לפי שם דגם)
+            let customMatch = customSpecs[plate] || customSpecs[degemCd] || customSpecs[displayModel];
+            
+            // חיפוש חלקי - אם שם הדגם כולל את המילה "KL1CIZ" בתוכו
+            if (!customMatch) {
+                for (const key in customSpecs) {
+                    if (displayModel.includes(key)) {
+                        customMatch = customSpecs[key];
+                        break;
+                    }
+                }
+            }
+
+            if (customMatch) {
+                hpValue = `${customMatch.hp} כ"ס`;
+                displayModel = customMatch.modelName;
+                if (customMatch.gimur) gimur = customMatch.gimur;
             } 
             // 2. אם לא במילון, מחפשים כ"ס במאגר משרד התחבורה
             else if (tozeretCd && degemCd) {
@@ -67,10 +80,9 @@ app.get('/api/car/:plate', async (req, res) => {
                 }
             }
 
-            // 3. מסדרים את התצוגה ככה שהכל יופיע בצורה יפה: שורה של כוח סוס ושורה של גימור מתחת
+            // 3. מסדרים את התצוגה - שורה של כוח סוס ושורה של גימור
             let finalOutput = "";
             if (hpValue && gimur) {
-                // ה- \n מוריד את הגימור שורה אחת למטה
                 finalOutput = `${hpValue}\nגימור: ${gimur}`;
             } else if (hpValue) {
                 finalOutput = hpValue;
@@ -87,7 +99,7 @@ app.get('/api/car/:plate', async (req, res) => {
                     model: displayModel,
                     year: car.shnat_yitzur || "לא ידוע",
                     color: car.zeva_rechev || car.rechev_col || car.tzeva_rechev || "לא ידוע",
-                    horsepower: finalOutput, // שולח את התצוגה המשולבת לאפליקציה
+                    horsepower: finalOutput, 
                     testExpiry: car.tokef_dt || null
                 }
             });
