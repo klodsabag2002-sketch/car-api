@@ -6,11 +6,17 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+// מערך הגיבוי: כל הכתובות המוכרות למאגרי המפרט הטכני של משרד התחבורה
+const SPECS_RESOURCES = [
+    "0d203d95-bc29-45dcc-85d4-fd9ce52dbd84",
+    "5e87a7a1-2f6f-4cb8-897d-1cb30f9d7ab3",
+    "0742f1aa-c69e-4735-8ee7-e699f7d242c7",
+    "14283188-4357-463d-a7a2-ee851b22e177"
+];
+
 app.get('/api/car/:plate', async (req, res) => {
     const plate = req.params.plate;
     const activeVehiclesResource = "053cea08-09bc-40ec-8f7a-156f0677aff3";
-    
-    // שליפה ראשונית ממאגר הרכבים
     const govUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${activeVehiclesResource}&q=${plate}`;
 
     try {
@@ -26,49 +32,42 @@ app.get('/api/car/:plate', async (req, res) => {
             const degemCd = car.degem_cd;
             const year = car.shnat_yitzur;
 
-            let horsepowerText = "מחפש נתונים...";
+            let horsepowerText = "לא זמין במאגרי הממשלה";
 
-            // אם יש קוד דגם, ניגש למאגר המפרטים
             if (tozeretCd && degemCd) {
-                try {
-                    const specsResource = "14283188-4357-463d-a7a2-ee851b22e177";
-                    // חיפוש פשוט ובטוח - ללא קידודי Filters מורכבים שזורקים 404
-                    const specsUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${specsResource}&q=${degemCd}`;
-                    
-                    const specsResponse = await fetch(specsUrl, {
-                        headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' }
-                    });
-                    
-                    if (!specsResponse.ok) {
-                        horsepowerText = `חסימה משרת ממשלתי: ${specsResponse.status}`;
-                    } else {
-                        const specsData = await specsResponse.json();
+                // לולאה שעוברת על כל הכתובות האפשריות עד שהיא מוצאת מאגר תקין
+                for (const resId of SPECS_RESOURCES) {
+                    try {
+                        const specsUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${resId}&q=${degemCd}`;
+                        const specsResponse = await fetch(specsUrl, {
+                            headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' }
+                        });
                         
-                        if (specsData.success && specsData.result.records.length > 0) {
-                            // סינון התוצאות אצלנו בקוד במקום בשרת שלהם כדי למצוא את המודל המדויק
-                            const exactModel = specsData.result.records.find(r => 
-                                r.shnat_yitzur == year && r.tozeret_cd == tozeretCd
-                            ) || specsData.result.records[0];
+                        if (specsResponse.ok) {
+                            const specsData = await specsResponse.json();
                             
-                            const hp = exactModel.koach_sus || exactModel.hp || exactModel.הספק_מנוע;
-                            
-                            if (hp) {
-                                horsepowerText = `${hp} כ"ס`;
-                            } else if (exactModel.kw) {
-                                // המרה מקילוואט לכוח סוס במידה וזה מה שנשמר
-                                horsepowerText = `${Math.round(exactModel.kw * 1.341)} כ"ס`;
-                            } else {
-                                horsepowerText = "נתון חסר במאגר הממשלתי עבור דגם זה";
+                            if (specsData.success && specsData.result.records.length > 0) {
+                                // סינון לזיהוי המודל והשנתון המדויקים
+                                const exactModel = specsData.result.records.find(r => 
+                                    r.shnat_yitzur == year && r.tozeret_cd == tozeretCd
+                                ) || specsData.result.records[0];
+                                
+                                const hp = exactModel.koach_sus || exactModel.hp || exactModel.הספק_מנוע;
+                                
+                                if (hp) {
+                                    horsepowerText = `${hp} כ"ס`;
+                                    break; // מצאנו! עוצרים את הסריקה
+                                } else if (exactModel.kw) {
+                                    horsepowerText = `${Math.round(exactModel.kw * 1.341)} כ"ס`;
+                                    break;
+                                }
                             }
-                        } else {
-                            horsepowerText = "הדגם לא מופיע במאגר המפרטים";
                         }
+                    } catch (err) {
+                        // אם המאגר הספציפי שבור (404), מדלגים לכתובת הבאה
+                        continue;
                     }
-                } catch (specErr) {
-                    horsepowerText = "שגיאת תקשורת למאגר המפרטים";
                 }
-            } else {
-                horsepowerText = "קוד דגם חסר ברכב זה";
             }
 
             res.json({
