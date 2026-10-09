@@ -6,17 +6,11 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-// מערך הגיבוי: כל הכתובות המוכרות למאגרי המפרט הטכני של משרד התחבורה
-const SPECS_RESOURCES = [
-    "0d203d95-bc29-45dcc-85d4-fd9ce52dbd84",
-    "5e87a7a1-2f6f-4cb8-897d-1cb30f9d7ab3",
-    "0742f1aa-c69e-4735-8ee7-e699f7d242c7",
-    "14283188-4357-463d-a7a2-ee851b22e177"
-];
-
 app.get('/api/car/:plate', async (req, res) => {
     const plate = req.params.plate;
-    const activeVehiclesResource = "053cea08-09bc-40ec-8f7a-156f0677aff3";
+    
+    // מזהה מאגר רכב פעיל מעודכן לפי התיעוד
+    const activeVehiclesResource = "c8b9f9c8-4612-4068-934f-d4acc2e5c76e";
     const govUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${activeVehiclesResource}&q=${plate}`;
 
     try {
@@ -30,44 +24,46 @@ app.get('/api/car/:plate', async (req, res) => {
             
             const tozeretCd = car.tozeret_cd;
             const degemCd = car.degem_cd;
-            const year = car.shnat_yitzur;
-
-            let horsepowerText = "לא זמין במאגרי הממשלה";
+            
+            let horsepowerText = "לא זמין";
 
             if (tozeretCd && degemCd) {
-                // לולאה שעוברת על כל הכתובות האפשריות עד שהיא מוצאת מאגר תקין
-                for (const resId of SPECS_RESOURCES) {
-                    try {
-                        const specsUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${resId}&q=${degemCd}`;
-                        const specsResponse = await fetch(specsUrl, {
-                            headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' }
-                        });
+                try {
+                    // מזהה מאגר תוצרים ודגמים מעודכן לפי התיעוד
+                    const specsResource = "142aee44-ac7c-4db4-b426-8eaf28f13fb0";
+                    
+                    // חיפוש חכם במאגר הדגמים
+                    const specsUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${specsResource}&q=${degemCd}`;
+                    const specsResponse = await fetch(specsUrl, {
+                        headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' }
+                    });
+                    
+                    if (specsResponse.ok) {
+                        const specsData = await specsResponse.json();
                         
-                        if (specsResponse.ok) {
-                            const specsData = await specsResponse.json();
+                        if (specsData.success && specsData.result.records.length > 0) {
+                            // סינון כדי למצוא בדיוק את היצרן והדגם המבוקשים
+                            const exactModel = specsData.result.records.find(r => 
+                                String(r.tozeret_cd) === String(tozeretCd)
+                            ) || specsData.result.records[0];
                             
-                            if (specsData.success && specsData.result.records.length > 0) {
-                                // סינון לזיהוי המודל והשנתון המדויקים
-                                const exactModel = specsData.result.records.find(r => 
-                                    r.shnat_yitzur == year && r.tozeret_cd == tozeretCd
-                                ) || specsData.result.records[0];
-                                
-                                const hp = exactModel.koach_sus || exactModel.hp || exactModel.הספק_מנוע;
-                                
-                                if (hp) {
-                                    horsepowerText = `${hp} כ"ס`;
-                                    break; // מצאנו! עוצרים את הסריקה
-                                } else if (exactModel.kw) {
-                                    horsepowerText = `${Math.round(exactModel.kw * 1.341)} כ"ס`;
-                                    break;
-                                }
+                            // שליפת השדה המדויק hespek_manoa והכפלתו ב-1.341
+                            if (exactModel.hespek_manoa) {
+                                const hp = Math.round(exactModel.hespek_manoa * 1.341);
+                                horsepowerText = `${hp} כ"ס`;
+                            } else if (exactModel.koach_sus || exactModel.hp) {
+                                horsepowerText = `${exactModel.koach_sus || exactModel.hp} כ"ס`;
                             }
                         }
-                    } catch (err) {
-                        // אם המאגר הספציפי שבור (404), מדלגים לכתובת הבאה
-                        continue;
                     }
+                } catch (specErr) {
+                    console.error("שגיאה בסריקת מפרט:", specErr);
                 }
+            }
+
+            // גיבוי אם הנתון עדיין חסר
+            if (horsepowerText === "לא זמין") {
+                horsepowerText = car.ramat_gimur ? `גימור: ${car.ramat_gimur}` : (car.degem_manoa ? `מנוע: ${car.degem_manoa}` : "לא רשום במאגר");
             }
 
             res.json({
@@ -75,7 +71,7 @@ app.get('/api/car/:plate', async (req, res) => {
                 data: {
                     manufacturer: car.shem_yatzran || car.tozeret_nm || "לא ידוע",
                     model: car.toar_degem || car.כינוי_מסחרי || car.degem_nm || "לא ידוע",
-                    year: year || "לא ידוע",
+                    year: car.shnat_yitzur || "לא ידוע",
                     color: car.zeva_rechev || car.rechev_col || car.tzeva_rechev || "לא ידוע",
                     horsepower: horsepowerText,
                     testExpiry: car.tokef_dt || null
