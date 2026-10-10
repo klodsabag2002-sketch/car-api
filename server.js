@@ -14,12 +14,15 @@ app.use((req, res, next) => {
     next();
 });
 
-// מחפש את שדה כוח הסוס גם אם שמו שונה מעט במאגר
+// מחפש את שדה כוח הסוס. אם לא נמצא, מדפיס ללוג את כל שמות השדות שחזרו
 function findHorsepower(car) {
     if (car.koah_sus != null && car.koah_sus !== "") return car.koah_sus;
 
     const key = Object.keys(car).find(k => /koa?h.*sus|koach|sus/i.test(k));
-    return key ? car[key] : null;
+    if (key) return car[key];
+
+    console.log("שדות שחזרו מהמאגר:", Object.keys(car).join(", "));
+    return null;
 }
 
 async function fetchCarRecord(plate) {
@@ -52,7 +55,6 @@ app.get('/api/car/:plate', async (req, res) => {
         const model = car.toar_degem || car.כינוי_מסחרי || car.degem_nm || car.degem_des || "לא ידוע";
         const year = car.shnat_yitzur || "לא ידוע";
 
-        // **לוג מפורט בקונסול שמציג את פרטי הרכב שחיפשו**
         console.log(`--------------------------------------------------`);
         console.log(`[SEARCH LOG] 🔍 מישהו חיפש רכב!`);
         console.log(`📅 זמן: ${timestamp}`);
