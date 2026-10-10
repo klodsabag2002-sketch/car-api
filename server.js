@@ -33,49 +33,61 @@ app.get('/api/car/:plate', async (req, res) => {
             let engineCode = car.degem_manoa || "לא ידוע";
             let nefach = car.nefach_manoa || "";
 
-            // חיפוש מדויק במאגר המפרטים הטכניים של משרד התחבורה לפי קוד דגם
+            // חפירה עמוקה במאגר המפרטים הרשמי של משרד התחבורה
             if (tozeretCd && degemCd) {
                 try {
                     const specsResource = "142aee44-ac7c-4db4-b426-8eaf28f13fb0";
-                    const specsUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${specsResource}&q=${degemCd}`;
+                    const specsUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${specsResource}&limit=10&q=${degemCd}`;
                     
                     const specsResponse = await fetch(specsUrl);
                     if (specsResponse.ok) {
                         const specsData = await specsResponse.json();
                         if (specsData.success && specsData.result.records.length > 0) {
+                            // נמצא את הרשומה התואמת ביותר במאגר הממשלתי
                             const exactModel = specsData.result.records.find(r => 
+                                String(r.tozeret_cd) === String(tozeretCd) && String(r.degem_cd).trim() === degemCd
+                            ) || specsData.result.records.find(r => 
                                 String(r.tozeret_cd) === String(tozeretCd)
                             ) || specsData.result.records[0];
-                            
-                            // בדיקת כל השדות האפשריים לקילוואט או כוח סוס במפרט
-                            const kw = exactModel.kw || exactModel.kilowatt || exactModel.hespek_kw;
-                            const hp = exactModel.hespek_manoa || exactModel.koach_sus || exactModel.hp;
 
-                            if (hp) {
-                                hpValue = hp < 250 ? `${Math.round(hp * 1.341)} כ"ס` : `${hp} כ"ס`;
-                            } else if (kw) {
-                                hpValue = `${Math.round(kw * 1.341)} כ"ס`;
+                            // נעבור ידנית על כל המפתחות ברשומה כדי לא לפפס שום שדה הספק ממשלתי
+                            for (let key in exactModel) {
+                                const val = exactModel[key];
+                                const lowerKey = key.toLowerCase();
+                                
+                                if (val && (lowerKey.includes('hespek') || lowerKey.includes('hp') || lowerKey.includes('koach') || lowerKey.includes('sus') || lowerKey.includes('kw') || lowerKey.includes('power'))) {
+                                    const numVal = parseFloat(val);
+                                    if (!isNaN(numVal) && numVal > 10 && numVal < 2000) {
+                                        // אם הערך קטן כנראה מדובר בקילוואט (KW), נמיר לכוח סוס
+                                        if (numVal < 250 && (lowerKey.includes('kw') || numVal < 150)) {
+                                            hpValue = `${Math.round(numVal * 1.341)} כ"ס`;
+                                        } else {
+                                            hpValue = `${Math.round(numVal)} כ"ס`;
+                                        }
+                                        break;
+                                    }
+                                }
                             }
                         }
                     }
                 } catch (specErr) {
-                    console.error("שגיאה בשליפת מפרט:", specErr);
+                    console.error("שגיאה בשליפת מפרט ממשלתי:", specErr);
                 }
             }
 
-            // גיבוי אוטומטי לרכב שלך (הקופרה) ולרכבים נוספים במידה והמאגר ריק
+            // גיבוי לרכב שלך ולרכבים נוספים
             if (!hpValue) {
                 if (degemCd === "KL1CIZ" || plate === "12934003") {
                     hpValue = "300 כ\"ס";
                 } else if (nefach) {
-                    hpValue = `${nefach} סמ"ק (${engineCode || 'מנוע רגיל'})`;
+                    hpValue = `${nefach} סמ"ק`;
                 } else {
-                    hpValue = "לא זמין במאגר";
+                    hpValue = "לא זמין";
                 }
             }
 
             let finalOutput = "";
-            if (gimur && !hpValue.includes("סמ\"ק")) {
+            if (gimur && !hpValue.includes("סמ\"ק") && hpValue !== "לא זמין") {
                 finalOutput = `${hpValue} (גימור: ${gimur})`;
             } else {
                 finalOutput = hpValue;
