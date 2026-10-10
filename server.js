@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-const GROQ_API_KEY = "Gsk_XbeFi2eVakI3twR3pD8UWGdyb3FYWZqOml8SmtHg9QtLuigmoo38";
+const GROQ_API_KEY = "Gsk_XbeFi2eVakI3twR3pD8UWGdyb3FYWZqOml8SmtHg9QtLuigmoo38".trim();
 
 async function getHpFromAI(manufacturer, modelName, year, engineCode) {
     if (!GROQ_API_KEY) return null;
