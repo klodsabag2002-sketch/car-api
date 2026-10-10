@@ -1,5 +1,7 @@
 const express = require('express');
 const cors = require('cors');
+const { GoogleGenAI } = require('@google/genai');
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -8,43 +10,33 @@ app.use(express.json());
 
 const part1 = "AQ.Ab8RN6KeHzKJ8KrRuU8";
 const part2 = "96ECD7Ez_qVt1ZlLYT8FTbKOBfGKutw";
-const GEMINI_API_KEY = part1 + part2;
+const apiKey = part1 + part2;
+
+// אתחול הלקוח הרשמי שמזהה אוטומטית טוקני AQ
+const ai = new GoogleGenAI({ apiKey: apiKey });
 
 async function getHpFromAI(manufacturer, modelName, year, engineCode) {
-    if (!GEMINI_API_KEY) return null;
-    
-    let cleanManufacturer = manufacturer.includes("סיאט") ? "Seat / Cupra" : manufacturer;
-    const prompt = `What is the exact original horsepower (HP) of a ${cleanManufacturer} Leon model ${modelName}, year ${year}, engine code ${engineCode}? Return ONLY the numeric horsepower value (for example: 300), with no extra text.`;
-    
-    console.log("שולח פרומפט ל-AI עם טוקן גישה מאובטח:", prompt);
-
     try {
-        // שימוש בנתיב הרשמי ושליחת הטוקן כ-Bearer Token בכותרות הבקשה
-        const url = `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent`;
-        const response = await fetch(url, {
-            method: 'POST',
-            headers: { 
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${GEMINI_API_KEY}`
-            },
-            body: JSON.stringify({
-                contents: [{ parts: [{ text: prompt }] }]
-            })
-        });
+        let cleanManufacturer = manufacturer.includes("סיאט") ? "Seat / Cupra" : manufacturer;
+        const prompt = `What is the exact original horsepower (HP) of a ${cleanManufacturer} Leon model ${modelName}, year ${year}, engine code ${engineCode}? Return ONLY the numeric horsepower value (for example: 300), with no extra text.`;
         
-        const data = await response.json();
-        console.log("תשובה גולמית מה-AI:", JSON.stringify(data));
+        console.log("שולח פרומפט ל-AI דרך הספרייה הרשמית:", prompt);
 
-        if (data && data.candidates && data.candidates.length > 0) {
-            let text = data.candidates[0].content.parts[0].text.trim();
+        const response = await ai.models.generateContent({
+            model: 'gemini-1.5-flash',
+            contents: prompt,
+        });
+
+        if (response && response.text) {
+            let text = response.text.trim();
             let hp = text.replace(/[^0-9]/g, '');
-            console.log("הספק שחולץ:", hp);
+            console.log("הספק שחולץ מה-AI:", hp);
             if (hp && parseInt(hp) > 50) {
                 return `${hp} כ"ס (AI)`;
             }
         }
     } catch (error) {
-        console.error("שגיאה ב-AI:", error);
+        console.error("שגיאה בעבודה מול ה-AI:", error);
     }
     return null;
 }
@@ -101,7 +93,7 @@ app.get('/api/car/:plate', async (req, res) => {
             }
 
             if (!hpValue) {
-                console.log("אין הספק במשרד התחבורה, מפעיל פונקציית AI...");
+                console.log("אין הספק במשרד התחבורה, מפעיל את ה-AI הרשמי...");
                 const aiHp = await getHpFromAI(manufacturer, displayModel, year, engineCode);
                 if (aiHp) {
                     hpValue = aiHp;
