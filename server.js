@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const { GoogleGenAI } = require('@google/genai');
+const { GoogleGenerativeAI } = require('@google/generative-ai');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -12,8 +12,8 @@ const part1 = "AQ.Ab8RN6KeHzKJ8KrRuU8";
 const part2 = "96ECD7Ez_qVt1ZlLYT8FTbKOBfGKutw";
 const apiKey = part1 + part2;
 
-// אתחול הלקוח הרשמי שמזהה אוטומטית טוקני AQ
-const ai = new GoogleGenAI({ apiKey: apiKey });
+// אתחול החבילה הרשמית
+const genAI = new GoogleGenerativeAI(apiKey);
 
 async function getHpFromAI(manufacturer, modelName, year, engineCode) {
     try {
@@ -22,18 +22,16 @@ async function getHpFromAI(manufacturer, modelName, year, engineCode) {
         
         console.log("שולח פרומפט ל-AI דרך הספרייה הרשמית:", prompt);
 
-        const response = await ai.models.generateContent({
-            model: 'gemini-1.5-flash',
-            contents: prompt,
-        });
+        // שימוש במודל הרשמי והיציב
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+        const result = await model.generateContent(prompt);
+        const response = await result.response;
+        const text = response.text().trim();
 
-        if (response && response.text) {
-            let text = response.text.trim();
-            let hp = text.replace(/[^0-9]/g, '');
-            console.log("הספק שחולץ מה-AI:", hp);
-            if (hp && parseInt(hp) > 50) {
-                return `${hp} כ"ס (AI)`;
-            }
+        console.log("תשובה מה-AI:", text);
+        let hp = text.replace(/[^0-9]/g, '');
+        if (hp && parseInt(hp) > 50) {
+            return `${hp} כ"ס (AI)`;
         }
     } catch (error) {
         console.error("שגיאה בעבודה מול ה-AI:", error);
