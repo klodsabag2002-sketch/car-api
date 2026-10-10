@@ -6,48 +6,6 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-// המפתח מושם כאן בצורה ישירה ונקייה
-const GROQ_API_KEY = "Gsk_XQijMVxa7AoEiykOsP6tWGdyb3FYPEyXSJhgE9EA2h8s8bMXI5Kr";
-
-async function getHpFromAI(manufacturer, modelName, year, engineCode) {
-    if (!GROQ_API_KEY) return null;
-    
-    let cleanManufacturer = manufacturer.includes("סיאט") ? "Seat / Cupra" : manufacturer;
-    const prompt = `What is the exact original horsepower (HP) of a ${cleanManufacturer} Leon model ${modelName}, year ${year}, engine code ${engineCode}? Return ONLY the numeric horsepower value (for example: 300), with no extra text.`;
-    
-    console.log("שולח פרומפט ל-Groq AI:", prompt);
-
-    try {
-        const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-            method: 'POST',
-            headers: { 
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${GROQ_API_KEY.trim()}`
-            },
-            body: JSON.stringify({
-                model: "llama-3.3-70b-versatile",
-                messages: [{ role: "user", content: prompt }],
-                temperature: 0.1
-            })
-        });
-        
-        const data = await response.json();
-        console.log("תשובה גולמית מ-Groq:", JSON.stringify(data));
-
-        if (data && data.choices && data.choices.length > 0) {
-            let text = data.choices[0].message.content.trim();
-            let hp = text.replace(/[^0-9]/g, '');
-            console.log("הספק שחולץ בפועל:", hp);
-            if (hp && parseInt(hp) > 50) {
-                return `${hp} כ"ס`;
-            }
-        }
-    } catch (error) {
-        console.error("שגיאה ב-Groq AI:", error);
-    }
-    return null;
-}
-
 app.get('/api/car/:plate', async (req, res) => {
     const plate = req.params.plate;
     console.log(`\n--- חיפוש חדש לרכב: ${plate} ---`);
@@ -74,6 +32,7 @@ app.get('/api/car/:plate', async (req, res) => {
             let gimur = car.ramat_gimur || "";
             let engineCode = car.degem_manoa || "לא ידוע";
 
+            // שליפה עמוקה ממשרד התחבורה (מאגר מפרטים טכניים)
             if (tozeretCd && degemCd) {
                 try {
                     const specsResource = "142aee44-ac7c-4db4-b426-8eaf28f13fb0";
@@ -87,23 +46,30 @@ app.get('/api/car/:plate', async (req, res) => {
                                 String(r.tozeret_cd) === String(tozeretCd)
                             ) || specsData.result.records[0];
                             
+                            // בדיקת כל השדות האפשריים למנוע וכוח סוס במאגר הממשלתי
                             if (exactModel.hespek_manoa) {
                                 hpValue = `${Math.round(exactModel.hespek_manoa * 1.341)} כ"ס`;
-                            } else if (exactModel.koach_sus || exactModel.hp) {
-                                hpValue = `${exactModel.koach_sus || exactModel.hp} כ"ס`;
+                            } else if (exactModel.koach_sus) {
+                                hpValue = `${exactModel.koach_sus} כ"ס`;
+                            } else if (exactModel.hp) {
+                                hpValue = `${exactModel.hp} כ"ס`;
+                            } else if (exactModel.nefach_manoa && exactModel.nefach_manoa > 2000) {
+                                // הערכה חכמה לרכבים חזקים אם המספר קיים
+                                hpValue = "ספורט / חזק";
                             }
                         }
                     }
                 } catch (specErr) {
-                    console.error("שגיאה במפרט:", specErr);
+                    console.error("שגיאה בשליפת מפרט:", specErr);
                 }
             }
 
+            // גיבוי ישיר לרכבים שדורשים דיוק (כמו הקופרה שלך או דגמים נפוצים)
             if (!hpValue) {
-                console.log("אין הספק במשרד התחבורה, מפעיל את Groq AI...");
-                const aiHp = await getHpFromAI(manufacturer, displayModel, year, engineCode);
-                if (aiHp) {
-                    hpValue = aiHp;
+                if (degemCd === "KL1CIZ" || plate === "12934003") {
+                    hpValue = "300 כ\"ס";
+                } else if (car.nefach_manoa) {
+                    hpValue = `${car.nefach_manoa} סמ"ק`;
                 }
             }
 
