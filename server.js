@@ -6,10 +6,14 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-const GROQ_API_KEY = "Gsk_XQijMVxa7AoEiykOsP6tWGdyb3FYPEyXSJhgE9EA2h8s8bMXI5Kr";
+// שליפת המפתח בצורה מאובטחת מההגדרות של Render
+const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
 async function getHpFromAI(manufacturer, modelName, year, engineCode) {
-    if (!GROQ_API_KEY) return null;
+    if (!GROQ_API_KEY) {
+        console.error("שגיאה: מפתח GROQ_API_KEY לא מוגדר בשרת!");
+        return null;
+    }
     
     let cleanManufacturer = manufacturer.includes("סיאט") ? "Seat / Cupra" : manufacturer;
     const prompt = `What is the exact original horsepower (HP) of a ${cleanManufacturer} Leon model ${modelName}, year ${year}, engine code ${engineCode}? Return ONLY the numeric horsepower value (for example: 300), with no extra text.`;
@@ -21,7 +25,7 @@ async function getHpFromAI(manufacturer, modelName, year, engineCode) {
             method: 'POST',
             headers: { 
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${GROQ_API_KEY}`
+                'Authorization': `Bearer ${GROQ_API_KEY.trim()}`
             },
             body: JSON.stringify({
                 model: "llama-3.3-70b-versatile",
