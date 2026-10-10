@@ -14,15 +14,15 @@ app.use((req, res, next) => {
     next();
 });
 
-// מחפש את שדה כוח הסוס. אם לא נמצא, מדפיס ללוג את כל שמות השדות שחזרו
+// מדפיס את כל השדות הקשורים לכוח סוס (גם אם הערך ריק) ומחזיר את הערך אם יש
 function findHorsepower(car) {
+    const related = Object.keys(car).filter(k => /koa?h|koach|sus|hp|power|kw|manoa/i.test(k));
+    console.log("שדות קשורים לכוח סוס:", related.map(k => `${k}=${car[k]}`).join(" | ") || "אין");
+
     if (car.koah_sus != null && car.koah_sus !== "") return car.koah_sus;
 
-    const key = Object.keys(car).find(k => /koa?h.*sus|koach|sus/i.test(k));
-    if (key) return car[key];
-
-    console.log("שדות שחזרו מהמאגר:", Object.keys(car).join(", "));
-    return null;
+    const key = related.find(k => car[k] != null && car[k] !== "");
+    return key ? car[key] : null;
 }
 
 async function fetchCarRecord(plate) {
