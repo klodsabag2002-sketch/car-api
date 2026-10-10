@@ -31,12 +31,14 @@ async function getHpFromAI(manufacturer, modelName, year, engineCode) {
         });
         
         const data = await response.json();
+        console.log("תשובה גולמית מ-Groq:", JSON.stringify(data));
+
         if (data && data.choices && data.choices.length > 0) {
             let text = data.choices[0].message.content.trim();
             let hp = text.replace(/[^0-9]/g, '');
-            console.log("הספק שחולץ מ-Groq:", hp);
+            console.log("הספק שחולץ בפועל:", hp);
             if (hp && parseInt(hp) > 50) {
-                return `${hp} כ"ס (AI)`;
+                return `${hp} כ"ס`;
             }
         }
     } catch (error) {
@@ -106,11 +108,11 @@ app.get('/api/car/:plate', async (req, res) => {
 
             let finalOutput = "";
             if (hpValue && gimur) {
-                finalOutput = `${hpValue}\nגימור: ${gimur}`;
+                finalOutput = `${hpValue} (גימור: ${gimur})`;
             } else if (hpValue) {
                 finalOutput = hpValue;
             } else if (gimur) {
-                finalOutput = `גימור: ${gimur}\n(הספק חסר)`;
+                finalOutput = `גימור: ${gimur}`;
             } else if (engineCode) {
                 finalOutput = `מנוע: ${engineCode}`;
             } else {
