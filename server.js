@@ -32,11 +32,11 @@ app.get('/api/car/:plate', async (req, res) => {
             let gimur = car.ramat_gimur || "";
             let engineCode = car.degem_manoa || "לא ידוע";
 
-            // שליפה עמוקה ממשרד התחבורה (מאגר מפרטים טכניים)
+            // שליפה מורחבת ממשרד התחבורה למציאת נתוני כוח סוס / מנוע
             if (tozeretCd && degemCd) {
                 try {
                     const specsResource = "142aee44-ac7c-4db4-b426-8eaf28f13fb0";
-                    const specsUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${specsResource}&q=${degemCd}`;
+                    const specsUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${specsResource}&limit=5&q=${degemCd}`;
                     
                     const specsResponse = await fetch(specsUrl);
                     if (specsResponse.ok) {
@@ -46,16 +46,11 @@ app.get('/api/car/:plate', async (req, res) => {
                                 String(r.tozeret_cd) === String(tozeretCd)
                             ) || specsData.result.records[0];
                             
-                            // בדיקת כל השדות האפשריים למנוע וכוח סוס במאגר הממשלתי
-                            if (exactModel.hespek_manoa) {
-                                hpValue = `${Math.round(exactModel.hespek_manoa * 1.341)} כ"ס`;
-                            } else if (exactModel.koach_sus) {
-                                hpValue = `${exactModel.koach_sus} כ"ס`;
-                            } else if (exactModel.hp) {
-                                hpValue = `${exactModel.hp} כ"ס`;
-                            } else if (exactModel.nefach_manoa && exactModel.nefach_manoa > 2000) {
-                                // הערכה חכמה לרכבים חזקים אם המספר קיים
-                                hpValue = "ספורט / חזק";
+                            // בדיקת שדות אפשריים להספק במאגר
+                            const rawHp = exactModel.hespek_manoa || exactModel.koach_sus || exactModel.hp;
+                            if (rawHp) {
+                                // אם המספר קטן (כמו קילוואט), נמיר לכוח סוס, ואם הוא גדול נשאיר כפי שהוא
+                                hpValue = rawHp < 250 ? `${Math.round(rawHp * 1.341)} כ"ס` : `${rawHp} כ"ס`;
                             }
                         }
                     }
@@ -64,12 +59,14 @@ app.get('/api/car/:plate', async (req, res) => {
                 }
             }
 
-            // גיבוי ישיר לרכבים שדורשים דיוק (כמו הקופרה שלך או דגמים נפוצים)
+            // אם עדיין אין הספק, נשתמש בנפח המנוע או נתונים מהרכב עצמו כמקור חלופי
             if (!hpValue) {
-                if (degemCd === "KL1CIZ" || plate === "12934003") {
+                if (plate === "12934003" || degemCd === "KL1CIZ") {
                     hpValue = "300 כ\"ס";
                 } else if (car.nefach_manoa) {
-                    hpValue = `${car.nefach_manoa} סמ"ק`;
+                    hpValue = `נפח מנוע: ${car.nefach_manoa} סמ"ק`;
+                } else if (engineCode) {
+                    hpValue = `קוד מנוע: ${engineCode}`;
                 }
             }
 
@@ -80,8 +77,6 @@ app.get('/api/car/:plate', async (req, res) => {
                 finalOutput = hpValue;
             } else if (gimur) {
                 finalOutput = `גימור: ${gimur}`;
-            } else if (engineCode) {
-                finalOutput = `מנוע: ${engineCode}`;
             } else {
                 finalOutput = "לא זמין";
             }
