@@ -8,6 +8,8 @@ app.use(express.json());
 
 const CAR_REGISTRY_ID = "053cea08-09bc-40ec-8f7a-156f0677aff3"; // מאגר רישוי רכבים
 const MODELS_ID = "142afde2-6228-49f9-8a29-9b6c3a0cbe40";       // תוצרים ודגמים
+// מזהה המשאב של "מאגר היסטוריית כלי רכב פרטיים". ריק = ההיסטוריה כבויה
+const HISTORY_ID = "";
 
 app.use((req, res, next) => {
     console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
@@ -24,15 +26,6 @@ async function searchDatastore(resourceId, filters, limit = 100) {
     return data?.success ? (data.result?.records || []) : [];
 }
 
-// מספר נקי. DNF, ריק או לא מספר = null
-function toNumber(value) {
-    if (value == null) return null;
-    const s = String(value).trim();
-    if (s === "" || /^dnf$/i.test(s)) return null;
-    const n = Number(s);
-    return Number.isNaN(n) ? null : n;
-}
-
 // טקסט נקי. DNF או ריק = null
 function toText(value) {
     if (value == null) return null;
@@ -41,13 +34,59 @@ function toText(value) {
     return s;
 }
 
+function toNumber(value) {
+    const s = toText(value);
+    if (s === null) return null;
+    const n = Number(s.replace(/,/g, ""));
+    return Number.isNaN(n) ? null : n;
+}
+
+// הערך הראשון שאינו ריק מבין שמות השדות שנבדקים
+function pick(record, keys) {
+    for (const k of keys) {
+        const v = toText(record[k]);
+        if (v !== null) return v;
+    }
+    return null;
+}
+
+// שמות אפשריים לשדות שאינם מאומתים. הדיבוג מראה את השמות האמיתיים
+const KEYS = {
+    ownership: ["baalut", "sug_baalut", "baalut_desc", "sug_baalut_desc"],
+    owners: ["mispar_baalim", "baalim", "mispar_yadayim"],
+    disabled: ["tav_nakhe", "tag_nakhe", "tag_nakhe_ind", "nakhe"],
+    kmSinceTest: ["km_test_aharon", "kilometer_test_aharon", "ktm_test_aharon"]
+};
+
+function findKm(record) {
+    const direct = pick(record, KEYS.kmSinceTest);
+    if (direct !== null) return toNumber(direct);
+    const k = Object.keys(record).find(x => /(km|kilom|ktm)/i.test(x) && /(test|tsht|tesht)/i.test(x));
+    return k ? toNumber(record[k]) : null;
+}
+
+function findDisabled(record) {
+    const v = pick(record, KEYS.disabled);
+    if (v === null) return null;
+    return /^(כן|yes|true|1|נכה)$/i.test(v);
+}
+
+// true = בתוקף, false = פג תוקף, null = אין תאריך
+function testStatus(expiry) {
+    if (!expiry) return null;
+    const d = new Date(expiry);
+    if (isNaN(d)) return null;
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    return d >= today;
+}
+
 async function fetchCarRecord(plate) {
     const records = await searchDatastore(CAR_REGISTRY_ID, { mispar_rechev: Number(plate) }, 1);
     return records[0] || null;
 }
 
-// ---------- רשומת הדגם (כ"ס, רמת גימור, נפח) ----------
-
+// רשומת הדגם (כ"ס, רמת גימור, נפח)
 async function findModelRow(car) {
     const year = car.shnat_yitzur != null ? Number(car.shnat_yitzur) : null;
 
@@ -62,12 +101,7 @@ async function findModelRow(car) {
     for (const filters of attempts) {
         const rows = await searchDatastore(MODELS_ID, filters, 100);
         if (rows.length === 0) continue;
-
-        // מעדיפים רשומה שיש בה כ"ס תקין, ואחרת את הראשונה
-        const withHp = rows.find(r => toNumber(r.koah_sus) != null);
-        const row = withHp || rows[0];
-        console.log(`נמצאה רשומת דגם | פילטר: ${JSON.stringify(filters)}`);
-        return row;
+        return rows.find(r => toNumber(r.koah_sus) != null) || rows[0];
     }
     return null;
 }
@@ -94,6 +128,7 @@ app.get('/api/car/:plate', async (req, res) => {
         const year = car.shnat_yitzur || "לא ידוע";
         const hp = toNumber(row?.koah_sus) ?? toNumber(car.koah_sus);
         const engineCc = toNumber(row?.nefah_manoa) ?? toNumber(car.nefah_manoa);
+        const testExpiry = car.tokef_dt || null;
 
         console.log(`--------------------------------------------------`);
         console.log(`[SEARCH LOG] 🔍 מישהו חיפש רכב!`);
@@ -113,13 +148,41 @@ app.get('/api/car/:plate', async (req, res) => {
                 year,
                 color: car.zeva_rechev || car.tzeva_rechev || "לא ידוע",
                 engineCc,
-                testExpiry: car.tokef_dt || null,
-                horsepower: hp
+                horsepower: hp,
+                testExpiry,
+                testValid: testStatus(testExpiry),
+                ownership: pick(car, KEYS.ownership),
+                owners: toNumber(pick(car, KEYS.owners)),
+                disabled: findDisabled(car),
+                kmSinceTest: findKm(car)
             }
         });
     } catch (error) {
         console.error(`[SEARCH LOG] 💥 שגיאה בחיפוש מספר ${plate}:`, error);
         res.status(500).json({ success: false, error: "שגיאה בשליפה" });
+    }
+});
+
+// היסטוריית בעלות לרכב
+app.get('/api/history/:plate', async (req, res) => {
+    const plate = req.params.plate.replace(/\D/g, "");
+    if (!HISTORY_ID) {
+        return res.json({ success: false, message: "היסטוריית הבעלות לא הוגדרה בשרת" });
+    }
+    try {
+        const records = await searchDatastore(HISTORY_ID, { mispar_rechev: Number(plate) }, 100);
+        const clean = records.map(r => {
+            const o = {};
+            for (const [k, v] of Object.entries(r)) {
+                if (k === "_id") continue;
+                const t = toText(v);
+                if (t !== null) o[k] = t;
+            }
+            return o;
+        });
+        res.json({ success: true, records: clean });
+    } catch (e) {
+        res.status(500).json({ success: false, message: "שגיאה בשליפת ההיסטוריה" });
     }
 });
 
