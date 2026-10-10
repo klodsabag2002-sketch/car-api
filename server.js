@@ -8,8 +8,8 @@ app.use(express.json());
 
 const CAR_REGISTRY_ID = "053cea08-09bc-40ec-8f7a-156f0677aff3"; // מאגר רישוי רכבים
 const MODELS_ID = "142afde2-6228-49f9-8a29-9b6c3a0cbe40";       // תוצרים ודגמים
-// מזהה המשאב של "מאגר היסטוריית כלי רכב פרטיים". ריק = ההיסטוריה כבויה
-const HISTORY_ID = "";
+const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";      // היסטוריית כלי רכב פרטיים (1)
+const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";    // היסטוריית כלי רכב פרטיים (2): בעלויות
 
 app.use((req, res, next) => {
     console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
@@ -26,7 +26,6 @@ async function searchDatastore(resourceId, filters, limit = 100) {
     return data?.success ? (data.result?.records || []) : [];
 }
 
-// טקסט נקי. DNF או ריק = null
 function toText(value) {
     if (value == null) return null;
     const s = String(value).trim();
@@ -41,7 +40,6 @@ function toNumber(value) {
     return Number.isNaN(n) ? null : n;
 }
 
-// הערך הראשון שאינו ריק מבין שמות השדות שנבדקים
 function pick(record, keys) {
     for (const k of keys) {
         const v = toText(record[k]);
@@ -50,28 +48,24 @@ function pick(record, keys) {
     return null;
 }
 
-// שמות אפשריים לשדות שאינם מאומתים. הדיבוג מראה את השמות האמיתיים
-const KEYS = {
-    ownership: ["baalut", "sug_baalut", "baalut_desc", "sug_baalut_desc"],
-    owners: ["mispar_baalim", "baalim", "mispar_yadayim"],
-    disabled: ["tav_nakhe", "tag_nakhe", "tag_nakhe_ind", "nakhe"],
-    kmSinceTest: ["km_test_aharon", "kilometer_test_aharon", "ktm_test_aharon"]
+// תרגום סוגי בעלות לעברית מובנת (ערך לא מוכר יוצג כמו שהוא)
+const ORIGIN_LABELS = {
+    "": "פרטי",
+    "החכר": "החכרה (ליסינג)",
+    "השכרה": "השכרה",
+    "יבוא אישי": "יבוא אישי",
+    "יבוא אישי-משומש": "יבוא אישי משומש",
+    "מדינת ישראל": "רכב ממשלתי",
+    "ביס לנהיגה\"": "בית ספר לנהיגה",
+    "משומש מיבואן": "משומש מיבואן"
 };
 
-function findKm(record) {
-    const direct = pick(record, KEYS.kmSinceTest);
-    if (direct !== null) return toNumber(direct);
-    const k = Object.keys(record).find(x => /(km|kilom|ktm)/i.test(x) && /(test|tsht|tesht)/i.test(x));
-    return k ? toNumber(record[k]) : null;
+function labelOwnership(raw) {
+    const t = toText(raw);
+    if (t === null) return "פרטי";
+    return ORIGIN_LABELS[t] || t;
 }
 
-function findDisabled(record) {
-    const v = pick(record, KEYS.disabled);
-    if (v === null) return null;
-    return /^(כן|yes|true|1|נכה)$/i.test(v);
-}
-
-// true = בתוקף, false = פג תוקף, null = אין תאריך
 function testStatus(expiry) {
     if (!expiry) return null;
     const d = new Date(expiry);
@@ -81,12 +75,42 @@ function testStatus(expiry) {
     return d >= today;
 }
 
+// ---------- מאגרים ----------
+
 async function fetchCarRecord(plate) {
     const records = await searchDatastore(CAR_REGISTRY_ID, { mispar_rechev: Number(plate) }, 1);
     return records[0] || null;
 }
 
-// רשומת הדגם (כ"ס, רמת גימור, נפח)
+async function fetchHistoryRecord(plate) {
+    const records = await searchDatastore(HISTORY_ID, { mispar_rechev: Number(plate) }, 1);
+    return records[0] || null;
+}
+
+// כל שורות הבעלויות לרכב, ממוינות לפי התאריך
+async function fetchOwnershipRows(plate) {
+    const rows = await searchDatastore(OWNERSHIP_ID, { mispar_rechev: Number(plate) }, 100);
+    return rows
+        .map(r => ({ date: toText(r.baalut_dt), type: labelOwnership(r.baalut) }))
+        .sort((a, b) => String(a.date).localeCompare(String(b.date)));
+}
+
+function buildHistory(h) {
+    if (!h) return null;
+
+    const changes = [];
+    if (Number(h.shinui_mivne_ind) === 1) changes.push("שינוי במבנה הרכב");
+    if (Number(h.shnui_zeva_ind) === 1) changes.push("שינוי צבע");
+    if (Number(h.shinui_zmig_ind) === 1) changes.push("שינוי צמיגים");
+
+    return {
+        origin: labelOwnership(h.mkoriut_nm),
+        firstRegistration: toText(h.rishum_rishon_dt),
+        kmSinceTest: toNumber(h.kilometer_test_aharon),
+        changes
+    };
+}
+
 async function findModelRow(car) {
     const year = car.shnat_yitzur != null ? Number(car.shnat_yitzur) : null;
 
@@ -106,6 +130,14 @@ async function findModelRow(car) {
     return null;
 }
 
+const DISABLED_KEYS = ["tav_nakhe", "tag_nakhe", "tag_nakhe_ind", "nakhe"];
+
+function findDisabled(record) {
+    const v = pick(record, DISABLED_KEYS);
+    if (v === null) return null;
+    return /^(כן|yes|true|1|נכה)$/i.test(v);
+}
+
 // ---------- API ----------
 
 app.get('/api/car/:plate', async (req, res) => {
@@ -120,7 +152,12 @@ app.get('/api/car/:plate', async (req, res) => {
             return res.json({ success: false, message: "המספר אינו קיים במאגר משרד התחבורה" });
         }
 
-        const row = await findModelRow(car);
+        const [row, historyRaw, ownershipList] = await Promise.all([
+            findModelRow(car),
+            fetchHistoryRecord(plate),
+            fetchOwnershipRows(plate)
+        ]);
+        const history = buildHistory(historyRaw);
 
         const manufacturer = car.tozeret_nm || "לא ידוע";
         const model = car.kinuy_mishari || car.degem_nm || row?.kinuy_mishari || "לא ידוע";
@@ -130,12 +167,18 @@ app.get('/api/car/:plate', async (req, res) => {
         const engineCc = toNumber(row?.nefah_manoa) ?? toNumber(car.nefah_manoa);
         const testExpiry = car.tokef_dt || null;
 
+        // הבעלות הנוכחית: האחרונה ברשימה אם יש, אחרת מהמאגר הראשון
+        const currentOwnership = ownershipList.length
+            ? ownershipList[ownershipList.length - 1].type
+            : (history?.origin ?? null);
+
         console.log(`--------------------------------------------------`);
         console.log(`[SEARCH LOG] 🔍 מישהו חיפש רכב!`);
         console.log(`📅 זמן: ${timestamp}`);
         console.log(`🚗 מספר רכב: ${plate}`);
         console.log(`🏭 יצרן ודגם: ${manufacturer} ${model} ${trim || ""} (${year})`);
         console.log(`⚡ כוח סוס: ${hp != null ? hp : "לא ידוע"}`);
+        console.log(`🔁 מעברי בעלות: ${ownershipList.length}`);
         console.log(`--------------------------------------------------`);
 
         res.json({
@@ -151,10 +194,12 @@ app.get('/api/car/:plate', async (req, res) => {
                 horsepower: hp,
                 testExpiry,
                 testValid: testStatus(testExpiry),
-                ownership: pick(car, KEYS.ownership),
-                owners: toNumber(pick(car, KEYS.owners)),
+                ownership: currentOwnership,
+                firstRegistration: history?.firstRegistration ?? null,
+                changes: history?.changes ?? [],
+                owners: ownershipList.length || null,
                 disabled: findDisabled(car),
-                kmSinceTest: findKm(car)
+                kmSinceTest: history?.kmSinceTest ?? null
             }
         });
     } catch (error) {
@@ -163,24 +208,23 @@ app.get('/api/car/:plate', async (req, res) => {
     }
 });
 
-// היסטוריית בעלות לרכב
+// היסטוריית בעלות מלאה לרכב
 app.get('/api/history/:plate', async (req, res) => {
     const plate = req.params.plate.replace(/\D/g, "");
-    if (!HISTORY_ID) {
-        return res.json({ success: false, message: "היסטוריית הבעלות לא הוגדרה בשרת" });
-    }
     try {
-        const records = await searchDatastore(HISTORY_ID, { mispar_rechev: Number(plate) }, 100);
-        const clean = records.map(r => {
-            const o = {};
-            for (const [k, v] of Object.entries(r)) {
-                if (k === "_id") continue;
-                const t = toText(v);
-                if (t !== null) o[k] = t;
-            }
-            return o;
+        const [historyRaw, ownershipList] = await Promise.all([
+            fetchHistoryRecord(plate),
+            fetchOwnershipRows(plate)
+        ]);
+        const history = buildHistory(historyRaw);
+        if (!history && ownershipList.length === 0) {
+            return res.json({ success: false, message: "לא נמצאה היסטוריה לרכב זה" });
+        }
+        res.json({
+            success: true,
+            history: history || {},
+            ownershipList
         });
-        res.json({ success: true, records: clean });
     } catch (e) {
         res.status(500).json({ success: false, message: "שגיאה בשליפת ההיסטוריה" });
     }
@@ -191,7 +235,9 @@ app.get('/api/debug/:plate', async (req, res) => {
         const car = await fetchCarRecord(req.params.plate);
         if (!car) return res.json({ success: false, message: "לא נמצא" });
         const row = await findModelRow(car);
-        res.json({ success: true, car_fields: Object.keys(car), car, model_row: row });
+        const hist = await fetchHistoryRecord(req.params.plate);
+        const own = await fetchOwnershipRows(req.params.plate);
+        res.json({ success: true, car_fields: Object.keys(car), car, model_row: row, history: hist, ownership: own });
     } catch (error) {
         console.error("שגיאה:", error);
         res.status(500).json({ success: false, error: error.message });
