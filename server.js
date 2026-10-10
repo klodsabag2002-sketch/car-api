@@ -1,43 +1,10 @@
 const express = require('express');
 const cors = require('cors');
-const { GoogleGenerativeAI } = require('@google/generative-ai');
-
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
-
-const part1 = "AQ.Ab8RN6KeHzKJ8KrRuU8";
-const part2 = "96ECD7Ez_qVt1ZlLYT8FTbKOBfGKutw";
-const apiKey = part1 + part2;
-
-// אתחול החבילה הרשמית
-const genAI = new GoogleGenerativeAI(apiKey);
-
-async function getHpFromAI(manufacturer, modelName, year, engineCode) {
-    try {
-        let cleanManufacturer = manufacturer.includes("סיאט") ? "Seat / Cupra" : manufacturer;
-        const prompt = `What is the exact original horsepower (HP) of a ${cleanManufacturer} Leon model ${modelName}, year ${year}, engine code ${engineCode}? Return ONLY the numeric horsepower value (for example: 300), with no extra text.`;
-        
-        console.log("שולח פרומפט ל-AI דרך הספרייה הרשמית:", prompt);
-
-        // שימוש במודל הרשמי והיציב
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-        const result = await model.generateContent(prompt);
-        const response = await result.response;
-        const text = response.text().trim();
-
-        console.log("תשובה מה-AI:", text);
-        let hp = text.replace(/[^0-9]/g, '');
-        if (hp && parseInt(hp) > 50) {
-            return `${hp} כ"ס (AI)`;
-        }
-    } catch (error) {
-        console.error("שגיאה בעבודה מול ה-AI:", error);
-    }
-    return null;
-}
 
 app.get('/api/car/:plate', async (req, res) => {
     const plate = req.params.plate;
@@ -65,6 +32,7 @@ app.get('/api/car/:plate', async (req, res) => {
             let gimur = car.ramat_gimur || "";
             let engineCode = car.degem_manoa || "לא ידוע";
 
+            // שליפת נתונים טכניים מדויקים ממאגר משרד התחבורה
             if (tozeretCd && degemCd) {
                 try {
                     const specsResource = "142aee44-ac7c-4db4-b426-8eaf28f13fb0";
@@ -86,15 +54,7 @@ app.get('/api/car/:plate', async (req, res) => {
                         }
                     }
                 } catch (specErr) {
-                    console.error("שגיאה במפרט:", specErr);
-                }
-            }
-
-            if (!hpValue) {
-                console.log("אין הספק במשרד התחבורה, מפעיל את ה-AI הרשמי...");
-                const aiHp = await getHpFromAI(manufacturer, displayModel, year, engineCode);
-                if (aiHp) {
-                    hpValue = aiHp;
+                    console.error("שגיאה במפרט משרד התחבורה:", specErr);
                 }
             }
 
