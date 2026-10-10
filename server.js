@@ -8,7 +8,13 @@ app.use(express.json());
 
 const RESOURCE_ID = "053cea08-09bc-40ec-8f7a-156f0677aff3";
 
-// מחפש את שדה כוח הסוס גם אם שמו קצת שונה במאגר
+// לוג לכל בקשה נכנסת
+app.use((req, res, next) => {
+    console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+    next();
+});
+
+// מחפש את שדה כוח הסוס גם אם שמו שונה מעט במאגר
 function findHorsepower(car) {
     if (car.koah_sus != null && car.koah_sus !== "") return car.koah_sus;
 
@@ -47,23 +53,23 @@ app.get('/api/car/:plate', async (req, res) => {
                 year: car.shnat_yitzur || "לא ידוע",
                 color: car.zeva_rechev || car.rechev_col || car.tzeva_rechev || "לא ידוע",
                 testExpiry: car.tokef_dt || null,
-                horsepower: hp != null ? Number(hp) || hp : null
+                horsepower: hp != null ? (Number(hp) || hp) : null
             }
         });
     } catch (error) {
-        console.error(error);
+        console.error("שגיאה:", error);
         res.status(500).json({ success: false, error: "שגיאה בשליפה" });
     }
 });
 
-// נתיב עזר לבדיקה: מציג את כל השדות שחוזרים ממשרד התחבורה
-// כדי שתוכל לוודא את השם המדויק של שדה כוח הסוס
+// נתיב בדיקה: מחזיר את כל השדות שמשרד התחבורה שולח לרכב
 app.get('/api/debug/:plate', async (req, res) => {
     try {
         const car = await fetchCarRecord(req.params.plate);
         if (!car) return res.json({ success: false, message: "לא נמצא" });
         res.json({ success: true, fields: Object.keys(car), record: car });
     } catch (error) {
+        console.error("שגיאה:", error);
         res.status(500).json({ success: false, error: error.message });
     }
 });
