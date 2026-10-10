@@ -8,6 +8,6 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "@google/genai": "^0.1.1"
+    "@google/generative-ai": "^0.21.0"
   }
 }
