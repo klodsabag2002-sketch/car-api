@@ -8,7 +8,7 @@ app.use(express.json());
 
 const RESOURCE_ID = "053cea08-09bc-40ec-8f7a-156f0677aff3";
 
-// לוג לכל בקשה נכנסת
+// לוג כללי לכל בקשה נכנסת לשרת
 app.use((req, res, next) => {
     console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
     next();
@@ -36,28 +36,45 @@ async function fetchCarRecord(plate) {
 }
 
 app.get('/api/car/:plate', async (req, res) => {
+    const plate = req.params.plate;
+    const timestamp = new Date().toISOString();
+
     try {
-        const car = await fetchCarRecord(req.params.plate);
+        const car = await fetchCarRecord(plate);
 
         if (!car) {
+            console.warn(`[SEARCH LOG] ❌ 🚗 חיפוש רכב (לא נמצא במאגר): מספר ${plate} | שעה: ${timestamp}`);
             return res.json({ success: false, message: "המספר אינו קיים במאגר משרד התחבורה" });
         }
 
         const hp = findHorsepower(car);
+        const manufacturer = car.shem_yatzran || car.tozeret_nm || car.miktza || "לא ידוע";
+        const model = car.toar_degem || car.כינוי_מסחרי || car.degem_nm || car.degem_des || "לא ידוע";
+        const year = car.shnat_yitzur || "לא ידוע";
+
+        // **לוג מפורט בקונסול שמציג את פרטי הרכב שחיפשו**
+        console.log(`--------------------------------------------------`);
+        console.log(`[SEARCH LOG] 🔍 מישהו חיפש רכב!`);
+        console.log(`📅 זמן: ${timestamp}`);
+        console.log(`🚗 מספר רכב: ${plate}`);
+        console.log(`🏭 יצרן ודגם: ${manufacturer} ${model} (${year})`);
+        console.log(`⚡ כוח סוס: ${hp != null ? hp : "לא ידוע"}`);
+        console.log(`⚠️ הערה: יש לוודא מול מאגר ה-Recall של משרד התחבורה האם קיימת קריאת שירות פתוחה לדגם זה.`);
+        console.log(`--------------------------------------------------`);
 
         res.json({
             success: true,
             data: {
-                manufacturer: car.shem_yatzran || car.tozeret_nm || car.miktza || "לא ידוע",
-                model: car.toar_degem || car.כינוי_מסחרי || car.degem_nm || car.degem_des || "לא ידוע",
-                year: car.shnat_yitzur || "לא ידוע",
+                manufacturer,
+                model,
+                year,
                 color: car.zeva_rechev || car.rechev_col || car.tzeva_rechev || "לא ידוע",
                 testExpiry: car.tokef_dt || null,
                 horsepower: hp != null ? (Number(hp) || hp) : null
             }
         });
     } catch (error) {
-        console.error("שגיאה:", error);
+        console.error(`[SEARCH LOG] 💥 שגיאה בחיפוש מספר ${plate}:`, error);
         res.status(500).json({ success: false, error: "שגיאה בשליפה" });
     }
 });
