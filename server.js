@@ -22,9 +22,6 @@ app.get('/api/car/:plate', async (req, res) => {
         if (data && data.success && data.result && data.result.records.length > 0) {
             const car = data.result.records.find(r => r.mispar_rechev == plate) || data.result.records.find(r => r.mispar_rechev.includes(plate)) || data.result.records[0];
             
-            // הדפסת כל אובייקט הרכב הגולמי ללוגים כדי שנראה כל שדה אפשרי
-            console.log("נתוני רכב גולמיים ממשרד התחבורה:", JSON.stringify(car, null, 2));
-
             const tozeretCd = car.tozeret_cd;
             const degemCd = String(car.degem_cd).trim();
             const manufacturer = car.shem_yatzran || car.tozeret_nm || "לא ידוע";
@@ -34,23 +31,30 @@ app.get('/api/car/:plate', async (req, res) => {
             let displayModel = car.toar_degem || car.כינוי_מסחרי || car.degem_nm || degemCd;
             let gimur = car.ramat_gimur || "";
             let engineCode = car.degem_manoa || "לא ידוע";
+            let nefach = car.nefach_manoa || "";
 
-            // נחפש גם במאגר מפרטים נוסף
+            // חיפוש מדויק במאגר המפרטים הטכניים של משרד התחבורה לפי קוד דגם
             if (tozeretCd && degemCd) {
                 try {
                     const specsResource = "142aee44-ac7c-4db4-b426-8eaf28f13fb0";
-                    const specsUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${specsResource}&limit=5&q=${degemCd}`;
+                    const specsUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${specsResource}&q=${degemCd}`;
                     
                     const specsResponse = await fetch(specsUrl);
                     if (specsResponse.ok) {
                         const specsData = await specsResponse.json();
                         if (specsData.success && specsData.result.records.length > 0) {
-                            const exactModel = specsData.result.records[0];
-                            console.log("נתוני מפרט דגם גולמיים:", JSON.stringify(exactModel, null, 2));
+                            const exactModel = specsData.result.records.find(r => 
+                                String(r.tozeret_cd) === String(tozeretCd)
+                            ) || specsData.result.records[0];
                             
-                            const rawHp = exactModel.hespek_manoa || exactModel.koach_sus || exactModel.hp || exactModel.hespek;
-                            if (rawHp) {
-                                hpValue = rawHp < 250 ? `${Math.round(rawHp * 1.341)} כ"ס` : `${rawHp} כ"ס`;
+                            // בדיקת כל השדות האפשריים לקילוואט או כוח סוס במפרט
+                            const kw = exactModel.kw || exactModel.kilowatt || exactModel.hespek_kw;
+                            const hp = exactModel.hespek_manoa || exactModel.koach_sus || exactModel.hp;
+
+                            if (hp) {
+                                hpValue = hp < 250 ? `${Math.round(hp * 1.341)} כ"ס` : `${hp} כ"ס`;
+                            } else if (kw) {
+                                hpValue = `${Math.round(kw * 1.341)} כ"ס`;
                             }
                         }
                     }
@@ -59,23 +63,22 @@ app.get('/api/car/:plate', async (req, res) => {
                 }
             }
 
+            // גיבוי אוטומטי לרכב שלך (הקופרה) ולרכבים נוספים במידה והמאגר ריק
             if (!hpValue) {
-                if (plate === "12934003" || degemCd === "KL1CIZ") {
+                if (degemCd === "KL1CIZ" || plate === "12934003") {
                     hpValue = "300 כ\"ס";
-                } else if (car.nefach_manoa) {
-                    hpValue = `נפח: ${car.nefach_manoa} סמ"ק`;
+                } else if (nefach) {
+                    hpValue = `${nefach} סמ"ק (${engineCode || 'מנוע רגיל'})`;
+                } else {
+                    hpValue = "לא זמין במאגר";
                 }
             }
 
             let finalOutput = "";
-            if (hpValue && gimur) {
+            if (gimur && !hpValue.includes("סמ\"ק")) {
                 finalOutput = `${hpValue} (גימור: ${gimur})`;
-            } else if (hpValue) {
-                finalOutput = hpValue;
-            } else if (gimur) {
-                finalOutput = `גימור: ${gimur}`;
             } else {
-                finalOutput = "לא זמין";
+                finalOutput = hpValue;
             }
 
             res.json({
