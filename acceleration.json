@@ -51,6 +51,36 @@
   },
   {
     "make": "Cupra",
+    "model": "Terramar",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.3,
+    "source": "נתון יצרן CUPRA (cupra.com), Terramar 1.5 eTSI"
+  },
+  {
+    "make": "Cupra",
+    "model": "Terramar",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1984,
+    "seconds": 7.1,
+    "source": "נתון יצרן CUPRA (cupra.com), Terramar 2.0 TSI 4DRIVE"
+  },
+  {
+    "make": "Cupra",
+    "model": "Terramar",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 1984,
+    "seconds": 5.9,
+    "source": "נתון יצרן CUPRA (cupra.com), Terramar VZ 2.0 TSI"
+  },
+  {
+    "make": "Cupra",
     "model": "Formentor",
     "yearStart": 2020,
     "yearEnd": null,
