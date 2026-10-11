@@ -42,32 +42,51 @@ function toNumber(value) {
     return Number.isNaN(n) ? null : n;
 }
 
-// חישוב מוערך לזמן 0-100 קמ"ש על בסיס פיזיקה של רכב וזיהוי גרסאות ספורטיביות
+// אלגוריתם אוניברסלי לחישוב מוערך של 0-100 קמ"ש
 function estimateAcceleration(hp, engineCc, modelName, trimName) {
     if (!hp || hp <= 0) return null;
 
-    let estimatedWeight = 1350; // משפחתית ממוצעת כבסיס
-    if (engineCc) {
-        if (engineCc < 1200) estimatedWeight = 1050;
-        else if (engineCc < 1600) estimatedWeight = 1250;
-        else if (engineCc < 2000) estimatedWeight = 1450;
-        else estimatedWeight = 1750;
+    const fullText = (modelName + " " + (trimName || "")).toLowerCase();
+    
+    // זיהוי האם הרכב חשמלי (מומנט מיידי וזינוק מהיר)
+    const isElectric = fullText.includes("EV") || fullText.includes("חשמלי") || fullText.includes("e-tron") || fullText.includes("tesla") || fullText.includes("id.") || fullText.includes("geely") || fullText.includes("byd");
+
+    // הערכת משקל בסיסית
+    let estimatedWeight = 1350; 
+    if (isElectric) {
+        estimatedWeight = 1800;
+    } else if (engineCc) {
+        if (engineCc < 1200) estimatedWeight = 1050;      // מיני / סופרמיני
+        else if (engineCc < 1600) estimatedWeight = 1250; // משפחתית קומפקטית
+        else if (engineCc < 2000) estimatedWeight = 1450; // משפחתית גדולה / מנהלים
+        else estimatedWeight = 1750;                      // מנוע גדול / סדאן כבד
     }
 
-    const fullText = (modelName + " " + (trimName || "")).toLowerCase();
-    if (fullText.includes("suv") || fullText.includes("ג'יפון") || fullText.includes("tarraco") || fullText.includes("formentor")) {
+    // תוספת משקל לרכבי SUV / ג'יפונים
+    if (fullText.includes("suv") || fullText.includes("ג'יפון") || fullText.includes("tarraco") || fullText.includes("formentor") || fullText.includes("tiguan") || fullText.includes("ioniq 5")) {
         estimatedWeight += 250;
     }
 
     const kgPerHp = estimatedWeight / hp;
-    let time = 2.3 * Math.pow(kgPerHp, 0.56);
+    let time;
 
-    // בונוס ביצועים לגרסאות ספורטיביות עם בקרת זינוק / הנעה כפולה (כמו Cupra VZ)
-    if (fullText.includes("vz") || fullText.includes("gti") || fullText.includes("amg") || fullText.includes("rs") || fullText.includes("r") || fullText.includes("st")) {
-        time *= 0.88;
+    if (isElectric) {
+        time = 2.0 * Math.pow(kgPerHp, 0.48);
+    } else {
+        time = 2.35 * Math.pow(kgPerHp, 0.53);
+
+        // בונוס הנעה כפולה (AWD / 4x4 / VZ וכו')
+        if (fullText.includes("4x4") || fullText.includes("awd") || fullText.includes("4motion") || fullText.includes("quattro") || fullText.includes("xdrive") || fullText.includes("vz")) {
+            time *= 0.90;
+        }
+
+        // בונוס לגרסאות ספורטיביות קיצוניות
+        if (fullText.includes("vz") || fullText.includes("gti") || fullText.includes("amg") || fullText.includes("rs") || fullText.includes("r") || fullText.includes("st")) {
+            time *= 0.85;
+        }
     }
 
-    if (time < 3.4) time = 3.4;
+    if (time < 3.2) time = 3.2;
     if (time > 22) time = 22;
 
     return Number(time.toFixed(1));
