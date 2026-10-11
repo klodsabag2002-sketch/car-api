@@ -28,5 +28,15 @@
     "cc": 1984,
     "seconds": 7.2,
     "source": "נתון יצרן (7.2 שניות)"
+  },
+  {
+    "make": "Cupra",
+    "model": "Leon",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": null,
+    "seconds": 8.7,
+    "source": "cupraofficial.co.il (eTSI 1.5 היברידי מתון)"
   }
 ]
