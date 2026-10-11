@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -13,11 +14,6 @@ const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";
 
 const NINJAS_API_KEY = "Ubk3gCeKHqhTnzqnyzk5setrkAaUIzSwOOhqwkrS";
-
-app.use((req, res, next) => {
-    console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
-    next();
-});
 
 async function searchDatastore(resourceId, filters, limit = 100, q = "") {
     try {
@@ -59,14 +55,10 @@ function cleanMakeName(israeliMake) {
     return israeliMake.split(' ')[0];
 }
 
-function cleanModelName(israeliModel) {
-    return israeliModel ? israeliModel.trim().toLowerCase() : '';
-}
-
 async function fetchZeroToHundred(manufacturer, model, year) {
     try {
         const make = cleanMakeName(manufacturer);
-        const cleanModel = cleanModelName(model);
+        const cleanModel = model ? model.trim().toLowerCase() : '';
         const url = `https://api.api-ninjas.com/v1/cars?make=${make}&model=${cleanModel}&year=${year}`;
         
         const response = await fetch(url, {
@@ -123,45 +115,10 @@ async function checkDisabled(plate) {
         if (byFilter.length > 0) return true;
 
         const byText = await searchDatastore(DISABLED_ID, null, 50, plate);
-        const found = byText.some(r =>
-            Object.values(r).some(v => String(v).replace(/\D/g, "") === plate)
-        );
-        return found;
+        return byText.some(r => Object.values(r).some(v => String(v).replace(/\D/g, "") === plate));
     } catch (e) {
         return null;
     }
-}
-
-async function fetchCarRecord(plate) {
-    const records = await searchDatastore(CAR_REGISTRY_ID, { mispar_rechev: Number(plate) }, 1);
-    return records[0] || null;
-}
-
-async function fetchHistoryRecord(plate) {
-    const records = await searchDatastore(HISTORY_ID, { mispar_rechev: Number(plate) }, 1);
-    return records[0] || null;
-}
-
-async function fetchOwnershipRows(plate) {
-    const rows = await searchDatastore(OWNERSHIP_ID, { mispar_rechev: Number(plate) }, 100);
-    return rows
-        .map(r => ({ date: toText(r.baalut_dt), type: labelOwnership(r.baalut) }))
-        .sort((a, b) => String(a.date).localeCompare(String(b.date)));
-}
-
-function buildHistory(h) {
-    if (!h) return null;
-    const changes = [];
-    if (Number(h.shinui_mivne_ind) === 1) changes.push("שינוי במבנה הרכב");
-    if (Number(h.shnui_zeva_ind) === 1) changes.push("שינוי צבע");
-    if (Number(h.shinui_zmig_ind) === 1) changes.push("שינוי צמיגים");
-
-    return {
-        origin: labelOwnership(h.mkoriut_nm),
-        firstRegistration: toText(h.rishum_rishon_dt),
-        kmSinceTest: toNumber(h.kilometer_test_aharon),
-        changes
-    };
 }
 
 async function findModelRow(car) {
@@ -184,10 +141,10 @@ async function findModelRow(car) {
 
 app.get('/api/car/:plate', async (req, res) => {
     const plate = req.params.plate.replace(/\D/g, "");
-    const timestamp = new Date().toISOString();
 
     try {
-        const car = await fetchCarRecord(plate);
+        const records = await searchDatastore(CAR_REGISTRY_ID, { mispar_rechev: Number(plate) }, 1);
+        const car = records[0] || null;
 
         if (!car) {
             return res.json({ success: false, message: "המספר אינו קיים במאגר משרד התחבורה" });
@@ -197,24 +154,32 @@ app.get('/api/car/:plate', async (req, res) => {
         const model = car.kinuy_mishari || car.degem_nm || "לא ידוע";
         const year = car.shnat_yitzur || null;
 
-        const [row, historyRaw, ownershipList, disabled, zeroToHundred] = await Promise.all([
+        const [row, historyRaw, ownershipRows, disabled, zeroToHundred] = await Promise.all([
             findModelRow(car),
-            fetchHistoryRecord(plate),
-            fetchOwnershipRows(plate),
+            searchDatastore(HISTORY_ID, { mispar_rechev: Number(plate) }, 1),
+            searchDatastore(OWNERSHIP_ID, { mispar_rechev: Number(plate) }, 100),
             checkDisabled(plate),
             year ? fetchZeroToHundred(manufacturer, model, year) : Promise.resolve(null)
         ]);
 
-        const history = buildHistory(historyRaw);
+        const h = historyRaw[0] || null;
+        const history = h ? {
+            origin: labelOwnership(h.mkoriut_nm),
+            firstRegistration: toText(h.rishum_rishon_dt),
+            kmSinceTest: toNumber(h.kilometer_test_aharon)
+        } : null;
+
+        const ownershipList = ownershipRows
+            .map(r => ({ date: toText(r.baalut_dt), type: labelOwnership(r.baalut) }))
+            .sort((a, b) => String(a.date).localeCompare(String(b.date)));
+
         const trim = toText(row?.ramat_gimur) || toText(car.ramat_gimur) || null;
         const hp = toNumber(row?.koah_sus) ?? toNumber(car.koah_sus);
         const engineCc = toNumber(row?.nefah_manoa) ?? toNumber(car.nefah_manoa);
         const testExpiry = car.tokef_dt || null;
 
         const registryOwnership = labelRegistryOwnership(car.baalut);
-        const historyOwnership = ownershipList.length
-            ? ownershipList[ownershipList.length - 1].type
-            : (history?.origin ?? null);
+        const historyOwnership = ownershipList.length ? ownershipList[ownershipList.length - 1].type : (history?.origin ?? null);
         const currentOwnership = registryOwnership || historyOwnership;
 
         res.json({
@@ -236,7 +201,6 @@ app.get('/api/car/:plate', async (req, res) => {
                 testValid: testStatus(testExpiry),
                 ownership: currentOwnership,
                 firstRegistration: history?.firstRegistration ?? null,
-                changes: history?.changes ?? [],
                 owners: ownershipList.length || null,
                 disabled,
                 kmSinceTest: history?.kmSinceTest ?? null,
@@ -251,11 +215,21 @@ app.get('/api/car/:plate', async (req, res) => {
 app.get('/api/history/:plate', async (req, res) => {
     const plate = req.params.plate.replace(/\D/g, "");
     try {
-        const [historyRaw, ownershipList] = await Promise.all([
-            fetchHistoryRecord(plate),
-            fetchOwnershipRows(plate)
+        const [historyRaw, ownershipRows] = await Promise.all([
+            searchDatastore(HISTORY_ID, { mispar_rechev: Number(plate) }, 1),
+            searchDatastore(OWNERSHIP_ID, { mispar_rechev: Number(plate) }, 100)
         ]);
-        const history = buildHistory(historyRaw);
+        const h = historyRaw[0] || null;
+        const history = h ? {
+            origin: labelOwnership(h.mkoriut_nm),
+            firstRegistration: toText(h.rishum_rishon_dt),
+            kmSinceTest: toNumber(h.kilometer_test_aharon)
+        } : null;
+
+        const ownershipList = ownershipRows
+            .map(r => ({ date: toText(r.baalut_dt), type: labelOwnership(r.baalut) }))
+            .sort((a, b) => String(a.date).localeCompare(String(b.date)));
+
         if (!history && ownershipList.length === 0) {
             return res.json({ success: false, message: "לא נמצאה היסטוריה לרכב זה" });
         }
