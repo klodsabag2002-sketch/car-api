@@ -60,6 +60,13 @@ function labelOwnership(raw) {
     return ORIGIN_LABELS[t] || t;
 }
 
+// סוג הבעלות מהמאגר הראשי (שדה baalut ברשומת הרישוי). null אם השדה ריק
+function labelRegistryOwnership(raw) {
+    const t = toText(raw);
+    if (t === null) return null;
+    return ORIGIN_LABELS[t] || t;
+}
+
 function testStatus(expiry) {
     if (!expiry) return null;
     const d = new Date(expiry);
@@ -170,9 +177,12 @@ app.get('/api/car/:plate', async (req, res) => {
         const engineCc = toNumber(row?.nefah_manoa) ?? toNumber(car.nefah_manoa);
         const testExpiry = car.tokef_dt || null;
 
-        const currentOwnership = ownershipList.length
+        // סוג הבעלות: קודם מהמאגר הראשי (שדה baalut), ואם ריק - מהיסטוריה
+        const registryOwnership = labelRegistryOwnership(car.baalut);
+        const historyOwnership = ownershipList.length
             ? ownershipList[ownershipList.length - 1].type
             : (history?.origin ?? null);
+        const currentOwnership = registryOwnership || historyOwnership;
 
         console.log(`--------------------------------------------------`);
         console.log(`[SEARCH LOG] 🔍 מישהו חיפש רכב!`);
@@ -180,6 +190,7 @@ app.get('/api/car/:plate', async (req, res) => {
         console.log(`🚗 מספר רכב: ${plate}`);
         console.log(`🏭 יצרן ודגם: ${manufacturer} ${model} ${trim || ""} (${year})`);
         console.log(`⚡ כוח סוס: ${hp != null ? hp : "לא ידוע"}`);
+        console.log(`🏷️ סוג בעלות: ${currentOwnership || "לא ידוע"}`);
         console.log(`♿ תג נכה: ${disabled === null ? "לא ידוע" : (disabled ? "יש" : "אין")}`);
         console.log(`🔁 מעברי בעלות: ${ownershipList.length}`);
         console.log(`--------------------------------------------------`);
