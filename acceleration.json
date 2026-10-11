@@ -14,18 +14,18 @@
     "model": "Leon",
     "yearStart": 2020,
     "yearEnd": null,
-    "hp": 245 ,
-    "cc": 1400 ,
+    "hp": 245,
+    "cc": 1400,
     "seconds": 6.7,
     "source": "נתון יצרן (6.7 שניות)"
-  }
+  },
   {
     "make": "Cupra",
     "model": "Leon",
     "yearStart": 2020,
     "yearEnd": null,
-    "hp": 190  ,
-    "cc": 1984 ,
+    "hp": 190,
+    "cc": 1984,
     "seconds": 7.2,
     "source": "נתון יצרן (7.2 שניות)"
   }
