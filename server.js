@@ -96,12 +96,11 @@ async function checkDisabled(plate) {
     }
 }
 
-// ---------- RevCarData: תאוצה 0-100 ----------
+// ---------- RevCarData: תאוצה 0-100 לגרסה המדויקת ----------
 
 // מטמון בזיכרון: כל רכב נשאל מול השירות פעם אחת בלבד
 const accelCache = new Map();
 
-// מחזיר את התשובה של RevCarData כ-JSON, או null אם נכשל
 async function revcarGet(path) {
     const response = await fetch(`${REVCAR_BASE}${path}`, {
         headers: { "X-Api-Key": REVCAR_KEY }
@@ -111,46 +110,82 @@ async function revcarGet(path) {
     return { ok: true, status: response.status, data };
 }
 
-// מחפש בכל מבנה התשובה את השדה שמכיל תאוצה 0-100 ומחזיר מספר שניות
-function extractAccel(obj) {
-    if (!obj || typeof obj !== "object") return null;
-    for (const k of Object.keys(obj)) {
-        const key = k.toLowerCase();
-        if ((key.includes("0-100") || key.includes("0_100") || key.includes("accel")) && obj[k] != null) {
-            const v = typeof obj[k] === "object" ? (obj[k].value ?? obj[k].v) : obj[k];
-            const n = Number(String(v).replace(/[^\d.]/g, ""));
-            if (!Number.isNaN(n) && n > 0) return n;
-        }
+// משטח את האובייקט לזוגות: נתיב -> ערך (למשל "engine.power_hp" -> 86)
+function flatten(obj, prefix = "", out = {}) {
+    if (obj == null) return out;
+    if (typeof obj !== "object") {
+        out[prefix] = obj;
+        return out;
     }
     for (const k of Object.keys(obj)) {
-        const r = extractAccel(obj[k]);
-        if (r !== null) return r;
+        flatten(obj[k], prefix ? `${prefix}.${k}` : k, out);
+    }
+    return out;
+}
+
+// מוציא ערך מספרי לפי רשימת מילות מפתח בשם השדה
+function pickNumber(flat, keywords) {
+    for (const [path, val] of Object.entries(flat)) {
+        const p = path.toLowerCase();
+        if (!keywords.every(k => p.includes(k))) continue;
+        const n = typeof val === "object" && val !== null ? Number(val.value ?? val.v) : Number(val);
+        if (!Number.isNaN(n) && n > 0) return n;
     }
     return null;
 }
 
-// TODO: להשלים אחרי שנראה את מבנה /vehicles (איך מחפשים לפי יצרן, דגם ושנה)
-async function findVehicleId(manufacturer, model, year) {
+// שולף את זמן 0-100 מתוך התשובה (שדה שמכיל "0-100" או "accel")
+function extractAccel(flat) {
+    for (const [path, val] of Object.entries(flat)) {
+        const p = path.toLowerCase();
+        if (!(p.includes("0-100") || p.includes("0_100") || p.includes("accel"))) continue;
+        const n = Number(String(val).replace(/[^\d.]/g, ""));
+        if (!Number.isNaN(n) && n > 0) return n;
+    }
     return null;
 }
 
-async function fetchAcceleration(manufacturer, model, year) {
+// מחפש את כל הגרסאות של היצרן+דגם+שנה, ומחזיר את זו שתואמת לכוח הסוס ולנפח המנוע של הרכב
+async function findMatchingVariant(manufacturer, model, year, hp, engineCc) {
+    if (hp == null && engineCc == null) return null;
+
+    const params = new URLSearchParams({ make: String(manufacturer), model: String(model), year: String(year) });
+    const list = await revcarGet(`/vehicles?${params.toString()}`);
+    if (!list.ok || !list.data) return null;
+
+    const candidates = (Array.isArray(list.data.data) ? list.data.data : []).filter(v =>
+        String(v.make || "").toLowerCase() === String(manufacturer).toLowerCase() &&
+        String(v.model || "").toLowerCase().includes(String(model).toLowerCase()) &&
+        String(v.year || "") === String(year)
+    );
+
+    for (const v of candidates) {
+        const core = await revcarGet(`/${v.id}/core`);
+        if (!core.ok || !core.data) continue;
+
+        const flat = flatten(core.data);
+        const power = pickNumber(flat, ["power"]) ?? pickNumber(flat, ["hp"]);
+        const displacement = pickNumber(flat, ["displacement"]) ?? pickNumber(flat, ["capacity"]);
+
+        const powerOk = hp == null || power == null || Math.abs(power - hp) <= 2;
+        const engineOk = engineCc == null || displacement == null || Math.abs(displacement - engineCc) <= 30;
+        if (!powerOk || !engineOk) continue;
+
+        const seconds = extractAccel(flat);
+        if (seconds !== null) return { id: v.id, name: v.trim || v.model, seconds };
+    }
+    return null;
+}
+
+async function fetchAcceleration(manufacturer, model, year, hp, engineCc) {
     if (!REVCAR_KEY) return null;
 
-    const cacheKey = [manufacturer, model, year].join("|").toLowerCase();
+    const cacheKey = [manufacturer, model, year, hp, engineCc].join("|").toLowerCase();
     if (accelCache.has(cacheKey)) return accelCache.get(cacheKey);
 
     try {
-        const vehicleId = await findVehicleId(manufacturer, model, year);
-        if (!vehicleId) {
-            accelCache.set(cacheKey, null);
-            return null;
-        }
-
-        const r = await revcarGet(`/${vehicleId}/core`);
-        const seconds = r.ok ? extractAccel(r.data) : null;
-        const result = seconds !== null ? { seconds, source: "RevCarData" } : null;
-
+        const match = await findMatchingVariant(manufacturer, model, year, hp, engineCc);
+        const result = match ? { seconds: match.seconds, source: "RevCarData", variant: match.name } : null;
         accelCache.set(cacheKey, result);
         return result;
     } catch (e) {
@@ -249,16 +284,16 @@ app.get('/api/car/:plate', async (req, res) => {
             : (history?.origin ?? null);
         const currentOwnership = registryOwnership || historyOwnership;
 
-        const acceleration = await fetchAcceleration(manufacturer, model, year);
+        const acceleration = await fetchAcceleration(manufacturer, model, year, hp, engineCc);
 
         console.log(`--------------------------------------------------`);
         console.log(`[SEARCH LOG] 🔍 מישהו חיפש רכב!`);
         console.log(`📅 זמן: ${timestamp}`);
         console.log(`🚗 מספר רכב: ${plate}`);
         console.log(`🏭 יצרן ודגם: ${manufacturer} ${model} ${trim || ""} (${year})`);
-        console.log(`⚡ כוח סוס: ${hp != null ? hp : "לא ידוע"}`);
+        console.log(`⚡ כוח סוס: ${hp != null ? hp : "לא ידוע"} | נפח: ${engineCc != null ? engineCc : "לא ידוע"}`);
         console.log(`🏷️ סוג בעלות: ${currentOwnership || "לא ידוע"}`);
-        console.log(`🏁 תאוצה 0-100: ${acceleration ? acceleration.seconds + " שניות" : "לא ידוע"}`);
+        console.log(`🏁 תאוצה 0-100: ${acceleration ? acceleration.seconds + " שניות" : "לא נמצאה גרסה תואמת"}`);
         console.log(`♿ תג נכה: ${disabled === null ? "לא ידוע" : (disabled ? "יש" : "אין")}`);
         console.log(`🔁 מעברי בעלות: ${ownershipList.length}`);
         console.log(`--------------------------------------------------`);
@@ -280,6 +315,7 @@ app.get('/api/car/:plate', async (req, res) => {
                 horsepower: hp,
                 acceleration0to100: acceleration ? acceleration.seconds : null,
                 accelerationSource: acceleration ? acceleration.source : null,
+                accelerationVariant: acceleration ? acceleration.variant : null,
                 testExpiry,
                 testValid: testStatus(testExpiry),
                 ownership: currentOwnership,
@@ -313,9 +349,8 @@ app.get('/api/history/:plate', async (req, res) => {
     }
 });
 
-// ---------- בדיקה זמנית: חיבור ל-RevCarData ----------
-// פותחים: /api/test-revcar
-// מחזיר את מבנה התשובה של /vehicles (בלי המפתח)
+// ---------- בדיקה: תאוצה לרכב מסוים ----------
+// פותחים: /api/test-revcar?make=Skoda&model=Fabia&year=2013&hp=86&cc=1390
 function listKeys(obj, prefix = "", depth = 0, out = []) {
     if (!obj || typeof obj !== "object" || depth > 4) return out;
     for (const k of Object.keys(obj)) {
@@ -331,12 +366,18 @@ app.get('/api/test-revcar', async (req, res) => {
         return res.json({ success: false, message: "REVCAR_KEY לא מוגדר ב-Render" });
     }
     try {
-        const r = await revcarGet("/vehicles");
+        const make = req.query.make || "Skoda";
+        const model = req.query.model || "Fabia";
+        const year = req.query.year || "2013";
+        const hp = req.query.hp ? Number(req.query.hp) : null;
+        const cc = req.query.cc ? Number(req.query.cc) : null;
+
+        const match = await findMatchingVariant(make, model, year, hp, cc);
         res.json({
-            success: r.ok,
-            status: r.status,
-            fieldNames: r.data ? listKeys(r.data).slice(0, 200) : [],
-            accelFound: r.data ? extractAccel(r.data) : null
+            success: !!match,
+            accelFound: match ? match.seconds : null,
+            variant: match ? match.name : null,
+            message: match ? "נמצאה גרסה תואמת" : "לא נמצאה גרסה תואמת (בדוק את הכוח והנפח, או את שמות השדות)"
         });
     } catch (e) {
         res.json({ success: false, message: "שגיאת רשת: " + e.message });
