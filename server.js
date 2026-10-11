@@ -10,6 +10,7 @@ const CAR_REGISTRY_ID = "053cea08-09bc-40ec-8f7a-156f0677aff3"; // מאגר רי
 const MODELS_ID = "142afde2-6228-49f9-8a29-9b6c3a0cbe40";       // תוצרים ודגמים
 const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";      // היסטוריית כלי רכב פרטיים (1)
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";    // היסטוריית כלי רכב פרטיים (2): בעלויות
+const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";     // רכבים עם תג חניה לנכה
 
 app.use((req, res, next) => {
     console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
@@ -18,9 +19,10 @@ app.use((req, res, next) => {
 
 // ---------- עזרים ----------
 
-async function searchDatastore(resourceId, filters, limit = 100) {
+async function searchDatastore(resourceId, filters, limit = 100, q = "") {
     const f = filters ? `&filters=${encodeURIComponent(JSON.stringify(filters))}` : "";
-    const url = `https://data.gov.il/api/3/action/datastore_search?resource_id=${resourceId}${f}&limit=${limit}`;
+    const qq = q ? `&q=${encodeURIComponent(q)}` : "";
+    const url = `https://data.gov.il/api/3/action/datastore_search?resource_id=${resourceId}${f}${qq}&limit=${limit}`;
     const response = await fetch(url);
     const data = await response.json();
     return data?.success ? (data.result?.records || []) : [];
@@ -38,14 +40,6 @@ function toNumber(value) {
     if (s === null) return null;
     const n = Number(s.replace(/,/g, ""));
     return Number.isNaN(n) ? null : n;
-}
-
-function pick(record, keys) {
-    for (const k of keys) {
-        const v = toText(record[k]);
-        if (v !== null) return v;
-    }
-    return null;
 }
 
 // תרגום סוגי בעלות לעברית מובנת (ערך לא מוכר יוצג כמו שהוא)
@@ -75,16 +69,21 @@ function testStatus(expiry) {
     return d >= today;
 }
 
-// מחפש שדה תג נכה בכל שמות השדות של הרכב
-function findDisabled(record) {
-    const keys = Object.keys(record).filter(k => /nakh|nekh|nakeh/i.test(k));
-    for (const k of keys) {
-        const v = toText(record[k]);
-        if (v === null) continue;
-        if (/^(1|כן|yes|true|נכה)$/i.test(v)) return true;
-        if (/^(0|לא|no|false)$/i.test(v)) return false;
+// בודק אם הרכב מופיע במאגר תגי הנכה. true = יש, false = אין, null = לא ניתן לבדוק
+async function checkDisabled(plate) {
+    try {
+        const byFilter = await searchDatastore(DISABLED_ID, { mispar_rechev: Number(plate) }, 5);
+        if (byFilter.length > 0) return true;
+
+        // נסיון נוסף: חיפוש חופשי, למקרה ששם השדה במאגר שונה
+        const byText = await searchDatastore(DISABLED_ID, null, 50, plate);
+        const found = byText.some(r =>
+            Object.values(r).some(v => String(v).replace(/\D/g, "") === plate)
+        );
+        return found;
+    } catch (e) {
+        return null;
     }
-    return null;
 }
 
 // ---------- מאגרים ----------
@@ -156,10 +155,11 @@ app.get('/api/car/:plate', async (req, res) => {
             return res.json({ success: false, message: "המספר אינו קיים במאגר משרד התחבורה" });
         }
 
-        const [row, historyRaw, ownershipList] = await Promise.all([
+        const [row, historyRaw, ownershipList, disabled] = await Promise.all([
             findModelRow(car),
             fetchHistoryRecord(plate),
-            fetchOwnershipRows(plate)
+            fetchOwnershipRows(plate),
+            checkDisabled(plate)
         ]);
         const history = buildHistory(historyRaw);
 
@@ -171,7 +171,6 @@ app.get('/api/car/:plate', async (req, res) => {
         const engineCc = toNumber(row?.nefah_manoa) ?? toNumber(car.nefah_manoa);
         const testExpiry = car.tokef_dt || null;
 
-        // הבעלות הנוכחית: האחרונה ברשימה אם יש, אחרת מהמאגר הראשון
         const currentOwnership = ownershipList.length
             ? ownershipList[ownershipList.length - 1].type
             : (history?.origin ?? null);
@@ -182,6 +181,7 @@ app.get('/api/car/:plate', async (req, res) => {
         console.log(`🚗 מספר רכב: ${plate}`);
         console.log(`🏭 יצרן ודגם: ${manufacturer} ${model} ${trim || ""} (${year})`);
         console.log(`⚡ כוח סוס: ${hp != null ? hp : "לא ידוע"}`);
+        console.log(`♿ תג נכה: ${disabled === null ? "לא ידוע" : (disabled ? "יש" : "אין")}`);
         console.log(`🔁 מעברי בעלות: ${ownershipList.length}`);
         console.log(`--------------------------------------------------`);
 
@@ -202,7 +202,7 @@ app.get('/api/car/:plate', async (req, res) => {
                 firstRegistration: history?.firstRegistration ?? null,
                 changes: history?.changes ?? [],
                 owners: ownershipList.length || null,
-                disabled: findDisabled(car),
+                disabled,
                 kmSinceTest: history?.kmSinceTest ?? null
             }
         });
@@ -212,7 +212,6 @@ app.get('/api/car/:plate', async (req, res) => {
     }
 });
 
-// היסטוריית בעלות מלאה לרכב
 app.get('/api/history/:plate', async (req, res) => {
     const plate = req.params.plate.replace(/\D/g, "");
     try {
@@ -224,16 +223,13 @@ app.get('/api/history/:plate', async (req, res) => {
         if (!history && ownershipList.length === 0) {
             return res.json({ success: false, message: "לא נמצאה היסטוריה לרכב זה" });
         }
-        res.json({
-            success: true,
-            history: history || {},
-            ownershipList
-        });
+        res.json({ success: true, history: history || {}, ownershipList });
     } catch (e) {
         res.status(500).json({ success: false, message: "שגיאה בשליפת ההיסטוריה" });
     }
 });
 
+// נתיב דיבוג: מראה את שמות השדות במאגר תגי הנכה ורשומה לדוגמה
 app.get('/api/debug/:plate', async (req, res) => {
     try {
         const car = await fetchCarRecord(req.params.plate);
@@ -241,7 +237,19 @@ app.get('/api/debug/:plate', async (req, res) => {
         const row = await findModelRow(car);
         const hist = await fetchHistoryRecord(req.params.plate);
         const own = await fetchOwnershipRows(req.params.plate);
-        res.json({ success: true, car_fields: Object.keys(car), car, model_row: row, history: hist, ownership: own });
+        const disabledSample = await searchDatastore(DISABLED_ID, null, 1);
+        const disabledMatch = await checkDisabled(req.params.plate);
+        res.json({
+            success: true,
+            car_fields: Object.keys(car),
+            car,
+            model_row: row,
+            history: hist,
+            ownership: own,
+            disabled_sample_fields: disabledSample[0] ? Object.keys(disabledSample[0]) : [],
+            disabled_sample: disabledSample[0] || null,
+            disabled_match: disabledMatch
+        });
     } catch (error) {
         console.error("שגיאה:", error);
         res.status(500).json({ success: false, error: error.message });
