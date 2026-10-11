@@ -1,5 +1,7 @@
 const express = require('express');
 const cors = require('cors');
+const fs = require('fs');
+const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -11,6 +13,41 @@ const MODELS_ID = "142afde2-6228-49f9-8a29-9b6c3a0cbe40";       // תוצרים 
 const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";      // היסטוריית כלי רכב פרטיים (1)
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";    // היסטוריית כלי רכב פרטיים (2): בעלויות
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";     // רכבים עם תג חניה לנכה
+
+// ---------- תאוצה 0-100 מקובץ ידני ----------
+// הקובץ acceleration.json נמצא בשורש הפרויקט, לצד server.js
+const ACCEL_FILE = path.join(__dirname, "acceleration.json");
+let accelTable = [];
+try {
+    accelTable = JSON.parse(fs.readFileSync(ACCEL_FILE, "utf8"));
+    if (!Array.isArray(accelTable)) accelTable = [];
+} catch (e) {
+    accelTable = [];
+}
+
+function norm(s) {
+    return String(s || "").toLowerCase().replace(/[^a-z0-9א-ת]/g, "");
+}
+
+// מחפש בטבלה לפי יצרן, דגם, שנה, כוח סוס ונפח
+function lookupAccel(make, model, year, hp, cc) {
+    const m = norm(make);
+    const mo = norm(model);
+    const y = Number(year);
+
+    for (const r of accelTable) {
+        if (!m.includes(norm(r.make))) continue;
+        if (!mo.includes(norm(r.model))) continue;
+        if (!Number.isNaN(y) && r.yearStart != null) {
+            if (y < r.yearStart) continue;
+            if (r.yearEnd != null && y > r.yearEnd) continue;
+        }
+        if (hp != null && r.hp != null && Math.abs(r.hp - hp) > 2) continue;
+        if (cc != null && r.cc != null && Math.abs(r.cc - cc) > 30) continue;
+        return { seconds: r.seconds, source: r.source || "נתון יצרן" };
+    }
+    return null;
+}
 
 app.use((req, res, next) => {
     console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
@@ -177,20 +214,22 @@ app.get('/api/car/:plate', async (req, res) => {
         const engineCc = toNumber(row?.nefah_manoa) ?? toNumber(car.nefah_manoa);
         const testExpiry = car.tokef_dt || null;
 
-        // סוג הבעלות: קודם מהמאגר הראשי (שדה baalut), ואם ריק - מהיסטוריה
         const registryOwnership = labelRegistryOwnership(car.baalut);
         const historyOwnership = ownershipList.length
             ? ownershipList[ownershipList.length - 1].type
             : (history?.origin ?? null);
         const currentOwnership = registryOwnership || historyOwnership;
 
+        const acceleration = lookupAccel(manufacturer, model, year, hp, engineCc);
+
         console.log(`--------------------------------------------------`);
         console.log(`[SEARCH LOG] 🔍 מישהו חיפש רכב!`);
         console.log(`📅 זמן: ${timestamp}`);
         console.log(`🚗 מספר רכב: ${plate}`);
         console.log(`🏭 יצרן ודגם: ${manufacturer} ${model} ${trim || ""} (${year})`);
-        console.log(`⚡ כוח סוס: ${hp != null ? hp : "לא ידוע"}`);
+        console.log(`⚡ כוח סוס: ${hp != null ? hp : "לא ידוע"} | נפח: ${engineCc != null ? engineCc : "לא ידוע"}`);
         console.log(`🏷️ סוג בעלות: ${currentOwnership || "לא ידוע"}`);
+        console.log(`🏁 תאוצה 0-100: ${acceleration ? acceleration.seconds + " שניות" : "לא נמצאה בטבלה"}`);
         console.log(`♿ תג נכה: ${disabled === null ? "לא ידוע" : (disabled ? "יש" : "אין")}`);
         console.log(`🔁 מעברי בעלות: ${ownershipList.length}`);
         console.log(`--------------------------------------------------`);
@@ -210,6 +249,8 @@ app.get('/api/car/:plate', async (req, res) => {
                 lastTest: toText(car.mivchan_acharon_dt),
                 engineCc,
                 horsepower: hp,
+                acceleration0to100: acceleration ? acceleration.seconds : null,
+                accelerationSource: acceleration ? acceleration.source : null,
                 testExpiry,
                 testValid: testStatus(testExpiry),
                 ownership: currentOwnership,
@@ -261,7 +302,8 @@ app.get('/api/debug/:plate', async (req, res) => {
             ownership: own,
             disabled_sample_fields: disabledSample[0] ? Object.keys(disabledSample[0]) : [],
             disabled_sample: disabledSample[0] || null,
-            disabled_match: disabledMatch
+            disabled_match: disabledMatch,
+            accel_table_rows: accelTable.length
         });
     } catch (error) {
         console.error("שגיאה:", error);
