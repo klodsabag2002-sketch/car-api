@@ -1,5 +1,195 @@
 [
   {
+    "make": "אודי מקסיקו",
+    "model": "Q5 SPORTBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 1984,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (45 TFSI Quattro 265)"
+  },
+  {
+    "make": "אודי מקסיקו",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 1984,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (45 TFSI Quattro 265)"
+  },
+  {
+    "make": "אודי מקסיקו",
+    "model": "Q5 SPORTBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1984,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (40 TFSI 204)"
+  },
+  {
+    "make": "אודי מקסיקו",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1984,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (40 TFSI 204)"
+  },
+  {
+    "make": "אודי מקסיקו",
+    "model": "Q5 SPORTBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1984,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (45 TFSI 245)"
+  },
+  {
+    "make": "אודי מקסיקו",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1984,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (45 TFSI 245)"
+  },
+  {
+    "make": "אודי מקסיקו",
+    "model": "Q5 SPORTBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1984,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (2.0 TFSI 252)"
+  },
+  {
+    "make": "אודי מקסיקו",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1984,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (2.0 TFSI 252)"
+  },
+  {
+    "make": "אודי מקסיקו",
+    "model": "Q5 SPORTBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 1984,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (50 TFSI e פלאג-אין 299)"
+  },
+  {
+    "make": "אודי מקסיקו",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 1984,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (50 TFSI e פלאג-אין 299)"
+  },
+  {
+    "make": "אודי מקסיקו",
+    "model": "Q5 SPORTBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 367,
+    "cc": 1984,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (55 TFSI e פלאג-אין 367)"
+  },
+  {
+    "make": "אודי מקסיקו",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 367,
+    "cc": 1984,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (55 TFSI e פלאג-אין 367)"
+  },
+  {
+    "make": "אודי מקסיקו",
+    "model": "Q5 SPORTBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 354,
+    "cc": 2995,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (Audi SQ5 3.0 TFSI 354)"
+  },
+  {
+    "make": "אודי מקסיקו",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 354,
+    "cc": 2995,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (Audi SQ5 3.0 TFSI 354)"
+  },
+  {
+    "make": "אודי מקסיקו",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 225,
+    "cc": 1984,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (2.0 TFSI 225)"
+  },
+  {
+    "make": "אודי מקסיקו",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 1984,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (2.0 TFSI 230)"
+  },
+  {
+    "make": "אודי מקסיקו",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 211,
+    "cc": 1984,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (2.0 TFSI 211)"
+  },
+  {
+    "make": "אודי מקסיקו",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1984,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (2.0 TFSI 180)"
+  },
+  {
+    "make": "אודי מקסיקו",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 341,
+    "cc": 2967,
+    "seconds": 5.1,
+    "source": "רישוי רכב / נתון יצרן (Audi SQ5 TDI 341)"
+  },
+  {
     "make": "אודי הונגריה",
     "model": "Q3",
     "yearStart": null,
@@ -2436,7 +2626,7 @@
     "yearEnd": null,
     "hp": 600,
     "cc": 3996,
-    "seconds": 3.8,
+    "seconds": 3.6,
     "source": "נתון יצרן (Audi RS7 Sportback 600)"
   },
   {
