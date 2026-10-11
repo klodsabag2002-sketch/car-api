@@ -24,11 +24,23 @@ try {
     accelTable = [];
 }
 
+// שמות יצרנים בעברית מהרישוי -> שם באנגלית כמו בקובץ התאוצה
+const HE_MAKE_ALIASES = {
+    "קופרה": "Cupra",
+    "סיאט": "Seat",
+    "סקודה": "Skoda",
+    "פולקסווגן": "Volkswagen",
+    "טויוטה": "Toyota",
+    "יונדאי": "Hyundai",
+    "קיה": "Kia",
+    "ב.מ.וו": "BMW",
+    "מרצדס": "Mercedes-Benz"
+};
+
 function norm(s) {
     return String(s || "").toLowerCase().replace(/[^a-z0-9א-ת]/g, "");
 }
 
-// מחפש בטבלה. בודק את כל שמות היצרן והדגם שברישוי, כי כל אחד מהם יכול להיות השם שהטבלה משתמשת בו
 function lookupAccel(makeTexts, modelTexts, year, hp, cc) {
     const makes = makeTexts.map(norm).filter(Boolean);
     const models = modelTexts.map(norm).filter(Boolean);
@@ -217,8 +229,13 @@ app.get('/api/car/:plate', async (req, res) => {
             : (history?.origin ?? null);
         const currentOwnership = registryOwnership || historyOwnership;
 
-        // כל שמות היצרן והדגם שברישוי, כולל הדגם האמיתי (LEON) שנמצא ב-degem_nm
+        // שמות היצרן: בעברית מהרישוי, ובאנגלית לפי מיפוי, כדי להתאים לקובץ התאוצה
         const makeTexts = [manufacturer, car.tozeret_nm, car.kinuy_mishari, car.sug_degem].filter(Boolean);
+        for (const [he, en] of Object.entries(HE_MAKE_ALIASES)) {
+            if (String(manufacturer).includes(he) || String(car.tozeret_nm || "").includes(he)) {
+                makeTexts.push(en);
+            }
+        }
         const modelTexts = [car.kinuy_mishari, car.degem_nm, car.ramat_gimur, model].filter(Boolean);
         const acceleration = lookupAccel(makeTexts, modelTexts, year, hp, engineCc);
 
