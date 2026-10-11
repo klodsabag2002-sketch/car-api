@@ -2,22 +2,13 @@
   {
     "make": "אודי הונגריה",
     "model": "A3 SEDAN",
+    "trim": "DESIGN ASST",
     "yearStart": 2020,
     "yearEnd": null,
     "hp": 150,
     "cc": 1498,
     "seconds": 8.4,
-    "source": "רישוי רכב / נתון יצרן (A3 SEDAN DESIGN ASST)[span_2](start_span)[span_2](end_span)"
-  },
-  {
-    "make": "אודי הונגריה",
-    "model": "A3 SEDAN DESIGN ASST",
-    "yearStart": 2020,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1498,
-    "seconds": 8.4,
-    "source": "רישוי רכב / נתון יצרן[span_3](start_span)[span_3](end_span)"
+    "source": "רישוי רכב / נתון יצרן (A3 SEDAN DESIGN ASST)"
   },
   {
     "make": "אודי ספרד",
@@ -27,7 +18,7 @@
     "hp": 110,
     "cc": 999,
     "seconds": 10.5,
-    "source": "רישוי רכב / נתון יצרן (30 TFSI)[span_4](start_span)[span_4](end_span)"
+    "source": "רישוי רכב / נתון יצרן (30 TFSI)[span_3](start_span)[span_3](end_span)"
   },
   {
     "make": "Audi",
