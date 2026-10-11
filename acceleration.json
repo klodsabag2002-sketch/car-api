@@ -39,4 +39,76 @@
     "seconds": 8.7,
     "source": "cupraofficial.co.il (eTSI 1.5 היברידי מתון)"
   }
+  {
+    "make": "Cupra",
+    "model": "Formentor 1.5 TSI",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.9,
+    "source": "icar.co.il / automobile-catalog.com"
+  },
+  {
+    "make": "Cupra",
+    "model": "Formentor 2.0 TSI 4X4",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1984,
+    "seconds": 6.7,
+    "source": "icar.co.il / automoli.com"
+  },
+  {
+    "make": "Cupra",
+    "model": "Formentor VZ",
+    "yearStart": 2020,
+    "yearEnd": 2024,
+    "hp": 310,
+    "cc": 1984,
+    "seconds": 4.9,
+    "source": "auto.co.il / icar.co.il"
+  },
+  {
+    "make": "Cupra",
+    "model": "Formentor VZ",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 333,
+    "cc": 1984,
+    "seconds": 4.8,
+    "source": "auto.co.il / icar.co.il"
+  },
+  {
+    "make": "Cupra",
+    "model": "Formentor e-Hybrid",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1395,
+    "seconds": 7.8,
+    "source": "autoboom.co.il / Wikipedia"
+  },
+  {
+    "make": "Cupra",
+    "model": "Formentor VZ e-Hybrid",
+    "yearStart": 2020,
+    "yearEnd": 2024,
+    "hp": 245,
+    "cc": 1395,
+    "seconds": 7.0,
+    "source": "icar.co.il"
+  },
+  {
+    "make": "Cupra",
+    "model": "Formentor VZ e-Hybrid",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 1498,
+    "seconds": 7.0,
+    "source": "automobile-catalog.com"
+  }
+]
+
 ]
