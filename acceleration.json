@@ -1,6 +1,106 @@
 [
   {
     "make": "אודי גרמניה",
+    "model": "A7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 2995,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (3.0 TFSI Quattro 300)"
+  },
+  {
+    "make": "Audi",
+    "model": "A7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 2995,
+    "seconds": 5.6,
+    "source": "נתון יצרן (3.0 TFSI Quattro 300)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 333,
+    "cc": 2995,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (3.0 TFSI Quattro 333)"
+  },
+  {
+    "make": "Audi",
+    "model": "A7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 333,
+    "cc": 2995,
+    "seconds": 5.3,
+    "source": "נתון יצרן (3.0 TFSI Quattro 333)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1984,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (2.0 TFSI 252)"
+  },
+  {
+    "make": "Audi",
+    "model": "A7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1984,
+    "seconds": 6.9,
+    "source": "נתון יצרן (2.0 TFSI 252)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1984,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (45 TFSI Quattro 245)"
+  },
+  {
+    "make": "Audi",
+    "model": "A7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1984,
+    "seconds": 6.2,
+    "source": "נתון יצרן (45 TFSI Quattro 245)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (55 TFSI Quattro V6 Turbo 340)"
+  },
+  {
+    "make": "Audi",
+    "model": "A7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.3,
+    "source": "נתון יצרן (55 TFSI Quattro V6 Turbo 340)"
+  },
+  {
+    "make": "אודי גרמניה",
     "model": "A7 TFSI-E",
     "yearStart": null,
     "yearEnd": null,
@@ -28,6 +128,96 @@
     "cc": 1984,
     "seconds": 5.7,
     "source": "נתון יצרן (A7 55 TFSI e Quattro 367)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A7 TFSI-E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 1984,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (50 TFSI e Quattro 299)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 1984,
+    "seconds": 6.3,
+    "source": "נתון יצרן (A7 50 TFSI e Quattro 299)"
+  },
+  {
+    "make": "Audi",
+    "model": "A7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 1984,
+    "seconds": 6.3,
+    "source": "נתון יצרן (A7 50 TFSI e Quattro 299)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2967,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (50 TDI Quattro 286)"
+  },
+  {
+    "make": "Audi",
+    "model": "A7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2967,
+    "seconds": 5.7,
+    "source": "נתון יצרן (50 TDI Quattro 286)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 450,
+    "cc": 3993,
+    "seconds": 4.6,
+    "source": "נתון יצרן (Audi S7 V8 Biturbo 450)"
+  },
+  {
+    "make": "Audi",
+    "model": "A7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 450,
+    "cc": 3993,
+    "seconds": 4.6,
+    "source": "נתון יצרן (Audi S7 V8 Biturbo 450)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 3996,
+    "seconds": 3.6,
+    "source": "נתון יצרן (Audi RS7 Sportback 600)"
+  },
+  {
+    "make": "Audi",
+    "model": "A7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 3996,
+    "seconds": 3.6,
+    "source": "נתון יצרן (Audi RS7 Sportback 600)"
   },
   {
     "make": "אודי גרמניה",
