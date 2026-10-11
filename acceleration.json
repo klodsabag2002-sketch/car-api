@@ -1,6 +1,1346 @@
 [
   {
     "make": "אודי גרמניה",
+    "model": "Q2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 116,
+    "cc": 999,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (30 TFSI 1.0)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 116,
+    "cc": 999,
+    "seconds": 10.3,
+    "source": "נתון יצרן (30 TFSI 1.0)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (1.4 TFSI 150)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 8.5,
+    "source": "נתון יצרן (1.4 TFSI 150)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (35 TFSI 1.5)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.6,
+    "source": "נתון יצרן (35 TFSI 1.5)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (40 TFSI Quattro 190)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 6.5,
+    "source": "נתון יצרן (40 TFSI Quattro 190)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1984,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (Audi SQ2)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1984,
+    "seconds": 4.8,
+    "source": "נתון יצרן (Audi SQ2)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (דור 1 - 1.4 TFSI)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 8.9,
+    "source": "נתון יצרן (דור 1 - 1.4 TFSI)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 35 TFSI)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.2,
+    "source": "נתון יצרן (דור 2 - 35 TFSI)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1984,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (דור 1 - 2.0 TFSI 170)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1984,
+    "seconds": 7.8,
+    "source": "נתון יצרן (דור 1 - 2.0 TFSI 170)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1984,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (דור 1 - 2.0 TFSI 180)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1984,
+    "seconds": 7.6,
+    "source": "נתון יצרן (דור 1 - 2.0 TFSI 180)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 40 TFSI Quattro)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 7.4,
+    "source": "נתון יצרן (דור 2 - 40 TFSI Quattro)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 211,
+    "cc": 1984,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (דור 1 - 2.0 TFSI 211)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 211,
+    "cc": 1984,
+    "seconds": 6.9,
+    "source": "נתון יצרן (דור 1 - 2.0 TFSI 211)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 220,
+    "cc": 1984,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (דור 1 - 2.0 TFSI 220)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 220,
+    "cc": 1984,
+    "seconds": 6.4,
+    "source": "נתון יצרן (דור 1 - 2.0 TFSI 220)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 1984,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 45 TFSI Quattro 230)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 1984,
+    "seconds": 6.3,
+    "source": "נתון יצרן (דור 2 - 45 TFSI Quattro 230)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1395,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 45 TFSI e פלאג-אין)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1395,
+    "seconds": 7.3,
+    "source": "נתון יצרן (דור 2 - 45 TFSI e פלאג-אין)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1984,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 45 TFSI Quattro 245)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1984,
+    "seconds": 5.8,
+    "source": "נתון יצרן (דור 2 - 45 TFSI Quattro 245)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 2480,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (Audi RS Q3 310)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 2480,
+    "seconds": 5.5,
+    "source": "נתון יצרן (Audi RS Q3 310)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2480,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (Audi RS Q3 340)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2480,
+    "seconds": 4.8,
+    "source": "נתון יצרן (Audi RS Q3 340)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 367,
+    "cc": 2480,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (Audi RS Q3 Performance 367)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 367,
+    "cc": 2480,
+    "seconds": 4.4,
+    "source": "נתון יצרן (Audi RS Q3 Performance 367)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 400,
+    "cc": 2480,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (Audi RS Q3 400)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 400,
+    "cc": 2480,
+    "seconds": 4.5,
+    "source": "נתון יצרן (Audi RS Q3 400)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 0,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (Q4 35 e-tron חשמלי)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 0,
+    "seconds": 9.0,
+    "source": "נתון יצרן (Q4 35 e-tron חשמלי)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q4 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 0,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (Q4 35 e-tron חשמלי)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q4 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 0,
+    "seconds": 9.0,
+    "source": "נתון יצרן (Q4 35 e-tron חשמלי)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (Q4 40 e-tron חשמלי)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.5,
+    "source": "נתון יצרן (Q4 40 e-tron חשמלי)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q4 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (Q4 40 e-tron חשמלי)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q4 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.5,
+    "source": "נתון יצרן (Q4 40 e-tron חשמלי)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (Q4 45 e-tron חשמלי)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 6.7,
+    "source": "נתון יצרן (Q4 45 e-tron חשמלי)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q4 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (Q4 45 e-tron חשמלי)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q4 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 6.7,
+    "source": "נתון יצרן (Q4 45 e-tron חשמלי)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 0,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (Q4 50 e-tron Quattro)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 0,
+    "seconds": 6.2,
+    "source": "נתון יצרן (Q4 50 e-tron Quattro)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q4 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 0,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (Q4 50 e-tron Quattro)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q4 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 0,
+    "seconds": 6.2,
+    "source": "נתון יצרן (Q4 50 e-tron Quattro)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (Q4 55 e-tron Quattro)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.4,
+    "source": "נתון יצרן (Q4 55 e-tron Quattro)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q4 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (Q4 55 e-tron Quattro)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q4 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.4,
+    "source": "נתון יצרן (Q4 55 e-tron Quattro)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1984,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (דור 1 - 2.0 TFSI 180)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1984,
+    "seconds": 8.5,
+    "source": "נתון יצרן (דור 1 - 2.0 TFSI 180)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 211,
+    "cc": 1984,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (דור 1 - 2.0 TFSI 211)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 211,
+    "cc": 1984,
+    "seconds": 7.6,
+    "source": "נתון יצרן (דור 1 - 2.0 TFSI 211)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 225,
+    "cc": 1984,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (דור 1 - 2.0 TFSI 225)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 225,
+    "cc": 1984,
+    "seconds": 7.1,
+    "source": "נתון יצרן (דור 1 - 2.0 TFSI 225)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 1984,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (דור 1 - 2.0 TFSI 230)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 1984,
+    "seconds": 6.9,
+    "source": "נתון יצרן (דור 1 - 2.0 TFSI 230)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1984,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 2.0 TFSI 252)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1984,
+    "seconds": 6.3,
+    "source": "נתון יצרן (דור 2 - 2.0 TFSI 252)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1984,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 45 TFSI 245)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1984,
+    "seconds": 6.3,
+    "source": "נתון יצרן (דור 2 - 45 TFSI 245)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1984,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 40 TFSI 204)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1984,
+    "seconds": 7.6,
+    "source": "נתון יצרן (דור 2 - 40 TFSI 204)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 1984,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 45 TFSI Quattro)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 1984,
+    "seconds": 6.1,
+    "source": "נתון יצרן (דור 2 - 45 TFSI Quattro)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 2995,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (דור 1 - 3.0 TFSI 272)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 2995,
+    "seconds": 5.9,
+    "source": "נתון יצרן (דור 1 - 3.0 TFSI 272)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 1984,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (50 TFSI e פלאג-אין 299)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 1984,
+    "seconds": 6.1,
+    "source": "נתון יצרן (50 TFSI e פלאג-אין 299)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 367,
+    "cc": 1984,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (55 TFSI e פלאג-אין 367)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 367,
+    "cc": 1984,
+    "seconds": 5.3,
+    "source": "נתון יצרן (55 TFSI e פלאג-אין 367)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 354,
+    "cc": 2995,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (Audi SQ5 3.0 TFSI 354)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 354,
+    "cc": 2995,
+    "seconds": 5.4,
+    "source": "נתון יצרן (Audi SQ5 3.0 TFSI 354)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 341,
+    "cc": 2967,
+    "seconds": 5.1,
+    "source": "רישוי רכב / נתון יצרן (Audi SQ5 TDI 341)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 341,
+    "cc": 2967,
+    "seconds": 5.1,
+    "source": "נתון יצרן (Audi SQ5 TDI 341)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 292,
+    "cc": 0,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (Q6 e-tron RWD 292)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 292,
+    "cc": 0,
+    "seconds": 7.0,
+    "source": "נתון יצרן (Q6 e-tron RWD 292)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q6 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 292,
+    "cc": 0,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (Q6 e-tron RWD 292)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q6 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 292,
+    "cc": 0,
+    "seconds": 7.0,
+    "source": "נתון יצרן (Q6 e-tron RWD 292)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 326,
+    "cc": 0,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (Q6 e-tron Performance 326)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 326,
+    "cc": 0,
+    "seconds": 6.6,
+    "source": "נתון יצרן (Q6 e-tron Performance 326)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q6 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 326,
+    "cc": 0,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (Q6 e-tron Performance 326)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q6 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 326,
+    "cc": 0,
+    "seconds": 6.6,
+    "source": "נתון יצרן (Q6 e-tron Performance 326)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 388,
+    "cc": 0,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (Q6 e-tron Quattro 388)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 388,
+    "cc": 0,
+    "seconds": 5.9,
+    "source": "נתון יצרן (Q6 e-tron Quattro 388)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q6 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 388,
+    "cc": 0,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (Q6 e-tron Quattro 388)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q6 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 388,
+    "cc": 0,
+    "seconds": 5.9,
+    "source": "נתון יצרן (Q6 e-tron Quattro 388)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 517,
+    "cc": 0,
+    "seconds": 4.3,
+    "source": "רישוי רכב / נתון יצרן (SQ6 e-tron 517)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 517,
+    "cc": 0,
+    "seconds": 4.3,
+    "source": "נתון יצרן (SQ6 e-tron 517)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q6 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 517,
+    "cc": 0,
+    "seconds": 4.3,
+    "source": "רישוי רכב / נתון יצרן (SQ6 e-tron 517)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q6 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 517,
+    "cc": 0,
+    "seconds": 4.3,
+    "source": "נתון יצרן (SQ6 e-tron 517)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 2967,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (דור 1 - 3.0 TDI 240)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 2967,
+    "seconds": 7.9,
+    "source": "נתון יצרן (דור 1 - 3.0 TDI 240)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 2995,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (דור 1 - 3.0 TFSI 272)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 2995,
+    "seconds": 7.9,
+    "source": "נתון יצרן (דור 1 - 3.0 TFSI 272)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 333,
+    "cc": 2995,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (דור 1/2 - 3.0 TFSI 333)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 333,
+    "cc": 2995,
+    "seconds": 6.9,
+    "source": "נתון יצרן (דור 1/2 - 3.0 TFSI 333)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1984,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 2.0 TFSI 252)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1984,
+    "seconds": 7.1,
+    "source": "נתון יצרן (דור 2 - 2.0 TFSI 252)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2967,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 50 TDI Quattro 286)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2967,
+    "seconds": 6.3,
+    "source": "נתון יצרן (דור 2 - 50 TDI Quattro 286)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 55 TFSI Quattro 340)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.9,
+    "source": "נתון יצרן (דור 2 - 55 TFSI Quattro 340)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 381,
+    "cc": 2995,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (55 TFSI e פלאג-אין 381)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 381,
+    "cc": 2995,
+    "seconds": 5.8,
+    "source": "נתון יצרן (55 TFSI e פלאג-אין 381)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 456,
+    "cc": 2995,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (60 TFSI e פלאג-אין 456)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 456,
+    "cc": 2995,
+    "seconds": 5.4,
+    "source": "נתון יצרן (60 TFSI e פלאג-אין 456)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 435,
+    "cc": 3956,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (Audi SQ7 TDI 435)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 435,
+    "cc": 3956,
+    "seconds": 4.8,
+    "source": "נתון יצרן (Audi SQ7 TDI 435)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 507,
+    "cc": 3996,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (Audi SQ7 TFSI V8 507)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 507,
+    "cc": 3996,
+    "seconds": 4.1,
+    "source": "נתון יצרן (Audi SQ7 TFSI V8 507)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2967,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (50 TDI Quattro 286)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2967,
+    "seconds": 6.3,
+    "source": "נתון יצרן (50 TDI Quattro 286)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (55 TFSI Quattro 340)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.9,
+    "source": "נתון יצרן (55 TFSI Quattro 340)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 381,
+    "cc": 2995,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (55 TFSI e פלאג-אין 381)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 381,
+    "cc": 2995,
+    "seconds": 5.8,
+    "source": "נתון יצרן (55 TFSI e פלאג-אין 381)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 462,
+    "cc": 2995,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (60 TFSI e פלאג-אין 462)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 462,
+    "cc": 2995,
+    "seconds": 5.4,
+    "source": "נתון יצרן (60 TFSI e פלאג-אין 462)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 435,
+    "cc": 3956,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (Audi SQ8 TDI 435)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 435,
+    "cc": 3956,
+    "seconds": 4.8,
+    "source": "נתון יצרן (Audi SQ8 TDI 435)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 507,
+    "cc": 3996,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (Audi SQ8 TFSI 507)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 507,
+    "cc": 3996,
+    "seconds": 4.1,
+    "source": "נתון יצרן (Audi SQ8 TFSI 507)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "Q8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 3996,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (Audi RS Q8 V8 600)"
+  },
+  {
+    "make": "Audi",
+    "model": "Q8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 3996,
+    "seconds": 3.8,
+    "source": "נתון יצרן (Audi RS Q8 V8 600)"
+  },
+  {
+    "make": "אודי גרמניה",
     "model": "A8",
     "yearStart": null,
     "yearEnd": null,
@@ -1157,7 +2497,7 @@
     "hp": 450,
     "cc": 2894,
     "seconds": 4.1,
-    "source": "נתון יצרן (Audi RS4 Avant 2.9)"
+    "source": "נתון יצרN (Audi RS4 Avant 2.9)"
   },
   {
     "make": "אודי הונגריה",
@@ -1598,366 +2938,6 @@
     "cc": 1984,
     "seconds": 5.8,
     "source": "נתון יצרן (Audi S1 2.0 TFSI Quattro)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "Q2",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 116,
-    "cc": 999,
-    "seconds": 10.3,
-    "source": "נתון יצרן (30 TFSI 1.0)"
-  },
-  {
-    "make": "Audi",
-    "model": "Q2",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 116,
-    "cc": 999,
-    "seconds": 10.3,
-    "source": "נתון יצרן (30 TFSI 1.0)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "Q2",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1395,
-    "seconds": 8.5,
-    "source": "נתון יצרן (35 TFSI 1.4/1.5)"
-  },
-  {
-    "make": "Audi",
-    "model": "Q2",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1395,
-    "seconds": 8.5,
-    "source": "נתון יצרן (35 TFSI 1.4/1.5)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "Q2",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 300,
-    "cc": 1984,
-    "seconds": 4.8,
-    "source": "נתון יצרן (Audi SQ2)"
-  },
-  {
-    "make": "Audi",
-    "model": "Q2",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 300,
-    "cc": 1984,
-    "seconds": 4.8,
-    "source": "נתון יצרן (Audi SQ2)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "Q3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1498,
-    "seconds": 9.2,
-    "source": "נתון יצרן (דור 2 - 35 TFSI)"
-  },
-  {
-    "make": "Audi",
-    "model": "Q3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1498,
-    "seconds": 9.2,
-    "source": "נתון יצרן (דור 2 - 35 TFSI)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "Q3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 190,
-    "cc": 1984,
-    "seconds": 7.4,
-    "source": "נתון יצרן (דור 2 - 40 TFSI Quattro)"
-  },
-  {
-    "make": "Audi",
-    "model": "Q3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 190,
-    "cc": 1984,
-    "seconds": 7.4,
-    "source": "נתון יצרן (דור 2 - 40 TFSI Quattro)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "Q3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 400,
-    "cc": 2480,
-    "seconds": 4.5,
-    "source": "נתון יצרן (Audi RS Q3 2.5 TFSI)"
-  },
-  {
-    "make": "Audi",
-    "model": "Q3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 400,
-    "cc": 2480,
-    "seconds": 4.5,
-    "source": "נתון יצרן (Audi RS Q3 2.5 TFSI)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "Q4 e-tron",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 8.5,
-    "source": "נתון יצרן (Q4 40 e-tron חשמלי)"
-  },
-  {
-    "make": "Audi",
-    "model": "Q4 e-tron",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 8.5,
-    "source": "נתון יצרן (Q4 40 e-tron חשמלי)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "Q4 e-tron",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 299,
-    "cc": 0,
-    "seconds": 6.2,
-    "source": "נתון יצרן (Q4 50 e-tron Quattro חשמלי)"
-  },
-  {
-    "make": "Audi",
-    "model": "Q4 e-tron",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 299,
-    "cc": 0,
-    "seconds": 6.2,
-    "source": "נתון יצרן (Q4 50 e-tron Quattro חשמלי)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "Q5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 1984,
-    "seconds": 7.6,
-    "source": "נתון יצרן (דור 2 - 40 TFSI Quattro)"
-  },
-  {
-    "make": "Audi",
-    "model": "Q5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 1984,
-    "seconds": 7.6,
-    "source": "נתון יצרן (דור 2 - 40 TFSI Quattro)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "Q5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 265,
-    "cc": 1984,
-    "seconds": 6.1,
-    "source": "נתון יצרן (דור 2 - 45 TFSI Quattro)"
-  },
-  {
-    "make": "Audi",
-    "model": "Q5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 265,
-    "cc": 1984,
-    "seconds": 6.1,
-    "source": "נתון יצרן (דור 2 - 45 TFSI Quattro)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "Q5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 367,
-    "cc": 2967,
-    "seconds": 5.1,
-    "source": "נתון יצרן (Audi SQ5)"
-  },
-  {
-    "make": "Audi",
-    "model": "Q5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 367,
-    "cc": 2967,
-    "seconds": 5.1,
-    "source": "נתון יצרן (Audi SQ5)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "Q6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 388,
-    "cc": 0,
-    "seconds": 5.9,
-    "source": "נתון יצרן (Q6 e-tron חשמלי)"
-  },
-  {
-    "make": "Audi",
-    "model": "Q6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 388,
-    "cc": 0,
-    "seconds": 5.9,
-    "source": "נתון יצרן (Q6 e-tron חשמלי)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "Q6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 517,
-    "cc": 0,
-    "seconds": 4.3,
-    "source": "נתון יצרן (SQ6 e-tron חשמלי)"
-  },
-  {
-    "make": "Audi",
-    "model": "Q6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 517,
-    "cc": 0,
-    "seconds": 4.3,
-    "source": "נתון יצרן (SQ6 e-tron חשמלי)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "Q7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 252,
-    "cc": 1984,
-    "seconds": 7.1,
-    "source": "נתון יצרן (45 TFSI Quattro)"
-  },
-  {
-    "make": "Audi",
-    "model": "Q7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 252,
-    "cc": 1984,
-    "seconds": 7.1,
-    "source": "נתון יצרן (45 TFSI Quattro)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "Q7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 340,
-    "cc": 2995,
-    "seconds": 5.9,
-    "source": "נתון יצרן (55 TFSI Quattro V6)"
-  },
-  {
-    "make": "Audi",
-    "model": "Q7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 340,
-    "cc": 2995,
-    "seconds": 5.9,
-    "source": "נתון יצרן (55 TFSI Quattro V6)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "Q7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 507,
-    "cc": 3996,
-    "seconds": 4.1,
-    "source": "נתון יצרן (Audi SQ7 V8 TFSI)"
-  },
-  {
-    "make": "Audi",
-    "model": "Q7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 507,
-    "cc": 3996,
-    "seconds": 4.1,
-    "source": "נתון יצרן (Audi SQ7 V8 TFSI)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "Q8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 340,
-    "cc": 2995,
-    "seconds": 5.9,
-    "source": "נתון יצרן (55 TFSI Quattro)"
-  },
-  {
-    "make": "Audi",
-    "model": "Q8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 340,
-    "cc": 2995,
-    "seconds": 5.9,
-    "source": "נתון יצרן (55 TFSI Quattro)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "Q8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 600,
-    "cc": 3996,
-    "seconds": 3.8,
-    "source": "נתון יצרן (Audi RS Q8 V8 Biturbo)"
-  },
-  {
-    "make": "Audi",
-    "model": "Q8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 600,
-    "cc": 3996,
-    "seconds": 3.8,
-    "source": "נתון יצרן (Audi RS Q8 V8 Biturbo)"
   },
   {
     "make": "אודי גרמניה",
