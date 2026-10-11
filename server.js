@@ -12,6 +12,10 @@ const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";      // היסטור�
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";    // היסטוריית כלי רכב פרטיים (2): בעלויות
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";     // רכבים עם תג חניה לנכה
 
+// cars-data.com: המפתח נקרא מהסביבה בלבד, לעולם לא נכתב בקוד
+const CARS_DATA_KEY = process.env.CARS_DATA_KEY || "";
+const CARS_DATA_BASE = "https://api.cars-data.com/v1";
+
 app.use((req, res, next) => {
     console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
     next();
@@ -89,6 +93,60 @@ async function checkDisabled(plate) {
         return found;
     } catch (e) {
         return null;
+    }
+}
+
+// ---------- cars-data.com: תאוצה 0-100 ----------
+
+// מטמון בזיכרון: כל רכב נשאל מול השירות פעם אחת בלבד
+const accelCache = new Map();
+
+// TODO: למלא אחרי שנמצא endpoint לחיפוש לפי יצרן, דגם ושנה. עד אז מחזיר null
+async function findVariantId(manufacturer, model, year) {
+    return null;
+}
+
+// מחפש בכל מבנה התשובה את השדה accel_0_100_s ומחזיר את הערך במספר שניות
+function extractAccel(obj) {
+    if (!obj || typeof obj !== "object") return null;
+    if (obj.accel_0_100_s != null) {
+        const v = obj.accel_0_100_s;
+        const n = typeof v === "object" ? Number(v.v) : Number(v);
+        return Number.isNaN(n) ? null : n;
+    }
+    for (const k of Object.keys(obj)) {
+        const r = extractAccel(obj[k]);
+        if (r !== null) return r;
+    }
+    return null;
+}
+
+async function fetchAcceleration(manufacturer, model, year) {
+    if (!CARS_DATA_KEY) return null;
+
+    const cacheKey = [manufacturer, model, year].join("|").toLowerCase();
+    if (accelCache.has(cacheKey)) return accelCache.get(cacheKey);
+
+    try {
+        const variantId = await findVariantId(manufacturer, model, year);
+        if (!variantId) {
+            accelCache.set(cacheKey, null);
+            return null;
+        }
+
+        const response = await fetch(`${CARS_DATA_BASE}/variants/${variantId}/specs?locale=he`, {
+            headers: { "X-Api-Key": CARS_DATA_KEY }
+        });
+        if (!response.ok) return null;
+
+        const data = await response.json();
+        const seconds = extractAccel(data);
+        const result = seconds !== null ? { seconds, source: "cars-data.com" } : null;
+
+        accelCache.set(cacheKey, result);
+        return result;
+    } catch (e) {
+        return null; // לא שומרים שגיאות רשת במטמון, כדי לנסות שוב בפעם הבאה
     }
 }
 
@@ -177,12 +235,13 @@ app.get('/api/car/:plate', async (req, res) => {
         const engineCc = toNumber(row?.nefah_manoa) ?? toNumber(car.nefah_manoa);
         const testExpiry = car.tokef_dt || null;
 
-        // סוג הבעלות: קודם מהמאגר הראשי (שדה baalut), ואם ריק - מהיסטוריה
         const registryOwnership = labelRegistryOwnership(car.baalut);
         const historyOwnership = ownershipList.length
             ? ownershipList[ownershipList.length - 1].type
             : (history?.origin ?? null);
         const currentOwnership = registryOwnership || historyOwnership;
+
+        const acceleration = await fetchAcceleration(manufacturer, model, year);
 
         console.log(`--------------------------------------------------`);
         console.log(`[SEARCH LOG] 🔍 מישהו חיפש רכב!`);
@@ -191,6 +250,7 @@ app.get('/api/car/:plate', async (req, res) => {
         console.log(`🏭 יצרן ודגם: ${manufacturer} ${model} ${trim || ""} (${year})`);
         console.log(`⚡ כוח סוס: ${hp != null ? hp : "לא ידוע"}`);
         console.log(`🏷️ סוג בעלות: ${currentOwnership || "לא ידוע"}`);
+        console.log(`🏁 תאוצה 0-100: ${acceleration ? acceleration.seconds + " שניות" : "לא ידוע"}`);
         console.log(`♿ תג נכה: ${disabled === null ? "לא ידוע" : (disabled ? "יש" : "אין")}`);
         console.log(`🔁 מעברי בעלות: ${ownershipList.length}`);
         console.log(`--------------------------------------------------`);
@@ -210,6 +270,8 @@ app.get('/api/car/:plate', async (req, res) => {
                 lastTest: toText(car.mivchan_acharon_dt),
                 engineCc,
                 horsepower: hp,
+                acceleration0to100: acceleration ? acceleration.seconds : null,
+                accelerationSource: acceleration ? acceleration.source : null,
                 testExpiry,
                 testValid: testStatus(testExpiry),
                 ownership: currentOwnership,
@@ -240,6 +302,33 @@ app.get('/api/history/:plate', async (req, res) => {
         res.json({ success: true, history: history || {}, ownershipList });
     } catch (e) {
         res.status(500).json({ success: false, message: "שגיאה בשליפת ההיסטוריה" });
+    }
+});
+
+// ---------- בדיקת חיבור ל-cars-data (זמנית) ----------
+// פותחים בדפדפן: /api/test-accel
+// המפתח לא מוצג בתשובה, רק מבנה התשובה ומה שנמצא
+app.get('/api/test-accel', async (req, res) => {
+    if (!CARS_DATA_KEY) {
+        return res.json({ success: false, message: "CARS_DATA_KEY לא מוגדר ב-Render" });
+    }
+    try {
+        const response = await fetch(`${CARS_DATA_BASE}/demo`, {
+            headers: { "X-Api-Key": CARS_DATA_KEY }
+        });
+        const text = await response.text();
+        let data = null;
+        try { data = JSON.parse(text); } catch (e) { data = null; }
+
+        res.json({
+            success: response.ok,
+            status: response.status,
+            topLevelKeys: data && typeof data === "object" ? Object.keys(data) : [],
+            accelFound: data ? extractAccel(data) : null,
+            preview: data ? undefined : text.slice(0, 500)
+        });
+    } catch (e) {
+        res.json({ success: false, message: "שגיאת רשת: " + e.message });
     }
 });
 
