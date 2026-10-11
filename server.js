@@ -12,6 +12,9 @@ const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";      // היסטור�
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";    // היסטוריית כלי רכב פרטיים (2): בעלויות
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";     // רכבים עם תג חניה לנכה
 
+// מפתח ה-API של API Ninjas שהזנת
+const NINJAS_API_KEY = "Ubk3gCeKHqhTnzqnyzk5setrkAaUIzSwOOhqwkrS";
+
 app.use((req, res, next) => {
     console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
     next();
@@ -42,7 +45,49 @@ function toNumber(value) {
     return Number.isNaN(n) ? null : n;
 }
 
-// תרגום סוגי בעלות לעברית מובנת (ערך לא מוכר יוצג כמו שהוא)
+// פונקציות עזר לניקוי השמות עבור API Ninjas
+function cleanMakeName(israeliMake) {
+    if (!israeliMake) return '';
+    const makeStr = israeliMake.toLowerCase();
+    if (makeStr.includes('cupra') || makeStr.includes('קופרה')) return 'cupra';
+    if (makeStr.includes('סיאט')) return 'seat';
+    if (makeStr.includes('קיה')) return 'kia';
+    if (makeStr.includes('סקודה')) return 'skoda';
+    if (makeStr.includes('יונדאי')) return 'hyundai';
+    if (makeStr.includes('מאזדה')) return 'mazda';
+    if (makeStr.includes('טויוטה')) return 'toyota';
+    return israeliMake.split(' ')[0];
+}
+
+function cleanModelName(israeliModel) {
+    return israeliModel ? israeliModel.trim().toLowerCase() : '';
+}
+
+// פונקציה לשליפת נתוני תאוצה מ-API Ninjas
+async function fetchZeroToHundred(manufacturer, model, year) {
+    try {
+        const make = cleanMakeName(manufacturer);
+        const cleanModel = cleanModelName(model);
+        const url = `https://api.api-ninjas.com/v1/cars?make=${make}&model=${cleanModel}&year=${year}`;
+        
+        const response = await fetch(url, {
+            headers: { 'X-Api-Key': NINJAS_API_KEY }
+        });
+        
+        if (!response.ok) return null;
+        const data = await response.json();
+        
+        if (data && data.length > 0) {
+            return data[0].acceleration_0_to_60_mph || data[0].acceleration || null;
+        }
+        return null;
+    } catch (e) {
+        console.error("Error fetching from API Ninjas:", e);
+        return null;
+    }
+}
+
+// תרגום סוגי בעלות לעברית מובנת
 const ORIGIN_LABELS = {
     "": "פרטי",
     "החכר": "החכרה (ליסינג)",
@@ -50,7 +95,7 @@ const ORIGIN_LABELS = {
     "יבוא אישי": "יבוא אישי",
     "יבוא אישי-משומש": "יבוא אישי משומש",
     "מדינת ישראל": "רכב ממשלתי",
-    "ביס לנהיגה\"": "בית ספר לנהיגה",
+    "ביס لנהיגה\"": "בית ספר לנהיגה",
     "משומש מיבואן": "משומש מיבואן"
 };
 
@@ -60,7 +105,6 @@ function labelOwnership(raw) {
     return ORIGIN_LABELS[t] || t;
 }
 
-// סוג הבעלות מהמאגר הראשי (שדה baalut ברשומת הרישוי). null אם השדה ריק
 function labelRegistryOwnership(raw) {
     const t = toText(raw);
     if (t === null) return null;
@@ -76,7 +120,6 @@ function testStatus(expiry) {
     return d >= today;
 }
 
-// בודק אם הרכב מופיע במאגר תגי הנכה. true = יש, false = אין, null = לא ניתן לבדוק
 async function checkDisabled(plate) {
     try {
         const byFilter = await searchDatastore(DISABLED_ID, { mispar_rechev: Number(plate) }, 5);
@@ -104,7 +147,6 @@ async function fetchHistoryRecord(plate) {
     return records[0] || null;
 }
 
-// כל שורות הבעלויות לרכב, ממוינות לפי התאריך
 async function fetchOwnershipRows(plate) {
     const rows = await searchDatastore(OWNERSHIP_ID, { mispar_rechev: Number(plate) }, 100);
     return rows
@@ -161,39 +203,30 @@ app.get('/api/car/:plate', async (req, res) => {
             return res.json({ success: false, message: "המספר אינו קיים במאגר משרד התחבורה" });
         }
 
-        const [row, historyRaw, ownershipList, disabled] = await Promise.all([
+        const manufacturer = car.tozeret_nm || "לא ידוע";
+        const model = car.kinuy_mishari || car.degem_nm || "לא ידוע";
+        const year = car.shnat_yitzur || null;
+
+        // ביצוע כל השליפות במקביל (כולל API Ninjas לנתוני תאוצה)
+        const [row, historyRaw, ownershipList, disabled, zeroToHundred] = await Promise.all([
             findModelRow(car),
             fetchHistoryRecord(plate),
             fetchOwnershipRows(plate),
-            checkDisabled(plate)
+            checkDisabled(plate),
+            year ? fetchZeroToHundred(manufacturer, model, year) : Promise.resolve(null)
         ]);
-        const history = buildHistory(historyRaw);
 
-        const manufacturer = car.tozeret_nm || "לא ידוע";
-        const model = car.kinuy_mishari || car.degem_nm || row?.kinuy_mishari || "לא ידוע";
+        const history = buildHistory(historyRaw);
         const trim = toText(row?.ramat_gimur) || toText(car.ramat_gimur) || null;
-        const year = car.shnat_yitzur || "לא ידוע";
         const hp = toNumber(row?.koah_sus) ?? toNumber(car.koah_sus);
         const engineCc = toNumber(row?.nefah_manoa) ?? toNumber(car.nefah_manoa);
         const testExpiry = car.tokef_dt || null;
 
-        // סוג הבעלות: קודם מהמאגר הראשי (שדה baalut), ואם ריק - מהיסטוריה
         const registryOwnership = labelRegistryOwnership(car.baalut);
         const historyOwnership = ownershipList.length
             ? ownershipList[ownershipList.length - 1].type
             : (history?.origin ?? null);
         const currentOwnership = registryOwnership || historyOwnership;
-
-        console.log(`--------------------------------------------------`);
-        console.log(`[SEARCH LOG] 🔍 מישהו חיפש רכב!`);
-        console.log(`📅 זמן: ${timestamp}`);
-        console.log(`🚗 מספר רכב: ${plate}`);
-        console.log(`🏭 יצרן ודגם: ${manufacturer} ${model} ${trim || ""} (${year})`);
-        console.log(`⚡ כוח סוס: ${hp != null ? hp : "לא ידוע"}`);
-        console.log(`🏷️ סוג בעלות: ${currentOwnership || "לא ידוע"}`);
-        console.log(`♿ תג נכה: ${disabled === null ? "לא ידוע" : (disabled ? "יש" : "אין")}`);
-        console.log(`🔁 מעברי בעלות: ${ownershipList.length}`);
-        console.log(`--------------------------------------------------`);
 
         res.json({
             success: true,
@@ -217,7 +250,8 @@ app.get('/api/car/:plate', async (req, res) => {
                 changes: history?.changes ?? [],
                 owners: ownershipList.length || null,
                 disabled,
-                kmSinceTest: history?.kmSinceTest ?? null
+                kmSinceTest: history?.kmSinceTest ?? null,
+                zeroToHundred // הנתון החדש
             }
         });
     } catch (error) {
@@ -247,28 +281,4 @@ app.get('/api/debug/:plate', async (req, res) => {
     try {
         const car = await fetchCarRecord(req.params.plate);
         if (!car) return res.json({ success: false, message: "לא נמצא" });
-        const row = await findModelRow(car);
-        const hist = await fetchHistoryRecord(req.params.plate);
-        const own = await fetchOwnershipRows(req.params.plate);
-        const disabledSample = await searchDatastore(DISABLED_ID, null, 1);
-        const disabledMatch = await checkDisabled(req.params.plate);
-        res.json({
-            success: true,
-            car_fields: Object.keys(car),
-            car,
-            model_row: row,
-            history: hist,
-            ownership: own,
-            disabled_sample_fields: disabledSample[0] ? Object.keys(disabledSample[0]) : [],
-            disabled_sample: disabledSample[0] || null,
-            disabled_match: disabledMatch
-        });
-    } catch (error) {
-        console.error("שגיאה:", error);
-        res.status(500).json({ success: false, error: error.message });
-    }
-});
-
-app.listen(PORT, () => {
-    console.log(`השרת רץ בפורט ${PORT}`);
-});
+        const row = await
