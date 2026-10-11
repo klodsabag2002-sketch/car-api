@@ -12,9 +12,9 @@ const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";      // היסטור�
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";    // היסטוריית כלי רכב פרטיים (2): בעלויות
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";     // רכבים עם תג חניה לנכה
 
-// cars-data.com: המפתח נקרא מהסביבה בלבד, לעולם לא נכתב בקוד
-const CARS_DATA_KEY = process.env.CARS_DATA_KEY || "";
-const CARS_DATA_BASE = "https://api.cars-data.com/v1";
+// RevCarData: המפתח נקרא מהסביבה בלבד (Render -> Environment), לעולם לא נכתב בקוד
+const REVCAR_KEY = process.env.REVCAR_KEY || "";
+const REVCAR_BASE = "https://api.revcardata.com";
 
 app.use((req, res, next) => {
     console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
@@ -96,23 +96,31 @@ async function checkDisabled(plate) {
     }
 }
 
-// ---------- cars-data.com: תאוצה 0-100 ----------
+// ---------- RevCarData: תאוצה 0-100 ----------
 
 // מטמון בזיכרון: כל רכב נשאל מול השירות פעם אחת בלבד
 const accelCache = new Map();
 
-// TODO: למלא אחרי שנמצא endpoint לחיפוש לפי יצרן, דגם ושנה. עד אז מחזיר null
-async function findVariantId(manufacturer, model, year) {
-    return null;
+// מחזיר את התשובה של RevCarData כ-JSON, או null אם נכשל
+async function revcarGet(path) {
+    const response = await fetch(`${REVCAR_BASE}${path}`, {
+        headers: { "X-Api-Key": REVCAR_KEY }
+    });
+    if (!response.ok) return { ok: false, status: response.status, data: null };
+    const data = await response.json();
+    return { ok: true, status: response.status, data };
 }
 
-// מחפש בכל מבנה התשובה את השדה accel_0_100_s ומחזיר את הערך במספר שניות
+// מחפש בכל מבנה התשובה את השדה שמכיל תאוצה 0-100 ומחזיר מספר שניות
 function extractAccel(obj) {
     if (!obj || typeof obj !== "object") return null;
-    if (obj.accel_0_100_s != null) {
-        const v = obj.accel_0_100_s;
-        const n = typeof v === "object" ? Number(v.v) : Number(v);
-        return Number.isNaN(n) ? null : n;
+    for (const k of Object.keys(obj)) {
+        const key = k.toLowerCase();
+        if ((key.includes("0-100") || key.includes("0_100") || key.includes("accel")) && obj[k] != null) {
+            const v = typeof obj[k] === "object" ? (obj[k].value ?? obj[k].v) : obj[k];
+            const n = Number(String(v).replace(/[^\d.]/g, ""));
+            if (!Number.isNaN(n) && n > 0) return n;
+        }
     }
     for (const k of Object.keys(obj)) {
         const r = extractAccel(obj[k]);
@@ -121,27 +129,27 @@ function extractAccel(obj) {
     return null;
 }
 
+// TODO: להשלים אחרי שנראה את מבנה /vehicles (איך מחפשים לפי יצרן, דגם ושנה)
+async function findVehicleId(manufacturer, model, year) {
+    return null;
+}
+
 async function fetchAcceleration(manufacturer, model, year) {
-    if (!CARS_DATA_KEY) return null;
+    if (!REVCAR_KEY) return null;
 
     const cacheKey = [manufacturer, model, year].join("|").toLowerCase();
     if (accelCache.has(cacheKey)) return accelCache.get(cacheKey);
 
     try {
-        const variantId = await findVariantId(manufacturer, model, year);
-        if (!variantId) {
+        const vehicleId = await findVehicleId(manufacturer, model, year);
+        if (!vehicleId) {
             accelCache.set(cacheKey, null);
             return null;
         }
 
-        const response = await fetch(`${CARS_DATA_BASE}/variants/${variantId}/specs?locale=he`, {
-            headers: { "X-Api-Key": CARS_DATA_KEY }
-        });
-        if (!response.ok) return null;
-
-        const data = await response.json();
-        const seconds = extractAccel(data);
-        const result = seconds !== null ? { seconds, source: "cars-data.com" } : null;
+        const r = await revcarGet(`/${vehicleId}/core`);
+        const seconds = r.ok ? extractAccel(r.data) : null;
+        const result = seconds !== null ? { seconds, source: "RevCarData" } : null;
 
         accelCache.set(cacheKey, result);
         return result;
@@ -305,11 +313,11 @@ app.get('/api/history/:plate', async (req, res) => {
     }
 });
 
-// ---------- בדיקה זמנית: תאוצה ב-specs של גרסה ----------
-// פותחים: /api/test-accel
-// לוקח את הגרסה הראשונה מ-/demo, קורא ל-specs שלה ומחזיר שמות שדות ותאוצה (בלי המפתח)
+// ---------- בדיקה זמנית: חיבור ל-RevCarData ----------
+// פותחים: /api/test-revcar
+// מחזיר את מבנה התשובה של /vehicles (בלי המפתח)
 function listKeys(obj, prefix = "", depth = 0, out = []) {
-    if (!obj || typeof obj !== "object" || depth > 5) return out;
+    if (!obj || typeof obj !== "object" || depth > 4) return out;
     for (const k of Object.keys(obj)) {
         const path = prefix ? `${prefix}.${k}` : k;
         out.push(path);
@@ -318,30 +326,17 @@ function listKeys(obj, prefix = "", depth = 0, out = []) {
     return out;
 }
 
-app.get('/api/test-accel', async (req, res) => {
-    if (!CARS_DATA_KEY) {
-        return res.json({ success: false, message: "CARS_DATA_KEY לא מוגדר ב-Render" });
+app.get('/api/test-revcar', async (req, res) => {
+    if (!REVCAR_KEY) {
+        return res.json({ success: false, message: "REVCAR_KEY לא מוגדר ב-Render" });
     }
     try {
-        const headers = { "X-Api-Key": CARS_DATA_KEY };
-
-        const demoRes = await fetch(`${CARS_DATA_BASE}/demo`, { headers });
-        const demo = await demoRes.json();
-        const first = demo?.data?.variants?.[0];
-        if (!first?.variant_id) {
-            return res.json({ success: false, message: "לא נמצא variant_id ב-demo", demoFieldNames: listKeys(demo).slice(0, 100) });
-        }
-
-        const specsRes = await fetch(`${CARS_DATA_BASE}/variants/${first.variant_id}/specs?locale=he`, { headers });
-        const specs = await specsRes.json();
-
+        const r = await revcarGet("/vehicles");
         res.json({
-            success: specsRes.ok,
-            status: specsRes.status,
-            variantName: first.display_name,
-            variantId: first.variant_id,
-            accelFound: extractAccel(specs),
-            fieldNames: listKeys(specs).slice(0, 300)
+            success: r.ok,
+            status: r.status,
+            fieldNames: r.data ? listKeys(r.data).slice(0, 200) : [],
+            accelFound: r.data ? extractAccel(r.data) : null
         });
     } catch (e) {
         res.json({ success: false, message: "שגיאת רשת: " + e.message });
