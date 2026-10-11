@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 const CAR_REGISTRY_ID = "053cea08-09bc-40ec-8f7a-156f0677aff3"; // מאגר רישוי רכבים
-const MODELS_ID = "142afde2-6228-49f9-8a29-9b6c3a0cbe40";        // תוצרים ודגמים
+const MODELS_ID = "142afde2-6228-49f9-8a29-9b6c3a0cbe40";       // תוצרים ודגמים
 const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";      // היסטוריית כלי רכב פרטיים (1)
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";    // היסטוריית כלי רכב פרטיים (2): בעלויות
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";     // רכבים עם תג חניה לנכה
@@ -42,57 +42,7 @@ function toNumber(value) {
     return Number.isNaN(n) ? null : n;
 }
 
-// אלגוריתם אוניברסלי לחישוב מוערך של 0-100 קמ"ש
-function estimateAcceleration(hp, engineCc, modelName, trimName) {
-    if (!hp || hp <= 0) return null;
-
-    const fullText = (modelName + " " + (trimName || "")).toLowerCase();
-    
-    // זיהוי האם הרכב חשמלי (מומנט מיידי וזינוק מהיר)
-    const isElectric = fullText.includes("EV") || fullText.includes("חשמלי") || fullText.includes("e-tron") || fullText.includes("tesla") || fullText.includes("id.") || fullText.includes("geely") || fullText.includes("byd");
-
-    // הערכת משקל בסיסית
-    let estimatedWeight = 1350; 
-    if (isElectric) {
-        estimatedWeight = 1800;
-    } else if (engineCc) {
-        if (engineCc < 1200) estimatedWeight = 1050;      // מיני / סופרמיני
-        else if (engineCc < 1600) estimatedWeight = 1250; // משפחתית קומפקטית
-        else if (engineCc < 2000) estimatedWeight = 1450; // משפחתית גדולה / מנהלים
-        else estimatedWeight = 1750;                      // מנוע גדול / סדאן כבד
-    }
-
-    // תוספת משקל לרכבי SUV / ג'יפונים
-    if (fullText.includes("suv") || fullText.includes("ג'יפון") || fullText.includes("tarraco") || fullText.includes("formentor") || fullText.includes("tiguan") || fullText.includes("ioniq 5")) {
-        estimatedWeight += 250;
-    }
-
-    const kgPerHp = estimatedWeight / hp;
-    let time;
-
-    if (isElectric) {
-        time = 2.0 * Math.pow(kgPerHp, 0.48);
-    } else {
-        time = 2.35 * Math.pow(kgPerHp, 0.53);
-
-        // בונוס הנעה כפולה (AWD / 4x4 / VZ וכו')
-        if (fullText.includes("4x4") || fullText.includes("awd") || fullText.includes("4motion") || fullText.includes("quattro") || fullText.includes("xdrive") || fullText.includes("vz")) {
-            time *= 0.90;
-        }
-
-        // בונוס לגרסאות ספורטיביות קיצוניות
-        if (fullText.includes("vz") || fullText.includes("gti") || fullText.includes("amg") || fullText.includes("rs") || fullText.includes("r") || fullText.includes("st")) {
-            time *= 0.85;
-        }
-    }
-
-    if (time < 3.2) time = 3.2;
-    if (time > 22) time = 22;
-
-    return Number(time.toFixed(1));
-}
-
-// תרגום סוגי בעלות לעברית מובנת
+// תרגום סוגי בעלות לעברית מובנת (ערך לא מוכר יוצג כמו שהוא)
 const ORIGIN_LABELS = {
     "": "פרטי",
     "החכר": "החכרה (ליסינג)",
@@ -110,6 +60,7 @@ function labelOwnership(raw) {
     return ORIGIN_LABELS[t] || t;
 }
 
+// סוג הבעלות מהמאגר הראשי (שדה baalut ברשומת הרישוי). null אם השדה ריק
 function labelRegistryOwnership(raw) {
     const t = toText(raw);
     if (t === null) return null;
@@ -125,6 +76,7 @@ function testStatus(expiry) {
     return d >= today;
 }
 
+// בודק אם הרכב מופיע במאגר תגי הנכה. true = יש, false = אין, null = לא ניתן לבדוק
 async function checkDisabled(plate) {
     try {
         const byFilter = await searchDatastore(DISABLED_ID, { mispar_rechev: Number(plate) }, 5);
@@ -152,6 +104,7 @@ async function fetchHistoryRecord(plate) {
     return records[0] || null;
 }
 
+// כל שורות הבעלויות לרכב, ממוינות לפי התאריך
 async function fetchOwnershipRows(plate) {
     const rows = await searchDatastore(OWNERSHIP_ID, { mispar_rechev: Number(plate) }, 100);
     return rows
@@ -223,8 +176,8 @@ app.get('/api/car/:plate', async (req, res) => {
         const hp = toNumber(row?.koah_sus) ?? toNumber(car.koah_sus);
         const engineCc = toNumber(row?.nefah_manoa) ?? toNumber(car.nefah_manoa);
         const testExpiry = car.tokef_dt || null;
-        const acceleration = estimateAcceleration(hp, engineCc, model, trim);
 
+        // סוג הבעלות: קודם מהמאגר הראשי (שדה baalut), ואם ריק - מהיסטוריה
         const registryOwnership = labelRegistryOwnership(car.baalut);
         const historyOwnership = ownershipList.length
             ? ownershipList[ownershipList.length - 1].type
@@ -237,7 +190,6 @@ app.get('/api/car/:plate', async (req, res) => {
         console.log(`🚗 מספר רכב: ${plate}`);
         console.log(`🏭 יצרן ודגם: ${manufacturer} ${model} ${trim || ""} (${year})`);
         console.log(`⚡ כוח סוס: ${hp != null ? hp : "לא ידוע"}`);
-        console.log(`⏱️ 0-100: ${acceleration != null ? acceleration + " שניות" : "לא ידוע"}`);
         console.log(`🏷️ סוג בעלות: ${currentOwnership || "לא ידוע"}`);
         console.log(`♿ תג נכה: ${disabled === null ? "לא ידוע" : (disabled ? "יש" : "אין")}`);
         console.log(`🔁 מעברי בעלות: ${ownershipList.length}`);
@@ -258,7 +210,6 @@ app.get('/api/car/:plate', async (req, res) => {
                 lastTest: toText(car.mivchan_acharon_dt),
                 engineCc,
                 horsepower: hp,
-                acceleration,
                 testExpiry,
                 testValid: testStatus(testExpiry),
                 ownership: currentOwnership,
@@ -289,6 +240,32 @@ app.get('/api/history/:plate', async (req, res) => {
         res.json({ success: true, history: history || {}, ownershipList });
     } catch (e) {
         res.status(500).json({ success: false, message: "שגיאה בשליפת ההיסטוריה" });
+    }
+});
+
+app.get('/api/debug/:plate', async (req, res) => {
+    try {
+        const car = await fetchCarRecord(req.params.plate);
+        if (!car) return res.json({ success: false, message: "לא נמצא" });
+        const row = await findModelRow(car);
+        const hist = await fetchHistoryRecord(req.params.plate);
+        const own = await fetchOwnershipRows(req.params.plate);
+        const disabledSample = await searchDatastore(DISABLED_ID, null, 1);
+        const disabledMatch = await checkDisabled(req.params.plate);
+        res.json({
+            success: true,
+            car_fields: Object.keys(car),
+            car,
+            model_row: row,
+            history: hist,
+            ownership: own,
+            disabled_sample_fields: disabledSample[0] ? Object.keys(disabledSample[0]) : [],
+            disabled_sample: disabledSample[0] || null,
+            disabled_match: disabledMatch
+        });
+    } catch (error) {
+        console.error("שגיאה:", error);
+        res.status(500).json({ success: false, error: error.message });
     }
 });
 
