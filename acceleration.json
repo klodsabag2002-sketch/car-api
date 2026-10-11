@@ -35,7 +35,7 @@
     "yearStart": null,
     "yearEnd": null,
     "hp": 150,
-    "cc": null,
+    "cc": 0,
     "seconds": 8.7,
     "source": "cupraofficial.co.il (eTSI 1.5 היברידי מתון)"
   },
@@ -85,7 +85,7 @@
     "yearStart": 2023,
     "yearEnd": null,
     "hp": 286,
-    "cc": null,
+    "cc": 0,
     "seconds": 6.8,
     "source": "נתון יצרן CUPRA (cupra.com), Tavascan Endurance 286 כ\"ס"
   },
@@ -95,19 +95,19 @@
     "yearStart": 2023,
     "yearEnd": null,
     "hp": 340,
-    "cc": null,
+    "cc": 0,
     "seconds": 5.5,
     "source": "נתון יצרן CUPRA (cupra.com), Tavascan VZ 340 כ\"ס"
   },
   {
-    "make": "סיאט גרמניה",
-    "model": "BORN PREMIUM",
+    "make": "Cupra",
+    "model": "Born",
     "yearStart": 2021,
     "yearEnd": null,
     "hp": 204,
-    "cc": null,
+    "cc": 0,
     "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (סוללת 58 קוט\"ש)[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span)"
+    "source": "נתון יצרן (סוללת 58 קוט\"ש)[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span)"
   },
   {
     "make": "Cupra",
@@ -115,9 +115,9 @@
     "yearStart": 2021,
     "yearEnd": null,
     "hp": 231,
-    "cc": null,
+    "cc": 0,
     "seconds": 6.6,
-    "source": "נתון יצרן (גרסת e-Boost הנפוצה בארץ, סוללת 58 קוט\"ש)[span_2](start_span)[span_2](end_span)"
+    "source": "נתון יצרן (גרסת e-Boost, סוללת 58 קוט\"ש)[span_2](start_span)[span_2](end_span)"
   },
   {
     "make": "Cupra",
@@ -137,7 +137,7 @@
     "hp": 333,
     "cc": 1984,
     "seconds": 4.8,
-    "source": "אומת על ידי המשתמש (הוסף כאן את שם המקור)"
+    "source": "אומת על ידי המשתמש"
   },
   {
     "make": "Cupra",
@@ -217,6 +217,6 @@
     "hp": 272,
     "cc": 1498,
     "seconds": 6.5,
-    "source": "מדידה של AMS (e-Hybrid VZ 272, לא נתון יצרן)"
+    "source": "מדידה של AMS (e-Hybrid VZ 272)"
   }
 ]
