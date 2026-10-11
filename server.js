@@ -15,7 +15,6 @@ const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";    // היסטור�
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";     // רכבים עם תג חניה לנכה
 
 // ---------- תאוצה 0-100 מקובץ ידני ----------
-// הקובץ acceleration.json נמצא בשורש הפרויקט, לצד server.js
 const ACCEL_FILE = path.join(__dirname, "acceleration.json");
 let accelTable = [];
 try {
@@ -29,15 +28,17 @@ function norm(s) {
     return String(s || "").toLowerCase().replace(/[^a-z0-9א-ת]/g, "");
 }
 
-// מחפש בטבלה לפי יצרן, דגם, שנה, כוח סוס ונפח
-function lookupAccel(make, model, year, hp, cc) {
-    const m = norm(make);
-    const mo = norm(model);
+// מחפש בטבלה. בודק את כל שמות היצרן והדגם שברישוי, כי כל אחד מהם יכול להיות השם שהטבלה משתמשת בו
+function lookupAccel(makeTexts, modelTexts, year, hp, cc) {
+    const makes = makeTexts.map(norm).filter(Boolean);
+    const models = modelTexts.map(norm).filter(Boolean);
     const y = Number(year);
 
     for (const r of accelTable) {
-        if (!m.includes(norm(r.make))) continue;
-        if (!mo.includes(norm(r.model))) continue;
+        const rMake = norm(r.make);
+        const rModel = norm(r.model);
+        if (!makes.some(m => m.includes(rMake))) continue;
+        if (!models.some(m => m.includes(rModel))) continue;
         if (!Number.isNaN(y) && r.yearStart != null) {
             if (y < r.yearStart) continue;
             if (r.yearEnd != null && y > r.yearEnd) continue;
@@ -79,7 +80,6 @@ function toNumber(value) {
     return Number.isNaN(n) ? null : n;
 }
 
-// תרגום סוגי בעלות לעברית מובנת (ערך לא מוכר יוצג כמו שהוא)
 const ORIGIN_LABELS = {
     "": "פרטי",
     "החכר": "החכרה (ליסינג)",
@@ -97,7 +97,6 @@ function labelOwnership(raw) {
     return ORIGIN_LABELS[t] || t;
 }
 
-// סוג הבעלות מהמאגר הראשי (שדה baalut ברשומת הרישוי). null אם השדה ריק
 function labelRegistryOwnership(raw) {
     const t = toText(raw);
     if (t === null) return null;
@@ -113,7 +112,6 @@ function testStatus(expiry) {
     return d >= today;
 }
 
-// בודק אם הרכב מופיע במאגר תגי הנכה. true = יש, false = אין, null = לא ניתן לבדוק
 async function checkDisabled(plate) {
     try {
         const byFilter = await searchDatastore(DISABLED_ID, { mispar_rechev: Number(plate) }, 5);
@@ -141,7 +139,6 @@ async function fetchHistoryRecord(plate) {
     return records[0] || null;
 }
 
-// כל שורות הבעלויות לרכב, ממוינות לפי התאריך
 async function fetchOwnershipRows(plate) {
     const rows = await searchDatastore(OWNERSHIP_ID, { mispar_rechev: Number(plate) }, 100);
     return rows
@@ -220,7 +217,10 @@ app.get('/api/car/:plate', async (req, res) => {
             : (history?.origin ?? null);
         const currentOwnership = registryOwnership || historyOwnership;
 
-        const acceleration = lookupAccel(manufacturer, model, year, hp, engineCc);
+        // כל שמות היצרן והדגם שברישוי, כולל הדגם האמיתי (LEON) שנמצא ב-degem_nm
+        const makeTexts = [manufacturer, car.tozeret_nm, car.kinuy_mishari, car.sug_degem].filter(Boolean);
+        const modelTexts = [car.kinuy_mishari, car.degem_nm, car.ramat_gimur, model].filter(Boolean);
+        const acceleration = lookupAccel(makeTexts, modelTexts, year, hp, engineCc);
 
         console.log(`--------------------------------------------------`);
         console.log(`[SEARCH LOG] 🔍 מישהו חיפש רכב!`);
