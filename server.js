@@ -305,9 +305,19 @@ app.get('/api/history/:plate', async (req, res) => {
     }
 });
 
-// ---------- בדיקת חיבור ל-cars-data (זמנית) ----------
-// פותחים בדפדפן: /api/test-accel
-// המפתח לא מוצג בתשובה, רק מבנה התשובה ומה שנמצא
+// ---------- בדיקה זמנית: מבנה התשובה של cars-data ----------
+// פותחים: /api/test-accel
+// מחזיר רק שמות השדות (בלי ערכים ובלי המפתח)
+function listKeys(obj, prefix = "", depth = 0, out = []) {
+    if (!obj || typeof obj !== "object" || depth > 4) return out;
+    for (const k of Object.keys(obj)) {
+        const path = prefix ? `${prefix}.${k}` : k;
+        out.push(path);
+        listKeys(obj[k], path, depth + 1, out);
+    }
+    return out;
+}
+
 app.get('/api/test-accel', async (req, res) => {
     if (!CARS_DATA_KEY) {
         return res.json({ success: false, message: "CARS_DATA_KEY לא מוגדר ב-Render" });
@@ -316,16 +326,12 @@ app.get('/api/test-accel', async (req, res) => {
         const response = await fetch(`${CARS_DATA_BASE}/demo`, {
             headers: { "X-Api-Key": CARS_DATA_KEY }
         });
-        const text = await response.text();
-        let data = null;
-        try { data = JSON.parse(text); } catch (e) { data = null; }
-
+        const data = await response.json();
         res.json({
             success: response.ok,
             status: response.status,
-            topLevelKeys: data && typeof data === "object" ? Object.keys(data) : [],
-            accelFound: data ? extractAccel(data) : null,
-            preview: data ? undefined : text.slice(0, 500)
+            fieldNames: listKeys(data).slice(0, 200),
+            accelFound: extractAccel(data)
         });
     } catch (e) {
         res.json({ success: false, message: "שגיאת רשת: " + e.message });
