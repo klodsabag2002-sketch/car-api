@@ -6,7 +6,7 @@
     "yearEnd": null,
     "hp": 300,
     "cc": 1984,
-    "acceleration0to100": 5.7,
+    "seconds": 5.7,
     "source": "נתון יצרן (5.7 שניות)"
   },
   {
@@ -16,7 +16,7 @@
     "yearEnd": null,
     "hp": 245,
     "cc": 1400,
-    "acceleration0to100": 6.7,
+    "seconds": 6.7,
     "source": "נתון יצרן (6.7 שניות)"
   },
   {
@@ -26,87 +26,117 @@
     "yearEnd": null,
     "hp": 190,
     "cc": 1984,
-    "acceleration0to100": 7.2,
+    "seconds": 7.2,
     "source": "נתון יצרן (7.2 שניות)"
   },
   {
     "make": "Cupra",
     "model": "Leon",
-    "yearStart": 2020,
+    "yearStart": null,
     "yearEnd": null,
     "hp": 150,
-    "cc": 1498,
-    "acceleration0to100": 8.7,
+    "cc": null,
+    "seconds": 8.7,
     "source": "cupraofficial.co.il (eTSI 1.5 היברידי מתון)"
   },
   {
     "make": "Cupra",
-    "model": "Formentor 1.5 TSI",
+    "model": "Formentor",
     "yearStart": 2020,
     "yearEnd": null,
-    "hp": 150,
-    "cc": 1498,
-    "acceleration0to100": 8.9,
-    "source": "icar.co.il / automobile-catalog.com"
-  },
-  {
-    "make": "Cupra",
-    "model": "Formentor 2.0 TSI 4X4",
-    "yearStart": 2020,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 1984,
-    "acceleration0to100": 6.7,
-    "source": "icar.co.il / automoli.com"
-  },
-  {
-    "make": "Cupra",
-    "model": "Formentor VZ",
-    "yearStart": 2020,
-    "yearEnd": 2024,
     "hp": 310,
     "cc": 1984,
-    "acceleration0to100": 4.9,
-    "source": "auto.co.il / icar.co.il"
+    "seconds": 4.9,
+    "source": "נתון יצרן SEAT, אומת ב-CarExpert ו-Carscoops"
   },
   {
     "make": "Cupra",
-    "model": "Formentor VZ",
+    "model": "Formentor",
     "yearStart": 2024,
     "yearEnd": null,
     "hp": 333,
     "cc": 1984,
-    "acceleration0to100": 4.8,
-    "source": "auto.co.il / icar.co.il"
+    "seconds": 4.8,
+    "source": "אומת על ידי המשתמש (הוסף כאן את שם המקור)"
   },
   {
     "make": "Cupra",
-    "model": "Formentor e-Hybrid",
+    "model": "Formentor",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "hp": 390,
+    "cc": 2480,
+    "seconds": 4.2,
+    "source": "נתון יצרן SEAT (VZ5 2.5 TSI)"
+  },
+  {
+    "make": "Cupra",
+    "model": "Formentor",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1984,
+    "seconds": 6.8,
+    "source": "נתון יצרן SEAT (2.0 TSI 4Drive 245)"
+  },
+  {
+    "make": "Cupra",
+    "model": "Formentor",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 7.1,
+    "source": "נתון יצרן SEAT (2.0 TSI 4Drive 190)"
+  },
+  {
+    "make": "Cupra",
+    "model": "Formentor",
+    "yearStart": 2020,
+    "yearEnd": 2023,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.9,
+    "source": "נתון יצרן SEAT (1.5 TSI 150)"
+  },
+  {
+    "make": "Cupra",
+    "model": "Formentor",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.0,
+    "source": "נתון יצרן, autotijd (1.5 eTSI 150 מתיחת פנים)"
+  },
+  {
+    "make": "Cupra",
+    "model": "Formentor",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1395,
+    "seconds": 7.0,
+    "source": "נתון יצרן SEAT (e-Hybrid 245)"
+  },
+  {
+    "make": "Cupra",
+    "model": "Formentor",
     "yearStart": 2020,
     "yearEnd": null,
     "hp": 204,
     "cc": 1395,
-    "acceleration0to100": 7.8,
-    "source": "autoboom.co.il / Wikipedia"
+    "seconds": 7.8,
+    "source": "נתון יצרן SEAT (e-Hybrid 204)"
   },
   {
     "make": "Cupra",
-    "model": "Formentor VZ e-Hybrid",
-    "yearStart": 2020,
-    "yearEnd": 2024,
-    "hp": 245,
-    "cc": 1395,
-    "acceleration0to100": 7.0,
-    "source": "icar.co.il"
-  },
-  {
-    "make": "Cupra",
-    "model": "Formentor VZ e-Hybrid",
+    "model": "Formentor",
     "yearStart": 2024,
     "yearEnd": null,
     "hp": 272,
     "cc": 1498,
-    "acceleration0to100": 7.0,
-    "source": "automobile-catalog.com"
+    "seconds": 6.5,
+    "source": "מדידה של AMS (e-Hybrid VZ 272, לא נתון יצרן)"
   }
 ]
