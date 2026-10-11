@@ -81,6 +81,46 @@
   },
   {
     "make": "Cupra",
+    "model": "Tavascan",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": null,
+    "seconds": 6.8,
+    "source": "נתון יצרן CUPRA (cupra.com), Tavascan Endurance 286 כ\"ס"
+  },
+  {
+    "make": "Cupra",
+    "model": "Tavascan",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": null,
+    "seconds": 5.5,
+    "source": "נתון יצרן CUPRA (cupra.com), Tavascan VZ 340 כ\"ס"
+  },
+  {
+    "make": "Cupra",
+    "model": "Born",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": null,
+    "seconds": 7.3,
+    "source": "נתון יצרן (גרסת ביניים, סוללת 58 קוט\"ש)[span_0](start_span)[span_0](end_span)"
+  },
+  {
+    "make": "Cupra",
+    "model": "Born",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": null,
+    "seconds": 6.6,
+    "source": "נתון יצרן (גרסת e-Boost הנפוצה בארץ, סוללת 58 קוט\"ש)[span_1](start_span)[span_1](end_span)"
+  },
+  {
+    "make": "Cupra",
     "model": "Formentor",
     "yearStart": 2020,
     "yearEnd": null,
