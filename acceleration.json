@@ -1,5 +1,115 @@
 [
   {
+    "make": "אודי ספרד",
+    "model": "A1 SPORTBACK",
+    "yearStart": 2018,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (30 TFSI)[span_0](start_span)[span_0](end_span)"
+  },
+  {
+    "make": "Audi",
+    "model": "A1",
+    "yearStart": 2010,
+    "yearEnd": 2018,
+    "hp": 86,
+    "cc": 1197,
+    "seconds": 11.7,
+    "source": "נתון יצרן (1.2 TFSI)"
+  },
+  {
+    "make": "Audi",
+    "model": "A1",
+    "yearStart": 2015,
+    "yearEnd": 2018,
+    "hp": 95,
+    "cc": 999,
+    "seconds": 10.9,
+    "source": "נתון יצרן (1.0 TFSI 95)"
+  },
+  {
+    "make": "Audi",
+    "model": "A1",
+    "yearStart": 2018,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 999,
+    "seconds": 11.0,
+    "source": "נתון יצרן (דור 2 - 25 TFSI)"
+  },
+  {
+    "make": "Audi",
+    "model": "A1",
+    "yearStart": 2018,
+    "yearEnd": null,
+    "hp": 116,
+    "cc": 999,
+    "seconds": 9.4,
+    "source": "נתון יצרן (דור 2 - 30 TFSI)"
+  },
+  {
+    "make": "Audi",
+    "model": "A1",
+    "yearStart": 2010,
+    "yearEnd": 2014,
+    "hp": 122,
+    "cc": 1390,
+    "seconds": 8.9,
+    "source": "נתון יצרן (1.4 TFSI)"
+  },
+  {
+    "make": "Audi",
+    "model": "A1",
+    "yearStart": 2014,
+    "yearEnd": 2018,
+    "hp": 125,
+    "cc": 1395,
+    "seconds": 8.9,
+    "source": "נתון יצרן (1.4 TFSI Ultra)"
+  },
+  {
+    "make": "Audi",
+    "model": "A1",
+    "yearStart": 2012,
+    "yearEnd": 2018,
+    "hp": 185,
+    "cc": 1390,
+    "seconds": 6.9,
+    "source": "נתון יצרן (1.4 TFSI כפול מגדשים)"
+  },
+  {
+    "make": "Audi",
+    "model": "A1",
+    "yearStart": 2018,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 7.7,
+    "source": "נתון יצרן (דור 2 - 35 TFSI 1.5)"
+  },
+  {
+    "make": "Audi",
+    "model": "A1",
+    "yearStart": 2018,
+    "yearEnd": null,
+    "hp": 207,
+    "cc": 1984,
+    "seconds": 6.5,
+    "source": "נתון יצרן (דור 2 - 40 TFSI 2.0)"
+  },
+  {
+    "make": "Audi",
+    "model": "A1",
+    "yearStart": 2014,
+    "yearEnd": 2018,
+    "hp": 231,
+    "cc": 1984,
+    "seconds": 5.8,
+    "source": "נתון יצרן (Audi S1 2.0 TFSI Quattro)"
+  },
+  {
     "make": "Audi",
     "model": "Q2",
     "yearStart": 2016,
@@ -580,106 +690,6 @@
     "source": "נתון יצרן (Audi RS3 החדשה 400 כ\"ס)"
   },
   {
-    "make": "Audi",
-    "model": "A1",
-    "yearStart": 2010,
-    "yearEnd": 2018,
-    "hp": 86,
-    "cc": 1197,
-    "seconds": 11.7,
-    "source": "נתון יצרן (1.2 TFSI)"
-  },
-  {
-    "make": "Audi",
-    "model": "A1",
-    "yearStart": 2015,
-    "yearEnd": 2018,
-    "hp": 95,
-    "cc": 999,
-    "seconds": 10.9,
-    "source": "נתון יצרן (1.0 TFSI 95)"
-  },
-  {
-    "make": "Audi",
-    "model": "A1",
-    "yearStart": 2018,
-    "yearEnd": null,
-    "hp": 95,
-    "cc": 999,
-    "seconds": 11.0,
-    "source": "נתון יצרן (דור 2 - 25 TFSI)"
-  },
-  {
-    "make": "Audi",
-    "model": "A1",
-    "yearStart": 2018,
-    "yearEnd": null,
-    "hp": 116,
-    "cc": 999,
-    "seconds": 9.4,
-    "source": "נתון יצרן (דור 2 - 30 TFSI)"
-  },
-  {
-    "make": "Audi",
-    "model": "A1",
-    "yearStart": 2010,
-    "yearEnd": 2014,
-    "hp": 122,
-    "cc": 1390,
-    "seconds": 8.9,
-    "source": "נתון יצרן (1.4 TFSI)"
-  },
-  {
-    "make": "Audi",
-    "model": "A1",
-    "yearStart": 2014,
-    "yearEnd": 2018,
-    "hp": 125,
-    "cc": 1395,
-    "seconds": 8.9,
-    "source": "נתון יצרן (1.4 TFSI Ultra)"
-  },
-  {
-    "make": "Audi",
-    "model": "A1",
-    "yearStart": 2012,
-    "yearEnd": 2018,
-    "hp": 185,
-    "cc": 1390,
-    "seconds": 6.9,
-    "source": "נתון יצרן (1.4 TFSI כפול מגדשים)"
-  },
-  {
-    "make": "Audi",
-    "model": "A1",
-    "yearStart": 2018,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1498,
-    "seconds": 7.7,
-    "source": "נתון יצרן (דור 2 - 35 TFSI 1.5)"
-  },
-  {
-    "make": "Audi",
-    "model": "A1",
-    "yearStart": 2018,
-    "yearEnd": null,
-    "hp": 207,
-    "cc": 1984,
-    "seconds": 6.5,
-    "source": "נתון יצרן (דור 2 - 40 TFSI 2.0)"
-  },
-  {
-    "make": "Audi",
-    "model": "A1",
-    "yearStart": 2014,
-    "yearEnd": 2018,
-    "hp": 231,
-    "cc": 1984,
-    "seconds": 5.8,
-    "source": "נתון יצרן (Audi S1 2.0 TFSI Quattro)"
-  },
-  {
     "make": "Cupra",
     "model": "Leon",
     "yearStart": 2020,
@@ -787,7 +797,7 @@
     "hp": 204,
     "cc": 0,
     "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (סוללת 58 קוט\"ש)[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span)[span_2](start_span)[span_2](end_span)[span_3](start_span)[span_3](end_span)"
+    "source": "רישוי רכב / נתון יצרן (סוללת 58 קוט\"ש)[span_1](start_span)[span_1](end_span)[span_2](start_span)[span_2](end_span)[span_3](start_span)[span_3](end_span)[span_4](start_span)[span_4](end_span)"
   },
   {
     "make": "סיאט גרמניה",
@@ -797,7 +807,7 @@
     "hp": 204,
     "cc": 0,
     "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (סוללת 58 קוט\"ש)[span_4](start_span)[span_4](end_span)[span_5](start_span)[span_5](end_span)[span_6](start_span)[span_6](end_span)"
+    "source": "רישוי רכב / נתון יצרן (סוללת 58 קוט\"ש)[span_5](start_span)[span_5](end_span)[span_6](start_span)[span_6](end_span)[span_7](start_span)[span_7](end_span)"
   },
   {
     "make": "Cupra",
@@ -807,7 +817,7 @@
     "hp": 204,
     "cc": 0,
     "seconds": 7.3,
-    "source": "נתון יצרן (סוללת 58 קוט\"ש)[span_7](start_span)[span_7](end_span)"
+    "source": "נתון יצרן (סוללת 58 קוט\"ש)[span_8](start_span)[span_8](end_span)"
   },
   {
     "make": "Cupra",
@@ -817,7 +827,7 @@
     "hp": 231,
     "cc": 0,
     "seconds": 6.6,
-    "source": "נתון יצרן (גרסת e-Boost, סוללת 58 קוט\"ש)[span_8](start_span)[span_8](end_span)"
+    "source": "נתון יצרן (גרסת e-Boost, סוללת 58 קוט\"ש)[span_9](start_span)[span_9](end_span)"
   },
   {
     "make": "Cupra",
