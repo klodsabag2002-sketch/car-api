@@ -139,4 +139,14 @@
     "seconds": 6.5,
     "source": "מדידה של AMS (e-Hybrid VZ 272, לא נתון יצרן)"
   }
+  {
+    "make": "cupra",
+    "model": "ateca",
+    "yearStart": 2018,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1984,
+    "seconds": 4.9,
+    "source": "גוגל"
+  },
 ]
