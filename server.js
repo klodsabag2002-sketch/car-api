@@ -250,7 +250,7 @@ app.get('/api/car/:plate', async (req, res) => {
                 kmSinceTest: history?.kmSinceTest ?? null
             }
         });
-    } the catch (error) {
+    } catch (error) {
         console.error(`[SEARCH LOG] 💥 שגיאה בחיפוש מספר ${plate}:`, error);
         res.status(500).json({ success: false, error: "שגיאה בשליפה" });
     }
