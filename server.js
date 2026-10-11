@@ -75,7 +75,6 @@ async function checkDisabled(plate) {
         const byFilter = await searchDatastore(DISABLED_ID, { mispar_rechev: Number(plate) }, 5);
         if (byFilter.length > 0) return true;
 
-        // נסיון נוסף: חיפוש חופשי, למקרה ששם השדה במאגר שונה
         const byText = await searchDatastore(DISABLED_ID, null, 50, plate);
         const found = byText.some(r =>
             Object.values(r).some(v => String(v).replace(/\D/g, "") === plate)
@@ -194,6 +193,10 @@ app.get('/api/car/:plate', async (req, res) => {
                 trim,
                 year,
                 color: car.zeva_rechev || car.tzeva_rechev || "לא ידוע",
+                chassis: toText(car.misgeret),
+                tireFront: toText(car.zmig_kidmi),
+                tireRear: toText(car.zmig_ahori),
+                lastTest: toText(car.mivchan_acharon_dt),
                 engineCc,
                 horsepower: hp,
                 testExpiry,
@@ -229,7 +232,6 @@ app.get('/api/history/:plate', async (req, res) => {
     }
 });
 
-// נתיב דיבוג: מראה את שמות השדות במאגר תגי הנכה ורשומה לדוגמה
 app.get('/api/debug/:plate', async (req, res) => {
     try {
         const car = await fetchCarRecord(req.params.plate);
