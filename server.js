@@ -305,11 +305,11 @@ app.get('/api/history/:plate', async (req, res) => {
     }
 });
 
-// ---------- בדיקה זמנית: מבנה התשובה של cars-data ----------
+// ---------- בדיקה זמנית: תאוצה ב-specs של גרסה ----------
 // פותחים: /api/test-accel
-// מחזיר רק שמות השדות (בלי ערכים ובלי המפתח)
+// לוקח את הגרסה הראשונה מ-/demo, קורא ל-specs שלה ומחזיר שמות שדות ותאוצה (בלי המפתח)
 function listKeys(obj, prefix = "", depth = 0, out = []) {
-    if (!obj || typeof obj !== "object" || depth > 4) return out;
+    if (!obj || typeof obj !== "object" || depth > 5) return out;
     for (const k of Object.keys(obj)) {
         const path = prefix ? `${prefix}.${k}` : k;
         out.push(path);
@@ -323,15 +323,25 @@ app.get('/api/test-accel', async (req, res) => {
         return res.json({ success: false, message: "CARS_DATA_KEY לא מוגדר ב-Render" });
     }
     try {
-        const response = await fetch(`${CARS_DATA_BASE}/demo`, {
-            headers: { "X-Api-Key": CARS_DATA_KEY }
-        });
-        const data = await response.json();
+        const headers = { "X-Api-Key": CARS_DATA_KEY };
+
+        const demoRes = await fetch(`${CARS_DATA_BASE}/demo`, { headers });
+        const demo = await demoRes.json();
+        const first = demo?.data?.variants?.[0];
+        if (!first?.variant_id) {
+            return res.json({ success: false, message: "לא נמצא variant_id ב-demo", demoFieldNames: listKeys(demo).slice(0, 100) });
+        }
+
+        const specsRes = await fetch(`${CARS_DATA_BASE}/variants/${first.variant_id}/specs?locale=he`, { headers });
+        const specs = await specsRes.json();
+
         res.json({
-            success: response.ok,
-            status: response.status,
-            fieldNames: listKeys(data).slice(0, 200),
-            accelFound: extractAccel(data)
+            success: specsRes.ok,
+            status: specsRes.status,
+            variantName: first.display_name,
+            variantId: first.variant_id,
+            accelFound: extractAccel(specs),
+            fieldNames: listKeys(specs).slice(0, 300)
         });
     } catch (e) {
         res.json({ success: false, message: "שגיאת רשת: " + e.message });
