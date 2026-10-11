@@ -2,48 +2,29 @@
   {
     "make": "אודי הונגריה",
     "model": "A3 SEDAN",
-    "yearStart": null,
+    "trim": "DESIGN ASST",
+    "yearStart": 2020,
     "yearEnd": null,
     "hp": 150,
     "cc": 1498,
-    "seconds": 8.2,
-    "source": "רישוי רכב / נתון יצרן (1.5 TFSI Sedan)"
-  },
-  {
-    "make": "אודי הונגריה",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1498,
-    "seconds": 8.2,
-    "source": "רישוי רכב / נתון יצרן"
-  },
-  {
-    "make": "Audi",
-    "model": "A3 SEDAN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1498,
-    "seconds": 8.2,
-    "source": "נתון יצרן (1.5 TFSI Sedan)"
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (A3 SEDAN DESIGN ASST)"
   },
   {
     "make": "אודי ספרד",
     "model": "A1 SPORTBACK",
-    "yearStart": null,
+    "yearStart": 2018,
     "yearEnd": null,
     "hp": 110,
     "cc": 999,
     "seconds": 10.5,
-    "source": "רישוי רכב / נתון יצרן (30 TFSI)[span_0](start_span)[span_0](end_span)"
+    "source": "רישוי רכב / נתון יצרן (30 TFSI)[span_3](start_span)[span_3](end_span)"
   },
   {
     "make": "Audi",
     "model": "A1",
-    "yearStart": null,
-    "yearEnd": null,
+    "yearStart": 2010,
+    "yearEnd": 2018,
     "hp": 86,
     "cc": 1197,
     "seconds": 11.7,
@@ -52,8 +33,8 @@
   {
     "make": "Audi",
     "model": "A1",
-    "yearStart": null,
-    "yearEnd": null,
+    "yearStart": 2015,
+    "yearEnd": 2018,
     "hp": 95,
     "cc": 999,
     "seconds": 10.9,
@@ -62,7 +43,17 @@
   {
     "make": "Audi",
     "model": "A1",
-    "yearStart": null,
+    "yearStart": 2018,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 999,
+    "seconds": 11.0,
+    "source": "נתון יצרן (דור 2 - 25 TFSI)"
+  },
+  {
+    "make": "Audi",
+    "model": "A1",
+    "yearStart": 2018,
     "yearEnd": null,
     "hp": 116,
     "cc": 999,
@@ -72,8 +63,8 @@
   {
     "make": "Audi",
     "model": "A1",
-    "yearStart": null,
-    "yearEnd": null,
+    "yearStart": 2010,
+    "yearEnd": 2014,
     "hp": 122,
     "cc": 1390,
     "seconds": 8.9,
@@ -82,8 +73,8 @@
   {
     "make": "Audi",
     "model": "A1",
-    "yearStart": null,
-    "yearEnd": null,
+    "yearStart": 2014,
+    "yearEnd": 2018,
     "hp": 125,
     "cc": 1395,
     "seconds": 8.9,
@@ -92,8 +83,8 @@
   {
     "make": "Audi",
     "model": "A1",
-    "yearStart": null,
-    "yearEnd": null,
+    "yearStart": 2012,
+    "yearEnd": 2018,
     "hp": 185,
     "cc": 1390,
     "seconds": 6.9,
@@ -102,7 +93,7 @@
   {
     "make": "Audi",
     "model": "A1",
-    "yearStart": null,
+    "yearStart": 2018,
     "yearEnd": null,
     "hp": 150,
     "cc": 1498,
@@ -112,7 +103,7 @@
   {
     "make": "Audi",
     "model": "A1",
-    "yearStart": null,
+    "yearStart": 2018,
     "yearEnd": null,
     "hp": 207,
     "cc": 1984,
@@ -122,8 +113,8 @@
   {
     "make": "Audi",
     "model": "A1",
-    "yearStart": null,
-    "yearEnd": null,
+    "yearStart": 2014,
+    "yearEnd": 2018,
     "hp": 231,
     "cc": 1984,
     "seconds": 5.8,
@@ -131,278 +122,8 @@
   },
   {
     "make": "Audi",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 116,
-    "cc": 999,
-    "seconds": 9.9,
-    "source": "נתון יצרן (1.0 TFSI 116)"
-  },
-  {
-    "make": "Audi",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 999,
-    "seconds": 10.6,
-    "source": "נתון יצרן (דור 4 - 30 TFSI)"
-  },
-  {
-    "make": "Audi",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 122,
-    "cc": 1395,
-    "seconds": 9.3,
-    "source": "נתון יצרן (1.4 TFSI 122)"
-  },
-  {
-    "make": "Audi",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1395,
-    "seconds": 8.2,
-    "source": "נתון יצרן (1.4 / 1.5 TFSI 150)"
-  },
-  {
-    "make": "Audi",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 1395,
-    "seconds": 7.6,
-    "source": "נתון יצרן (e-tron פלאג-אין)"
-  },
-  {
-    "make": "Audi",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 190,
-    "cc": 1984,
-    "seconds": 6.2,
-    "source": "נתון יצרן (2.0 TFSI Quattro 190)"
-  },
-  {
-    "make": "Audi",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 300,
-    "cc": 1984,
-    "seconds": 4.6,
-    "source": "נתון יצרן (Audi S3)"
-  },
-  {
-    "make": "Audi",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 310,
-    "cc": 1984,
-    "seconds": 4.8,
-    "source": "נתון יצרן (דור 4 - Audi S3)"
-  },
-  {
-    "make": "Audi",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 367,
-    "cc": 2480,
-    "seconds": 4.3,
-    "source": "נתון יצרן (Audi RS3 2.5)"
-  },
-  {
-    "make": "Audi",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 400,
-    "cc": 2480,
-    "seconds": 3.8,
-    "source": "נתון יצרן (Audi RS3 400 כ\"ס)"
-  },
-  {
-    "make": "Audi",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1395,
-    "seconds": 8.5,
-    "source": "נתון יצרן (1.4 TFSI 150)"
-  },
-  {
-    "make": "Audi",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1984,
-    "seconds": 8.9,
-    "source": "נתון יצרן (35 TFSI)"
-  },
-  {
-    "make": "Audi",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 190,
-    "cc": 1984,
-    "seconds": 7.3,
-    "source": "נתון יצרן (40 TFSI 190)"
-  },
-  {
-    "make": "Audi",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 252,
-    "cc": 1984,
-    "seconds": 5.8,
-    "source": "נתון יצרן (2.0 TFSI Quattro 252)"
-  },
-  {
-    "make": "Audi",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 265,
-    "cc": 1984,
-    "seconds": 5.6,
-    "source": "נתון יצרן (45 TFSI Quattro)"
-  },
-  {
-    "make": "Audi",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 354,
-    "cc": 2995,
-    "seconds": 4.7,
-    "source": "נתון יצרן (Audi S4 3.0 V6 Turbo)"
-  },
-  {
-    "make": "Audi",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 450,
-    "cc": 2894,
-    "seconds": 4.1,
-    "source": "נתון יצרן (Audi RS4 Avant 2.9)"
-  },
-  {
-    "make": "Audi",
-    "model": "A6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 1984,
-    "seconds": 7.9,
-    "source": "נתון יצרן (40 TFSI)"
-  },
-  {
-    "make": "Audi",
-    "model": "A6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 245,
-    "cc": 1984,
-    "seconds": 6.0,
-    "source": "נתון יצרן (45 TFSI Quattro)"
-  },
-  {
-    "make": "Audi",
-    "model": "A6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 340,
-    "cc": 2995,
-    "seconds": 5.1,
-    "source": "נתון יצרן (55 TFSI Quattro V6)"
-  },
-  {
-    "make": "Audi",
-    "model": "A6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 344,
-    "cc": 2967,
-    "seconds": 5.0,
-    "source": "נתון יצרן (Audi S6)"
-  },
-  {
-    "make": "Audi",
-    "model": "A6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 600,
-    "cc": 3996,
-    "seconds": 3.6,
-    "source": "נתון יצרן (Audi RS6 Avant)"
-  },
-  {
-    "make": "Audi",
-    "model": "A8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 286,
-    "cc": 2967,
-    "seconds": 5.9,
-    "source": "נתון יצרן (50 TDI Quattro)"
-  },
-  {
-    "make": "Audi",
-    "model": "A8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 340,
-    "cc": 2995,
-    "seconds": 5.6,
-    "source": "נתון יצרן (55 TFSI Quattro)"
-  },
-  {
-    "make": "Audi",
-    "model": "A8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 449,
-    "cc": 2995,
-    "seconds": 4.9,
-    "source": "נתון יצרן (60 TFSI e פלאג-אין)"
-  },
-  {
-    "make": "Audi",
-    "model": "A8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 460,
-    "cc": 3996,
-    "seconds": 4.4,
-    "source": "נתון יצרן (60 TFSI V8)"
-  },
-  {
-    "make": "Audi",
-    "model": "A8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 571,
-    "cc": 3996,
-    "seconds": 3.8,
-    "source": "נתון יצרן (Audi S8 V8)"
-  },
-  {
-    "make": "Audi",
     "model": "Q2",
-    "yearStart": null,
+    "yearStart": 2016,
     "yearEnd": null,
     "hp": 116,
     "cc": 999,
@@ -412,7 +133,7 @@
   {
     "make": "Audi",
     "model": "Q2",
-    "yearStart": null,
+    "yearStart": 2016,
     "yearEnd": null,
     "hp": 150,
     "cc": 1395,
@@ -422,7 +143,7 @@
   {
     "make": "Audi",
     "model": "Q2",
-    "yearStart": null,
+    "yearStart": 2018,
     "yearEnd": null,
     "hp": 300,
     "cc": 1984,
@@ -432,7 +153,7 @@
   {
     "make": "Audi",
     "model": "Q3",
-    "yearStart": null,
+    "yearStart": 2018,
     "yearEnd": null,
     "hp": 150,
     "cc": 1498,
@@ -442,7 +163,7 @@
   {
     "make": "Audi",
     "model": "Q3",
-    "yearStart": null,
+    "yearStart": 2018,
     "yearEnd": null,
     "hp": 190,
     "cc": 1984,
@@ -452,7 +173,7 @@
   {
     "make": "Audi",
     "model": "Q3",
-    "yearStart": null,
+    "yearStart": 2019,
     "yearEnd": null,
     "hp": 400,
     "cc": 2480,
@@ -462,7 +183,7 @@
   {
     "make": "Audi",
     "model": "Q4 e-tron",
-    "yearStart": null,
+    "yearStart": 2021,
     "yearEnd": null,
     "hp": 204,
     "cc": 0,
@@ -472,7 +193,7 @@
   {
     "make": "Audi",
     "model": "Q4 e-tron",
-    "yearStart": null,
+    "yearStart": 2021,
     "yearEnd": null,
     "hp": 299,
     "cc": 0,
@@ -482,17 +203,17 @@
   {
     "make": "Audi",
     "model": "Q5",
-    "yearStart": null,
+    "yearStart": 2017,
     "yearEnd": null,
     "hp": 204,
     "cc": 1984,
     "seconds": 7.6,
-    "source": "נתון יצרן (דור 2 - 40 TFSI Quattro)"
+    "source": "נתון יצרן (דור 2 - 40 TFSI Quattro מילד-היברידי)"
   },
   {
     "make": "Audi",
     "model": "Q5",
-    "yearStart": null,
+    "yearStart": 2017,
     "yearEnd": null,
     "hp": 265,
     "cc": 1984,
@@ -502,17 +223,17 @@
   {
     "make": "Audi",
     "model": "Q5",
-    "yearStart": null,
+    "yearStart": 2019,
     "yearEnd": null,
     "hp": 367,
     "cc": 2967,
     "seconds": 5.1,
-    "source": "נתון יצרן (Audi SQ5)"
+    "source": "נתון יצרן (Audi SQ5 TDI/TFSI)"
   },
   {
     "make": "Audi",
     "model": "Q6",
-    "yearStart": null,
+    "yearStart": 2024,
     "yearEnd": null,
     "hp": 388,
     "cc": 0,
@@ -522,7 +243,7 @@
   {
     "make": "Audi",
     "model": "Q6",
-    "yearStart": null,
+    "yearStart": 2024,
     "yearEnd": null,
     "hp": 517,
     "cc": 0,
@@ -532,7 +253,7 @@
   {
     "make": "Audi",
     "model": "Q7",
-    "yearStart": null,
+    "yearStart": 2015,
     "yearEnd": null,
     "hp": 252,
     "cc": 1984,
@@ -542,7 +263,7 @@
   {
     "make": "Audi",
     "model": "Q7",
-    "yearStart": null,
+    "yearStart": 2015,
     "yearEnd": null,
     "hp": 340,
     "cc": 2995,
@@ -552,7 +273,7 @@
   {
     "make": "Audi",
     "model": "Q7",
-    "yearStart": null,
+    "yearStart": 2020,
     "yearEnd": null,
     "hp": 507,
     "cc": 3996,
@@ -562,7 +283,7 @@
   {
     "make": "Audi",
     "model": "Q8",
-    "yearStart": null,
+    "yearStart": 2018,
     "yearEnd": null,
     "hp": 340,
     "cc": 2995,
@@ -572,7 +293,7 @@
   {
     "make": "Audi",
     "model": "Q8",
-    "yearStart": null,
+    "yearStart": 2019,
     "yearEnd": null,
     "hp": 600,
     "cc": 3996,
@@ -582,8 +303,8 @@
   {
     "make": "Audi",
     "model": "TT",
-    "yearStart": null,
-    "yearEnd": null,
+    "yearStart": 2014,
+    "yearEnd": 2023,
     "hp": 197,
     "cc": 1984,
     "seconds": 6.6,
@@ -592,8 +313,8 @@
   {
     "make": "Audi",
     "model": "TT",
-    "yearStart": null,
-    "yearEnd": null,
+    "yearStart": 2014,
+    "yearEnd": 2023,
     "hp": 245,
     "cc": 1984,
     "seconds": 5.3,
@@ -602,8 +323,8 @@
   {
     "make": "Audi",
     "model": "TT",
-    "yearStart": null,
-    "yearEnd": null,
+    "yearStart": 2014,
+    "yearEnd": 2023,
     "hp": 306,
     "cc": 1984,
     "seconds": 4.5,
@@ -612,37 +333,377 @@
   {
     "make": "Audi",
     "model": "TT",
-    "yearStart": null,
-    "yearEnd": null,
+    "yearStart": 2016,
+    "yearEnd": 2023,
     "hp": 400,
     "cc": 2480,
     "seconds": 3.7,
-    "source": "נתון יצרן (Audi TT RS 2.5)"
+    "source": "נתון יצרן (Audi TT RS 2.5 V5)"
   },
   {
     "make": "Audi",
     "model": "R8",
-    "yearStart": null,
-    "yearEnd": null,
+    "yearStart": 2015,
+    "yearEnd": 2023,
     "hp": 540,
     "cc": 5204,
     "seconds": 3.5,
-    "source": "נתון יצרן (דור 2 - V10)"
+    "source": "נתון יצרן (דור 2 - V10 Coupe)"
   },
   {
     "make": "Audi",
     "model": "R8",
-    "yearStart": null,
-    "yearEnd": null,
+    "yearStart": 2015,
+    "yearEnd": 2023,
     "hp": 620,
     "cc": 5204,
     "seconds": 3.1,
-    "source": "נתון יצרן (דור 2 - V10 Performance)"
+    "source": "נתון יצרן (דור 2 - V10 Performance / Plus)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": 2017,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2967,
+    "seconds": 5.9,
+    "source": "נתון יצרן (דור 4 - 50 TDI Quattro דיזל)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": 2017,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.6,
+    "source": "נתון יצרן (דור 4 - 55 TFSI Quattro V6)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "hp": 449,
+    "cc": 2995,
+    "seconds": 4.9,
+    "source": "נתון יצרן (דור 4 - 60 TFSI e פלאג-אין היבריד)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "hp": 460,
+    "cc": 3996,
+    "seconds": 4.4,
+    "source": "נתון יצרן (דור 4 מתיחת פנים - 60 TFSI V8)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "hp": 571,
+    "cc": 3996,
+    "seconds": 3.8,
+    "source": "נתון יצרן (Audi S8 V8 Biturbo)"
+  },
+  {
+    "make": "Audi",
+    "model": "A6",
+    "yearStart": 2018,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1984,
+    "seconds": 7.9,
+    "source": "נתון יצרן (דור 8 - 40 TFSI)"
+  },
+  {
+    "make": "Audi",
+    "model": "A6",
+    "yearStart": 2018,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1984,
+    "seconds": 6.0,
+    "source": "נתון יצרן (דור 8 - 45 TFSI Quattro)"
+  },
+  {
+    "make": "Audi",
+    "model": "A6",
+    "yearStart": 2018,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.1,
+    "source": "נתון יצרן (דור 8 - 55 TFSI Quattro V6)"
+  },
+  {
+    "make": "Audi",
+    "model": "A6",
+    "yearStart": 2018,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1968,
+    "seconds": 8.1,
+    "source": "נתון יצרן (דור 8 - 40 TDI)"
+  },
+  {
+    "make": "Audi",
+    "model": "A6",
+    "yearStart": 2018,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2967,
+    "seconds": 5.5,
+    "source": "נתון יצרן (דור 8 - 50 TDI Quattro V6)"
+  },
+  {
+    "make": "Audi",
+    "model": "A6",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "hp": 344,
+    "cc": 2967,
+    "seconds": 5.0,
+    "source": "נתון יצרן (Audi S6 TDI / TFSI)"
+  },
+  {
+    "make": "Audi",
+    "model": "A6",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 3996,
+    "seconds": 3.6,
+    "source": "נתון יצרן (Audi RS6 Avant V8 Biturbo)"
+  },
+  {
+    "make": "Audi",
+    "model": "A4",
+    "yearStart": 2015,
+    "yearEnd": 2019,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 8.5,
+    "source": "נתון יצרן (1.4 TFSI 150)"
+  },
+  {
+    "make": "Audi",
+    "model": "A4",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1984,
+    "seconds": 8.9,
+    "source": "נתון יצרן (דור 5 מתיחת פנים - 35 TFSI מילד-היברידי)"
+  },
+  {
+    "make": "Audi",
+    "model": "A4",
+    "yearStart": 2015,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 7.3,
+    "source": "נתון יצרן (40 TFSI / 2.0 TFSI 190)"
+  },
+  {
+    "make": "Audi",
+    "model": "A4",
+    "yearStart": 2015,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1984,
+    "seconds": 5.8,
+    "source": "נתון יצרן (2.0 TFSI Quattro 252/245)"
+  },
+  {
+    "make": "Audi",
+    "model": "A4",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 1984,
+    "seconds": 5.6,
+    "source": "נתון יצרן (45 TFSI Quattro)"
+  },
+  {
+    "make": "Audi",
+    "model": "A4",
+    "yearStart": 2016,
+    "yearEnd": 2018,
+    "hp": 150,
+    "cc": 1968,
+    "seconds": 8.7,
+    "source": "נתון יצרן (2.0 TDI 150)"
+  },
+  {
+    "make": "Audi",
+    "model": "A4",
+    "yearStart": 2016,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1968,
+    "seconds": 7.7,
+    "source": "נתון יצרן (2.0 TDI 190 Quattro)"
+  },
+  {
+    "make": "Audi",
+    "model": "A4",
+    "yearStart": 2016,
+    "yearEnd": null,
+    "hp": 354,
+    "cc": 2995,
+    "seconds": 4.7,
+    "source": "נתון יצרן (Audi S4 3.0 V6 Turbo)"
+  },
+  {
+    "make": "Audi",
+    "model": "A4",
+    "yearStart": 2017,
+    "yearEnd": null,
+    "hp": 450,
+    "cc": 2894,
+    "seconds": 4.1,
+    "source": "נתון יצרן (Audi RS4 Avant 2.9 V6 Biturbo)"
+  },
+  {
+    "make": "Audi",
+    "model": "A3",
+    "yearStart": 2016,
+    "yearEnd": 2020,
+    "hp": 116,
+    "cc": 999,
+    "seconds": 9.9,
+    "source": "נתון יצרן (1.0 TFSI 116)"
+  },
+  {
+    "make": "Audi",
+    "model": "A3",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 10.6,
+    "source": "נתון יצרן (דור 4 - 30 TFSI)"
+  },
+  {
+    "make": "Audi",
+    "model": "A3",
+    "yearStart": 2012,
+    "yearEnd": 2016,
+    "hp": 122,
+    "cc": 1395,
+    "seconds": 9.3,
+    "source": "נתון יצרן (1.4 TFSI 122)"
+  },
+  {
+    "make": "Audi",
+    "model": "A3",
+    "yearStart": 2014,
+    "yearEnd": 2020,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 8.2,
+    "source": "נתון יצרן (1.4 / 1.5 TFSI 150)"
+  },
+  {
+    "make": "Audi",
+    "model": "A3",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.4,
+    "source": "נתון יצרן (דור 4 - 35 TFSI 1.5)"
+  },
+  {
+    "make": "Audi",
+    "model": "A3",
+    "yearStart": 2014,
+    "yearEnd": 2020,
+    "hp": 204,
+    "cc": 1395,
+    "seconds": 7.6,
+    "source": "נתון יצרן (e-tron פלאג-אין)"
+  },
+  {
+    "make": "Audi",
+    "model": "A3",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1395,
+    "seconds": 6.8,
+    "source": "נתון יצרן (דור 4 - 40 e-tron / TFSI e)"
+  },
+  {
+    "make": "Audi",
+    "model": "A3",
+    "yearStart": 2016,
+    "yearEnd": 2020,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 6.2,
+    "source": "נתון יצרן (2.0 TFSI Quattro 190)"
+  },
+  {
+    "make": "Audi",
+    "model": "A3",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 6.9,
+    "source": "נתון יצרן (דור 4 - 40 TFSI Quattro)"
+  },
+  {
+    "make": "Audi",
+    "model": "A3",
+    "yearStart": 2013,
+    "yearEnd": 2020,
+    "hp": 300,
+    "cc": 1984,
+    "seconds": 4.6,
+    "source": "נתון יצרן (Audi S3)"
+  },
+  {
+    "make": "Audi",
+    "model": "A3",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 1984,
+    "seconds": 4.8,
+    "source": "נתון יצרן (דור 4 - Audi S3 החדשה)"
+  },
+  {
+    "make": "Audi",
+    "model": "A3",
+    "yearStart": 2015,
+    "yearEnd": 2020,
+    "hp": 367,
+    "cc": 2480,
+    "seconds": 4.3,
+    "source": "נתון יצרן (Audi RS3 2.5)"
+  },
+  {
+    "make": "Audi",
+    "model": "A3",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "hp": 400,
+    "cc": 2480,
+    "seconds": 3.8,
+    "source": "נתון יצרן (Audi RS3 החדשה 400 כ\"ס)"
   },
   {
     "make": "Cupra",
     "model": "Leon",
-    "yearStart": null,
+    "yearStart": 2020,
     "yearEnd": null,
     "hp": 300,
     "cc": 1984,
@@ -652,7 +713,7 @@
   {
     "make": "Cupra",
     "model": "Leon",
-    "yearStart": null,
+    "yearStart": 2020,
     "yearEnd": null,
     "hp": 245,
     "cc": 1400,
@@ -662,7 +723,7 @@
   {
     "make": "Cupra",
     "model": "Leon",
-    "yearStart": null,
+    "yearStart": 2020,
     "yearEnd": null,
     "hp": 190,
     "cc": 1984,
@@ -677,12 +738,12 @@
     "hp": 150,
     "cc": 0,
     "seconds": 8.7,
-    "source": "cupraofficial.co.il (eTSI 1.5)"
+    "source": "cupraofficial.co.il (eTSI 1.5 היברידי מתון)"
   },
   {
     "make": "Cupra",
     "model": "Ateca",
-    "yearStart": null,
+    "yearStart": 2018,
     "yearEnd": null,
     "hp": 300,
     "cc": 1984,
@@ -692,7 +753,7 @@
   {
     "make": "Cupra",
     "model": "Terramar",
-    "yearStart": null,
+    "yearStart": 2024,
     "yearEnd": null,
     "hp": 150,
     "cc": 1498,
@@ -702,7 +763,7 @@
   {
     "make": "Cupra",
     "model": "Terramar",
-    "yearStart": null,
+    "yearStart": 2024,
     "yearEnd": null,
     "hp": 204,
     "cc": 1984,
@@ -712,7 +773,7 @@
   {
     "make": "Cupra",
     "model": "Terramar",
-    "yearStart": null,
+    "yearStart": 2024,
     "yearEnd": null,
     "hp": 265,
     "cc": 1984,
@@ -722,7 +783,7 @@
   {
     "make": "Cupra",
     "model": "Tavascan",
-    "yearStart": null,
+    "yearStart": 2023,
     "yearEnd": null,
     "hp": 286,
     "cc": 0,
@@ -732,7 +793,7 @@
   {
     "make": "Cupra",
     "model": "Tavascan",
-    "yearStart": null,
+    "yearStart": 2023,
     "yearEnd": null,
     "hp": 340,
     "cc": 0,
@@ -742,7 +803,7 @@
   {
     "make": "סיאט גרמניה",
     "model": "BORN",
-    "yearStart": null,
+    "yearStart": 2021,
     "yearEnd": null,
     "hp": 204,
     "cc": 0,
@@ -752,7 +813,7 @@
   {
     "make": "סיאט גרמניה",
     "model": "BORN PREMIUM",
-    "yearStart": null,
+    "yearStart": 2021,
     "yearEnd": null,
     "hp": 204,
     "cc": 0,
@@ -762,7 +823,7 @@
   {
     "make": "Cupra",
     "model": "Born",
-    "yearStart": null,
+    "yearStart": 2021,
     "yearEnd": null,
     "hp": 204,
     "cc": 0,
@@ -772,7 +833,7 @@
   {
     "make": "Cupra",
     "model": "Born",
-    "yearStart": null,
+    "yearStart": 2021,
     "yearEnd": null,
     "hp": 231,
     "cc": 0,
@@ -782,7 +843,7 @@
   {
     "make": "Cupra",
     "model": "Formentor",
-    "yearStart": null,
+    "yearStart": 2020,
     "yearEnd": null,
     "hp": 310,
     "cc": 1984,
@@ -792,7 +853,7 @@
   {
     "make": "Cupra",
     "model": "Formentor",
-    "yearStart": null,
+    "yearStart": 2024,
     "yearEnd": null,
     "hp": 333,
     "cc": 1984,
@@ -802,7 +863,7 @@
   {
     "make": "Cupra",
     "model": "Formentor",
-    "yearStart": null,
+    "yearStart": 2020,
     "yearEnd": null,
     "hp": 390,
     "cc": 2480,
@@ -812,7 +873,7 @@
   {
     "make": "Cupra",
     "model": "Formentor",
-    "yearStart": null,
+    "yearStart": 2020,
     "yearEnd": null,
     "hp": 245,
     "cc": 1984,
@@ -822,7 +883,7 @@
   {
     "make": "Cupra",
     "model": "Formentor",
-    "yearStart": null,
+    "yearStart": 2020,
     "yearEnd": null,
     "hp": 190,
     "cc": 1984,
@@ -832,8 +893,8 @@
   {
     "make": "Cupra",
     "model": "Formentor",
-    "yearStart": null,
-    "yearEnd": null,
+    "yearStart": 2020,
+    "yearEnd": 2023,
     "hp": 150,
     "cc": 1498,
     "seconds": 8.9,
@@ -842,7 +903,17 @@
   {
     "make": "Cupra",
     "model": "Formentor",
-    "yearStart": null,
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.0,
+    "source": "נתון יצרן, autotijd (1.5 eTSI 150 מתיחת פנים)"
+  },
+  {
+    "make": "Cupra",
+    "model": "Formentor",
+    "yearStart": 2020,
     "yearEnd": null,
     "hp": 245,
     "cc": 1395,
@@ -852,7 +923,7 @@
   {
     "make": "Cupra",
     "model": "Formentor",
-    "yearStart": null,
+    "yearStart": 2020,
     "yearEnd": null,
     "hp": 204,
     "cc": 1395,
@@ -862,7 +933,7 @@
   {
     "make": "Cupra",
     "model": "Formentor",
-    "yearStart": null,
+    "yearStart": 2024,
     "yearEnd": null,
     "hp": 272,
     "cc": 1498,
