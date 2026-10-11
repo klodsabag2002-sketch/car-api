@@ -75,6 +75,18 @@ function testStatus(expiry) {
     return d >= today;
 }
 
+// מחפש שדה תג נכה בכל שמות השדות של הרכב
+function findDisabled(record) {
+    const keys = Object.keys(record).filter(k => /nakh|nekh|nakeh/i.test(k));
+    for (const k of keys) {
+        const v = toText(record[k]);
+        if (v === null) continue;
+        if (/^(1|כן|yes|true|נכה)$/i.test(v)) return true;
+        if (/^(0|לא|no|false)$/i.test(v)) return false;
+    }
+    return null;
+}
+
 // ---------- מאגרים ----------
 
 async function fetchCarRecord(plate) {
@@ -128,14 +140,6 @@ async function findModelRow(car) {
         return rows.find(r => toNumber(r.koah_sus) != null) || rows[0];
     }
     return null;
-}
-
-const DISABLED_KEYS = ["tav_nakhe", "tag_nakhe", "tag_nakhe_ind", "nakhe"];
-
-function findDisabled(record) {
-    const v = pick(record, DISABLED_KEYS);
-    if (v === null) return null;
-    return /^(כן|yes|true|1|נכה)$/i.test(v);
 }
 
 // ---------- API ----------
