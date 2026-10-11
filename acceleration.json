@@ -1,6 +1,446 @@
 [
   {
     "make": "אודי גרמניה",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 290,
+    "cc": 2995,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (3.0 TFSI 290)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 290,
+    "cc": 2995,
+    "seconds": 6.1,
+    "source": "נתון יצרן (3.0 TFSI 290)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 2995,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (3.0 TFSI 310)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 2995,
+    "seconds": 5.7,
+    "source": "נתון יצרן (3.0 TFSI 310)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 333,
+    "cc": 2995,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (3.0 TFSI 333)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 333,
+    "cc": 2995,
+    "seconds": 5.5,
+    "source": "נתון יצרן (3.0 TFSI 333)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (55 TFSI Quattro 340)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.6,
+    "source": "נתון יצרן (55 TFSI Quattro 340)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 372,
+    "cc": 4163,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (4.2 FSI V8 372)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 372,
+    "cc": 4163,
+    "seconds": 5.7,
+    "source": "נתון יצרן (4.2 FSI V8 372)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 420,
+    "cc": 3993,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (4.0 TFSI V8 420)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 420,
+    "cc": 3993,
+    "seconds": 4.6,
+    "source": "נתון יצרן (4.0 TFSI V8 420)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 435,
+    "cc": 3993,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (4.0 TFSI V8 435)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 435,
+    "cc": 3993,
+    "seconds": 4.5,
+    "source": "נתון יצרן (4.0 TFSI V8 435)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 460,
+    "cc": 3996,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (60 TFSI V8 460)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 460,
+    "cc": 3996,
+    "seconds": 4.4,
+    "source": "נתון יצרן (60 TFSI V8 460)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 500,
+    "cc": 6299,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (6.3 W12 500)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 500,
+    "cc": 6299,
+    "seconds": 4.7,
+    "source": "נתון יצרן (6.3 W12 500)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1984,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (2.0 TFSI Hybrid 245)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1984,
+    "seconds": 7.7,
+    "source": "נתון יצרן (2.0 TFSI Hybrid 245)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 449,
+    "cc": 2995,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (60 TFSI e 449)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 449,
+    "cc": 2995,
+    "seconds": 4.9,
+    "source": "נתון יצרן (60 TFSI e 449)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 462,
+    "cc": 2995,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (60 TFSI e 462)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 462,
+    "cc": 2995,
+    "seconds": 4.7,
+    "source": "נתון יצרן (60 TFSI e 462)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 2967,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (3.0 TDI 204)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 2967,
+    "seconds": 7.9,
+    "source": "נתון יצרן (3.0 TDI 204)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 2967,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (3.0 TDI 250)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 2967,
+    "seconds": 6.1,
+    "source": "נתון יצרן (3.0 TDI 250)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 2967,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (3.0 TDI 258)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 2967,
+    "seconds": 5.9,
+    "source": "נתון יצרן (3.0 TDI 258)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 262,
+    "cc": 2967,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (3.0 TDI 262)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 262,
+    "cc": 2967,
+    "seconds": 5.9,
+    "source": "נתון יצרן (3.0 TDI 262)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2967,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (50 TDI Quattro 286)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2967,
+    "seconds": 5.9,
+    "source": "נתון יצרן (50 TDI Quattro 286)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 350,
+    "cc": 4134,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (4.2 TDI V8 350)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 350,
+    "cc": 4134,
+    "seconds": 5.5,
+    "source": "נתון יצרן (4.2 TDI V8 350)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 385,
+    "cc": 4134,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (4.2 TDI V8 385)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 385,
+    "cc": 4134,
+    "seconds": 4.7,
+    "source": "נתון יצרן (4.2 TDI V8 385)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 520,
+    "cc": 3993,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (Audi S8 520)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 520,
+    "cc": 3993,
+    "seconds": 4.1,
+    "source": "נתון יצרן (Audi S8 520)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 605,
+    "cc": 3993,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (Audi S8 Plus 605)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 605,
+    "cc": 3993,
+    "seconds": 3.8,
+    "source": "נתון יצרן (Audi S8 Plus 605)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 571,
+    "cc": 3996,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (Audi S8 V8 571)"
+  },
+  {
+    "make": "Audi",
+    "model": "A8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 571,
+    "cc": 3996,
+    "seconds": 3.8,
+    "source": "נתון יצרן (Audi S8 V8 571)"
+  },
+  {
+    "make": "אודי גרמניה",
     "model": "A7",
     "yearStart": null,
     "yearEnd": null,
@@ -1158,106 +1598,6 @@
     "cc": 1984,
     "seconds": 5.8,
     "source": "נתון יצרן (Audi S1 2.0 TFSI Quattro)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 286,
-    "cc": 2967,
-    "seconds": 5.9,
-    "source": "נתון יצרן (50 TDI Quattro)"
-  },
-  {
-    "make": "Audi",
-    "model": "A8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 286,
-    "cc": 2967,
-    "seconds": 5.9,
-    "source": "נתון יצרן (50 TDI Quattro)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 340,
-    "cc": 2995,
-    "seconds": 5.6,
-    "source": "נתון יצרן (55 TFSI Quattro)"
-  },
-  {
-    "make": "Audi",
-    "model": "A8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 340,
-    "cc": 2995,
-    "seconds": 5.6,
-    "source": "נתון יצרן (55 TFSI Quattro)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 449,
-    "cc": 2995,
-    "seconds": 4.9,
-    "source": "נתון יצרן (60 TFSI e פלאג-אין)"
-  },
-  {
-    "make": "Audi",
-    "model": "A8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 449,
-    "cc": 2995,
-    "seconds": 4.9,
-    "source": "נתון יצרן (60 TFSI e פלאג-אין)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 460,
-    "cc": 3996,
-    "seconds": 4.4,
-    "source": "נתון יצרן (60 TFSI V8)"
-  },
-  {
-    "make": "Audi",
-    "model": "A8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 460,
-    "cc": 3996,
-    "seconds": 4.4,
-    "source": "נתון יצרן (60 TFSI V8)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 571,
-    "cc": 3996,
-    "seconds": 3.8,
-    "source": "נתון יצרן (Audi S8 V8)"
-  },
-  {
-    "make": "Audi",
-    "model": "A8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 571,
-    "cc": 3996,
-    "seconds": 3.8,
-    "source": "נתון יצרן (Audi S8 V8)"
   },
   {
     "make": "אודי גרמניה",
