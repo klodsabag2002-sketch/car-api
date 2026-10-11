@@ -1,5 +1,15 @@
 [
   {
+    "make": "אודי הונגריה",
+    "model": "A3 SEDAN",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (35 TFSI סדאן)"
+  },
+  {
     "make": "אודי ספרד",
     "model": "A1 SPORTBACK",
     "yearStart": 2018,
@@ -7,7 +17,7 @@
     "hp": 110,
     "cc": 999,
     "seconds": 10.5,
-    "source": "רישוי רכב / נתון יצרן (30 TFSI)[span_0](start_span)[span_0](end_span)"
+    "source": "רישוי רכב / נתון יצרן (30 TFSI)[span_1](start_span)[span_1](end_span)"
   },
   {
     "make": "Audi",
@@ -797,7 +807,7 @@
     "hp": 204,
     "cc": 0,
     "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (סוללת 58 קוט\"ש)[span_1](start_span)[span_1](end_span)[span_2](start_span)[span_2](end_span)[span_3](start_span)[span_3](end_span)[span_4](start_span)[span_4](end_span)"
+    "source": "רישוי רכב / נתון יצרן (סוללת 58 קוט\"ש)"
   },
   {
     "make": "סיאט גרמניה",
@@ -807,7 +817,7 @@
     "hp": 204,
     "cc": 0,
     "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (סוללת 58 קוט\"ש)[span_5](start_span)[span_5](end_span)[span_6](start_span)[span_6](end_span)[span_7](start_span)[span_7](end_span)"
+    "source": "רישוי רכב / נתון יצרן (סוללת 58 קוט\"ש)"
   },
   {
     "make": "Cupra",
@@ -817,7 +827,7 @@
     "hp": 204,
     "cc": 0,
     "seconds": 7.3,
-    "source": "נתון יצרן (סוללת 58 קוט\"ש)[span_8](start_span)[span_8](end_span)"
+    "source": "נתון יצרן (סוללת 58 קוט\"ש)"
   },
   {
     "make": "Cupra",
@@ -827,7 +837,7 @@
     "hp": 231,
     "cc": 0,
     "seconds": 6.6,
-    "source": "נתון יצרן (גרסת e-Boost, סוללת 58 קוט\"ש)[span_9](start_span)[span_9](end_span)"
+    "source": "נתון יצרן (גרסת e-Boost, סוללת 58 קוט\"ש)"
   },
   {
     "make": "Cupra",
