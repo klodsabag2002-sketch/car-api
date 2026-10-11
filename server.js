@@ -340,10 +340,9 @@ app.get('/api/history/:plate', async (req, res) => {
     }
 });
 
-// ---------- אבחון מלא של RevCarData ----------
+// ---------- אבחון RevCarData ----------
 // פותחים: /api/diagnose-revcar?make=Skoda&model=Fabia&year=2013
-// מנסה כמה צורות של חיפוש, מציג את כל הגרסאות שחזרו, ואת כל השדות של core ו-premium
-// (בלי המפתח). כל הפתיחה צורכת כ-6 בקשות מתוך 100 החודשיות.
+// מנסה כמה צורות חיפוש, מציג את התוצאות, ואת כל השדות של core ו-premium (בלי המפתח)
 app.get('/api/diagnose-revcar', async (req, res) => {
     if (!REVCAR_KEY) {
         return res.json({ success: false, message: "REVCAR_KEY לא מוגדר ב-Render" });
@@ -355,7 +354,6 @@ app.get('/api/diagnose-revcar', async (req, res) => {
 
     const out = { query: { make, model, year }, searchAttempts: [], firstVariant: null };
 
-    // 1. ננסה כמה צורות של פרמטרים, ונרשום מה חזר בכל אחת
     const attempts = [
         { label: "make/model/year", qs: { make, model, year } },
         { label: "manufacturer/model/year", qs: { manufacturer: make, model, year } },
@@ -371,15 +369,11 @@ app.get('/api/diagnose-revcar', async (req, res) => {
             status: r.status,
             topLevelKeys: r.data ? Object.keys(r.data) : [],
             count: list.length,
-            samples: list.slice(0, 5).map(v => {
-                const { id, ...rest } = v;
-                return { id, ...rest };
-            })
+            samples: list.slice(0, 5)
         });
         if (!firstList && list.length > 0) firstList = list;
     }
 
-    // 2. לגרסה הראשונה שנמצאה, נשלוף את כל השדות של core ו-premium
     if (firstList) {
         const v = firstList[0];
         out.firstVariant = { id: v.id, name: v.trim || v.model || null };
