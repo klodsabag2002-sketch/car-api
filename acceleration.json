@@ -100,14 +100,14 @@
     "source": "נתון יצרן CUPRA (cupra.com), Tavascan VZ 340 כ\"ס"
   },
   {
-    "make": "Cupra",
-    "model": "Born",
+    "make": "סיאט גרמניה",
+    "model": "BORN PREMIUM",
     "yearStart": 2021,
     "yearEnd": null,
     "hp": 204,
     "cc": null,
     "seconds": 7.3,
-    "source": "נתון יצרן (גרסת ביניים, סוללת 58 קוט\"ש)[span_0](start_span)[span_0](end_span)"
+    "source": "רישוי רכב / נתון יצרן (סוללת 58 קוט\"ש)[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span)"
   },
   {
     "make": "Cupra",
@@ -117,7 +117,7 @@
     "hp": 231,
     "cc": null,
     "seconds": 6.6,
-    "source": "נתון יצרן (גרסת e-Boost הנפוצה בארץ, סוללת 58 קוט\"ש)[span_1](start_span)[span_1](end_span)"
+    "source": "נתון יצרן (גרסת e-Boost הנפוצה בארץ, סוללת 58 קוט\"ש)[span_2](start_span)[span_2](end_span)"
   },
   {
     "make": "Cupra",
