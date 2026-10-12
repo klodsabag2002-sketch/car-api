@@ -1,5 +1,45 @@
 [
   {
+    "make": "אופל ספרד",
+    "model": "COMBO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 131,
+    "cc": 1499,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (קומבו דיזל 1.5 131)"
+  },
+  {
+    "make": "אופל ספרד",
+    "model": "COMBO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1499,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (קומבו דיזל 1.5 130)"
+  },
+  {
+    "make": "אופל ספרד",
+    "model": "COMBO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (קומבו 1.2T 130)"
+  },
+  {
+    "make": "אופל ספרד",
+    "model": "קומבו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 131,
+    "cc": 1499,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (קומבו דיזל 1.5 131)"
+  },
+  {
     "make": "אופל סלובקיה",
     "model": "FRONTERA",
     "yearStart": null,
@@ -637,7 +677,7 @@
     "hp": 150,
     "cc": 1399,
     "seconds": 8.5,
-    "source": "רישוי רכב / נתון יצרן (אסטרה 1.4T 140)"
+    "source": "רישוי רכב / נתון יצרן (אסטרה 1.4T 150)"
   },
   {
     "make": "אופל גרמניה",
