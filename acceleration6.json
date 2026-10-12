@@ -1,5 +1,485 @@
 [
   {
+    "make": "ביואיק ארהב\"",
+    "model": "LE SABRE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3791,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לה סייבר 3.8 V6 205)"
+  },
+  {
+    "make": "\"ביואיק ארהב",
+    "model": "LE SABRE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3791,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לה סייבר 3.8 V6 205)"
+  },
+  {
+    "make": "ביואיק ארה\"ב",
+    "model": "LE SABRE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3791,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לה סייבר 3.8 V6 205)"
+  },
+  {
+    "make": "ביואיק",
+    "model": "LE SABRE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3791,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לה סייבר 3.8 V6 205)"
+  },
+  {
+    "make": "ביואיק",
+    "model": "לה סייבר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3791,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לה סייבר 3.8 V6 205)"
+  },
+  {
+    "make": "ביואיק",
+    "model": "לה-סייבר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3791,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לה סייבר 3.8 V6 205)"
+  },
+  {
+    "make": "Buick",
+    "model": "LE SABRE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3791,
+    "seconds": 8.9,
+    "source": "נתון יצרן (Buick LeSabre 3.8)"
+  },
+  {
+    "make": "Buick",
+    "model": "LESABRE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3791,
+    "seconds": 8.9,
+    "source": "נתון יצרן (Buick LeSabre 3.8)"
+  },
+  {
+    "make": "ביואיק קנדה",
+    "model": "LACROSSE CX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 3791,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 3.8 V6 200)"
+  },
+  {
+    "make": "ביואיק קנדה",
+    "model": "LACROSSE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 3791,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 3.8 V6 200)"
+  },
+  {
+    "make": "ביואיק ארהב\"",
+    "model": "LACROSSE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 3791,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 3.8 V6 200)"
+  },
+  {
+    "make": "ביואיק ארהב\"",
+    "model": "LACROSSE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 255,
+    "cc": 2997,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 3.0 V6 255)"
+  },
+  {
+    "make": "ביואיק ארהב\"",
+    "model": "LACROSSE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 3564,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 3.6 V6 280)"
+  },
+  {
+    "make": "ביואיק ארהב\"",
+    "model": "LACROSSE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 303,
+    "cc": 3564,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 3.6 V6 303/305)"
+  },
+  {
+    "make": "ביואיק ארהב\"",
+    "model": "LACROSSE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 182,
+    "cc": 2384,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 2.4 Ecotec 182)"
+  },
+  {
+    "make": "ביואיק קנדה",
+    "model": "LACROSSE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 3564,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 3.6 V6 240)"
+  },
+  {
+    "make": "ביואיק",
+    "model": "לה קרוס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 3791,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 200)"
+  },
+  {
+    "make": "ביואיק",
+    "model": "לה-קרוס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 3791,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 200)"
+  },
+  {
+    "make": "ביואיק",
+    "model": "לה קרוס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 3564,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 3.6 280)"
+  },
+  {
+    "make": "ביואיק",
+    "model": "לה קרוס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 303,
+    "cc": 3564,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 3.6 303)"
+  },
+  {
+    "make": "Buick",
+    "model": "LACROSSE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 3791,
+    "seconds": 8.5,
+    "source": "נתון יצרן (Buick LaCrosse 3.8)"
+  },
+  {
+    "make": "Buick",
+    "model": "LACROSSE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 3564,
+    "seconds": 6.8,
+    "source": "נתון יצרן (Buick LaCrosse 3.6)"
+  },
+  {
+    "make": "Buick",
+    "model": "LACROSSE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 303,
+    "cc": 3564,
+    "seconds": 6.6,
+    "source": "נתון יצרן (Buick LaCrosse 3.6)"
+  },
+  {
+    "make": "ביואיק ארהב\"",
+    "model": "LUCERNE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 3791,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לוצרן 3.8 V6 197)"
+  },
+  {
+    "make": "\"ביואיק ארהב",
+    "model": "LUCERNE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 3791,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לוצרן 3.8 V6 197)"
+  },
+  {
+    "make": "ביואיק ארה\"ב",
+    "model": "LUCERNE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 3791,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לוצרן 3.8 V6 197)"
+  },
+  {
+    "make": "ביואיק ארהב\"",
+    "model": "LUCERNE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 227,
+    "cc": 3880,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לוצרן 3.9 V6 227)"
+  },
+  {
+    "make": "ביואיק ארהב\"",
+    "model": "LUCERNE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 4565,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לוצרן 4.6 V8 Northstar 275)"
+  },
+  {
+    "make": "ביואיק ארהב\"",
+    "model": "LUCERNE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 292,
+    "cc": 4565,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לוצרן 4.6 V8 Super 292)"
+  },
+  {
+    "make": "ביואיק",
+    "model": "לוצרן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 3791,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לוצרן 197)"
+  },
+  {
+    "make": "Buick",
+    "model": "LUCERNE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 3791,
+    "seconds": 9.1,
+    "source": "נתון יצרן (Buick Lucerne 3.8)"
+  },
+  {
+    "make": "Buick",
+    "model": "LUCERNE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 4565,
+    "seconds": 7.3,
+    "source": "נתון יצרן (Buick Lucerne 4.6 V8)"
+  },
+  {
+    "make": "ביואיק ארהב\"",
+    "model": "ENCLAVE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 3564,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (ביואיק אנקלייב 3.6 V6 275)"
+  },
+  {
+    "make": "ביואיק ארהב\"",
+    "model": "ENCLAVE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 288,
+    "cc": 3564,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (ביואיק אנקלייב 3.6 V6 288)"
+  },
+  {
+    "make": "ביואיק ארהב\"",
+    "model": "ENCLAVE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 3564,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (ביואיק אנקלייב 3.6 V6 310)"
+  },
+  {
+    "make": "\"ביואיק ארהב",
+    "model": "ENCLAVE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 288,
+    "cc": 3564,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (ביואיק אנקלייב 288)"
+  },
+  {
+    "make": "ביואיק",
+    "model": "אנקלייב",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 288,
+    "cc": 3564,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (ביואיק אנקלייב 288)"
+  },
+  {
+    "make": "Buick",
+    "model": "ENCLAVE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 288,
+    "cc": 3564,
+    "seconds": 8.0,
+    "source": "נתון יצרן (Buick Enclave 3.6)"
+  },
+  {
+    "make": "ביואיק ארהב\"",
+    "model": "PARK AVENUE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3791,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (ביואיק פארק אבניו 3.8 V6 205)"
+  },
+  {
+    "make": "\"ביואיק ארהב",
+    "model": "PARK AVENUE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3791,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (ביואיק פארק אבניו 3.8 V6 205)"
+  },
+  {
+    "make": "ביואיק ארהב\"",
+    "model": "PARK AVENUE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 3791,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (ביואיק פארק אבניו Ultra Supercharged 240)"
+  },
+  {
+    "make": "ביואיק",
+    "model": "פארק אבניו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3791,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (ביואיק פארק אבניו 205)"
+  },
+  {
+    "make": "Buick",
+    "model": "PARK AVENUE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3791,
+    "seconds": 8.8,
+    "source": "נתון יצרן (Buick Park Avenue 3.8)"
+  },
+  {
+    "make": "ביואיק ארהב\"",
+    "model": "RENDEZVOUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 3350,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (ביואיק רנדוו 3.4 V6 185)"
+  },
+  {
+    "make": "\"ביואיק ארהב",
+    "model": "RENDEZVOUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 3350,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (ביואיק רנדוו 3.4 V6 185)"
+  },
+  {
+    "make": "ביואיק ארהב\"",
+    "model": "RENDEZVOUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 242,
+    "cc": 3564,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (ביואיק רנדוו 3.6 V6 242)"
+  },
+  {
+    "make": "ביואיק",
+    "model": "רנדוו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 3350,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (ביואיק רנדוו 185)"
+  },
+  {
+    "make": "Buick",
+    "model": "RENDEZVOUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 3350,
+    "seconds": 11.2,
+    "source": "נתון יצרן (Buick Rendezvous 3.4)"
+  },
+  {
     "make": "בי ווי די סין",
     "model": "BYD ATTO 2 DM-I",
     "yearStart": null,
