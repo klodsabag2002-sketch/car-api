@@ -1,5 +1,35 @@
 [
   {
+    "make": "פיאט איטליה",
+    "model": "ABART 500E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 0,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (Abarth 500e חשמלי 155)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "500E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 0,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (Abarth 500e חשמלי 155)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "ABART",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 0,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (Abarth 500e חשמלי 155)"
+  },
+  {
     "make": "פיאט פולין",
     "model": "ABARTH 500",
     "yearStart": null,
