@@ -14,12 +14,13 @@ const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";      // היסטור�
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";    // היסטוריית כלי רכב פרטיים (2): בעלויות
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";     // רכבים עם תג חניה לנכה
 
-// ---------- תאוצה 0-100 מקבצים ידניים (קובץ 1 + קובץ 2 + קובץ 3) ----------
+// ---------- תאוצה 0-100 מקבצים ידניים (קובץ 1 + קובץ 2 + קובץ 3 + קובץ 4) ----------
 let accelTable = [];
 const ACCEL_FILES = [
     "acceleration.json",
     "acceleration2.json",
-    "acceleration3.json"
+    "acceleration3.json",
+    "acceleration4.json"
 ];
 
 ACCEL_FILES.forEach(fileName => {
@@ -51,6 +52,30 @@ const HE_MAKE_ALIASES = {
     "אופל צרפת": "Opel",
     "אופל אנגליה": "Opel",
     "אופל סלובקיה": "Opel",
+    "אינפיניטי": "Infiniti",
+    "אינפיניטי יפן": "Infiniti",
+    "אינפיניטי אנגליה": "Infiniti",
+    "אינפיניטי בריטניה": "Infiniti",
+    "אינפיניטי ארה\"ב": "Infiniti",
+    "אינפיניטי ארהב": "Infiniti",
+    "אינפיניטי מקסיקו": "Infiniti",
+    "ניסאן": "Nissan",
+    "ניסאן יפן": "Nissan",
+    "ניסאן מקסיקו": "Nissan",
+    "ניסאן ארה\"ב": "Nissan",
+    "ניסאן ארהב": "Nissan",
+    "ניסאן ארהב\"": "Nissan",
+    "\"ניסאן ארהב": "Nissan",
+    "איווייס": "Aiways",
+    "איווייס סין": "Aiways",
+    "איוויס": "Aiways",
+    "איוויס סין": "Aiways",
+    "איויאיסי": "EVEASY",
+    "איויאיסי סין": "EVEASY",
+    "אי.וי איזי": "EVEASY",
+    "אי וי איזי": "EVEASY",
+    "אורה": "ORA",
+    "אורה סין": "ORA",
     "אוואטר": "AVATR",
     "אווטר": "AVATR",
     "אוואטר סין": "AVATR",
