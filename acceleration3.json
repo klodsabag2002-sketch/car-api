@@ -1,6 +1,66 @@
 [
   {
     "make": "ניסאן יפן",
+    "model": "INFINITI HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 306,
+    "cc": 3498,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי M35h / Q70 הייבריד 306)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 306,
+    "cc": 3498,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי M35h הייבריד 306)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "M35H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 306,
+    "cc": 3498,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי M35h הייבריד 306)"
+  },
+  {
+    "make": "אינפיניטי יפן",
+    "model": "INFINITI HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 306,
+    "cc": 3498,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי M35h הייבריד 306)"
+  },
+  {
+    "make": "אינפיניטי",
+    "model": "INFINITI HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 306,
+    "cc": 3498,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי M35h הייבריד 306)"
+  },
+  {
+    "make": "Infiniti",
+    "model": "M35H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 306,
+    "cc": 3498,
+    "seconds": 5.5,
+    "source": "נתון יצרן (Infiniti M35h Hybrid)"
+  },
+  {
+    "make": "ניסאן יפן",
     "model": "INFINITI",
     "yearStart": null,
     "yearEnd": null,
