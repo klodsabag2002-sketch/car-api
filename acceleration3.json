@@ -1,5 +1,95 @@
 [
   {
+    "make": "איווייס סין",
+    "model": "U5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (איווייס U5 חשמלי 204)"
+  },
+  {
+    "make": "איווייס",
+    "model": "U5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (איווייס U5 חשמלי 204)"
+  },
+  {
+    "make": "איוויס סין",
+    "model": "U5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (איווייס U5 חשמלי 204)"
+  },
+  {
+    "make": "Aiways",
+    "model": "U5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.5,
+    "source": "נתון יצרן (Aiways U5)"
+  },
+  {
+    "make": "איווייס סין",
+    "model": "U6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (איווייס U6 חשמלי 218)"
+  },
+  {
+    "make": "איווייס סין",
+    "model": "U6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (איווייס U6 חשמלי 204)"
+  },
+  {
+    "make": "איווייס",
+    "model": "U6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (איווייס U6 חשמלי 218)"
+  },
+  {
+    "make": "איוויס סין",
+    "model": "U6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (איווייס U6 חשמלי 218)"
+  },
+  {
+    "make": "Aiways",
+    "model": "U6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "נתון יצרן (Aiways U6)"
+  },
+  {
     "make": "איויאיסי סין",
     "model": "LIMO",
     "yearStart": null,
