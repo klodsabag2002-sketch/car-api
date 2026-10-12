@@ -1,5 +1,125 @@
 [
   {
+    "make": "אופל צרפת",
+    "model": "GRANDLAND X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1499,
+    "seconds": 12.3,
+    "source": "רישוי רכב / נתון יצרן (גרנדלנד X דיזל 1.5 130)"
+  },
+  {
+    "make": "אופל צרפת",
+    "model": "GRANDLAND X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (גרנדלנד X 1.2T 130)"
+  },
+  {
+    "make": "אופל צרפת",
+    "model": "GRANDLAND X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1598,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (גרנדלנד X 1.6T 180)"
+  },
+  {
+    "make": "אופל צרפת",
+    "model": "GRANDLAND",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (גרנדלנד 1.2T 130)"
+  },
+  {
+    "make": "אופל צרפת",
+    "model": "GRANDLAND",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1499,
+    "seconds": 12.3,
+    "source": "רישוי רכב / נתון יצרן (גרנדלנד דיזל 1.5 130)"
+  },
+  {
+    "make": "אופל צרפת",
+    "model": "COMBO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1499,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (קומבו דיזל 1.5 130)"
+  },
+  {
+    "make": "אופל צרפת",
+    "model": "COMBO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (קומבו 1.2T 130)"
+  },
+  {
+    "make": "אופל צרפת",
+    "model": "VIVARO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 1997,
+    "seconds": 10.0,
+    "source": "רישוי רכב / נתון יצרן (ויוארו 2.0 דיזל 177)"
+  },
+  {
+    "make": "אופל צרפת",
+    "model": "MOKKA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (מוקה 1.2T 130)"
+  },
+  {
+    "make": "אופל צרפת",
+    "model": "CROSSLAND",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (קרוסלנד 1.2T 130)"
+  },
+  {
+    "make": "אופל צרפת",
+    "model": "CORSA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1199,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (קורסה 1.2T 100)"
+  },
+  {
+    "make": "אופל צרפת",
+    "model": "CORSA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (קורסה 1.2T 130)"
+  },
+  {
     "make": "אופל פולין",
     "model": "BERLINA",
     "yearStart": null,
