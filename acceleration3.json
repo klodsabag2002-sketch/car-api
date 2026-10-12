@@ -1,6 +1,56 @@
 [
   {
     "make": "ניסאן יפן",
+    "model": "INFINITI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 315,
+    "cc": 3696,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי G37 סדאן 315)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "G37",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 315,
+    "cc": 3696,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי G37 סדאן 315)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "INFINITI G37",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 315,
+    "cc": 3696,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי G37 סדאן 315)"
+  },
+  {
+    "make": "אינפיניטי יפן",
+    "model": "G37",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 315,
+    "cc": 3696,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי G37 סדאן 315)"
+  },
+  {
+    "make": "אינפיניטי",
+    "model": "G37",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 315,
+    "cc": 3696,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי G37 סדאן 315)"
+  },
+  {
+    "make": "ניסאן יפן",
     "model": "INFINITI EX37",
     "yearStart": null,
     "yearEnd": null,
