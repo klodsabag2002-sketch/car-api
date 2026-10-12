@@ -1,5 +1,225 @@
 [
   {
+    "make": "ג'אקו סין",
+    "model": "JAECOO 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 1598,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו 5 1.6T טורבו 147)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "J5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 1598,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו J5 1.6T 147)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "JAECOO 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו 5 חשמלי EV 204)"
+  },
+  {
+    "make": "ג'אקו",
+    "model": "J5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 1598,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו J5 147)"
+  },
+  {
+    "make": "JAECOO",
+    "model": "J5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 1598,
+    "seconds": 8.9,
+    "source": "נתון יצרן (JAECOO 5 1.6T)"
+  },
+  {
+    "make": "JAECOO",
+    "model": "5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 1598,
+    "seconds": 8.9,
+    "source": "נתון יצרן (JAECOO 5 1.6T)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "JAECOO 7 PHEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו 7 פלאג-אין PHEV 143/347)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "JAECOO 7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו 7 פלאג-אין PHEV 143)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "J7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו J7 פלאג-אין PHEV 143)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "JAECOO 7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 1598,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו 7 1.6T בנזין 147)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "J7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 1598,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו J7 1.6T 147)"
+  },
+  {
+    "make": "ג'אקו",
+    "model": "J7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו J7 PHEV 143)"
+  },
+  {
+    "make": "JAECOO",
+    "model": "J7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 8.5,
+    "source": "נתון יצרן (JAECOO 7 PHEV)"
+  },
+  {
+    "make": "JAECOO",
+    "model": "7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 8.5,
+    "source": "נתון יצרן (JAECOO 7 PHEV)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "JAECOO8 PHEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו 8 פלאג-אין PHEV AWD 143/600)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "JAECOO 8 PHEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו 8 פלאג-אין PHEV AWD 143/600)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "JAECOO 8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו 8 PHEV 143)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "J8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו J8 PHEV 143)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "JAECOO 8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 249,
+    "cc": 1998,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו 8 2.0T בנזין 249)"
+  },
+  {
+    "make": "ג'אקו",
+    "model": "J8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו J8 PHEV 143)"
+  },
+  {
+    "make": "JAECOO",
+    "model": "J8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 5.4,
+    "source": "נתון יצרן (JAECOO 8 PHEV)"
+  },
+  {
+    "make": "JAECOO",
+    "model": "8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 5.4,
+    "source": "נתון יצרן (JAECOO 8 PHEV)"
+  },
+  {
     "make": "בנטלי",
     "model": "BENTAYGA",
     "yearStart": null,
