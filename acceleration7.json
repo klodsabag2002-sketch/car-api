@@ -1,1 +1,822 @@
-klod
+[
+  {
+    "make": "ג'יפ פולין",
+    "model": "AVENGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1199,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ אוונגר 1.2 טורבו 100-110)"
+  },
+  {
+    "make": "ג'יפ פולין",
+    "model": "AVENGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1199,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ אוונגר 1.2 טורבו 100)"
+  },
+  {
+    "make": "ג'יפ פולין",
+    "model": "AVENGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 0,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ אוונגר חשמלי EV 156)"
+  },
+  {
+    "make": "ג'יפ",
+    "model": "אוונגר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1199,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ אוונגר 110)"
+  },
+  {
+    "make": "Jeep",
+    "model": "AVENGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1199,
+    "seconds": 10.6,
+    "source": "נתון יצרן (Jeep Avenger 1.2T)"
+  },
+  {
+    "make": "Jeep",
+    "model": "AVENGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 0,
+    "seconds": 9.0,
+    "source": "נתון יצרן (Jeep Avenger EV 156)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "GLADIATOR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 285,
+    "cc": 3604,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ גלדיאטור 3.6 V6 285)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "GLADIATOR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 264,
+    "cc": 2987,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ גלדיאטור דיזל 3.0 EcoDiesel 264)"
+  },
+  {
+    "make": "ג'יפ",
+    "model": "גלדיאטור",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 285,
+    "cc": 3604,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ גלדיאטור 285)"
+  },
+  {
+    "make": "Jeep",
+    "model": "GLADIATOR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 285,
+    "cc": 3604,
+    "seconds": 8.1,
+    "source": "נתון יצרן (Jeep Gladiator 3.6 V6)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "GRAND CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 290,
+    "cc": 3604,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ גרנד צ'ירוקי 3.6 V6 290/295)"
+  },
+  {
+    "make": "\"ג'יפ ארהב",
+    "model": "GRAND CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 290,
+    "cc": 3604,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ גרנד צ'ירוקי 3.6 V6 290)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "GRAND CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 3604,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ גרנד צ'ירוקי 3.6 V6 286)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "GRAND CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 360,
+    "cc": 5654,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ גרנד צ'ירוקי 5.7 V8 Hemi 360)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "GRAND CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 468,
+    "cc": 6417,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ גרנד צ'ירוקי SRT 6.4 V8 468)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "GRAND CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 707,
+    "cc": 6166,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ גרנד צ'ירוקי Trackhawk 6.2 707)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "GRAND CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 1995,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ גרנד צ'ירוקי 4xe פלאג-אין 380)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "GRAND CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 2987,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ גרנד צ'ירוקי 3.0 CRD דיזל 250)"
+  },
+  {
+    "make": "ג'יפ",
+    "model": "גרנד צ'ירוקי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 290,
+    "cc": 3604,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ גרנד צ'ירוקי 290)"
+  },
+  {
+    "make": "Jeep",
+    "model": "GRAND CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 290,
+    "cc": 3604,
+    "seconds": 8.2,
+    "source": "נתון יצרן (Jeep Grand Cherokee 3.6 V6)"
+  },
+  {
+    "make": "Jeep",
+    "model": "GRAND CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 1995,
+    "seconds": 6.3,
+    "source": "נתון יצרן (Jeep Grand Cherokee 4xe)"
+  },
+  {
+    "make": "קריזלר ארהב\"",
+    "model": "JEEP CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 271,
+    "cc": 3239,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 3.2 V6 Pentastar 271)"
+  },
+  {
+    "make": "\"קריזלר ארהב",
+    "model": "JEEP CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 271,
+    "cc": 3239,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 3.2 V6 Pentastar 271)"
+  },
+  {
+    "make": "קרייזלר ארהב\"",
+    "model": "JEEP CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 271,
+    "cc": 3239,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 3.2 V6 271)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 271,
+    "cc": 3239,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 3.2 V6 271)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 2360,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 2.4 Tigershark 184)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 270,
+    "cc": 1995,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 2.0T טורבו 270)"
+  },
+  {
+    "make": "ג'יפ",
+    "model": "צ'ירוקי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 271,
+    "cc": 3239,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 271)"
+  },
+  {
+    "make": "Jeep",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 271,
+    "cc": 3239,
+    "seconds": 8.1,
+    "source": "נתון יצרן (Jeep Cherokee 3.2 V6)"
+  },
+  {
+    "make": "Jeep",
+    "model": "JEEP CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 271,
+    "cc": 3239,
+    "seconds": 8.1,
+    "source": "נתון יצרן (Jeep Cherokee 3.2 V6)"
+  },
+  {
+    "make": "קריזלר ארהב\"",
+    "model": "PATRIOT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 168,
+    "cc": 2359,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ פטריוט 2.4 168/170)"
+  },
+  {
+    "make": "\"קריזלר ארהב",
+    "model": "PATRIOT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 168,
+    "cc": 2359,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ פטריוט 2.4 168)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "PATRIOT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 168,
+    "cc": 2359,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ פטריוט 2.4 168)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "PATRIOT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1998,
+    "seconds": 11.3,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ פטריוט 2.0 156)"
+  },
+  {
+    "make": "ג'יפ",
+    "model": "פטריוט",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 168,
+    "cc": 2359,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ פטריוט 168)"
+  },
+  {
+    "make": "Jeep",
+    "model": "PATRIOT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 168,
+    "cc": 2359,
+    "seconds": 10.5,
+    "source": "נתון יצרן (Jeep Patriot 2.4)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "COMMANDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 4701,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ קומנדר 4.7 V8 231)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "COMMANDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 326,
+    "cc": 5654,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ קומנדר 5.7 V8 Hemi 326)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "COMMANDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 2987,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ קומנדר דיזל 3.0 CRD 218)"
+  },
+  {
+    "make": "ג'יפ",
+    "model": "קומנדר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 4701,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ קומנדר 231)"
+  },
+  {
+    "make": "Jeep",
+    "model": "COMMANDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 4701,
+    "seconds": 9.5,
+    "source": "נתון יצרן (Jeep Commander 4.7 V8)"
+  },
+  {
+    "make": "ג'יפ איטליה",
+    "model": "COMPASS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1332,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ קומפאס 1.33 טורבו 150)"
+  },
+  {
+    "make": "ג'יפ איטליה",
+    "model": "COMPASS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1332,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ קומפאס 1.33 טורבו ידני 130)"
+  },
+  {
+    "make": "ג'יפ איטליה",
+    "model": "COMPASS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1332,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ קומפאס 4xe פלאג-אין 240)"
+  },
+  {
+    "make": "ג'יפ איטליה",
+    "model": "COMPASS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1332,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ קומפאס 4xe פלאג-אין 190)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "COMPASS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1368,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ קומפאס 1.4 MultiAir 170)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "COMPASS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 175,
+    "cc": 2359,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ קומפאס 2.4 Tigershark 175)"
+  },
+  {
+    "make": "ג'יפ",
+    "model": "קומפאס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1332,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ קומפאס 150)"
+  },
+  {
+    "make": "Jeep",
+    "model": "COMPASS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1332,
+    "seconds": 9.2,
+    "source": "נתון יצרן (Jeep Compass 1.33T)"
+  },
+  {
+    "make": "Jeep",
+    "model": "COMPASS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1332,
+    "seconds": 7.3,
+    "source": "נתון יצרן (Jeep Compass 4xe)"
+  },
+  {
+    "make": "פיאט קרייזלר",
+    "model": "RENEGADE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1332,
+    "seconds": 9.4,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ רנגייד 1.33 טורבו 150)"
+  },
+  {
+    "make": "ג'יפ איטליה",
+    "model": "RENEGADE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1332,
+    "seconds": 9.4,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ רנגייד 1.33 טורבו 150)"
+  },
+  {
+    "make": "פיאט קרייזלר",
+    "model": "RENEGADE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1332,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ רנגייד 4xe פלאג-אין 240)"
+  },
+  {
+    "make": "פיאט קרייזלר",
+    "model": "RENEGADE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1332,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ רנגייד 4xe פלאג-אין 190)"
+  },
+  {
+    "make": "פיאט קרייזלר",
+    "model": "RENEGADE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1368,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ רנגייד 1.4 MultiAir 140)"
+  },
+  {
+    "make": "פיאט קרייזלר",
+    "model": "RENEGADE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1368,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ רנגייד 1.4 MultiAir 170)"
+  },
+  {
+    "make": "ג'יפ",
+    "model": "רנגייד",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1332,
+    "seconds": 9.4,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ רנגייד 150)"
+  },
+  {
+    "make": "Jeep",
+    "model": "RENEGADE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1332,
+    "seconds": 9.4,
+    "source": "נתון יצרן (Jeep Renegade 1.33T)"
+  },
+  {
+    "make": "Jeep",
+    "model": "RENEGADE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1332,
+    "seconds": 7.1,
+    "source": "נתון יצרן (Jeep Renegade 4xe)"
+  },
+  {
+    "make": "קריזלר ארהב\"",
+    "model": "WRANGLER UNLIMI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 285,
+    "cc": 3604,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ רנגלר אנלימיטד 3.6 V6 285)"
+  },
+  {
+    "make": "\"קריזלר ארהב",
+    "model": "WRANGLER UNLIMI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 285,
+    "cc": 3604,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ רנגלר אנלימיטד 3.6 V6 285)"
+  },
+  {
+    "make": "קרייזלר ארהב\"",
+    "model": "WRANGLER UNLIMI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 285,
+    "cc": 3604,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ רנגלר אנלימיטד 3.6 V6 285)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "WRANGLER UNLIMI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 285,
+    "cc": 3604,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ רנגלר אנלימיטד 3.6 V6 285)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "WRANGLER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 285,
+    "cc": 3604,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ רנגלר 3.6 V6 285)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "WRANGLER UNLIMI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 1995,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ רנגלר אנלימיטד 2.0T 272)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "WRANGLER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 1995,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ רנגלר 2.0T 272)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "WRANGLER UNLIMI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 1995,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ רנגלר 4xe פלאג-אין 380)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "WRANGLER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 470,
+    "cc": 6417,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ רנגלר רוביקון 392 V8 470)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "WRANGLER UNLIMI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 2776,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ רנגלר 2.8 CRD דיזל 200)"
+  },
+  {
+    "make": "ג'יפ",
+    "model": "רנגלר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 285,
+    "cc": 3604,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ רנגלר 285)"
+  },
+  {
+    "make": "ג'יפ",
+    "model": "רנגלר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 1995,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ רנגלר 2.0T 272)"
+  },
+  {
+    "make": "Jeep",
+    "model": "WRANGLER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 285,
+    "cc": 3604,
+    "seconds": 7.5,
+    "source": "נתון יצרן (Jeep Wrangler 3.6 V6)"
+  },
+  {
+    "make": "Jeep",
+    "model": "WRANGLER UNLIMI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 285,
+    "cc": 3604,
+    "seconds": 7.9,
+    "source": "נתון יצרן (Jeep Wrangler Unlimited 3.6 V6)"
+  },
+  {
+    "make": "Jeep",
+    "model": "WRANGLER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 1995,
+    "seconds": 6.9,
+    "source": "נתון יצרן (Jeep Wrangler 2.0T)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "GRAND WAGONEER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 471,
+    "cc": 6417,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ גרנד וואגוניר 6.4 V8 471)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "GRAND WAGONEER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 2993,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ גרנד וואגוניר 3.0 Hurricane 510)"
+  },
+  {
+    "make": "ג'יפ",
+    "model": "גרנד וואגוניר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 2993,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ גרנד וואגוניר 510)"
+  },
+  {
+    "make": "Jeep",
+    "model": "GRAND WAGONEER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 2993,
+    "seconds": 4.7,
+    "source": "נתון יצרן (Jeep Grand Wagoneer Hurricane)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "WAGONEER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 392,
+    "cc": 5654,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ וואגוניר 5.7 V8 392)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "WAGONEER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 420,
+    "cc": 2993,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ וואגוניר 3.0 Hurricane 420)"
+  },
+  {
+    "make": "ג'יפ",
+    "model": "וגוניר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 420,
+    "cc": 2993,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ וואגוניר 420)"
+  },
+  {
+    "make": "Jeep",
+    "model": "WAGONEER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 420,
+    "cc": 2993,
+    "seconds": 5.5,
+    "source": "נתון יצרן (Jeep Wagoneer Hurricane)"
+  }
+]
