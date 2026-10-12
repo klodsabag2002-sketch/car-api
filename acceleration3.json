@@ -1,5 +1,75 @@
 [
   {
+    "make": "איויאיסי סין",
+    "model": "LIMO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 0,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (אי.וי איזי לימו 160 כ\"ס)"
+  },
+  {
+    "make": "איויאיסי סין",
+    "model": "לימו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 0,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (אי.וי איזי לימו 160 כ\"ס)"
+  },
+  {
+    "make": "איויאיסי",
+    "model": "LIMO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 0,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (אי.וי איזי לימו 160 כ\"ס)"
+  },
+  {
+    "make": "אי.וי איזי",
+    "model": "LIMO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 0,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (אי.וי איזי לימו 160 כ\"ס)"
+  },
+  {
+    "make": "אי.וי איזי",
+    "model": "Limo",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 0,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (אי.וי איזי לימו 160 כ\"ס)"
+  },
+  {
+    "make": "אי וי איזי",
+    "model": "LIMO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 0,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (אי.וי איזי לימו 160 כ\"ס)"
+  },
+  {
+    "make": "EVEASY",
+    "model": "LIMO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 0,
+    "seconds": 9.6,
+    "source": "נתון יצרן (EVEASY Limo 160)"
+  },
+  {
     "make": "אורה סין",
     "model": "GWM ORA 5 SUV",
     "yearStart": null,
