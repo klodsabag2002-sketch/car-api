@@ -1,5 +1,1115 @@
 [
   {
+    "make": "אלפא רומיאו_אי",
+    "model": "159",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 2198,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (אלפא 159 2.2 JTS 185)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "ALFA ROMEO 159",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 2198,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (אלפא 159 2.2 JTS 185)"
+  },
+  {
+    "make": "אלפא רומיאו",
+    "model": "159",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 2198,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (אלפא 159 2.2 JTS 185)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "159",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1742,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (אלפא 159 1.75 TBi 200)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "ALFA ROMEO 159",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1742,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (אלפא 159 1.75 TBi 200)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "159",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 260,
+    "cc": 3195,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (אלפא 159 3.2 V6 260)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "159",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1859,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (אלפא 159 1.9 JTS 160)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "159",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 2198,
+    "seconds": 8.8,
+    "source": "נתון יצרן (Alfa Romeo 159 2.2)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "159",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1742,
+    "seconds": 7.7,
+    "source": "נתון יצרן (Alfa Romeo 159 1.75 TBi)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "GIULIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1995,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (אלפא ג'וליה 2.0T RWD 200)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "ג'וליה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1995,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (אלפא ג'וליה 2.0T RWD 200)"
+  },
+  {
+    "make": "אלפא רומיאו",
+    "model": "ג'וליה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1995,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (אלפא ג'וליה 2.0T RWD 200)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "GIULIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 1995,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (אלפא ג'וליה Veloce AWD 280)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "ג'וליה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 1995,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (אלפא ג'וליה Veloce AWD 280)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "GIULIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 2891,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (אלפא ג'וליה תלתן ירוק QV 510)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "ג'וליה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 2891,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (אלפא ג'וליה תלתן ירוק QV 510)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "GIULIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1995,
+    "seconds": 6.6,
+    "source": "נתון יצרן (Alfa Romeo Giulia 200)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "GIULIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 1995,
+    "seconds": 5.2,
+    "source": "נתון יצרן (Alfa Romeo Giulia Veloce 280)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "GIULIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 2891,
+    "seconds": 3.9,
+    "source": "נתון יצרן (Alfa Romeo Giulia Quadrifoglio 510)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "ALFA GIULIETTA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1368,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (אלפא ג'ולייטה 1.4 MultiAir 170)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "GIULIETTA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1368,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (אלפא ג'ולייטה 1.4 MultiAir 170)"
+  },
+  {
+    "make": "אלפא רומיאו",
+    "model": "ג'ולייטה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1368,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (אלפא ג'ולייטה 1.4 MultiAir 170)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "ALFA GIULIETTA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1368,
+    "seconds": 9.4,
+    "source": "רישוי רכב / נתון יצרן (אלפא ג'ולייטה 1.4 טורבו 120)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "GIULIETTA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1368,
+    "seconds": 9.4,
+    "source": "רישוי רכב / נתון יצרן (אלפא ג'ולייטה 1.4 טורבו 120)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "ALFA GIULIETTA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 235,
+    "cc": 1742,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (אלפא ג'ולייטה תלתן ירוק QV 235)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "ALFA GIULIETTA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1742,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (אלפא ג'ולייטה Veloce TCT 240)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "GIULIETTA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1368,
+    "seconds": 7.7,
+    "source": "נתון יצרן (Alfa Romeo Giulietta 170)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "GIULIETTA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1742,
+    "seconds": 6.0,
+    "source": "נתון יצרן (Alfa Romeo Giulietta Veloce 240)"
+  },
+  {
+    "make": "אלפא רומיאו",
+    "model": "JUNIOR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 1199,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (אלפא ג'וניור היברידי Ibrida 145)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "JUNIOR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 1199,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (אלפא ג'וניור היברידי Ibrida 145)"
+  },
+  {
+    "make": "אלפא רומיאו",
+    "model": "ג'וניור",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 1199,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (אלפא ג'וניור היברידי Ibrida 145)"
+  },
+  {
+    "make": "אלפא רומיאו",
+    "model": "JUNIOR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 0,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (אלפא ג'וניור חשמלי Elettrica 156)"
+  },
+  {
+    "make": "אלפא רומיאו",
+    "model": "JUNIOR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 0,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (אלפא ג'וניור Veloce חשמלי 280)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "JUNIOR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 1199,
+    "seconds": 8.9,
+    "source": "נתון יצרן (Alfa Romeo Junior Hybrid 145)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "TONALE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1469,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (אלפא טונלה היברידי 130)"
+  },
+  {
+    "make": "אלפא רומיאו",
+    "model": "TONALE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1469,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (אלפא טונלה היברידי 130)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "טונלה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1469,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (אלפא טונלה היברידי 130)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "TONALE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1469,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (אלפא טונלה היברידי VGT 160)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "טונלה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1469,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (אלפא טונלה היברידי VGT 160)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "TONALE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 1332,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (אלפא טונלה פלאג-אין PHEV Q4 280)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "TONALE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1469,
+    "seconds": 9.6,
+    "source": "נתון יצרן (Alfa Romeo Tonale 130)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "TONALE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1469,
+    "seconds": 8.8,
+    "source": "נתון יצרן (Alfa Romeo Tonale 160)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "TONALE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 1332,
+    "seconds": 6.2,
+    "source": "נתון יצרן (Alfa Romeo Tonale PHEV 280)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "ALFA MITO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1368,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (אלפא מיטו 1.4 MultiAir 135)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "MITO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1368,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (אלפא מיטו 1.4 MultiAir 135)"
+  },
+  {
+    "make": "אלפא רומיאו",
+    "model": "מיטו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1368,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (אלפא מיטו 1.4 MultiAir 135)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "ALFA MITO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1368,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (אלפא מיטו 1.4 טורבו 155)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "ALFA MITO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1368,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (אלפא מיטו תלתן ירוק QV 170)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "ALFA MITO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1368,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (אלפא מיטו 1.4 אטמוספרי 105)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "MITO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1368,
+    "seconds": 8.2,
+    "source": "נתון יצרן (Alfa Romeo MiTo 135)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "MITO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1368,
+    "seconds": 7.3,
+    "source": "נתון יצרן (Alfa Romeo MiTo QV 170)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "STELVIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1995,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (אלפא סטלביו 2.0T AWD 200)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "סטלביו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1995,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (אלפא סטלביו 2.0T AWD 200)"
+  },
+  {
+    "make": "אלפא רומיאו",
+    "model": "סילביו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1995,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (אלפא סטלביו 2.0T AWD 200)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "STELVIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 1995,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (אלפא סטלביו Veloce AWD 280)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "סטלביו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 1995,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (אלפא סטלביו Veloce AWD 280)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "STELVIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 2891,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (אלפא סטלביו תלתן ירוק QV 510)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "סטלביו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 2891,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (אלפא סטלביו תלתן ירוק QV 510)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "STELVIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1995,
+    "seconds": 7.2,
+    "source": "נתון יצרן (Alfa Romeo Stelvio 200)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "STELVIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 1995,
+    "seconds": 5.7,
+    "source": "נתון יצרן (Alfa Romeo Stelvio 280)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "STELVIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 2891,
+    "seconds": 3.8,
+    "source": "נתון יצרן (Alfa Romeo Stelvio Quadrifoglio 510)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "4C",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1742,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (אלפא 4C ספורט 240)"
+  },
+  {
+    "make": "אלפא רומיאו",
+    "model": "4C",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1742,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (אלפא 4C ספורט 240)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "4C",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1742,
+    "seconds": 4.5,
+    "source": "נתון יצרן (Alfa Romeo 4C 240)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "GT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1970,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (אלפא GT 2.0 JTS 165)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "GT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 3179,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (אלפא GT 3.2 V6 240)"
+  },
+  {
+    "make": "אלפא רומיאו",
+    "model": "GT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1970,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (אלפא GT 2.0 JTS 165)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "GT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1970,
+    "seconds": 8.7,
+    "source": "נתון יצרן (Alfa Romeo GT 2.0)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "GTV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1970,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (אלפא GTV 2.0 Twin Spark 150)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "GTV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1970,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (אלפא GTV 2.0 JTS 165)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "GTV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 220,
+    "cc": 2959,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (אלפא GTV 3.0 V6 220)"
+  },
+  {
+    "make": "אלפא רומיאו",
+    "model": "GTV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1970,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (אלפא GTV 2.0 150)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "GTV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1970,
+    "seconds": 8.5,
+    "source": "נתון יצרן (Alfa Romeo GTV 2.0)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "BRERA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 2198,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (אלפא בררה 2.2 JTS 185)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "בררה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 2198,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (אלפא בררה 2.2 JTS 185)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "BRERA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1742,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (אלפא בררה 1.75 TBi 200)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "BRERA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 260,
+    "cc": 3195,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (אלפא בררה 3.2 V6 Q4 260)"
+  },
+  {
+    "make": "אלפא רומיאו",
+    "model": "בררה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 2198,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (אלפא בררה 2.2 JTS 185)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "BRERA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 2198,
+    "seconds": 8.6,
+    "source": "נתון יצרן (Alfa Romeo Brera 2.2)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "SPIDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 2198,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (אלפא ספיידר 2.2 JTS 185)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "ספיידר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 2198,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (אלפא ספיידר 2.2 JTS 185)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "SPIDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1742,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (אלפא ספיידר 1.75 TBi 200)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "SPIDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 260,
+    "cc": 3195,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (אלפא ספיידר 3.2 V6 Q4 260)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "SPIDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1970,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (אלפא ספיידר דור קודם 2.0 TS 150)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "SPIDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 2198,
+    "seconds": 8.8,
+    "source": "נתון יצרן (Alfa Romeo Spider 2.2)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "147",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1598,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (אלפא 147 1.6 Twin Spark 105)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "147",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1598,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (אלפא 147 1.6 Twin Spark 120)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "147",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1970,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (אלפא 147 2.0 Twin Spark 150)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "147",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 3179,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (אלפא 147 GTA 3.2 V6 250)"
+  },
+  {
+    "make": "אלפא רומיאו",
+    "model": "147",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1598,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (אלפא 147 1.6 120)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "147",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1598,
+    "seconds": 10.2,
+    "source": "נתון יצרן (Alfa Romeo 147 1.6)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "156",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1970,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (אלפא 156 2.0 Twin Spark 150)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "156",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1970,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (אלפא 156 2.0 JTS 165)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "156",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 2492,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (אלפא 156 2.5 V6 190)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "156",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 3179,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (אלפא 156 GTA 3.2 V6 250)"
+  },
+  {
+    "make": "אלפא רומיאו",
+    "model": "156",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1970,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (אלפא 156 2.0 150)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "156",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1970,
+    "seconds": 8.8,
+    "source": "נתון יצרן (Alfa Romeo 156 2.0)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "166",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1970,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (אלפא 166 2.0 Twin Spark 150)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "166",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 2492,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (אלפא 166 2.5 V6 190)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "166",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 220,
+    "cc": 2959,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (אלפא 166 3.0 V6 220)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "166",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 3179,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (אלפא 166 3.2 V6 240)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "166",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 2492,
+    "seconds": 8.4,
+    "source": "נתון יצרן (Alfa Romeo 166 2.5)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "145",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1598,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (אלפא 145 1.6 Twin Spark 120)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "145",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1970,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (אלפא 145 2.0 Quadrifoglio 150)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "145",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1598,
+    "seconds": 10.2,
+    "source": "נתון יצרן (Alfa Romeo 145 1.6)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "146",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1598,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (אלפא 146 1.6 Twin Spark 120)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "146",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1970,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (אלפא 146 2.0 ti 150)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "146",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1598,
+    "seconds": 10.5,
+    "source": "נתון יצרן (Alfa Romeo 146 1.6)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "75",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 148,
+    "cc": 1962,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (אלפא 75 2.0 Twin Spark 148)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "75",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 2959,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (אלפא 75 3.0 V6 America 192)"
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "75",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 148,
+    "cc": 1962,
+    "seconds": 8.2,
+    "source": "נתון יצרן (Alfa Romeo 75 2.0)"
+  },
+  {
     "make": "אל אי וי סי",
     "model": "TX",
     "yearStart": null,
