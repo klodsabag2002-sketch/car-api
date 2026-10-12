@@ -1,5 +1,85 @@
 [
   {
+    "make": "פיאט פולין",
+    "model": "500 ABARTH",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1368,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (פיאט פולין 500 אבארט 135)"
+  },
+  {
+    "make": "פיאט פולין",
+    "model": "FIAT 500 ABARTH",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1368,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (פיאט פולין 500 אבארט 135)"
+  },
+  {
+    "make": "פיאט פולין",
+    "model": "500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1368,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (פיאט פולין 135)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "500 ABARTH",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1368,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (500 אבארט 135)"
+  },
+  {
+    "make": "פיאט",
+    "model": "500 ABARTH",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1368,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (500 אבארט 135)"
+  },
+  {
+    "make": "פיאט פולין",
+    "model": "500 ABARTH",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1368,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (Esseesse 160)"
+  },
+  {
+    "make": "פיאט",
+    "model": "500 ABARTH",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1368,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (Esseesse 160)"
+  },
+  {
+    "make": "Fiat",
+    "model": "500 Abarth",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1368,
+    "seconds": 7.9,
+    "source": "נתון יצרן (500 אבארט 135)"
+  },
+  {
     "make": "אבארט",
     "model": "500",
     "yearStart": null,
