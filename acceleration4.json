@@ -1,6 +1,76 @@
 [
   {
     "make": "אלפא רומיאו_אי",
+    "model": "ALFA MIT0",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1368,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (אלפא מיטו תלתן ירוק QV 170)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "MIT0",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1368,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (אלפא מיטו תלתן ירוק QV 170)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "QUADRIFOGLIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1368,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (אלפא מיטו תלתן ירוק QV 170)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "ALFA MIT0",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1368,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (אלפא מיטו 135)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "MIT0",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1368,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (אלפא מיטו 135)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "ALFA MIT0",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1368,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (אלפא מיטו 155)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
+    "model": "ALFA MIT0",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1368,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (אלפא מיטו 105)"
+  },
+  {
+    "make": "אלפא רומיאו_אי",
     "model": "159",
     "yearStart": null,
     "yearEnd": null,
