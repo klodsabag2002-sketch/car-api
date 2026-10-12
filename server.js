@@ -1,3 +1,5 @@
+הבנתי אותך לגמרי. נשמור הכל בדיוק כפי שהיה במקור (כולל כל היצרנים ב-HE_MAKE_ALIASES), ונוסיף רק את מה שצריך כדי לטעון במקביל את שני הקבצים (acceleration.json ו-acceleration2.json).
+הנה הקוד המלא של server.js עם כל ההגדרות המקוריות במלואן:
 const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
@@ -14,18 +16,34 @@ const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";      // היסטור�
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";    // היסטוריית כלי רכב פרטיים (2): בעלויות
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";     // רכבים עם תג חניה לנכה
 
-// ---------- תאוצה 0-100 מקובץ ידני ----------
-const ACCEL_FILE = path.join(__dirname, "acceleration.json");
+// ---------- תאוצה 0-100 מקובצי תאוצה ----------
+const ACCEL_FILES = [
+    path.join(__dirname, "acceleration.json"),
+    path.join(__dirname, "acceleration2.json")
+];
+
 let accelTable = [];
-try {
-    accelTable = JSON.parse(fs.readFileSync(ACCEL_FILE, "utf8"));
-    if (!Array.isArray(accelTable)) accelTable = [];
-} catch (e) {
-    accelTable = [];
+
+for (const filePath of ACCEL_FILES) {
+    if (fs.existsSync(filePath)) {
+        try {
+            const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
+            if (Array.isArray(data)) {
+                accelTable = accelTable.concat(data);
+                console.log(`[DATA] נטען בהצלחה: ${path.basename(filePath)} (${data.length} רשומות)`);
+            }
+        } catch (e) {
+            console.error(`[DATA ERROR] שגיאה בקריאת ${path.basename(filePath)}:`, e.message);
+        }
+    }
 }
+
+console.log(`[DATA SUMMARY] סך הכל רשומות תאוצה שנטענו: ${accelTable.length}`);
 
 // שמות יצרנים בעברית מהרישוי -> שם באנגלית כמו בקובץ התאוצה
 const HE_MAKE_ALIASES = {
+    "אבארט": "Abarth",
+    "אודי": "Audi",
     "קופרה": "Cupra",
     "סיאט": "Seat",
     "סקודה": "Skoda",
@@ -229,7 +247,6 @@ app.get('/api/car/:plate', async (req, res) => {
             : (history?.origin ?? null);
         const currentOwnership = registryOwnership || historyOwnership;
 
-        // שמות היצרן: בעברית מהרישוי, ובאנגלית לפי מיפוי, כדי להתאים לקובץ התאוצה
         const makeTexts = [manufacturer, car.tozeret_nm, car.kinuy_mishari, car.sug_degem].filter(Boolean);
         for (const [he, en] of Object.entries(HE_MAKE_ALIASES)) {
             if (String(manufacturer).includes(he) || String(car.tozeret_nm || "").includes(he)) {
@@ -331,3 +348,4 @@ app.get('/api/debug/:plate', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`השרת רץ בפורט ${PORT}`);
 });
+
