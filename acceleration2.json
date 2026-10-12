@@ -1,5 +1,795 @@
 [
   {
+    "make": "אופל גרמניה",
+    "model": "ADAM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 85,
+    "cc": 1398,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (אדם 1.4 ידני 85)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "ADAM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 87,
+    "cc": 1398,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (אדם 1.4 ידני 87)"
+  },
+  {
+    "make": "אופל",
+    "model": "ADAM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 87,
+    "cc": 1398,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (אדם 1.4 ידני 87)"
+  },
+  {
+    "make": "אופל",
+    "model": "אדם",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 87,
+    "cc": 1398,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (אדם 1.4 ידני 87)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "ADAM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1398,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (אדם 1.4 100)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "ADAM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1364,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (אדם S 1.4T 150)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "INSIGNIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1598,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (אינסיגניה 1.6T 170)"
+  },
+  {
+    "make": "אופל",
+    "model": "INSIGNIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1598,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (אינסיגניה 1.6T 170)"
+  },
+  {
+    "make": "אופל",
+    "model": "אינסיגניה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1598,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (אינסיגניה 1.6T 170)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "INSIGNIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1364,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (אינסיגניה 1.4T 140)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "INSIGNIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1490,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (אינסיגניה גרנד ספורט 1.5T 165)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "INSIGNIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 220,
+    "cc": 1998,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (אינסיגניה 2.0T 220)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "INSIGNIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1998,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (אינסיגניה 2.0T 250)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "INSIGNIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 260,
+    "cc": 1998,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (אינסיגניה 2.0T 4X4 260)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "INSIGNIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 325,
+    "cc": 2792,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (אינסיגניה OPC 325)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "INSIGNIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1956,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (אינסיגניה 2.0 דיזל 160)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "ASTRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1398,
+    "seconds": 12.9,
+    "source": "רישוי רכב / נתון יצרן (אסטרה 1.4 ידני 100)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "ASTRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1598,
+    "seconds": 13.3,
+    "source": "רישוי רכב / נתון יצרן (אסטרה 1.6 אוטומט 115)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "ASTRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1364,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (אסטרה 1.4T 140)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "ASTRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1399,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (אסטרה K 1.4T 150)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "ASTRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1598,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (אסטרה GTC 1.6T 180)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "ASTRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 1998,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (אסטרה OPC 280)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "ASTRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (אסטרה L 1.2T 130)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "אסטרה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1364,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (אסטרה 1.4T 140)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "אסטרה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1399,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (אסטרה 1.4T 150)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "CORSA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 85,
+    "cc": 1229,
+    "seconds": 14.9,
+    "source": "רישוי רכב / נתון יצרן (קורסה 1.2 85)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "CORSA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1398,
+    "seconds": 13.9,
+    "source": "רישוי רכב / נתון יצרן (קורסה 1.4 90)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "CORSA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1398,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (קורסה 1.4 100)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "CORSA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1199,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (קורסה F 1.2T 100)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "CORSA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (קורסה F GS-Line 1.2T 130)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "CORSA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (קורסה-e חשמלית 136)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "CORSA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1364,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (קורסה 1.4T 150)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "CORSA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 1598,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (קורסה OPC 192)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "CORSA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 207,
+    "cc": 1598,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (קורסה OPC 207)"
+  },
+  {
+    "make": "אופל",
+    "model": "קורסה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1199,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (קורסה 1.2T 100)"
+  },
+  {
+    "make": "אופל",
+    "model": "קורסה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (קורסה 1.2T 130)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "MOKKA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1364,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (מוקה 1.4T 140)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "MOKKA X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1364,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (מוקה X 1.4T 140)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "MOKKA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (מוקה חדשה 1.2T 130)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "MOKKA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (מוקה-e חשמלית 136)"
+  },
+  {
+    "make": "אופל",
+    "model": "מוקה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (מוקה 1.2T 130)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "CROSSLAND",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (קרוסלנד 1.2T 130)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "CROSSLAND X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1199,
+    "seconds": 11.8,
+    "source": "רישוי רכב / נתון יצרן (קרוסלנד X 1.2T 110)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "CROSSLAND X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (קרוסלנד X 1.2T 130)"
+  },
+  {
+    "make": "אופל",
+    "model": "קרוסלנד",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (קרוסלנד 1.2T 130)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "GRANDLAND",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (גרנדלנד 1.2T 130)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "GRANDLAND X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (גרנדלנד X 1.2T 130)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "GRANDLAND X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1598,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (גרנדלנד X 1.6T 165)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "GRANDLAND X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1598,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (גרנדלנד X 1.6T 180)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "GRANDLAND X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1499,
+    "seconds": 12.3,
+    "source": "רישוי רכב / נתון יצרן (גרנדלנד X דיזל 1.5 130)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "GRANDLAND",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 225,
+    "cc": 1598,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (גרנדלנד PHEV 225)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "GRANDLAND",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1598,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (גרנדלנד Hybrid4 300)"
+  },
+  {
+    "make": "אופל",
+    "model": "גרנדלנד",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (גרנדלנד 1.2T 130)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "ZAFIRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1364,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (זאפירה טורר 1.4T 140)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "ZAFIRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1598,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (זאפירה טורר 1.6T 170)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "ZAFIRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1796,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (זאפירה B 1.8 140)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "ZAFIRA LIFE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 1997,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (זאפירה לייף 2.0 דיזל 177)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "זאפירה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1364,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (זאפירה 1.4T 140)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "MERIVA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1364,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (מריבה 1.4T 120)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "MERIVA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1364,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (מריבה 1.4T 140)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "מריבה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1364,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (מריבה 1.4T 140)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "CASCADA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1598,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (קסקדה 1.6T 170)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "COMBO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1499,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (קומבו לייף דיזל 1.5 130)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "COMBO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (קומבו לייף 1.2T 130)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "COMBO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (קומבו-e חשמלי 136)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "קומבו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1499,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (קומבו דיזל 130)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "VIVARO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 1997,
+    "seconds": 10.0,
+    "source": "רישוי רכב / נתון יצרן (ויוארו 2.0 דיזל 177)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "VIVARO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 12.1,
+    "source": "רישוי רכב / נתון יצרן (ויוארו-e חשמלי 136)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "MOVANO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 2179,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (מובאנו 2.2 דיזל 140)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "FRONTERA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1199,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (פרונטרה הייבריד 100)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "FRONTERA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1199,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (פרונטרה הייבריד 136)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "FRONTERA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 113,
+    "cc": 0,
+    "seconds": 12.1,
+    "source": "רישוי רכב / נתון יצרן (פרונטרה חשמלית 113)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "VECTRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1796,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (וקטרה 1.8 140)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "VECTRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 175,
+    "cc": 1998,
+    "seconds": 9.4,
+    "source": "רישוי רכב / נתון יצרן (וקטרה 2.0T 175)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "VECTRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 255,
+    "cc": 2792,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (וקטרה OPC 255)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "OMEGA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 144,
+    "cc": 2198,
+    "seconds": 11.1,
+    "source": "רישוי רכב / נתון יצרן (אומגה 2.2 אוטומט 144)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "OMEGA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 3175,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (אומגה 3.2 V6 אוטומט 218)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "TIGRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1364,
+    "seconds": 12.4,
+    "source": "רישוי רכב / נתון יצרן (טיגרה טווינטופ 1.4 90)"
+  },
+  {
+    "make": "אופל גרמניה",
+    "model": "TIGRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1796,
+    "seconds": 9.4,
+    "source": "רישוי רכב / נתון יצרן (טיגרה טווינטופ 1.8 125)"
+  },
+  {
     "make": "אומודה סין",
     "model": "OMODA 7 PHEV",
     "yearStart": null,
@@ -522,6 +1312,16 @@
   {
     "make": "אבארט",
     "model": "124 SPIDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1368,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (124 Spider 1.4 MultiAir 170)"
+  },
+  {
+    "make": "אבארט",
+    "model": "124",
     "yearStart": null,
     "yearEnd": null,
     "hp": 170,
