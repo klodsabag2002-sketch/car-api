@@ -1,5 +1,1945 @@
 [
   {
+    "make": "ב מ וו גרמניה",
+    "model": "I5 M60 XDRIVE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 601,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (BMW i5 M60 xDrive 601)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "I5 EDRIVE40",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (BMW i5 eDrive40 340)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "I5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (BMW i5 340)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "I5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 601,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (BMW i5 M60 601)"
+  },
+  {
+    "make": "BMW",
+    "model": "I5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 6.0,
+    "source": "נתון יצרן (BMW i5 eDrive40)"
+  },
+  {
+    "make": "BMW",
+    "model": "I5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 601,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "נתון יצרן (BMW i5 M60)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "IX1 EDRIVE20",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (BMW iX1 eDrive20 204)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "IX1 XDRIVE30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 0,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (BMW iX1 xDrive30 313)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "IX1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (BMW iX1 204)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "IX1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 0,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (BMW iX1 313)"
+  },
+  {
+    "make": "BMW",
+    "model": "IX1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.6,
+    "source": "נתון יצרן (BMW iX1 eDrive20)"
+  },
+  {
+    "make": "BMW",
+    "model": "IX1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 0,
+    "seconds": 5.6,
+    "source": "נתון יצרן (BMW iX1 xDrive30)"
+  },
+  {
+    "make": "ב מ וו מקסיקו",
+    "model": "M2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 473,
+    "cc": 2993,
+    "seconds": 4.0,
+    "source": "רישוי רכב / נתון יצרן (BMW M2 473/480)"
+  },
+  {
+    "make": "ב מ וו מקסיקו",
+    "model": "M2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 460,
+    "cc": 2993,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (BMW M2 G87 460)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 410,
+    "cc": 2979,
+    "seconds": 4.2,
+    "source": "רישוי רכב / נתון יצרן (BMW M2 Competition 410)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 370,
+    "cc": 2979,
+    "seconds": 4.3,
+    "source": "רישוי רכב / נתון יצרן (BMW M2 F87 370)"
+  },
+  {
+    "make": "ב מ וו",
+    "model": "M2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 473,
+    "cc": 2993,
+    "seconds": 4.0,
+    "source": "רישוי רכב / נתון יצרן (BMW M2 473)"
+  },
+  {
+    "make": "BMW",
+    "model": "M2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 460,
+    "cc": 2993,
+    "seconds": 4.1,
+    "source": "נתון יצרן (BMW M2 460)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M3 COMPETITION",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 2993,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (BMW M3 Competition 510)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 2993,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (BMW M3 Competition 510)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 480,
+    "cc": 2993,
+    "seconds": 4.2,
+    "source": "רישוי רכב / נתון יצרן (BMW M3 ידני 480)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 431,
+    "cc": 2979,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (BMW M3 F80 431)"
+  },
+  {
+    "make": "BMW",
+    "model": "M3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 2993,
+    "seconds": 3.9,
+    "source": "נתון יצרן (BMW M3 Competition)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M4 COMPETITION",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 503,
+    "cc": 2993,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (BMW M4 Competition 503/510)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M4 COMPETITION",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 2993,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (BMW M4 Competition 510)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 503,
+    "cc": 2993,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (BMW M4 Competition 503/510)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 2993,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (BMW M4 Competition 510)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 480,
+    "cc": 2993,
+    "seconds": 4.2,
+    "source": "רישוי רכב / נתון יצרן (BMW M4 ידני 480)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 431,
+    "cc": 2979,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (BMW M4 F82 431)"
+  },
+  {
+    "make": "BMW",
+    "model": "M4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 2993,
+    "seconds": 3.9,
+    "source": "נתון יצרן (BMW M4 Competition)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 4395,
+    "seconds": 3.4,
+    "source": "רישוי רכב / נתון יצרן (BMW M5 F90 600)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 625,
+    "cc": 4395,
+    "seconds": 3.3,
+    "source": "רישוי רכב / נתון יצרן (BMW M5 Competition 625)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 560,
+    "cc": 4395,
+    "seconds": 4.3,
+    "source": "רישוי רכב / נתון יצרן (BMW M5 F10 560)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 727,
+    "cc": 4395,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (BMW M5 G90 פלאג-אין 727)"
+  },
+  {
+    "make": "BMW",
+    "model": "M5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 625,
+    "cc": 4395,
+    "seconds": 3.3,
+    "source": "נתון יצרן (BMW M5 Competition)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 560,
+    "cc": 4395,
+    "seconds": 4.2,
+    "source": "רישוי רכב / נתון יצרן (BMW M6 4.4 V8 560)"
+  },
+  {
+    "make": "ב מ וו",
+    "model": "M6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 560,
+    "cc": 4395,
+    "seconds": 4.2,
+    "source": "רישוי רכב / נתון יצרן (BMW M6 560)"
+  },
+  {
+    "make": "BMW",
+    "model": "M6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 560,
+    "cc": 4395,
+    "seconds": 4.2,
+    "source": "נתון יצרן (BMW M6 560)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 610,
+    "cc": 6592,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (BMW M760Li V12 610)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M760LI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 610,
+    "cc": 6592,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (BMW M760Li V12 610)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M760LI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 585,
+    "cc": 6592,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (BMW M760Li V12 585)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 571,
+    "cc": 4395,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (BMW M750e / 760i 571)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 4395,
+    "seconds": 3.3,
+    "source": "רישוי רכב / נתון יצרן (BMW M8 600)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 625,
+    "cc": 4395,
+    "seconds": 3.2,
+    "source": "רישוי רכב / נתון יצרן (BMW M8 Competition 625)"
+  },
+  {
+    "make": "BMW",
+    "model": "M8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 625,
+    "cc": 4395,
+    "seconds": 3.2,
+    "source": "נתון יצרן (BMW M8 Competition)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "X1 SDRIVE18I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1499,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (BMW X1 sDrive18i 140)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "X1 SDRIVE18I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1499,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (BMW X1 sDrive18i 136)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "X1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1499,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (BMW X1 140)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "X1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 1998,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (BMW X1 sDrive20i 192)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "X1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1998,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (BMW X1 xDrive23i 204)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "X1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1998,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (BMW X1 M35i 300)"
+  },
+  {
+    "make": "BMW",
+    "model": "X1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1499,
+    "seconds": 9.6,
+    "source": "נתון יצרן (BMW X1 sDrive18i)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "X2 SDRIVE 18I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1499,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (BMW X2 sDrive18i 136)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "X2 SDRIVE 18I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1499,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (BMW X2 sDrive18i 140)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "X2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1499,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (BMW X2 136)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "X2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1499,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (BMW X2 140)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "X2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 1998,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (BMW X2 sDrive20i 192)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "X2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1998,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (BMW X2 M35i 300)"
+  },
+  {
+    "make": "BMW",
+    "model": "X2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1499,
+    "seconds": 9.6,
+    "source": "נתון יצרן (BMW X2 136)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X3 XDRIVE20I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1998,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (BMW X3 xDrive20i 184)"
+  },
+  {
+    "make": "\"ב מ וו ארהב",
+    "model": "X3 XDRIVE20I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1998,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (BMW X3 xDrive20i 184)"
+  },
+  {
+    "make": "ב מ וו ארה\"ב",
+    "model": "X3 XDRIVE20I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1998,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (BMW X3 xDrive20i 184)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1998,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (BMW X3 184)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1998,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (BMW X3 xDrive30i 252)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 360,
+    "cc": 2998,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (BMW X3 M40i 360)"
+  },
+  {
+    "make": "BMW",
+    "model": "X3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1998,
+    "seconds": 8.3,
+    "source": "נתון יצרן (BMW X3 xDrive20i)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X3M",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 2993,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (BMW X3 M Competition 510)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X3 M",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 2993,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (BMW X3 M Competition 510)"
+  },
+  {
+    "make": "BMW",
+    "model": "X3 M",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 2993,
+    "seconds": 3.8,
+    "source": "נתון יצרן (BMW X3 M Competition)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1998,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (BMW X4 xDrive20i 184)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1998,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (BMW X4 xDrive30i 252)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 360,
+    "cc": 2998,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (BMW X4 M40i 360)"
+  },
+  {
+    "make": "BMW",
+    "model": "X4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1998,
+    "seconds": 8.3,
+    "source": "נתון יצרן (BMW X4 184)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X4 M COMPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 2993,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (BMW X4 M Competition 510)"
+  },
+  {
+    "make": "\"ב מ וו ארהב",
+    "model": "X4 M COMPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 2993,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (BMW X4 M Competition 510)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X4M",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 2993,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (BMW X4 M Competition 510)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X4 M",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 2993,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (BMW X4 M Competition 510)"
+  },
+  {
+    "make": "BMW",
+    "model": "X4 M",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 2993,
+    "seconds": 3.8,
+    "source": "נתון יצרן (BMW X4 M Competition)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X5 XDRIVE30D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2993,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (BMW X5 xDrive30d דיזל 286)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X5 XDRIVE30D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 2993,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (BMW X5 xDrive30d דיזל 265)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X5 XDRIVE45E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2998,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (BMW X5 xDrive45e פלאג-אין 286/394)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2993,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (BMW X5 30d 286)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2998,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (BMW X5 45e 286)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2998,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (BMW X5 xDrive40i 340)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 381,
+    "cc": 2998,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (BMW X5 xDrive40i 381)"
+  },
+  {
+    "make": "BMW",
+    "model": "X5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2998,
+    "seconds": 5.6,
+    "source": "נתון יצרן (BMW X5 xDrive45e)"
+  },
+  {
+    "make": "BMW",
+    "model": "X5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2993,
+    "seconds": 6.1,
+    "source": "נתון יצרן (BMW X5 xDrive30d)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X5M",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 625,
+    "cc": 4395,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (BMW X5 M Competition 625)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X5 M",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 625,
+    "cc": 4395,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (BMW X5 M Competition 625)"
+  },
+  {
+    "make": "BMW",
+    "model": "X5 M",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 625,
+    "cc": 4395,
+    "seconds": 3.8,
+    "source": "נתון יצרן (BMW X5 M Competition)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X6 MCOMPETITION",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 625,
+    "cc": 4395,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (BMW X6 M Competition 625)"
+  },
+  {
+    "make": "\"ב מ וו ארהב",
+    "model": "X6 MCOMPETITION",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 625,
+    "cc": 4395,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (BMW X6 M Competition 625)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X6 M",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 625,
+    "cc": 4395,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (BMW X6 M Competition 625)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X6M",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 625,
+    "cc": 4395,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (BMW X6 M Competition 625)"
+  },
+  {
+    "make": "BMW",
+    "model": "X6 M",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 625,
+    "cc": 4395,
+    "seconds": 3.8,
+    "source": "נתון יצרן (BMW X6 M Competition)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X6 XDRIVE 40I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 375,
+    "cc": 2998,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (BMW X6 xDrive40i 375/381)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X6 XDRIVE 40I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2998,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (BMW X6 xDrive40i 340)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 375,
+    "cc": 2998,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (BMW X6 375)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2998,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (BMW X6 340)"
+  },
+  {
+    "make": "BMW",
+    "model": "X6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2998,
+    "seconds": 5.5,
+    "source": "נתון יצרן (BMW X6 xDrive40i)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2998,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (BMW X7 xDrive40i 340)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 381,
+    "cc": 2998,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (BMW X7 xDrive40i 381)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 4395,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (BMW X7 M50i / M60i 530)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 2993,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (BMW X7 xDrive30d 265)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 352,
+    "cc": 2993,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (BMW X7 xDrive40d 352)"
+  },
+  {
+    "make": "BMW",
+    "model": "X7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 381,
+    "cc": 2998,
+    "seconds": 5.8,
+    "source": "נתון יצרן (BMW X7 xDrive40i)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "XM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 489,
+    "cc": 4395,
+    "seconds": 4.3,
+    "source": "רישוי רכב / נתון יצרן (BMW XM פלאג-אין 489/653)"
+  },
+  {
+    "make": "\"ב מ וו ארהב",
+    "model": "XM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 489,
+    "cc": 4395,
+    "seconds": 4.3,
+    "source": "רישוי רכב / נתון יצרן (BMW XM פלאג-אין 489/653)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "XM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 585,
+    "cc": 4395,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (BMW XM Label Red 585/748)"
+  },
+  {
+    "make": "BMW",
+    "model": "XM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 489,
+    "cc": 4395,
+    "seconds": 4.3,
+    "source": "נתון יצרן (BMW XM 653)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "Z3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 118,
+    "cc": 1895,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (BMW Z3 1.9 118)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "Z3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 2494,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (BMW Z3 2.5 192)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "Z3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 2979,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (BMW Z3 3.0 231)"
+  },
+  {
+    "make": "ב מ וו אוסטריה",
+    "model": "Z4 SDRIVE 20I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 1998,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (BMW Z4 sDrive20i 197)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "Z4 SDRIVE 20I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 1998,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (BMW Z4 sDrive20i 197)"
+  },
+  {
+    "make": "ב מ וו אוסטריה",
+    "model": "Z4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 1998,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (BMW Z4 197)"
+  },
+  {
+    "make": "ב מ וו אוסטריה",
+    "model": "Z4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 1998,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (BMW Z4 sDrive30i 258)"
+  },
+  {
+    "make": "ב מ וו אוסטריה",
+    "model": "Z4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2998,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (BMW Z4 M40i 340)"
+  },
+  {
+    "make": "BMW",
+    "model": "Z4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 1998,
+    "seconds": 6.6,
+    "source": "נתון יצרן (BMW Z4 sDrive20i)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "I3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (BMW i3 חשמלי 170)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "I3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (BMW i3s חשמלי 184)"
+  },
+  {
+    "make": "BMW",
+    "model": "I3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "נתון יצרן (BMW i3 170)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "I4 EDRIVE35",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (BMW i4 eDrive35 286)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "I4 EDRIVE40",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (BMW i4 eDrive40 340)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "I4 M50",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 544,
+    "cc": 0,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (BMW i4 M50 AWD 544)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "I4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (BMW i4 286)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "I4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (BMW i4 340)"
+  },
+  {
+    "make": "BMW",
+    "model": "I4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 6.0,
+    "source": "נתון יצרן (BMW i4 eDrive35)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "I7 XDRIVE60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 544,
+    "cc": 0,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (BMW i7 xDrive60 544)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "I7 M70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 659,
+    "cc": 0,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (BMW i7 M70 xDrive 659)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "I7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 544,
+    "cc": 0,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (BMW i7 544)"
+  },
+  {
+    "make": "BMW",
+    "model": "I7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 544,
+    "cc": 0,
+    "seconds": 4.7,
+    "source": "נתון יצרן (BMW i7 xDrive60)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "I8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 362,
+    "cc": 1499,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (BMW i8 פלאג-אין 362)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "I8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 374,
+    "cc": 1499,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (BMW i8 פלאג-אין 374)"
+  },
+  {
+    "make": "BMW",
+    "model": "I8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 362,
+    "cc": 1499,
+    "seconds": 4.4,
+    "source": "נתון יצרן (BMW i8 362)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "IX XDRIVE40",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 326,
+    "cc": 0,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (BMW iX xDrive40 326)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "IX XDRIVE50",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 523,
+    "cc": 0,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (BMW iX xDrive50 523)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "IX M60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 619,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (BMW iX M60 619)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "IX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 326,
+    "cc": 0,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (BMW iX 326)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "IX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 523,
+    "cc": 0,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (BMW iX 523)"
+  },
+  {
+    "make": "BMW",
+    "model": "IX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 326,
+    "cc": 0,
+    "seconds": 6.1,
+    "source": "נתון יצרן (BMW iX xDrive40)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "IX2 EDRIVE20",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (BMW iX2 eDrive20 204)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "IX2 XDRIVE30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 0,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (BMW iX2 xDrive30 313)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "IX2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (BMW iX2 204)"
+  },
+  {
+    "make": "BMW",
+    "model": "IX2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.6,
+    "source": "נתון יצרן (BMW iX2 eDrive20)"
+  },
+  {
+    "make": "ב מ וו סין",
+    "model": "IX3 ELECTRIC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (BMW iX3 חשמלי 286)"
+  },
+  {
+    "make": "ב מ וו סין",
+    "model": "IX3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (BMW iX3 חשמלי 286)"
+  },
+  {
+    "make": "BMW",
+    "model": "IX3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 6.8,
+    "source": "נתון יצרן (BMW iX3 286)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "118I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1499,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (BMW 118i 136)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "118I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1499,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (BMW 118i 140)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "120I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 178,
+    "cc": 1998,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (BMW 120i 178)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M135I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 306,
+    "cc": 1998,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (BMW M135i xDrive 306)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M140I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2998,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (BMW M140i 340)"
+  },
+  {
+    "make": "BMW",
+    "model": "118I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1499,
+    "seconds": 8.9,
+    "source": "נתון יצרן (BMW 118i 136)"
+  },
+  {
+    "make": "ב מ וו מקסיקו",
+    "model": "218I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1998,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (BMW 218i Coupe / Gran Coupe 156)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "218I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1499,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (BMW 218i 140)"
+  },
+  {
+    "make": "ב מ וו מקסיקו",
+    "model": "220I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1998,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (BMW 220i 184)"
+  },
+  {
+    "make": "ב מ וו מקסיקו",
+    "model": "M240I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 374,
+    "cc": 2998,
+    "seconds": 4.3,
+    "source": "רישוי רכב / נתון יצרן (BMW M240i xDrive 374)"
+  },
+  {
+    "make": "BMW",
+    "model": "218I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1998,
+    "seconds": 8.7,
+    "source": "נתון יצרן (BMW 218i 156)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "318I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1998,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (BMW 318i 156)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "320I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1998,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (BMW 320i 184)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "330I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 1998,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (BMW 330i 258)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "330E IPERFORMAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1998,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (BMW 330e iPerformance 252)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "330E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1998,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (BMW 330e 252)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "330E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 292,
+    "cc": 1998,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (BMW 330e 292)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M340I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 374,
+    "cc": 2998,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (BMW M340i xDrive 374)"
+  },
+  {
+    "make": "BMW",
+    "model": "330E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1998,
+    "seconds": 6.1,
+    "source": "נתון יצרן (BMW 330e 252)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "420I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1998,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (BMW 420i Coupe 184)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "430I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 1998,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (BMW 430i Coupe 258)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "440I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 326,
+    "cc": 2998,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (BMW 440i Coupe 326)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M440I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 374,
+    "cc": 2998,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (BMW M440i xDrive 374)"
+  },
+  {
+    "make": "BMW",
+    "model": "440I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 326,
+    "cc": 2998,
+    "seconds": 5.0,
+    "source": "נתון יצרן (BMW 440i 326)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "520I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1998,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (BMW 520i 184)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "530I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1998,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (BMW 530i 252)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "530E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1998,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (BMW 530e פלאג-אין 252)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "530E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 292,
+    "cc": 1998,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (BMW 530e פלאג-אין 292)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "540I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2998,
+    "seconds": 5.1,
+    "source": "רישוי רכב / נתון יצרן (BMW 540i 340)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M550I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 4395,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (BMW M550i xDrive 530)"
+  },
+  {
+    "make": "BMW",
+    "model": "530I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1998,
+    "seconds": 6.2,
+    "source": "נתון יצרן (BMW 530i 252)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "640I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 2979,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (BMW 640i 3.0T 320)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "640I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2998,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (BMW 640i Gran Turismo 340)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "650I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 450,
+    "cc": 4395,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (BMW 650i 450)"
+  },
+  {
+    "make": "BMW",
+    "model": "640I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 2979,
+    "seconds": 5.4,
+    "source": "נתון יצרן (BMW 640i 320)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "730I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 1998,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (BMW 730i 265)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "740I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2998,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (BMW 740i 340)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "745E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2998,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (BMW 745e פלאג-אין 286/394)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "750E XDRIVE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 2998,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (BMW 750e xDrive פלאג-אין 313/489)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "750E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 2998,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (BMW 750e xDrive)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "750I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 4395,
+    "seconds": 4.0,
+    "source": "רישוי רכב / נתון יצרן (BMW 750i xDrive 530)"
+  },
+  {
+    "make": "BMW",
+    "model": "750E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 2998,
+    "seconds": 4.8,
+    "source": "נתון יצרן (BMW 750e xDrive)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "840I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2998,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (BMW 840i Coupe 340)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "850I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 4395,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (BMW M850i xDrive 530)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M850I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 4395,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (BMW M850i xDrive 530)"
+  },
+  {
+    "make": "BMW",
+    "model": "840I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2998,
+    "seconds": 5.0,
+    "source": "נתון יצרן (BMW 840i 340)"
+  },
+  {
     "make": "אקספנג סין",
     "model": "G6",
     "yearStart": null,
@@ -10,26 +1950,6 @@
     "source": "רישוי רכב / נתון יצרן (אקספנג G6 Standard Range 258)"
   },
   {
-    "make": "אקספנג",
-    "model": "G6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 258,
-    "cc": 0,
-    "seconds": 6.6,
-    "source": "רישוי רכב / נתון יצרן (אקספנג G6 Standard Range 258)"
-  },
-  {
-    "make": "XPENG",
-    "model": "G6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 258,
-    "cc": 0,
-    "seconds": 6.6,
-    "source": "נתון יצרן (XPENG G6 Standard Range 258)"
-  },
-  {
     "make": "אקספנג סין",
     "model": "G6",
     "yearStart": null,
@@ -38,26 +1958,6 @@
     "cc": 0,
     "seconds": 6.2,
     "source": "רישוי רכב / נתון יצרן (אקספנג G6 Long Range 286)"
-  },
-  {
-    "make": "אקספנג",
-    "model": "G6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 286,
-    "cc": 0,
-    "seconds": 6.2,
-    "source": "רישוי רכב / נתון יצרן (אקספנג G6 Long Range 286)"
-  },
-  {
-    "make": "XPENG",
-    "model": "G6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 286,
-    "cc": 0,
-    "seconds": 6.2,
-    "source": "נתון יצרן (XPENG G6 Long Range 286)"
   },
   {
     "make": "אקספנג סין",
@@ -74,20 +1974,20 @@
     "model": "G6",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 476,
+    "hp": 258,
     "cc": 0,
-    "seconds": 4.1,
-    "source": "רישוי רכב / נתון יצרן (אקספנג G6 Performance AWD 476)"
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (אקספנג G6 Standard Range 258)"
   },
   {
     "make": "XPENG",
     "model": "G6",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 476,
+    "hp": 258,
     "cc": 0,
-    "seconds": 4.1,
-    "source": "נתון יצרן (XPENG G6 Performance AWD 476)"
+    "seconds": 6.6,
+    "source": "נתון יצרן (XPENG G6 258)"
   },
   {
     "make": "אקספנג סין",
@@ -98,26 +1998,6 @@
     "cc": 0,
     "seconds": 6.4,
     "source": "רישוי רכב / נתון יצרן (אקספנג G9 RWD 313)"
-  },
-  {
-    "make": "אקספנג",
-    "model": "G9",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 313,
-    "cc": 0,
-    "seconds": 6.4,
-    "source": "רישוי רכב / נתון יצרן (אקספנג G9 RWD 313)"
-  },
-  {
-    "make": "XPENG",
-    "model": "G9",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 313,
-    "cc": 0,
-    "seconds": 6.4,
-    "source": "נתון יצרן (XPENG G9 RWD 313)"
   },
   {
     "make": "אקספנג סין",
@@ -134,20 +2014,20 @@
     "model": "G9",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 551,
+    "hp": 313,
     "cc": 0,
-    "seconds": 3.9,
-    "source": "רישוי רכב / נתון יצרן (אקספנג G9 Performance AWD 551)"
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (אקספנג G9 RWD 313)"
   },
   {
     "make": "XPENG",
     "model": "G9",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 551,
+    "hp": 313,
     "cc": 0,
-    "seconds": 3.9,
-    "source": "נתון יצרן (XPENG G9 Performance AWD 551)"
+    "seconds": 6.4,
+    "source": "נתון יצרן (XPENG G9 313)"
   },
   {
     "make": "אקספנג סין",
@@ -168,46 +2048,6 @@
     "cc": 0,
     "seconds": 6.4,
     "source": "רישוי רכב / נתון יצרן (אקספנג P7i Long Range 276)"
-  },
-  {
-    "make": "אקספנג",
-    "model": "P7I",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 276,
-    "cc": 0,
-    "seconds": 6.4,
-    "source": "רישוי רכב / נתון יצרן (אקספנג P7i Long Range 276)"
-  },
-  {
-    "make": "אקספנג",
-    "model": "P7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 276,
-    "cc": 0,
-    "seconds": 6.4,
-    "source": "רישוי רכב / נתון יצרן (אקספנג P7i Long Range 276)"
-  },
-  {
-    "make": "XPENG",
-    "model": "P7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 276,
-    "cc": 0,
-    "seconds": 6.4,
-    "source": "נתון יצרן (XPENG P7i RWD 276)"
-  },
-  {
-    "make": "XPENG",
-    "model": "P7I",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 276,
-    "cc": 0,
-    "seconds": 6.4,
-    "source": "נתון יצרן (XPENG P7i RWD 276)"
   },
   {
     "make": "אקספנג סין",
@@ -217,77 +2057,37 @@
     "hp": 266,
     "cc": 0,
     "seconds": 6.7,
-    "source": "רישוי רכב / נתון יצרן (אקספנג P7 דור ראשון RWD 266)"
+    "source": "רישוי רכב / נתון יצרן (אקספנג P7 RWD 266)"
   },
   {
     "make": "אקספנג",
     "model": "P7",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 266,
+    "hp": 276,
     "cc": 0,
-    "seconds": 6.7,
-    "source": "רישוי רכב / נתון יצרן (אקספנג P7 דור ראשון RWD 266)"
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (אקספנג P7i 276)"
   },
   {
     "make": "XPENG",
     "model": "P7",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 266,
+    "hp": 276,
     "cc": 0,
-    "seconds": 6.7,
-    "source": "נתון יצרן (XPENG P7 RWD 266)"
-  },
-  {
-    "make": "אקספנג סין",
-    "model": "P7I",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 473,
-    "cc": 0,
-    "seconds": 4.1,
-    "source": "רישוי רכב / נתון יצרן (אקספנג P7i Performance AWD 473)"
-  },
-  {
-    "make": "אקספנג סין",
-    "model": "P7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 473,
-    "cc": 0,
-    "seconds": 4.1,
-    "source": "רישוי רכב / נתון יצרן (אקספנג P7i Performance AWD 473)"
-  },
-  {
-    "make": "אקספנג",
-    "model": "P7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 473,
-    "cc": 0,
-    "seconds": 4.1,
-    "source": "רישוי רכב / נתון יצרן (אקספנג P7i Performance AWD 473)"
-  },
-  {
-    "make": "XPENG",
-    "model": "P7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 473,
-    "cc": 0,
-    "seconds": 4.1,
-    "source": "נתון יצרן (XPENG P7i AWD 473)"
+    "seconds": 6.4,
+    "source": "נתון יצרן (XPENG P7i 276)"
   },
   {
     "make": "XPENG",
     "model": "P7I",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 473,
+    "hp": 276,
     "cc": 0,
-    "seconds": 4.1,
-    "source": "נתון יצרן (XPENG P7i AWD 473)"
+    "seconds": 6.4,
+    "source": "נתון יצרן (XPENG P7i 276)"
   },
   {
     "make": "אקספנג סין",
@@ -297,7 +2097,7 @@
     "hp": 245,
     "cc": 0,
     "seconds": 6.8,
-    "source": "רישוי רכב / נתון יצרן (אקספנג P7+ RWD 245)"
+    "source": "רישוי רכב / נתון יצרן (אקספנג P7+ 245)"
   },
   {
     "make": "אקספנג סין",
@@ -307,47 +2107,7 @@
     "hp": 313,
     "cc": 0,
     "seconds": 5.9,
-    "source": "רישוי רכב / נתון יצרן (אקספנג P7+ RWD 313)"
-  },
-  {
-    "make": "אקספנג",
-    "model": "P7+",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 245,
-    "cc": 0,
-    "seconds": 6.8,
-    "source": "רישוי רכב / נתון יצרן (אקספנג P7+ RWD 245)"
-  },
-  {
-    "make": "אקספנג",
-    "model": "P7+",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 313,
-    "cc": 0,
-    "seconds": 5.9,
-    "source": "רישוי רכב / נתון יצרן (אקספנג P7+ RWD 313)"
-  },
-  {
-    "make": "XPENG",
-    "model": "P7+",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 245,
-    "cc": 0,
-    "seconds": 6.8,
-    "source": "נתון יצרן (XPENG P7+ RWD 245)"
-  },
-  {
-    "make": "XPENG",
-    "model": "P7+",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 313,
-    "cc": 0,
-    "seconds": 5.9,
-    "source": "נתון יצרן (XPENG P7+ RWD 313)"
+    "source": "רישוי רכב / נתון יצרן (אקספנג P7+ 313)"
   },
   {
     "make": "אקספנג סין",
@@ -357,37 +2117,7 @@
     "hp": 197,
     "cc": 0,
     "seconds": 8.6,
-    "source": "רישוי רכב / נתון יצרן (אקספנג G3 / G3i חשמלי 197)"
-  },
-  {
-    "make": "אקספנג סין",
-    "model": "G3I",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 197,
-    "cc": 0,
-    "seconds": 8.6,
-    "source": "רישוי רכב / נתון יצרן (אקספנג G3i חשמלי 197)"
-  },
-  {
-    "make": "אקספנג",
-    "model": "G3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 197,
-    "cc": 0,
-    "seconds": 8.6,
-    "source": "רישוי רכב / נתון יצרן (אקספנג G3 חשמלי 197)"
-  },
-  {
-    "make": "XPENG",
-    "model": "G3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 197,
-    "cc": 0,
-    "seconds": 8.6,
-    "source": "נתון יצרן (XPENG G3 197)"
+    "source": "רישוי רכב / נתון יצרן (אקספנג G3 197)"
   },
   {
     "make": "אסטון מרטין אנ",
@@ -398,16 +2128,6 @@
     "cc": 3982,
     "seconds": 4.5,
     "source": "רישוי רכב / נתון יצרן (אסטון מרטין DBX 4.0 V8 542)"
-  },
-  {
-    "make": "אסטון מרטין אנ",
-    "model": "DBX",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 550,
-    "cc": 3982,
-    "seconds": 4.5,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DBX 4.0 V8 550)"
   },
   {
     "make": "אסטון מרטין אנ",
@@ -420,36 +2140,6 @@
     "source": "רישוי רכב / נתון יצרן (אסטון מרטין DBX 707 V8)"
   },
   {
-    "make": "אסטון מרטין",
-    "model": "DBX",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 542,
-    "cc": 3982,
-    "seconds": 4.5,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DBX 4.0 V8 542)"
-  },
-  {
-    "make": "Aston Martin",
-    "model": "DBX",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 542,
-    "cc": 3982,
-    "seconds": 4.5,
-    "source": "נתון יצרן (Aston Martin DBX V8)"
-  },
-  {
-    "make": "Aston Martin",
-    "model": "DBX",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 707,
-    "cc": 3982,
-    "seconds": 3.3,
-    "source": "נתון יצרן (Aston Martin DBX 707)"
-  },
-  {
     "make": "אסטון מרטין אנ",
     "model": "VANTAGE",
     "yearStart": null,
@@ -458,96 +2148,6 @@
     "cc": 3982,
     "seconds": 3.6,
     "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנטאג' 4.0 V8 503/510)"
-  },
-  {
-    "make": "אסטון מרטין אנ",
-    "model": "VANTAGE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 510,
-    "cc": 3982,
-    "seconds": 3.6,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנטאג' 4.0 V8 510)"
-  },
-  {
-    "make": "אסטון מרטין אנ",
-    "model": "ואנטאג",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 503,
-    "cc": 3982,
-    "seconds": 3.6,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנטאג' 4.0 V8 503)"
-  },
-  {
-    "make": "אסטון מרטין אנ",
-    "model": "VANTAGE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 535,
-    "cc": 3982,
-    "seconds": 3.5,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנטאג' F1 Edition 535)"
-  },
-  {
-    "make": "אסטון מרטין אנ",
-    "model": "VANTAGE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 665,
-    "cc": 3982,
-    "seconds": 3.5,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנטאג' דור חדש 665)"
-  },
-  {
-    "make": "אסטון מרטין אנ",
-    "model": "VANTAGE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 426,
-    "cc": 4735,
-    "seconds": 4.8,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנטאג' 4.7 V8 426/436)"
-  },
-  {
-    "make": "אסטון מרטין אנ",
-    "model": "VANTAGE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 517,
-    "cc": 5935,
-    "seconds": 4.2,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנטאג' V12 517)"
-  },
-  {
-    "make": "אסטון מרטין",
-    "model": "ואנטאג",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 503,
-    "cc": 3982,
-    "seconds": 3.6,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנטאג' 503)"
-  },
-  {
-    "make": "Aston Martin",
-    "model": "VANTAGE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 503,
-    "cc": 3982,
-    "seconds": 3.6,
-    "source": "נתון יצרן (Aston Martin Vantage 4.0 V8)"
-  },
-  {
-    "make": "אסטון מרטין אנ",
-    "model": "DB11",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 503,
-    "cc": 3982,
-    "seconds": 4.0,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB11 4.0 V8 503/510)"
   },
   {
     "make": "אסטון מרטין אנ",
@@ -564,16 +2164,6 @@
     "model": "DB11",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 528,
-    "cc": 3982,
-    "seconds": 4.0,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB11 4.0 V8 528)"
-  },
-  {
-    "make": "אסטון מרטין אנ",
-    "model": "DB11",
-    "yearStart": null,
-    "yearEnd": null,
     "hp": 608,
     "cc": 5204,
     "seconds": 3.9,
@@ -581,46 +2171,6 @@
   },
   {
     "make": "אסטון מרטין אנ",
-    "model": "DB11",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 639,
-    "cc": 5204,
-    "seconds": 3.7,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB11 AMR V12 639)"
-  },
-  {
-    "make": "אסטון מרטין",
-    "model": "DB11",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 510,
-    "cc": 3982,
-    "seconds": 4.0,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB11 V8)"
-  },
-  {
-    "make": "Aston Martin",
-    "model": "DB11",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 510,
-    "cc": 3982,
-    "seconds": 4.0,
-    "source": "נתון יצרן (Aston Martin DB11 V8)"
-  },
-  {
-    "make": "Aston Martin",
-    "model": "DB11",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 608,
-    "cc": 5204,
-    "seconds": 3.9,
-    "source": "נתון יצרן (Aston Martin DB11 V12)"
-  },
-  {
-    "make": "אסטון מרטין אנ",
     "model": "DB12",
     "yearStart": null,
     "yearEnd": null,
@@ -628,46 +2178,6 @@
     "cc": 3982,
     "seconds": 3.6,
     "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB12 4.0 V8 680)"
-  },
-  {
-    "make": "אסטון מרטין",
-    "model": "DB12",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 680,
-    "cc": 3982,
-    "seconds": 3.6,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB12 4.0 V8 680)"
-  },
-  {
-    "make": "Aston Martin",
-    "model": "DB12",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 680,
-    "cc": 3982,
-    "seconds": 3.6,
-    "source": "נתון יצרן (Aston Martin DB12 680)"
-  },
-  {
-    "make": "אסטון מרטין אנ",
-    "model": "DB9",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 450,
-    "cc": 5935,
-    "seconds": 5.1,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB9 5.9 V12 450)"
-  },
-  {
-    "make": "אסטון מרטין אנ",
-    "model": "DB9",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 477,
-    "cc": 5935,
-    "seconds": 4.8,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB9 5.9 V12 477)"
   },
   {
     "make": "אסטון מרטין אנ",
@@ -681,66 +2191,6 @@
   },
   {
     "make": "אסטון מרטין אנ",
-    "model": "DB9",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 547,
-    "cc": 5935,
-    "seconds": 4.5,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB9 GT 547)"
-  },
-  {
-    "make": "אסטון מרטין",
-    "model": "DB9",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 517,
-    "cc": 5935,
-    "seconds": 4.6,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB9 517)"
-  },
-  {
-    "make": "Aston Martin",
-    "model": "DB9",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 517,
-    "cc": 5935,
-    "seconds": 4.6,
-    "source": "נתון יצרן (Aston Martin DB9 5.9 V12)"
-  },
-  {
-    "make": "אסטון מרטין אנ",
-    "model": "DBS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 725,
-    "cc": 5204,
-    "seconds": 3.4,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DBS Superleggera V12 725)"
-  },
-  {
-    "make": "אסטון מרטין אנ",
-    "model": "DBS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 770,
-    "cc": 5204,
-    "seconds": 3.2,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DBS 770 Ultimate 770)"
-  },
-  {
-    "make": "אסטון מרטין אנ",
-    "model": "DBS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 517,
-    "cc": 5935,
-    "seconds": 4.3,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DBS דור קודם 5.9 V12 517)"
-  },
-  {
-    "make": "אסטון מרטין",
     "model": "DBS",
     "yearStart": null,
     "yearEnd": null,
@@ -748,26 +2198,6 @@
     "cc": 5204,
     "seconds": 3.4,
     "source": "רישוי רכב / נתון יצרן (אסטון מרטין DBS Superleggera 725)"
-  },
-  {
-    "make": "Aston Martin",
-    "model": "DBS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 725,
-    "cc": 5204,
-    "seconds": 3.4,
-    "source": "נתון יצרן (Aston Martin DBS Superleggera)"
-  },
-  {
-    "make": "אסטון מרטין אנ",
-    "model": "RAPIDE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 477,
-    "cc": 5935,
-    "seconds": 5.2,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ראפיד 5.9 V12 477)"
   },
   {
     "make": "אסטון מרטין אנ",
@@ -781,36 +2211,6 @@
   },
   {
     "make": "אסטון מרטין אנ",
-    "model": "RAPIDE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 603,
-    "cc": 5935,
-    "seconds": 4.2,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ראפיד AMR 603)"
-  },
-  {
-    "make": "אסטון מרטין",
-    "model": "Rapide",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 558,
-    "cc": 5935,
-    "seconds": 4.4,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ראפיד S 558)"
-  },
-  {
-    "make": "Aston Martin",
-    "model": "Rapide",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 558,
-    "cc": 5935,
-    "seconds": 4.4,
-    "source": "נתון יצרן (Aston Martin Rapide S)"
-  },
-  {
-    "make": "אסטון מרטין אנ",
     "model": "VANQUISH",
     "yearStart": null,
     "yearEnd": null,
@@ -818,55 +2218,5 @@
     "cc": 5935,
     "seconds": 4.1,
     "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנקוויש 5.9 V12 573)"
-  },
-  {
-    "make": "אסטון מרטין אנ",
-    "model": "VANQUISH",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 603,
-    "cc": 5935,
-    "seconds": 3.5,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנקוויש S 5.9 V12 603)"
-  },
-  {
-    "make": "אסטון מרטין אנ",
-    "model": "VANQUISH",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 835,
-    "cc": 5204,
-    "seconds": 3.3,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנקוויש דור חדש V12 835)"
-  },
-  {
-    "make": "אסטון מרטין אנ",
-    "model": "ואנקוויש",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 573,
-    "cc": 5935,
-    "seconds": 4.1,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנקוויש 573)"
-  },
-  {
-    "make": "אסטון מרטין",
-    "model": "ואנקוויש",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 573,
-    "cc": 5935,
-    "seconds": 4.1,
-    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנקוויש 573)"
-  },
-  {
-    "make": "Aston Martin",
-    "model": "Vanquish",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 573,
-    "cc": 5935,
-    "seconds": 4.1,
-    "source": "נתון יצרן (Aston Martin Vanquish 5.9 V12)"
   }
 ]
