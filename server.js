@@ -14,18 +14,30 @@ const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";      // היסטור�
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";    // היסטוריית כלי רכב פרטיים (2): בעלויות
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";     // רכבים עם תג חניה לנכה
 
-// ---------- תאוצה 0-100 מקובץ ידני ----------
+// ---------- תאוצה 0-100 מקובץ ידני (קובץ 1 + קובץ 2) ----------
 const ACCEL_FILE = path.join(__dirname, "acceleration.json");
+const ACCEL_FILE2 = path.join(__dirname, "acceleration2.json");
 let accelTable = [];
+
 try {
-    accelTable = JSON.parse(fs.readFileSync(ACCEL_FILE, "utf8"));
-    if (!Array.isArray(accelTable)) accelTable = [];
+    const data1 = JSON.parse(fs.readFileSync(ACCEL_FILE, "utf8"));
+    if (Array.isArray(data1)) accelTable = accelTable.concat(data1);
 } catch (e) {
-    accelTable = [];
+    // אם לא קיים או שגיאה בקובץ 1, ממשיך
+}
+
+try {
+    if (fs.existsSync(ACCEL_FILE2)) {
+        const data2 = JSON.parse(fs.readFileSync(ACCEL_FILE2, "utf8"));
+        if (Array.isArray(data2)) accelTable = accelTable.concat(data2);
+    }
+} catch (e) {
+    // אם לא קיים או שגיאה בקובץ 2, ממשיך
 }
 
 // שמות יצרנים בעברית מהרישוי -> שם באנגלית כמו בקובץ התאוצה
 const HE_MAKE_ALIASES = {
+    "אבארט": "Abarth",
     "קופרה": "Cupra",
     "סיאט": "Seat",
     "סקודה": "Skoda",
