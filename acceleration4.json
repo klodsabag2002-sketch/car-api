@@ -1,5 +1,85 @@
 [
   {
+    "make": "אל אי וי סי",
+    "model": "TX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 0,
+    "seconds": 13.2,
+    "source": "רישוי רכב / נתון יצרן (LEVC TX מונית חשמלית 150)"
+  },
+  {
+    "make": "אל.אי.וי.סי",
+    "model": "TX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 0,
+    "seconds": 13.2,
+    "source": "רישוי רכב / נתון יצרן (LEVC TX מונית חשמלית 150)"
+  },
+  {
+    "make": "LEVC",
+    "model": "TX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 0,
+    "seconds": 13.2,
+    "source": "נתון יצרן (LEVC TX EV 150)"
+  },
+  {
+    "make": "אל אי וי סי",
+    "model": "TX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1477,
+    "seconds": 13.2,
+    "source": "רישוי רכב / נתון יצרן (LEVC TX מאריך טווח 150)"
+  },
+  {
+    "make": "אל אי וי סי",
+    "model": "VN5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 0,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (LEVC VN5 מסחרי חשמלי 150)"
+  },
+  {
+    "make": "אל.אי.וי.סי",
+    "model": "VN5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 0,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (LEVC VN5 מסחרי חשמלי 150)"
+  },
+  {
+    "make": "אל אי וי סי",
+    "model": "VN5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1477,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (LEVC VN5 מאריך טווח 150)"
+  },
+  {
+    "make": "LEVC",
+    "model": "VN5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 0,
+    "seconds": 13.5,
+    "source": "נתון יצרן (LEVC VN5 EV 150)"
+  },
+  {
     "make": "איסוזו תאילנד",
     "model": "PICK-UP",
     "yearStart": null,
