@@ -8,42 +8,24 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-const CAR_REGISTRY_ID = "053cea08-09bc-40ec-8f7a-156f0677aff3";
-const MODELS_ID = "142afde2-6228-49f9-8a29-9b6c3a0cbe40";
-const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";
-const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";
-const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";
+const CAR_REGISTRY_ID = "053cea08-09bc-40ec-8f7a-156f0677aff3"; // מאגר רישוי רכבים
+const MODELS_ID = "142afde2-6228-49f9-8a29-9b6c3a0cbe40";       // תוצרים ודגמים
+const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";      // היסטוריית כלי רכב פרטיים (1)
+const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";    // היסטוריית כלי רכב פרטיים (2): בעלויות
+const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";     // רכבים עם תג חניה לנכה
 
-// ---------- טעינת קובצי תאוצה ----------
-const ACCEL_FILES = [
-    path.join(__dirname, "acceleration.json"),
-    path.join(__dirname, "acceleration2.json")
-];
-
+// ---------- תאוצה 0-100 מקובץ ידני ----------
+const ACCEL_FILE = path.join(__dirname, "acceleration.json");
 let accelTable = [];
-
-for (let i = 0; i < ACCEL_FILES.length; i++) {
-    const filePath = ACCEL_FILES[i];
-    try {
-        if (fs.existsSync(filePath)) {
-            const raw = fs.readFileSync(filePath, "utf8");
-            const data = JSON.parse(raw);
-            if (Array.isArray(data)) {
-                accelTable = accelTable.concat(data);
-                console.log(`[DATA] Loaded: ${path.basename(filePath)} (${data.length} rows)`);
-            }
-        }
-    } catch (err) {
-        console.error(`[DATA ERROR] Failed to load ${path.basename(filePath)}:`, err.message);
-    }
+try {
+    accelTable = JSON.parse(fs.readFileSync(ACCEL_FILE, "utf8"));
+    if (!Array.isArray(accelTable)) accelTable = [];
+} catch (e) {
+    accelTable = [];
 }
 
-console.log(`[DATA SUMMARY] Total acceleration rows: ${accelTable.length}`);
-
-// שמות יצרנים בעברית מהרישוי -> שם באנגלית
+// שמות יצרנים בעברית מהרישוי -> שם באנגלית כמו בקובץ התאוצה
 const HE_MAKE_ALIASES = {
-    "אבארט": "Abarth",
-    "אודי": "Audi",
     "קופרה": "Cupra",
     "סיאט": "Seat",
     "סקודה": "Skoda",
@@ -64,8 +46,7 @@ function lookupAccel(makeTexts, modelTexts, year, hp, cc) {
     const models = modelTexts.map(norm).filter(Boolean);
     const y = Number(year);
 
-    for (let i = 0; i < accelTable.length; i++) {
-        const r = accelTable[i];
+    for (const r of accelTable) {
         const rMake = norm(r.make);
         const rModel = norm(r.model);
         if (!makes.some(m => m.includes(rMake))) continue;
@@ -204,8 +185,7 @@ async function findModelRow(car) {
         attempts.push({ degem_nm: String(car.degem_nm), shnat_yitzur: year });
     }
 
-    for (let i = 0; i < attempts.length; i++) {
-        const filters = attempts[i];
+    for (const filters of attempts) {
         const rows = await searchDatastore(MODELS_ID, filters, 100);
         if (rows.length === 0) continue;
         return rows.find(r => toNumber(r.koah_sus) != null) || rows[0];
@@ -249,6 +229,7 @@ app.get('/api/car/:plate', async (req, res) => {
             : (history?.origin ?? null);
         const currentOwnership = registryOwnership || historyOwnership;
 
+        // שמות היצרן: בעברית מהרישוי, ובאנגלית לפי מיפוי, כדי להתאים לקובץ התאוצה
         const makeTexts = [manufacturer, car.tozeret_nm, car.kinuy_mishari, car.sug_degem].filter(Boolean);
         for (const [he, en] of Object.entries(HE_MAKE_ALIASES)) {
             if (String(manufacturer).includes(he) || String(car.tozeret_nm || "").includes(he)) {
@@ -286,4 +267,67 @@ app.get('/api/car/:plate', async (req, res) => {
                 engineCc,
                 horsepower: hp,
                 acceleration0to100: acceleration ? acceleration.seconds : null,
-                
+                accelerationSource: acceleration ? acceleration.source : null,
+                testExpiry,
+                testValid: testStatus(testExpiry),
+                ownership: currentOwnership,
+                firstRegistration: history?.firstRegistration ?? null,
+                changes: history?.changes ?? [],
+                owners: ownershipList.length || null,
+                disabled,
+                kmSinceTest: history?.kmSinceTest ?? null
+            }
+        });
+    } catch (error) {
+        console.error(`[SEARCH LOG] 💥 שגיאה בחיפוש מספר ${plate}:`, error);
+        res.status(500).json({ success: false, error: "שגיאה בשליפה" });
+    }
+});
+
+app.get('/api/history/:plate', async (req, res) => {
+    const plate = req.params.plate.replace(/\D/g, "");
+    try {
+        const [historyRaw, ownershipList] = await Promise.all([
+            fetchHistoryRecord(plate),
+            fetchOwnershipRows(plate)
+        ]);
+        const history = buildHistory(historyRaw);
+        if (!history && ownershipList.length === 0) {
+            return res.json({ success: false, message: "לא נמצאה היסטוריה לרכב זה" });
+        }
+        res.json({ success: true, history: history || {}, ownershipList });
+    } catch (e) {
+        res.status(500).json({ success: false, message: "שגיאה בשליפת ההיסטוריה" });
+    }
+});
+
+app.get('/api/debug/:plate', async (req, res) => {
+    try {
+        const car = await fetchCarRecord(req.params.plate);
+        if (!car) return res.json({ success: false, message: "לא נמצא" });
+        const row = await findModelRow(car);
+        const hist = await fetchHistoryRecord(req.params.plate);
+        const own = await fetchOwnershipRows(req.params.plate);
+        const disabledSample = await searchDatastore(DISABLED_ID, null, 1);
+        const disabledMatch = await checkDisabled(req.params.plate);
+        res.json({
+            success: true,
+            car_fields: Object.keys(car),
+            car,
+            model_row: row,
+            history: hist,
+            ownership: own,
+            disabled_sample_fields: disabledSample[0] ? Object.keys(disabledSample[0]) : [],
+            disabled_sample: disabledSample[0] || null,
+            disabled_match: disabledMatch,
+            accel_table_rows: accelTable.length
+        });
+    } catch (error) {
+        console.error("שגיאה:", error);
+        res.status(500).json({ success: false, error: error.message });
+    }
+});
+
+app.listen(PORT, () => {
+    console.log(`השרת רץ בפורט ${PORT}`);
+});
