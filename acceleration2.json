@@ -1,5 +1,85 @@
 [
   {
+    "make": "אופל פולין",
+    "model": "BERLINA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1598,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (אופל אסטרה ברלינה 1.6 CDTI דיזל 136)"
+  },
+  {
+    "make": "אופל פולין",
+    "model": "BERLINA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1364,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (אופל אסטרה ברלינה 1.4T בנזין 140)"
+  },
+  {
+    "make": "אופל פולין",
+    "model": "BERLINA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1598,
+    "seconds": 13.3,
+    "source": "רישוי רכב / נתון יצרן (אופל אסטרה ברלינה 1.6 בנזין 115)"
+  },
+  {
+    "make": "אופל פולין",
+    "model": "ASTRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1598,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (אסטרה 1.6 CDTI 136)"
+  },
+  {
+    "make": "אופל פולין",
+    "model": "ASTRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1364,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (אסטרה 1.4T 140)"
+  },
+  {
+    "make": "אופל פולין",
+    "model": "ASTRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1598,
+    "seconds": 13.3,
+    "source": "רישוי רכב / נתון יצרן (אסטרה 1.6 115)"
+  },
+  {
+    "make": "אופל פולין",
+    "model": "CORSA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1398,
+    "seconds": 13.9,
+    "source": "רישוי רכב / נתון יצרן (קורסה 1.4 90)"
+  },
+  {
+    "make": "אופל פולין",
+    "model": "CORSA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1398,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (קורסה 1.4 100)"
+  },
+  {
     "make": "אופל גרמניה",
     "model": "ADAM",
     "yearStart": null,
@@ -1312,16 +1392,6 @@
   {
     "make": "אבארט",
     "model": "124 SPIDER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 170,
-    "cc": 1368,
-    "seconds": 6.8,
-    "source": "רישוי רכב / נתון יצרן (124 Spider 1.4 MultiAir 170)"
-  },
-  {
-    "make": "אבארט",
-    "model": "124",
     "yearStart": null,
     "yearEnd": null,
     "hp": 170,
