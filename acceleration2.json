@@ -1,5 +1,95 @@
 [
   {
+    "make": "אומודה סין",
+    "model": "OMODA 7 PHEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (OMODA 7 PHEV 143)"
+  },
+  {
+    "make": "אומודה סין",
+    "model": "7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (OMODA 7 PHEV 143)"
+  },
+  {
+    "make": "אומודה",
+    "model": "OMODA 7 PHEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (OMODA 7 PHEV 143)"
+  },
+  {
+    "make": "אומודה",
+    "model": "7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (OMODA 7 PHEV 143)"
+  },
+  {
+    "make": "OMODA",
+    "model": "7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 8.4,
+    "source": "נתון יצרן (OMODA 7 PHEV)"
+  },
+  {
+    "make": "אומודה סין",
+    "model": "OMODA 9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": null,
+    "cc": null,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (OMODA 9 PHEV AWD)"
+  },
+  {
+    "make": "אומודה סין",
+    "model": "9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": null,
+    "cc": null,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (OMODA 9 PHEV AWD)"
+  },
+  {
+    "make": "אומודה",
+    "model": "9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": null,
+    "cc": null,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (OMODA 9 PHEV AWD)"
+  },
+  {
+    "make": "OMODA",
+    "model": "9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": null,
+    "cc": null,
+    "seconds": 4.9,
+    "source": "נתון יצרן (OMODA 9 PHEV AWD)"
+  },
+  {
     "make": "אוואטר סין",
     "model": "AVATR11",
     "yearStart": null,
@@ -268,6 +358,16 @@
     "cc": 1368,
     "seconds": 7.3,
     "source": "רישוי רכב / נתון יצרן (פיאט פולין 500 165)"
+  },
+  {
+    "make": "פיאט פולין",
+    "model": "TURISMO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1368,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (500 Turismo 165)"
   },
   {
     "make": "פיאט איטליה",
