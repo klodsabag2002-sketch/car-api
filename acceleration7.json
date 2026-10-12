@@ -1,5 +1,405 @@
 [
   {
+    "make": "יונדאי קוריאה",
+    "model": "GENESIS G70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1998,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (Genesis G70 2.0T 245)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GENESIS G70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 370,
+    "cc": 3342,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (Genesis G70 3.3T V6 370)"
+  },
+  {
+    "make": "ג'נסיס",
+    "model": "G70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1998,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (Genesis G70 2.0T 245)"
+  },
+  {
+    "make": "Genesis",
+    "model": "G70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1998,
+    "seconds": 6.1,
+    "source": "נתון יצרן (Genesis G70 2.0T)"
+  },
+  {
+    "make": "Genesis",
+    "model": "G70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 370,
+    "cc": 3342,
+    "seconds": 4.7,
+    "source": "נתון יצרן (Genesis G70 3.3T V6)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GENESIS G80",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 304,
+    "cc": 2497,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (Genesis G80 2.5T 304)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GENESIS G80",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 3470,
+    "seconds": 5.1,
+    "source": "רישוי רכב / נתון יצרן (Genesis G80 3.5T V6 380)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GENESIS G80",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 370,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (Genesis Electrified G80 EV 370)"
+  },
+  {
+    "make": "ג'נסיס",
+    "model": "G80",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 304,
+    "cc": 2497,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (Genesis G80 2.5T 304)"
+  },
+  {
+    "make": "Genesis",
+    "model": "G80",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 304,
+    "cc": 2497,
+    "seconds": 6.0,
+    "source": "נתון יצרן (Genesis G80 2.5T)"
+  },
+  {
+    "make": "Genesis",
+    "model": "G80",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 3470,
+    "seconds": 5.1,
+    "source": "נתון יצרן (Genesis G80 3.5T V6)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GENESIS G90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 3470,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (Genesis G90 3.5T V6 380)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GENESIS G90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 415,
+    "cc": 3470,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (Genesis G90 3.5T E-S/C 415)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GENESIS G90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 413,
+    "cc": 5038,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (Genesis G90 5.0 V8 413)"
+  },
+  {
+    "make": "ג'נסיס",
+    "model": "G90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 3470,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (Genesis G90 380)"
+  },
+  {
+    "make": "Genesis",
+    "model": "G90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 3470,
+    "seconds": 5.5,
+    "source": "נתון יצרן (Genesis G90 3.5T V6)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GENESIS GV60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 489,
+    "cc": 0,
+    "seconds": 4.0,
+    "source": "רישוי רכב / נתון יצרן (Genesis GV60 Performance AWD 489)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GENESIS GV60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 318,
+    "cc": 0,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (Genesis GV60 Sport AWD 318)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GENESIS GV60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 228,
+    "cc": 0,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (Genesis GV60 Premium RWD 228)"
+  },
+  {
+    "make": "ג'נסיס",
+    "model": "GV60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 489,
+    "cc": 0,
+    "seconds": 4.0,
+    "source": "רישוי רכב / נתון יצרן (Genesis GV60 Performance 489)"
+  },
+  {
+    "make": "Genesis",
+    "model": "GV60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 489,
+    "cc": 0,
+    "seconds": 4.0,
+    "source": "נתון יצרן (Genesis GV60 Performance AWD 489)"
+  },
+  {
+    "make": "Genesis",
+    "model": "GV60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 318,
+    "cc": 0,
+    "seconds": 5.5,
+    "source": "נתון יצרן (Genesis GV60 Sport AWD 318)"
+  },
+  {
+    "make": "Genesis",
+    "model": "GV60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 228,
+    "cc": 0,
+    "seconds": 7.8,
+    "source": "נתון יצרן (Genesis GV60 RWD 228)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GENESIS GV70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 375,
+    "cc": 3470,
+    "seconds": 5.1,
+    "source": "רישוי רכב / נתון יצרן (Genesis GV70 3.5T V6 375)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GENESIS GV70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 3470,
+    "seconds": 5.1,
+    "source": "רישוי רכב / נתון יצרן (Genesis GV70 3.5T V6 380)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GENESIS GV70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 304,
+    "cc": 2497,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (Genesis GV70 2.5T 304)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GENESIS GV70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 210,
+    "cc": 2151,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (Genesis GV70 דיזל 2.2D 210)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GENESIS GV70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 489,
+    "cc": 0,
+    "seconds": 4.2,
+    "source": "רישוי רכב / נתון יצרן (Genesis Electrified GV70 EV 489)"
+  },
+  {
+    "make": "ג'נסיס",
+    "model": "GV70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 375,
+    "cc": 3470,
+    "seconds": 5.1,
+    "source": "רישוי רכב / נתון יצרן (Genesis GV70 3.5T 375)"
+  },
+  {
+    "make": "ג'נסיס",
+    "model": "GV70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 304,
+    "cc": 2497,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (Genesis GV70 2.5T 304)"
+  },
+  {
+    "make": "Genesis",
+    "model": "GV70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 375,
+    "cc": 3470,
+    "seconds": 5.1,
+    "source": "נתון יצרן (Genesis GV70 3.5T V6)"
+  },
+  {
+    "make": "Genesis",
+    "model": "GV70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 304,
+    "cc": 2497,
+    "seconds": 6.1,
+    "source": "נתון יצרן (Genesis GV70 2.5T)"
+  },
+  {
+    "make": "Genesis",
+    "model": "GV70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 489,
+    "cc": 0,
+    "seconds": 4.2,
+    "source": "נתון יצרן (Genesis Electrified GV70 EV)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GENESIS GV80",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 277,
+    "cc": 2996,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (Genesis GV80 דיזל 3.0D 277)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GENESIS GV80",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 278,
+    "cc": 2996,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (Genesis GV80 דיזל 3.0D 278)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GENESIS GV80",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 304,
+    "cc": 2497,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (Genesis GV80 2.5T 304)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GENESIS GV80",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 3470,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (Genesis GV80 3.5T V6 380)"
+  },
+  {
+    "make": "ג'נסיס",
+    "model": "GV80",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 277,
+    "cc": 2996,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (Genesis GV80 דיזל 277)"
+  },
+  {
+    "make": "Genesis",
+    "model": "GV80",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 277,
+    "cc": 2996,
+    "seconds": 6.8,
+    "source": "נתון יצרן (Genesis GV80 3.0D Diesel)"
+  },
+  {
+    "make": "Genesis",
+    "model": "GV80",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 3470,
+    "seconds": 5.5,
+    "source": "נתון יצרן (Genesis GV80 3.5T V6)"
+  },
+  {
     "make": "ג'יפ פולין",
     "model": "AVENGER",
     "yearStart": null,
