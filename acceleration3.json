@@ -1,5 +1,165 @@
 [
   {
+    "make": "ניסאן יפן",
+    "model": "INFINITI EX37",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 315,
+    "cc": 3696,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי EX37 3.7 V6 315)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "EX37",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 315,
+    "cc": 3696,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי EX37 3.7 V6 315)"
+  },
+  {
+    "make": "אינפיניטי יפן",
+    "model": "EX37",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 315,
+    "cc": 3696,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי EX37 3.7 V6 315)"
+  },
+  {
+    "make": "אינפיניטי",
+    "model": "EX37",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 315,
+    "cc": 3696,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי EX37 3.7 V6 315)"
+  },
+  {
+    "make": "Infiniti",
+    "model": "EX37",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 315,
+    "cc": 3696,
+    "seconds": 6.4,
+    "source": "נתון יצרן (Infiniti EX37)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "INFINITI FX37",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 315,
+    "cc": 3696,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי FX37 3.7 V6 315)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "FX37",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 315,
+    "cc": 3696,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי FX37 3.7 V6 315)"
+  },
+  {
+    "make": "אינפיניטי יפן",
+    "model": "FX37",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 315,
+    "cc": 3696,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי FX37 3.7 V6 315)"
+  },
+  {
+    "make": "אינפיניטי",
+    "model": "FX37",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 315,
+    "cc": 3696,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי FX37 3.7 V6 315)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "INFINITI FX37",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 3696,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי FX37 3.7 V6 320)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "FX37",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 3696,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי FX37 3.7 V6 320)"
+  },
+  {
+    "make": "אינפיניטי יפן",
+    "model": "FX37",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 3696,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי FX37 3.7 V6 320)"
+  },
+  {
+    "make": "אינפיניטי",
+    "model": "FX37",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 3696,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי FX37 3.7 V6 320)"
+  },
+  {
+    "make": "Infiniti",
+    "model": "FX37",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 3696,
+    "seconds": 6.8,
+    "source": "נתון יצרן (Infiniti FX37 3.7)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "INFINITI FX35",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 307,
+    "cc": 3498,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי FX35 3.5 V6)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "FX35",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 307,
+    "cc": 3498,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי FX35 3.5 V6)"
+  },
+  {
     "make": "אינפיניטי יפן",
     "model": "FX35",
     "yearStart": null,
@@ -30,34 +190,24 @@
     "source": "נתון יצרן (Infiniti FX35 3.5)"
   },
   {
-    "make": "אינפיניטי יפן",
-    "model": "FX37",
+    "make": "ניסאן יפן",
+    "model": "INFINITI FX50",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 320,
-    "cc": 3696,
-    "seconds": 6.8,
-    "source": "רישוי רכב / נתון יצרן (אינפיניטי FX37 3.7 V6)"
+    "hp": 390,
+    "cc": 5026,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי FX50 5.0 V8)"
   },
   {
-    "make": "אינפיניטי",
-    "model": "FX37",
+    "make": "ניסאן יפן",
+    "model": "FX50",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 320,
-    "cc": 3696,
-    "seconds": 6.8,
-    "source": "רישוי רכב / נתון יצרן (אינפיניטי FX37 3.7 V6)"
-  },
-  {
-    "make": "Infiniti",
-    "model": "FX37",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 320,
-    "cc": 3696,
-    "seconds": 6.8,
-    "source": "נתון יצרן (Infiniti FX37 3.7)"
+    "hp": 390,
+    "cc": 5026,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי FX50 5.0 V8)"
   },
   {
     "make": "אינפיניטי יפן",
@@ -88,6 +238,36 @@
     "cc": 5026,
     "seconds": 5.8,
     "source": "נתון יצרן (Infiniti FX50 5.0)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "INFINITI G37",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 3696,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי G37 320)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "G37",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 3696,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי G37 סדאן 320)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "G37",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 330,
+    "cc": 3696,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי G37 קופה 330)"
   },
   {
     "make": "אינפיניטי יפן",
@@ -140,114 +320,54 @@
     "source": "נתון יצרן (Infiniti G37)"
   },
   {
-    "make": "אינפיניטי אנגליה",
-    "model": "Q30",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 156,
-    "cc": 1595,
-    "seconds": 8.9,
-    "source": "רישוי רכב / נתון יצרן (אינפיניטי Q30 1.6T 156)"
-  },
-  {
-    "make": "אינפיניטי",
-    "model": "Q30",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 156,
-    "cc": 1595,
-    "seconds": 8.9,
-    "source": "רישוי רכב / נתון יצרן (אינפיניטי Q30 1.6T 156)"
-  },
-  {
-    "make": "אינפיניטי אנגליה",
-    "model": "Q30",
+    "make": "ניסאן יפן",
+    "model": "INFINITI Q50",
     "yearStart": null,
     "yearEnd": null,
     "hp": 211,
     "cc": 1991,
     "seconds": 7.2,
-    "source": "רישוי רכב / נתון יצרן (אינפיניטי Q30 2.0T AWD 211)"
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי Q50 2.0T 211)"
   },
   {
-    "make": "אינפיניטי",
-    "model": "Q30",
+    "make": "ניסאן יפן",
+    "model": "Q50",
     "yearStart": null,
     "yearEnd": null,
     "hp": 211,
     "cc": 1991,
     "seconds": 7.2,
-    "source": "רישוי רכב / נתון יצרן (אינפיניטי Q30 2.0T AWD 211)"
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי Q50 2.0T 211)"
   },
   {
-    "make": "אינפיניטי אנגליה",
-    "model": "Q30",
+    "make": "ניסאן יפן",
+    "model": "Q50",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 170,
-    "cc": 2143,
-    "seconds": 8.3,
-    "source": "רישוי רכב / נתון יצרן (אינפיניטי Q30 2.2 דיזל 170)"
+    "hp": 306,
+    "cc": 3498,
+    "seconds": 5.1,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי Q50 3.5 הייבריד)"
   },
   {
-    "make": "אינפיניטי",
-    "model": "Q30",
+    "make": "ניסאן יפן",
+    "model": "Q50",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 170,
-    "cc": 2143,
-    "seconds": 8.3,
-    "source": "רישוי רכב / נתון יצרן (אינפיניטי Q30 2.2 דיזל 170)"
+    "hp": 300,
+    "cc": 2997,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי Q50 3.0T V6 300)"
   },
   {
-    "make": "Infiniti",
-    "model": "Q30",
+    "make": "ניסאן יפן",
+    "model": "Q50",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 156,
-    "cc": 1595,
-    "seconds": 8.9,
-    "source": "נתון יצרן (Infiniti Q30 1.6T)"
-  },
-  {
-    "make": "Infiniti",
-    "model": "Q30",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 211,
-    "cc": 1991,
-    "seconds": 7.2,
-    "source": "נתון יצרן (Infiniti Q30 2.0T AWD)"
-  },
-  {
-    "make": "אינפיניטי אנגליה",
-    "model": "QX30",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 211,
-    "cc": 1991,
-    "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (אינפיניטי QX30 2.0T AWD 211)"
-  },
-  {
-    "make": "אינפיניטי",
-    "model": "QX30",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 211,
-    "cc": 1991,
-    "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (אינפיניטי QX30 2.0T AWD 211)"
-  },
-  {
-    "make": "Infiniti",
-    "model": "QX30",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 211,
-    "cc": 1991,
-    "seconds": 7.3,
-    "source": "נתון יצרן (Infiniti QX30 2.0T AWD)"
+    "hp": 405,
+    "cc": 2997,
+    "seconds": 5.1,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי Q50 Red Sport 405)"
   },
   {
     "make": "אינפיניטי יפן",
@@ -360,6 +480,26 @@
     "source": "נתון יצרן (Infiniti Q50 Red Sport)"
   },
   {
+    "make": "ניסאן יפן",
+    "model": "INFINITI Q60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 211,
+    "cc": 1991,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי Q60 2.0T 211)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "Q60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 211,
+    "cc": 1991,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי Q60 2.0T 211)"
+  },
+  {
     "make": "אינפיניטי יפן",
     "model": "Q60",
     "yearStart": null,
@@ -378,6 +518,16 @@
     "cc": 1991,
     "seconds": 7.4,
     "source": "רישוי רכב / נתון יצרן (אינפיניטי Q60 2.0T 211)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "Q60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 405,
+    "cc": 2997,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי Q60 Red Sport 405)"
   },
   {
     "make": "אינפיניטי יפן",
@@ -420,6 +570,26 @@
     "source": "נתון יצרן (Infiniti Q60 Red Sport)"
   },
   {
+    "make": "ניסאן יפן",
+    "model": "INFINITI Q70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 3696,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי Q70 3.7 V6 320)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "Q70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 3696,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי Q70 3.7 V6 320)"
+  },
+  {
     "make": "אינפיניטי יפן",
     "model": "Q70",
     "yearStart": null,
@@ -438,6 +608,16 @@
     "cc": 3696,
     "seconds": 6.2,
     "source": "רישוי רכב / נתון יצרן (אינפיניטי Q70 3.7 V6 320)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "Q70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 306,
+    "cc": 3498,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי Q70 הייבריד 3.5)"
   },
   {
     "make": "אינפיניטי יפן",
@@ -468,6 +648,106 @@
     "cc": 3696,
     "seconds": 6.2,
     "source": "נתון יצרן (Infiniti Q70 3.7)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "INFINITI QX70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 3696,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי QX70 3.7 V6 320)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "QX70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 3696,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי QX70 3.7 V6 320)"
+  },
+  {
+    "make": "אינפיניטי יפן",
+    "model": "QX70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 3696,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי QX70 3.7 V6 320)"
+  },
+  {
+    "make": "אינפיניטי",
+    "model": "QX70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 3696,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי QX70 3.7 V6 320)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "QX70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 390,
+    "cc": 5026,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי QX70 5.0 V8 390)"
+  },
+  {
+    "make": "אינפיניטי יפן",
+    "model": "QX70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 390,
+    "cc": 5026,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי QX70 5.0 V8 390)"
+  },
+  {
+    "make": "אינפיניטי",
+    "model": "QX70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 390,
+    "cc": 5026,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי QX70 5.0 V8 390)"
+  },
+  {
+    "make": "Infiniti",
+    "model": "QX70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 3696,
+    "seconds": 6.8,
+    "source": "נתון יצרן (Infiniti QX70 3.7)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "INFINITI QX50",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 3696,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי QX50 3.7)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "QX50",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 3696,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי QX50 3.7)"
   },
   {
     "make": "אינפיניטי יפן",
@@ -640,54 +920,114 @@
     "source": "נתון יצרן (Infiniti QX60 3.5)"
   },
   {
-    "make": "אינפיניטי יפן",
-    "model": "QX70",
+    "make": "אינפיניטי אנגליה",
+    "model": "Q30",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 320,
-    "cc": 3696,
-    "seconds": 6.8,
-    "source": "רישוי רכב / נתון יצרן (אינפיניטי QX70 3.7 V6 320)"
-  },
-  {
-    "make": "אינפיניטי יפן",
-    "model": "QX70",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 390,
-    "cc": 5026,
-    "seconds": 5.8,
-    "source": "רישוי רכב / נתון יצרן (אינפיניטי QX70 5.0 V8 390)"
+    "hp": 156,
+    "cc": 1595,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי Q30 1.6T 156)"
   },
   {
     "make": "אינפיניטי",
-    "model": "QX70",
+    "model": "Q30",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 320,
-    "cc": 3696,
-    "seconds": 6.8,
-    "source": "רישוי רכב / נתון יצרן (אינפיניטי QX70 3.7 V6 320)"
+    "hp": 156,
+    "cc": 1595,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי Q30 1.6T 156)"
+  },
+  {
+    "make": "אינפיניטי אנגליה",
+    "model": "Q30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 211,
+    "cc": 1991,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי Q30 2.0T AWD 211)"
   },
   {
     "make": "אינפיניטי",
-    "model": "QX70",
+    "model": "Q30",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 390,
-    "cc": 5026,
-    "seconds": 5.8,
-    "source": "רישוי רכב / נתון יצרן (אינפיניטי QX70 5.0 V8 390)"
+    "hp": 211,
+    "cc": 1991,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי Q30 2.0T AWD 211)"
+  },
+  {
+    "make": "אינפיניטי אנגליה",
+    "model": "Q30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 2143,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי Q30 2.2 דיזל 170)"
+  },
+  {
+    "make": "אינפיניטי",
+    "model": "Q30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 2143,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי Q30 2.2 דיזל 170)"
   },
   {
     "make": "Infiniti",
-    "model": "QX70",
+    "model": "Q30",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 320,
-    "cc": 3696,
-    "seconds": 6.8,
-    "source": "נתון יצרן (Infiniti QX70 3.7)"
+    "hp": 156,
+    "cc": 1595,
+    "seconds": 8.9,
+    "source": "נתון יצרן (Infiniti Q30 1.6T)"
+  },
+  {
+    "make": "Infiniti",
+    "model": "Q30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 211,
+    "cc": 1991,
+    "seconds": 7.2,
+    "source": "נתון יצרן (Infiniti Q30 2.0T AWD)"
+  },
+  {
+    "make": "אינפיניטי אנגליה",
+    "model": "QX30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 211,
+    "cc": 1991,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי QX30 2.0T AWD 211)"
+  },
+  {
+    "make": "אינפיניטי",
+    "model": "QX30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 211,
+    "cc": 1991,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי QX30 2.0T AWD 211)"
+  },
+  {
+    "make": "Infiniti",
+    "model": "QX30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 211,
+    "cc": 1991,
+    "seconds": 7.3,
+    "source": "נתון יצרן (Infiniti QX30 2.0T AWD)"
   },
   {
     "make": "איווייס סין",
