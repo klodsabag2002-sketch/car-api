@@ -1,5 +1,85 @@
 [
   {
+    "make": "אופל ספרד",
+    "model": "MERIVA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1364,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (מריבה 1.4T 120)"
+  },
+  {
+    "make": "אופל ספרד",
+    "model": "MERIVA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1364,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (מריבה 1.4T 140)"
+  },
+  {
+    "make": "אופל ספרד",
+    "model": "CORSA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1398,
+    "seconds": 13.9,
+    "source": "רישוי רכב / נתון יצרן (קורסה 1.4 90)"
+  },
+  {
+    "make": "אופל ספרד",
+    "model": "CORSA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1398,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (קורסה 1.4 100)"
+  },
+  {
+    "make": "אופל ספרד",
+    "model": "CORSA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1199,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (קורסה 1.2T 100)"
+  },
+  {
+    "make": "אופל ספרד",
+    "model": "CORSA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (קורסה 1.2T 130)"
+  },
+  {
+    "make": "אופל ספרד",
+    "model": "CROSSLAND",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (קרוסלנד 1.2T 130)"
+  },
+  {
+    "make": "אופל ספרד",
+    "model": "CROSSLAND X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (קרוסלנד X 1.2T 130)"
+  },
+  {
     "make": "אופל אנגליה",
     "model": "VIVARO",
     "yearStart": null,
