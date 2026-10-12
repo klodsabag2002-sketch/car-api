@@ -14,14 +14,15 @@ const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";      // היסטור�
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";    // היסטוריית כלי רכב פרטיים (2): בעלויות
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";     // רכבים עם תג חניה לנכה
 
-// ---------- תאוצה 0-100 מקבצים ידניים (קובץ 1 + קובץ 2 + קובץ 3 + קובץ 4 + קובץ 5) ----------
+// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 6) ----------
 let accelTable = [];
 const ACCEL_FILES = [
     "acceleration.json",
     "acceleration2.json",
     "acceleration3.json",
     "acceleration4.json",
-    "acceleration5.json"
+    "acceleration5.json",
+    "acceleration6.json"
 ];
 
 ACCEL_FILES.forEach(fileName => {
@@ -101,13 +102,28 @@ const HE_MAKE_ALIASES = {
     "מ ג סין": "MG",
     "אם ג'י": "MG",
     "אם גי": "MG",
+    "אסטון מרטין": "Aston Martin",
+    "אסטון מרטין אנ": "Aston Martin",
+    "אסטון מרטין אנגליה": "Aston Martin",
+    "אקספנג": "XPENG",
+    "אקספנג סין": "XPENG",
+    "ב.מ.וו": "BMW",
+    "ב מ וו": "BMW",
+    "ב מ וו גרמניה": "BMW",
+    "ב מ וו מקסיקו": "BMW",
+    "ב מ וו סין": "BMW",
+    "ב מ וו ארה\"ב": "BMW",
+    "ב מ וו ארהב": "BMW",
+    "ב מ וו ארהב\"": "BMW",
+    "\"ב מ וו ארהב": "BMW",
+    "ב מ וו אוסטריה": "BMW",
+    "ב מ וו דרום אפריקה": "BMW",
     "סיאט": "Seat",
     "סקודה": "Skoda",
     "פולקסווגן": "Volkswagen",
     "טויוטה": "Toyota",
     "יונדאי": "Hyundai",
     "קיה": "Kia",
-    "ב.מ.וו": "BMW",
     "מרצדס": "Mercedes-Benz"
 };
 
