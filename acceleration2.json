@@ -1,5 +1,115 @@
 [
   {
+    "make": "אוואטר סין",
+    "model": "AVATR11",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 311,
+    "cc": 0,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (AVATR 11 RWD 311)"
+  },
+  {
+    "make": "אוואטר סין",
+    "model": "11",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 311,
+    "cc": 0,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (AVATR 11 RWD 311)"
+  },
+  {
+    "make": "אוואטר",
+    "model": "AVATR11",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 311,
+    "cc": 0,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (AVATR 11 RWD 311)"
+  },
+  {
+    "make": "אוואטר",
+    "model": "11",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 311,
+    "cc": 0,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (AVATR 11 RWD 311)"
+  },
+  {
+    "make": "AVATR",
+    "model": "11",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 311,
+    "cc": 0,
+    "seconds": 6.6,
+    "source": "נתון יצרן (AVATR 11 RWD 311)"
+  },
+  {
+    "make": "אוואטר סין",
+    "model": "AVATR11",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 578,
+    "cc": 0,
+    "seconds": 3.98,
+    "source": "רישוי רכב / נתון יצרן (AVATR 11 AWD Performance)"
+  },
+  {
+    "make": "אוואטר סין",
+    "model": "11",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 578,
+    "cc": 0,
+    "seconds": 3.98,
+    "source": "רישוי רכב / נתון יצרן (AVATR 11 AWD Performance)"
+  },
+  {
+    "make": "אוואטר",
+    "model": "AVATR11",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 578,
+    "cc": 0,
+    "seconds": 3.98,
+    "source": "רישוי רכב / נתון יצרן (AVATR 11 AWD Performance)"
+  },
+  {
+    "make": "אוואטר",
+    "model": "11",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 578,
+    "cc": 0,
+    "seconds": 3.98,
+    "source": "רישוי רכב / נתון יצרן (AVATR 11 AWD Performance)"
+  },
+  {
+    "make": "AVATR",
+    "model": "11",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 578,
+    "cc": 0,
+    "seconds": 3.98,
+    "source": "נתון יצרן (AVATR 11 AWD Performance)"
+  },
+  {
+    "make": "אוואטר סין",
+    "model": "AVATR11",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 570,
+    "cc": 0,
+    "seconds": 3.98,
+    "source": "רישוי רכב / נתון יצרן (AVATR 11 AWD 570)"
+  },
+  {
     "make": "פיאט איטליה",
     "model": "ABART 500E",
     "yearStart": null,
@@ -158,16 +268,6 @@
     "cc": 1368,
     "seconds": 7.3,
     "source": "רישוי רכב / נתון יצרן (פיאט פולין 500 165)"
-  },
-  {
-    "make": "פיאט פולין",
-    "model": "TURISMO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 165,
-    "cc": 1368,
-    "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (500 Turismo 165)"
   },
   {
     "make": "פיאט איטליה",
@@ -331,27 +431,7 @@
   },
   {
     "make": "אבארט",
-    "model": "124",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 170,
-    "cc": 1368,
-    "seconds": 6.8,
-    "source": "רישוי רכב / נתון יצרן (124 Spider 1.4 MultiAir 170)"
-  },
-  {
-    "make": "אבארט",
     "model": "500E",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 155,
-    "cc": 0,
-    "seconds": 7.0,
-    "source": "רישוי רכב / נתון יצרן (Abarth 500e חשמלי 155)"
-  },
-  {
-    "make": "אבארט",
-    "model": "500",
     "yearStart": null,
     "yearEnd": null,
     "hp": 155,
@@ -378,105 +458,5 @@
     "cc": 0,
     "seconds": 5.85,
     "source": "רישוי רכב / נתון יצרן (Abarth 600e Scorpionissima 280)"
-  },
-  {
-    "make": "אבארט איטליה",
-    "model": "595",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 165,
-    "cc": 1368,
-    "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (595 Turismo 165)"
-  },
-  {
-    "make": "אבארט איטליה",
-    "model": "595",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 180,
-    "cc": 1368,
-    "seconds": 6.7,
-    "source": "רישוי רכב / נתון יצרן (595 Competizione 180)"
-  },
-  {
-    "make": "אבארט איטליה",
-    "model": "695",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 180,
-    "cc": 1368,
-    "seconds": 6.7,
-    "source": "רישוי רכב / נתון יצרן (695 Competizione 180)"
-  },
-  {
-    "make": "אבארט איטליה",
-    "model": "124 SPIDER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 170,
-    "cc": 1368,
-    "seconds": 6.8,
-    "source": "רישוי רכב / נתון יצרן (124 Spider 170)"
-  },
-  {
-    "make": "Abarth",
-    "model": "595",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 145,
-    "cc": 1368,
-    "seconds": 7.8,
-    "source": "נתון יצרן (595 145)"
-  },
-  {
-    "make": "Abarth",
-    "model": "595",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 165,
-    "cc": 1368,
-    "seconds": 7.3,
-    "source": "נתון יצרן (595 165)"
-  },
-  {
-    "make": "Abarth",
-    "model": "595",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 180,
-    "cc": 1368,
-    "seconds": 6.7,
-    "source": "נתון יצרן (595 180)"
-  },
-  {
-    "make": "Abarth",
-    "model": "695",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 180,
-    "cc": 1368,
-    "seconds": 6.7,
-    "source": "נתון יצרן (695 180)"
-  },
-  {
-    "make": "Abarth",
-    "model": "124 Spider",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 170,
-    "cc": 1368,
-    "seconds": 6.8,
-    "source": "נתון יצרן (124 Spider 170)"
-  },
-  {
-    "make": "Abarth",
-    "model": "500e",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 155,
-    "cc": 0,
-    "seconds": 7.0,
-    "source": "נתון יצרן (500e 155)"
   }
 ]
