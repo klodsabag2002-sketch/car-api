@@ -1,5 +1,295 @@
 [
   {
+    "make": "ג'.איי.סי סין",
+    "model": "GE3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 0,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (GAC GE3 חשמלי EV 177)"
+  },
+  {
+    "make": "ג'י.איי.סי סין",
+    "model": "GE3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 0,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (GAC GE3 חשמלי EV 177)"
+  },
+  {
+    "make": "ג'י איי סי",
+    "model": "GE3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 0,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (GAC GE3 חשמלי EV 177)"
+  },
+  {
+    "make": "GAC",
+    "model": "GE3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 0,
+    "seconds": 8.6,
+    "source": "נתון יצרן (GAC GE3 EV 177)"
+  },
+  {
+    "make": "ג'.איי.סי סין",
+    "model": "AION HT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 0,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (GAC Aion HT RWD 245)"
+  },
+  {
+    "make": "ג'י.איי.סי סין",
+    "model": "AION HT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 0,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (GAC Aion HT RWD 245)"
+  },
+  {
+    "make": "ג'י איי סי",
+    "model": "AION HT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 0,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (GAC Aion HT RWD 245)"
+  },
+  {
+    "make": "ג'.איי.סי סין",
+    "model": "AION HT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (GAC Aion HT RWD 340)"
+  },
+  {
+    "make": "GAC",
+    "model": "AION HT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 0,
+    "seconds": 6.8,
+    "source": "נתון יצרן (GAC Aion HT 245)"
+  },
+  {
+    "make": "GAC",
+    "model": "AION HT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "נתון יצרן (GAC Aion HT 340)"
+  },
+  {
+    "make": "ג'.איי.סי סין",
+    "model": "AION Y",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (GAC Aion Y Plus 204)"
+  },
+  {
+    "make": "ג'.איי.סי סין",
+    "model": "AION Y",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 0,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (GAC Aion Y 184)"
+  },
+  {
+    "make": "ג'י איי סי",
+    "model": "AION Y",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (GAC Aion Y 204)"
+  },
+  {
+    "make": "GAC",
+    "model": "AION Y",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.5,
+    "source": "נתון יצרן (GAC Aion Y 204)"
+  },
+  {
+    "make": "ג'.איי.סי סין",
+    "model": "AION V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 224,
+    "cc": 0,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (GAC Aion V Plus 224)"
+  },
+  {
+    "make": "ג'.איי.סי סין",
+    "model": "AION V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (GAC Aion V 272)"
+  },
+  {
+    "make": "ג'י איי סי",
+    "model": "AION V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 224,
+    "cc": 0,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (GAC Aion V 224)"
+  },
+  {
+    "make": "GAC",
+    "model": "AION V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 224,
+    "cc": 0,
+    "seconds": 7.6,
+    "source": "נתון יצרן (GAC Aion V 224)"
+  },
+  {
+    "make": "ג'.איי.סי סין",
+    "model": "AION S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (GAC Aion S Plus 204)"
+  },
+  {
+    "make": "ג'.איי.סי סין",
+    "model": "AION S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (GAC Aion S 136)"
+  },
+  {
+    "make": "GAC",
+    "model": "AION S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.6,
+    "source": "נתון יצרן (GAC Aion S 204)"
+  },
+  {
+    "make": "ג'.איי.סי סין",
+    "model": "AION LX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 408,
+    "cc": 0,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (GAC Aion LX AWD 408)"
+  },
+  {
+    "make": "ג'.איי.סי סין",
+    "model": "AION LX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 0,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (GAC Aion LX FWD 245)"
+  },
+  {
+    "make": "GAC",
+    "model": "AION LX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 408,
+    "cc": 0,
+    "seconds": 3.9,
+    "source": "נתון יצרן (GAC Aion LX AWD)"
+  },
+  {
+    "make": "ג'.איי.סי סין",
+    "model": "HYPTEC SSR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 1225,
+    "cc": 0,
+    "seconds": 1.9,
+    "source": "רישוי רכב / נתון יצרן (GAC Hyptec SSR AWD 1225)"
+  },
+  {
+    "make": "GAC",
+    "model": "HYPTEC SSR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 1225,
+    "cc": 0,
+    "seconds": 1.9,
+    "source": "נתון יצרן (GAC Hyptec SSR 1225)"
+  },
+  {
+    "make": "ג'.איי.סי סין",
+    "model": "HYPTEC GT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (GAC Hyptec GT RWD 340)"
+  },
+  {
+    "make": "ג'.איי.סי סין",
+    "model": "HYPTEC GT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 0,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (GAC Hyptec GT RWD 245)"
+  },
+  {
+    "make": "GAC",
+    "model": "HYPTEC GT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "נתון יצרן (GAC Hyptec GT 340)"
+  },
+  {
     "make": "ג'אקו סין",
     "model": "JAECOO 5",
     "yearStart": null,
