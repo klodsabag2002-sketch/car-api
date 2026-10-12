@@ -1,13 +1,33 @@
 [
   {
     "make": "פיאט פולין",
+    "model": "FIAT 500 ABARTH",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1368,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (פיאט פולין FIAT 500 ABARTH)"
+  },
+  {
+    "make": "פיאט פולין",
+    "model": "FIAT 500 ABARTH LUSSO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1368,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (פיאט פולין FIAT 500 ABARTH LUSSO)"
+  },
+  {
+    "make": "פיאט פולין",
     "model": "500",
     "yearStart": null,
     "yearEnd": null,
     "hp": 135,
     "cc": 1368,
     "seconds": 7.9,
-    "source": "רישוי רכב / נתון יצרן (פיאט פולין 500 אבארט 135)"
+    "source": "רישוי רכב / נתון יצרן (פיאט פולין 500)"
   },
   {
     "make": "פיאט פולין",
@@ -17,21 +37,11 @@
     "hp": 135,
     "cc": 1368,
     "seconds": 7.9,
-    "source": "רישוי רכב / נתון יצרן (פיאט פולין 500 אבארט 135)"
+    "source": "רישוי רכב / נתון יצרן (פיאט פולין ABARTH)"
   },
   {
     "make": "פיאט פולין",
     "model": "500 ABARTH",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 135,
-    "cc": 1368,
-    "seconds": 7.9,
-    "source": "רישוי רכב / נתון יצרן (פיאט פולין 500 אבארט 135)"
-  },
-  {
-    "make": "פיאט פולין",
-    "model": "500",
     "yearStart": null,
     "yearEnd": null,
     "hp": 160,
@@ -41,17 +51,17 @@
   },
   {
     "make": "פיאט איטליה",
-    "model": "500",
+    "model": "500 ABARTH",
     "yearStart": null,
     "yearEnd": null,
     "hp": 135,
     "cc": 1368,
     "seconds": 7.9,
-    "source": "רישוי רכב / נתון יצרן (500 אבארט 135)"
+    "source": "רישוי רכב / נתון יצרן (פיאט איטליה 500 אבארט 135)"
   },
   {
-    "make": "פיאט איטליה",
-    "model": "ABARTH",
+    "make": "פיאט",
+    "model": "FIAT 500 ABARTH",
     "yearStart": null,
     "yearEnd": null,
     "hp": 135,
@@ -61,17 +71,7 @@
   },
   {
     "make": "פיאט",
-    "model": "500",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 135,
-    "cc": 1368,
-    "seconds": 7.9,
-    "source": "רישוי רכב / נתון יצרן (500 אבארט 135)"
-  },
-  {
-    "make": "פיאט",
-    "model": "ABARTH",
+    "model": "500 ABARTH",
     "yearStart": null,
     "yearEnd": null,
     "hp": 135,
@@ -207,4 +207,136 @@
     "hp": 155,
     "cc": 0,
     "seconds": 7.0,
-    "source": "רישוי רכב / נתון יצרן (Abarth 500e חשמלי 1
+    "source": "רישוי רכב / נתון יצרן (Abarth 500e חשמלי 155)"
+  },
+  {
+    "make": "אבארט",
+    "model": "500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 0,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (Abarth 500e חשמלי 155)"
+  },
+  {
+    "make": "אבארט",
+    "model": "600E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 0,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (Abarth 600e חשמלי 240)"
+  },
+  {
+    "make": "אבארט",
+    "model": "600E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 0,
+    "seconds": 5.85,
+    "source": "רישוי רכב / נתון יצרן (Abarth 600e Scorpionissima 280)"
+  },
+  {
+    "make": "אבארט איטליה",
+    "model": "595",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1368,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (595 Turismo 165)"
+  },
+  {
+    "make": "אבארט איטליה",
+    "model": "595",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1368,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (595 Competizione 180)"
+  },
+  {
+    "make": "אבארט איטליה",
+    "model": "695",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1368,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (695 Competizione 180)"
+  },
+  {
+    "make": "אבארט איטליה",
+    "model": "124 SPIDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1368,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (124 Spider 170)"
+  },
+  {
+    "make": "Abarth",
+    "model": "595",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 1368,
+    "seconds": 7.8,
+    "source": "נתון יצרן (595 145)"
+  },
+  {
+    "make": "Abarth",
+    "model": "595",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1368,
+    "seconds": 7.3,
+    "source": "נתון יצרן (595 165)"
+  },
+  {
+    "make": "Abarth",
+    "model": "595",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1368,
+    "seconds": 6.7,
+    "source": "נתון יצרן (595 180)"
+  },
+  {
+    "make": "Abarth",
+    "model": "695",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1368,
+    "seconds": 6.7,
+    "source": "נתון יצרן (695 180)"
+  },
+  {
+    "make": "Abarth",
+    "model": "124 Spider",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1368,
+    "seconds": 6.8,
+    "source": "נתון יצרן (124 Spider 170)"
+  },
+  {
+    "make": "Abarth",
+    "model": "500e",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 0,
+    "seconds": 7.0,
+    "source": "נתון יצרן (500e 155)"
+  }
+]
