@@ -1,43 +1,83 @@
 [
   {
     "make": "פיאט פולין",
+    "model": "ABARTH 500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1368,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (500 אבארט Turismo 165)"
+  },
+  {
+    "make": "פיאט פולין",
+    "model": "ABARTH 500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1368,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (500 אבארט 135)"
+  },
+  {
+    "make": "פיאט פולין",
+    "model": "ABARTH 500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 1368,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (500 אבארט 145)"
+  },
+  {
+    "make": "פיאט פולין",
+    "model": "ABARTH 500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1368,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (500 אבארט 160)"
+  },
+  {
+    "make": "פיאט פולין",
+    "model": "ABARTH 500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1368,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (500 אבארט Competizione 180)"
+  },
+  {
+    "make": "פיאט פולין",
     "model": "FIAT 500 ABARTH",
     "yearStart": null,
     "yearEnd": null,
     "hp": 135,
     "cc": 1368,
     "seconds": 7.9,
-    "source": "רישוי רכב / נתון יצרן (פיאט פולין FIAT 500 ABARTH)"
+    "source": "רישוי רכב / נתון יצרן (פיאט פולין 500 אבארט 135)"
   },
   {
     "make": "פיאט פולין",
-    "model": "FIAT 500 ABARTH LUSSO",
+    "model": "FIAT 500 ABARTH",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1368,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (פיאט פולין 500 אבארט 165)"
+  },
+  {
+    "make": "פיאט פולין",
+    "model": "500 ABARTH",
     "yearStart": null,
     "yearEnd": null,
     "hp": 135,
     "cc": 1368,
     "seconds": 7.9,
-    "source": "רישוי רכב / נתון יצרן (פיאט פולין FIAT 500 ABARTH LUSSO)"
-  },
-  {
-    "make": "פיאט פולין",
-    "model": "500",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 135,
-    "cc": 1368,
-    "seconds": 7.9,
-    "source": "רישוי רכב / נתון יצרן (פיאט פולין 500)"
-  },
-  {
-    "make": "פיאט פולין",
-    "model": "ABARTH",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 135,
-    "cc": 1368,
-    "seconds": 7.9,
-    "source": "רישוי רכב / נתון יצרן (פיאט פולין ABARTH)"
+    "source": "רישוי רכב / נתון יצרן (פיאט פולין 500 אבארט 135)"
   },
   {
     "make": "פיאט פולין",
@@ -50,6 +90,66 @@
     "source": "רישוי רכב / נתון יצרן (פיאט פולין Esseesse 160)"
   },
   {
+    "make": "פיאט פולין",
+    "model": "500 ABARTH",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1368,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (פיאט פולין 500 אבארט 165)"
+  },
+  {
+    "make": "פיאט פולין",
+    "model": "500 ABARTH",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1368,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (פיאט פולין 500 אבארט 180)"
+  },
+  {
+    "make": "פיאט פולין",
+    "model": "500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1368,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (פיאט פולין 500 135)"
+  },
+  {
+    "make": "פיאט פולין",
+    "model": "500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1368,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (פיאט פולין 500 165)"
+  },
+  {
+    "make": "פיאט פולין",
+    "model": "TURISMO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1368,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (500 Turismo 165)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "ABARTH 500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1368,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (500 Turismo 165)"
+  },
+  {
     "make": "פיאט איטליה",
     "model": "500 ABARTH",
     "yearStart": null,
@@ -58,6 +158,16 @@
     "cc": 1368,
     "seconds": 7.9,
     "source": "רישוי רכב / נתון יצרן (פיאט איטליה 500 אבארט 135)"
+  },
+  {
+    "make": "פיאט",
+    "model": "ABARTH 500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1368,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (500 Turismo 165)"
   },
   {
     "make": "פיאט",
