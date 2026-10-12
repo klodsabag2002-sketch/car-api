@@ -1,5 +1,65 @@
 [
   {
+    "make": "אודי גרמניה",
+    "model": "S3 SPORTBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 333,
+    "cc": 1984,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (Audi S3 Sportback 333)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "S3 SPORTBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 333,
+    "cc": 1984,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (Audi S3 Sportback 333)"
+  },
+  {
+    "make": "Audi",
+    "model": "S3 SPORTBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 333,
+    "cc": 1984,
+    "seconds": 4.7,
+    "source": "נתון יצרן (Audi S3 Sportback 333)"
+  },
+  {
+    "make": "אודי גרמניה",
+    "model": "S3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 333,
+    "cc": 1984,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (Audi S3 333)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "S3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 333,
+    "cc": 1984,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (Audi S3 333)"
+  },
+  {
+    "make": "Audi",
+    "model": "S3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 333,
+    "cc": 1984,
+    "seconds": 4.7,
+    "source": "נתון יצרן (Audi S3 333)"
+  },
+  {
     "make": "אודי בלגיה",
     "model": "S1",
     "yearStart": null,
@@ -780,1164 +840,444 @@
     "source": "רישוי רכב / נתון יצרן (Audi SQ5 TDI 341)"
   },
   {
-    "make": "אודי גרמניה",
-    "model": "A7 TFSI-E",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 367,
-    "cc": 1984,
-    "seconds": 5.7,
-    "source": "רישוי רכב / נתון יצרן (55 TFSI e Quattro 367)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 367,
-    "cc": 1984,
-    "seconds": 5.7,
-    "source": "נתון יצרן (A7 55 TFSI e Quattro 367)"
-  },
-  {
-    "make": "Audi",
-    "model": "A7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 367,
-    "cc": 1984,
-    "seconds": 5.7,
-    "source": "נתון יצרן (A7 55 TFSI e Quattro 367)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 300,
-    "cc": 2995,
-    "seconds": 5.6,
-    "source": "רישוי רכב / נתון יצרן (3.0 TFSI Quattro 300)"
-  },
-  {
-    "make": "Audi",
-    "model": "A7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 300,
-    "cc": 2995,
-    "seconds": 5.6,
-    "source": "נתון יצרן (3.0 TFSI Quattro 300)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 333,
-    "cc": 2995,
-    "seconds": 5.3,
-    "source": "רישוי רכב / נתון יצרן (3.0 TFSI Quattro 333)"
-  },
-  {
-    "make": "Audi",
-    "model": "A7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 333,
-    "cc": 2995,
-    "seconds": 5.3,
-    "source": "נתון יצרן (3.0 TFSI Quattro 333)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 252,
-    "cc": 1984,
-    "seconds": 6.9,
-    "source": "רישוי רכב / נתון יצרן (2.0 TFSI 252)"
-  },
-  {
-    "make": "Audi",
-    "model": "A7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 252,
-    "cc": 1984,
-    "seconds": 6.9,
-    "source": "נתון יצרן (2.0 TFSI 252)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 245,
-    "cc": 1984,
-    "seconds": 6.2,
-    "source": "רישוי רכב / נתון יצרן (45 TFSI Quattro 245)"
-  },
-  {
-    "make": "Audi",
-    "model": "A7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 245,
-    "cc": 1984,
-    "seconds": 6.2,
-    "source": "נתון יצרן (45 TFSI Quattro 245)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 340,
-    "cc": 2995,
-    "seconds": 5.3,
-    "source": "רישוי רכב / נתון יצרן (55 TFSI Quattro V6 Turbo 340)"
-  },
-  {
-    "make": "Audi",
-    "model": "A7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 340,
-    "cc": 2995,
-    "seconds": 5.3,
-    "source": "נתון יצרן (55 TFSI Quattro V6 Turbo 340)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A7 TFSI-E",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 299,
-    "cc": 1984,
-    "seconds": 6.3,
-    "source": "רישוי רכב / נתון יצרן (50 TFSI e Quattro 299)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 299,
-    "cc": 1984,
-    "seconds": 6.3,
-    "source": "נתון יצרן (A7 50 TFSI e Quattro 299)"
-  },
-  {
-    "make": "Audi",
-    "model": "A7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 299,
-    "cc": 1984,
-    "seconds": 6.3,
-    "source": "נתון יצרן (A7 50 TFSI e Quattro 299)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 286,
-    "cc": 2967,
-    "seconds": 5.7,
-    "source": "רישוי רכב / נתון יצרן (50 TDI Quattro 286)"
-  },
-  {
-    "make": "Audi",
-    "model": "A7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 286,
-    "cc": 2967,
-    "seconds": 5.7,
-    "source": "נתון יצרן (50 TDI Quattro 286)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 450,
-    "cc": 3993,
-    "seconds": 4.6,
-    "source": "נתון יצרן (Audi S7 V8 Biturbo 450)"
-  },
-  {
-    "make": "Audi",
-    "model": "A7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 450,
-    "cc": 3993,
-    "seconds": 4.6,
-    "source": "נתון יצרן (Audi S7 V8 Biturbo 450)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 600,
-    "cc": 3996,
-    "seconds": 3.6,
-    "source": "נתון יצרן (Audi RS7 Sportback 600)"
-  },
-  {
-    "make": "Audi",
-    "model": "A7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 600,
-    "cc": 3996,
-    "seconds": 3.6,
-    "source": "נתון יצרן (Audi RS7 Sportback 600)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 190,
-    "cc": 1798,
-    "seconds": 7.9,
-    "source": "רישוי רכב / נתון יצרן (1.8 TFSI 190)"
-  },
-  {
-    "make": "Audi",
-    "model": "A6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 190,
-    "cc": 1798,
-    "seconds": 7.9,
-    "source": "נתון יצרן (1.8 TFSI 190)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 252,
-    "cc": 1984,
-    "seconds": 6.7,
-    "source": "רישוי רכב / נתון יצרן (2.0 TFSI 252)"
-  },
-  {
-    "make": "Audi",
-    "model": "A6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 252,
-    "cc": 1984,
-    "seconds": 6.7,
-    "source": "נתון יצרן (2.0 TFSI 252)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 2773,
-    "seconds": 7.7,
-    "source": "רישוי רכב / נתון יצרן (2.8 FSI V6 204)"
-  },
-  {
-    "make": "Audi",
-    "model": "A6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 2773,
-    "seconds": 7.7,
-    "source": "נתון יצרן (2.8 FSI V6 204)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 1984,
-    "seconds": 7.9,
-    "source": "נתון יצרן (40 TFSI)"
-  },
-  {
-    "make": "Audi",
-    "model": "A6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 1984,
-    "seconds": 7.9,
-    "source": "נתון יצרן (40 TFSI)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 245,
-    "cc": 1984,
-    "seconds": 6.0,
-    "source": "נתון יצרן (45 TFSI Quattro)"
-  },
-  {
-    "make": "Audi",
-    "model": "A6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 245,
-    "cc": 1984,
-    "seconds": 6.0,
-    "source": "נתון יצרן (45 TFSI Quattro)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 340,
-    "cc": 2995,
-    "seconds": 5.1,
-    "source": "נתון יצרן (55 TFSI Quattro V6)"
-  },
-  {
-    "make": "Audi",
-    "model": "A6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 340,
-    "cc": 2995,
-    "seconds": 5.1,
-    "source": "נתון יצרן (55 TFSI Quattro V6)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 344,
-    "cc": 2967,
-    "seconds": 5.0,
-    "source": "נתון יצרן (Audi S6)"
-  },
-  {
-    "make": "Audi",
-    "model": "A6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 344,
-    "cc": 2967,
-    "seconds": 5.0,
-    "source": "נתון יצרן (Audi S6)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 600,
-    "cc": 3996,
-    "seconds": 3.6,
-    "source": "נתון יצרן (Audi RS6 Avant)"
-  },
-  {
-    "make": "Audi",
-    "model": "A6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 600,
-    "cc": 3996,
-    "seconds": 3.6,
-    "source": "נתון יצרן (Audi RS6 Avant)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 144,
-    "cc": 1798,
-    "seconds": 9.3,
-    "source": "רישוי רכב / נתון יצרן (1.8 TFSI 144)"
-  },
-  {
-    "make": "Audi",
-    "model": "A5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 144,
-    "cc": 1798,
-    "seconds": 9.3,
-    "source": "נתון יצרן (1.8 TFSI 144)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A5 SEDAN 40",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 1984,
-    "seconds": 7.2,
-    "source": "רישוי רכב / נתון יצרן (40 TFSI 204)[span_0](start_span)[span_0](end_span)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 1984,
-    "seconds": 7.2,
-    "source": "נתון יצרן (A5 Sportback 40 TFSI 204)"
-  },
-  {
-    "make": "Audi",
-    "model": "A5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 1984,
-    "seconds": 7.2,
-    "source": "נתון יצרן (A5 Sportback 40 TFSI 204)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1984,
-    "seconds": 8.9,
-    "source": "נתון יצרן (35 TFSI 150)"
-  },
-  {
-    "make": "Audi",
-    "model": "A5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1984,
-    "seconds": 8.9,
-    "source": "נתון יצרן (35 TFSI 150)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A5",
+    "make": "אודי הונגריה",
+    "model": "Q3",
     "yearStart": null,
     "yearEnd": null,
     "hp": 190,
     "cc": 1984,
-    "seconds": 7.3,
-    "source": "נתון יצרן (40 TFSI 190)"
-  },
-  {
-    "make": "Audi",
-    "model": "A5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 190,
-    "cc": 1984,
-    "seconds": 7.3,
-    "source": "נתון יצרן (40 TFSI 190)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 265,
-    "cc": 1984,
-    "seconds": 5.6,
-    "source": "נתון יצרן (45 TFSI Quattro)"
-  },
-  {
-    "make": "Audi",
-    "model": "A5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 265,
-    "cc": 1984,
-    "seconds": 5.6,
-    "source": "נתון יצרן (45 TFSI Quattro)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 354,
-    "cc": 2995,
-    "seconds": 4.7,
-    "source": "נתון יצרן (Audi S5 3.0 V6)"
-  },
-  {
-    "make": "Audi",
-    "model": "A5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 354,
-    "cc": 2995,
-    "seconds": 4.7,
-    "source": "נתון יצרן (Audi S5 3.0 V6)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 450,
-    "cc": 2894,
-    "seconds": 3.9,
-    "source": "נתון יצרן (Audi RS5 2.9 V6)"
-  },
-  {
-    "make": "Audi",
-    "model": "A5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 450,
-    "cc": 2894,
-    "seconds": 3.9,
-    "source": "נתון יצרן (Audi RS5 2.9 V6)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 120,
-    "cc": 1798,
-    "seconds": 10.5,
-    "source": "רישוי רכב / נתון יצרן (1.8 TFSI 120)[span_1](start_span)[span_1](end_span)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "AUDI A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 120,
-    "cc": 1798,
-    "seconds": 10.5,
-    "source": "רישוי רכב / נתון יצרן (1.8 TFSI 120)[span_2](start_span)[span_2](end_span)"
-  },
-  {
-    "make": "Audi",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 120,
-    "cc": 1798,
-    "seconds": 10.5,
-    "source": "נתון יצרן (1.8 TFSI 120)[span_3](start_span)[span_3](end_span)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1395,
-    "seconds": 8.5,
-    "source": "נתון יצרן (1.4 TFSI 150)"
-  },
-  {
-    "make": "Audi",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1395,
-    "seconds": 8.5,
-    "source": "נתון יצרן (1.4 TFSI 150)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1984,
-    "seconds": 8.9,
-    "source": "נתון יצרן (35 TFSI 150)"
-  },
-  {
-    "make": "Audi",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1984,
-    "seconds": 8.9,
-    "source": "נתון יצרן (35 TFSI 150)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 190,
-    "cc": 1984,
-    "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (40 TFSI 190)[span_4](start_span)[span_4](end_span)"
-  },
-  {
-    "make": "Audi",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 190,
-    "cc": 1984,
-    "seconds": 7.3,
-    "source": "נתון יצרן (40 TFSI 190)[span_5](start_span)[span_5](end_span)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 1984,
-    "seconds": 7.1,
-    "source": "רישוי רכב / נתון יצרן (40 TFSI 204)[span_6](start_span)[span_6](end_span)"
-  },
-  {
-    "make": "Audi",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 1984,
-    "seconds": 7.1,
-    "source": "נתון יצרן (40 TFSI 204)[span_7](start_span)[span_7](end_span)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 252,
-    "cc": 1984,
-    "seconds": 5.8,
-    "source": "נתון יצרן (2.0 TFSI Quattro 252)"
-  },
-  {
-    "make": "Audi",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 252,
-    "cc": 1984,
-    "seconds": 5.8,
-    "source": "נתון יצרן (2.0 TFSI Quattro 252)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 265,
-    "cc": 1984,
-    "seconds": 5.5,
-    "source": "רישוי רכב / נתון יצרן (45 TFSI Quattro 265)"
-  },
-  {
-    "make": "Audi",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 265,
-    "cc": 1984,
-    "seconds": 5.6,
-    "source": "נתון יצרן (45 TFSI Quattro)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 354,
-    "cc": 2995,
-    "seconds": 4.7,
-    "source": "נתון יצרן (Audi S4 3.0 V6 Turbo)"
-  },
-  {
-    "make": "Audi",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 354,
-    "cc": 2995,
-    "seconds": 4.7,
-    "source": "נתון יצרן (Audi S4 3.0 V6 Turbo)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 450,
-    "cc": 2894,
-    "seconds": 4.1,
-    "source": "נתון יצרן (Audi RS4 Avant 2.9)"
-  },
-  {
-    "make": "Audi",
-    "model": "A4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 450,
-    "cc": 2894,
-    "seconds": 4.1,
-    "source": "נתון יצרן (Audi RS4 Avant 2.9)"
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 40 TFSI Quattro)"
   },
   {
     "make": "אודי הונגריה",
-    "model": "A3 SEDAN",
+    "model": "Q3",
     "yearStart": null,
     "yearEnd": null,
     "hp": 150,
     "cc": 1498,
-    "seconds": 8.2,
-    "source": "רישוי רכב / נתון יצרן (1.5 TFSI Sedan)"
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 35 TFSI)"
   },
   {
-    "make": "אודי גרמניה",
-    "model": "A3 SEDAN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1498,
-    "seconds": 8.2,
-    "source": "נתון יצרן (1.5 TFSI Sedan)"
-  },
-  {
-    "make": "Audi",
-    "model": "A3 SEDAN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1498,
-    "seconds": 8.2,
-    "source": "נתון יצרן (1.5 TFSI Sedan)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 116,
-    "cc": 999,
-    "seconds": 9.9,
-    "source": "נתון יצרן (1.0 TFSI 116)"
-  },
-  {
-    "make": "Audi",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 116,
-    "cc": 999,
-    "seconds": 9.9,
-    "source": "נתון יצרן (1.0 TFSI 116)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 999,
-    "seconds": 10.6,
-    "source": "נתון יצרן (דור 4 - 30 TFSI)"
-  },
-  {
-    "make": "Audi",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 999,
-    "seconds": 10.6,
-    "source": "נתון יצרן (דור 4 - 30 TFSI)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 122,
-    "cc": 1395,
-    "seconds": 9.3,
-    "source": "נתון יצרן (1.4 TFSI 122)"
-  },
-  {
-    "make": "Audi",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 122,
-    "cc": 1395,
-    "seconds": 9.3,
-    "source": "נתון יצרן (1.4 TFSI 122)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A3",
+    "make": "אודי הונגריה",
+    "model": "Q3",
     "yearStart": null,
     "yearEnd": null,
     "hp": 150,
     "cc": 1395,
-    "seconds": 8.2,
-    "source": "נתון יצרן (1.4 / 1.5 TFSI 150)"
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (דור 1 - 1.4 TFSI)"
   },
   {
-    "make": "Audi",
-    "model": "A3",
+    "make": "אודי הונגריה",
+    "model": "Q3",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 150,
+    "hp": 230,
+    "cc": 1984,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 45 TFSI Quattro 230)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1984,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 45 TFSI Quattro 245)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
     "cc": 1395,
-    "seconds": 8.2,
-    "source": "נתון יצרן (1.4 / 1.5 TFSI 150)"
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 45 TFSI e פלאג-אין)"
   },
   {
-    "make": "אודי גרמניה",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 1395,
-    "seconds": 7.6,
-    "source": "נתון יצרן (e-tron פלאג-אין)"
-  },
-  {
-    "make": "Audi",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 1395,
-    "seconds": 7.6,
-    "source": "נתון יצרן (e-tron פלאג-אין)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 190,
-    "cc": 1984,
-    "seconds": 6.2,
-    "source": "נתון יצרן (2.0 TFSI Quattro 190)"
-  },
-  {
-    "make": "Audi",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 190,
-    "cc": 1984,
-    "seconds": 6.2,
-    "source": "נתון יצרן (2.0 TFSI Quattro 190)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 300,
-    "cc": 1984,
-    "seconds": 4.6,
-    "source": "נתון יצרן (Audi S3)"
-  },
-  {
-    "make": "Audi",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 300,
-    "cc": 1984,
-    "seconds": 4.6,
-    "source": "נתון יצרן (Audi S3)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 310,
-    "cc": 1984,
-    "seconds": 4.8,
-    "source": "נתון יצרן (דור 4 - Audi S3)"
-  },
-  {
-    "make": "Audi",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 310,
-    "cc": 1984,
-    "seconds": 4.8,
-    "source": "נתון יצרן (דור 4 - Audi S3)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 367,
-    "cc": 2480,
-    "seconds": 4.3,
-    "source": "נתון יצרן (Audi RS3 2.5)"
-  },
-  {
-    "make": "Audi",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 367,
-    "cc": 2480,
-    "seconds": 4.3,
-    "source": "נתון יצרן (Audi RS3 2.5)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A3",
+    "make": "אודי הונגריה",
+    "model": "Q3",
     "yearStart": null,
     "yearEnd": null,
     "hp": 400,
     "cc": 2480,
-    "seconds": 3.8,
-    "source": "נתון יצרן (Audi RS3 400 כ\"ס)"
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (Audi RS Q3 400)"
   },
   {
-    "make": "Audi",
-    "model": "A3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 400,
-    "cc": 2480,
-    "seconds": 3.8,
-    "source": "נתון יצרן (Audi RS3 400 כ\"ס)"
-  },
-  {
-    "make": "אודי ספרד",
-    "model": "A1 SPORTBACK",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 999,
-    "seconds": 10.5,
-    "source": "רישוי רכב / נתון יצרן (30 TFSI)[span_8](start_span)[span_8](end_span)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A1 SPORTBACK",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 999,
-    "seconds": 10.5,
-    "source": "רישוי רכב / נתון יצרן (30 TFSI)[span_9](start_span)[span_9](end_span)"
-  },
-  {
-    "make": "Audi",
-    "model": "A1 SPORTBACK",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 999,
-    "seconds": 10.5,
-    "source": "נתון יצרן (30 TFSI)[span_10](start_span)[span_10](end_span)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A1",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 86,
-    "cc": 1197,
-    "seconds": 11.7,
-    "source": "נתון יצרן (1.2 TFSI)"
-  },
-  {
-    "make": "Audi",
-    "model": "A1",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 86,
-    "cc": 1197,
-    "seconds": 11.7,
-    "source": "נתון יצרן (1.2 TFSI)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A1",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 95,
-    "cc": 999,
-    "seconds": 10.9,
-    "source": "נתון יצרן (1.0 TFSI 95)"
-  },
-  {
-    "make": "Audi",
-    "model": "A1",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 95,
-    "cc": 999,
-    "seconds": 10.9,
-    "source": "נתון יצרן (1.0 TFSI 95)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A1",
+    "make": "אודי הונגריה",
+    "model": "Q2",
     "yearStart": null,
     "yearEnd": null,
     "hp": 116,
     "cc": 999,
-    "seconds": 9.4,
-    "source": "נתון יצרן (דור 2 - 30 TFSI)"
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (30 TFSI 1.0)"
   },
   {
-    "make": "Audi",
-    "model": "A1",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 116,
-    "cc": 999,
-    "seconds": 9.4,
-    "source": "נתון יצרן (דור 2 - 30 TFSI)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A1",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 122,
-    "cc": 1390,
-    "seconds": 8.9,
-    "source": "נתון יצרן (1.4 TFSI)"
-  },
-  {
-    "make": "Audi",
-    "model": "A1",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 122,
-    "cc": 1390,
-    "seconds": 8.9,
-    "source": "נתון יצרן (1.4 TFSI)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A1",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 125,
-    "cc": 1395,
-    "seconds": 8.9,
-    "source": "נתון יצרן (1.4 TFSI Ultra)"
-  },
-  {
-    "make": "Audi",
-    "model": "A1",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 125,
-    "cc": 1395,
-    "seconds": 8.9,
-    "source": "נתון יצרן (1.4 TFSI Ultra)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A1",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 185,
-    "cc": 1390,
-    "seconds": 6.9,
-    "source": "נתון יצרן (1.4 TFSI כפול מגדשים)"
-  },
-  {
-    "make": "Audi",
-    "model": "A1",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 185,
-    "cc": 1390,
-    "seconds": 6.9,
-    "source": "נתון יצרן (1.4 TFSI כפול מגדשים)"
-  },
-  {
-    "make": "אודי גרמניה",
-    "model": "A1",
+    "make": "אודי הונגריה",
+    "model": "Q2",
     "yearStart": null,
     "yearEnd": null,
     "hp": 150,
     "cc": 1498,
-    "seconds": 7.7,
-    "source": "נתון יצרן (דור 2 - 35 TFSI 1.5)"
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (35 TFSI 1.5)"
   },
   {
-    "make": "Audi",
-    "model": "A1",
+    "make": "אודי הונגריה",
+    "model": "Q2",
     "yearStart": null,
     "yearEnd": null,
     "hp": 150,
-    "cc": 1498,
-    "seconds": 7.7,
-    "source": "נתון יצרן (דור 2 - 35 TFSI 1.5)"
+    "cc": 1395,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (1.4 TFSI 150)"
   },
   {
-    "make": "אודי גרמניה",
-    "model": "A1",
+    "make": "אודי הונגריה",
+    "model": "Q2",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 207,
+    "hp": 190,
     "cc": 1984,
     "seconds": 6.5,
-    "source": "נתון יצרן (דור 2 - 40 TFSI 2.0)"
+    "source": "רישוי רכב / נתון יצרן (40 TFSI Quattro 190)"
   },
   {
-    "make": "Audi",
-    "model": "A1",
+    "make": "אודי הונגריה",
+    "model": "Q2",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 207,
+    "hp": 300,
     "cc": 1984,
-    "seconds": 6.5,
-    "source": "נתון יצרן (דור 2 - 40 TFSI 2.0)"
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (Audi SQ2)"
   },
   {
-    "make": "אודי גרמניה",
-    "model": "A1",
+    "make": "אודי הונגריה",
+    "model": "Q4",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 231,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (Q4 40 e-tron חשמלי)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q4 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (Q4 40 e-tron חשמלי)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (Q4 45 e-tron חשמלי)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q4 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (Q4 45 e-tron חשמלי)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 0,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (Q4 50 e-tron Quattro)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q4 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 0,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (Q4 50 e-tron Quattro)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
     "cc": 1984,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 40 TFSI 204)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1984,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 45 TFSI 245)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1984,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 2.0 TFSI 252)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 1984,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 45 TFSI Quattro)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 1984,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (50 TFSI e פלאג-אין 299)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 367,
+    "cc": 1984,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (55 TFSI e פלאג-אין 367)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 354,
+    "cc": 2995,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (Audi SQ5 3.0 TFSI 354)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 292,
+    "cc": 0,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (Q6 e-tron RWD 292)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q6 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 292,
+    "cc": 0,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (Q6 e-tron RWD 292)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 326,
+    "cc": 0,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (Q6 e-tron Performance 326)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q6 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 326,
+    "cc": 0,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (Q6 e-tron Performance 326)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 388,
+    "cc": 0,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (Q6 e-tron Quattro 388)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q6 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 388,
+    "cc": 0,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (Q6 e-tron Quattro 388)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 517,
+    "cc": 0,
+    "seconds": 4.3,
+    "source": "רישוי רכב / נתון יצרן (SQ6 e-tron 517)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q6 e-tron",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 517,
+    "cc": 0,
+    "seconds": 4.3,
+    "source": "רישוי רכב / נתון יצרן (SQ6 e-tron 517)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1984,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 2.0 TFSI 252)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2967,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 50 TDI Quattro 286)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (דור 2 - 55 TFSI Quattro 340)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 381,
+    "cc": 2995,
     "seconds": 5.8,
-    "source": "נתון יצרן (Audi S1 2.0 TFSI Quattro)"
+    "source": "רישוי רכב / נתון יצרן (55 TFSI e פלאג-אין 381)"
   },
   {
-    "make": "Audi",
-    "model": "A1",
+    "make": "אודי הונגריה",
+    "model": "Q7",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 231,
-    "cc": 1984,
+    "hp": 507,
+    "cc": 3996,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (Audi SQ7 TFSI V8 507)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2967,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (50 TDI Quattro 286)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (55 TFSI Quattro 340)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 381,
+    "cc": 2995,
     "seconds": 5.8,
-    "source": "נתון יצרן (Audi S1 2.0 TFSI Quattro)"
+    "source": "רישוי רכב / נתון יצרן (55 TFSI e פלאג-אין 381)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 462,
+    "cc": 2995,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (60 TFSI e פלאג-אין 462)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 507,
+    "cc": 3996,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (Audi SQ8 TFSI 507)"
+  },
+  {
+    "make": "אודי הונגריה",
+    "model": "Q8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 3996,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (Audi RS Q8 V8 600)"
   },
   {
     "make": "אודי גרמניה",
@@ -2167,7 +1507,7 @@
     "hp": 204,
     "cc": 0,
     "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (סוללת 58 קוט\"ש)[span_11](start_span)[span_11](end_span)[span_12](start_span)[span_12](end_span)[span_13](start_span)[span_13](end_span)[span_14](start_span)[span_14](end_span)"
+    "source": "רישוי רכב / נתון יצרן (סוללת 58 קוט\"ש)[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span)[span_2](start_span)[span_2](end_span)[span_3](start_span)[span_3](end_span)"
   },
   {
     "make": "סיאט גרמניה",
@@ -2177,7 +1517,7 @@
     "hp": 204,
     "cc": 0,
     "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (סוללת 58 קוט\"ש)[span_15](start_span)[span_15](end_span)[span_16](start_span)[span_16](end_span)[span_17](start_span)[span_17](end_span)"
+    "source": "רישוי רכב / נתון יצרן (סוללת 58 קוט\"ש)[span_4](start_span)[span_4](end_span)[span_5](start_span)[span_5](end_span)[span_6](start_span)[span_6](end_span)"
   },
   {
     "make": "Cupra",
@@ -2187,7 +1527,7 @@
     "hp": 204,
     "cc": 0,
     "seconds": 7.3,
-    "source": "נתון יצרן (סוללת 58 קוט\"ש)[span_18](start_span)[span_18](end_span)"
+    "source": "נתון יצרן (סוללת 58 קוט\"ש)[span_7](start_span)[span_7](end_span)"
   },
   {
     "make": "Cupra",
@@ -2197,7 +1537,7 @@
     "hp": 231,
     "cc": 0,
     "seconds": 6.6,
-    "source": "נתון יצרן (גרסת e-Boost, סוללת 58 קוט\"ש)[span_19](start_span)[span_19](end_span)"
+    "source": "נתון יצרן (גרסת e-Boost, סוללת 58 קוט\"ש)[span_8](start_span)[span_8](end_span)"
   },
   {
     "make": "Cupra",
