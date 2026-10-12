@@ -1,5 +1,125 @@
 [
   {
+    "make": "ג'.אמ.סי ארה",
+    "model": "HUMMER EV SUV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 804,
+    "cc": 0,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (GMC Hummer EV SUV Edition 1 804)"
+  },
+  {
+    "make": "ג'.אמ.סי ארה",
+    "model": "HUMMER EV SUV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 830,
+    "cc": 0,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (GMC Hummer EV SUV 3X 830)"
+  },
+  {
+    "make": "ג'.אמ.סי ארה",
+    "model": "HUMMER EV SUV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 625,
+    "cc": 0,
+    "seconds": 4.2,
+    "source": "רישוי רכב / נתון יצרן (GMC Hummer EV SUV 2X 625)"
+  },
+  {
+    "make": "ג'.אמ.סי ארה",
+    "model": "HUMMER EV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 804,
+    "cc": 0,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (GMC Hummer EV SUV 804)"
+  },
+  {
+    "make": "ג'.אמ.סי ארה",
+    "model": "HUMMER EV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 1000,
+    "cc": 0,
+    "seconds": 3.0,
+    "source": "רישוי רכב / נתון יצרן (GMC Hummer EV Pickup 1000)"
+  },
+  {
+    "make": "ג'.אמ.סי",
+    "model": "HUMMER EV SUV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 804,
+    "cc": 0,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (GMC Hummer EV SUV 804)"
+  },
+  {
+    "make": "ג'י אם סי",
+    "model": "HUMMER EV SUV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 804,
+    "cc": 0,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (GMC Hummer EV SUV 804)"
+  },
+  {
+    "make": "ג'י.אם.סי",
+    "model": "HUMMER EV SUV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 804,
+    "cc": 0,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (GMC Hummer EV SUV 804)"
+  },
+  {
+    "make": "GMC",
+    "model": "HUMMER EV SUV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 804,
+    "cc": 0,
+    "seconds": 3.5,
+    "source": "נתון יצרן (GMC Hummer EV SUV 804)"
+  },
+  {
+    "make": "GMC",
+    "model": "HUMMER EV SUV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 830,
+    "cc": 0,
+    "seconds": 3.5,
+    "source": "נתון יצרן (GMC Hummer EV SUV 830)"
+  },
+  {
+    "make": "GMC",
+    "model": "HUMMER EV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 1000,
+    "cc": 0,
+    "seconds": 3.0,
+    "source": "נתון יצרן (GMC Hummer EV Pickup 1000)"
+  },
+  {
+    "make": "GMC",
+    "model": "HUMMER EV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 804,
+    "cc": 0,
+    "seconds": 3.5,
+    "source": "נתון יצרן (GMC Hummer EV SUV 804)"
+  },
+  {
     "make": "ג'.איי.סי סין",
     "model": "GE3",
     "yearStart": null,
