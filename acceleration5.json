@@ -1,1 +1,482 @@
-klod
+[
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "DBX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 542,
+    "cc": 3982,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DBX 4.0 V8 542)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "DBX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 550,
+    "cc": 3982,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DBX 4.0 V8 550)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "DBX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 707,
+    "cc": 3982,
+    "seconds": 3.3,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DBX 707 V8)"
+  },
+  {
+    "make": "אסטון מרטין",
+    "model": "DBX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 542,
+    "cc": 3982,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DBX 4.0 V8 542)"
+  },
+  {
+    "make": "Aston Martin",
+    "model": "DBX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 542,
+    "cc": 3982,
+    "seconds": 4.5,
+    "source": "נתון יצרן (Aston Martin DBX V8)"
+  },
+  {
+    "make": "Aston Martin",
+    "model": "DBX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 707,
+    "cc": 3982,
+    "seconds": 3.3,
+    "source": "נתון יצרן (Aston Martin DBX 707)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "VANTAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 503,
+    "cc": 3982,
+    "seconds": 3.6,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנטאג' 4.0 V8 503/510)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "VANTAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 3982,
+    "seconds": 3.6,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנטאג' 4.0 V8 510)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "ואנטאג",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 503,
+    "cc": 3982,
+    "seconds": 3.6,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנטאג' 4.0 V8 503)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "VANTAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 535,
+    "cc": 3982,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנטאג' F1 Edition 535)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "VANTAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 665,
+    "cc": 3982,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנטאג' דור חדש 665)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "VANTAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 426,
+    "cc": 4735,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנטאג' 4.7 V8 426/436)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "VANTAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 517,
+    "cc": 5935,
+    "seconds": 4.2,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנטאג' V12 517)"
+  },
+  {
+    "make": "אסטון מרטין",
+    "model": "ואנטאג",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 503,
+    "cc": 3982,
+    "seconds": 3.6,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנטאג' 503)"
+  },
+  {
+    "make": "Aston Martin",
+    "model": "VANTAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 503,
+    "cc": 3982,
+    "seconds": 3.6,
+    "source": "נתון יצרן (Aston Martin Vantage 4.0 V8)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "DB11",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 503,
+    "cc": 3982,
+    "seconds": 4.0,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB11 4.0 V8 503/510)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "DB11",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 3982,
+    "seconds": 4.0,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB11 4.0 V8 510)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "DB11",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 528,
+    "cc": 3982,
+    "seconds": 4.0,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB11 4.0 V8 528)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "DB11",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 608,
+    "cc": 5204,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB11 5.2 V12 608)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "DB11",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 639,
+    "cc": 5204,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB11 AMR V12 639)"
+  },
+  {
+    "make": "אסטון מרטין",
+    "model": "DB11",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 3982,
+    "seconds": 4.0,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB11 V8)"
+  },
+  {
+    "make": "Aston Martin",
+    "model": "DB11",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 3982,
+    "seconds": 4.0,
+    "source": "נתון יצרן (Aston Martin DB11 V8)"
+  },
+  {
+    "make": "Aston Martin",
+    "model": "DB11",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 608,
+    "cc": 5204,
+    "seconds": 3.9,
+    "source": "נתון יצרן (Aston Martin DB11 V12)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "DB12",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 680,
+    "cc": 3982,
+    "seconds": 3.6,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB12 4.0 V8 680)"
+  },
+  {
+    "make": "אסטון מרטין",
+    "model": "DB12",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 680,
+    "cc": 3982,
+    "seconds": 3.6,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB12 4.0 V8 680)"
+  },
+  {
+    "make": "Aston Martin",
+    "model": "DB12",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 680,
+    "cc": 3982,
+    "seconds": 3.6,
+    "source": "נתון יצרן (Aston Martin DB12 680)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "DB9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 450,
+    "cc": 5935,
+    "seconds": 5.1,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB9 5.9 V12 450)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "DB9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 477,
+    "cc": 5935,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB9 5.9 V12 477)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "DB9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 517,
+    "cc": 5935,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB9 5.9 V12 517)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "DB9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 547,
+    "cc": 5935,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB9 GT 547)"
+  },
+  {
+    "make": "אסטון מרטין",
+    "model": "DB9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 517,
+    "cc": 5935,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB9 517)"
+  },
+  {
+    "make": "Aston Martin",
+    "model": "DB9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 517,
+    "cc": 5935,
+    "seconds": 4.6,
+    "source": "נתון יצרן (Aston Martin DB9 5.9 V12)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "DBS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 725,
+    "cc": 5204,
+    "seconds": 3.4,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DBS Superleggera V12 725)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "DBS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 770,
+    "cc": 5204,
+    "seconds": 3.2,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DBS 770 Ultimate 770)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "DBS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 517,
+    "cc": 5935,
+    "seconds": 4.3,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DBS דור קודם 5.9 V12 517)"
+  },
+  {
+    "make": "אסטון מרטין",
+    "model": "DBS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 725,
+    "cc": 5204,
+    "seconds": 3.4,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DBS Superleggera 725)"
+  },
+  {
+    "make": "Aston Martin",
+    "model": "DBS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 725,
+    "cc": 5204,
+    "seconds": 3.4,
+    "source": "נתון יצרן (Aston Martin DBS Superleggera)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "RAPIDE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 477,
+    "cc": 5935,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ראפיד 5.9 V12 477)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "RAPIDE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 558,
+    "cc": 5935,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ראפיד S 5.9 V12 558)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "RAPIDE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 603,
+    "cc": 5935,
+    "seconds": 4.2,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ראפיד AMR 603)"
+  },
+  {
+    "make": "אסטון מרטין",
+    "model": "Rapide",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 558,
+    "cc": 5935,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ראפיד S 558)"
+  },
+  {
+    "make": "Aston Martin",
+    "model": "Rapide",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 558,
+    "cc": 5935,
+    "seconds": 4.4,
+    "source": "נתון יצרן (Aston Martin Rapide S)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "VANQUISH",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 573,
+    "cc": 5935,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנקוויש 5.9 V12 573)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "VANQUISH",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 603,
+    "cc": 5935,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנקוויש S 5.9 V12 603)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "VANQUISH",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 835,
+    "cc": 5204,
+    "seconds": 3.3,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנקוויש דור חדש V12 835)"
+  },
+  {
+    "make": "אסטון מרטין אנ",
+    "model": "ואנקוויש",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 573,
+    "cc": 5935,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנקוויש 573)"
+  },
+  {
+    "make": "אסטון מרטין",
+    "model": "ואנקוויש",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 573,
+    "cc": 5935,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנקוויש 573)"
+  },
+  {
+    "make": "Aston Martin",
+    "model": "Vanquish",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 573,
+    "cc": 5935,
+    "seconds": 4.1,
+    "source": "נתון יצרן (Aston Martin Vanquish 5.9 V12)"
+  }
+]
