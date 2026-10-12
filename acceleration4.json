@@ -1,1 +1,402 @@
-klod
+[
+  {
+    "make": "איסוזו תאילנד",
+    "model": "PICK-UP",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1898,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (איסוזו די-מקס 1.9 דיזל 163)"
+  },
+  {
+    "make": "איסוזו תאילנד",
+    "model": "D-MAX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1898,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (איסוזו די-מקס 1.9 דיזל 163)"
+  },
+  {
+    "make": "איסוזו",
+    "model": "די-מקס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1898,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (איסוזו די-מקס 1.9 דיזל 163)"
+  },
+  {
+    "make": "איסוזו תאילנד",
+    "model": "PICK-UP",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 2499,
+    "seconds": 12.2,
+    "source": "רישוי רכב / נתון יצרן (איסוזו די-מקס 2.5 TwinTurbo 163)"
+  },
+  {
+    "make": "איסוזו תאילנד",
+    "model": "D-MAX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 2499,
+    "seconds": 12.2,
+    "source": "רישוי רכב / נתון יצרן (איסוזו די-מקס 2.5 TwinTurbo 163)"
+  },
+  {
+    "make": "איסוזו תאילנד",
+    "model": "PICK-UP",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 2499,
+    "seconds": 13.9,
+    "source": "רישוי רכב / נתון יצרן (איסוזו די-מקס 2.5 דיזל 136)"
+  },
+  {
+    "make": "איסוזו תאילנד",
+    "model": "D-MAX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 2499,
+    "seconds": 13.9,
+    "source": "רישוי רכב / נתון יצרן (איסוזו די-מקס 2.5 דיזל 136)"
+  },
+  {
+    "make": "איסוזו תאילנד",
+    "model": "PICK-UP",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 2999,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (איסוזו די-מקס 3.0 דיזל 163)"
+  },
+  {
+    "make": "איסוזו תאילנד",
+    "model": "D-MAX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 2999,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (איסוזו די-מקס 3.0 דיזל 163)"
+  },
+  {
+    "make": "איסוזו תאילנד",
+    "model": "PICK-UP",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 2999,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (איסוזו די-מקס 3.0 דיזל 130)"
+  },
+  {
+    "make": "איסוזו תאילנד",
+    "model": "D-MAX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 2999,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (איסוזו די-מקס 3.0 דיזל 130)"
+  },
+  {
+    "make": "איסוזו",
+    "model": "D-MAX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1898,
+    "seconds": 12.5,
+    "source": "נתון יצרן (Isuzu D-Max 1.9)"
+  },
+  {
+    "make": "Isuzu",
+    "model": "D-MAX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1898,
+    "seconds": 12.5,
+    "source": "נתון יצרן (Isuzu D-Max 1.9)"
+  },
+  {
+    "make": "איסוזו יפן",
+    "model": "IPPON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 3059,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (איסוזו איפון 3.1 דיזל 109)"
+  },
+  {
+    "make": "איסוזו",
+    "model": "IPPON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 3059,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (איסוזו איפון 3.1 דיזל 109)"
+  },
+  {
+    "make": "איסוזו",
+    "model": "איפון",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 3059,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (איסוזו איפון 3.1 דיזל 109)"
+  },
+  {
+    "make": "Isuzu",
+    "model": "IPPON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 3059,
+    "seconds": 16.5,
+    "source": "נתון יצרן (Isuzu Ippon 3.1D)"
+  },
+  {
+    "make": "איסוזו יפן",
+    "model": "IPPON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 76,
+    "cc": 2499,
+    "seconds": 21.0,
+    "source": "רישוי רכב / נתון יצרן (איסוזו איפון 2.5 דיזל 76)"
+  },
+  {
+    "make": "איסוזו",
+    "model": "IPPON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 76,
+    "cc": 2499,
+    "seconds": 21.0,
+    "source": "רישוי רכב / נתון יצרן (איסוזו איפון 2.5 דיזל 76)"
+  },
+  {
+    "make": "\"איסוזו ארהב",
+    "model": "RODEO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3165,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (איסוזו רודאו 3.2 V6 205)"
+  },
+  {
+    "make": "איסוזו ארהב\"",
+    "model": "RODEO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3165,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (איסוזו רודאו 3.2 V6 205)"
+  },
+  {
+    "make": "איסוזו ארה\"ב",
+    "model": "RODEO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3165,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (איסוזו רודאו 3.2 V6 205)"
+  },
+  {
+    "make": "איסוזו",
+    "model": "RODEO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3165,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (איסוזו רודאו 3.2 V6 205)"
+  },
+  {
+    "make": "איסוזו",
+    "model": "רודאו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3165,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (איסוזו רודאו 3.2 V6 205)"
+  },
+  {
+    "make": "Isuzu",
+    "model": "RODEO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3165,
+    "seconds": 10.3,
+    "source": "נתון יצרן (Isuzu Rodeo 3.2)"
+  },
+  {
+    "make": "איסוזו יפן",
+    "model": "TROOPER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 159,
+    "cc": 2999,
+    "seconds": 15.2,
+    "source": "רישוי רכב / נתון יצרן (איסוזו טרופר 3.0 דיזל 159)"
+  },
+  {
+    "make": "איסוזו יפן",
+    "model": "TROOPER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 215,
+    "cc": 3494,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (איסוזו טרופר 3.5 בנזין 215)"
+  },
+  {
+    "make": "איסוזו יפן",
+    "model": "TROOPER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 3165,
+    "seconds": 11.8,
+    "source": "רישוי רכב / נתון יצרן (איסוזו טרופר 3.2 בנזין 177)"
+  },
+  {
+    "make": "איסוזו",
+    "model": "TROOPER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 159,
+    "cc": 2999,
+    "seconds": 15.2,
+    "source": "רישוי רכב / נתון יצרן (איסוזו טרופר 3.0 דיזל 159)"
+  },
+  {
+    "make": "איסוזו",
+    "model": "TROOPER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 215,
+    "cc": 3494,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (איסוזו טרופר 3.5 בנזין 215)"
+  },
+  {
+    "make": "איסוזו",
+    "model": "טרופר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 159,
+    "cc": 2999,
+    "seconds": 15.2,
+    "source": "רישוי רכב / נתון יצרן (איסוזו טרופר 3.0 דיזל 159)"
+  },
+  {
+    "make": "איסוזו",
+    "model": "טרופר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 215,
+    "cc": 3494,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (איסוזו טרופר 3.5 בנזין 215)"
+  },
+  {
+    "make": "Isuzu",
+    "model": "TROOPER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 159,
+    "cc": 2999,
+    "seconds": 15.2,
+    "source": "נתון יצרן (Isuzu Trooper 3.0D)"
+  },
+  {
+    "make": "Isuzu",
+    "model": "TROOPER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 215,
+    "cc": 3494,
+    "seconds": 10.7,
+    "source": "נתון יצרן (Isuzu Trooper 3.5)"
+  },
+  {
+    "make": "איסוזו ארה\"ב",
+    "model": "AXIOM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 3494,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (איסוזו אקסיום 3.5 V6 230)"
+  },
+  {
+    "make": "\"איסוזו ארהב",
+    "model": "AXIOM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 3494,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (איסוזו אקסיום 3.5 V6 230)"
+  },
+  {
+    "make": "איסוזו ארהב\"",
+    "model": "AXIOM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 3494,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (איסוזו אקסיום 3.5 V6 230)"
+  },
+  {
+    "make": "איסוזו",
+    "model": "AXIOM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 3494,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (איסוזו אקסיום 3.5 V6 230)"
+  },
+  {
+    "make": "איסוזו",
+    "model": "אקסיום",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 3494,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (איסוזו אקסיום 3.5 V6 230)"
+  },
+  {
+    "make": "Isuzu",
+    "model": "AXIOM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 3494,
+    "seconds": 9.5,
+    "source": "נתון יצרן (Isuzu Axiom 3.5)"
+  }
+]
