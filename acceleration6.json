@@ -1,1 +1,602 @@
-klod
+[
+  {
+    "make": "בי ווי די סין",
+    "model": "BYD ATTO 2 DM-I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 166,
+    "cc": 1498,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (BYD Atto 2 DM-i פלאג-אין 166)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "ATTO 2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 166,
+    "cc": 1498,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (BYD Atto 2 DM-i 166)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "ATTO 2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (BYD Atto 2 חשמלי EV 177)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "אטו 2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 166,
+    "cc": 1498,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (BYD Atto 2 DM-i 166)"
+  },
+  {
+    "make": "BYD",
+    "model": "ATTO 2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 166,
+    "cc": 1498,
+    "seconds": 7.9,
+    "source": "נתון יצרן (BYD Atto 2 DM-i)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "ATTO 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (BYD Atto 3 חשמלי EV 204)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "BYD ATTO 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (BYD Atto 3 חשמלי EV 204)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "אטו 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (BYD Atto 3 חשמלי EV 204)"
+  },
+  {
+    "make": "BYD",
+    "model": "ATTO 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "נתון יצרן (BYD Atto 3 EV 204)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "BYD DOLPHIN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (BYD דולפין חשמלי EV 204)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "DOLPHIN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (BYD דולפין חשמלי EV 204)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "דולפין",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (BYD דולפין חשמלי EV 204)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "DOLPHIN SURF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (BYD דולפין סרף 204)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "דולפין סרף",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (BYD דולפין סרף 204)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "BYD DOLPHIN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 0,
+    "seconds": 12.3,
+    "source": "רישוי רכב / נתון יצרן (BYD דולפין Active 95)"
+  },
+  {
+    "make": "BYD",
+    "model": "DOLPHIN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.0,
+    "source": "נתון יצרן (BYD Dolphin EV 204)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "HAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 518,
+    "cc": 0,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (BYD האן כפול הנעה AWD 518)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "BYD HAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 518,
+    "cc": 0,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (BYD האן כפול הנעה AWD 518)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "האן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 518,
+    "cc": 0,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (BYD האן כפול הנעה AWD 518)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "HAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (BYD האן הנעה קדמית FWD 245)"
+  },
+  {
+    "make": "BYD",
+    "model": "HAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 518,
+    "cc": 0,
+    "seconds": 3.9,
+    "source": "נתון יצרן (BYD Han AWD 518)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "TANG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 518,
+    "cc": 0,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (BYD טאנג 7 מקומות AWD 518)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "BYD TANG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 518,
+    "cc": 0,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (BYD טאנג 7 מקומות AWD 518)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "טאנג",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 518,
+    "cc": 0,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (BYD טאנג 7 מקומות AWD 518)"
+  },
+  {
+    "make": "BYD",
+    "model": "TANG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 518,
+    "cc": 0,
+    "seconds": 4.6,
+    "source": "נתון יצרן (BYD Tang AWD 518)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "BYD SEALION 7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 0,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל אריה 7 Boost הנעה אחורית 231)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "SEALION 7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 0,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל אריה 7 Boost 231)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "SEALION 7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 0,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל אריה 7 Comfort RWD 313)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "BYD SEALION 7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 0,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל אריה 7 Excellence AWD 530)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "SEALION 7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 0,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל אריה 7 Excellence AWD 530)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "סי ליאון 07",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 0,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל אריה 7 231)"
+  },
+  {
+    "make": "BYD",
+    "model": "SEALION 7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 0,
+    "seconds": 7.5,
+    "source": "נתון יצרן (BYD Sealion 7 Boost)"
+  },
+  {
+    "make": "BYD",
+    "model": "SEALION 7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 0,
+    "seconds": 4.5,
+    "source": "נתון יצרן (BYD Sealion 7 AWD)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "SEALION 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 1498,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל אריה 5 פלאג-אין DM-i 197)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "BYD SEALION 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 1498,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל אריה 5 פלאג-אין DM-i 197)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "סי ליאון 05",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 1498,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל אריה 5 פלאג-אין DM-i 197)"
+  },
+  {
+    "make": "BYD",
+    "model": "SEALION 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 1498,
+    "seconds": 7.9,
+    "source": "נתון יצרן (BYD Sealion 5 DM-i)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "SEAL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל Excellence כפול הנעה AWD 530)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "BYD SEAL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל Excellence כפול הנעה AWD 530)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "SEAL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 0,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל Design הנעה אחורית RWD 313)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "סיל",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל Excellence AWD 530)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "סיל",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 0,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל Design RWD 313)"
+  },
+  {
+    "make": "BYD",
+    "model": "SEAL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "נתון יצרן (BYD Seal AWD 530)"
+  },
+  {
+    "make": "BYD",
+    "model": "SEAL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 0,
+    "seconds": 5.9,
+    "source": "נתון יצרן (BYD Seal RWD 313)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "BYD SEAL 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 212,
+    "cc": 1498,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל 5 פלאג-אין DM-i 212)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "SEAL 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 212,
+    "cc": 1498,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל 5 פלאג-אין DM-i 212)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "SEAL 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1498,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל 5 פלאג-אין DM-i 180)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "סיל 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 212,
+    "cc": 1498,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל 5 DM-i 212)"
+  },
+  {
+    "make": "BYD",
+    "model": "SEAL 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 212,
+    "cc": 1498,
+    "seconds": 7.3,
+    "source": "נתון יצרן (BYD Seal 5 DM-i)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "SEAL U",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל יו חשמלי EV Comfort 218)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "BYD SEAL U",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל יו חשמלי EV Comfort 218)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "SEAL U",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 1498,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל יו DM-i פלאג-אין Boost 218)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "SEAL U",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 324,
+    "cc": 1498,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל יו DM-i פלאג-אין AWD 324)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "סיל u",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל U חשמלי 218)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "סיל u",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 1498,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (BYD סיל U פלאג-אין 218)"
+  },
+  {
+    "make": "BYD",
+    "model": "SEAL U",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 9.3,
+    "source": "נתון יצרן (BYD Seal U EV 218)"
+  },
+  {
+    "make": "BYD",
+    "model": "SEAL U",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 1498,
+    "seconds": 8.9,
+    "source": "נתון יצרן (BYD Seal U DM-i 218)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "ETP3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 13.0,
+    "source": "רישוי רכב / נתון יצרן (BYD ETP3 מסחרי חשמלי 136)"
+  },
+  {
+    "make": "בי ווי די סין",
+    "model": "BYD ETP3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 13.0,
+    "source": "רישוי רכב / נתון יצרן (BYD ETP3 מסחרי חשמלי 136)"
+  },
+  {
+    "make": "BYD",
+    "model": "ETP3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 13.0,
+    "source": "נתון יצרן (BYD ETP3 EV 136)"
+  }
+]
