@@ -1,5 +1,45 @@
 [
   {
+    "make": "אופל סלובקיה",
+    "model": "FRONTERA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1199,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (פרונטרה הייבריד 136)"
+  },
+  {
+    "make": "אופל סלובקיה",
+    "model": "FRONTERA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1199,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (פרונטרה הייבריד 100)"
+  },
+  {
+    "make": "אופל סלובקיה",
+    "model": "FRONTERA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 113,
+    "cc": 0,
+    "seconds": 12.1,
+    "source": "רישוי רכב / נתון יצרן (פרונטרה חשמלית 113)"
+  },
+  {
+    "make": "אופל סלובקיה",
+    "model": "פרונטרה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1199,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (פרונטרה הייבריד 136)"
+  },
+  {
     "make": "אופל ספרד",
     "model": "MERIVA",
     "yearStart": null,
@@ -597,7 +637,7 @@
     "hp": 150,
     "cc": 1399,
     "seconds": 8.5,
-    "source": "רישוי רכב / נתון יצרן (אסטרה 1.4T 150)"
+    "source": "רישוי רכב / נתון יצרן (אסטרה 1.4T 140)"
   },
   {
     "make": "אופל גרמניה",
