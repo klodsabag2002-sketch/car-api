@@ -1,5 +1,675 @@
 [
   {
+    "make": "מ.ג סין",
+    "model": "MG350",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 106,
+    "cc": 1498,
+    "seconds": 11.4,
+    "source": "רישוי רכב / נתון יצרן (MG 350 1.5 106)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "350",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 106,
+    "cc": 1498,
+    "seconds": 11.4,
+    "source": "רישוי רכב / נתון יצרן (MG 350 1.5 106)"
+  },
+  {
+    "make": "MG",
+    "model": "350",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 106,
+    "cc": 1498,
+    "seconds": 11.4,
+    "source": "נתון יצרן (MG 350 1.5)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "550",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1796,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (MG 550 1.8T 160)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "MG550",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1796,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (MG 550 1.8T 160)"
+  },
+  {
+    "make": "MG",
+    "model": "550",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1796,
+    "seconds": 10.8,
+    "source": "נתון יצרן (MG 550 1.8T)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "EHS PHEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 162,
+    "cc": 1490,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (MG EHS פלאג-אין PHEV 162/258)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "EHS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 162,
+    "cc": 1490,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (MG EHS פלאג-אין PHEV 162/258)"
+  },
+  {
+    "make": "MG",
+    "model": "EHS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 162,
+    "cc": 1490,
+    "seconds": 6.9,
+    "source": "נתון יצרן (MG EHS PHEV)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "HS HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1496,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (MG HS היברידי PHEV 143)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "HS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1496,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (MG HS היברידי PHEV 143)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "HS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 162,
+    "cc": 1490,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (MG HS 1.5T בנזין 162)"
+  },
+  {
+    "make": "MG",
+    "model": "HS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1496,
+    "seconds": 7.9,
+    "source": "נתון יצרן (MG HS Hybrid 143)"
+  },
+  {
+    "make": "MG",
+    "model": "HS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 162,
+    "cc": 1490,
+    "seconds": 9.6,
+    "source": "נתון יצרן (MG HS 1.5T)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "MG3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1495,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (MG 3 1.5 בנזין 115)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1495,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (MG 3 1.5 בנזין 115)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "MG3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 106,
+    "cc": 1498,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (MG 3 1.5 בנזין 106)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "MG3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 194,
+    "cc": 1498,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (MG 3 Hybrid+ היברידי 194)"
+  },
+  {
+    "make": "MG",
+    "model": "MG3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1495,
+    "seconds": 10.8,
+    "source": "נתון יצרן (MG 3 1.5)"
+  },
+  {
+    "make": "MG",
+    "model": "3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1495,
+    "seconds": 10.8,
+    "source": "נתון יצרן (MG 3 1.5)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "MG4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (MG 4 Luxury חשמלי 204)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (MG 4 Luxury חשמלי 204)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "MG4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 0,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (MG 4 Standard חשמלי 170)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "MG4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 0,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (MG 4 X-Range חשמלי 245)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "MG4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 435,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (MG 4 XPOWER כפול הנעה 435)"
+  },
+  {
+    "make": "MG",
+    "model": "MG4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "נתון יצרן (MG 4 EV 204)"
+  },
+  {
+    "make": "MG",
+    "model": "4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "נתון יצרן (MG 4 EV 204)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "MG5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 0,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (MG 5 סטיישן חשמלי 156)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 0,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (MG 5 סטיישן חשמלי 156)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "MG5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 0,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (MG 5 סטיישן חשמלי 177)"
+  },
+  {
+    "make": "MG",
+    "model": "MG5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 0,
+    "seconds": 8.3,
+    "source": "נתון יצרן (MG 5 EV 156)"
+  },
+  {
+    "make": "MG",
+    "model": "5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 0,
+    "seconds": 8.3,
+    "source": "נתון יצרן (MG 5 EV 156)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "RX5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 169,
+    "cc": 1490,
+    "seconds": 9.4,
+    "source": "רישוי רכב / נתון יצרן (MG RX5 1.5T 169)"
+  },
+  {
+    "make": "MG",
+    "model": "RX5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 169,
+    "cc": 1490,
+    "seconds": 9.4,
+    "source": "נתון יצרן (MG RX5 1.5T)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "S5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 0,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (MG S5 SUV חשמלי 170)"
+  },
+  {
+    "make": "MG",
+    "model": "S5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 0,
+    "seconds": 8.2,
+    "source": "נתון יצרן (MG S5 EV 170)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "S6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (MG S6 SUV חשמלי 245)"
+  },
+  {
+    "make": "MG",
+    "model": "S6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "נתון יצרן (MG S6 EV)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "S9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1496,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (MG S9 / HS היברידי 143)"
+  },
+  {
+    "make": "MG",
+    "model": "S9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1496,
+    "seconds": 7.9,
+    "source": "נתון יצרן (MG S9 Hybrid 143)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "ZS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 12.3,
+    "source": "רישוי רכב / נתון יצרן (MG ZS 1.0T בנזין 110)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "ZS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 106,
+    "cc": 1498,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (MG ZS 1.5 בנזין 106)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "ZS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 0,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (MG ZS EV חשמלי 143)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "ZS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 0,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (MG ZS EV Long Range חשמלי 156)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "ZS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 0,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (MG ZS EV חשמלי 177)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "ZS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 194,
+    "cc": 1498,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (MG ZS Hybrid+ היברידי 194)"
+  },
+  {
+    "make": "MG",
+    "model": "ZS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 12.3,
+    "source": "נתון יצרן (MG ZS 1.0T 110)"
+  },
+  {
+    "make": "MG",
+    "model": "ZS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 0,
+    "seconds": 8.2,
+    "source": "נתון יצרן (MG ZS EV 143)"
+  },
+  {
+    "make": "MG",
+    "model": "ZS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 0,
+    "seconds": 8.6,
+    "source": "נתון יצרן (MG ZS EV 156)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "MARVEL R",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (MG מארוול R הנעה אחורית 180)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "מארוול r",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (MG מארוול R הנעה אחורית 180)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "MARVEL R",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 288,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (MG מארוול R Performance AWD 288)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "מארוול r",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 288,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (MG מארוול R Performance AWD 288)"
+  },
+  {
+    "make": "MG",
+    "model": "MARVEL R",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "נתון יצרן (MG Marvel R RWD)"
+  },
+  {
+    "make": "MG",
+    "model": "MARVEL R",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 288,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "נתון יצרן (MG Marvel R AWD)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "CYBERSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 0,
+    "seconds": 3.2,
+    "source": "רישוי רכב / נתון יצרן (MG סייברסטר GT כפול הנעה 510)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "CYBERSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 536,
+    "cc": 0,
+    "seconds": 3.2,
+    "source": "רישוי רכב / נתון יצרן (MG סייברסטר GT כפול הנעה 536)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "סיברבטר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 0,
+    "seconds": 3.2,
+    "source": "רישוי רכב / נתון יצרן (MG סייברסטר GT כפול הנעה 510)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "סייברסטר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 0,
+    "seconds": 3.2,
+    "source": "רישוי רכב / נתון יצרן (MG סייברסטר GT כפול הנעה 510)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "CYBERSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (MG סייברסטר הנעה אחורית 340)"
+  },
+  {
+    "make": "MG",
+    "model": "CYBERSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 0,
+    "seconds": 3.2,
+    "source": "נתון יצרן (MG Cyberster GT 510)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "ZR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1796,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (MG ZR 160 1.8 VVC)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "ZR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1396,
+    "seconds": 10.0,
+    "source": "רישוי רכב / נתון יצרן (MG ZR 105 1.4)"
+  },
+  {
+    "make": "MG",
+    "model": "ZR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1796,
+    "seconds": 7.8,
+    "source": "נתון יצרן (MG ZR 160)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "ZT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 2497,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (MG ZT 190 2.5 V6)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "ZT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1796,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (MG ZT 160 1.8T)"
+  },
+  {
+    "make": "MG",
+    "model": "ZT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 2497,
+    "seconds": 7.7,
+    "source": "נתון יצרן (MG ZT 190)"
+  },
+  {
     "make": "אלפא רומיאו_אי",
     "model": "ALFA MIT0",
     "yearStart": null,
