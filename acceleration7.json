@@ -1,5 +1,195 @@
 [
   {
+    "make": "ג'ילי סין",
+    "model": "EX5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 214,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (ג'ילי EX5 / גלקסי E5 חשמלי 214)"
+  },
+  {
+    "make": "ג'ילי סין",
+    "model": "GALAXY E5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 214,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (ג'ילי גלקסי E5 חשמלי 214)"
+  },
+  {
+    "make": "ג'ילי סין",
+    "model": "גלקסי e5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 214,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (ג'ילי גלקסי E5 214)"
+  },
+  {
+    "make": "ג'ילי",
+    "model": "EX5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 214,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (ג'ילי EX5 214)"
+  },
+  {
+    "make": "Geely",
+    "model": "EX5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 214,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "נתון יצרן (Geely EX5 EV 214)"
+  },
+  {
+    "make": "Geely",
+    "model": "GALAXY E5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 214,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "נתון יצרן (Geely Galaxy E5 EV)"
+  },
+  {
+    "make": "ג'ילי סין",
+    "model": "GEOMETRY C",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (ג'ילי גיאומטרי C חשמלי 204)"
+  },
+  {
+    "make": "ג'ילי סין",
+    "model": "GEOMETRY C",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (ג'ילי גיאומטרי C מתיחת פנים 204)"
+  },
+  {
+    "make": "ג'ילי",
+    "model": "גיאומטרי C",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (ג'ילי גיאומטרי C 204)"
+  },
+  {
+    "make": "ג'ילי",
+    "model": "GEOMETRY C",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (ג'ילי גיאומטרי C 204)"
+  },
+  {
+    "make": "Geely",
+    "model": "GEOMETRY C",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.7,
+    "source": "נתון יצרן (Geely Geometry C EV 204)"
+  },
+  {
+    "make": "ג'ילי סין",
+    "model": "STARRAY EM-I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 98,
+    "cc": 1499,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (ג'ילי סטארי EM-i היברידי פלאג-אין 98/218)"
+  },
+  {
+    "make": "ג'ילי סין",
+    "model": "STARRAY EM-I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 1499,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (ג'ילי סטארי EM-i משולב 218)"
+  },
+  {
+    "make": "ג'ילי סין",
+    "model": "STARRAY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 98,
+    "cc": 1499,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (ג'ילי סטארי EM-i 98)"
+  },
+  {
+    "make": "ג'ילי סין",
+    "model": "STARRAY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 174,
+    "cc": 1499,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (ג'ילי סטארי 1.5T בנזין 174)"
+  },
+  {
+    "make": "ג'ילי סין",
+    "model": "STARRAY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 1998,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (ג'ילי סטארי 2.0T בנזין 218)"
+  },
+  {
+    "make": "ג'ילי",
+    "model": "סטארי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 98,
+    "cc": 1499,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (ג'ילי סטארי EM-i 98)"
+  },
+  {
+    "make": "Geely",
+    "model": "STARRAY EM-I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 98,
+    "cc": 1499,
+    "seconds": 7.5,
+    "source": "נתון יצרן (Geely Starray EM-i PHEV)"
+  },
+  {
+    "make": "Geely",
+    "model": "STARRAY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 98,
+    "cc": 1499,
+    "seconds": 7.5,
+    "source": "נתון יצרן (Geely Starray EM-i PHEV)"
+  },
+  {
     "make": "ג'אק סין",
     "model": "JAC 30",
     "yearStart": null,
