@@ -1,5 +1,75 @@
 [
   {
+    "make": "גיאיוואן סין",
+    "model": "KOMI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 46,
+    "cc": 0,
+    "seconds": 18.5,
+    "source": "רישוי רכב / נתון יצרן (גיאיוואן קומי עירוני חשמלי 46 כ\"ס)"
+  },
+  {
+    "make": "גיאיוואן סין",
+    "model": "KOMI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 41,
+    "cc": 0,
+    "seconds": 19.5,
+    "source": "רישוי רכב / נתון יצרן (גיאיוואן קומי חשמלי 41 כ\"ס)"
+  },
+  {
+    "make": "גיאיוואן סין",
+    "model": "KOMI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 57,
+    "cc": 0,
+    "seconds": 16.0,
+    "source": "רישוי רכב / נתון יצרן (גיאיוואן קומי חשמלי 57 כ\"ס)"
+  },
+  {
+    "make": "ג'יאיוואן סין",
+    "model": "KOMI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 46,
+    "cc": 0,
+    "seconds": 18.5,
+    "source": "רישוי רכב / נתון יצרן (גיאיוואן קומי עירוני חשמלי 46 כ\"ס)"
+  },
+  {
+    "make": "גיאיוואן",
+    "model": "קומי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 46,
+    "cc": 0,
+    "seconds": 18.5,
+    "source": "רישוי רכב / נתון יצרן (גיאיוואן קומי 46 כ\"ס)"
+  },
+  {
+    "make": "Jiayuan",
+    "model": "KOMI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 46,
+    "cc": 0,
+    "seconds": 18.5,
+    "source": "נתון יצרן (Jiayuan Komi EV 46)"
+  },
+  {
+    "make": "Jiayuan",
+    "model": "KOMI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 41,
+    "cc": 0,
+    "seconds": 19.5,
+    "source": "נתון יצרן (Jiayuan Komi EV 41)"
+  },
+  {
     "make": "יונדאי קוריאה",
     "model": "GENESIS G70",
     "yearStart": null,
