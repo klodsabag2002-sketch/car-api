@@ -1,5 +1,3 @@
-הבנתי אותך לגמרי. נשמור הכל בדיוק כפי שהיה במקור (כולל כל היצרנים ב-HE_MAKE_ALIASES), ונוסיף רק את מה שצריך כדי לטעון במקביל את שני הקבצים (acceleration.json ו-acceleration2.json).
-הנה הקוד המלא של server.js עם כל ההגדרות המקוריות במלואן:
 const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
@@ -10,13 +8,13 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-const CAR_REGISTRY_ID = "053cea08-09bc-40ec-8f7a-156f0677aff3"; // מאגר רישוי רכבים
-const MODELS_ID = "142afde2-6228-49f9-8a29-9b6c3a0cbe40";       // תוצרים ודגמים
-const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";      // היסטוריית כלי רכב פרטיים (1)
-const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";    // היסטוריית כלי רכב פרטיים (2): בעלויות
-const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";     // רכבים עם תג חניה לנכה
+const CAR_REGISTRY_ID = "053cea08-09bc-40ec-8f7a-156f0677aff3";
+const MODELS_ID = "142afde2-6228-49f9-8a29-9b6c3a0cbe40";
+const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";
+const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";
+const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";
 
-// ---------- תאוצה 0-100 מקובצי תאוצה ----------
+// ---------- טעינת קובצי תאוצה ----------
 const ACCEL_FILES = [
     path.join(__dirname, "acceleration.json"),
     path.join(__dirname, "acceleration2.json")
@@ -24,23 +22,25 @@ const ACCEL_FILES = [
 
 let accelTable = [];
 
-for (const filePath of ACCEL_FILES) {
-    if (fs.existsSync(filePath)) {
-        try {
-            const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
+for (let i = 0; i < ACCEL_FILES.length; i++) {
+    const filePath = ACCEL_FILES[i];
+    try {
+        if (fs.existsSync(filePath)) {
+            const raw = fs.readFileSync(filePath, "utf8");
+            const data = JSON.parse(raw);
             if (Array.isArray(data)) {
                 accelTable = accelTable.concat(data);
-                console.log(`[DATA] נטען בהצלחה: ${path.basename(filePath)} (${data.length} רשומות)`);
+                console.log(`[DATA] Loaded: ${path.basename(filePath)} (${data.length} rows)`);
             }
-        } catch (e) {
-            console.error(`[DATA ERROR] שגיאה בקריאת ${path.basename(filePath)}:`, e.message);
         }
+    } catch (err) {
+        console.error(`[DATA ERROR] Failed to load ${path.basename(filePath)}:`, err.message);
     }
 }
 
-console.log(`[DATA SUMMARY] סך הכל רשומות תאוצה שנטענו: ${accelTable.length}`);
+console.log(`[DATA SUMMARY] Total acceleration rows: ${accelTable.length}`);
 
-// שמות יצרנים בעברית מהרישוי -> שם באנגלית כמו בקובץ התאוצה
+// שמות יצרנים בעברית מהרישוי -> שם באנגלית
 const HE_MAKE_ALIASES = {
     "אבארט": "Abarth",
     "אודי": "Audi",
@@ -64,7 +64,8 @@ function lookupAccel(makeTexts, modelTexts, year, hp, cc) {
     const models = modelTexts.map(norm).filter(Boolean);
     const y = Number(year);
 
-    for (const r of accelTable) {
+    for (let i = 0; i < accelTable.length; i++) {
+        const r = accelTable[i];
         const rMake = norm(r.make);
         const rModel = norm(r.model);
         if (!makes.some(m => m.includes(rMake))) continue;
@@ -203,7 +204,8 @@ async function findModelRow(car) {
         attempts.push({ degem_nm: String(car.degem_nm), shnat_yitzur: year });
     }
 
-    for (const filters of attempts) {
+    for (let i = 0; i < attempts.length; i++) {
+        const filters = attempts[i];
         const rows = await searchDatastore(MODELS_ID, filters, 100);
         if (rows.length === 0) continue;
         return rows.find(r => toNumber(r.koah_sus) != null) || rows[0];
@@ -284,68 +286,4 @@ app.get('/api/car/:plate', async (req, res) => {
                 engineCc,
                 horsepower: hp,
                 acceleration0to100: acceleration ? acceleration.seconds : null,
-                accelerationSource: acceleration ? acceleration.source : null,
-                testExpiry,
-                testValid: testStatus(testExpiry),
-                ownership: currentOwnership,
-                firstRegistration: history?.firstRegistration ?? null,
-                changes: history?.changes ?? [],
-                owners: ownershipList.length || null,
-                disabled,
-                kmSinceTest: history?.kmSinceTest ?? null
-            }
-        });
-    } catch (error) {
-        console.error(`[SEARCH LOG] 💥 שגיאה בחיפוש מספר ${plate}:`, error);
-        res.status(500).json({ success: false, error: "שגיאה בשליפה" });
-    }
-});
-
-app.get('/api/history/:plate', async (req, res) => {
-    const plate = req.params.plate.replace(/\D/g, "");
-    try {
-        const [historyRaw, ownershipList] = await Promise.all([
-            fetchHistoryRecord(plate),
-            fetchOwnershipRows(plate)
-        ]);
-        const history = buildHistory(historyRaw);
-        if (!history && ownershipList.length === 0) {
-            return res.json({ success: false, message: "לא נמצאה היסטוריה לרכב זה" });
-        }
-        res.json({ success: true, history: history || {}, ownershipList });
-    } catch (e) {
-        res.status(500).json({ success: false, message: "שגיאה בשליפת ההיסטוריה" });
-    }
-});
-
-app.get('/api/debug/:plate', async (req, res) => {
-    try {
-        const car = await fetchCarRecord(req.params.plate);
-        if (!car) return res.json({ success: false, message: "לא נמצא" });
-        const row = await findModelRow(car);
-        const hist = await fetchHistoryRecord(req.params.plate);
-        const own = await fetchOwnershipRows(req.params.plate);
-        const disabledSample = await searchDatastore(DISABLED_ID, null, 1);
-        const disabledMatch = await checkDisabled(req.params.plate);
-        res.json({
-            success: true,
-            car_fields: Object.keys(car),
-            car,
-            model_row: row,
-            history: hist,
-            ownership: own,
-            disabled_sample_fields: disabledSample[0] ? Object.keys(disabledSample[0]) : [],
-            disabled_sample: disabledSample[0] || null,
-            disabled_match: disabledMatch,
-            accel_table_rows: accelTable.length
-        });
-    } catch (error) {
-        console.error("שגיאה:", error);
-        res.status(500).json({ success: false, error: error.message });
-    }
-});
-
-app.listen(PORT, () => {
-    console.log(`השרת רץ בפורט ${PORT}`);
-});
-
+                
