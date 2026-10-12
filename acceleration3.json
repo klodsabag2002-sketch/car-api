@@ -1,5 +1,45 @@
 [
   {
+    "make": "ניסאן מקסיקו",
+    "model": "QX55",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 268,
+    "cc": 1997,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי QX55 2.0T 268)"
+  },
+  {
+    "make": "ניסאן מקסיקו",
+    "model": "QX55",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 268,
+    "cc": 1970,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי QX55 2.0T 268)"
+  },
+  {
+    "make": "ניסאן מקסיקו",
+    "model": "QX50",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 268,
+    "cc": 1997,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי QX50 2.0T 268)"
+  },
+  {
+    "make": "ניסאן מקסיקו",
+    "model": "QX50",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 268,
+    "cc": 1970,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (אינפיניטי QX50 2.0T 268)"
+  },
+  {
     "make": "ניסאן יפן",
     "model": "INFINITI HYBRID",
     "yearStart": null,
