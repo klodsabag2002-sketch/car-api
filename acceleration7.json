@@ -1,5 +1,235 @@
 [
   {
+    "make": "ג'אק סין",
+    "model": "JAC 30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (JAC 30 חשמלי EV 136)"
+  },
+  {
+    "make": "ג'יי איי סי",
+    "model": "JAC 30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (JAC 30 חשמלי EV 136)"
+  },
+  {
+    "make": "ג'אק סין",
+    "model": "30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (JAC 30 חשמלי EV 136)"
+  },
+  {
+    "make": "ג'יי איי סי",
+    "model": "30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (JAC 30 חשמלי EV 136)"
+  },
+  {
+    "make": "JAC",
+    "model": "30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 7.8,
+    "source": "נתון יצרן (JAC 30 EV 136)"
+  },
+  {
+    "make": "JAC",
+    "model": "JAC 30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 7.8,
+    "source": "נתון יצרן (JAC 30 EV 136)"
+  },
+  {
+    "make": "ג'יי איי סי",
+    "model": "E-JS4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 193,
+    "cc": 0,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (JAC E-JS4 קרוסאובר חשמלי 193)"
+  },
+  {
+    "make": "ג'אק סין",
+    "model": "E-JS4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 193,
+    "cc": 0,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (JAC E-JS4 קרוסאובר חשמלי 193)"
+  },
+  {
+    "make": "JAC",
+    "model": "E-JS4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 193,
+    "cc": 0,
+    "seconds": 9.5,
+    "source": "נתון יצרן (JAC E-JS4 EV 193)"
+  },
+  {
+    "make": "JAC",
+    "model": "EJS4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 193,
+    "cc": 0,
+    "seconds": 9.5,
+    "source": "נתון יצרן (JAC E-JS4 EV 193)"
+  },
+  {
+    "make": "ג'יי איי סי",
+    "model": "E-S2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 0,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (JAC E-S2 חשמלי עירוני 115)"
+  },
+  {
+    "make": "ג'אק סין",
+    "model": "E-S2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 0,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (JAC E-S2 חשמלי עירוני 115)"
+  },
+  {
+    "make": "JAC",
+    "model": "E-S2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 0,
+    "seconds": 12.0,
+    "source": "נתון יצרן (JAC E-S2 EV 115)"
+  },
+  {
+    "make": "JAC",
+    "model": "ES2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 0,
+    "seconds": 12.0,
+    "source": "נתון יצרן (JAC E-S2 EV 115)"
+  },
+  {
+    "make": "ג'יי איי סי",
+    "model": "E-S4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 0,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (JAC E-S4 חשמלי 150)"
+  },
+  {
+    "make": "ג'אק סין",
+    "model": "E-S4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 0,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (JAC E-S4 חשמלי 150)"
+  },
+  {
+    "make": "JAC",
+    "model": "E-S4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 0,
+    "seconds": 9.3,
+    "source": "נתון יצרן (JAC E-S4 EV 150)"
+  },
+  {
+    "make": "JAC",
+    "model": "ES4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 0,
+    "seconds": 9.3,
+    "source": "נתון יצרן (JAC E-S4 EV 150)"
+  },
+  {
+    "make": "ג'יי איי סי",
+    "model": "IC5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 193,
+    "cc": 0,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (JAC iC5 סדאן חשמלי 193)"
+  },
+  {
+    "make": "ג'אק סין",
+    "model": "IC5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 193,
+    "cc": 0,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (JAC iC5 סדאן חשמלי 193)"
+  },
+  {
+    "make": "ג'יי איי סי",
+    "model": "E-J7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 193,
+    "cc": 0,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (JAC E-J7 חשמלי 193)"
+  },
+  {
+    "make": "JAC",
+    "model": "IC5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 193,
+    "cc": 0,
+    "seconds": 7.6,
+    "source": "נתון יצרן (JAC iC5 EV 193)"
+  },
+  {
+    "make": "JAC",
+    "model": "E-J7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 193,
+    "cc": 0,
+    "seconds": 7.6,
+    "source": "נתון יצרן (JAC E-J7 EV 193)"
+  },
+  {
     "make": "גיאיוואן סין",
     "model": "KOMI",
     "yearStart": null,
