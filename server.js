@@ -14,13 +14,14 @@ const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";      // היסטור�
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";    // היסטוריית כלי רכב פרטיים (2): בעלויות
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";     // רכבים עם תג חניה לנכה
 
-// ---------- תאוצה 0-100 מקבצים ידניים (קובץ 1 + קובץ 2 + קובץ 3 + קובץ 4) ----------
+// ---------- תאוצה 0-100 מקבצים ידניים (קובץ 1 + קובץ 2 + קובץ 3 + קובץ 4 + קובץ 5) ----------
 let accelTable = [];
 const ACCEL_FILES = [
     "acceleration.json",
     "acceleration2.json",
     "acceleration3.json",
-    "acceleration4.json"
+    "acceleration4.json",
+    "acceleration5.json"
 ];
 
 ACCEL_FILES.forEach(fileName => {
@@ -81,6 +82,25 @@ const HE_MAKE_ALIASES = {
     "אוואטר סין": "AVATR",
     "אומודה": "OMODA",
     "אומודה סין": "OMODA",
+    "איסוזו": "Isuzu",
+    "איסוזו יפן": "Isuzu",
+    "איסוזו תאילנד": "Isuzu",
+    "איסוזו ארה\"ב": "Isuzu",
+    "איסוזו ארהב": "Isuzu",
+    "איסוזו ארהב\"": "Isuzu",
+    "\"איסוזו ארהב": "Isuzu",
+    "אל אי וי סי": "LEVC",
+    "אל.אי.וי.סי": "LEVC",
+    "אל אי וי סי אנגליה": "LEVC",
+    "אלפא רומיאו": "Alfa Romeo",
+    "אלפא רומיאו_אי": "Alfa Romeo",
+    "אלפא רומאו": "Alfa Romeo",
+    "אלפא רומאו_אי": "Alfa Romeo",
+    "מ.ג": "MG",
+    "מ.ג סין": "MG",
+    "מ ג סין": "MG",
+    "אם ג'י": "MG",
+    "אם גי": "MG",
     "סיאט": "Seat",
     "סקודה": "Skoda",
     "פולקסווגן": "Volkswagen",
