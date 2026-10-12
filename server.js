@@ -14,31 +14,48 @@ const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";      // היסטור�
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";    // היסטוריית כלי רכב פרטיים (2): בעלויות
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";     // רכבים עם תג חניה לנכה
 
-// ---------- תאוצה 0-100 מקובץ ידני (קובץ 1 + קובץ 2) ----------
-const ACCEL_FILE = path.join(__dirname, "acceleration.json");
-const ACCEL_FILE2 = path.join(__dirname, "acceleration2.json");
+// ---------- תאוצה 0-100 מקבצים ידניים (קובץ 1 + קובץ 2 + קובץ 3) ----------
 let accelTable = [];
+const ACCEL_FILES = [
+    "acceleration.json",
+    "acceleration2.json",
+    "acceleration3.json"
+];
 
-try {
-    const data1 = JSON.parse(fs.readFileSync(ACCEL_FILE, "utf8"));
-    if (Array.isArray(data1)) accelTable = accelTable.concat(data1);
-} catch (e) {
-    // אם לא קיים או שגיאה בקובץ 1, ממשיך
-}
-
-try {
-    if (fs.existsSync(ACCEL_FILE2)) {
-        const data2 = JSON.parse(fs.readFileSync(ACCEL_FILE2, "utf8"));
-        if (Array.isArray(data2)) accelTable = accelTable.concat(data2);
+ACCEL_FILES.forEach(fileName => {
+    try {
+        const filePath = path.join(__dirname, fileName);
+        if (fs.existsSync(filePath)) {
+            const raw = fs.readFileSync(filePath, "utf8");
+            const data = JSON.parse(raw);
+            if (Array.isArray(data)) {
+                accelTable = accelTable.concat(data);
+                console.log(`[DATA OK] נטען בהצלחה: ${fileName} (${data.length} רשומות)`);
+            }
+        }
+    } catch (e) {
+        console.error(`[DATA ERROR] שגיאה בטעינת ${fileName}:`, e.message);
     }
-} catch (e) {
-    // אם לא קיים או שגיאה בקובץ 2, ממשיך
-}
+});
 
 // שמות יצרנים בעברית מהרישוי -> שם באנגלית כמו בקובץ התאוצה
 const HE_MAKE_ALIASES = {
     "אבארט": "Abarth",
     "קופרה": "Cupra",
+    "אאודי": "Audi",
+    "אודי": "Audi",
+    "אופל": "Opel",
+    "אופל גרמניה": "Opel",
+    "אופל פולין": "Opel",
+    "אופל ספרד": "Opel",
+    "אופל צרפת": "Opel",
+    "אופל אנגליה": "Opel",
+    "אופל סלובקיה": "Opel",
+    "אוואטר": "AVATR",
+    "אווטר": "AVATR",
+    "אוואטר סין": "AVATR",
+    "אומודה": "OMODA",
+    "אומודה סין": "OMODA",
     "סיאט": "Seat",
     "סקודה": "Skoda",
     "פולקסווגן": "Volkswagen",
