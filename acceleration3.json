@@ -1,6 +1,46 @@
 [
   {
     "make": "אורה סין",
+    "model": "GWM ORA 5 SUV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1499,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (אורה 5 פלאג-אין 150)"
+  },
+  {
+    "make": "אורה סין",
+    "model": "5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1499,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (אורה 5 פלאג-אין 150)"
+  },
+  {
+    "make": "אורה",
+    "model": "5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1499,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (אורה 5 פלאג-אין 150)"
+  },
+  {
+    "make": "אורה סין",
+    "model": "ORA 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1499,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (אורה 5 פלאג-אין 150)"
+  },
+  {
+    "make": "אורה סין",
     "model": "ORA FUNKY CAT",
     "yearStart": null,
     "yearEnd": null,
