@@ -1,5 +1,245 @@
 [
   {
+    "make": "למבורגיני איטליה",
+    "model": "REVUELTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 1015,
+    "cc": 6498,
+    "seconds": 2.5,
+    "source": "רישוי רכב / נתון יצרן (למבורגיני רוולטו V12 היברידי פלאג-אין PHEV 1015)"
+  },
+  {
+    "make": "למבורגיני",
+    "model": "רוולטו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 1015,
+    "cc": 6498,
+    "seconds": 2.5,
+    "source": "רישוי רכב / נתון יצרן (למבורגיני רוולטו 1015)"
+  },
+  {
+    "make": "Lamborghini",
+    "model": "REVUELTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 1015,
+    "cc": 6498,
+    "seconds": 2.5,
+    "source": "נתון יצרן (Lamborghini Revuelto V12 PHEV)"
+  },
+  {
+    "make": "למבורגיני איטליה",
+    "model": "URUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 650,
+    "cc": 3996,
+    "seconds": 3.6,
+    "source": "רישוי רכב / נתון יצרן (למבורגיני אורוס 4.0 V8 טווין-טורבו 650)"
+  },
+  {
+    "make": "למבורגיני איטליה",
+    "model": "URUS S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 666,
+    "cc": 3996,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (למבורגיני אורוס S 666)"
+  },
+  {
+    "make": "למבורגיני איטליה",
+    "model": "URUS PERFORMANTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 666,
+    "cc": 3996,
+    "seconds": 3.3,
+    "source": "רישוי רכב / נתון יצרן (למבורגיני אורוס פרפורמנטה 666)"
+  },
+  {
+    "make": "למבורגיני איטליה",
+    "model": "URUS SE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 800,
+    "cc": 3996,
+    "seconds": 3.4,
+    "source": "רישוי רכב / נתון יצרן (למבורגיני אורוס SE פלאג-אין PHEV 800)"
+  },
+  {
+    "make": "למבורגיני",
+    "model": "אורוס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 650,
+    "cc": 3996,
+    "seconds": 3.6,
+    "source": "רישוי רכב / נתון יצרן (למבורגיני אורוס 650)"
+  },
+  {
+    "make": "למבורגיני",
+    "model": "אורוס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 666,
+    "cc": 3996,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (למבורגיני אורוס 666)"
+  },
+  {
+    "make": "Lamborghini",
+    "model": "URUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 650,
+    "cc": 3996,
+    "seconds": 3.6,
+    "source": "נתון יצרן (Lamborghini Urus)"
+  },
+  {
+    "make": "Lamborghini",
+    "model": "URUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 666,
+    "cc": 3996,
+    "seconds": 3.5,
+    "source": "נתון יצרן (Lamborghini Urus S / Performante)"
+  },
+  {
+    "make": "Lamborghini",
+    "model": "URUS SE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 800,
+    "cc": 3996,
+    "seconds": 3.4,
+    "source": "נתון יצרן (Lamborghini Urus SE PHEV)"
+  },
+  {
+    "make": "למבורגיני איטליה",
+    "model": "HURACAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 610,
+    "cc": 5204,
+    "seconds": 3.2,
+    "source": "רישוי רכב / נתון יצרן (למבורגיני הורקאן LP610-4 AWD 610)"
+  },
+  {
+    "make": "למבורגיני איטליה",
+    "model": "HURACAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 580,
+    "cc": 5204,
+    "seconds": 3.4,
+    "source": "רישוי רכב / נתון יצרן (למבורגיני הורקאן LP580-2 RWD 580)"
+  },
+  {
+    "make": "למבורגיני איטליה",
+    "model": "HURACAN EVO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 640,
+    "cc": 5204,
+    "seconds": 2.9,
+    "source": "רישוי רכב / נתון יצרן (למבורגיני הורקאן אבו EVO AWD 640)"
+  },
+  {
+    "make": "למבורגיני איטליה",
+    "model": "HURACAN EVO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 610,
+    "cc": 5204,
+    "seconds": 3.3,
+    "source": "רישוי רכב / נתון יצרן (למבורגיני הורקאן אבו RWD 610)"
+  },
+  {
+    "make": "למבורגיני איטליה",
+    "model": "HURACAN PERFORMANTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 640,
+    "cc": 5204,
+    "seconds": 2.9,
+    "source": "רישוי רכב / נתון יצרן (למבורגיני הורקאן פרפורמנטה 640)"
+  },
+  {
+    "make": "למבורגיני איטליה",
+    "model": "HURACAN STO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 640,
+    "cc": 5204,
+    "seconds": 3.0,
+    "source": "רישוי רכב / נתון יצרן (למבורגיני הורקאן STO RWD 640)"
+  },
+  {
+    "make": "למבורגיני איטליה",
+    "model": "HURACAN TECNICA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 640,
+    "cc": 5204,
+    "seconds": 3.2,
+    "source": "רישוי רכב / נתון יצרן (למבורגיני הורקאן טקניקה RWD 640)"
+  },
+  {
+    "make": "למבורגיני איטליה",
+    "model": "HURACAN STERRATO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 610,
+    "cc": 5204,
+    "seconds": 3.4,
+    "source": "רישוי רכב / נתון יצרן (למבורגיני הורקאן סטראטו שטח AWD 610)"
+  },
+  {
+    "make": "למבורגיני",
+    "model": "הורקאן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 640,
+    "cc": 5204,
+    "seconds": 2.9,
+    "source": "רישוי רכב / נתון יצרן (למבורגיני הורקאן 640)"
+  },
+  {
+    "make": "למבורגיני",
+    "model": "הורקאן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 610,
+    "cc": 5204,
+    "seconds": 3.2,
+    "source": "רישוי רכב / נתון יצרן (למבורגיני הורקאן 610)"
+  },
+  {
+    "make": "Lamborghini",
+    "model": "HURACAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 640,
+    "cc": 5204,
+    "seconds": 2.9,
+    "source": "נתון יצרן (Lamborghini Huracan EVO / Performante)"
+  },
+  {
+    "make": "Lamborghini",
+    "model": "HURACAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 610,
+    "cc": 5204,
+    "seconds": 3.2,
+    "source": "נתון יצרן (Lamborghini Huracan LP610-4)"
+  },
+  {
     "make": "ליפמוטור סין",
     "model": "B10",
     "yearStart": null,
