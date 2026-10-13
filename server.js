@@ -14,7 +14,7 @@ const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";      // היסטור�
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";    // היסטוריית כלי רכב פרטיים (2): בעלויות
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";     // רכבים עם תג חניה לנכה
 
-// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 7) ----------
+// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 8) ----------
 let accelTable = [];
 const ACCEL_FILES = [
     "acceleration.json",
@@ -23,7 +23,8 @@ const ACCEL_FILES = [
     "acceleration4.json",
     "acceleration5.json",
     "acceleration6.json",
-    "acceleration7.json"
+    "acceleration7.json",
+    "acceleration8.json"
 ];
 
 ACCEL_FILES.forEach(fileName => {
@@ -155,6 +156,51 @@ const HE_MAKE_ALIASES = {
     "ג'י אם סי ארהב": "GMC",
     "ג'י.אם.סי ארה\"ב": "GMC",
     "ג'י.אם.סי ארהב": "GMC",
+    "ג'י.אמ.סי ארה": "GMC",
+    "ג'י.אמ.סי": "GMC",
+    "ג'יפ": "Jeep",
+    "גיפ": "Jeep",
+    "ג'יפ פולין": "Jeep",
+    "ג'יפ איטליה": "Jeep",
+    "ג'יפ ארה\"ב": "Jeep",
+    "ג'יפ ארהב": "Jeep",
+    "ג'יפ ארהב\"": "Jeep",
+    "\"ג'יפ ארהב": "Jeep",
+    "גיפ ארהב": "Jeep",
+    "קריזלר ארהב\"": "Jeep",
+    "\"קריזלר ארהב": "Jeep",
+    "קרייזלר ארהב\"": "Jeep",
+    "\"קרייזלר ארהב": "Jeep",
+    "קריזלר ארה\"ב": "Jeep",
+    "קרייזלר ארה\"ב": "Jeep",
+    "פיאט קרייזלר": "Jeep",
+    "יונדאי קוריאה": "Genesis",
+    "ג'נסיס": "Genesis",
+    "גנסיס": "Genesis",
+    "ג'נסיס קוריאה": "Genesis",
+    "גיאיוואן": "Jiayuan",
+    "גיאיוואן סין": "Jiayuan",
+    "ג'יאיוואן": "Jiayuan",
+    "ג'יאיוואן סין": "Jiayuan",
+    "ג'יי איי סי": "JAC",
+    "גיי איי סי": "JAC",
+    "ג'יי.איי.סי": "JAC",
+    "ג'אק": "JAC",
+    "ג'אק סין": "JAC",
+    "גאק": "JAC",
+    "גאק סין": "JAC",
+    "ג'ילי": "Geely",
+    "ג'ילי סין": "Geely",
+    "גילי": "Geely",
+    "גילי סין": "Geely",
+    "דאצ'יה": "Dacia",
+    "דאציה": "Dacia",
+    "דאצ'יה רומניה": "Dacia",
+    "דאציה רומניה": "Dacia",
+    "דאצ'יה מרוקו": "Dacia",
+    "דאציה מרוקו": "Dacia",
+    "רנו דאצ'יה": "Dacia",
+    "רנו דאציה": "Dacia",
     "סיאט": "Seat",
     "סקודה": "Skoda",
     "פולקסווגן": "Volkswagen",
