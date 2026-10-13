@@ -1,5 +1,155 @@
 [
   {
+    "make": "וואי סין",
+    "model": "WEY COFFEE 01",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 476,
+    "cc": 1998,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (וואי קופי 01 פלאג-אין PHEV AWD 476)"
+  },
+  {
+    "make": "וואי סין",
+    "model": "COFFEE 01",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 476,
+    "cc": 1998,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (וואי קופי 01 476)"
+  },
+  {
+    "make": "וואי סין",
+    "model": "קופי 01",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 476,
+    "cc": 1998,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (וואי קופי 01 476)"
+  },
+  {
+    "make": "וואי",
+    "model": "קופי 01",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 476,
+    "cc": 1998,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (וואי קופי 01 476)"
+  },
+  {
+    "make": "WEY",
+    "model": "WEY COFFEE 01",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 476,
+    "cc": 1998,
+    "seconds": 5.0,
+    "source": "נתון יצרן (WEY Coffee 01 PHEV AWD)"
+  },
+  {
+    "make": "WEY",
+    "model": "COFFEE 01",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 476,
+    "cc": 1998,
+    "seconds": 5.0,
+    "source": "נתון יצרן (WEY Coffee 01 PHEV AWD)"
+  },
+  {
+    "make": "וואי סין",
+    "model": "WEY COFFEE 02",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 201,
+    "cc": 1998,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (וואי קופי 02 פלאג-אין PHEV FWD 201/367)"
+  },
+  {
+    "make": "וואי סין",
+    "model": "WEY COFFEE 02",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1998,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (וואי קופי 02 פלאג-אין PHEV FWD 204/367)"
+  },
+  {
+    "make": "וואי סין",
+    "model": "COFFEE 02",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 201,
+    "cc": 1998,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (וואי קופי 02 201)"
+  },
+  {
+    "make": "וואי סין",
+    "model": "WEY COFFEE 02",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 476,
+    "cc": 1998,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (וואי קופי 02 פלאג-אין PHEV AWD 476)"
+  },
+  {
+    "make": "וואי סין",
+    "model": "קופי 02",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 201,
+    "cc": 1998,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (וואי קופי 02 201)"
+  },
+  {
+    "make": "וואי",
+    "model": "קופי 02",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 201,
+    "cc": 1998,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (וואי קופי 02 201)"
+  },
+  {
+    "make": "WEY",
+    "model": "WEY COFFEE 02",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 201,
+    "cc": 1998,
+    "seconds": 7.3,
+    "source": "נתון יצרן (WEY Coffee 02 PHEV FWD)"
+  },
+  {
+    "make": "WEY",
+    "model": "COFFEE 02",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 201,
+    "cc": 1998,
+    "seconds": 7.3,
+    "source": "נתון יצרן (WEY Coffee 02 PHEV FWD)"
+  },
+  {
+    "make": "WEY",
+    "model": "COFFEE 02",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 476,
+    "cc": 1998,
+    "seconds": 5.3,
+    "source": "נתון יצרן (WEY Coffee 02 PHEV AWD)"
+  },
+  {
     "make": "וולבו שבדיה",
     "model": "XC90 RECHARGET8",
     "yearStart": null,
