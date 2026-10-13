@@ -14,7 +14,7 @@ const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";
 
-// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 25) ----------
+// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 27) ----------
 let accelTable = [];
 const ACCEL_FILES = [
     "acceleration.json",
@@ -41,7 +41,9 @@ const ACCEL_FILES = [
     "acceleration22.json",
     "acceleration23.json",
     "acceleration24.json",
-    "acceleration25.json"
+    "acceleration25.json",
+    "acceleration26.json",
+    "acceleration27.json"
 ];
 
 ACCEL_FILES.forEach(fileName => {
@@ -489,7 +491,54 @@ const HE_MAKE_ALIASES = {
     "סקיוול": "Skywell",
     "סקיוול סין": "Skywell",
     "Skywell": "Skywell",
+    "פולסטאר": "Polestar",
+    "פולסטאר סין": "Polestar",
+    "פולסטר": "Polestar",
+    "פולסטר סין": "Polestar",
+    "Polestar": "Polestar",
+    "סרס": "Seres",
+    "סרס סין": "Seres",
+    "Seres": "Seres",
+    "SERES": "Seres",
+    "פוטון": "Foton",
+    "פוטון סין": "Foton",
+    "Foton": "Foton",
+    "FOTON": "Foton",
     "פולקסווגן": "Volkswagen",
+    "פולצבאגן": "Volkswagen",
+    "פולקסוגן": "Volkswagen",
+    "פולקסווגן גרמן": "Volkswagen",
+    "פולקסווגן גרמניה": "Volkswagen",
+    "פולקסווגן-ספרד": "Volkswagen",
+    "פולקסווגן ספרד": "Volkswagen",
+    "פולקסווגן פורט": "Volkswagen",
+    "פולקסווגן פורטוגל": "Volkswagen",
+    "פולקסווגן פולי": "Volkswagen",
+    "פולקסווגן פולין": "Volkswagen",
+    "פולקסווגן מקסי": "Volkswagen",
+    "פולקסווגן מקסיקו": "Volkswagen",
+    "פולקסווגן סלוב": "Volkswagen",
+    "פולקסווגן סלובקיה": "Volkswagen",
+    "פולקסווגן ארהב": "Volkswagen",
+    "פולקסווגן ארה\"ב": "Volkswagen",
+    "Volkswagen": "Volkswagen",
+    "VW": "Volkswagen",
+    "פורד": "Ford",
+    "פורד גרמניה": "Ford",
+    "פורד ספרד": "Ford",
+    "פורד בלגיה": "Ford",
+    "פורד תורכיה": "Ford",
+    "פורד טורקיה": "Ford",
+    "פורד קנדה": "Ford",
+    "פורד מקסיקו": "Ford",
+    "פורד רומניה": "Ford",
+    "פורד ד אפריקה": "Ford",
+    "פורד דרום אפריקה": "Ford",
+    "פורד ארה\"ב": "Ford",
+    "פורד ארהב": "Ford",
+    "פורד ארהב\"": "Ford",
+    "\"פורד ארהב": "Ford",
+    "Ford": "Ford",
     "קיה": "Kia"
 };
 
