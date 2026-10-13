@@ -1,5 +1,1085 @@
 [
   {
+    "make": "הונדה אנגליה",
+    "model": "CIVIC 5D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 182,
+    "cc": 1498,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק 5 דלתות 1.5 טורבו 182)"
+  },
+  {
+    "make": "הונדה אנגליה",
+    "model": "CIVIC 5D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 129,
+    "cc": 988,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק 5 דלתות 1.0 טורבו 129)"
+  },
+  {
+    "make": "הונדה אנגליה",
+    "model": "CIVIC 5D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 142,
+    "cc": 1798,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק 5 דלתות 1.8 142)"
+  },
+  {
+    "make": "הונדה אנגליה",
+    "model": "CIVIC 5D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1799,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק 5 דלתות 1.8 140)"
+  },
+  {
+    "make": "הונדה אנגליה",
+    "model": "CIVIC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 319,
+    "cc": 1996,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק טייפ ר FK8 2.0 טורבו 319/320)"
+  },
+  {
+    "make": "הונדה אנגליה",
+    "model": "CIVIC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 1996,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק טייפ ר FK8 2.0 טורבו 320)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "CIVIC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 329,
+    "cc": 1996,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק טייפ ר FL5 2.0 טורבו 329)"
+  },
+  {
+    "make": "הונדה אנגליה",
+    "model": "CIVIC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 1996,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק טייפ ר FK2 2.0 טורבו 310)"
+  },
+  {
+    "make": "הונדה אנגליה",
+    "model": "CIVIC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 201,
+    "cc": 1998,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק טייפ ר FN2 2.0 201)"
+  },
+  {
+    "make": "הונדה אנגליה",
+    "model": "CIVIC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1998,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק טייפ ר EP3 2.0 200)"
+  },
+  {
+    "make": "הונדה טורקיה",
+    "model": "CIVIC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 182,
+    "cc": 1498,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק סדאן 1.5 טורבו 182)"
+  },
+  {
+    "make": "הונדה טורקיה",
+    "model": "CIVIC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1598,
+    "seconds": 11.6,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק סדאן 1.6 125)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "CIVIC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1993,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק היברידית e:HEV 184)"
+  },
+  {
+    "make": "הונדה",
+    "model": "סיוויק",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 182,
+    "cc": 1498,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק 182)"
+  },
+  {
+    "make": "הונדה",
+    "model": "סיוויק טייפ ר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 319,
+    "cc": 1996,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק טייפ ר 319)"
+  },
+  {
+    "make": "Honda",
+    "model": "CIVIC 5D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 182,
+    "cc": 1498,
+    "seconds": 8.2,
+    "source": "נתון יצרן (Honda Civic 5D 1.5T)"
+  },
+  {
+    "make": "Honda",
+    "model": "CIVIC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 319,
+    "cc": 1996,
+    "seconds": 5.7,
+    "source": "נתון יצרן (Honda Civic Type R 319)"
+  },
+  {
+    "make": "Honda",
+    "model": "CIVIC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1998,
+    "seconds": 6.6,
+    "source": "נתון יצרן (Honda Civic Type R 200)"
+  },
+  {
+    "make": "הונדה הודו",
+    "model": "HONDA CITY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 121,
+    "cc": 1498,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיטי 1.5 i-VTEC אוטומט 121)"
+  },
+  {
+    "make": "הונדה הודו",
+    "model": "CITY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 121,
+    "cc": 1498,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיטי 1.5 i-VTEC אוטומט 121)"
+  },
+  {
+    "make": "הונדה",
+    "model": "סיטי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 121,
+    "cc": 1498,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיטי 121)"
+  },
+  {
+    "make": "Honda",
+    "model": "HONDA CITY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 121,
+    "cc": 1498,
+    "seconds": 10.5,
+    "source": "נתון יצרן (Honda City 1.5 121)"
+  },
+  {
+    "make": "Honda",
+    "model": "CITY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 121,
+    "cc": 1498,
+    "seconds": 10.5,
+    "source": "נתון יצרן (Honda City 1.5)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "S2000",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1997,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (הונדה S2000 2.0 VTEC ידני 240)"
+  },
+  {
+    "make": "הונדה",
+    "model": "S2000",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1997,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (הונדה S2000 240)"
+  },
+  {
+    "make": "Honda",
+    "model": "S2000",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1997,
+    "seconds": 6.2,
+    "source": "נתון יצרן (Honda S2000 2.0 240)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "LEGEND",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 295,
+    "cc": 3471,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (הונדה לג'נד 3.5 V6 SH-AWD 295)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "LEGEND",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 3664,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (הונדה לג'נד 3.7 V6 SH-AWD 300)"
+  },
+  {
+    "make": "הונדה",
+    "model": "לגנד",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 295,
+    "cc": 3471,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (הונדה לג'נד 295)"
+  },
+  {
+    "make": "Honda",
+    "model": "LEGEND",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 295,
+    "cc": 3471,
+    "seconds": 7.3,
+    "source": "נתון יצרן (Honda Legend 3.5 V6)"
+  },
+  {
+    "make": "\"הונדה ארהב",
+    "model": "PILOT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 3471,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (הונדה פיילוט 3.5 V6 280)"
+  },
+  {
+    "make": "הונדה ארהב\"",
+    "model": "PILOT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 3471,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (הונדה פיילוט 3.5 V6 280)"
+  },
+  {
+    "make": "הונדה ארהב\"",
+    "model": "PILOT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 285,
+    "cc": 3471,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (הונדה פיילוט דור 4 3.5 V6 285)"
+  },
+  {
+    "make": "הונדה ארהב\"",
+    "model": "PILOT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 3471,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (הונדה פיילוט דור 2 3.5 V6 250)"
+  },
+  {
+    "make": "הונדה",
+    "model": "פיילוט",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 3471,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (הונדה פיילוט 280)"
+  },
+  {
+    "make": "Honda",
+    "model": "PILOT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 3471,
+    "seconds": 6.8,
+    "source": "נתון יצרן (Honda Pilot 3.5 V6)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "PRELUDE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 2157,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (הונדה פרלוד 2.2 VTEC ידני 185)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "PRELUDE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 2157,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (הונדה פרלוד 2.2 VTEC ידני 200)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "PRELUDE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 133,
+    "cc": 1997,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (הונדה פרלוד 2.0 133)"
+  },
+  {
+    "make": "הונדה",
+    "model": "פרלוד",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 2157,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (הונדה פרלוד 185)"
+  },
+  {
+    "make": "Honda",
+    "model": "PRELUDE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 2157,
+    "seconds": 7.5,
+    "source": "נתון יצרן (Honda Prelude 2.2 VTEC)"
+  },
+  {
+    "make": "\"הונדה ארהב",
+    "model": "CLARITY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 212,
+    "cc": 1498,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (הונדה קלריטי פלאג-אין PHEV 212)"
+  },
+  {
+    "make": "הונדה ארהב\"",
+    "model": "CLARITY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 212,
+    "cc": 1498,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (הונדה קלריטי פלאג-אין PHEV 212)"
+  },
+  {
+    "make": "הונדה ארהב\"",
+    "model": "CLARITY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 161,
+    "cc": 0,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (הונדה קלריטי חשמלי מלא EV 161)"
+  },
+  {
+    "make": "הונדה",
+    "model": "קלריטי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 212,
+    "cc": 1498,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (הונדה קלריטי 212)"
+  },
+  {
+    "make": "Honda",
+    "model": "CLARITY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 212,
+    "cc": 1498,
+    "seconds": 7.7,
+    "source": "נתון יצרן (Honda Clarity Plug-in Hybrid)"
+  },
+  {
+    "make": "הונדה אנגליה",
+    "model": "CR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1997,
+    "seconds": 12.3,
+    "source": "רישוי רכב / נתון יצרן (הונדה CR-V 2.0 בנזין אוטומט 155)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "CR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1997,
+    "seconds": 12.3,
+    "source": "רישוי רכב / נתון יצרן (הונדה CR-V 2.0 בנזין אוטומט 155)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "CR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 1498,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (הונדה CR-V 1.5 טורבו 192/193)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "CR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 193,
+    "cc": 1498,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (הונדה CR-V 1.5 טורבו 193)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "CR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1993,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (הונדה CR-V היברידי e:HEV 184)"
+  },
+  {
+    "make": "הונדה אנגליה",
+    "model": "CR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1997,
+    "seconds": 12.2,
+    "source": "רישוי רכב / נתון יצרן (הונדה CR-V 2.0 150)"
+  },
+  {
+    "make": "הונדה אנגליה",
+    "model": "CR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1597,
+    "seconds": 10.0,
+    "source": "רישוי רכב / נתון יצרן (הונדה CR-V 1.6 דיזל 160)"
+  },
+  {
+    "make": "הונדה",
+    "model": "CR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1997,
+    "seconds": 12.3,
+    "source": "רישוי רכב / נתון יצרן (הונדה CR-V 155)"
+  },
+  {
+    "make": "הונדה",
+    "model": "CR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 1498,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (הונדה CR-V 192)"
+  },
+  {
+    "make": "Honda",
+    "model": "CR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1997,
+    "seconds": 12.3,
+    "source": "נתון יצרן (Honda CR-V 2.0 155)"
+  },
+  {
+    "make": "Honda",
+    "model": "CR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 1498,
+    "seconds": 9.5,
+    "source": "נתון יצרן (Honda CR-V 1.5T 192)"
+  },
+  {
+    "make": "Honda",
+    "model": "CR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1993,
+    "seconds": 8.8,
+    "source": "נתון יצרן (Honda CR-V Hybrid 184)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "CR-Z HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 128,
+    "cc": 1497,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (הונדה CR-Z היברידי ידני 128)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "CR-Z HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 124,
+    "cc": 1497,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (הונדה CR-Z היברידי ידני 124)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "CR-Z",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 128,
+    "cc": 1497,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (הונדה CR-Z היברידי 128)"
+  },
+  {
+    "make": "הונדה",
+    "model": "CR-Z",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 128,
+    "cc": 1497,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (הונדה CR-Z 128)"
+  },
+  {
+    "make": "Honda",
+    "model": "CR-Z",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 128,
+    "cc": 1497,
+    "seconds": 9.1,
+    "source": "נתון יצרן (Honda CR-Z Hybrid 128)"
+  },
+  {
+    "make": "Honda",
+    "model": "CR-Z HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 128,
+    "cc": 1497,
+    "seconds": 9.1,
+    "source": "נתון יצרן (Honda CR-Z Hybrid 128)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "FR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1799,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (הונדה FR-V 1.8 אוטומט 140)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "FR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1998,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (הונדה FR-V 2.0 ידני 150)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "FR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1668,
+    "seconds": 12.3,
+    "source": "רישוי רכב / נתון יצרן (הונדה FR-V 1.7 ידני 125)"
+  },
+  {
+    "make": "הונדה",
+    "model": "FR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1799,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (הונדה FR-V 140)"
+  },
+  {
+    "make": "Honda",
+    "model": "FR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1799,
+    "seconds": 12.5,
+    "source": "נתון יצרן (Honda FR-V 1.8)"
+  },
+  {
+    "make": "הונדה מקסיקו",
+    "model": "HR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 131,
+    "cc": 1498,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (הונדה HR-V 1.5 אוטומט CVT 130/131)"
+  },
+  {
+    "make": "הונדה מקסיקו",
+    "model": "HR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1498,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (הונדה HR-V 1.5 אוטומט CVT 130)"
+  },
+  {
+    "make": "הונדה מקסיקו",
+    "model": "HR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 182,
+    "cc": 1498,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (הונדה HR-V ספורט 1.5 טורבו 182)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "HR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 131,
+    "cc": 1498,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (הונדה HR-V היברידי e:HEV 131)"
+  },
+  {
+    "make": "הונדה",
+    "model": "HR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 131,
+    "cc": 1498,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (הונדה HR-V 131)"
+  },
+  {
+    "make": "Honda",
+    "model": "HR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 131,
+    "cc": 1498,
+    "seconds": 11.2,
+    "source": "נתון יצרן (Honda HR-V 1.5 CVT)"
+  },
+  {
+    "make": "Honda",
+    "model": "HR-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 182,
+    "cc": 1498,
+    "seconds": 7.8,
+    "source": "נתון יצרן (Honda HR-V 1.5 Turbo)"
+  },
+  {
+    "make": "\"הונדה ארהב",
+    "model": "ODYSSEY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 3471,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (הונדה אודיסיי 3.5 V6 אוטומט 280)"
+  },
+  {
+    "make": "הונדה ארהב\"",
+    "model": "ODYSSEY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 3471,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (הונדה אודיסיי 3.5 V6 אוטומט 280)"
+  },
+  {
+    "make": "הונדה ארהב\"",
+    "model": "ODYSSEY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 248,
+    "cc": 3471,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (הונדה אודיסיי 3.5 V6 דור 4 248)"
+  },
+  {
+    "make": "הונדה",
+    "model": "אודיסיי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 3471,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (הונדה אודיסיי 280)"
+  },
+  {
+    "make": "Honda",
+    "model": "ODYSSEY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 3471,
+    "seconds": 6.5,
+    "source": "נתון יצרן (Honda Odyssey 3.5 V6)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "INSIGHT HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 88,
+    "cc": 1339,
+    "seconds": 12.4,
+    "source": "רישוי רכב / נתון יצרן (הונדה אינסייט היברידי 1.3 88/98)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "INSIGHT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 88,
+    "cc": 1339,
+    "seconds": 12.4,
+    "source": "רישוי רכב / נתון יצרן (הונדה אינסייט היברידי 88)"
+  },
+  {
+    "make": "הונדה",
+    "model": "אינסייט",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 88,
+    "cc": 1339,
+    "seconds": 12.4,
+    "source": "רישוי רכב / נתון יצרן (הונדה אינסייט 88)"
+  },
+  {
+    "make": "Honda",
+    "model": "INSIGHT HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 88,
+    "cc": 1339,
+    "seconds": 12.4,
+    "source": "נתון יצרן (Honda Insight Hybrid 1.3)"
+  },
+  {
+    "make": "Honda",
+    "model": "INSIGHT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 88,
+    "cc": 1339,
+    "seconds": 12.4,
+    "source": "נתון יצרן (Honda Insight Hybrid)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "ACCORD",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1997,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (הונדה אקורד 2.0 אוטומט 156)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "ACCORD",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 201,
+    "cc": 2354,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (הונדה אקורד 2.4 אוטומט 201)"
+  },
+  {
+    "make": "\"הונדה ארהב",
+    "model": "ACCORD",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 2356,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (הונדה אקורד ארה\"ב 2.4 185)"
+  },
+  {
+    "make": "הונדה ארהב\"",
+    "model": "ACCORD",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 1498,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (הונדה אקורד 1.5 טורבו 192)"
+  },
+  {
+    "make": "הונדה ארהב\"",
+    "model": "ACCORD",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1996,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (הונדה אקורד 2.0 טורבו 252)"
+  },
+  {
+    "make": "הונדה",
+    "model": "אקורד",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1997,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (הונדה אקורד 156)"
+  },
+  {
+    "make": "Honda",
+    "model": "ACCORD",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1997,
+    "seconds": 10.7,
+    "source": "נתון יצרן (Honda Accord 2.0 156)"
+  },
+  {
+    "make": "Honda",
+    "model": "ACCORD",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 201,
+    "cc": 2354,
+    "seconds": 9.5,
+    "source": "נתון יצרן (Honda Accord 2.4 201)"
+  },
+  {
+    "make": "Honda",
+    "model": "ACCORD",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 1498,
+    "seconds": 7.5,
+    "source": "נתון יצרן (Honda Accord 1.5T 192)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "JAZZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1318,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (הונדה ג'אז 1.3 אוטומט CVT 102)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "JAZZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1339,
+    "seconds": 11.4,
+    "source": "רישוי רכב / נתון יצרן (הונדה ג'אז 1.4 דור 2 100)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "JAZZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1198,
+    "seconds": 12.6,
+    "source": "רישוי רכב / נתון יצרן (הונדה ג'אז 1.2 90)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "JAZZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 88,
+    "cc": 1339,
+    "seconds": 12.1,
+    "source": "רישוי רכב / נתון יצרן (הונדה ג'אז היברידית 1.3 88)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "JAZZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1498,
+    "seconds": 9.4,
+    "source": "רישוי רכב / נתון יצרן (הונדה ג'אז היברידית e:HEV 109)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "JAZZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 1498,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (הונדה ג'אז היברידית e:HEV 122)"
+  },
+  {
+    "make": "הונדה",
+    "model": "ג'אז",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1318,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (הונדה ג'אז 102)"
+  },
+  {
+    "make": "Honda",
+    "model": "JAZZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1318,
+    "seconds": 12.0,
+    "source": "נתון יצרן (Honda Jazz 1.3 CVT)"
+  },
+  {
+    "make": "Honda",
+    "model": "JAZZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1498,
+    "seconds": 9.4,
+    "source": "נתון יצרן (Honda Jazz e:HEV)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "STREAM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1998,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (הונדה סטרים 2.0 אוטומט 156)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "STREAM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1668,
+    "seconds": 11.1,
+    "source": "רישוי רכב / נתון יצרן (הונדה סטרים 1.7 125)"
+  },
+  {
+    "make": "הונדה",
+    "model": "סטרים",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1998,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (הונדה סטרים 156)"
+  },
+  {
+    "make": "Honda",
+    "model": "STREAM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1998,
+    "seconds": 10.5,
+    "source": "נתון יצרן (Honda Stream 2.0)"
+  },
+  {
     "make": "אף אי דאבל יו",
     "model": "EHS5",
     "yearStart": null,
