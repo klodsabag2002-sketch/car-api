@@ -1,5 +1,975 @@
 [
   {
+    "make": "יגואר אנגליה",
+    "model": "E-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1498,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (יגואר E-Pace P160 מילד-הייבריד 1.5 160)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "E-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 309,
+    "cc": 1498,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (יגואר E-Pace P300e פלאג-אין PHEV 309)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "E-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1997,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (יגואר E-Pace P200 AWD 200)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "E-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 249,
+    "cc": 1997,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (יגואר E-Pace P250 AWD 249)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "E-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1997,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (יגואר E-Pace P300 AWD 300)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "E-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1999,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (יגואר E-Pace D150 דיזל 150)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "E-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1999,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (יגואר E-Pace D180 דיזל 180)"
+  },
+  {
+    "make": "יגואר",
+    "model": "E-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1498,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (יגואר E-Pace 160)"
+  },
+  {
+    "make": "Jaguar",
+    "model": "E-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1498,
+    "seconds": 10.3,
+    "source": "נתון יצרן (Jaguar E-Pace P160)"
+  },
+  {
+    "make": "Jaguar",
+    "model": "E-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 249,
+    "cc": 1997,
+    "seconds": 7.0,
+    "source": "נתון יצרן (Jaguar E-Pace P250)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "F-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1999,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (יגואר F-Pace 2.0 דיזל טווין-טורבו 240)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "F-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1997,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (יגואר F-Pace P250 בנזין טורבו 250)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "F-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1997,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (יגואר F-Pace P300 בנזין טורבו 300)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "F-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 404,
+    "cc": 1997,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (יגואר F-Pace P400e פלאג-אין PHEV 404)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "F-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 2995,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (יגואר F-Pace 3.0 S סופרצ'ארג'ר 380)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "F-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (יגואר F-Pace 3.0 V6 סופרצ'ארג'ר 340)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "F-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 550,
+    "cc": 5000,
+    "seconds": 4.0,
+    "source": "רישוי רכב / נתון יצרן (יגואר F-Pace SVR 5.0 V8 סופרצ'ארג'ר 550)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "F-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1999,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (יגואר F-Pace 2.0 דיזל 180)"
+  },
+  {
+    "make": "יגואר",
+    "model": "F-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1999,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (יגואר F-Pace 240)"
+  },
+  {
+    "make": "Jaguar",
+    "model": "F-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1999,
+    "seconds": 7.2,
+    "source": "נתון יצרן (Jaguar F-Pace 2.0D)"
+  },
+  {
+    "make": "Jaguar",
+    "model": "F-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1997,
+    "seconds": 6.8,
+    "source": "נתון יצרן (Jaguar F-Pace P250)"
+  },
+  {
+    "make": "Jaguar",
+    "model": "F-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 550,
+    "cc": 5000,
+    "seconds": 4.0,
+    "source": "נתון יצרן (Jaguar F-Pace SVR)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "F-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1997,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (יגואר F-Type קופה/קבריו 2.0 טורבו 300)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "F-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (יגואר F-Type 3.0 V6 סופרצ'ארג'ר 340)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "F-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 2995,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (יגואר F-Type S 3.0 V6 סופרצ'ארג'ר 380)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "F-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 450,
+    "cc": 5000,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (יגואר F-Type P450 5.0 V8 סופרצ'ארג'ר 450)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "F-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 575,
+    "cc": 5000,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (יגואר F-Type R / SVR 5.0 V8 סופרצ'ארג'ר AWD 575)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "F-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 550,
+    "cc": 5000,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (יגואר F-Type R 5.0 V8 סופרצ'ארג'ר 550)"
+  },
+  {
+    "make": "יגואר",
+    "model": "F-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1997,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (יגואר F-Type 300)"
+  },
+  {
+    "make": "Jaguar",
+    "model": "F-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1997,
+    "seconds": 5.7,
+    "source": "נתון יצרן (Jaguar F-Type 2.0T)"
+  },
+  {
+    "make": "Jaguar",
+    "model": "F-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 2995,
+    "seconds": 4.9,
+    "source": "נתון יצרן (Jaguar F-Type S 3.0)"
+  },
+  {
+    "make": "Jaguar",
+    "model": "F-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 575,
+    "cc": 5000,
+    "seconds": 3.7,
+    "source": "נתון יצרן (Jaguar F-Type R 5.0)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "I-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 400,
+    "cc": 0,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (יגואר I-Pace EV400 חשמלי מלא כפול מנועים AWD 400)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "I-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 0,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (יגואר I-Pace EV320 חשמלי 320)"
+  },
+  {
+    "make": "יגואר",
+    "model": "I-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 400,
+    "cc": 0,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (יגואר I-Pace 400)"
+  },
+  {
+    "make": "Jaguar",
+    "model": "I-PACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 400,
+    "cc": 0,
+    "seconds": 4.8,
+    "source": "נתון יצרן (Jaguar I-Pace EV400 AWD)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1997,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (יגואר XE P250 בנזין טורבו 250)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1997,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (יגואר XE P200 בנזין טורבו 200)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1997,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (יגואר XE P300 בנזין טורבו AWD 300)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.1,
+    "source": "רישוי רכב / נתון יצרן (יגואר XE S 3.0 V6 סופרצ'ארג'ר 340)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 2995,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (יגואר XE S 3.0 V6 סופרצ'ארג'ר 380)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1999,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (יגואר XE 2.0 דיזל 180)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1999,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (יגואר XE 2.0 בנזין דור קודם 240)"
+  },
+  {
+    "make": "יגואר",
+    "model": "XE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1997,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (יגואר XE 250)"
+  },
+  {
+    "make": "Jaguar",
+    "model": "XE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1997,
+    "seconds": 6.5,
+    "source": "נתון יצרן (Jaguar XE P250)"
+  },
+  {
+    "make": "Jaguar",
+    "model": "XE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1997,
+    "seconds": 5.7,
+    "source": "נתון יצרן (Jaguar XE P300 AWD)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XF 2.0",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1999,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (יגואר XF דור 1 2.0 טורבו בנזין 240)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1999,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (יגואר XF 2.0 240)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1997,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (יגואר XF P250 דור 2 250)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1997,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (יגואר XF P300 AWD 300)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (יגואר XF 3.0 V6 סופרצ'ארג'ר 340)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 2995,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (יגואר XF S 3.0 V6 סופרצ'ארג'ר 380)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 238,
+    "cc": 2967,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (יגואר XF 3.0 V6 אטמוספרי 238)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 385,
+    "cc": 5000,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (יגואר XF 5.0 V8 385)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 5000,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (יגואר XFR 5.0 V8 סופרצ'ארג'ר 510)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 2993,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (יגואר XF 3.0 D S דיזל 275)"
+  },
+  {
+    "make": "יגואר",
+    "model": "XF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1999,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (יגואר XF 240)"
+  },
+  {
+    "make": "Jaguar",
+    "model": "XF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1999,
+    "seconds": 7.9,
+    "source": "נתון יצרן (Jaguar XF 2.0T)"
+  },
+  {
+    "make": "Jaguar",
+    "model": "XF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1997,
+    "seconds": 6.9,
+    "source": "נתון יצרן (Jaguar XF P250)"
+  },
+  {
+    "make": "Jaguar",
+    "model": "XF 2.0",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1999,
+    "seconds": 7.9,
+    "source": "נתון יצרן (Jaguar XF 2.0T)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XJ 3.0 LWB",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (יגואר XJ בסיס גלגלים ארוך 3.0 V6 סופרצ'ארג'ר 340)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XJ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (יגואר XJ 3.0 V6 סופרצ'ארג'ר 340)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XJ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1999,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (יגואר XJ 2.0 טורבו 240)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XJ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 385,
+    "cc": 5000,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (יגואר XJ 5.0 V8 385)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XJ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 5000,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (יגואר XJ Supersport 5.0 V8 סופרצ'ארג'ר 510)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XJ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 2993,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (יגואר XJ 3.0 D דיזל 275)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XJ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 4196,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (יגואר XJ X350 4.2 V8 300)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XJ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 395,
+    "cc": 4196,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (יגואר XJR X350 4.2 סופרצ'ארג'ר 395)"
+  },
+  {
+    "make": "יגואר",
+    "model": "XJ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (יגואר XJ 340)"
+  },
+  {
+    "make": "Jaguar",
+    "model": "XJ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.9,
+    "source": "נתון יצרן (Jaguar XJ 3.0 V6 Supercharged)"
+  },
+  {
+    "make": "Jaguar",
+    "model": "XJ 3.0 LWB",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.9,
+    "source": "נתון יצרן (Jaguar XJ 3.0 LWB)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "X TYPE 2.5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 194,
+    "cc": 2495,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (יגואר X-Type 2.5 V6 AWD אוטומט 194/196)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "X-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 194,
+    "cc": 2495,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (יגואר X-Type 2.5 V6 AWD 194)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "X-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 2967,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (יגואר X-Type 3.0 V6 AWD 231)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "X-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 2099,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (יגואר X-Type 2.1 V6 FWD 156)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "X-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1998,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (יגואר X-Type 2.0D דיזל 130)"
+  },
+  {
+    "make": "יגואר",
+    "model": "X-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 194,
+    "cc": 2495,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (יגואר X-Type 194)"
+  },
+  {
+    "make": "Jaguar",
+    "model": "X-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 194,
+    "cc": 2495,
+    "seconds": 8.9,
+    "source": "נתון יצרן (Jaguar X-Type 2.5 V6)"
+  },
+  {
+    "make": "Jaguar",
+    "model": "X TYPE 2.5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 194,
+    "cc": 2495,
+    "seconds": 8.9,
+    "source": "נתון יצרן (Jaguar X-Type 2.5 V6)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "S-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 238,
+    "cc": 2967,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (יגואר S-Type 3.0 V6 238)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "S-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 298,
+    "cc": 4196,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (יגואר S-Type 4.2 V8 298)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "S-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 281,
+    "cc": 3996,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (יגואר S-Type 4.0 V8 281)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "S-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 395,
+    "cc": 4196,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (יגואר S-Type R 4.2 V8 סופרצ'ארג'ר 395)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "S-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 207,
+    "cc": 2720,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (יגואר S-Type 2.7D V6 טווין-טורבו דיזל 207)"
+  },
+  {
+    "make": "יגואר",
+    "model": "S-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 238,
+    "cc": 2967,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (יגואר S-Type 238)"
+  },
+  {
+    "make": "Jaguar",
+    "model": "S-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 238,
+    "cc": 2967,
+    "seconds": 7.9,
+    "source": "נתון יצרן (Jaguar S-Type 3.0 V6)"
+  },
+  {
+    "make": "Jaguar",
+    "model": "S-TYPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 395,
+    "cc": 4196,
+    "seconds": 5.6,
+    "source": "נתון יצרן (Jaguar S-Type R)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 385,
+    "cc": 5000,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (יגואר XK דור 2 5.0 V8 385)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XKR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 5000,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (יגואר XKR 5.0 V8 סופרצ'ארג'ר 510)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XKR-S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 550,
+    "cc": 5000,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (יגואר XKR-S 5.0 V8 סופרצ'ארג'ר 550)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 298,
+    "cc": 4196,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (יגואר XK8 / XK 4.2 V8 298)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XKR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 416,
+    "cc": 4196,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (יגואר XKR 4.2 V8 סופרצ'ארג'ר 416)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XK8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 284,
+    "cc": 3996,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (יגואר XK8 דור 1 4.0 V8 284)"
+  },
+  {
+    "make": "יגואר אנגליה",
+    "model": "XKR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 363,
+    "cc": 3996,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (יגואר XKR דור 1 4.0 סופרצ'ארג'ר 363)"
+  },
+  {
+    "make": "יגואר",
+    "model": "XK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 385,
+    "cc": 5000,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (יגואר XK 385)"
+  },
+  {
+    "make": "Jaguar",
+    "model": "XK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 385,
+    "cc": 5000,
+    "seconds": 5.4,
+    "source": "נתון יצרן (Jaguar XK 5.0 V8)"
+  },
+  {
+    "make": "Jaguar",
+    "model": "XKR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 5000,
+    "seconds": 4.8,
+    "source": "נתון יצרן (Jaguar XKR 5.0 V8 Supercharged)"
+  },
+  {
     "make": "\"טסלה ארהב",
     "model": "MODEL 3",
     "yearStart": null,
