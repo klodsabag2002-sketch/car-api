@@ -1,1 +1,772 @@
-klod
+[
+  {
+    "make": "קרייזלר מקסיקו",
+    "model": "JOURNEY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 168,
+    "cc": 2360,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (דודג' ג'רני 2.4 בנזין 168)"
+  },
+  {
+    "make": "קרייזלר מקסיקו",
+    "model": "JOURNEY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 173,
+    "cc": 2360,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (דודג' ג'רני 2.4 בנזין 173)"
+  },
+  {
+    "make": "קרייזלר מקסיקו",
+    "model": "JOURNEY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 3604,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (דודג' ג'רני 3.6 V6 283)"
+  },
+  {
+    "make": "דודג' קנדה",
+    "model": "JOURNEY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 3604,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (דודג' ג'רני 3.6 V6 283)"
+  },
+  {
+    "make": "דודג'",
+    "model": "ג'רני",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 168,
+    "cc": 2360,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (דודג' ג'רני 168)"
+  },
+  {
+    "make": "דודג'",
+    "model": "ג'רני",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 3604,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (דודג' ג'רני 283)"
+  },
+  {
+    "make": "Dodge",
+    "model": "JOURNEY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 168,
+    "cc": 2360,
+    "seconds": 10.5,
+    "source": "נתון יצרן (Dodge Journey 2.4)"
+  },
+  {
+    "make": "Dodge",
+    "model": "JOURNEY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 3604,
+    "seconds": 7.8,
+    "source": "נתון יצרן (Dodge Journey 3.6 V6)"
+  },
+  {
+    "make": "קרייזלר ארהב\"",
+    "model": "DODGE NITRO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3700,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (דודג' ניטרו 3.7 V6 205)"
+  },
+  {
+    "make": "\"קרייזלר ארהב",
+    "model": "DODGE NITRO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3700,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (דודג' ניטרו 3.7 V6 205)"
+  },
+  {
+    "make": "דודג' ארהב\"",
+    "model": "NITRO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3700,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (דודג' ניטרו 3.7 V6 205)"
+  },
+  {
+    "make": "דודג' ארהב\"",
+    "model": "NITRO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 260,
+    "cc": 3952,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (דודג' ניטרו 4.0 V6 R/T 260)"
+  },
+  {
+    "make": "דודג' ארהב\"",
+    "model": "NITRO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 2777,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (דודג' ניטרו 2.8 CRD דיזל 177)"
+  },
+  {
+    "make": "דודג'",
+    "model": "ניטרו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3700,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (דודג' ניטרו 205)"
+  },
+  {
+    "make": "Dodge",
+    "model": "NITRO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3700,
+    "seconds": 9.6,
+    "source": "נתון יצרן (Dodge Nitro 3.7 V6)"
+  },
+  {
+    "make": "Dodge",
+    "model": "DODGE NITRO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3700,
+    "seconds": 9.6,
+    "source": "נתון יצרן (Dodge Nitro 3.7 V6)"
+  },
+  {
+    "make": "דודג' קנדה",
+    "model": "CHARGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 3604,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (דודג' צ'ארג'ר 3.6 V6 GT 300)"
+  },
+  {
+    "make": "דודג' קנדה",
+    "model": "CHARGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 292,
+    "cc": 3604,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (דודג' צ'ארג'ר 3.6 V6 SXT 292)"
+  },
+  {
+    "make": "דודג' קנדה",
+    "model": "CHARGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 370,
+    "cc": 5654,
+    "seconds": 5.1,
+    "source": "רישוי רכב / נתון יצרן (דודג' צ'ארג'ר R/T 5.7 V8 370)"
+  },
+  {
+    "make": "דודג' קנדה",
+    "model": "CHARGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 485,
+    "cc": 6417,
+    "seconds": 4.3,
+    "source": "רישוי רכב / נתון יצרן (דודג' צ'ארג'ר Scat Pack 6.4 V8 485)"
+  },
+  {
+    "make": "דודג' קנדה",
+    "model": "CHARGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 707,
+    "cc": 6166,
+    "seconds": 3.6,
+    "source": "רישוי רכב / נתון יצרן (דודג' צ'ארג'ר SRT Hellcat 6.2 707)"
+  },
+  {
+    "make": "דודג' קנדה",
+    "model": "CHARGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 717,
+    "cc": 6166,
+    "seconds": 3.6,
+    "source": "רישוי רכב / נתון יצרן (דודג' צ'ארג'ר SRT Hellcat 6.2 717)"
+  },
+  {
+    "make": "דודג'",
+    "model": "צארגר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 3604,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (דודג' צ'ארג'ר 300)"
+  },
+  {
+    "make": "דודג'",
+    "model": "צ'ארג'ר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 3604,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (דודג' צ'ארג'ר 300)"
+  },
+  {
+    "make": "Dodge",
+    "model": "CHARGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 3604,
+    "seconds": 6.4,
+    "source": "נתון יצרן (Dodge Charger 3.6 V6)"
+  },
+  {
+    "make": "Dodge",
+    "model": "CHARGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 370,
+    "cc": 5654,
+    "seconds": 5.1,
+    "source": "נתון יצרן (Dodge Charger 5.7 V8 R/T)"
+  },
+  {
+    "make": "Dodge",
+    "model": "CHARGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 485,
+    "cc": 6417,
+    "seconds": 4.3,
+    "source": "נתון יצרן (Dodge Charger 6.4 V8 392)"
+  },
+  {
+    "make": "Dodge",
+    "model": "CHARGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 717,
+    "cc": 6166,
+    "seconds": 3.6,
+    "source": "נתון יצרן (Dodge Charger SRT Hellcat)"
+  },
+  {
+    "make": "דודג' קנדה",
+    "model": "CHALLENGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 305,
+    "cc": 3604,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (דודג' צ'לנג'ר 3.6 V6 SXT 305)"
+  },
+  {
+    "make": "דודג' קנדה",
+    "model": "CHALLENGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 375,
+    "cc": 5654,
+    "seconds": 5.1,
+    "source": "רישוי רכב / נתון יצרן (דודג' צ'לנג'ר R/T 5.7 V8 375)"
+  },
+  {
+    "make": "דודג' קנדה",
+    "model": "CHALLENGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 485,
+    "cc": 6417,
+    "seconds": 4.2,
+    "source": "רישוי רכב / נתון יצרן (דודג' צ'לנג'ר Scat Pack 6.4 V8 485)"
+  },
+  {
+    "make": "דודג' קנדה",
+    "model": "CHALLENGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 707,
+    "cc": 6166,
+    "seconds": 3.6,
+    "source": "רישוי רכב / נתון יצרן (דודג' צ'לנג'ר SRT Hellcat 6.2 707)"
+  },
+  {
+    "make": "דודג' קנדה",
+    "model": "CHALLENGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 717,
+    "cc": 6166,
+    "seconds": 3.6,
+    "source": "רישוי רכב / נתון יצרן (דודג' צ'לנג'ר SRT Hellcat 6.2 717)"
+  },
+  {
+    "make": "דודג' קנדה",
+    "model": "CHALLENGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 797,
+    "cc": 6166,
+    "seconds": 3.4,
+    "source": "רישוי רכב / נתון יצרן (דודג' צ'לנג'ר Hellcat Redeye 797)"
+  },
+  {
+    "make": "דודג'",
+    "model": "צלנגר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 305,
+    "cc": 3604,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (דודג' צ'לנג'ר 305)"
+  },
+  {
+    "make": "דודג'",
+    "model": "צ'לנג'ר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 305,
+    "cc": 3604,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (דודג' צ'לנג'ר 305)"
+  },
+  {
+    "make": "Dodge",
+    "model": "CHALLENGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 305,
+    "cc": 3604,
+    "seconds": 6.3,
+    "source": "נתון יצרן (Dodge Challenger 3.6 V6)"
+  },
+  {
+    "make": "Dodge",
+    "model": "CHALLENGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 375,
+    "cc": 5654,
+    "seconds": 5.1,
+    "source": "נתון יצרן (Dodge Challenger 5.7 V8 R/T)"
+  },
+  {
+    "make": "Dodge",
+    "model": "CHALLENGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 485,
+    "cc": 6417,
+    "seconds": 4.2,
+    "source": "נתון יצרן (Dodge Challenger 6.4 V8 392)"
+  },
+  {
+    "make": "Dodge",
+    "model": "CHALLENGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 717,
+    "cc": 6166,
+    "seconds": 3.6,
+    "source": "נתון יצרן (Dodge Challenger SRT Hellcat)"
+  },
+  {
+    "make": "קרייזלר ארהב\"",
+    "model": "CALIBER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 154,
+    "cc": 1998,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (דודג' קאליבר 2.0 בנזין 154/156)"
+  },
+  {
+    "make": "\"קרייזלר ארהב",
+    "model": "CALIBER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 154,
+    "cc": 1998,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (דודג' קאליבר 2.0 בנזין 154)"
+  },
+  {
+    "make": "דודג' ארהב\"",
+    "model": "CALIBER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 154,
+    "cc": 1998,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (דודג' קאליבר 2.0 בנזין 154)"
+  },
+  {
+    "make": "דודג' ארהב\"",
+    "model": "CALIBER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 148,
+    "cc": 1798,
+    "seconds": 11.3,
+    "source": "רישוי רכב / נתון יצרן (דודג' קאליבר 1.8 בנזין 148)"
+  },
+  {
+    "make": "דודג' ארהב\"",
+    "model": "CALIBER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 172,
+    "cc": 2360,
+    "seconds": 9.4,
+    "source": "רישוי רכב / נתון יצרן (דודג' קאליבר 2.4 R/T 172)"
+  },
+  {
+    "make": "דודג' ארהב\"",
+    "model": "CALIBER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 285,
+    "cc": 2360,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (דודג' קאליבר SRT-4 טורבו 285)"
+  },
+  {
+    "make": "דודג'",
+    "model": "קאליבר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 154,
+    "cc": 1998,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (דודג' קאליבר 154)"
+  },
+  {
+    "make": "Dodge",
+    "model": "CALIBER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 154,
+    "cc": 1998,
+    "seconds": 10.8,
+    "source": "נתון יצרן (Dodge Caliber 2.0)"
+  },
+  {
+    "make": "דודג' קנדה",
+    "model": "GRAND CARAVAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 3604,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (דודג' גרנד קראוון 3.6 V6 283)"
+  },
+  {
+    "make": "דודג' קנדה",
+    "model": "CARAVAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 3604,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (דודג' קראוון 3.6 V6 283)"
+  },
+  {
+    "make": "דודג' ארהב\"",
+    "model": "GRAND CARAVAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 3604,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (דודג' גרנד קראוון 3.6 V6 283)"
+  },
+  {
+    "make": "דודג' ארהב\"",
+    "model": "CARAVAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 3778,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (דודג' קראוון 3.8 V6 197)"
+  },
+  {
+    "make": "דודג' ארהב\"",
+    "model": "CARAVAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 175,
+    "cc": 3301,
+    "seconds": 11.4,
+    "source": "רישוי רכב / נתון יצרן (דודג' קראוון 3.3 V6 175)"
+  },
+  {
+    "make": "דודג'",
+    "model": "קראווון",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 3604,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (דודג' גרנד קראוון 283)"
+  },
+  {
+    "make": "דודג'",
+    "model": "קראוון",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 3604,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (דודג' גרנד קראוון 283)"
+  },
+  {
+    "make": "Dodge",
+    "model": "GRAND CARAVAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 3604,
+    "seconds": 7.9,
+    "source": "נתון יצרן (Dodge Grand Caravan 3.6 V6)"
+  },
+  {
+    "make": "Dodge",
+    "model": "CARAVAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 3604,
+    "seconds": 7.9,
+    "source": "נתון יצרן (Dodge Caravan 3.6 V6)"
+  },
+  {
+    "make": "קרייזלר ארהב\"",
+    "model": "AVENGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 173,
+    "cc": 2360,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (דודג' אוונגר 2.4 בנזין 173)"
+  },
+  {
+    "make": "\"קרייזלר ארהב",
+    "model": "AVENGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 173,
+    "cc": 2360,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (דודג' אוונגר 2.4 בנזין 173)"
+  },
+  {
+    "make": "דודג' ארהב\"",
+    "model": "AVENGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 173,
+    "cc": 2360,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (דודג' אוונגר 2.4 בנזין 173)"
+  },
+  {
+    "make": "דודג' ארהב\"",
+    "model": "AVENGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 3604,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (דודג' אוונגר 3.6 V6 283)"
+  },
+  {
+    "make": "דודג' ארהב\"",
+    "model": "AVENGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 186,
+    "cc": 2736,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (דודג' אוונגר 2.7 V6 186)"
+  },
+  {
+    "make": "דודג'",
+    "model": "אוונגר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 173,
+    "cc": 2360,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (דודג' אוונגר 173)"
+  },
+  {
+    "make": "Dodge",
+    "model": "AVENGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 173,
+    "cc": 2360,
+    "seconds": 9.8,
+    "source": "נתון יצרן (Dodge Avenger 2.4)"
+  },
+  {
+    "make": "Dodge",
+    "model": "AVENGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 3604,
+    "seconds": 6.5,
+    "source": "נתון יצרן (Dodge Avenger 3.6 V6)"
+  },
+  {
+    "make": "דודג' ארהב\"",
+    "model": "DURANGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 295,
+    "cc": 3604,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (דודג' דורנגו 3.6 V6 295)"
+  },
+  {
+    "make": "\"דודג' ארהב",
+    "model": "DURANGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 295,
+    "cc": 3604,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (דודג' דורנגו 3.6 V6 295)"
+  },
+  {
+    "make": "קרייזלר ארהב\"",
+    "model": "DURANGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 295,
+    "cc": 3604,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (דודג' דורנגו 3.6 V6 295)"
+  },
+  {
+    "make": "דודג' ארהב\"",
+    "model": "DURANGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 360,
+    "cc": 5654,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (דודג' דורנגו 5.7 V8 R/T 360)"
+  },
+  {
+    "make": "דודג' ארהב\"",
+    "model": "DURANGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 475,
+    "cc": 6417,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (דודג' דורנגו SRT 6.4 V8 475)"
+  },
+  {
+    "make": "דודג' ארהב\"",
+    "model": "DURANGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 710,
+    "cc": 6166,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (דודג' דורנגו SRT Hellcat 710)"
+  },
+  {
+    "make": "דודג'",
+    "model": "דורנגו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 295,
+    "cc": 3604,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (דודג' דורנגו 295)"
+  },
+  {
+    "make": "דודג'",
+    "model": "דורנגו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 360,
+    "cc": 5654,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (דודג' דורנגו 360)"
+  },
+  {
+    "make": "Dodge",
+    "model": "DURANGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 295,
+    "cc": 3604,
+    "seconds": 7.4,
+    "source": "נתון יצרן (Dodge Durango 3.6 V6)"
+  },
+  {
+    "make": "Dodge",
+    "model": "DURANGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 360,
+    "cc": 5654,
+    "seconds": 6.2,
+    "source": "נתון יצרן (Dodge Durango 5.7 V8)"
+  },
+  {
+    "make": "Dodge",
+    "model": "DURANGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 475,
+    "cc": 6417,
+    "seconds": 4.4,
+    "source": "נתון יצרן (Dodge Durango SRT 392)"
+  },
+  {
+    "make": "Dodge",
+    "model": "DURANGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 710,
+    "cc": 6166,
+    "seconds": 3.5,
+    "source": "נתון יצרן (Dodge Durango SRT Hellcat)"
+  }
+]
