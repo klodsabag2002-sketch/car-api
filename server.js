@@ -14,7 +14,7 @@ const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";
 
-// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 22) ----------
+// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 25) ----------
 let accelTable = [];
 const ACCEL_FILES = [
     "acceleration.json",
@@ -38,7 +38,10 @@ const ACCEL_FILES = [
     "acceleration19.json",
     "acceleration20.json",
     "acceleration21.json",
-    "acceleration22.json"
+    "acceleration22.json",
+    "acceleration23.json",
+    "acceleration24.json",
+    "acceleration25.json"
 ];
 
 ACCEL_FILES.forEach(fileName => {
@@ -84,6 +87,8 @@ const HE_MAKE_ALIASES = {
     "ניסאן ארהב": "Nissan",
     "ניסאן ארהב\"": "Nissan",
     "\"ניסאן ארהב": "Nissan",
+    "ניסאן ספרד": "Nissan",
+    "ניסאן אנגליה": "Nissan",
     "איווייס": "Aiways",
     "איווייס סין": "Aiways",
     "איווויס": "Aiways",
@@ -438,7 +443,52 @@ const HE_MAKE_ALIASES = {
     "KGM": "SsangYong",
     "SsangYong": "SsangYong",
     "סיאט": "Seat",
+    "סיאט ספרד": "Seat",
+    "סיאט צ'כיה": "Seat",
+    "סיאט צכיה": "Seat",
+    "סיאט גרמניה": "Seat",
+    "סיאט סלובקיה": "Seat",
+    "סיאט פורטוגל": "Seat",
+    "Seat": "Seat",
+    "סובארו": "Subaru",
+    "סובארו יפן": "Subaru",
+    "סובארו ארה\"ב": "Subaru",
+    "סובארו ארהב": "Subaru",
+    "סובארו ארהב\"": "Subaru",
+    "\"סובארו ארהב": "Subaru",
+    "Subaru": "Subaru",
+    "סוזוקי": "Suzuki",
+    "סוזוקי יפן": "Suzuki",
+    "סוזוקי הונגריה": "Suzuki",
+    "מרוטי סוזוקי": "Suzuki",
+    "מרוטי": "Suzuki",
+    "Suzuki": "Suzuki",
+    "סמארט": "Smart",
+    "סמארט סין": "Smart",
+    "סמארט צרפת": "Smart",
+    "סמארט גרמניה": "Smart",
+    "Smart": "Smart",
+    "סיטרואן": "Citroen",
+    "סיטרואן צרפת": "Citroen",
+    "סיטרואן ספרד": "Citroen",
+    "סיטרואן צ'כיה": "Citroen",
+    "סיטרואן צכיה": "Citroen",
+    "סיטרואן סלובק": "Citroen",
+    "סיטרואן סלובקיה": "Citroen",
+    "סיטרואן פורטוג": "Citroen",
+    "סיטרואן פורטוגל": "Citroen",
+    "Citroen": "Citroen",
+    "Citroën": "Citroen",
     "סקודה": "Skoda",
+    "סקודה צ'כיה": "Skoda",
+    "סקודה צכיה": "Skoda",
+    "סקודה סלובקיה": "Skoda",
+    "Skoda": "Skoda",
+    "סקייוול": "Skywell",
+    "סקייוול סין": "Skywell",
+    "סקיוול": "Skywell",
+    "סקיוול סין": "Skywell",
+    "Skywell": "Skywell",
     "פולקסווגן": "Volkswagen",
     "קיה": "Kia"
 };
