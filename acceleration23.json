@@ -1,1 +1,992 @@
-klod
+[
+  {
+    "make": "סקודה צ'כיה",
+    "model": "OCTAVIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (סקודה אוקטביה 1.5 TSI / e-TEC 150 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "OCTAVIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (סקודה אוקטביה דור 4 1.0 e-TEC 110 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "OCTAVIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 999,
+    "seconds": 10.0,
+    "source": "רישוי רכב / נתון יצרן (סקודה אוקטביה 1.0 TSI 115 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "OCTAVIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1197,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (סקודה אוקטביה 1.2 TSI 105 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "OCTAVIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1395,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (סקודה אוקטביה דור 3 1.4 TSI 140 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "OCTAVIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (סקודה אוקטביה 1.4 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "OCTAVIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1798,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (סקודה אוקטביה 1.8 TSI 180 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "OCTAVIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (סקודה אוקטביה 2.0 TSI 190 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "OCTAVIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1984,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (סקודה אוקטביה RS ספורט 2.0 TSI 245 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "OCTAVIA RS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1984,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (סקודה אוקטביה RS 245 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "OCTAVIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1968,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (סקודה אוקטביה 2.0 TDI דיזל 150 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "OCTAVIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1598,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (סקודה אוקטביה 1.6 TDI דיזל 105 כ\"ס)"
+  },
+  {
+    "make": "סקודה",
+    "model": "אוקטביה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (סקודה אוקטביה 150 כ\"ס)"
+  },
+  {
+    "make": "Skoda",
+    "model": "OCTAVIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.4,
+    "source": "נתון יצרן (Skoda Octavia 1.5 TSI)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "SUPERB",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (סקודה סופרב דור 3/4 1.5 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "SUPERB",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1395,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (סקודה סופרב iV פלאג-אין PHEV 1.4 TSI 156/218 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "SUPERB",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (סקודה סופרב 1.4 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "SUPERB",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (סקודה סופרב 2.0 TSI 190 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "SUPERB",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 220,
+    "cc": 1984,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (סקודה סופרב 2.0 TSI 220 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "SUPERB",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 1984,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (סקודה סופרב 4X4 2.0 TSI 280 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "SUPERB",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1798,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (סקודה סופרב דור 2 1.8 TSI 160 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "SUPERB",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1968,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (סקודה סופרב 2.0 TDI דיזל 190 כ\"ס)"
+  },
+  {
+    "make": "סקודה",
+    "model": "סופרב",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (סקודה סופרב 150 כ\"ס)"
+  },
+  {
+    "make": "Skoda",
+    "model": "SUPERB",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.2,
+    "source": "נתון יצרן (Skoda Superb 1.5 TSI)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "KODIAQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (סקודה קודיאק 7 מקומות 1.5 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "KODIAQ FL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (סקודה קודיאק מתוח פנים 1.5 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "KODIAQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (סקודה קודיאק 1.4 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "KODIAQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1984,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (סקודה קודיאק 4X4 2.0 TSI 180 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "KODIAQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (סקודה קודיאק 4X4 2.0 TSI 190 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "KODIAQ RS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1984,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (סקודה קודיאק RS ספורט 2.0 TSI 245 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "KODIAQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1968,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (סקודה קודיאק 2.0 TDI דיזל 150 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "KODIAQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1968,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (סקודה קודיאק 4X4 2.0 TDI דיזל 190 כ\"ס)"
+  },
+  {
+    "make": "סקודה",
+    "model": "קודיאק",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (סקודה קודיאק 150 כ\"ס)"
+  },
+  {
+    "make": "Skoda",
+    "model": "KODIAQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.6,
+    "source": "נתון יצרן (Skoda Kodiaq 1.5 TSI)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "KAROQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (סקודה קארוק 1.5 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "KAROQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 999,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (סקודה קארוק 1.0 TSI 115 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "KAROQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (סקודה קארוק ספורטליין 4X4 2.0 TSI 190 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "KAROQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1968,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (סקודה קארוק 2.0 TDI דיזל 150 כ\"ס)"
+  },
+  {
+    "make": "סקודה",
+    "model": "קארוק",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (סקודה קארוק 150 כ\"ס)"
+  },
+  {
+    "make": "Skoda",
+    "model": "KAROQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.9,
+    "source": "נתון יצרן (Skoda Karoq 1.5 TSI)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "KAMIQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (סקודה קאמיק 1.0 TSI 110 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "KAMIQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 999,
+    "seconds": 10.0,
+    "source": "רישוי רכב / נתון יצרן (סקודה קאמיק 1.0 TSI 115 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "KAMIQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (סקודה קאמיק 1.5 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "סקודה",
+    "model": "קאמיק",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (סקודה קאמיק 110 כ\"ס)"
+  },
+  {
+    "make": "Skoda",
+    "model": "KAMIQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 10.2,
+    "source": "נתון יצרן (Skoda Kamiq 1.0 TSI)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "SCALA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 10.1,
+    "source": "רישוי רכב / נתון יצרן (סקודה סקאלה 1.0 TSI 110 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "SCALA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 999,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (סקודה סקאלה 1.0 TSI 115 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "SCALA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (סקודה סקאלה 1.5 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "סקודה",
+    "model": "סקאלה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 10.1,
+    "source": "רישוי רכב / נתון יצרן (סקודה סקאלה 110 כ\"ס)"
+  },
+  {
+    "make": "Skoda",
+    "model": "SCALA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 10.1,
+    "source": "נתון יצרן (Skoda Scala 1.0 TSI)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "FABIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (סקודה פאביה דור 4 1.0 TSI 110 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "FABIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (סקודה פאביה מונטה קרלו 1.5 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "FABIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 999,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (סקודה פאביה דור 3 1.0 TSI 95 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "FABIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1197,
+    "seconds": 9.4,
+    "source": "רישוי רכב / נתון יצרן (סקודה פאביה דור 3 1.2 TSI 110 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "FABIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1197,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (סקודה פאביה 1.2 TSI 90 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "FABIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1197,
+    "seconds": 10.1,
+    "source": "רישוי רכב / נתון יצרן (סקודה פאביה דור 2 1.2 TSI 105 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "FABIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 86,
+    "cc": 1390,
+    "seconds": 12.3,
+    "source": "רישוי רכב / נתון יצרן (סקודה פאביה 1.4 86 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "FABIA RS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1390,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (סקודה פאביה RS דור 2 1.4 TSI 180 כ\"ס)"
+  },
+  {
+    "make": "סקודה",
+    "model": "פאביה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (סקודה פאביה 110 כ\"ס)"
+  },
+  {
+    "make": "Skoda",
+    "model": "FABIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 9.9,
+    "source": "נתון יצרן (Skoda Fabia 1.0 TSI)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "RAPID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 999,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (סקודה ראפיד 1.0 TSI 95 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "RAPID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1197,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (סקודה ראפיד 1.2 TSI 105 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "RAPID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 1390,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (סקודה ראפיד 1.4 TSI 122 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "RAPID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1395,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (סקודה ראפיד 1.4 TSI 125 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "SPACEBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1395,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (סקודה ראפיד ספייסבק 1.4 TSI 125 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "SPACEBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1197,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (סקודה ספייסבק 1.2 TSI 105 כ\"ס)"
+  },
+  {
+    "make": "סקודה",
+    "model": "ראפיד",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1395,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (סקודה ראפיד 125 כ\"ס)"
+  },
+  {
+    "make": "Skoda",
+    "model": "RAPID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1395,
+    "seconds": 9.0,
+    "source": "נתון יצרן (Skoda Rapid 1.4 TSI)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "YETI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1197,
+    "seconds": 11.8,
+    "source": "רישוי רכב / נתון יצרן (סקודה ייטי 1.2 TSI 105 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "YETI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1197,
+    "seconds": 11.4,
+    "source": "רישוי רכב / נתון יצרן (סקודה ייטי 1.2 TSI 110 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "YETI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1395,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (סקודה ייטי 1.4 TSI 125 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "YETI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1798,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (סקודה ייטי 4X4 1.8 TSI 160 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "YETI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1968,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (סקודה ייטי 4X4 2.0 TDI דיזל 140 כ\"ס)"
+  },
+  {
+    "make": "סקודה",
+    "model": "ייטי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1197,
+    "seconds": 11.8,
+    "source": "רישוי רכב / נתון יצרן (סקודה ייטי 105 כ\"ס)"
+  },
+  {
+    "make": "Skoda",
+    "model": "YETI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1197,
+    "seconds": 11.8,
+    "source": "נתון יצרן (Skoda Yeti 1.2 TSI)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "ROOMSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1598,
+    "seconds": 12.1,
+    "source": "רישוי רכב / נתון יצרן (סקודה רומסטר 1.6 105 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "ROOMSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1197,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (סקודה רומסטר 1.2 TSI 105 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "ROOMSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 86,
+    "cc": 1390,
+    "seconds": 13.0,
+    "source": "רישוי רכב / נתון יצרן (סקודה רומסטר 1.4 86 כ\"ס)"
+  },
+  {
+    "make": "סקודה",
+    "model": "רומסטר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1598,
+    "seconds": 12.1,
+    "source": "רישוי רכב / נתון יצרן (סקודה רומסטר 105 כ\"ס)"
+  },
+  {
+    "make": "Skoda",
+    "model": "ROOMSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1598,
+    "seconds": 12.1,
+    "source": "נתון יצרן (Skoda Roomster 1.6)"
+  },
+  {
+    "make": "סקודה סלובקיה",
+    "model": "CITIGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 60,
+    "cc": 999,
+    "seconds": 14.4,
+    "source": "רישוי רכב / נתון יצרן (סקודה סיטיגו 1.0 60 כ\"ס)"
+  },
+  {
+    "make": "סקודה סלובקיה",
+    "model": "CITIGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 999,
+    "seconds": 13.2,
+    "source": "רישוי רכב / נתון יצרן (סקודה סיטיגו 1.0 75 כ\"ס)"
+  },
+  {
+    "make": "סקודה סלובקיה",
+    "model": "CITIGO E IV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 83,
+    "cc": 0,
+    "seconds": 12.3,
+    "source": "רישוי רכב / נתון יצרן (סקודה סיטיגו חשמלית e-iV 83 כ\"ס)"
+  },
+  {
+    "make": "סקודה",
+    "model": "סיטיגו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 60,
+    "cc": 999,
+    "seconds": 14.4,
+    "source": "רישוי רכב / נתון יצרן (סקודה סיטיגו 60 כ\"ס)"
+  },
+  {
+    "make": "Skoda",
+    "model": "CITIGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 60,
+    "cc": 999,
+    "seconds": 14.4,
+    "source": "נתון יצרן (Skoda Citigo 1.0)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "ENYAQ IV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (סקודה אניאק iV 80 חשמלי מלא RWD 204 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "ENYAQ IV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (סקודה אניאק iV 85 חשמלי 286 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "ENYAQ IV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 179,
+    "cc": 0,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (סקודה אניאק iV 60 חשמלי 179 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "ENYAQ IV RS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 0,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (סקודה אניאק RS iV חשמלי כפול מנועים 299 כ\"ס)"
+  },
+  {
+    "make": "סקודה",
+    "model": "אניאק iv",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (סקודה אניאק iV 204 כ\"ס)"
+  },
+  {
+    "make": "Skoda",
+    "model": "ENYAQ IV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.5,
+    "source": "נתון יצרן (Skoda Enyaq iV 80)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "FELICIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 68,
+    "cc": 1289,
+    "seconds": 15.5,
+    "source": "רישוי רכב / נתון יצרן (סקודה פיליסיה 1.3 68 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "FELICIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1598,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (סקודה פיליסיה 1.6 75 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "FELICIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 64,
+    "cc": 1896,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (סקודה פיליסיה 1.9 דיזל 64 כ\"ס)"
+  },
+  {
+    "make": "סקודה",
+    "model": "פיליסה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 68,
+    "cc": 1289,
+    "seconds": 15.5,
+    "source": "רישוי רכב / נתון יצרן (סקודה פיליסיה 68 כ\"ס)"
+  },
+  {
+    "make": "Skoda",
+    "model": "FELICIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 68,
+    "cc": 1289,
+    "seconds": 15.5,
+    "source": "נתון יצרן (Skoda Felicia)"
+  },
+  {
+    "make": "סקייוול סין",
+    "model": "ET5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (סקייוול ET5 קרוסאובר חשמלי מלא 204 כ\"ס)"
+  },
+  {
+    "make": "סקייוול",
+    "model": "Et5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (סקייוול ET5 204 כ\"ס)"
+  },
+  {
+    "make": "Skywell",
+    "model": "ET5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "נתון יצרן (Skywell ET5 EV 204 hp)"
+  }
+]
