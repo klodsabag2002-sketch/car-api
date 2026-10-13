@@ -1,5 +1,365 @@
 [
   {
+    "make": "די אס צרפת",
+    "model": "DS3 CROSSBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1199,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (DS3 Crossback 1.2T PureTech 155)"
+  },
+  {
+    "make": "די אס צרפת",
+    "model": "DS3 CROSSBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (DS3 Crossback 1.2T PureTech 130)"
+  },
+  {
+    "make": "די אס צרפת",
+    "model": "DS3 CROSSBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (DS3 Crossback E-Tense חשמלי EV 136)"
+  },
+  {
+    "make": "די אס צרפת",
+    "model": "DS3 CROSSBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 0,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (DS3 E-Tense חשמלי EV 156)"
+  },
+  {
+    "make": "די אס צרפת",
+    "model": "DS3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (DS3 1.2T PureTech 130)"
+  },
+  {
+    "make": "די אס צרפת",
+    "model": "DS3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1199,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (DS3 1.2T 110)"
+  },
+  {
+    "make": "די אס",
+    "model": "3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1199,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (DS3 155)"
+  },
+  {
+    "make": "DS",
+    "model": "DS3 CROSSBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1199,
+    "seconds": 8.2,
+    "source": "נתון יצרן (DS3 Crossback 1.2T 155)"
+  },
+  {
+    "make": "DS",
+    "model": "DS3 CROSSBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 9.2,
+    "source": "נתון יצרן (DS3 Crossback 1.2T 130)"
+  },
+  {
+    "make": "DS",
+    "model": "DS3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 9.2,
+    "source": "נתון יצרן (DS 3 1.2T 130)"
+  },
+  {
+    "make": "די אס גרמניה",
+    "model": "DS4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 225,
+    "cc": 1598,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (DS4 1.6T PureTech בנזין 225)"
+  },
+  {
+    "make": "די אס צרפת",
+    "model": "DS4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 225,
+    "cc": 1598,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (DS4 1.6T PureTech 225)"
+  },
+  {
+    "make": "די אס גרמניה",
+    "model": "DS4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1598,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (DS4 1.6T PureTech 180)"
+  },
+  {
+    "make": "די אס גרמניה",
+    "model": "DS4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (DS4 1.2T PureTech 130)"
+  },
+  {
+    "make": "די אס גרמניה",
+    "model": "DS4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1499,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (DS4 1.5 BlueHDi דיזל 130)"
+  },
+  {
+    "make": "די אס",
+    "model": "4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 225,
+    "cc": 1598,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (DS4 225)"
+  },
+  {
+    "make": "DS",
+    "model": "DS4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 225,
+    "cc": 1598,
+    "seconds": 7.9,
+    "source": "נתון יצרן (DS4 1.6T 225)"
+  },
+  {
+    "make": "DS",
+    "model": "DS4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 9.7,
+    "source": "נתון יצרן (DS4 1.2T 130)"
+  },
+  {
+    "make": "די אס צרפת",
+    "model": "DS5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1598,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (DS5 1.6 THP בנזין 165)"
+  },
+  {
+    "make": "די אס צרפת",
+    "model": "DS5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1598,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (DS5 1.6 THP 200)"
+  },
+  {
+    "make": "די אס צרפת",
+    "model": "DS5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1997,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (DS5 2.0 BlueHDi דיזל 180)"
+  },
+  {
+    "make": "די אס",
+    "model": "5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1598,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (DS5 165)"
+  },
+  {
+    "make": "DS",
+    "model": "DS5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1598,
+    "seconds": 8.7,
+    "source": "נתון יצרן (DS 5 1.6 THP)"
+  },
+  {
+    "make": "די אס צרפת",
+    "model": "DS7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1598,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (DS7 Crossback 1.6T PureTech 180)"
+  },
+  {
+    "make": "די אס צרפת",
+    "model": "DS7 CROSSBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1598,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (DS7 Crossback 1.6T PureTech 180)"
+  },
+  {
+    "make": "די אס צרפת",
+    "model": "DS7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 225,
+    "cc": 1598,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (DS7 Crossback 1.6T PureTech 225)"
+  },
+  {
+    "make": "די אס צרפת",
+    "model": "DS7 CROSSBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 225,
+    "cc": 1598,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (DS7 Crossback 1.6T PureTech 225)"
+  },
+  {
+    "make": "די אס צרפת",
+    "model": "DS7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1598,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (DS7 E-Tense 4x4 פלאג-אין 300)"
+  },
+  {
+    "make": "די אס צרפת",
+    "model": "DS7 CROSSBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1598,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (DS7 E-Tense 4x4 פלאג-אין 300)"
+  },
+  {
+    "make": "די אס צרפת",
+    "model": "DS7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 360,
+    "cc": 1598,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (DS7 E-Tense 4x4 פלאג-אין 360)"
+  },
+  {
+    "make": "די אס צרפת",
+    "model": "DS7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1499,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (DS7 1.5 BlueHDi דיזל 130)"
+  },
+  {
+    "make": "די אס צרפת",
+    "model": "DS7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1997,
+    "seconds": 9.4,
+    "source": "רישוי רכב / נתון יצרן (DS7 2.0 BlueHDi דיזל 180)"
+  },
+  {
+    "make": "די אס",
+    "model": "7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1598,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (DS7 180)"
+  },
+  {
+    "make": "DS",
+    "model": "DS7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1598,
+    "seconds": 8.9,
+    "source": "נתון יצרן (DS7 1.6T 180)"
+  },
+  {
+    "make": "DS",
+    "model": "DS7 CROSSBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1598,
+    "seconds": 8.9,
+    "source": "נתון יצרן (DS 7 Crossback 1.6T 180)"
+  },
+  {
+    "make": "DS",
+    "model": "DS7 CROSSBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1598,
+    "seconds": 5.9,
+    "source": "נתון יצרן (DS 7 E-Tense 4x4 300)"
+  },
+  {
     "make": "דונגפנג סין",
     "model": "BOX",
     "yearStart": null,
