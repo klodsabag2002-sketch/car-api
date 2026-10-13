@@ -1,5 +1,895 @@
 [
   {
+    "make": "רובר אנגליה",
+    "model": "DISCOVERY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 2997,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (לנד רובר דיסקברי 5 D300 טורבו דיזל 300)"
+  },
+  {
+    "make": "לנדרובר אנגליה",
+    "model": "DISCOVERY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 2997,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (לנד רובר דיסקברי D300 דיזל 300)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "DISCOVERY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 360,
+    "cc": 2996,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (לנד רובר דיסקברי 5 P360 בנזין 360)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "DISCOVERY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 2993,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (לנד רובר דיסקברי 5 TD6 דיזל 258)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "DISCOVERY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1999,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (לנד רובר דיסקברי 5 SD4 2.0 דיזל 240)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "DISCOVERY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 211,
+    "cc": 2993,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (לנד רובר דיסקברי 4 3.0 TDV6 211)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "DISCOVERY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 2993,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (לנד רובר דיסקברי 4 3.0 SDV6 245)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "DISCOVERY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 256,
+    "cc": 2993,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (לנד רובר דיסקברי 4 3.0 SDV6 256)"
+  },
+  {
+    "make": "לנד רובר",
+    "model": "דיסקברי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 2997,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (לנד רובר דיסקברי 300)"
+  },
+  {
+    "make": "Land Rover",
+    "model": "DISCOVERY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 2997,
+    "seconds": 6.8,
+    "source": "נתון יצרן (Land Rover Discovery D300)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "DISCOVRY SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1997,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (דיסקברי ספורט P250 בנזין טורבו 250)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "DISCOVERY SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1997,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (דיסקברי ספורט P250 בנזין טורבו 250)"
+  },
+  {
+    "make": "לנדרובר אנגליה",
+    "model": "DISCOVERY SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1997,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (דיסקברי ספורט P250 בנזין 250)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "DISCOVERY SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1997,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (דיסקברי ספורט P200 בנזין 200)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "DISCOVERY SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 309,
+    "cc": 1498,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (דיסקברי ספורט P300e פלאג-אין PHEV 309)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "DISCOVERY SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1999,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (דיסקברי ספורט 2.0 דיזל 180)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "DISCOVERY SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1999,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (דיסקברי ספורט 2.0 דיזל 150)"
+  },
+  {
+    "make": "לנד רובר",
+    "model": "דיסקברי ספורט",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1997,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (דיסקברי ספורט 250)"
+  },
+  {
+    "make": "Land Rover",
+    "model": "DISCOVERY SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1997,
+    "seconds": 7.6,
+    "source": "נתון יצרן (Land Rover Discovery Sport P250)"
+  },
+  {
+    "make": "Land Rover",
+    "model": "DISCOVRY SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1997,
+    "seconds": 7.6,
+    "source": "נתון יצרן (Land Rover Discovery Sport P250)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "DEFENDER 110",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 2997,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (לנד רובר דיפנדר 110 D250 טורבו דיזל 250)"
+  },
+  {
+    "make": "לנדרובר אנגליה",
+    "model": "DEFENDER 110",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 2997,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (לנד רובר דיפנדר 110 D250 250)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "DEFENDER 110",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 2997,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (לנד רובר דיפנדר 110 D300 דיזל 300)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "DEFENDER 110",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 400,
+    "cc": 2996,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (לנד רובר דיפנדר 110 P400 בנזין 400)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "DEFENDER 110",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 404,
+    "cc": 1997,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (לנד רובר דיפנדר 110 P400e פלאג-אין PHEV 404)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "DEFENDER 110",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 525,
+    "cc": 5000,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (לנד רובר דיפנדר 110 V8 5.0 סופרצ'ארג'ר 525)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "DEFENDER 90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 2997,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (לנד רובר דיפנדר 90 קצר D250 דיזל 250)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "DEFENDER 90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 400,
+    "cc": 2996,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (לנד רובר דיפנדר 90 קצר P400 בנזין 400)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "DEFENDER 90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 525,
+    "cc": 5000,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (לנד רובר דיפנדר 90 V8 סופרצ'ארג'ר 525)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "DEFENDER 130",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 2997,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (לנד רובר דיפנדר 130 ארוך D300 דיזל 300)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "DEFENDER 130",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 400,
+    "cc": 2996,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (לנד רובר דיפנדר 130 P400 בנזין 400)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "DEFENDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 2198,
+    "seconds": 15.8,
+    "source": "רישוי רכב / נתון יצרן (לנד רובר דיפנדר קלאסי 2.2 TD דיזל 122)"
+  },
+  {
+    "make": "לנד רובר",
+    "model": "דיפנדר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 2997,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (לנד רובר דיפנדר 250)"
+  },
+  {
+    "make": "Land Rover",
+    "model": "DEFENDER 110",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 2997,
+    "seconds": 8.3,
+    "source": "נתון יצרן (Land Rover Defender 110 D250)"
+  },
+  {
+    "make": "Land Rover",
+    "model": "DEFENDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 2997,
+    "seconds": 8.3,
+    "source": "נתון יצרן (Land Rover Defender D250)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "FREELANDER 2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 2179,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (פרילנדר 2 SD4 2.2 טורבו דיזל 190)"
+  },
+  {
+    "make": "לנדרובר אנגליה",
+    "model": "FREELANDER 2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 2179,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (פרילנדר 2 SD4 190)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "FREELANDER 2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 2179,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (פרילנדר 2 TD4 2.2 דיזל 150)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "FREELANDER 2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1999,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (פרילנדר 2 Si4 2.0 טורבו בנזין 240)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "FREELANDER 2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 233,
+    "cc": 3192,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (פרילנדר 2 i6 3.2 בנזין 233)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "FREELANDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 112,
+    "cc": 1951,
+    "seconds": 13.2,
+    "source": "רישוי רכב / נתון יצרן (פרילנדר דור 1 2.0 Td4 דיזל 112)"
+  },
+  {
+    "make": "לנד רובר",
+    "model": "פרילנדר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 2179,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (לנד רובר פרילנדר 190)"
+  },
+  {
+    "make": "Land Rover",
+    "model": "FREELANDER 2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 2179,
+    "seconds": 9.5,
+    "source": "נתון יצרן (Land Rover Freelander 2 SD4)"
+  },
+  {
+    "make": "לנדרובר אנגליה",
+    "model": "R.ROVER EVOQUE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1997,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר איווק P200 בנזין טורבו AWD 200)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "R.ROVER EVOQUE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1997,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר איווק P200 200)"
+  },
+  {
+    "make": "לנדרובר אנגליה",
+    "model": "R.ROVER EVOQUE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1997,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר איווק P250 בנזין 250)"
+  },
+  {
+    "make": "לנדרובר אנגליה",
+    "model": "R.ROVER EVOQUE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 309,
+    "cc": 1498,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר איווק P300e פלאג-אין PHEV 309)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "R.ROVER EVOQUE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1999,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר איווק דור 1 Si4 2.0 בנזין 240)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "R.ROVER EVOQUE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1999,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר איווק TD4 2.0 דיזל 180)"
+  },
+  {
+    "make": "לנד רובר",
+    "model": "ריינג רובר איוויק",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1997,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר איווק 200)"
+  },
+  {
+    "make": "Land Rover",
+    "model": "R.ROVER EVOQUE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1997,
+    "seconds": 8.6,
+    "source": "נתון יצרן (Range Rover Evoque P200)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "R.ROVER VELAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1997,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר ולאר P250 בנזין טורבו AWD 250)"
+  },
+  {
+    "make": "לנדרובר אנגליה",
+    "model": "R.ROVER VELAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1997,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר ולאר P250 250)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "R.ROVER VELAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1997,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר ולאר P300 בנזין 300)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "R.ROVER VELAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 404,
+    "cc": 1997,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר ולאר P400e פלאג-אין PHEV 404)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "R.ROVER VELAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 2995,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר ולאר 3.0 V6 סופרצ'ארג'ר 380)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "R.ROVER VELAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1999,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר ולאר D240 2.0 דיזל 240)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "R.ROVER VELAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 2993,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר ולאר D300 3.0 דיזל 300)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "R.ROVER VELAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 550,
+    "cc": 5000,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר ולאר SVAutobiography 5.0 V8 550)"
+  },
+  {
+    "make": "לנד רובר",
+    "model": "ריינג רובר לאר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1997,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר ולאר 250)"
+  },
+  {
+    "make": "Land Rover",
+    "model": "R.ROVER VELAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1997,
+    "seconds": 7.5,
+    "source": "נתון יצרן (Range Rover Velar P250)"
+  },
+  {
+    "make": "לנדרובר אנגליה",
+    "model": "R ROVER SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 360,
+    "cc": 2996,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר ספורט דור 3 P360 מילד-הייבריד 360)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "R ROVER SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 360,
+    "cc": 2996,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר ספורט P360 360)"
+  },
+  {
+    "make": "לנדרובר אנגליה",
+    "model": "R ROVER SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 400,
+    "cc": 2996,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר ספורט P400 בנזין 400)"
+  },
+  {
+    "make": "לנדרובר אנגליה",
+    "model": "R ROVER SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 460,
+    "cc": 2996,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר ספורט P460e פלאג-אין PHEV 460)"
+  },
+  {
+    "make": "לנדרובר אנגליה",
+    "model": "R ROVER SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 550,
+    "cc": 2996,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר ספורט P550e פלאג-אין PHEV 550)"
+  },
+  {
+    "make": "לנדרובר אנגליה",
+    "model": "R ROVER SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 635,
+    "cc": 4395,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר ספורט SV 4.4 V8 טווין-טורבו 635)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "R ROVER SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 2997,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר ספורט D300 דיזל 300)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "R ROVER SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 350,
+    "cc": 2997,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר ספורט D350 דיזל 350)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "R ROVER SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 404,
+    "cc": 1997,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר ספורט דור 2 P400e פלאג-אין 404)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "R ROVER SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 575,
+    "cc": 5000,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר ספורט SVR 5.0 V8 סופרצ'ארג'ר 575)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "R ROVER SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 306,
+    "cc": 2993,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר ספורט דור 2 SDV6 דיזל 306)"
+  },
+  {
+    "make": "לנד רובר",
+    "model": "ריינג רובר ספורט",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 360,
+    "cc": 2996,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר ספורט 360)"
+  },
+  {
+    "make": "Land Rover",
+    "model": "R ROVER SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 360,
+    "cc": 2996,
+    "seconds": 6.0,
+    "source": "נתון יצרן (Range Rover Sport P360)"
+  },
+  {
+    "make": "Land Rover",
+    "model": "RANGE ROVER SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 360,
+    "cc": 2996,
+    "seconds": 6.0,
+    "source": "נתון יצרן (Range Rover Sport P360)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "RANGE ROVER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 350,
+    "cc": 2997,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר דור 4 D350 ווג טורבו דיזל 350)"
+  },
+  {
+    "make": "לנדרובר אנגליה",
+    "model": "RANGE ROVER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 350,
+    "cc": 2997,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר D350 350)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "RANGE ROVER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 400,
+    "cc": 2996,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר P400 בנזין 400)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "RANGE ROVER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 4395,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר דור 5 P530 4.4 V8 טווין-טורבו 530)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "RANGE ROVER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 460,
+    "cc": 2996,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר דור 5 P460e פלאג-אין PHEV 460)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "RANGE ROVER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 550,
+    "cc": 2996,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר דור 5 P550e פלאג-אין PHEV 550)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "RANGE ROVER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 615,
+    "cc": 4395,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר SV 4.4 V8 615)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "RANGE ROVER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 525,
+    "cc": 5000,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר דור 4 5.0 V8 סופרצ'ארג'ר 525)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "RANGE ROVER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 565,
+    "cc": 5000,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר SVAutobiography 5.0 V8 565)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "RANGE ROVER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 339,
+    "cc": 4367,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר SDV8 4.4 דיזל 339)"
+  },
+  {
+    "make": "רובר אנגליה",
+    "model": "RANGE ROVER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 2993,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר TDV6 3.0 דיזל 258)"
+  },
+  {
+    "make": "לנד רובר",
+    "model": "ריינג רובר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 350,
+    "cc": 2997,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (ריינג' רובר 350)"
+  },
+  {
+    "make": "Land Rover",
+    "model": "RANGE ROVER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 350,
+    "cc": 2997,
+    "seconds": 6.1,
+    "source": "נתון יצרן (Range Rover Vogue D350)"
+  },
+  {
+    "make": "Land Rover",
+    "model": "RANGE ROVER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 4395,
+    "seconds": 4.6,
+    "source": "נתון יצרן (Range Rover P530 V8)"
+  },
+  {
     "make": "למבורגיני איטליה",
     "model": "REVUELTO",
     "yearStart": null,
