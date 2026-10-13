@@ -1,5 +1,75 @@
 [
   {
+    "make": "יודו סין",
+    "model": "YUDO 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 94,
+    "cc": 0,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (יודו 3 חשמלי EV 94/95)"
+  },
+  {
+    "make": "יודו סין",
+    "model": "YUDO 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 0,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (יודו 3 חשמלי EV 95)"
+  },
+  {
+    "make": "יודו סין",
+    "model": "3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 94,
+    "cc": 0,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (יודו 3 חשמלי 94)"
+  },
+  {
+    "make": "יודו",
+    "model": "3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 94,
+    "cc": 0,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (יודו 3 94)"
+  },
+  {
+    "make": "יודו",
+    "model": "יודו 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 94,
+    "cc": 0,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (יודו 3 94)"
+  },
+  {
+    "make": "Yudo",
+    "model": "YUDO 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 94,
+    "cc": 0,
+    "seconds": 9.0,
+    "source": "נתון יצרן (Yudo 3 EV)"
+  },
+  {
+    "make": "Yudo",
+    "model": "3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 94,
+    "cc": 0,
+    "seconds": 9.0,
+    "source": "נתון יצרן (Yudo 3 EV)"
+  },
+  {
     "make": "יגואר אנגליה",
     "model": "E-PACE",
     "yearStart": null,
