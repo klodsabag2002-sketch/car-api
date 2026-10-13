@@ -1,5 +1,165 @@
 [
   {
+    "make": "ליפמוטור סין",
+    "model": "B10",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (ליפמוטור B10 חשמלי EV 218)"
+  },
+  {
+    "make": "ליפמוטור",
+    "model": "B10",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (ליפמוטור B10 218)"
+  },
+  {
+    "make": "ליפטומור",
+    "model": "B10",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (ליפמוטור B10 218)"
+  },
+  {
+    "make": "Leapmotor",
+    "model": "B10",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 7.5,
+    "source": "נתון יצרן (Leapmotor B10 EV)"
+  },
+  {
+    "make": "ליפמוטור סין",
+    "model": "C10",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 215,
+    "cc": 0,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (ליפמוטור C10 חשמלי EV 215)"
+  },
+  {
+    "make": "ליפמוטור סין",
+    "model": "C10",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (ליפמוטור C10 חשמלי EV 218)"
+  },
+  {
+    "make": "ליפמוטור",
+    "model": "C10",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 215,
+    "cc": 0,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (ליפמוטור C10 215)"
+  },
+  {
+    "make": "ליפטומור",
+    "model": "C10",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 215,
+    "cc": 0,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (ליפמוטור C10 215)"
+  },
+  {
+    "make": "ליפמוטור סין",
+    "model": "C10",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 1499,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (ליפמוטור C10 מאריך טווח REEV 231)"
+  },
+  {
+    "make": "Leapmotor",
+    "model": "C10",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 215,
+    "cc": 0,
+    "seconds": 7.5,
+    "source": "נתון יצרן (Leapmotor C10 EV)"
+  },
+  {
+    "make": "Leapmotor",
+    "model": "C10",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 7.5,
+    "source": "נתון יצרן (Leapmotor C10 EV)"
+  },
+  {
+    "make": "ליפמוטור סין",
+    "model": "T03",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 0,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (ליפמוטור T03 חשמלי EV 95)"
+  },
+  {
+    "make": "ליפמוטור סין",
+    "model": "T03",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 0,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (ליפמוטור T03 חשמלי 109)"
+  },
+  {
+    "make": "ליפמוטור",
+    "model": "T03",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 0,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (ליפמוטור T03 95)"
+  },
+  {
+    "make": "ליפטומור",
+    "model": "T03",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 0,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (ליפמוטור T03 95)"
+  },
+  {
+    "make": "Leapmotor",
+    "model": "T03",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 0,
+    "seconds": 12.0,
+    "source": "נתון יצרן (Leapmotor T03 EV)"
+  },
+  {
     "make": "לינק אנד קו",
     "model": "LYNKCO 01",
     "yearStart": null,
