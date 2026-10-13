@@ -14,7 +14,7 @@ const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";
 
-// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 20) ----------
+// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 22) ----------
 let accelTable = [];
 const ACCEL_FILES = [
     "acceleration.json",
@@ -36,7 +36,9 @@ const ACCEL_FILES = [
     "acceleration17.json",
     "acceleration18.json",
     "acceleration19.json",
-    "acceleration20.json"
+    "acceleration20.json",
+    "acceleration21.json",
+    "acceleration22.json"
 ];
 
 ACCEL_FILES.forEach(fileName => {
@@ -424,6 +426,17 @@ const HE_MAKE_ALIASES = {
     "ניאו רכב סין": "NIO",
     "NIO": "NIO",
     "Nio": "NIO",
+    "סאאב": "Saab",
+    "סאאב שבדיה": "Saab",
+    "Saab": "Saab",
+    "סאנגיונג": "SsangYong",
+    "סאנג יונג": "SsangYong",
+    "סאנגיונג ד.קור": "SsangYong",
+    "סאנג יונג ד.קור": "SsangYong",
+    "סאנגיונג קוריאה": "SsangYong",
+    "קיי ג'י אם": "SsangYong",
+    "KGM": "SsangYong",
+    "SsangYong": "SsangYong",
     "סיאט": "Seat",
     "סקודה": "Skoda",
     "פולקסווגן": "Volkswagen",
