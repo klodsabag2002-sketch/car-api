@@ -1,1 +1,1212 @@
-klod
+[
+  {
+    "make": "מזארטי איטליה",
+    "model": "GHIBLI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 345,
+    "cc": 2979,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גיבלי 3.0 V6 טווין-טורבו 345/350)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "GHIBLI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 350,
+    "cc": 2979,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גיבלי 3.0 V6 350)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "GHIBLI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 430,
+    "cc": 2979,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גיבלי S Q4 AWD 430)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "GHIBLI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 330,
+    "cc": 1995,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גיבלי היברידית 2.0T 330)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "GHIBLI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 580,
+    "cc": 3799,
+    "seconds": 4.3,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גיבלי טרופאו 3.8 V8 טווין-טורבו 580)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "GHIBLI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 2987,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גיבלי 3.0 V6 דיזל 275)"
+  },
+  {
+    "make": "מזראטי",
+    "model": "גיבלי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 345,
+    "cc": 2979,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גיבלי 345)"
+  },
+  {
+    "make": "מזראטי",
+    "model": "גיבלי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 350,
+    "cc": 2979,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גיבלי 350)"
+  },
+  {
+    "make": "Maserati",
+    "model": "GHIBLI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 345,
+    "cc": 2979,
+    "seconds": 5.5,
+    "source": "נתון יצרן (Maserati Ghibli 3.0 V6)"
+  },
+  {
+    "make": "Maserati",
+    "model": "GHIBLI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 430,
+    "cc": 2979,
+    "seconds": 4.7,
+    "source": "נתון יצרן (Maserati Ghibli S Q4)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "GRECALE GT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1995,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גרקאלה GT היברידית 2.0T 300)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "GRECALE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1995,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גרקאלה GT 300)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "GRECALE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 330,
+    "cc": 1995,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גרקאלה מודנה Modena 2.0T 330)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "GRECALE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 3000,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גרקאלה טרופאו Nettuno 3.0 V6 530)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "GRECALE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 557,
+    "cc": 0,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גרקאלה פולגורה חשמלית Folgore 557)"
+  },
+  {
+    "make": "מזראטי",
+    "model": "גרקאלה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1995,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גרקאלה 300)"
+  },
+  {
+    "make": "Maserati",
+    "model": "GRECALE GT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1995,
+    "seconds": 5.6,
+    "source": "נתון יצרן (Maserati Grecale GT)"
+  },
+  {
+    "make": "Maserati",
+    "model": "GRECALE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1995,
+    "seconds": 5.6,
+    "source": "נתון יצרן (Maserati Grecale GT)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "LAVANTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 350,
+    "cc": 2979,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (מזראטי לבנטה 3.0 V6 טווין-טורבו 350)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "LEVANTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 350,
+    "cc": 2979,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (מזראטי לבנטה 3.0 V6 350)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "LEVANTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 430,
+    "cc": 2979,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (מזראטי לבנטה S 3.0 V6 430)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "LAVANTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 430,
+    "cc": 2979,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (מזראטי לבנטה S 430)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "LEVANTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 330,
+    "cc": 1995,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (מזראטי לבנטה GT היברידית 2.0T 330)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "LEVANTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 580,
+    "cc": 3799,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (מזראטי לבנטה טרופאו 3.8 V8 טווין-טורבו 580)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "LEVANTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 2987,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (מזראטי לבנטה 3.0 V6 דיזל 275)"
+  },
+  {
+    "make": "מזראטי",
+    "model": "לבנטה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 350,
+    "cc": 2979,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (מזראטי לבנטה 350)"
+  },
+  {
+    "make": "Maserati",
+    "model": "LAVANTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 350,
+    "cc": 2979,
+    "seconds": 6.0,
+    "source": "נתון יצרן (Maserati Levante 3.0 V6)"
+  },
+  {
+    "make": "Maserati",
+    "model": "LEVANTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 350,
+    "cc": 2979,
+    "seconds": 6.0,
+    "source": "נתון יצרן (Maserati Levante 3.0 V6)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "MC20",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 630,
+    "cc": 3000,
+    "seconds": 2.9,
+    "source": "רישוי רכב / נתון יצרן (מזראטי MC20 קופה Nettuno 3.0 V6 טווין-טורבו 630)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "MC 20",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 630,
+    "cc": 3000,
+    "seconds": 2.9,
+    "source": "רישוי רכב / נתון יצרן (מזראטי MC20 630)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "MC20 CIELO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 630,
+    "cc": 3000,
+    "seconds": 3.0,
+    "source": "רישוי רכב / נתון יצרן (מזראטי MC20 צ'יאלו ספיידר 630)"
+  },
+  {
+    "make": "מזראטי",
+    "model": "MC 20",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 630,
+    "cc": 3000,
+    "seconds": 2.9,
+    "source": "רישוי רכב / נתון יצרן (מזראטי MC20 630)"
+  },
+  {
+    "make": "Maserati",
+    "model": "MC20",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 630,
+    "cc": 3000,
+    "seconds": 2.9,
+    "source": "נתון יצרן (Maserati MC20)"
+  },
+  {
+    "make": "Maserati",
+    "model": "MC 20",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 630,
+    "cc": 3000,
+    "seconds": 2.9,
+    "source": "נתון יצרן (Maserati MC20)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "GRANTURISMO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 490,
+    "cc": 3000,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גראן טוריסמו דור חדש מודנה 3.0 V6 490)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "GRAN TURISMO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 490,
+    "cc": 3000,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גראן טוריסמו 490)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "GRANTURISMO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 550,
+    "cc": 3000,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גראן טוריסמו טרופאו 3.0 V6 550)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "GRANTURISMO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 761,
+    "cc": 0,
+    "seconds": 2.7,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גראן טוריסמו פולגורה חשמלית 761)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "GRANTURISMO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 460,
+    "cc": 4691,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גראן טוריסמו דור 1 4.7 V8 460)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "GRANTURISMO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 405,
+    "cc": 4244,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גראן טוריסמו דור 1 4.2 V8 405)"
+  },
+  {
+    "make": "מזראטי",
+    "model": "גראן טוריסמו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 490,
+    "cc": 3000,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גראן טוריסמו 490)"
+  },
+  {
+    "make": "Maserati",
+    "model": "GRANTURISMO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 490,
+    "cc": 3000,
+    "seconds": 3.9,
+    "source": "נתון יצרן (Maserati GranTurismo Modena)"
+  },
+  {
+    "make": "Maserati",
+    "model": "GRAN TURISMO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 490,
+    "cc": 3000,
+    "seconds": 3.9,
+    "source": "נתון יצרן (Maserati GranTurismo)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "GRANCABRIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 550,
+    "cc": 3000,
+    "seconds": 3.6,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גראן-קבריו טרופאו 3.0 V6 550)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "GRAN CABRIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 550,
+    "cc": 3000,
+    "seconds": 3.6,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גראן קבריו 550)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "GRANCABRIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 460,
+    "cc": 4691,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גראן קבריו דור 1 4.7 V8 460)"
+  },
+  {
+    "make": "מזראטי",
+    "model": "גראן-קבריו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 550,
+    "cc": 3000,
+    "seconds": 3.6,
+    "source": "רישוי רכב / נתון יצרן (מזראטי גראן קבריו 550)"
+  },
+  {
+    "make": "Maserati",
+    "model": "GRANCABRIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 550,
+    "cc": 3000,
+    "seconds": 3.6,
+    "source": "נתון יצרן (Maserati GranCabrio Trofeo)"
+  },
+  {
+    "make": "Maserati",
+    "model": "GRAN CABRIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 550,
+    "cc": 3000,
+    "seconds": 3.6,
+    "source": "נתון יצרן (Maserati GranCabrio)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "QUATTROPORTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 350,
+    "cc": 2979,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (מזראטי קוואטרופורטה 3.0 V6 טווין-טורבו 350)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "QUATTROPORTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 430,
+    "cc": 2979,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (מזראטי קוואטרופורטה S Q4 AWD 430)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "QUATTROPORTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 580,
+    "cc": 3799,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (מזראטי קוואטרופורטה טרופאו 3.8 V8 580)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "QUATTROPORTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 3799,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (מזראטי קוואטרופורטה GTS 3.8 V8 530)"
+  },
+  {
+    "make": "מזארטי איטליה",
+    "model": "QUATTROPORTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 400,
+    "cc": 4244,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (מזראטי קוואטרופורטה דור 5 4.2 V8 400)"
+  },
+  {
+    "make": "מזראטי",
+    "model": "קוואטרופורטה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 350,
+    "cc": 2979,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (מזראטי קוואטרופורטה 350)"
+  },
+  {
+    "make": "Maserati",
+    "model": "QUATTROPORTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 350,
+    "cc": 2979,
+    "seconds": 5.5,
+    "source": "נתון יצרן (Maserati Quattroporte 3.0 V6)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "COOPER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1499,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (מיני קופר 1.5 טורבו 136)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "COOPER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 1598,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (מיני קופר דור 2 1.6 122)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "COOPER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1598,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (מיני קופר דור 1 1.6 115)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "COOPER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1499,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (מיני קופר דור חדש C 1.5 156)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "COOPER S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 1998,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (מיני קופר S 2.0 טורבו 192)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "COOPER S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 178,
+    "cc": 1998,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (מיני קופר S מתוחת פנים 2.0 טורבו 178)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "COOPER S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1598,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (מיני קופר S דור 2 1.6 טורבו 184)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "COOPER S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 175,
+    "cc": 1598,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (מיני קופר S דור 2 1.6 טורבו 175)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "COOPER S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1598,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (מיני קופר S דור 1 סופרצ'ארג'ר 163)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "COOPER S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1598,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (מיני קופר S דור 1 סופרצ'ארג'ר 170)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "COOPER S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1998,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (מיני קופר S דור חדש 2.0 204)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "JOHN COOPER WORKS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 1998,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (מיני JCW 2.0 טורבו 231)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "JCW",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 1998,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (מיני JCW 231)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "ONE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1499,
+    "seconds": 10.1,
+    "source": "רישוי רכב / נתון יצרן (מיני ONE 1.5 טורבו 102)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "ONE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 98,
+    "cc": 1598,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (מיני ONE דור 2 1.6 98)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "COOPER SE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (מיני קופר SE חשמלית מלאה 184)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "COOPER SE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (מיני קופר SE דור חדש חשמלית 218)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "COOPER E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (מיני קופר E דור חדש חשמלית 184)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "MINI COOPER CAB",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 1598,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (מיני קופר קבריולט דור 2 1.6 122)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "MINI COOPER CAB",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1499,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (מיני קופר קבריולט 1.5 טורבו 136)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "MINI COOPER CAB",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 1998,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (מיני קופר S קבריולט 2.0 טורבו 192)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "COOPER CABRIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1499,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (מיני קופר קבריולט 136)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "COOPER CABRIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 1998,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (מיני קופר S קבריולט 192)"
+  },
+  {
+    "make": "ב מ וו הולנד",
+    "model": "COUNTRYMAN COOP",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1499,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (מיני קאנטרימן קופר 1.5 טורבו 136)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "COUNTRYMAN COOP",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1499,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (מיני קאנטרימן קופר 1.5 טורבו 136)"
+  },
+  {
+    "make": "ב מ וו הולנד",
+    "model": "COUNTRYMAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1499,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (מיני קאנטרימן 1.5 טורבו 136)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "COUNTRYMAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 1598,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (מיני קאנטרימן דור 1 1.6 122)"
+  },
+  {
+    "make": "ב מ וו הולנד",
+    "model": "COUNTRYMAN S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 1998,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (מיני קאנטרימן S 2.0 טורבו 192)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "COUNTRYMAN S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1598,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (מיני קאנטרימן S דור 1 1.6 טורבו 184)"
+  },
+  {
+    "make": "ב מ וו הולנד",
+    "model": "COUNTRYMAN SE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 224,
+    "cc": 1499,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (מיני קאנטרימן SE פלאג-אין PHEV ALL4 224)"
+  },
+  {
+    "make": "ב מ וו הולנד",
+    "model": "COUNTRYMAN SE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 220,
+    "cc": 1499,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (מיני קאנטרימן SE פלאג-אין PHEV 220)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "COUNTRYMAN E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (מיני קאנטרימן E דור חדש חשמלי 204)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "COUNTRYMAN SE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 0,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (מיני קאנטרימן SE דור חדש חשמלי ALL4 313)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "COUNTRYMAN JCW",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1998,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (מיני קאנטרימן JCW דור חדש 300)"
+  },
+  {
+    "make": "ב מ וו הולנד",
+    "model": "COUNTRYMAN JCW",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 306,
+    "cc": 1998,
+    "seconds": 5.1,
+    "source": "רישוי רכב / נתון יצרן (מיני קאנטרימן JCW 306)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "CLUBMAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1499,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (מיני קלאבמן קופר 1.5 טורבו 136)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "CLUBMAN S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 1998,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (מיני קלאבמן קופר S 2.0 טורבו 192)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "CLUBMAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 1598,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (מיני קלאבמן דור 1 1.6 122)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "CLUBMAN JCW",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 306,
+    "cc": 1998,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (מיני קלאבמן JCW ALL4 306)"
+  },
+  {
+    "make": "ב מ וו אוסטריה",
+    "model": "PACEMAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 1598,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (מיני פייסמן קופר 1.6 122)"
+  },
+  {
+    "make": "ב מ וו אוסטריה",
+    "model": "PACEMAN S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1598,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (מיני פייסמן קופר S 1.6 טורבו 184)"
+  },
+  {
+    "make": "ב מ וו אוסטריה",
+    "model": "PACEMAN JCW",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 1598,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (מיני פייסמן JCW 218)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "ROADSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 1598,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (מיני רודסטר קופר 1.6 122)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "ROADSTER S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1598,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (מיני רודסטר קופר S 1.6 טורבו 184)"
+  },
+  {
+    "make": "ב מ וו אנגליה",
+    "model": "ROADSTER JCW",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 211,
+    "cc": 1598,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (מיני רודסטר JCW 211)"
+  },
+  {
+    "make": "ב מ וו סין",
+    "model": "ACEMAN E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (מיני אייסמן E חשמלי 184)"
+  },
+  {
+    "make": "ב מ וו סין",
+    "model": "ACEMAN SE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (מיני אייסמן SE חשמלי 218)"
+  },
+  {
+    "make": "ב מ וו סין",
+    "model": "ACEMAN JCW",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 0,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (מיני אייסמן JCW חשמלי 258)"
+  },
+  {
+    "make": "מיני קופר",
+    "model": "קופר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1499,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (מיני קופר 136)"
+  },
+  {
+    "make": "מיני קופר",
+    "model": "קופר se חשמלית",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (מיני קופר SE חשמלית 184)"
+  },
+  {
+    "make": "מיני קופר",
+    "model": "קופר קבריולט",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1499,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (מיני קופר קבריולט 136)"
+  },
+  {
+    "make": "מיני קופר",
+    "model": "קאנטרימן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1499,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (מיני קאנטרימן 136)"
+  },
+  {
+    "make": "מיני קופר",
+    "model": "קלאבמן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1499,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (מיני קלאבמן 136)"
+  },
+  {
+    "make": "מיני קופר",
+    "model": "פייסמן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 1598,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (מיני פייסמן 122)"
+  },
+  {
+    "make": "מיני קופר",
+    "model": "רודסטר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 1598,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (מיני רודסטר 122)"
+  },
+  {
+    "make": "מיני קופר",
+    "model": "אייסמן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (מיני אייסמן 218)"
+  },
+  {
+    "make": "Mini",
+    "model": "COOPER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1499,
+    "seconds": 7.9,
+    "source": "נתון יצרן (Mini Cooper)"
+  },
+  {
+    "make": "Mini",
+    "model": "COOPER S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 1998,
+    "seconds": 6.7,
+    "source": "נתון יצרן (Mini Cooper S)"
+  },
+  {
+    "make": "Mini",
+    "model": "COOPER SE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "נתון יצרן (Mini Cooper SE EV)"
+  },
+  {
+    "make": "Mini",
+    "model": "COUNTRYMAN COOP",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1499,
+    "seconds": 9.7,
+    "source": "נתון יצרן (Mini Countryman Cooper)"
+  },
+  {
+    "make": "Mini",
+    "model": "COUNTRYMAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1499,
+    "seconds": 9.7,
+    "source": "נתון יצרן (Mini Countryman)"
+  },
+  {
+    "make": "Mini",
+    "model": "CLUBMAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1499,
+    "seconds": 9.1,
+    "source": "נתון יצרן (Mini Clubman)"
+  },
+  {
+    "make": "Mini",
+    "model": "PACEMAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 1598,
+    "seconds": 10.4,
+    "source": "נתון יצרן (Mini Paceman)"
+  },
+  {
+    "make": "Mini",
+    "model": "ROADSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 1598,
+    "seconds": 9.2,
+    "source": "נתון יצרן (Mini Roadster)"
+  },
+  {
+    "make": "Mini",
+    "model": "ACEMAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 7.1,
+    "source": "נתון יצרן (Mini Aceman EV)"
+  }
+]
