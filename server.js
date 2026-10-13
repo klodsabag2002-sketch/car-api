@@ -14,7 +14,7 @@ const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";      // היסטור�
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";    // היסטוריית כלי רכב פרטיים (2): בעלויות
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";     // רכבים עם תג חניה לנכה
 
-// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 10) ----------
+// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 11) ----------
 let accelTable = [];
 const ACCEL_FILES = [
     "acceleration.json",
@@ -26,7 +26,8 @@ const ACCEL_FILES = [
     "acceleration7.json",
     "acceleration8.json",
     "acceleration9.json",
-    "acceleration10.json"
+    "acceleration10.json",
+    "acceleration11.json"
 ];
 
 ACCEL_FILES.forEach(fileName => {
@@ -259,6 +260,29 @@ const HE_MAKE_ALIASES = {
     "וויה סין": "Voyah",
     "וויה מוטורס": "Voyah",
     "Voyah": "Voyah",
+    "וולבו": "Volvo",
+    "וולוו": "Volvo",
+    "וולבו שבדיה": "Volvo",
+    "וולוו שבדיה": "Volvo",
+    "וולבו בלגיה": "Volvo",
+    "וולוו בלגיה": "Volvo",
+    "וולבו סין": "Volvo",
+    "וולוו סין": "Volvo",
+    "וולבו ארהב": "Volvo",
+    "וולוו ארהב": "Volvo",
+    "וולבו ארה\"ב": "Volvo",
+    "וולוו ארה\"ב": "Volvo",
+    "Volvo": "Volvo",
+    "וואי": "WEY",
+    "וואי סין": "WEY",
+    "ווי": "WEY",
+    "ווי סין": "WEY",
+    "WEY": "WEY",
+    "זיקר": "Zeekr",
+    "זיקר סין": "Zeekr",
+    "זייקר": "Zeekr",
+    "זייקר סין": "Zeekr",
+    "Zeekr": "Zeekr",
     "סיאט": "Seat",
     "סקודה": "Skoda",
     "פולקסווגן": "Volkswagen",
