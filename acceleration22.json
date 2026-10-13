@@ -1,1 +1,2092 @@
-klod
+[
+  {
+    "make": "סוזוקי הונגריה",
+    "model": "S-CROSS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 129,
+    "cc": 1373,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי אס-קרוס 1.4 טורבו היברידי 129 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי הונגריה",
+    "model": "S-CROSS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1373,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי אס-קרוס 1.4 טורבו בוסטר-ג'ט 140 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי הונגריה",
+    "model": "SX4 CROSSOVER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 118,
+    "cc": 1586,
+    "seconds": 12.4,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי SX4 קרוסאובר 1.6 118 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי הונגריה",
+    "model": "CROSSOVER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 118,
+    "cc": 1586,
+    "seconds": 12.4,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי קרוסאובר 1.6 118 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי",
+    "model": "קרוסאובר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 118,
+    "cc": 1586,
+    "seconds": 12.4,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי קרוסאובר 118 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי",
+    "model": "S-cross",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 129,
+    "cc": 1373,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי אס-קרוס 129 כ\"ס)"
+  },
+  {
+    "make": "Suzuki",
+    "model": "S-CROSS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 129,
+    "cc": 1373,
+    "seconds": 9.5,
+    "source": "נתון יצרן (Suzuki S-Cross 1.4T Hybrid)"
+  },
+  {
+    "make": "סוזוקי יפן",
+    "model": "SX4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 107,
+    "cc": 1586,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי SX4 סדאן/האצ'בק 1.6 107 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי יפן",
+    "model": "SX4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1586,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי SX4 מתוח פנים 1.6 120 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי",
+    "model": "SX4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 107,
+    "cc": 1586,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי SX4 107 כ\"ס)"
+  },
+  {
+    "make": "Suzuki",
+    "model": "SX4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 107,
+    "cc": 1586,
+    "seconds": 11.5,
+    "source": "נתון יצרן (Suzuki SX4 1.6)"
+  },
+  {
+    "make": "סוזוקי יפן",
+    "model": "IGNIS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 83,
+    "cc": 1197,
+    "seconds": 12.4,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי איגניס מיקרו-היברידי 1.2 83 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי יפן",
+    "model": "IGNIS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1242,
+    "seconds": 11.8,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי איגניס דור 2 1.2 דואל-ג'ט 90 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי יפן",
+    "model": "IGNIS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 83,
+    "cc": 1328,
+    "seconds": 15.0,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי איגניס דור 1 1.3 83 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי",
+    "model": "איגניס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 83,
+    "cc": 1197,
+    "seconds": 12.4,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי איגניס 83 כ\"ס)"
+  },
+  {
+    "make": "Suzuki",
+    "model": "IGNIS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 83,
+    "cc": 1197,
+    "seconds": 12.4,
+    "source": "נתון יצרן (Suzuki Ignis 1.2 Hybrid)"
+  },
+  {
+    "make": "מרוטי סוזוקי",
+    "model": "ALTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 67,
+    "cc": 996,
+    "seconds": 14.0,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי אלטו 1.0 67 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי",
+    "model": "אלטו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 67,
+    "cc": 996,
+    "seconds": 14.0,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי אלטו 67 כ\"ס)"
+  },
+  {
+    "make": "Suzuki",
+    "model": "ALTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 67,
+    "cc": 996,
+    "seconds": 14.0,
+    "source": "נתון יצרן (Suzuki Alto 1.0)"
+  },
+  {
+    "make": "מרוטי סוזוקי",
+    "model": "BALENO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1242,
+    "seconds": 12.3,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי בלנו דור חדש 1.2 90 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי יפן",
+    "model": "BALENO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 98,
+    "cc": 1590,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי בלנו דור ישן 1.6 98 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי",
+    "model": "בלנו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1242,
+    "seconds": 12.3,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי בלנו 90 כ\"ס)"
+  },
+  {
+    "make": "Suzuki",
+    "model": "BALENO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1242,
+    "seconds": 12.3,
+    "source": "נתון יצרן (Suzuki Baleno 1.2)"
+  },
+  {
+    "make": "סוזוקי יפן",
+    "model": "JIMNY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1462,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי ג'ימני דור 4 1.5 102 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי יפן",
+    "model": "JIMNY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 85,
+    "cc": 1328,
+    "seconds": 14.1,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי ג'ימני דור 3 1.3 85 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי",
+    "model": "ג׳ימני",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1462,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי ג'ימני 102 כ\"ס)"
+  },
+  {
+    "make": "Suzuki",
+    "model": "JIMNY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1462,
+    "seconds": 12.5,
+    "source": "נתון יצרן (Suzuki Jimny 1.5)"
+  },
+  {
+    "make": "סוזוקי יפן",
+    "model": "GRAND VITARA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 168,
+    "cc": 2393,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי גרנד ויטרה 2.4 168 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי יפן",
+    "model": "GRAND VITARA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1995,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי גרנד ויטרה 2.0 140 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי יפן",
+    "model": "GRAND VITARA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 106,
+    "cc": 1586,
+    "seconds": 14.4,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי גרנד ויטרה קצרה 1.6 106 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי",
+    "model": "גרנד ויטרה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 168,
+    "cc": 2393,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי גרנד ויטרה 168 כ\"ס)"
+  },
+  {
+    "make": "Suzuki",
+    "model": "GRAND VITARA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 168,
+    "cc": 2393,
+    "seconds": 11.2,
+    "source": "נתון יצרן (Suzuki Grand Vitara 2.4)"
+  },
+  {
+    "make": "סוזוקי הונגריה",
+    "model": "VITARA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 129,
+    "cc": 1373,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי ויטרה 1.4 טורבו היברידי 129 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי הונגריה",
+    "model": "VITARA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1373,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי ויטרה 1.4 בוסטר-ג'ט 140 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי הונגריה",
+    "model": "VITARA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1586,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי ויטרה 1.6 בנזין 120 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי",
+    "model": "ויטרה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 129,
+    "cc": 1373,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי ויטרה 129 כ\"ס)"
+  },
+  {
+    "make": "Suzuki",
+    "model": "VITARA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 129,
+    "cc": 1373,
+    "seconds": 9.5,
+    "source": "נתון יצרן (Suzuki Vitara 1.4T Hybrid)"
+  },
+  {
+    "make": "סוזוקי יפן",
+    "model": "LIANA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1586,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי ליאנה 1.6 105 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי יפן",
+    "model": "ליאנה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1586,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי ליאנה 105 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי",
+    "model": "ליאנה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1586,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי ליאנה 105 כ\"ס)"
+  },
+  {
+    "make": "Suzuki",
+    "model": "LIANA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1586,
+    "seconds": 12.0,
+    "source": "נתון יצרן (Suzuki Liana 1.6)"
+  },
+  {
+    "make": "סוזוקי יפן",
+    "model": "SWIFT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 83,
+    "cc": 1197,
+    "seconds": 12.2,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי סוויפט היברידי קל 1.2 83 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי יפן",
+    "model": "SWIFT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1242,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי סוויפט דור 4 1.2 90 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי יפן",
+    "model": "SWIFT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 94,
+    "cc": 1242,
+    "seconds": 12.3,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי סוויפט דור 3 1.2 94 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי הונגריה",
+    "model": "SWIFT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1490,
+    "seconds": 11.7,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי סוויפט דור 2 1.5 102 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי יפן",
+    "model": "SWIFT SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1373,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי סוויפט ספורט 1.4 טורבו 140 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי",
+    "model": "סוויפט",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 83,
+    "cc": 1197,
+    "seconds": 12.2,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי סוויפט 83 כ\"ס)"
+  },
+  {
+    "make": "Suzuki",
+    "model": "SWIFT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 83,
+    "cc": 1197,
+    "seconds": 12.2,
+    "source": "נתון יצרן (Suzuki Swift 1.2 Hybrid)"
+  },
+  {
+    "make": "סוזוקי",
+    "model": "CELERIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 68,
+    "cc": 998,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי סלריו 1.0 68 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי",
+    "model": "סלריו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 68,
+    "cc": 998,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי סלריו 68 כ\"ס)"
+  },
+  {
+    "make": "Suzuki",
+    "model": "CELERIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 68,
+    "cc": 998,
+    "seconds": 13.5,
+    "source": "נתון יצרן (Suzuki Celerio 1.0)"
+  },
+  {
+    "make": "סוזוקי הונגריה",
+    "model": "SPLASH",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 94,
+    "cc": 1242,
+    "seconds": 12.3,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי ספלאש 1.2 94 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי",
+    "model": "ספלאש",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 94,
+    "cc": 1242,
+    "seconds": 12.3,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי ספלאש 94 כ\"ס)"
+  },
+  {
+    "make": "Suzuki",
+    "model": "SPLASH",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 94,
+    "cc": 1242,
+    "seconds": 12.3,
+    "source": "נתון יצרן (Suzuki Splash 1.2)"
+  },
+  {
+    "make": "סוזוקי יפן",
+    "model": "SAMURAI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 64,
+    "cc": 1298,
+    "seconds": 18.0,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי סמוראי 4X4 1.3 64 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי",
+    "model": "סמוראי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 64,
+    "cc": 1298,
+    "seconds": 18.0,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי סמוראי 64 כ\"ס)"
+  },
+  {
+    "make": "Suzuki",
+    "model": "SAMURAI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 64,
+    "cc": 1298,
+    "seconds": 18.0,
+    "source": "נתון יצרן (Suzuki Samurai)"
+  },
+  {
+    "make": "סוזוקי יפן",
+    "model": "WAGON R+",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 76,
+    "cc": 1298,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי וואגון R פלוס 1.3 76 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי",
+    "model": "וואגון R+",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 76,
+    "cc": 1298,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי וואגון R+ 76 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי יפן",
+    "model": "XL-7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 2736,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי גרנד ויטרה XL7 7 מקומות 2.7 V6 184 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי",
+    "model": "XL7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 2736,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי XL7 184 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי יפן",
+    "model": "CARRY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 78,
+    "cc": 1298,
+    "seconds": 19.0,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי קארי מסחרית קטנה 1.3 78 כ\"ס)"
+  },
+  {
+    "make": "סוזוקי",
+    "model": "קארי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 78,
+    "cc": 1298,
+    "seconds": 19.0,
+    "source": "רישוי רכב / נתון יצרן (סוזוקי קארי 78 כ\"ס)"
+  },
+  {
+    "make": "סמארט סין",
+    "model": "HASHTAG ONE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (סמארט #1 האשטאג וואן חשמלי Pro+/Premium 272 כ\"ס)"
+  },
+  {
+    "make": "סמארט סין",
+    "model": "HASHTAG ONE BRABUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 428,
+    "cc": 0,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (סמארט #1 בראבוס כפול מנועים 428 כ\"ס)"
+  },
+  {
+    "make": "סמארט",
+    "model": "#1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (סמארט #1 272 כ\"ס)"
+  },
+  {
+    "make": "Smart",
+    "model": "#1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 6.7,
+    "source": "נתון יצרן (smart #1 EV)"
+  },
+  {
+    "make": "סמארט סין",
+    "model": "HASHTAG THREE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (סמארט #3 האשטאג ת'רי קופה חשמלי 272 כ\"ס)"
+  },
+  {
+    "make": "סמארט סין",
+    "model": "HASHTAG THREE BRABUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 428,
+    "cc": 0,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (סמארט #3 בראבוס כפול מנועים 428 כ\"ס)"
+  },
+  {
+    "make": "סמארט",
+    "model": "#3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (סמארט #3 272 כ\"ס)"
+  },
+  {
+    "make": "Smart",
+    "model": "#3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "נתון יצרן (smart #3 EV)"
+  },
+  {
+    "make": "סמארט סין",
+    "model": "HASHTAG FIVE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (סמארט #5 האשטאג פייב SUV גדול חשמלי 340 כ\"ס)"
+  },
+  {
+    "make": "סמארט סין",
+    "model": "HASHTAG FIVE BRABUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 646,
+    "cc": 0,
+    "seconds": 3.4,
+    "source": "רישוי רכב / נתון יצרן (סמארט #5 בראבוס ביצועים 646 כ\"ס)"
+  },
+  {
+    "make": "סמארט",
+    "model": "#5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (סמארט #5 340 כ\"ס)"
+  },
+  {
+    "make": "Smart",
+    "model": "#5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.5,
+    "source": "נתון יצרן (smart #5 EV)"
+  },
+  {
+    "make": "סמארט צרפת",
+    "model": "FORTWO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 61,
+    "cc": 999,
+    "seconds": 16.8,
+    "source": "רישוי רכב / נתון יצרן (סמארט פורטו דור 2 1.0 61 כ\"ס)"
+  },
+  {
+    "make": "סמארט צרפת",
+    "model": "FORTWO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 71,
+    "cc": 999,
+    "seconds": 13.7,
+    "source": "רישוי רכב / נתון יצרן (סמארט פורטו 1.0 71 כ\"ס)"
+  },
+  {
+    "make": "סמארט צרפת",
+    "model": "FORTWO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 84,
+    "cc": 999,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (סמארט פורטו טורבו 1.0 84 כ\"ס)"
+  },
+  {
+    "make": "סמארט צרפת",
+    "model": "FORTWO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 898,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (סמארט פורטו דור 3 0.9 טורבו 90 כ\"ס)"
+  },
+  {
+    "make": "סמארט צרפת",
+    "model": "EQ FORTWO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 0,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (סמארט EQ פורטו חשמלי 82 כ\"ס)"
+  },
+  {
+    "make": "סמארט",
+    "model": "פורטו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 71,
+    "cc": 999,
+    "seconds": 13.7,
+    "source": "רישוי רכב / נתון יצרן (סמארט פורטו 71 כ\"ס)"
+  },
+  {
+    "make": "סמארט",
+    "model": "EQ פורטו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 0,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (סמארט EQ פורטו 82 כ\"ס)"
+  },
+  {
+    "make": "Smart",
+    "model": "FORTWO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 71,
+    "cc": 999,
+    "seconds": 13.7,
+    "source": "נתון יצרן (smart fortwo)"
+  },
+  {
+    "make": "סמארט צרפת",
+    "model": "FORFOUR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 898,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (סמארט פורפור דור 2 0.9 טורבו 90 כ\"ס)"
+  },
+  {
+    "make": "סמארט צרפת",
+    "model": "FORFOUR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 71,
+    "cc": 999,
+    "seconds": 15.9,
+    "source": "רישוי רכב / נתון יצרן (סמארט פורפור דור 2 1.0 71 כ\"ס)"
+  },
+  {
+    "make": "סמארט",
+    "model": "פורפור",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 898,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (סמארט פורפור 90 כ\"ס)"
+  },
+  {
+    "make": "Smart",
+    "model": "FORFOUR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 898,
+    "seconds": 11.2,
+    "source": "נתון יצרן (smart forfour)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "C-ELYSEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1587,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C אליזה 1.6 בנזין 115 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "C-ELYSEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1560,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C אליזה 1.6 HDi דיזל 100 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "C-ELYSEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 1199,
+    "seconds": 12.9,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C אליזה 1.2 פיוורטק 82 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "C אליזה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1587,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C אליזה 115 כ\"ס)"
+  },
+  {
+    "make": "Citroen",
+    "model": "C-ELYSEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1587,
+    "seconds": 10.3,
+    "source": "נתון יצרן (Citroen C-Elysee 1.6)"
+  },
+  {
+    "make": "סיטרואן צ'כיה",
+    "model": "C1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 69,
+    "cc": 998,
+    "seconds": 14.3,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C1 דור 2 1.0 69 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צ'כיה",
+    "model": "C1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 72,
+    "cc": 998,
+    "seconds": 14.0,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C1 1.0 72 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צ'כיה",
+    "model": "C1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 68,
+    "cc": 998,
+    "seconds": 14.2,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C1 דור 1 1.0 68 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "C1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 69,
+    "cc": 998,
+    "seconds": 14.3,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C1 69 כ\"ס)"
+  },
+  {
+    "make": "Citroen",
+    "model": "C1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 69,
+    "cc": 998,
+    "seconds": 14.3,
+    "source": "נתון יצרן (Citroen C1 1.0)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "C3 AIRCROSS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C3 איירקרוס 1.2 טורבו 130 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "C3 AIRCROSS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1199,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C3 איירקרוס 1.2 טורבו 110 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "C3 AIRCROSS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1499,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C3 איירקרוס 1.5 BlueHDi דיזל 120 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "C3 איירקרוס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C3 איירקרוס 130 כ\"ס)"
+  },
+  {
+    "make": "Citroen",
+    "model": "C3 AIRCROSS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 9.1,
+    "source": "נתון יצרן (Citroen C3 Aircross 1.2T)"
+  },
+  {
+    "make": "סיטרואן סלובק",
+    "model": "C3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1199,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C3 דור 3 1.2 פיוורטק טורבו 110 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן סלובק",
+    "model": "C3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 1199,
+    "seconds": 13.0,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C3 1.2 פיוורטק 82 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "C3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1598,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C3 דור 2 1.6 VTi 120 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "C3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1360,
+    "seconds": 14.2,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C3 דור 1 1.4 75 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "C3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1199,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C3 110 כ\"ס)"
+  },
+  {
+    "make": "Citroen",
+    "model": "C3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1199,
+    "seconds": 9.8,
+    "source": "נתון יצרן (Citroen C3 1.2T)"
+  },
+  {
+    "make": "סיטרואן סלובק",
+    "model": "C3 PICASSO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1560,
+    "seconds": 12.1,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C3 פיקאסו 1.6 BlueHDi דיזל 100 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן סלובק",
+    "model": "C3 PICASSO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1598,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C3 פיקאסו 1.6 VTi 120 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "C3 פיקאסו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1560,
+    "seconds": 12.1,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C3 פיקאסו 100 כ\"ס)"
+  },
+  {
+    "make": "Citroen",
+    "model": "C3 PICASSO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1560,
+    "seconds": 12.1,
+    "source": "נתון יצרן (Citroen C3 Picasso)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "C4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1499,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C4 דור 3 1.5 BlueHDi דיזל 130 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "C4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C4 דור 3 1.2 פיוורטק טורבו 130 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "C4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C4 דור 2 1.2 טורבו 130 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "C4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1587,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C4 דור 1 1.6 110 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "C4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C4 130 כ\"ס)"
+  },
+  {
+    "make": "Citroen",
+    "model": "C4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 8.9,
+    "source": "נתון יצרן (Citroen C4 1.2T)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "E-C4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן ë-C4 חשמלי מלא 136 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "E- c4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן e-C4 136 כ\"ס)"
+  },
+  {
+    "make": "Citroen",
+    "model": "E-C4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 9.7,
+    "source": "נתון יצרן (Citroen e-C4 EV)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "C4X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C4X פאסטבק 1.2 טורבו 130 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "C4X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1499,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C4X 1.5 BlueHDi דיזל 130 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "C4x",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C4X 130 כ\"ס)"
+  },
+  {
+    "make": "Citroen",
+    "model": "C4X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 9.3,
+    "source": "נתון יצרן (Citroen C4X 1.2T)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "E-C4 X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן ë-C4 X חשמלי מלא 136 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "E-c4 x",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן e-C4 X 136 כ\"ס)"
+  },
+  {
+    "make": "Citroen",
+    "model": "E-C4 X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 9.5,
+    "source": "נתון יצרן (Citroen e-C4 X EV)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "C4 SPACETOURER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C4 ספייסטורר 1.2 טורבו 130 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "C4 SPACETOURER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1499,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C4 ספייסטורר 1.5 BlueHDi דיזל 130 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "C4 PICASSO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1598,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C4 פיקאסו 1.6 THP טורבו 165 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "C4 PICASSO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1560,
+    "seconds": 11.3,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C4 פיקאסו 1.6 BlueHDi דיזל 120 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "GRAND C4 PICASSO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1598,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן גרנד C4 פיקאסו 7 מקומות 1.6T 165 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "C4 ספייסטורר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C4 ספייסטורר 130 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "C4 פיקאסו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1598,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C4 פיקאסו 165 כ\"ס)"
+  },
+  {
+    "make": "Citroen",
+    "model": "C4 PICASSO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1598,
+    "seconds": 8.7,
+    "source": "נתון יצרן (Citroen C4 Picasso 1.6T)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "C5 AIRCROSS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C5 איירקרוס 1.2 פיוורטק טורבו 130 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "C5 AIRCROSS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1499,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C5 איירקרוס 1.5 BlueHDi דיזל 130 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "C5 AIRCROSS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1598,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C5 איירקרוס 1.6 PureTech 180 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "C5 AIRCROSS PHEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 225,
+    "cc": 1598,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C5 איירקרוס פלאג-אין PHEV 225 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "C5 איירקרוס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C5 איירקרוס 130 כ\"ס)"
+  },
+  {
+    "make": "Citroen",
+    "model": "C5 AIRCROSS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 10.3,
+    "source": "נתון יצרן (Citroen C5 Aircross 1.2T)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "C5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1598,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C5 דור 2 1.6 THP טורבו 156 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "C5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1997,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C5 2.0 140 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "C5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 210,
+    "cc": 2946,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C5 3.0 V6 210 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "C5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1598,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C5 156 כ\"ס)"
+  },
+  {
+    "make": "Citroen",
+    "model": "C5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1598,
+    "seconds": 8.6,
+    "source": "נתון יצרן (Citroen C5 1.6 THP)"
+  },
+  {
+    "make": "סיטרואן פורטוג",
+    "model": "BERLINGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1499,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן ברלינגו דור 3 1.5 BlueHDi דיזל 130 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן פורטוג",
+    "model": "BERLINGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1499,
+    "seconds": 12.3,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן ברלינגו דור 3 1.5 BlueHDi דיזל 100 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "BERLINGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1560,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן ברלינגו דור 2 1.6 BlueHDi 100 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "BERLINGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1560,
+    "seconds": 15.6,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן ברלינגו 1.6 HDi 75 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "BERLINGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 71,
+    "cc": 1868,
+    "seconds": 19.9,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן ברלינגו דור 1 1.9 דיזל 71 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "ברלינגו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1499,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן ברלינגו 130 כ\"ס)"
+  },
+  {
+    "make": "Citroen",
+    "model": "BERLINGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1499,
+    "seconds": 10.7,
+    "source": "נתון יצרן (Citroen Berlingo 1.5 BlueHDi)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "JUMPY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 1997,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן ג'אמפי מסחרית 2.0 BlueHDi דיזל 177 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "JUMPY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1499,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן ג'אמפי 1.5 BlueHDi 120 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "JUMPY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 128,
+    "cc": 1997,
+    "seconds": 12.8,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן ג'אמפי דור 2 2.0 HDi 128 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "גאמפי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 1997,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן ג'אמפי 177 כ\"ס)"
+  },
+  {
+    "make": "Citroen",
+    "model": "JUMPY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 1997,
+    "seconds": 8.5,
+    "source": "נתון יצרן (Citroen Jumpy 2.0 BlueHDi)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "JUMPER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 2179,
+    "seconds": 15.0,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן ג'אמפר מסחרית גדולה 2.2 BlueHDi דיזל 140 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "JUMPER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1997,
+    "seconds": 14.0,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן ג'אמפר 2.0 BlueHDi 160 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "גאמפר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 2179,
+    "seconds": 15.0,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן ג'אמפר 140 כ\"ס)"
+  },
+  {
+    "make": "Citroen",
+    "model": "JUMPER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 2179,
+    "seconds": 15.0,
+    "source": "נתון יצרן (Citroen Jumper)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "XSARA PICASSO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 71,
+    "cc": 1868,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן קסרה פיקאסו 1.9 דיזל 71 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "XSARA PICASSO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1587,
+    "seconds": 11.4,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן קסרה פיקאסו 1.6 בנזין 110 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "XSARA PICASSO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1997,
+    "seconds": 12.6,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן קסרה פיקאסו 2.0 HDi דיזל 90 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "קסרה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1587,
+    "seconds": 11.4,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן קסרה 110 כ\"ס)"
+  },
+  {
+    "make": "Citroen",
+    "model": "XSARA PICASSO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1587,
+    "seconds": 11.4,
+    "source": "נתון יצרן (Citroen Xsara Picasso)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "XSARA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1587,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן קסרה 1.6 110 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "XSARA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 167,
+    "cc": 1998,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן קסרה VTS ספורט 2.0 167 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "XANTIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1998,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן קסנטיה 2.0 16V 135 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "קסנטיה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1998,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן קסנטיה 135 כ\"ס)"
+  },
+  {
+    "make": "Citroen",
+    "model": "XANTIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1998,
+    "seconds": 10.2,
+    "source": "נתון יצרן (Citroen Xantia)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "SAXO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1360,
+    "seconds": 12.8,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן סקסו 1.4 75 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "SAXO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1587,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן סקסו VTS ספורט 1.6 120 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "סקסו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1360,
+    "seconds": 12.8,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן סקסו 75 כ\"ס)"
+  },
+  {
+    "make": "Citroen",
+    "model": "SAXO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1360,
+    "seconds": 12.8,
+    "source": "נתון יצרן (Citroen Saxo)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "C2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1360,
+    "seconds": 12.2,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C2 1.4 75 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "C2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1587,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C2 1.6 VTR 110 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "C2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1587,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C2 VTS ספורט 1.6 125 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "C2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1360,
+    "seconds": 12.2,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C2 75 כ\"ס)"
+  },
+  {
+    "make": "Citroen",
+    "model": "C2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1360,
+    "seconds": 12.2,
+    "source": "נתון יצרן (Citroen C2)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "C6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 215,
+    "cc": 2946,
+    "seconds": 9.4,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C6 סאלון פאר 3.0 V6 215 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "C6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 2993,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C6 3.0 HDi דיזל 240 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "C6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 215,
+    "cc": 2946,
+    "seconds": 9.4,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C6 215 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "C8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1997,
+    "seconds": 11.6,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C8 מיניוואן 7 מקומות 2.0 140 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "C8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1997,
+    "seconds": 11.6,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C8 140 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "C-CROSSER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 2179,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C-קרוסר 2.2 HDi דיזל 156 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "C קרוסור",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 2179,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C קרוסר 156 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "C-ZERO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 67,
+    "cc": 0,
+    "seconds": 15.9,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C-זירו חשמלית עירונית 67 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "C זירו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 67,
+    "cc": 0,
+    "seconds": 15.9,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C זירו 67 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "DS3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1598,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן DS3 1.6 THP טורבו ספורט 156 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "DS3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1598,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן DS3 1.6 VTi 120 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "Ds3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1598,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן DS3 156 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "DS4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1598,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן DS4 1.6 THP טורבו 163 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "DS4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1598,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן DS4 1.6 THP 200 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "Ds4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1598,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן DS4 163 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "DS5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1598,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן DS5 1.6 THP טורבו 163 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "DS5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1997,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן DS5 Hybrid4 היברידי דיזל AWD 200 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "Ds5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1598,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן DS5 163 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "C15",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 60,
+    "cc": 1769,
+    "seconds": 22.0,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C15 טנדרו 1.8 דיזל 60 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "C15",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 60,
+    "cc": 1769,
+    "seconds": 22.0,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C15 60 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "ZX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1360,
+    "seconds": 13.7,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן ZX 1.4 75 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "ZX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 103,
+    "cc": 1761,
+    "seconds": 11.3,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן ZX 1.8 103 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "ZX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1998,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן ZX וולקן 2.0 16V 155 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "Zx",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1360,
+    "seconds": 13.7,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן ZX 75 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "XM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 1998,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן XM 2.0 טווין-קאם טורבו 147 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "XM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 2946,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן XM 3.0 V6 190 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "Xm",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 1998,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן XM 147 כ\"ס)"
+  }
+]
