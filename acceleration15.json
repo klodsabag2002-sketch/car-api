@@ -1,6 +1,56 @@
 [
   {
     "make": "מזדה יפן",
+    "model": "DEMIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1498,
+    "seconds": 13.0,
+    "source": "רישוי רכב / נתון יצרן (מאזדה דמיו 1.5 75 כ\"ס)"
+  },
+  {
+    "make": "מזדה יפן",
+    "model": "DEMIO GLX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1498,
+    "seconds": 13.0,
+    "source": "רישוי רכב / נתון יצרן (מאזדה דמיו 1.5 75 כ\"ס)"
+  },
+  {
+    "make": "מאזדה",
+    "model": "דמיו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1498,
+    "seconds": 13.0,
+    "source": "רישוי רכב / נתון יצרן (מאזדה דמיו 75 כ\"ס)"
+  },
+  {
+    "make": "מאזדה",
+    "model": "DEMIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1498,
+    "seconds": 13.0,
+    "source": "רישוי רכב / נתון יצרן (מאזדה דמיו 75 כ\"ס)"
+  },
+  {
+    "make": "Mazda",
+    "model": "DEMIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1498,
+    "seconds": 13.0,
+    "source": "נתון יצרן (Mazda Demio)"
+  },
+  {
+    "make": "מזדה יפן",
     "model": "121",
     "yearStart": null,
     "yearEnd": null,
@@ -17,7 +67,7 @@
     "hp": 73,
     "cc": 1324,
     "seconds": 13.7,
-    "source": "רישוי רכב / נתון יצרן (מאזדה 121 1.3 73 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (מאזדה 121 73 כ\"ס)"
   },
   {
     "make": "Mazda",
@@ -28,6 +78,16 @@
     "cc": 1324,
     "seconds": 13.7,
     "source": "נתון יצרן (Mazda 121)"
+  },
+  {
+    "make": "מזדה תאילנד",
+    "model": "MAZDA 2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 103,
+    "cc": 1498,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (מאזדה 2 דור 2 1.5 103 כ\"ס)"
   },
   {
     "make": "מזדה תאילנד",
@@ -50,6 +110,26 @@
     "source": "רישוי רכב / נתון יצרן (מאזדה 2 דור 3 1.5 116 כ\"ס)"
   },
   {
+    "make": "מזדה יפן",
+    "model": "2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 116,
+    "cc": 1496,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (מאזדה 2 116 כ\"ס)"
+  },
+  {
+    "make": "מאזדה",
+    "model": "2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 103,
+    "cc": 1498,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (מאזדה 2 103 כ\"ס)"
+  },
+  {
     "make": "מאזדה",
     "model": "2",
     "yearStart": null,
@@ -57,7 +137,17 @@
     "hp": 116,
     "cc": 1496,
     "seconds": 9.8,
-    "source": "רישוי רכב / נתון יצרן (מאזדה 2)"
+    "source": "רישוי רכב / נתון יצרן (מאזדה 2 116 כ\"ס)"
+  },
+  {
+    "make": "Mazda",
+    "model": "MAZDA 2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 103,
+    "cc": 1498,
+    "seconds": 10.4,
+    "source": "נתון יצרן (Mazda 2)"
   },
   {
     "make": "Mazda",
@@ -71,13 +161,23 @@
   },
   {
     "make": "מזדה יפן",
+    "model": "MAZDA 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1598,
+    "seconds": 12.2,
+    "source": "רישוי רכב / נתון יצרן (מאזדה 3 1.6 דור 1/2 105 כ\"ס)"
+  },
+  {
+    "make": "מזדה יפן",
     "model": "MAZDA 3 ACTIVE",
     "yearStart": null,
     "yearEnd": null,
     "hp": 105,
     "cc": 1598,
     "seconds": 12.2,
-    "source": "רישוי רכב / נתון יצרן (מאזדה 3 דור 1 1.6 105 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (מאזדה 3 1.6 105 כ\"ס)"
   },
   {
     "make": "מזדה יפן",
@@ -90,6 +190,36 @@
     "source": "רישוי רכב / נתון יצרן (מאזדה 3 2.0 165 כ\"ס)"
   },
   {
+    "make": "מזדה יפן",
+    "model": "MAZDA 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1496,
+    "seconds": 11.3,
+    "source": "רישוי רכב / נתון יצרן (מאזדה 3 1.5 120 כ\"ס)"
+  },
+  {
+    "make": "מזדה יפן",
+    "model": "MAZDA 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1999,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (מאזדה 3 2.0 דור 1/2 150 כ\"ס)"
+  },
+  {
+    "make": "מאזדה",
+    "model": "3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1598,
+    "seconds": 12.2,
+    "source": "רישוי רכב / נתון יצרן (מאזדה 3 105 כ\"ס)"
+  },
+  {
     "make": "מאזדה",
     "model": "3",
     "yearStart": null,
@@ -97,7 +227,17 @@
     "hp": 165,
     "cc": 1998,
     "seconds": 8.5,
-    "source": "רישוי רכב / נתון יצרן (מאזדה 3 2.0 165 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (מאזדה 3 165 כ\"ס)"
+  },
+  {
+    "make": "Mazda",
+    "model": "MAZDA 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1598,
+    "seconds": 12.2,
+    "source": "נתון יצרן (Mazda 3)"
   },
   {
     "make": "Mazda",
@@ -120,7 +260,7 @@
     "source": "רישוי רכב / נתון יצרן (מאזדה 323 לאנטיס 1.6 88 כ\"ס)"
   },
   {
-    "make": "מאזדה",
+    "make": "מזדה יפן",
     "model": "323",
     "yearStart": null,
     "yearEnd": null,
@@ -128,6 +268,16 @@
     "cc": 1840,
     "seconds": 10.1,
     "source": "רישוי רכב / נתון יצרן (מאזדה 323 לאנטיס 1.8 114 כ\"ס)"
+  },
+  {
+    "make": "מאזדה",
+    "model": "323",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 88,
+    "cc": 1598,
+    "seconds": 11.6,
+    "source": "רישוי רכב / נתון יצרן (מאזדה 323 88 כ\"ס)"
   },
   {
     "make": "Mazda",
@@ -141,13 +291,23 @@
   },
   {
     "make": "מזדה יפן",
-    "model": "MAZDA 5 S",
+    "model": "MAZDA 5",
     "yearStart": null,
     "yearEnd": null,
     "hp": 145,
     "cc": 1999,
     "seconds": 10.8,
     "source": "רישוי רכב / נתון יצרן (מאזדה 5 דור 1 2.0 145 כ\"ס)"
+  },
+  {
+    "make": "מזדה יפן",
+    "model": "MAZDA 5 S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 1999,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (מאזדה 5 145 כ\"ס)"
   },
   {
     "make": "מזדה יפן",
@@ -167,7 +327,7 @@
     "hp": 145,
     "cc": 1999,
     "seconds": 10.8,
-    "source": "רישוי רכב / נתון יצרן (מאזדה 5 2.0 145 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (מאזדה 5 145 כ\"ס)"
   },
   {
     "make": "Mazda",
@@ -178,6 +338,16 @@
     "cc": 1999,
     "seconds": 10.8,
     "source": "נתון יצרן (Mazda 5)"
+  },
+  {
+    "make": "מזדה יפן",
+    "model": "MAZDA 6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 195,
+    "cc": 2488,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (מאזדה 6 2.5 195 כ\"ס)"
   },
   {
     "make": "מזדה יפן",
@@ -200,6 +370,16 @@
     "source": "רישוי רכב / נתון יצרן (מאזדה 6 2.0 165 כ\"ס)"
   },
   {
+    "make": "מזדה יפן",
+    "model": "MAZDA 6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 1999,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (מאזדה 6 דור 1/2 2.0 147 כ\"ס)"
+  },
+  {
     "make": "מאזדה",
     "model": "6",
     "yearStart": null,
@@ -207,7 +387,7 @@
     "hp": 195,
     "cc": 2488,
     "seconds": 8.1,
-    "source": "רישוי רכב / נתון יצרן (מאזדה 6 2.5 195 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (מאזדה 6 195 כ\"ס)"
   },
   {
     "make": "Mazda",
@@ -230,7 +410,7 @@
     "source": "רישוי רכב / נתון יצרן (מאזדה 626 2.0 115 כ\"ס)"
   },
   {
-    "make": "מאזדה",
+    "make": "מזדה יפן",
     "model": "626",
     "yearStart": null,
     "yearEnd": null,
@@ -238,6 +418,16 @@
     "cc": 1991,
     "seconds": 9.9,
     "source": "רישוי רכב / נתון יצרן (מאזדה 626 2.0 136 כ\"ס)"
+  },
+  {
+    "make": "מאזדה",
+    "model": "626",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1991,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (מאזדה 626 115 כ\"ס)"
   },
   {
     "make": "Mazda",
@@ -251,13 +441,23 @@
   },
   {
     "make": "מזדה תאילנד",
-    "model": "B-2500 SDX",
+    "model": "B-2500",
     "yearStart": null,
     "yearEnd": null,
     "hp": 109,
     "cc": 2500,
     "seconds": 18.5,
     "source": "רישוי רכב / נתון יצרן (מאזדה B-2500 דיזל 109 כ\"ס)"
+  },
+  {
+    "make": "מזדה תאילנד",
+    "model": "B-2500 SDX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 2500,
+    "seconds": 18.5,
+    "source": "רישוי רכב / נתון יצרן (מאזדה B-2500 109 כ\"ס)"
   },
   {
     "make": "מאזדה",
@@ -267,11 +467,11 @@
     "hp": 109,
     "cc": 2500,
     "seconds": 18.5,
-    "source": "רישוי רכב / נתון יצרן (מאזדה B-Series)"
+    "source": "רישוי רכב / נתון יצרן (מאזדה B-2500)"
   },
   {
     "make": "Mazda",
-    "model": "B-Series",
+    "model": "B-2500",
     "yearStart": null,
     "yearEnd": null,
     "hp": 109,
@@ -281,13 +481,23 @@
   },
   {
     "make": "מזדה תאילנד",
-    "model": "BT 50 DX",
+    "model": "BT 50",
     "yearStart": null,
     "yearEnd": null,
     "hp": 143,
     "cc": 2500,
     "seconds": 12.5,
     "source": "רישוי רכב / נתון יצרן (מאזדה BT-50 טורבו-דיזל 2.5 143 כ\"ס)"
+  },
+  {
+    "make": "מזדה תאילנד",
+    "model": "BT 50 DX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 2500,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (מאזדה BT-50 143 כ\"ס)"
   },
   {
     "make": "מאזדה",
@@ -301,13 +511,23 @@
   },
   {
     "make": "Mazda",
-    "model": "BT-50",
+    "model": "BT 50",
     "yearStart": null,
     "yearEnd": null,
     "hp": 143,
     "cc": 2500,
     "seconds": 12.5,
     "source": "נתון יצרן (Mazda BT-50)"
+  },
+  {
+    "make": "מזדה תאילנד",
+    "model": "MAZDA CX-3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 116,
+    "cc": 1496,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (מאזדה CX-3 1.5 116 כ\"ס)"
   },
   {
     "make": "מזדה תאילנד",
@@ -334,20 +554,40 @@
     "model": "CX-3",
     "yearStart": null,
     "yearEnd": null,
+    "hp": 116,
+    "cc": 1496,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (מאזדה CX-3 116 כ\"ס)"
+  },
+  {
+    "make": "מאזדה",
+    "model": "CX-3",
+    "yearStart": null,
+    "yearEnd": null,
     "hp": 156,
     "cc": 1998,
     "seconds": 9.1,
-    "source": "רישוי רכב / נתון יצרן (מאזדה CX-3)"
+    "source": "רישוי רכב / נתון יצרן (מאזדה CX-3 156 כ\"ס)"
   },
   {
     "make": "Mazda",
     "model": "MAZDA CX-3",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 156,
-    "cc": 1998,
-    "seconds": 9.1,
+    "hp": 116,
+    "cc": 1496,
+    "seconds": 11.2,
     "source": "נתון יצרן (Mazda CX-3)"
+  },
+  {
+    "make": "מזדה יפן",
+    "model": "MAZDA CX-30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1998,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (מאזדה CX-30 2.0 165 כ\"ס)"
   },
   {
     "make": "מזדה יפן",
@@ -364,10 +604,10 @@
     "model": "CX-30",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 186,
+    "hp": 165,
     "cc": 1998,
-    "seconds": 8.3,
-    "source": "רישוי רכב / נתון יצרן (מאזדה CX-30 e-Skyactiv X 186 כ\"ס)"
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (מאזדה CX-30 165 כ\"ס)"
   },
   {
     "make": "Mazda",
@@ -381,13 +621,23 @@
   },
   {
     "make": "מזדה יפן",
-    "model": "CX-5 PREMIUM",
+    "model": "CX-5",
     "yearStart": null,
     "yearEnd": null,
     "hp": 165,
     "cc": 1998,
     "seconds": 10.1,
     "source": "רישוי רכב / נתון יצרן (מאזדה CX-5 דור 2 2.0 165 כ\"ס)"
+  },
+  {
+    "make": "מזדה יפן",
+    "model": "CX-5 PREMIUM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1998,
+    "seconds": 10.1,
+    "source": "רישוי רכב / נתון יצרן (מאזדה CX-5 2.0 165 כ\"ס)"
   },
   {
     "make": "מזדה יפן",
@@ -407,16 +657,16 @@
     "hp": 165,
     "cc": 1998,
     "seconds": 10.1,
-    "source": "רישוי רכב / נתון יצרן (מאזדה CX-5)"
+    "source": "רישוי רכב / נתון יצרן (מאזדה CX-5 165 כ\"ס)"
   },
   {
     "make": "Mazda",
-    "model": "MAZDA CX-5",
+    "model": "CX-5",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 195,
-    "cc": 2488,
-    "seconds": 8.8,
+    "hp": 165,
+    "cc": 1998,
+    "seconds": 10.1,
     "source": "נתון יצרן (Mazda CX-5)"
   },
   {
@@ -444,9 +694,9 @@
     "model": "MAZDA CX-50",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 256,
+    "hp": 187,
     "cc": 2488,
-    "seconds": 6.6,
+    "seconds": 8.6,
     "source": "נתון יצרן (Mazda CX-50)"
   },
   {
@@ -464,10 +714,10 @@
     "model": "CX-60",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 280,
-    "cc": 3283,
-    "seconds": 6.9,
-    "source": "רישוי רכב / נתון יצרן (מאזדה CX-60 3.3 Turbo 280 כ\"ס)"
+    "hp": 327,
+    "cc": 2488,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (מאזדה CX-60 327 כ\"ס)"
   },
   {
     "make": "Mazda",
@@ -494,10 +744,10 @@
     "model": "CX-9",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 277,
-    "cc": 3721,
-    "seconds": 8.4,
-    "source": "רישוי רכב / נתון יצרן (מאזדה CX-9 דור 1 3.7 V6 277 כ\"ס)"
+    "hp": 250,
+    "cc": 2488,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (מאזדה CX-9 250 כ\"ס)"
   },
   {
     "make": "Mazda",
@@ -511,7 +761,7 @@
   },
   {
     "make": "מזדה יפן",
-    "model": "MAZDA CX-90 EXCLUSIVE",
+    "model": "MAZDA CX-90",
     "yearStart": null,
     "yearEnd": null,
     "hp": 345,
@@ -520,14 +770,24 @@
     "source": "רישוי רכב / נתון יצרן (מאזדה CX-90 3.3 Turbo Mild-Hybrid 345 כ\"ס)"
   },
   {
+    "make": "מזדה יפן",
+    "model": "MAZDA CX-90 EXCLUSIVE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 345,
+    "cc": 3283,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (מאזדה CX-90 345 כ\"ס)"
+  },
+  {
     "make": "מאזדה",
     "model": "CX-90",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 323,
-    "cc": 2488,
-    "seconds": 6.2,
-    "source": "רישוי רכב / נתון יצרן (מאזדה CX-90 PHEV 323 כ\"ס)"
+    "hp": 345,
+    "cc": 3283,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (מאזדה CX-90 345 כ\"ס)"
   },
   {
     "make": "Mazda",
@@ -538,6 +798,16 @@
     "cc": 3283,
     "seconds": 5.3,
     "source": "נתון יצרן (Mazda CX-90)"
+  },
+  {
+    "make": "מזדה יפן",
+    "model": "MPV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 2967,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (מאזדה MPV 3.0 V6 197 כ\"ס)"
   },
   {
     "make": "מזדה יפן",
@@ -554,10 +824,10 @@
     "model": "MPV",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 141,
-    "cc": 2261,
-    "seconds": 11.2,
-    "source": "רישוי רכב / נתון יצרן (מאזדה MPV 2.3 141 כ\"ס)"
+    "hp": 197,
+    "cc": 2967,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (מאזדה MPV 197 כ\"ס)"
   },
   {
     "make": "Mazda",
@@ -584,10 +854,10 @@
     "model": "MX-3",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 88,
-    "cc": 1598,
-    "seconds": 10.5,
-    "source": "רישוי רכב / נתון יצרן (מאזדה MX-3 1.6 88 כ\"ס)"
+    "hp": 133,
+    "cc": 1845,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (מאזדה MX-3 133 כ\"ס)"
   },
   {
     "make": "Mazda",
@@ -601,7 +871,7 @@
   },
   {
     "make": "מזדה יפן",
-    "model": "MAZDA MX-5 BLUE/BROWN",
+    "model": "MAZDA MX-5",
     "yearStart": null,
     "yearEnd": null,
     "hp": 183,
@@ -611,13 +881,23 @@
   },
   {
     "make": "מזדה יפן",
+    "model": "MAZDA MX-5 BLUE/BROWN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 183,
+    "cc": 1998,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (מאזדה MX-5 183 כ\"ס)"
+  },
+  {
+    "make": "מזדה יפן",
     "model": "MAZDA MX-5",
     "yearStart": null,
     "yearEnd": null,
     "hp": 160,
     "cc": 1998,
     "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (מאזדה MX-5 דור 3/4 2.0 160 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (מאזדה MX-5 דור 3 2.0 160 כ\"ס)"
   },
   {
     "make": "מאזדה",
@@ -641,63 +921,13 @@
   },
   {
     "make": "מזדה יפן",
-    "model": "DEMIO GLX",
+    "model": "PREMACY",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 75,
-    "cc": 1498,
-    "seconds": 13.0,
-    "source": "רישוי רכב / נתון יצרן (מאזדה דמיו 1.5 75 כ\"ס)"
-  },
-  {
-    "make": "מאזדה",
-    "model": "DEMIO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 75,
-    "cc": 1498,
-    "seconds": 13.0,
-    "source": "רישוי רכב / נתון יצרן (מאזדה דמיו 75 כ\"ס)"
-  },
-  {
-    "make": "Mazda",
-    "model": "DEMIO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 75,
-    "cc": 1498,
-    "seconds": 13.0,
-    "source": "נתון יצרן (Mazda Demio)"
-  },
-  {
-    "make": "מזדה יפן",
-    "model": "TRIBUTE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 203,
-    "cc": 2967,
-    "seconds": 10.5,
-    "source": "רישוי רכב / נתון יצרן (מאזדה טריביוט 3.0 V6 203 כ\"ס)"
-  },
-  {
-    "make": "מאזדה",
-    "model": "TRIBUTE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 124,
-    "cc": 1989,
-    "seconds": 12.5,
-    "source": "רישוי רכב / נתון יצרן (מאזדה טריביוט 2.0 124 כ\"ס)"
-  },
-  {
-    "make": "Mazda",
-    "model": "TRIBUTE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 203,
-    "cc": 2967,
-    "seconds": 10.5,
-    "source": "נתון יצרן (Mazda Tribute)"
+    "hp": 131,
+    "cc": 1991,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (מאזדה פרמסי 2.0 131 כ\"ס)"
   },
   {
     "make": "מזדה יפן",
@@ -707,17 +937,17 @@
     "hp": 131,
     "cc": 1991,
     "seconds": 10.7,
-    "source": "רישוי רכב / נתון יצרן (מאזדה פרמסי 2.0 131 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (מאזדה פרמסי 131 כ\"ס)"
   },
   {
     "make": "מאזדה",
-    "model": "PREMACY",
+    "model": "פרמסי",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 114,
-    "cc": 1840,
-    "seconds": 11.3,
-    "source": "רישוי רכב / נתון יצרן (מאזדה פרמסי 1.8 114 כ\"ס)"
+    "hp": 131,
+    "cc": 1991,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (מאזדה פרמסי 131 כ\"ס)"
   },
   {
     "make": "Mazda",
@@ -731,6 +961,36 @@
   },
   {
     "make": "מזדה יפן",
+    "model": "TRIBUTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 203,
+    "cc": 2967,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (מאזדה טריביוט 3.0 V6 203 כ\"ס)"
+  },
+  {
+    "make": "מאזדה",
+    "model": "טריביוט",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 203,
+    "cc": 2967,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (מאזדה טריביוט 203 כ\"ס)"
+  },
+  {
+    "make": "Mazda",
+    "model": "TRIBUTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 203,
+    "cc": 2967,
+    "seconds": 10.5,
+    "source": "נתון יצרן (Mazda Tribute)"
+  },
+  {
+    "make": "מזדה יפן",
     "model": "XEDOS 9",
     "yearStart": null,
     "yearEnd": null,
@@ -741,13 +1001,13 @@
   },
   {
     "make": "מאזדה",
-    "model": "XEDOS 9",
+    "model": "קסדוס 9",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 167,
-    "cc": 2497,
-    "seconds": 9.2,
-    "source": "רישוי רכב / נתון יצרן (מאזדה קסדוס 9 2.5 V6 167 כ\"ס)"
+    "hp": 211,
+    "cc": 2255,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (מאזדה קסדוס 9 211 כ\"ס)"
   },
   {
     "make": "Mazda",
