@@ -14,7 +14,7 @@ const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";
 
-// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 16) ----------
+// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 18) ----------
 let accelTable = [];
 const ACCEL_FILES = [
     "acceleration.json",
@@ -32,7 +32,9 @@ const ACCEL_FILES = [
     "acceleration13.json",
     "acceleration14.json",
     "acceleration15.json",
-    "acceleration16.json"
+    "acceleration16.json",
+    "acceleration17.json",
+    "acceleration18.json"
 ];
 
 ACCEL_FILES.forEach(fileName => {
@@ -128,6 +130,8 @@ const HE_MAKE_ALIASES = {
     "\"ב מ וו ארהב": "BMW",
     "ב מ וו אוסטריה": "BMW",
     "ב מ וו דרום אפריקה": "BMW",
+    "ב מ וו הולנד": "BMW",
+    "ב מ וו אנגליה": "BMW",
     "בי ווי די": "BYD",
     "בי ווי די סין": "BYD",
     "בי.ווי.די": "BYD",
@@ -362,11 +366,44 @@ const HE_MAKE_ALIASES = {
     "לקסוס": "Lexus",
     "לקסוס יפן": "Lexus",
     "Lexus": "Lexus",
+    "מאזדה": "Mazda",
+    "מזדה": "Mazda",
+    "מזדה יפן": "Mazda",
+    "מאזדה יפן": "Mazda",
+    "מזדה תאילנד": "Mazda",
+    "מאזדה תאילנד": "Mazda",
+    "מאזדה ארה\"ב": "Mazda",
+    "מזדה ארה\"ב": "Mazda",
+    "מאזדה ארהב": "Mazda",
+    "מזדה ארהב": "Mazda",
+    "Mazda": "Mazda",
+    "מיני קופר": "Mini",
+    "מיני": "Mini",
+    "Mini": "Mini",
+    "מזארטי": "Maserati",
+    "מזארטי איטליה": "Maserati",
+    "מזראטי": "Maserati",
+    "מזראטי איטליה": "Maserati",
+    "Maserati": "Maserati",
+    "מרצדס": "Mercedes-Benz",
+    "מרצדס בנץ": "Mercedes-Benz",
+    "מרצדס בנץ גרמן": "Mercedes-Benz",
+    "מרצדס בנץ הונג": "Mercedes-Benz",
+    "מרצדס בנץ ארהב": "Mercedes-Benz",
+    "מרצדס בנץ ארה\"ב": "Mercedes-Benz",
+    "מרצדס בנץ אוסט": "Mercedes-Benz",
+    "מרצדס בנץ מקסי": "Mercedes-Benz",
+    "מרצדס בנץ ספרד": "Mercedes-Benz",
+    "מרצדס בנץ צרפת": "Mercedes-Benz",
+    "מרצדס בנץ טורק": "Mercedes-Benz",
+    "דיימלר קרייזלר": "Mercedes-Benz",
+    "דימלר קריזלר": "Mercedes-Benz",
+    "Mercedes-Benz": "Mercedes-Benz",
+    "Mercedes": "Mercedes-Benz",
     "סיאט": "Seat",
     "סקודה": "Skoda",
     "פולקסווגן": "Volkswagen",
-    "קיה": "Kia",
-    "מרצדס": "Mercedes-Benz"
+    "קיה": "Kia"
 };
 
 function norm(s) {
