@@ -1,5 +1,145 @@
 [
   {
+    "make": "דיפאל סין",
+    "model": "DEEPAL S07",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (דיפאל S07 חשמלי EV RWD 218)"
+  },
+  {
+    "make": "דיפאל סין",
+    "model": "S07",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (דיפאל S07 חשמלי EV RWD 218)"
+  },
+  {
+    "make": "דיפאל סין",
+    "model": "DEEPAL S07",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 0,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (דיפאל S07 חשמלי EV 258)"
+  },
+  {
+    "make": "דיפאל סין",
+    "model": "DEEPAL S07",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 238,
+    "cc": 1497,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (דיפאל S07 מאריך טווח EREV 238)"
+  },
+  {
+    "make": "דיפאל",
+    "model": "S07",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (דיפאל S07 218)"
+  },
+  {
+    "make": "Deepal",
+    "model": "DEEPAL S07",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "נתון יצרן (Deepal S07 EV 218)"
+  },
+  {
+    "make": "Deepal",
+    "model": "S07",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "נתון יצרן (Deepal S07 EV 218)"
+  },
+  {
+    "make": "דיפאל סין",
+    "model": "DEEPAL S05",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 238,
+    "cc": 0,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (דיפאל S05 חשמלי EV 238)"
+  },
+  {
+    "make": "דיפאל סין",
+    "model": "DEEPAL S05",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (דיפאל S05 חשמלי EV 272)"
+  },
+  {
+    "make": "דיפאל סין",
+    "model": "S05",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 238,
+    "cc": 0,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (דיפאל S05 חשמלי EV 238)"
+  },
+  {
+    "make": "דיפאל סין",
+    "model": "S05",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 1497,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (דיפאל S05 מאריך טווח EREV 218)"
+  },
+  {
+    "make": "דיפאל",
+    "model": "S05",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 238,
+    "cc": 0,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (דיפאל S05 238)"
+  },
+  {
+    "make": "Deepal",
+    "model": "DEEPAL S05",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 238,
+    "cc": 0,
+    "seconds": 6.3,
+    "source": "נתון יצרן (Deepal S05 EV)"
+  },
+  {
+    "make": "Deepal",
+    "model": "S05",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 238,
+    "cc": 0,
+    "seconds": 6.3,
+    "source": "נתון יצרן (Deepal S05 EV)"
+  },
+  {
     "make": "דייהטסו יפן",
     "model": "YRV",
     "yearStart": null,
