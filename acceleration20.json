@@ -1,1 +1,1743 @@
-klod
+
+[
+  {
+    "make": "סאאב שבדיה",
+    "model": "9-5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 2290,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (סאאב 9-5 2.3 טורבו 185)"
+  },
+  {
+    "make": "סאאב שבדיה",
+    "model": "9-5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 2290,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (סאאב 9-5 אירו Aero 2.3T 250)"
+  },
+  {
+    "make": "סאאב שבדיה",
+    "model": "9-5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 220,
+    "cc": 1998,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (סאאב 9-5 דור 2 2.0T 220)"
+  },
+  {
+    "make": "סאאב",
+    "model": "9-5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 2290,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (סאאב 9-5 185)"
+  },
+  {
+    "make": "Saab",
+    "model": "9-5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 2290,
+    "seconds": 8.3,
+    "source": "נתון יצרן (Saab 9-5 2.3T)"
+  },
+  {
+    "make": "סאאב שבדיה",
+    "model": "9-3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 175,
+    "cc": 1998,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (סאאב 9-3 סדאן/קבריו 2.0T 175)"
+  },
+  {
+    "make": "סאאב שבדיה",
+    "model": "9-3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 210,
+    "cc": 1998,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (סאאב 9-3 אירו Aero 2.0T 210)"
+  },
+  {
+    "make": "סאאב שבדיה",
+    "model": "9-3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1998,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (סאאב 9-3 1.8t / 2.0T 150)"
+  },
+  {
+    "make": "סאאב",
+    "model": "9-3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 175,
+    "cc": 1998,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (סאאב 9-3 175)"
+  },
+  {
+    "make": "Saab",
+    "model": "9-3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 175,
+    "cc": 1998,
+    "seconds": 8.5,
+    "source": "נתון יצרן (Saab 9-3 2.0T)"
+  },
+  {
+    "make": "סאאב שבדיה",
+    "model": "900",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 131,
+    "cc": 1985,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (סאאב 900 דור 2 2.0 131)"
+  },
+  {
+    "make": "סאאב שבדיה",
+    "model": "900",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 1985,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (סאאב 900 2.0 טורבו 185)"
+  },
+  {
+    "make": "סאאב",
+    "model": "900",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 131,
+    "cc": 1985,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (סאאב 900 131)"
+  },
+  {
+    "make": "Saab",
+    "model": "900",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 131,
+    "cc": 1985,
+    "seconds": 11.0,
+    "source": "נתון יצרן (Saab 900)"
+  },
+  {
+    "make": "סאנגיונג ד.קור",
+    "model": "REXTON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 178,
+    "cc": 2157,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג רקסטון 2.2 דיזל 178)"
+  },
+  {
+    "make": "סאנגיונג ד.קור",
+    "model": "REXTON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 2157,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג רקסטון דור 2 2.2 דיזל 181)"
+  },
+  {
+    "make": "סאנגיונג ד.קור",
+    "model": "REXTON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 2157,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג רקסטון מתוח פנים 2.2 דיזל 202)"
+  },
+  {
+    "make": "סאנגיונג ד.קור",
+    "model": "REXTON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 2696,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג רקסטון 2.7 דיזל 165)"
+  },
+  {
+    "make": "סאנגיונג",
+    "model": "רקסטון",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 178,
+    "cc": 2157,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג רקסטון 178)"
+  },
+  {
+    "make": "SsangYong",
+    "model": "REXTON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 178,
+    "cc": 2157,
+    "seconds": 11.0,
+    "source": "נתון יצרן (SsangYong Rexton 2.2)"
+  },
+  {
+    "make": "סאנגיונג ד.קור",
+    "model": "RODIUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1998,
+    "seconds": 13.4,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג רודיוס 2.0 דיזל 155)"
+  },
+  {
+    "make": "סאנגיונג ד.קור",
+    "model": "RODIUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 178,
+    "cc": 2157,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג רודיוס 2.2 דיזל 178)"
+  },
+  {
+    "make": "סאנגיונג ד.קור",
+    "model": "RODIUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 2696,
+    "seconds": 14.5,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג רודיוס 2.7 דיזל 165)"
+  },
+  {
+    "make": "סאנגיונג",
+    "model": "רודיוס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1998,
+    "seconds": 13.4,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג רודיוס 155)"
+  },
+  {
+    "make": "SsangYong",
+    "model": "RODIUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1998,
+    "seconds": 13.4,
+    "source": "נתון יצרן (SsangYong Rodius 2.0)"
+  },
+  {
+    "make": "סאנגיונג ד.קור",
+    "model": "KYRON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 1998,
+    "seconds": 14.2,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג קיירון 2.0 XDi דיזל 141)"
+  },
+  {
+    "make": "סאנגיונג",
+    "model": "קיירון",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 1998,
+    "seconds": 14.2,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג קיירון 141)"
+  },
+  {
+    "make": "SsangYong",
+    "model": "KYRON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 1998,
+    "seconds": 14.2,
+    "source": "נתון יצרן (SsangYong Kyron 2.0)"
+  },
+  {
+    "make": "סאנגיונג ד.קור",
+    "model": "KORANDO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 2157,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג קורנדו 2.2 דיזל 202)"
+  },
+  {
+    "make": "סאנגיונג ד.קור",
+    "model": "KORANDO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1497,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג קורנדו 1.5 טורבו בנזין 163)"
+  },
+  {
+    "make": "סאנגיונג ד.קור",
+    "model": "KORANDO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1597,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג קורנדו 1.6 דיזל 136)"
+  },
+  {
+    "make": "סאנגיונג ד.קור",
+    "model": "KORANDO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 149,
+    "cc": 1998,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג קורנדו 2.0 בנזין 149)"
+  },
+  {
+    "make": "סאנגיונג",
+    "model": "קורנדו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1497,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג קורנדו 163)"
+  },
+  {
+    "make": "SsangYong",
+    "model": "KORANDO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1497,
+    "seconds": 9.9,
+    "source": "נתון יצרן (SsangYong Korando 1.5T)"
+  },
+  {
+    "make": "סאנגיונג ד.קור",
+    "model": "TIVOLI XLV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1597,
+    "seconds": 12.3,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג טיבולי XLV 1.6 דיזל 115)"
+  },
+  {
+    "make": "סאנגיונג ד.קור",
+    "model": "TIVOLI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 128,
+    "cc": 1597,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג טיבולי 1.6 בנזין 128)"
+  },
+  {
+    "make": "סאנגיונג ד.קור",
+    "model": "TIVOLI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1497,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג טיבולי 1.5 טורבו 163)"
+  },
+  {
+    "make": "סאנגיונג",
+    "model": "טיבולי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 128,
+    "cc": 1597,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג טיבולי 128)"
+  },
+  {
+    "make": "SsangYong",
+    "model": "TIVOLI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 128,
+    "cc": 1597,
+    "seconds": 11.0,
+    "source": "נתון יצרן (SsangYong Tivoli 1.6)"
+  },
+  {
+    "make": "סאנגיונג ד.קור",
+    "model": "ACTYON TRUCK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 1998,
+    "seconds": 14.1,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג אקטיון ספורטס טנדר 2.0 דיזל 141)"
+  },
+  {
+    "make": "סאנגיונג ד.קור",
+    "model": "ACTYON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 1998,
+    "seconds": 14.1,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג אקטיון 2.0 דיזל 141)"
+  },
+  {
+    "make": "סאנגיונג",
+    "model": "אקטיון",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 1998,
+    "seconds": 14.1,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג אקטיון 141)"
+  },
+  {
+    "make": "SsangYong",
+    "model": "ACTYON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 1998,
+    "seconds": 14.1,
+    "source": "נתון יצרן (SsangYong Actyon 2.0)"
+  },
+  {
+    "make": "סאנגיונג ד.קור",
+    "model": "MUSSO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 2874,
+    "seconds": 18.2,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג מוסו 2.9 טורבו דיזל 120)"
+  },
+  {
+    "make": "סאנגיונג ד.קור",
+    "model": "MUSSO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 2157,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג מוסו טנדר 2.2 דיזל 181)"
+  },
+  {
+    "make": "סאנגיונג",
+    "model": "מוסו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 2874,
+    "seconds": 18.2,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג מוסו 120)"
+  },
+  {
+    "make": "SsangYong",
+    "model": "MUSSO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 2874,
+    "seconds": 18.2,
+    "source": "נתון יצרן (SsangYong Musso)"
+  },
+  {
+    "make": "סאנגיונג ד.קור",
+    "model": "CHAIRMAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 220,
+    "cc": 3199,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג צ'רמו סדאן פאר 3.2 220)"
+  },
+  {
+    "make": "סאנגיונג",
+    "model": "צ׳רמו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 220,
+    "cc": 3199,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג צ'רמו 220)"
+  },
+  {
+    "make": "SsangYong",
+    "model": "CHAIRMAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 220,
+    "cc": 3199,
+    "seconds": 8.5,
+    "source": "נתון יצרן (SsangYong Chairman)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "370Z",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 344,
+    "cc": 3696,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (ניסאן 370Z ניסמו NISMO 3.7 V6 344)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "370Z",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 328,
+    "cc": 3696,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (ניסאן 370Z קופה 3.7 V6 328)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "370z",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 344,
+    "cc": 3696,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (ניסאן 370Z 344)"
+  },
+  {
+    "make": "Nissan",
+    "model": "370Z",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 344,
+    "cc": 3696,
+    "seconds": 5.2,
+    "source": "נתון יצרן (Nissan 370Z Nismo)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "GT-R",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 570,
+    "cc": 3799,
+    "seconds": 2.8,
+    "source": "רישוי רכב / נתון יצרן (ניסאן GT-R 3.8 V6 טווין-טורבו 570)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "GTR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 570,
+    "cc": 3799,
+    "seconds": 2.8,
+    "source": "רישוי רכב / נתון יצרן (ניסאן GT-R 570)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "GT-R",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 3799,
+    "seconds": 2.7,
+    "source": "רישוי רכב / נתון יצרן (ניסאן GT-R ניסמו 600)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "Gtr",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 570,
+    "cc": 3799,
+    "seconds": 2.8,
+    "source": "רישוי רכב / נתון יצרן (ניסאן GT-R 570)"
+  },
+  {
+    "make": "Nissan",
+    "model": "GT-R",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 570,
+    "cc": 3799,
+    "seconds": 2.8,
+    "source": "נתון יצרן (Nissan GT-R Twin-Turbo)"
+  },
+  {
+    "make": "ניסאן ספרד",
+    "model": "NV200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1461,
+    "seconds": 13.9,
+    "source": "רישוי רכב / נתון יצרן (ניסאן NV200 מסחרית 1.5 dCi דיזל 90)"
+  },
+  {
+    "make": "ניסאן ספרד",
+    "model": "NV200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1461,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (ניסאן NV200 1.5 dCi 110)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "Nv200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1461,
+    "seconds": 13.9,
+    "source": "רישוי רכב / נתון יצרן (ניסאן NV200 90)"
+  },
+  {
+    "make": "Nissan",
+    "model": "NV200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1461,
+    "seconds": 13.9,
+    "source": "נתון יצרן (Nissan NV200)"
+  },
+  {
+    "make": "\"ניסאן ארהב",
+    "model": "ALTIMA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 188,
+    "cc": 2488,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אלטימה 2.5 בנזין 188)"
+  },
+  {
+    "make": "ניסאן ארהב\"",
+    "model": "ALTIMA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 188,
+    "cc": 2488,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אלטימה 2.5 188)"
+  },
+  {
+    "make": "ניסאן ארה\"ב",
+    "model": "ALTIMA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 188,
+    "cc": 2488,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אלטימה 2.5 188)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "אלטימה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 188,
+    "cc": 2488,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אלטימה 188)"
+  },
+  {
+    "make": "Nissan",
+    "model": "ALTIMA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 188,
+    "cc": 2488,
+    "seconds": 8.0,
+    "source": "נתון יצרן (Nissan Altima 2.5)"
+  },
+  {
+    "make": "ניסאן מקסיקו",
+    "model": "ALMERA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1598,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אלמרה דור חדש 1.6 109)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "ALMERA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 116,
+    "cc": 1769,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אלמרה פרפקט 1.8 116)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "ALMERA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 98,
+    "cc": 1498,
+    "seconds": 13.1,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אלמרה 1.5 98)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "אלמרה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1598,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אלמרה 109)"
+  },
+  {
+    "make": "Nissan",
+    "model": "ALMERA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1598,
+    "seconds": 11.5,
+    "source": "נתון יצרן (Nissan Almera 1.6)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "X-TRAIL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1332,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אקס-טרייל 1.33 טורבו בנזין 160)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "X-TRAIL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1598,
+    "seconds": 11.4,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אקס-טרייל 1.6 dCi דיזל 130)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "X-TRAIL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 1995,
+    "seconds": 10.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אקס-טרייל 2.0 dCi דיזל 177)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "X-TRAIL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1497,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אקס-טרייל e-Power היברידי 204)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "אקס טרייל",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1332,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אקס טרייל 160)"
+  },
+  {
+    "make": "Nissan",
+    "model": "X-TRAIL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1332,
+    "seconds": 11.5,
+    "source": "נתון יצרן (Nissan X-Trail 1.3T)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "JUKE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 117,
+    "cc": 1598,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (ניסאן ג'וק דור 1 1.6 117)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "JUKE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 114,
+    "cc": 999,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (ניסאן ג'וק דור 2 1.0 טורבו 114)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "JUKE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1598,
+    "seconds": 10.1,
+    "source": "רישוי רכב / נתון יצרן (ניסאן ג'וק היברידי 1.6 143)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "JUKE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1618,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן ג'וק 1.6 טורבו DIG-T 190)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "ג'וק",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 117,
+    "cc": 1598,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (ניסאן ג'וק 117)"
+  },
+  {
+    "make": "Nissan",
+    "model": "JUKE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 117,
+    "cc": 1598,
+    "seconds": 11.5,
+    "source": "נתון יצרן (Nissan Juke 1.6)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "QASHQAI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1332,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (ניסאן קשקאי דור 3 1.33 טורבו מיקרו-היברידי 156)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "QASHQAI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1197,
+    "seconds": 12.9,
+    "source": "רישוי רכב / נתון יצרן (ניסאן קשקאי דור 2 1.2 טורבו DIG-T 115)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "QASHQAI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1332,
+    "seconds": 10.1,
+    "source": "רישוי רכב / נתון יצרן (ניסאן קשקאי דור 2 מתוח פנים 1.33T 160)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "QASHQAI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1497,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (ניסאן קשקאי e-Power היברידי 190)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "קשקאי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1332,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (ניסאן קשקאי 156)"
+  },
+  {
+    "make": "Nissan",
+    "model": "QASHQAI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1332,
+    "seconds": 9.2,
+    "source": "נתון יצרן (Nissan Qashqai 1.3T)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "MICRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 88,
+    "cc": 1386,
+    "seconds": 13.7,
+    "source": "רישוי רכב / נתון יצרן (ניסאן מיקרה דור 3 1.4 88)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "MICRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 80,
+    "cc": 1198,
+    "seconds": 14.5,
+    "source": "רישוי רכב / נתון יצרן (ניסאן מיקרה דור 4 1.2 80)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "MICRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 999,
+    "seconds": 13.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן מיקרה דור 5 1.0 טורבו 100)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "מיקרה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 80,
+    "cc": 1198,
+    "seconds": 14.5,
+    "source": "רישוי רכב / נתון יצרן (ניסאן מיקרה 80)"
+  },
+  {
+    "make": "Nissan",
+    "model": "MICRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 80,
+    "cc": 1198,
+    "seconds": 14.5,
+    "source": "נתון יצרן (Nissan Micra 1.2)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "NOTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 98,
+    "cc": 1198,
+    "seconds": 12.2,
+    "source": "רישוי רכב / נתון יצרן (ניסאן נוט דור 2 1.2 DIG-S 98)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "NOTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1598,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (ניסאן נוט דור 1 1.6 110)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "נוט",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 98,
+    "cc": 1198,
+    "seconds": 12.2,
+    "source": "רישוי רכב / נתון יצרן (ניסאן נוט 98)"
+  },
+  {
+    "make": "Nissan",
+    "model": "NOTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 98,
+    "cc": 1198,
+    "seconds": 12.2,
+    "source": "נתון יצרן (Nissan Note 1.2)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "LEAF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (ניסאן ליף דור 2 חשמלית 40kWh 150)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "LEAF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 217,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (ניסאן ליף e+ 62kWh חשמלית 217)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "LEAF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 0,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (ניסאן ליף דור 1 חשמלית 109)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "ליף",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (ניסאן ליף 150)"
+  },
+  {
+    "make": "Nissan",
+    "model": "LEAF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "נתון יצרן (Nissan Leaf EV)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "ARIYA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אריה קרוסאובר חשמלי 218)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "ARIYA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 306,
+    "cc": 0,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אריה e-4ORCE חשמלי כפול מנועים 306)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "אריה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אריה 218)"
+  },
+  {
+    "make": "Nissan",
+    "model": "ARIYA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 7.5,
+    "source": "נתון יצרן (Nissan Ariya EV)"
+  },
+  {
+    "make": "\"ניסאן ארהב",
+    "model": "MAXIMA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 3498,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (ניסאן מקסימה סדאן ספורט 3.5 V6 300)"
+  },
+  {
+    "make": "ניסאן ארה\"ב",
+    "model": "MAXIMA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 3498,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (ניסאן מקסימה 300)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "מקסימה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 3498,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (ניסאן מקסימה 300)"
+  },
+  {
+    "make": "Nissan",
+    "model": "MAXIMA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 3498,
+    "seconds": 5.9,
+    "source": "נתון יצרן (Nissan Maxima 3.5 V6)"
+  },
+  {
+    "make": "ניסאן מקסיקו",
+    "model": "TIIDA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1598,
+    "seconds": 12.6,
+    "source": "רישוי רכב / נתון יצרן (ניסאן טידה 1.6 110)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "טידה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1598,
+    "seconds": 12.6,
+    "source": "רישוי רכב / נתון יצרן (ניסאן טידה 110)"
+  },
+  {
+    "make": "Nissan",
+    "model": "TIIDA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1598,
+    "seconds": 12.6,
+    "source": "נתון יצרן (Nissan Tiida 1.6)"
+  },
+  {
+    "make": "ניסאן מקסיקו",
+    "model": "SENTRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 149,
+    "cc": 1997,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (ניסאן סנטרה דור 8 2.0 בנזין 149)"
+  },
+  {
+    "make": "ניסאן מקסיקו",
+    "model": "SENTRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1798,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (ניסאן סנטרה דור 7 1.8 130)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "סנטרה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 149,
+    "cc": 1997,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (ניסאן סנטרה 149)"
+  },
+  {
+    "make": "Nissan",
+    "model": "SENTRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 149,
+    "cc": 1997,
+    "seconds": 9.2,
+    "source": "נתון יצרן (Nissan Sentra 2.0)"
+  },
+  {
+    "make": "ניסאן ספרד",
+    "model": "TERRANO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 2664,
+    "seconds": 16.7,
+    "source": "רישוי רכב / נתון יצרן (ניסאן טראנו 2 2.7 טורבו-דיזל 125)"
+  },
+  {
+    "make": "ניסאן ספרד",
+    "model": "TERRANO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 154,
+    "cc": 2953,
+    "seconds": 13.3,
+    "source": "רישוי רכב / נתון יצרן (ניסאן טראנו 3.0 Di דיזל 154)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "טראנו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 2664,
+    "seconds": 16.7,
+    "source": "רישוי רכב / נתון יצרן (ניסאן טראנו 125)"
+  },
+  {
+    "make": "Nissan",
+    "model": "TERRANO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 2664,
+    "seconds": 16.7,
+    "source": "נתון יצרן (Nissan Terrano 2.7 TD)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "MURANO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 256,
+    "cc": 3498,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן מוראנו דור 2 3.5 V6 256)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "MURANO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 234,
+    "cc": 3498,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (ניסאן מוראנו דור 1 3.5 V6 234)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "מוראנו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 256,
+    "cc": 3498,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן מוראנו 256)"
+  },
+  {
+    "make": "Nissan",
+    "model": "MURANO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 256,
+    "cc": 3498,
+    "seconds": 8.0,
+    "source": "נתון יצרן (Nissan Murano 3.5 V6)"
+  },
+  {
+    "make": "ניסאן ספרד",
+    "model": "NAVARA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 171,
+    "cc": 2488,
+    "seconds": 11.8,
+    "source": "רישוי רכב / נתון יצרן (ניסאן נבארה טנדר 2.5 dCi דיזל 171)"
+  },
+  {
+    "make": "ניסאן ספרד",
+    "model": "NAVARA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 2488,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (ניסאן נבארה 2.5 dCi 190)"
+  },
+  {
+    "make": "ניסאן ספרד",
+    "model": "NAVARA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 2298,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (ניסאן נבארה NP300 טווין טורבו דיזל 2.3 190)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "נבארה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 171,
+    "cc": 2488,
+    "seconds": 11.8,
+    "source": "רישוי רכב / נתון יצרן (ניסאן נבארה 171)"
+  },
+  {
+    "make": "Nissan",
+    "model": "NAVARA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 171,
+    "cc": 2488,
+    "seconds": 11.8,
+    "source": "נתון יצרן (Nissan Navara 2.5 dCi)"
+  },
+  {
+    "make": "ניסאן ספרד",
+    "model": "PATHFINDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 2488,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן פאת'פיינדר 2.5 dCi דיזל 190)"
+  },
+  {
+    "make": "ניסאן ספרד",
+    "model": "PATHFINDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 174,
+    "cc": 2488,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (ניסאן פאת'פיינדר 2.5 dCi 174)"
+  },
+  {
+    "make": "\"ניסאן ארהב",
+    "model": "PATHFINDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 260,
+    "cc": 3498,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן פאת'פיינדר 3.5 V6 בנזין 260)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "פאתפיינדר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 2488,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן פאת'פיינדר 190)"
+  },
+  {
+    "make": "Nissan",
+    "model": "PATHFINDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 2488,
+    "seconds": 11.0,
+    "source": "נתון יצרן (Nissan Pathfinder 2.5 dCi)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "PATROL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 158,
+    "cc": 2953,
+    "seconds": 15.2,
+    "source": "רישוי רכב / נתון יצרן (ניסאן פטרול שטח GR 3.0 Di דיזל 158)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "פטרול",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 158,
+    "cc": 2953,
+    "seconds": 15.2,
+    "source": "רישוי רכב / נתון יצרן (ניסאן פטרול 158)"
+  },
+  {
+    "make": "Nissan",
+    "model": "PATROL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 158,
+    "cc": 2953,
+    "seconds": 15.2,
+    "source": "נתון יצרן (Nissan Patrol)"
+  },
+  {
+    "make": "\"ניסאן ארהב",
+    "model": "ARMADA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 390,
+    "cc": 5552,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (ניסאן ארמדה SUV ענק 5.6 V8 390)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "ארמדה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 390,
+    "cc": 5552,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (ניסאן ארמדה 390)"
+  },
+  {
+    "make": "Nissan",
+    "model": "ARMADA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 390,
+    "cc": 5552,
+    "seconds": 6.8,
+    "source": "נתון יצרן (Nissan Armada 5.6 V8)"
+  },
+  {
+    "make": "\"ניסאן ארהב",
+    "model": "XTERRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 261,
+    "cc": 3954,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אקסטרה שטח 4.0 V6 261)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "אקסטרה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 261,
+    "cc": 3954,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אקסטרה 261)"
+  },
+  {
+    "make": "Nissan",
+    "model": "XTERRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 261,
+    "cc": 3954,
+    "seconds": 7.7,
+    "source": "נתון יצרן (Nissan Xterra)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "Z",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 405,
+    "cc": 2997,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (ניסאן Z החדשה 400Z טווין טורבו 3.0 V6 405)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "400Z",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 405,
+    "cc": 2997,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (ניסאן 400Z 405)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "זד400",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 405,
+    "cc": 2997,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (ניסאן Z400 405)"
+  },
+  {
+    "make": "Nissan",
+    "model": "400Z",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 405,
+    "cc": 2997,
+    "seconds": 4.5,
+    "source": "נתון יצרן (Nissan Z 3.0T)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "WINNER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 104,
+    "cc": 2494,
+    "seconds": 18.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן ווינר D22 טנדר 2.5 דיזל 104)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "WINNER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 133,
+    "cc": 2488,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (ניסאן ווינר טנדר 2.5 dCi 133)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "ווינר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 104,
+    "cc": 2494,
+    "seconds": 18.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן ווינר 104)"
+  },
+  {
+    "make": "Nissan",
+    "model": "WINNER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 104,
+    "cc": 2494,
+    "seconds": 18.0,
+    "source": "נתון יצרן (Nissan Winner D22)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "PRIMERA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1998,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (ניסאן פרימרה 2.0 140)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "PRIMERA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 116,
+    "cc": 1769,
+    "seconds": 12.8,
+    "source": "רישוי רכב / נתון יצרן (ניסאן פרימרה 1.8 116)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "פרימרה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1998,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (ניסאן פרימרה 140)"
+  },
+  {
+    "make": "Nissan",
+    "model": "PRIMERA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1998,
+    "seconds": 10.9,
+    "source": "נתון יצרן (Nissan Primera)"
+  },
+  {
+    "make": "ניסאן ספרד",
+    "model": "SERENA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 126,
+    "cc": 1998,
+    "seconds": 14.9,
+    "source": "רישוי רכב / נתון יצרן (ניסאן סרנה מיניוואן 2.0 126)"
+  },
+  {
+    "make": "ניסאן ספרד",
+    "model": "SERENA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 2283,
+    "seconds": 23.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן סרנה 2.3 דיזל 75)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "סרנה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 126,
+    "cc": 1998,
+    "seconds": 14.9,
+    "source": "רישוי רכב / נתון יצרן (ניסאן סרנה 126)"
+  },
+  {
+    "make": "Nissan",
+    "model": "SERENA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 126,
+    "cc": 1998,
+    "seconds": 14.9,
+    "source": "נתון יצרן (Nissan Serena)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "LARGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 2388,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (ניסאן לארגו מסחרית 2.4 145)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "לארגו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 2388,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (ניסאן לארגו 145)"
+  },
+  {
+    "make": "Nissan",
+    "model": "LARGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 2388,
+    "seconds": 13.5,
+    "source": "נתון יצרן (Nissan Largo)"
+  },
+  {
+    "make": "ניסאן ספרד",
+    "model": "CABSTAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 2488,
+    "seconds": 19.5,
+    "source": "רישוי רכב / נתון יצרן (ניסאן קבסטאר משאית קלה 2.5 dCi 130)"
+  },
+  {
+    "make": "ניסאן ספרד",
+    "model": "CABSTAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 2953,
+    "seconds": 18.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן קבסטאר 3.0 dCi 150)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "קבסטאר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 2488,
+    "seconds": 19.5,
+    "source": "רישוי רכב / נתון יצרן (ניסאן קבסטאר 130)"
+  },
+  {
+    "make": "Nissan",
+    "model": "CABSTAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 2488,
+    "seconds": 19.5,
+    "source": "נתון יצרן (Nissan Cabstar)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "PULSAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1197,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (ניסאן פולסאר 1.2 טורבו DIG-T 115)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "PULSAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1618,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (ניסאן פולסאר 1.6 טורבו 190)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "פולסטר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1197,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (ניסאן פולסאר 115)"
+  },
+  {
+    "make": "Nissan",
+    "model": "PULSAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1197,
+    "seconds": 10.7,
+    "source": "נתון יצרן (Nissan Pulsar 1.2T)"
+  }
+]
