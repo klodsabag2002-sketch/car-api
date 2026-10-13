@@ -1,1 +1,902 @@
-klod
+[
+  {
+    "make": "פורשה גרמניה",
+    "model": "718 BOXSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1988,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (פורשה 718 בוקסטר 2.0 טורבו 300 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "BOXSTER 718",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1988,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (פורשה בוקסטר 718 2.0 300 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "718 BOXSTER S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 350,
+    "cc": 2497,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (פורשה 718 בוקסטר S 2.5 טורבו 350 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "718 BOXSTER GTS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 400,
+    "cc": 3995,
+    "seconds": 4.0,
+    "source": "רישוי רכב / נתון יצרן (פורשה 718 בוקסטר GTS 4.0 400 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "718 CAYMAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1988,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (פורשה 718 קאיימן 2.0 טורבו 300 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "CAYMAN 718",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1988,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (פורשה קאיימן 718 300 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "718 CAYMAN S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 350,
+    "cc": 2497,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (פורשה 718 קאיימן S 2.5 טורבו 350 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "718 CAYMAN GT4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 420,
+    "cc": 3995,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (פורשה 718 קאיימן GT4 4.0 420 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "718 CAYMAN GT4 RS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 500,
+    "cc": 3996,
+    "seconds": 3.4,
+    "source": "רישוי רכב / נתון יצרן (פורשה 718 GT4 RS 500 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "718",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1988,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (פורשה 718 300 כ\"ס)"
+  },
+  {
+    "make": "פורשה",
+    "model": "718",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1988,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (פורשה 718 300 כ\"ס)"
+  },
+  {
+    "make": "Porsche",
+    "model": "718",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1988,
+    "seconds": 4.9,
+    "source": "נתון יצרן (Porsche 718 Boxster/Cayman)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "BOXSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 2706,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (פורשה בוקסטר 981 2.7 265 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "BOXSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 315,
+    "cc": 3436,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (פורשה בוקסטר S 981 3.4 315 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "BOXSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 255,
+    "cc": 2893,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (פורשה בוקסטר 987 2.9 255 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "BOXSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 228,
+    "cc": 2687,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (פורשה בוקסטר 986 2.7 228 כ\"ס)"
+  },
+  {
+    "make": "פורשה",
+    "model": "בוקסטר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1988,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (פורשה בוקסטר 300 כ\"ס)"
+  },
+  {
+    "make": "Porsche",
+    "model": "BOXSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1988,
+    "seconds": 4.9,
+    "source": "נתון יצרן (Porsche Boxster)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "CAYMAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 2706,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (פורשה קאיימן 981 2.7 275 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "CAYMAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 325,
+    "cc": 3436,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (פורשה קאיימן S 981 3.4 325 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "CAYMAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 2893,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (פורשה קאיימן 987 2.9 265 כ\"ס)"
+  },
+  {
+    "make": "פורשה",
+    "model": "קאיימן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1988,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (פורשה קאיימן 300 כ\"ס)"
+  },
+  {
+    "make": "Porsche",
+    "model": "CAYMAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1988,
+    "seconds": 4.9,
+    "source": "נתון יצרן (Porsche Cayman)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "911 CARRERA S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 450,
+    "cc": 2981,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 קאררה S דור 992 3.0 טווין-טורבו 450 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "911 CARRERA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 385,
+    "cc": 2981,
+    "seconds": 4.2,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 קאררה דור 992 3.0 טווין-טורבו 385 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "911 CARRERA 4S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 450,
+    "cc": 2981,
+    "seconds": 3.6,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 קאררה 4S AWD 450 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "911 CARRERA GTS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 480,
+    "cc": 2981,
+    "seconds": 3.4,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 קאררה GTS 480 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "911 TURBO S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 650,
+    "cc": 3745,
+    "seconds": 2.7,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 טורבו S דור 992 650 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "911 TURBO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 580,
+    "cc": 3745,
+    "seconds": 2.8,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 טורבו 580 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "911 GT3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 3996,
+    "seconds": 3.4,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 GT3 אטמוספרי 4.0 510 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "911 GT3 RS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 525,
+    "cc": 3996,
+    "seconds": 3.2,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 GT3 RS ספורט מסלול 525 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "911 CARRERA S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 420,
+    "cc": 2981,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 קאררה S דור 991.2 420 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "911 CARRERA S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 400,
+    "cc": 3800,
+    "seconds": 4.3,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 קאררה S דור 991.1 אטמוספרי 400 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "911 CARRERA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 350,
+    "cc": 3436,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 קאררה דור 991 350 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "911",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 450,
+    "cc": 2981,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 450 כ\"ס)"
+  },
+  {
+    "make": "פורשה",
+    "model": "911",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 450,
+    "cc": 2981,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 450 כ\"ס)"
+  },
+  {
+    "make": "פורשה",
+    "model": "911 קארה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 450,
+    "cc": 2981,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 קאררה 450 כ\"ס)"
+  },
+  {
+    "make": "Porsche",
+    "model": "911",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 450,
+    "cc": 2981,
+    "seconds": 3.7,
+    "source": "נתון יצרן (Porsche 911 Carrera S)"
+  },
+  {
+    "make": "Porsche",
+    "model": "911 CARRERA S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 450,
+    "cc": 2981,
+    "seconds": 3.7,
+    "source": "נתון יצרן (Porsche 911 Carrera S)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "TAYCAN 4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 0,
+    "seconds": 5.1,
+    "source": "רישוי רכב / נתון יצרן (פורשה טייקן 4 קרוס טוריסמו AWD חשמלי מלא 380/476 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "TAYCAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 326,
+    "cc": 0,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (פורשה טייקן RWD חשמלי מלא 326/408 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "TAYCAN 4S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 435,
+    "cc": 0,
+    "seconds": 4.0,
+    "source": "רישוי רכב / נתון יצרן (פורשה טייקן 4S AWD חשמלי 435/530 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "TAYCAN GTS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 517,
+    "cc": 0,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (פורשה טייקן GTS חשמלי 517/598 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "TAYCAN TURBO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 625,
+    "cc": 0,
+    "seconds": 3.2,
+    "source": "רישוי רכב / נתון יצרן (פורשה טייקן טורבו חשמלי 625/680 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "TAYCAN TURBO S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 625,
+    "cc": 0,
+    "seconds": 2.8,
+    "source": "רישוי רכב / נתון יצרן (פורשה טייקן טורבו S חשמלי 625/761 כ\"ס)"
+  },
+  {
+    "make": "פורשה",
+    "model": "טייקן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 0,
+    "seconds": 5.1,
+    "source": "רישוי רכב / נתון יצרן (פורשה טייקן 380 כ\"ס)"
+  },
+  {
+    "make": "Porsche",
+    "model": "TAYCAN 4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 0,
+    "seconds": 5.1,
+    "source": "נתון יצרן (Porsche Taycan 4 Cross Turismo)"
+  },
+  {
+    "make": "Porsche",
+    "model": "TAYCAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 0,
+    "seconds": 5.1,
+    "source": "נתון יצרן (Porsche Taycan EV)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "MACAN GTS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 360,
+    "cc": 2997,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (פורשה מקאן GTS דור ראשון 3.0 V6 טווין-טורבו 360 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "MACAN GTS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 2894,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (פורשה מקאן GTS דור 2 2.9 V6 טווין-טורבו 380 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "MACAN GTS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 440,
+    "cc": 2894,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (פורשה מקאן GTS מתיחת פנים אחרונה 440 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "MACAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 1984,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (פורשה מקאן 2.0 טורבו 265 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "MACAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1984,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (פורשה מקאן 2.0 טורבו 252 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "MACAN S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 2894,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (פורשה מקאן S 2.9 V6 380 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "MACAN S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 354,
+    "cc": 2995,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (פורשה מקאן S 3.0 V6 354 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "MACAN TURBO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 440,
+    "cc": 2894,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (פורשה מקאן טורבו 440 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "MACAN EV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 408,
+    "cc": 0,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (פורשה מקאן 4 חשמלי מלא 408 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "MACAN TURBO EV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 639,
+    "cc": 0,
+    "seconds": 3.3,
+    "source": "רישוי רכב / נתון יצרן (פורשה מקאן טורבו חשמלי מלא 639 כ\"ס)"
+  },
+  {
+    "make": "פורשה",
+    "model": "מקאן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 360,
+    "cc": 2997,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (פורשה מקאן GTS 360 כ\"ס)"
+  },
+  {
+    "make": "פורשה",
+    "model": "מקאן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 1984,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (פורשה מקאן 265 כ\"ס)"
+  },
+  {
+    "make": "Porsche",
+    "model": "MACAN GTS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 360,
+    "cc": 2997,
+    "seconds": 5.2,
+    "source": "נתון יצרן (Porsche Macan GTS)"
+  },
+  {
+    "make": "Porsche",
+    "model": "MACAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 1984,
+    "seconds": 6.4,
+    "source": "נתון יצרן (Porsche Macan 2.0T)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "PANAMERA 4 E-HY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 330,
+    "cc": 2894,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (פורשה פאנאמרה 4 E-Hybrid פלאג-אין PHEV מנוע בנזין 330 כ\"ס / משולב 462 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "PANAMERA 4 E-HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 462,
+    "cc": 2894,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (פורשה פאנאמרה 4 E-Hybrid משולב 462 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "PANAMERA 4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 330,
+    "cc": 2894,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (פורשה פאנאמרה 4 2.9 V6 טווין-טורבו 330 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "PANAMERA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 330,
+    "cc": 2894,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (פורשה פאנאמרה 2.9 V6 330 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "PANAMERA GTS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 480,
+    "cc": 3996,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (פורשה פאנאמרה GTS 4.0 V8 טווין-טורבו 480 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "PANAMERA TURBO S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 630,
+    "cc": 3996,
+    "seconds": 3.1,
+    "source": "רישוי רכב / נתון יצרן (פורשה פאנאמרה טורבו S 630 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "PANAMERA TURBO S E-HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 700,
+    "cc": 3996,
+    "seconds": 3.2,
+    "source": "רישוי רכב / נתון יצרן (פורשה פאנאמרה טורבו S E-Hybrid משולב 700 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "PANAMERA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 3605,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (פורשה פאנאמרה דור ראשון 3.6 V6 300 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "PANAMERA 4S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 400,
+    "cc": 4806,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (פורשה פאנאמרה 4S דור ראשון 4.8 V8 400 כ\"ס)"
+  },
+  {
+    "make": "פורשה",
+    "model": "פאנאמרה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 330,
+    "cc": 2894,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (פורשה פאנאמרה 330 כ\"ס)"
+  },
+  {
+    "make": "Porsche",
+    "model": "PANAMERA 4 E-HY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 330,
+    "cc": 2894,
+    "seconds": 4.4,
+    "source": "נתון יצרן (Porsche Panamera 4 E-Hybrid)"
+  },
+  {
+    "make": "Porsche",
+    "model": "PANAMERA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 330,
+    "cc": 2894,
+    "seconds": 4.4,
+    "source": "נתון יצרן (Porsche Panamera)"
+  },
+  {
+    "make": "פורשה סלובקיה",
+    "model": "CAYENNE EHYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (פורשה קאיין E-Hybrid פלאג-אין PHEV מנוע בנזין 340 כ\"ס / משולב 462 כ\"ס)"
+  },
+  {
+    "make": "פורשה סלובקיה",
+    "model": "CAYENNE E-HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 462,
+    "cc": 2995,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (פורשה קאיין E-Hybrid משולב 462 כ\"ס)"
+  },
+  {
+    "make": "פורשה סלובקיה",
+    "model": "CAYENNE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (פורשה קאיין דור 3 3.0 V6 טורבו 340 כ\"ס)"
+  },
+  {
+    "make": "פורשה סלובקיה",
+    "model": "CAYENNE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 353,
+    "cc": 2995,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (פורשה קאיין דור 3 מתוח פנים 3.0 V6 353 כ\"ס)"
+  },
+  {
+    "make": "פורשה סלובקיה",
+    "model": "CAYENNE S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 440,
+    "cc": 2894,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (פורשה קאיין S 2.9 V6 טווין-טורבו 440 כ\"ס)"
+  },
+  {
+    "make": "פורשה סלובקיה",
+    "model": "CAYENNE S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 474,
+    "cc": 3996,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (פורשה קאיין S דור חדש 4.0 V8 טווין-טורבו 474 כ\"ס)"
+  },
+  {
+    "make": "פורשה סלובקיה",
+    "model": "CAYENNE GTS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 460,
+    "cc": 3996,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (פורשה קאיין GTS 4.0 V8 460 כ\"ס)"
+  },
+  {
+    "make": "פורשה סלובקיה",
+    "model": "CAYENNE TURBO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 550,
+    "cc": 3996,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (פורשה קאיין טורבו 4.0 V8 550 כ\"ס)"
+  },
+  {
+    "make": "פורשה סלובקיה",
+    "model": "CAYENNE TURBO GT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 640,
+    "cc": 3996,
+    "seconds": 3.3,
+    "source": "רישוי רכב / נתון יצרן (פורשה קאיין טורבו GT קופה 640 כ\"ס)"
+  },
+  {
+    "make": "פורשה סלובקיה",
+    "model": "CAYENNE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 3598,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (פורשה קאיין דור 2 3.6 V6 300 כ\"ס)"
+  },
+  {
+    "make": "פורשה סלובקיה",
+    "model": "CAYENNE S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 400,
+    "cc": 4806,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (פורשה קאיין S דור 2 4.8 V8 400 כ\"ס)"
+  },
+  {
+    "make": "פורשה סלובקיה",
+    "model": "CAYENNE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 3189,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (פורשה קאיין דור 1 3.2 V6 250 כ\"ס)"
+  },
+  {
+    "make": "פורשה סלובקיה",
+    "model": "CAYENNE S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 4511,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (פורשה קאיין S דור 1 4.5 V8 340 כ\"ס)"
+  },
+  {
+    "make": "פורשה",
+    "model": "קאיין",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (פורשה קאיין 340 כ\"ס)"
+  },
+  {
+    "make": "Porsche",
+    "model": "CAYENNE EHYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 5.0,
+    "source": "נתון יצרן (Porsche Cayenne E-Hybrid)"
+  },
+  {
+    "make": "Porsche",
+    "model": "CAYENNE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2995,
+    "seconds": 6.2,
+    "source": "נתון יצרן (Porsche Cayenne 3.0T)"
+  }
+]
