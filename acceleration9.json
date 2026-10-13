@@ -1,1 +1,402 @@
-klod
+[
+  {
+    "make": "אף אי דאבל יו",
+    "model": "EHS5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 285,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י EHS5 חשמלי RWD 285)"
+  },
+  {
+    "make": "אף אי דאבל יו",
+    "model": "E-HS5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 285,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י EHS5 חשמלי RWD 285)"
+  },
+  {
+    "make": "אף אי דאבל יו",
+    "model": "EHS5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 619,
+    "cc": 0,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י EHS5 חשמלי AWD 619)"
+  },
+  {
+    "make": "הונגצ'י",
+    "model": "EHS5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 285,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י EHS5 285)"
+  },
+  {
+    "make": "Hongqi",
+    "model": "EHS5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 285,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "נתון יצרן (Hongqi EHS5 EV 285)"
+  },
+  {
+    "make": "Hongqi",
+    "model": "E-HS5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 285,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "נתון יצרן (Hongqi E-HS5 EV)"
+  },
+  {
+    "make": "אף אי דאבל יו",
+    "model": "EHS7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י EHS7 חשמלי RWD 340)"
+  },
+  {
+    "make": "אף אי דאבל יו",
+    "model": "E-HS7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י EHS7 חשמלי RWD 340)"
+  },
+  {
+    "make": "אף אי דאבל יו",
+    "model": "EHS7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 344,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י EHS7 חשמלי RWD 344)"
+  },
+  {
+    "make": "אף אי דאבל יו",
+    "model": "EHS7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 619,
+    "cc": 0,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י EHS7 חשמלי AWD 619)"
+  },
+  {
+    "make": "הונגצ'י",
+    "model": "EHS7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י EHS7 340)"
+  },
+  {
+    "make": "Hongqi",
+    "model": "EHS7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "נתון יצרן (Hongqi EHS7 EV 340)"
+  },
+  {
+    "make": "Hongqi",
+    "model": "E-HS7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "נתון יצרן (Hongqi E-HS7 EV)"
+  },
+  {
+    "make": "Hongqi",
+    "model": "EHS7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 619,
+    "cc": 0,
+    "seconds": 3.9,
+    "source": "נתון יצרן (Hongqi EHS7 AWD)"
+  },
+  {
+    "make": "אף אי דאבל יו",
+    "model": "EH7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י EH7 סדאן חשמלי RWD 340)"
+  },
+  {
+    "make": "אף אי דאבל יו",
+    "model": "E-H7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י EH7 סדאן חשמלי RWD 340)"
+  },
+  {
+    "make": "אף אי דאבל יו",
+    "model": "EH7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 344,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י EH7 סדאן חשמלי RWD 344)"
+  },
+  {
+    "make": "אף אי דאבל יו",
+    "model": "EH7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 619,
+    "cc": 0,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י EH7 סדאן חשמלי AWD 619)"
+  },
+  {
+    "make": "הונגצ'י",
+    "model": "EH7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י EH7 340)"
+  },
+  {
+    "make": "Hongqi",
+    "model": "EH7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "נתון יצרן (Hongqi EH7 EV 340)"
+  },
+  {
+    "make": "Hongqi",
+    "model": "E-H7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "נתון יצרן (Hongqi E-H7 EV)"
+  },
+  {
+    "make": "Hongqi",
+    "model": "EH7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 619,
+    "cc": 0,
+    "seconds": 3.5,
+    "source": "נתון יצרן (Hongqi EH7 AWD)"
+  },
+  {
+    "make": "אף אי דאבל יו",
+    "model": "E-HS9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 551,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י E-HS9 חשמלי Exclusive 551)"
+  },
+  {
+    "make": "אף אי דאבל יו",
+    "model": "EHS9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 551,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י E-HS9 חשמלי Exclusive 551)"
+  },
+  {
+    "make": "אף אי דאבל יו",
+    "model": "E-HS9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 435,
+    "cc": 0,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י E-HS9 חשמלי Comfort 435)"
+  },
+  {
+    "make": "אף אי דאבל יו",
+    "model": "E-HS9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 436,
+    "cc": 0,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י E-HS9 חשמלי Premium 436)"
+  },
+  {
+    "make": "הונגצ'י",
+    "model": "E-HS9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 551,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י E-HS9 551)"
+  },
+  {
+    "make": "הונגצ'י",
+    "model": "EHS9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 551,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י E-HS9 551)"
+  },
+  {
+    "make": "Hongqi",
+    "model": "E-HS9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 551,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "נתון יצרן (Hongqi E-HS9 551)"
+  },
+  {
+    "make": "Hongqi",
+    "model": "E-HS9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 435,
+    "cc": 0,
+    "seconds": 6.5,
+    "source": "נתון יצרן (Hongqi E-HS9 435)"
+  },
+  {
+    "make": "Hongqi",
+    "model": "EHS9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 551,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "נתון יצרן (Hongqi E-HS9 551)"
+  },
+  {
+    "make": "אף אי דאבל יו",
+    "model": "H5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 224,
+    "cc": 1989,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י H5 / אוסדו 2.0 טורבו 224)"
+  },
+  {
+    "make": "אף אי דאבל יו",
+    "model": "OUSADO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 224,
+    "cc": 1989,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י אוסדו 2.0 טורבו 224)"
+  },
+  {
+    "make": "אף אי דאבל יו",
+    "model": "הוסדו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 224,
+    "cc": 1989,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י הוסדו 2.0 טורבו 224)"
+  },
+  {
+    "make": "אף אי דאבל יו",
+    "model": "H5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 169,
+    "cc": 1498,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י H5 1.5 טורבו 169)"
+  },
+  {
+    "make": "אף אי דאבל יו",
+    "model": "H5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1498,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י H5 היברידי 1.5T HEV 190)"
+  },
+  {
+    "make": "הונגצ'י",
+    "model": "הוסדו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 224,
+    "cc": 1989,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י אוסדו / הוסדו 224)"
+  },
+  {
+    "make": "הונגצ'י",
+    "model": "H5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 224,
+    "cc": 1989,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (הונגצ'י H5 224)"
+  },
+  {
+    "make": "Hongqi",
+    "model": "H5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 224,
+    "cc": 1989,
+    "seconds": 7.8,
+    "source": "נתון יצרן (Hongqi H5 2.0T)"
+  },
+  {
+    "make": "Hongqi",
+    "model": "OUSADO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 224,
+    "cc": 1989,
+    "seconds": 7.8,
+    "source": "נתון יצרן (Hongqi Ousado 2.0T)"
+  }
+]
