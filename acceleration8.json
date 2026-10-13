@@ -1,5 +1,245 @@
 [
   {
+    "make": "\"קרייזלר ארהב",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 3700,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 3.7 V6 אוטומט 202)"
+  },
+  {
+    "make": "קרייזלר ארהב\"",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 3700,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 3.7 V6 אוטומט 202)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 3700,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 3.7 V6 אוטומט 202)"
+  },
+  {
+    "make": "\"קרייזלר ארהב",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3700,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 3.7 V6 אוטומט 205)"
+  },
+  {
+    "make": "קרייזלר ארהב\"",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3700,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 3.7 V6 אוטומט 205)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3700,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 3.7 V6 אוטומט 205)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 211,
+    "cc": 3700,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 3.7 V6 דור KJ 211)"
+  },
+  {
+    "make": "קרייזלר ארהב\"",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 211,
+    "cc": 3700,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 3.7 V6 דור KJ 211)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 2777,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 2.8 CRD דיזל 177)"
+  },
+  {
+    "make": "קרייזלר ארהב\"",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 2777,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 2.8 CRD דיזל 177)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 2777,
+    "seconds": 12.2,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 2.8 CRD דיזל 163)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 2429,
+    "seconds": 13.9,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 2.4 ידני 147)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 271,
+    "cc": 3239,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 3.2 V6 Pentastar 271)"
+  },
+  {
+    "make": "\"קרייזלר ארהב",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 271,
+    "cc": 3239,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 3.2 V6 Pentastar 271)"
+  },
+  {
+    "make": "קרייזלר ארהב\"",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 271,
+    "cc": 3239,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 3.2 V6 271)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 2360,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 2.4 Tigershark 184)"
+  },
+  {
+    "make": "ג'יפ ארהב\"",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 270,
+    "cc": 1995,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 2.0T טורבו 270)"
+  },
+  {
+    "make": "ג'יפ",
+    "model": "צ'ירוקי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 3700,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 3.7 V6 202)"
+  },
+  {
+    "make": "ג'יפ",
+    "model": "צ'ירוקי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3700,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 3.7 V6 205)"
+  },
+  {
+    "make": "ג'יפ",
+    "model": "צ'ירוקי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 271,
+    "cc": 3239,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (ג'יפ צ'ירוקי 271)"
+  },
+  {
+    "make": "Jeep",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 3700,
+    "seconds": 10.7,
+    "source": "נתון יצרן (Jeep Cherokee 3.7 V6 202)"
+  },
+  {
+    "make": "Jeep",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 3700,
+    "seconds": 10.7,
+    "source": "נתון יצרן (Jeep Cherokee 3.7 V6 205)"
+  },
+  {
+    "make": "Jeep",
+    "model": "CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 271,
+    "cc": 3239,
+    "seconds": 8.1,
+    "source": "נתון יצרן (Jeep Cherokee 3.2 V6)"
+  },
+  {
+    "make": "Jeep",
+    "model": "JEEP CHEROKEE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 271,
+    "cc": 3239,
+    "seconds": 8.1,
+    "source": "נתון יצרן (Jeep Cherokee 3.2 V6)"
+  },
+  {
     "make": "דיפאל סין",
     "model": "DEEPAL S07",
     "yearStart": null,
