@@ -1,1 +1,1032 @@
-klod
+[
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS LBX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1490,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (לקסוס LBX היברידי 1.5 136)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LBX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1490,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (לקסוס LBX היברידי 1.5 136)"
+  },
+  {
+    "make": "לקסוס",
+    "model": "LBX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1490,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (לקסוס LBX 136)"
+  },
+  {
+    "make": "Lexus",
+    "model": "LEXUS LBX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1490,
+    "seconds": 9.2,
+    "source": "נתון יצרן (Lexus LBX Hybrid)"
+  },
+  {
+    "make": "Lexus",
+    "model": "LBX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1490,
+    "seconds": 9.2,
+    "source": "נתון יצרן (Lexus LBX Hybrid)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS CT200H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 99,
+    "cc": 1798,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (לקסוס CT200h היברידי 1.8 99/136)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "CT200H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 99,
+    "cc": 1798,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (לקסוס CT200h 1.8 99)"
+  },
+  {
+    "make": "לקסוס",
+    "model": "CT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 99,
+    "cc": 1798,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (לקסוס CT 99)"
+  },
+  {
+    "make": "Lexus",
+    "model": "LEXUS CT200H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 99,
+    "cc": 1798,
+    "seconds": 10.3,
+    "source": "נתון יצרן (Lexus CT200h)"
+  },
+  {
+    "make": "Lexus",
+    "model": "CT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 99,
+    "cc": 1798,
+    "seconds": 10.3,
+    "source": "נתון יצרן (Lexus CT200h)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS ES300H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 178,
+    "cc": 2487,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (לקסוס ES300h היברידי 2.5 178/218)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "ES300H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 178,
+    "cc": 2487,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (לקסוס ES300h 178)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS ES350",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 302,
+    "cc": 3456,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (לקסוס ES350 3.5 V6 302)"
+  },
+  {
+    "make": "לקסוס",
+    "model": "ES",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 178,
+    "cc": 2487,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (לקסוס ES 178)"
+  },
+  {
+    "make": "Lexus",
+    "model": "LEXUS ES300H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 178,
+    "cc": 2487,
+    "seconds": 8.9,
+    "source": "נתון יצרן (Lexus ES300h)"
+  },
+  {
+    "make": "Lexus",
+    "model": "ES",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 178,
+    "cc": 2487,
+    "seconds": 8.9,
+    "source": "נתון יצרן (Lexus ES300h)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS GS250",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 209,
+    "cc": 2500,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (לקסוס GS250 2.5 V6 209)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS GS300H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 2494,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (לקסוס GS300h היברידי 2.5 181/223)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS GS450H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 292,
+    "cc": 3456,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (לקסוס GS450h היברידי 3.5 V6 292/345)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS GS350",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 317,
+    "cc": 3456,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (לקסוס GS350 3.5 V6 317)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS GS F",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 477,
+    "cc": 4969,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (לקסוס GS F 5.0 V8 477)"
+  },
+  {
+    "make": "לקסוס",
+    "model": "GS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 209,
+    "cc": 2500,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (לקסוס GS250 209)"
+  },
+  {
+    "make": "Lexus",
+    "model": "LEXUS GS250",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 209,
+    "cc": 2500,
+    "seconds": 8.6,
+    "source": "נתון יצרן (Lexus GS250)"
+  },
+  {
+    "make": "Lexus",
+    "model": "GS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 209,
+    "cc": 2500,
+    "seconds": 8.6,
+    "source": "נתון יצרן (Lexus GS250)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS GX550",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 354,
+    "cc": 3445,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (לקסוס GX550 3.4TT טווין-טורבו V6 354)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS GX460",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 301,
+    "cc": 4608,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (לקסוס GX460 4.6 V8 301)"
+  },
+  {
+    "make": "לקסוס",
+    "model": "GX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 354,
+    "cc": 3445,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (לקסוס GX550 354)"
+  },
+  {
+    "make": "Lexus",
+    "model": "GX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 354,
+    "cc": 3445,
+    "seconds": 6.5,
+    "source": "נתון יצרן (Lexus GX550)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS IS300H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 2494,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (לקסוס IS300h היברידי 2.5 181/223)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS IS300H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 223,
+    "cc": 2494,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (לקסוס IS300h 223)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "IS300H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 2494,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (לקסוס IS300h 181)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS IS250",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 208,
+    "cc": 2499,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (לקסוס IS250 2.5 V6 208)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS IS300",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1998,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (לקסוס IS300 2.0 טורבו בנזין 245)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS IS F",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 423,
+    "cc": 4969,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (לקסוס IS F 5.0 V8 423)"
+  },
+  {
+    "make": "לקסוס",
+    "model": "IS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 2494,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (לקסוס IS300h 181)"
+  },
+  {
+    "make": "Lexus",
+    "model": "LEXUS IS300H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 2494,
+    "seconds": 8.3,
+    "source": "נתון יצרן (Lexus IS300h)"
+  },
+  {
+    "make": "Lexus",
+    "model": "IS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 2494,
+    "seconds": 8.3,
+    "source": "נתון יצרן (Lexus IS300h)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS LC500H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 3456,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (לקסוס LC500h היברידי 3.5 V6 299/359)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS LC500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 477,
+    "cc": 4969,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (לקסוס LC500 קופה/קבריו 5.0 V8 477)"
+  },
+  {
+    "make": "לקסוס",
+    "model": "LC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 3456,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (לקסוס LC500h 299)"
+  },
+  {
+    "make": "Lexus",
+    "model": "LEXUS LC500H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 3456,
+    "seconds": 5.0,
+    "source": "נתון יצרן (Lexus LC500h)"
+  },
+  {
+    "make": "Lexus",
+    "model": "LC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 3456,
+    "seconds": 5.0,
+    "source": "נתון יצרן (Lexus LC500h)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS LM350H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 2487,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (לקסוס LM350h ואן יוקרה היברידי E-Four 250)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LM350H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 2487,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (לקסוס LM350h 250)"
+  },
+  {
+    "make": "לקסוס",
+    "model": "LM350H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 2487,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (לקסוס LM350h 250)"
+  },
+  {
+    "make": "Lexus",
+    "model": "LM350H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 2487,
+    "seconds": 8.7,
+    "source": "נתון יצרן (Lexus LM350h)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS LS500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 418,
+    "cc": 3445,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (לקסוס LS500 3.5 V6 טווין-טורבו 418)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS LS500H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 3456,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (לקסוס LS500h היברידי 3.5 V6 299/359)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS LS460",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 387,
+    "cc": 4608,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (לקסוס LS460 4.6 V8 387)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS LS600H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 394,
+    "cc": 4969,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (לקסוס LS600h היברידי 5.0 V8 394/445)"
+  },
+  {
+    "make": "לקסוס",
+    "model": "LS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 418,
+    "cc": 3445,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (לקסוס LS500 418)"
+  },
+  {
+    "make": "Lexus",
+    "model": "LEXUS LS500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 418,
+    "cc": 3445,
+    "seconds": 4.9,
+    "source": "נתון יצרן (Lexus LS500 Twin-Turbo)"
+  },
+  {
+    "make": "Lexus",
+    "model": "LS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 418,
+    "cc": 3445,
+    "seconds": 4.9,
+    "source": "נתון יצרן (Lexus LS500)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS LX600",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 415,
+    "cc": 3445,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (לקסוס LX600 3.5 V6 טווין-טורבו 415)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS LX570",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 383,
+    "cc": 5663,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (לקסוס LX570 5.7 V8 383)"
+  },
+  {
+    "make": "לקסוס",
+    "model": "LX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 415,
+    "cc": 3445,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (לקסוס LX600 415)"
+  },
+  {
+    "make": "Lexus",
+    "model": "LX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 415,
+    "cc": 3445,
+    "seconds": 6.9,
+    "source": "נתון יצרן (Lexus LX600)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS NX350H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 2487,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (לקסוס NX350h דור 2 היברידי 2.5 190/244)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "NX350H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 2487,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (לקסוס NX350h 190)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS NX450H+",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 309,
+    "cc": 2487,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (לקסוס NX450h+ פלאג-אין PHEV AWD 309)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS NX300H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 2494,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (לקסוס NX300h דור 1 היברידי 155/197)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS NX200T",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 238,
+    "cc": 1998,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (לקסוס NX200t / NX300 טורבו 238)"
+  },
+  {
+    "make": "לקסוס",
+    "model": "NX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 2487,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (לקסוס NX350h 190)"
+  },
+  {
+    "make": "Lexus",
+    "model": "LEXUS NX350H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 2487,
+    "seconds": 7.7,
+    "source": "נתון יצרן (Lexus NX350h)"
+  },
+  {
+    "make": "Lexus",
+    "model": "NX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 2487,
+    "seconds": 7.7,
+    "source": "נתון יצרן (Lexus NX350h)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS RC300H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 2494,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (לקסוס RC300h קופה היברידית 2.5 181/223)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS RC200T",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1998,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (לקסוס RC200t / RC300 2.0 טורבו 245)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS RC F",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 477,
+    "cc": 4969,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (לקסוס RC F 5.0 V8 477)"
+  },
+  {
+    "make": "לקסוס",
+    "model": "RC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 2494,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (לקסוס RC300h 181)"
+  },
+  {
+    "make": "Lexus",
+    "model": "RC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 2494,
+    "seconds": 8.6,
+    "source": "נתון יצרן (Lexus RC300h)"
+  },
+  {
+    "make": "Lexus",
+    "model": "RC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 477,
+    "cc": 4969,
+    "seconds": 4.5,
+    "source": "נתון יצרן (Lexus RC F)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS RX350",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 301,
+    "cc": 3456,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (לקסוס RX350 דור 4 3.5 V6 301)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "RX350",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 301,
+    "cc": 3456,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (לקסוס RX350 301)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS RX450H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 262,
+    "cc": 3456,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (לקסוס RX450h דור 4 היברידי 3.5 V6 262/313)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS RX350H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 2487,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (לקסוס RX350h דור 5 היברידי 2.5 190/250)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS RX450H+",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 309,
+    "cc": 2487,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (לקסוס RX450h+ דור 5 פלאג-אין PHEV 309)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS RX500H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 371,
+    "cc": 2393,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (לקסוס RX500h F-Sport 2.4T היברידי 371)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS RX300",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 238,
+    "cc": 1998,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (לקסוס RX300 2.0 טורבו 238)"
+  },
+  {
+    "make": "לקסוס",
+    "model": "RX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 301,
+    "cc": 3456,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (לקסוס RX350 301)"
+  },
+  {
+    "make": "Lexus",
+    "model": "LEXUS RX350",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 301,
+    "cc": 3456,
+    "seconds": 8.0,
+    "source": "נתון יצרן (Lexus RX350)"
+  },
+  {
+    "make": "Lexus",
+    "model": "RX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 301,
+    "cc": 3456,
+    "seconds": 8.0,
+    "source": "נתון יצרן (Lexus RX350)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS RZ450E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 0,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (לקסוס RZ450e חשמלי מלא כפול מנועים DIRECT4 AWD 313)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "RZ450E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 0,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (לקסוס RZ450e 313)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS RZ300E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (לקסוס RZ300e חשמלי FWD 204)"
+  },
+  {
+    "make": "לקסוס",
+    "model": "RZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 0,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (לקסוס RZ450e 313)"
+  },
+  {
+    "make": "Lexus",
+    "model": "LEXUS RZ450E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 0,
+    "seconds": 5.3,
+    "source": "נתון יצרן (Lexus RZ450e AWD)"
+  },
+  {
+    "make": "Lexus",
+    "model": "RZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 0,
+    "seconds": 5.3,
+    "source": "נתון יצרן (Lexus RZ450e AWD)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS SC430",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 4293,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (לקסוס SC430 קבריולט 4.3 V8 286)"
+  },
+  {
+    "make": "לקסוס",
+    "model": "SC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 4293,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (לקסוס SC430 286)"
+  },
+  {
+    "make": "Lexus",
+    "model": "SC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 4293,
+    "seconds": 6.2,
+    "source": "נתון יצרן (Lexus SC430 V8)"
+  },
+  {
+    "make": "לקסוס ארהב\"",
+    "model": "LEXUS TX350",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 2393,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (לקסוס TX350 2.4T 275)"
+  },
+  {
+    "make": "לקסוס ארהב\"",
+    "model": "LEXUS TX500H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 366,
+    "cc": 2393,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (לקסוס TX500h F-Sport 2.4T היברידי 366)"
+  },
+  {
+    "make": "לקסוס ארהב\"",
+    "model": "LEXUS TX550H+",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 406,
+    "cc": 3456,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (לקסוס TX550h+ 3.5 V6 פלאג-אין PHEV 406)"
+  },
+  {
+    "make": "לקסוס",
+    "model": "TX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 2393,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (לקסוס TX350 275)"
+  },
+  {
+    "make": "Lexus",
+    "model": "TX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 2393,
+    "seconds": 8.0,
+    "source": "נתון יצרן (Lexus TX350)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS UX250H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 152,
+    "cc": 1987,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (לקסוס UX250h היברידי 2.0 152/184)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "UX250H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 152,
+    "cc": 1987,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (לקסוס UX250h 152)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS UX300H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 199,
+    "cc": 1987,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (לקסוס UX300h מתוח פנים היברידי 2.0 199)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS UX300E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (לקסוס UX300e חשמלי מלא FWD 204)"
+  },
+  {
+    "make": "לקסוס יפן",
+    "model": "LEXUS UX200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 171,
+    "cc": 1987,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (לקסוס UX200 בנזין 2.0 171)"
+  },
+  {
+    "make": "לקסוס",
+    "model": "UX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 152,
+    "cc": 1987,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (לקסוס UX250h 152)"
+  },
+  {
+    "make": "Lexus",
+    "model": "LEXUS UX250H",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 152,
+    "cc": 1987,
+    "seconds": 8.5,
+    "source": "נתון יצרן (Lexus UX250h)"
+  },
+  {
+    "make": "Lexus",
+    "model": "UX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 152,
+    "cc": 1987,
+    "seconds": 8.5,
+    "source": "נתון יצרן (Lexus UX250h)"
+  }
+]
