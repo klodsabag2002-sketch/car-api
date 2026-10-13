@@ -1,1 +1,2132 @@
-klod
+[
+  {
+    "make": "יונדאי צ'כיה",
+    "model": "TUCSON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1999,
+    "seconds": 11.1,
+    "source": "רישוי רכב / נתון יצרן (יונדאי טוסון 2.0 בנזין 155)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "TUCSON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1999,
+    "seconds": 11.1,
+    "source": "רישוי רכב / נתון יצרן (יונדאי טוסון 2.0 בנזין 155)"
+  },
+  {
+    "make": "יונדאי צ'כיה",
+    "model": "TUCSON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 1591,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (יונדאי טוסון 1.6 טורבו DCT 177)"
+  },
+  {
+    "make": "יונדאי צ'כיה",
+    "model": "TUCSON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1598,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (יונדאי טוסון דור 4 1.6T טורבו 180)"
+  },
+  {
+    "make": "יונדאי צ'כיה",
+    "model": "TUCSON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1598,
+    "seconds": 9.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי טוסון מתוח פנים 1.6T 160)"
+  },
+  {
+    "make": "יונדאי צ'כיה",
+    "model": "TUCSON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 1598,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (יונדאי טוסון היברידי 230)"
+  },
+  {
+    "make": "יונדאי צ'כיה",
+    "model": "TUCSON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 1598,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (יונדאי טוסון פלאג-אין PHEV AWD 265)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "TUCSON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 142,
+    "cc": 1975,
+    "seconds": 11.3,
+    "source": "רישוי רכב / נתון יצרן (יונדאי טוסון דור 1 2.0 142)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "TUCSON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 175,
+    "cc": 2656,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (יונדאי טוסון דור 1 2.7 V6 175)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "טוסון",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1999,
+    "seconds": 11.1,
+    "source": "רישוי רכב / נתון יצרן (יונדאי טוסון 155)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "TUCSON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1999,
+    "seconds": 11.1,
+    "source": "נתון יצרן (Hyundai Tucson 2.0)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "TUCSON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1598,
+    "seconds": 8.8,
+    "source": "נתון יצרן (Hyundai Tucson 1.6T)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "STARIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 2199,
+    "seconds": 12.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי סטאריה 2.2 טורבו דיזל CRDi 177)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "STARIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1598,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (יונדאי סטאריה היברידית 1.6T 245)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "סטאריה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 2199,
+    "seconds": 12.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי סטאריה 177)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "STARIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 2199,
+    "seconds": 12.4,
+    "source": "נתון יצרן (Hyundai Staria 2.2 CRDi)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "SONATA HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 1999,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (יונדאי סונטה היברידית דור 8 2.0 192)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "SONATA HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 193,
+    "cc": 1999,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (יונדאי סונטה היברידית דור 7 2.0 193)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "SONATA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 178,
+    "cc": 2359,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (יונדאי סונטה NF/YF 2.4 178)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "SONATA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 161,
+    "cc": 1998,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (יונדאי סונטה NF 2.0 161)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "סונטה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 1999,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (יונדאי סונטה היברידית 192)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "SONATA HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 1999,
+    "seconds": 9.2,
+    "source": "נתון יצרן (Hyundai Sonata Hybrid)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "SONATA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 1999,
+    "seconds": 9.2,
+    "source": "נתון יצרן (Hyundai Sonata Hybrid)"
+  },
+  {
+    "make": "יונדאי טורקיה",
+    "model": "MATRIX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 103,
+    "cc": 1599,
+    "seconds": 12.7,
+    "source": "רישוי רכב / נתון יצרן (יונדאי מטריקס 1.6 בנזין 103)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "MATRIX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 103,
+    "cc": 1599,
+    "seconds": 12.7,
+    "source": "רישוי רכב / נתון יצרן (יונדאי מטריקס 1.6 103)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "מטריקס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 103,
+    "cc": 1599,
+    "seconds": 12.7,
+    "source": "רישוי רכב / נתון יצרן (יונדאי מטריקס 103)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "MATRIX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 103,
+    "cc": 1599,
+    "seconds": 12.7,
+    "source": "נתון יצרן (Hyundai Matrix 1.6)"
+  },
+  {
+    "make": "יונדאי ארהב\"",
+    "model": "SANTA FE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 2359,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי סנטה פה דור 4 2.4 GDI 185)"
+  },
+  {
+    "make": "\"יונדאי ארהב",
+    "model": "SANTA FE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 2359,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי סנטה פה 2.4 185)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "SANTA FE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 2199,
+    "seconds": 9.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי סנטה פה 2.2 CRDi דיזל 200)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "SANTA FE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 2199,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (יונדאי סנטה פה מתוח פנים 2.2 דיזל 202)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "SANTA FE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 1598,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (יונדאי סנטה פה היברידי 1.6T 230)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "SANTA FE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 1598,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (יונדאי סנטה פה פלאג-אין PHEV 265)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "SANTA FE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 215,
+    "cc": 1598,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (יונדאי סנטה פה דור 5 היברידי 215)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "SANTA FE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 2359,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (יונדאי סנטה פה דור 3 2.4 192)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "סנטה פה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 2359,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי סנטה פה 185)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "SANTA FE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 2359,
+    "seconds": 10.4,
+    "source": "נתון יצרן (Hyundai Santa Fe 2.4)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "SANTA FE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 2199,
+    "seconds": 9.0,
+    "source": "נתון יצרן (Hyundai Santa Fe 2.2 CRDi)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "PALISADE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 291,
+    "cc": 3778,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (יונדאי פליסיד 3.8 V6 בנזין 291)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "PALISADE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 2199,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (יונדאי פליסיד 2.2 דיזל 200)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "פליסיד",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 291,
+    "cc": 3778,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (יונדאי פליסיד 291)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "PALISADE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 291,
+    "cc": 3778,
+    "seconds": 7.8,
+    "source": "נתון יצרן (Hyundai Palisade 3.8 V6)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "KONA HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 1580,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (יונדאי קונה היברידית דור 1 1.6 141)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "KONA HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 139,
+    "cc": 1580,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (יונדאי קונה היברידית דור 2 1.6 139)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "KONA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 1591,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (יונדאי קונה 1.6T טורבו 177)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "KONA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 198,
+    "cc": 1598,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (יונדאי קונה 1.6T טורבו מתוחת פנים 198)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "KONA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 998,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (יונדאי קונה 1.0T טורבו 120)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "KONA EV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (יונדאי קונה חשמלית 64kWh 204)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "KONA EV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (יונדאי קונה חשמלית 39kWh 136)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "KONA N",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 1998,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (יונדאי קונה N ספורט 2.0T 280)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "קונה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 1580,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (יונדאי קונה היברידית 141)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "KONA HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 1580,
+    "seconds": 11.0,
+    "source": "נתון יצרן (Hyundai Kona Hybrid 1.6)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "KONA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 1591,
+    "seconds": 7.9,
+    "source": "נתון יצרן (Hyundai Kona 1.6T)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "IONIQ6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 325,
+    "cc": 0,
+    "seconds": 5.1,
+    "source": "רישוי רכב / נתון יצרן (יונדאי איוניק 6 חשמלית AWD 325)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "IONIQ6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 228,
+    "cc": 0,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי איוניק 6 חשמלית RWD 228)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "IONIQ6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 151,
+    "cc": 0,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (יונדאי איוניק 6 חשמלית Standard 151)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "איוניק 6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 325,
+    "cc": 0,
+    "seconds": 5.1,
+    "source": "רישוי רכב / נתון יצרן (יונדאי איוניק 6 325)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "IONIQ6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 325,
+    "cc": 0,
+    "seconds": 5.1,
+    "source": "נתון יצרן (Hyundai Ioniq 6 AWD)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "IONIQ6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 228,
+    "cc": 0,
+    "seconds": 7.4,
+    "source": "נתון יצרן (Hyundai Ioniq 6 RWD)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "IONIQ5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 217,
+    "cc": 0,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי איוניק 5 חשמלית RWD 217)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "IONIQ5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 228,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (יונדאי איוניק 5 מתוחת פנים RWD 228)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "IONIQ5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 305,
+    "cc": 0,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (יונדאי איוניק 5 חשמלית AWD 305)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "IONIQ5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 325,
+    "cc": 0,
+    "seconds": 5.1,
+    "source": "רישוי רכב / נתון יצרן (יונדאי איוניק 5 חשמלית AWD 325)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "IONIQ 5 N",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 650,
+    "cc": 0,
+    "seconds": 3.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי איוניק 5 N ספורט קיצוני 650)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "איוניק 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 217,
+    "cc": 0,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי איוניק 5 217)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "איוניק 5 n",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 650,
+    "cc": 0,
+    "seconds": 3.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי איוניק 5 N 650)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "IONIQ5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 217,
+    "cc": 0,
+    "seconds": 7.4,
+    "source": "נתון יצרן (Hyundai Ioniq 5 RWD)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "IONIQ 5 N",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 650,
+    "cc": 0,
+    "seconds": 3.4,
+    "source": "נתון יצרן (Hyundai Ioniq 5 N)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "IONIQ 9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 303,
+    "cc": 0,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (יונדאי איוניק 9 חשמלי SUV גדול AWD 303)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "IONIQ 9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (יונדאי איוניק 9 RWD 218)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "איוניק 9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 303,
+    "cc": 0,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (יונדאי איוניק 9 303)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "IONIQ 9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 303,
+    "cc": 0,
+    "seconds": 5.2,
+    "source": "נתון יצרן (Hyundai Ioniq 9 AWD)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "IONIQ HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 1580,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (יונדאי איוניק היברידית 1.6 141)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "IONIQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 1580,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (יונדאי איוניק 141)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "IONIQ EV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (יונדאי איוניק חשמלית 136)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "IONIQ EV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 0,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (יונדאי איוניק חשמלית דור 1 120)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "איוניק",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 1580,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (יונדאי איוניק 141)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "IONIQ HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 1580,
+    "seconds": 10.8,
+    "source": "נתון יצרן (Hyundai Ioniq Hybrid)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "ELANTRA HEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 139,
+    "cc": 1580,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (יונדאי אלנטרה היברידית דור 7 1.6 139)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "ELANTRA N",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 276,
+    "cc": 1998,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (יונדאי אלנטרה N ספורט 2.0 טורבו 276/280)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "ELANTRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 127,
+    "cc": 1591,
+    "seconds": 11.6,
+    "source": "רישוי רכב / נתון יצרן (יונדאי אלנטרה 1.6 בנזין 127)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "אלנטרה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 139,
+    "cc": 1580,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (יונדאי אלנטרה היברידית 139)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "אלנטרה n",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 276,
+    "cc": 1998,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (יונדאי אלנטרה N 276)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "ELANTRA HEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 139,
+    "cc": 1580,
+    "seconds": 10.5,
+    "source": "נתון יצרן (Hyundai Elantra Hybrid)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "ELANTRA N",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 276,
+    "cc": 1998,
+    "seconds": 5.3,
+    "source": "נתון יצרן (Hyundai Elantra N)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "I35",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 132,
+    "cc": 1591,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i35 אלנטרה 1.6 אוטומט 132)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "I35",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 132,
+    "cc": 1591,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i35 132)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "I35",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 132,
+    "cc": 1591,
+    "seconds": 10.7,
+    "source": "נתון יצרן (Hyundai i35 Elantra 1.6)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "I25",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 124,
+    "cc": 1591,
+    "seconds": 11.1,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i25 אקסנט 1.6 124)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "I25",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 107,
+    "cc": 1396,
+    "seconds": 13.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i25 אקסנט 1.4 107)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "I25",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 174,
+    "cc": 2359,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i25 גרסה מיוחדת 174)"
+  },
+  {
+    "make": "יונדאי הודו",
+    "model": "ACCENT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 123,
+    "cc": 1591,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (יונדאי אקסנט דור 5 1.6 123)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "ACCENT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 112,
+    "cc": 1599,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (יונדאי אקסנט דור 3 1.6 112)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "ACCENT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 97,
+    "cc": 1399,
+    "seconds": 14.5,
+    "source": "רישוי רכב / נתון יצרן (יונדאי אקסנט דור 3 1.4 97)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "אקסנט",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 123,
+    "cc": 1591,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (יונדאי אקסנט 123)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "אקסנט i25",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 124,
+    "cc": 1591,
+    "seconds": 11.1,
+    "source": "רישוי רכב / נתון יצרן (יונדאי אקסנט i25 124)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "I25",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 124,
+    "cc": 1591,
+    "seconds": 11.1,
+    "source": "נתון יצרן (Hyundai i25 1.6)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "ACCENT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 123,
+    "cc": 1591,
+    "seconds": 10.5,
+    "source": "נתון יצרן (Hyundai Accent 1.6)"
+  },
+  {
+    "make": "יונדאי טורקיה",
+    "model": "I20",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1368,
+    "seconds": 13.2,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i20 1.4 אוטומט 100)"
+  },
+  {
+    "make": "יונדאי טורקיה",
+    "model": "I20",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 85,
+    "cc": 1248,
+    "seconds": 13.6,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i20 1.25 ידני 85)"
+  },
+  {
+    "make": "יונדאי טורקיה",
+    "model": "I20",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 998,
+    "seconds": 11.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i20 דור 3 1.0T טורבו DCT 100)"
+  },
+  {
+    "make": "יונדאי טורקיה",
+    "model": "I20",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 998,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i20 1.0T 120)"
+  },
+  {
+    "make": "יונדאי טורקיה",
+    "model": "I20 CROSS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1368,
+    "seconds": 13.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i20 קרוס 1.4 100)"
+  },
+  {
+    "make": "יונדאי טורקיה",
+    "model": "I20 N",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1598,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i20 N ספורט ידני 1.6T 204)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "I20",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1368,
+    "seconds": 13.2,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i20 100)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "i20 קרוס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1368,
+    "seconds": 13.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i20 קרוס 100)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "i20 n",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1598,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i20 N 204)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "I20",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1368,
+    "seconds": 13.2,
+    "source": "נתון יצרן (Hyundai i20 1.4)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "I20 N",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1598,
+    "seconds": 6.2,
+    "source": "נתון יצרן (Hyundai i20 N)"
+  },
+  {
+    "make": "יונדאי טורקיה",
+    "model": "I10",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 87,
+    "cc": 1248,
+    "seconds": 13.8,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i10 1.25 אוטומט 87)"
+  },
+  {
+    "make": "יונדאי טורקיה",
+    "model": "I10",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 84,
+    "cc": 1197,
+    "seconds": 15.8,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i10 דור 3 1.2 רובוטי 84)"
+  },
+  {
+    "make": "יונדאי טורקיה",
+    "model": "I10",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 67,
+    "cc": 998,
+    "seconds": 17.3,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i10 1.0 רובוטי 67)"
+  },
+  {
+    "make": "יונדאי טורקיה",
+    "model": "I10",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 66,
+    "cc": 998,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i10 דור 2 1.0 66)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "I10",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 87,
+    "cc": 1248,
+    "seconds": 13.8,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i10 87)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "I10",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 87,
+    "cc": 1248,
+    "seconds": 13.8,
+    "source": "נתון יצרן (Hyundai i10 1.25)"
+  },
+  {
+    "make": "יונדאי צ'כיה",
+    "model": "I30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1591,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i30 דור 2 1.6 GDI אוטומט 135)"
+  },
+  {
+    "make": "יונדאי צ'כיה",
+    "model": "I30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1353,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i30 דור 3 1.4T טורבו DCT 140)"
+  },
+  {
+    "make": "יונדאי צ'כיה",
+    "model": "I30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 998,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i30 דור 3 1.0T טורבו 120)"
+  },
+  {
+    "make": "יונדאי צ'כיה",
+    "model": "I30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 126,
+    "cc": 1591,
+    "seconds": 12.1,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i30 דור 1 1.6 126)"
+  },
+  {
+    "make": "יונדאי צ'כיה",
+    "model": "I30 N",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 1998,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i30 N ספורט ידני 2.0T 275)"
+  },
+  {
+    "make": "יונדאי צ'כיה",
+    "model": "I30 N",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 1998,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i30 N DCT אוטומט 280)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "I30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1591,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i30 135)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "i30n",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 1998,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i30 N 275)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "I30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1591,
+    "seconds": 11.0,
+    "source": "נתון יצרן (Hyundai i30 1.6 GDI)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "I30 N",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 1998,
+    "seconds": 5.4,
+    "source": "נתון יצרן (Hyundai i30 N)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "I40",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 1999,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i40 2.0 GDI בנזין 177)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "I40",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1999,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i40 2.0 בנזין 165)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "I40",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1685,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i40 1.7 CRDi דיזל 136)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "I40",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 1999,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i40 177)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "I40",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 1999,
+    "seconds": 9.7,
+    "source": "נתון יצרן (Hyundai i40 2.0 GDI)"
+  },
+  {
+    "make": "יונדאי צ'כיה",
+    "model": "IX20",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1591,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (יונדאי ix20 1.6 אוטומט 125)"
+  },
+  {
+    "make": "יונדאי צ'כיה",
+    "model": "IX20",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1396,
+    "seconds": 12.8,
+    "source": "רישוי רכב / נתון יצרן (יונדאי ix20 1.4 ידני 90)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "ix20",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1591,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (יונדאי ix20 125)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "IX20",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1591,
+    "seconds": 11.5,
+    "source": "נתון יצרן (Hyundai ix20 1.6)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "IX35",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 154,
+    "cc": 1999,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (יונדאי ix35 2.0 בנזין 154)"
+  },
+  {
+    "make": "יונדאי צ'כיה",
+    "model": "IX35",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1998,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי ix35 2.0 163)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "IX35",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1591,
+    "seconds": 11.1,
+    "source": "רישוי רכב / נתון יצרן (יונדאי ix35 1.6 GDI 135)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "IX35",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1995,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (יונדאי ix35 2.0 CRDi דיזל 184)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "ix35",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 154,
+    "cc": 1999,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (יונדאי ix35 154)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "IX35",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 154,
+    "cc": 1999,
+    "seconds": 10.6,
+    "source": "נתון יצרן (Hyundai ix35 2.0)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "IX55",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 2959,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי ix55 וראקרוז 3.0 V6 CRDi דיזל 240)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "IX55",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 260,
+    "cc": 3778,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (יונדאי ix55 3.8 V6 בנזין 260)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "ix55",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 2959,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי ix55 240)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "IX55",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 2959,
+    "seconds": 10.4,
+    "source": "נתון יצרן (Hyundai ix55 3.0 CRDi)"
+  },
+  {
+    "make": "יונדאי טורקיה",
+    "model": "BAYON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 998,
+    "seconds": 11.7,
+    "source": "רישוי רכב / נתון יצרן (יונדאי באיון 1.0T טורבו DCT 100)"
+  },
+  {
+    "make": "יונדאי טורקיה",
+    "model": "BAYON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 998,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי באיון 1.0T 120)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "באיון",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 998,
+    "seconds": 11.7,
+    "source": "רישוי רכב / נתון יצרן (יונדאי באיון 100)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "BAYON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 998,
+    "seconds": 11.7,
+    "source": "נתון יצרן (Hyundai Bayon 1.0T)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "VELOSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1591,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (יונדאי וולוסטר 1.6 GDI DCT 140)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "VELOSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 186,
+    "cc": 1591,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (יונדאי וולוסטר טורבו 1.6T 186)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "VELOSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1591,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי וולוסטר טורבו 1.6T 204)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "VELOSTER N",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 1998,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (יונדאי וולוסטר N ספורט 2.0T 275)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "וולוסטר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1591,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (יונדאי וולוסטר 140)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "VELOSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1591,
+    "seconds": 9.7,
+    "source": "נתון יצרן (Hyundai Veloster 1.6 GDI)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "VELOSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 186,
+    "cc": 1591,
+    "seconds": 8.1,
+    "source": "נתון יצרן (Hyundai Veloster Turbo)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "VENUE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 123,
+    "cc": 1598,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (יונדאי וניו 1.6 Smartstream IVT 123)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "וניו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 123,
+    "cc": 1598,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (יונדאי וניו 123)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "VENUE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 123,
+    "cc": 1598,
+    "seconds": 11.2,
+    "source": "נתון יצרן (Hyundai Venue 1.6)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GETZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 1341,
+    "seconds": 13.9,
+    "source": "רישוי רכב / נתון יצרן (יונדאי גטס 1.35 בנזין 82)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GETZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 97,
+    "cc": 1399,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (יונדאי גטס 1.4 97)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GETZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1599,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (יונדאי גטס 1.6 105)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "גטס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 1341,
+    "seconds": 13.9,
+    "source": "רישוי רכב / נתון יצרן (יונדאי גטס 82)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "גטס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 97,
+    "cc": 1399,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (יונדאי גטס 97)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "GETZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 1341,
+    "seconds": 13.9,
+    "source": "נתון יצרן (Hyundai Getz 1.35)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "TERRACAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 2902,
+    "seconds": 13.0,
+    "source": "רישוי רכב / נתון יצרן (יונדאי טראקן 2.9 CRDi טורבו דיזל 165)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "TERRACAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 2902,
+    "seconds": 13.7,
+    "source": "רישוי רכב / נתון יצרן (יונדאי טראקן 2.9 CRDi 150)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "טראקן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 2902,
+    "seconds": 13.0,
+    "source": "רישוי רכב / נתון יצרן (יונדאי טראקן 165)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "TERRACAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 2902,
+    "seconds": 13.0,
+    "source": "נתון יצרן (Hyundai Terracan 2.9 CRDi)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GALLOPER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 2476,
+    "seconds": 19.8,
+    "source": "רישוי רכב / נתון יצרן (יונדאי גאלופר 2.5 TD טורבו דיזל 105)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GALLOPER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 2972,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (יונדאי גאלופר 3.0 V6 141)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "גאלופר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 2476,
+    "seconds": 19.8,
+    "source": "רישוי רכב / נתון יצרן (יונדאי גאלופר 105)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "GALLOPER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 2476,
+    "seconds": 19.8,
+    "source": "נתון יצרן (Hyundai Galloper 2.5 TD)"
+  },
+  {
+    "make": "יונדאי טורקיה",
+    "model": "H1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 2476,
+    "seconds": 18.5,
+    "source": "רישוי רכב / נתון יצרן (יונדאי H1 מסחרי 2.5 TD 105)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "I800",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 2497,
+    "seconds": 14.5,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i800 / H1 נוסעים 2.5 CRDi 170)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "I 800",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 2497,
+    "seconds": 14.5,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i800 נוסעים 2.5 170)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "H1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 2497,
+    "seconds": 17.6,
+    "source": "רישוי רכב / נתון יצרן (יונדאי H1 2.5 CRDi 136)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "I 800",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 2497,
+    "seconds": 14.5,
+    "source": "רישוי רכב / נתון יצרן (יונדאי i800 170)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "H1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 2497,
+    "seconds": 14.5,
+    "source": "נתון יצרן (Hyundai H-1 / i800 2.5 CRDi)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "H100",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 80,
+    "cc": 2476,
+    "seconds": 21.0,
+    "source": "רישוי רכב / נתון יצרן (יונדאי H100 מסחרי 2.5 דיזל 80)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "H100",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 2497,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (יונדאי H100 פורטר 2.5 CRDi 130)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "H100",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 2497,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (יונדאי H100 130)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "H100",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 2497,
+    "seconds": 16.5,
+    "source": "נתון יצרן (Hyundai H100 2.5 CRDi)"
+  },
+  {
+    "make": "יונדאי טורקיה",
+    "model": "H350",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 2497,
+    "seconds": 15.8,
+    "source": "רישוי רכב / נתון יצרן (יונדאי H350 מסחרית גדולה 2.5 CRDi 170)"
+  },
+  {
+    "make": "יונדאי טורקיה",
+    "model": "H350",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 2497,
+    "seconds": 17.5,
+    "source": "רישוי רכב / נתון יצרן (יונדאי H350 2.5 CRDi 150)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "H350",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 2497,
+    "seconds": 15.8,
+    "source": "רישוי רכב / נתון יצרן (יונדאי H350 170)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "H350",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 2497,
+    "seconds": 15.8,
+    "source": "נתון יצרן (Hyundai H350 2.5 CRDi)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "ATOS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 55,
+    "cc": 999,
+    "seconds": 16.0,
+    "source": "רישוי רכב / נתון יצרן (יונדאי אטוס 1.0 55)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "ATOS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 63,
+    "cc": 1086,
+    "seconds": 15.2,
+    "source": "רישוי רכב / נתון יצרן (יונדאי אטוס פריים 1.1 63)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "אטוס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 63,
+    "cc": 1086,
+    "seconds": 15.2,
+    "source": "רישוי רכב / נתון יצרן (יונדאי אטוס 63)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "ATOS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 63,
+    "cc": 1086,
+    "seconds": 15.2,
+    "source": "נתון יצרן (Hyundai Atos 1.1)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GENESIS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 315,
+    "cc": 3778,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (יונדאי ג'נסיס סדאן 3.8 V6 315)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GENESIS COUPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 306,
+    "cc": 3778,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (יונדאי ג'נסיס קופה 3.8 V6 306)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GENESIS COUPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 210,
+    "cc": 1998,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (יונדאי ג'נסיס קופה 2.0 טורבו 210)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "ג'נסיס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 315,
+    "cc": 3778,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (יונדאי ג'נסיס 315)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "GENESIS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 315,
+    "cc": 3778,
+    "seconds": 6.8,
+    "source": "נתון יצרן (Hyundai Genesis 3.8 V6)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GRANDEUR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 235,
+    "cc": 3342,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (יונדאי גרנדיור סלון 3.3 V6 235)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "GRANDEUR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 194,
+    "cc": 2656,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (יונדאי גרנדיור 2.7 V6 194)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "גרנדיור",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 235,
+    "cc": 3342,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (יונדאי גרנדיור 235)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "GRANDEUR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 235,
+    "cc": 3342,
+    "seconds": 7.8,
+    "source": "נתון יצרן (Hyundai Grandeur 3.3 V6)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "TRAJET",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1975,
+    "seconds": 13.0,
+    "source": "רישוי רכב / נתון יצרן (יונדאי טרג'ט מיניוואן 2.0 140)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "TRAJET",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 173,
+    "cc": 2656,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (יונדאי טרג'ט 2.7 V6 173)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "TRAJET",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 112,
+    "cc": 1991,
+    "seconds": 14.2,
+    "source": "רישוי רכב / נתון יצרן (יונדאי טרג'ט 2.0 CRDi דיזל 112)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "טרגט",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1975,
+    "seconds": 13.0,
+    "source": "רישוי רכב / נתון יצרן (יונדאי טרג'ט 140)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "TRAJET",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1975,
+    "seconds": 13.0,
+    "source": "נתון יצרן (Hyundai Trajet 2.0)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "LANTRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 114,
+    "cc": 1599,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (יונדאי לנטרה 1.6 114)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "LANTRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 139,
+    "cc": 1975,
+    "seconds": 9.4,
+    "source": "רישוי רכב / נתון יצרן (יונדאי לנטרה 2.0 139)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "לנטרה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 114,
+    "cc": 1599,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (יונדאי לנטרה 114)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "LANTRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 114,
+    "cc": 1599,
+    "seconds": 11.2,
+    "source": "נתון יצרן (Hyundai Lantra 1.6)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "COUPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1975,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (יונדאי קופה 2.0 143)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "COUPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 167,
+    "cc": 2656,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (יונדאי קופה 2.7 V6 167)"
+  },
+  {
+    "make": "יונדאי קוריאה",
+    "model": "COUPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1599,
+    "seconds": 11.6,
+    "source": "רישוי רכב / נתון יצרן (יונדאי קופה 1.6 105)"
+  },
+  {
+    "make": "יונדאי",
+    "model": "קופה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1975,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (יונדאי קופה 143)"
+  },
+  {
+    "make": "Hyundai",
+    "model": "COUPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1975,
+    "seconds": 9.1,
+    "source": "נתון יצרן (Hyundai Coupe 2.0)"
+  }
+]
