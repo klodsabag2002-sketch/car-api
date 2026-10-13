@@ -1,1 +1,342 @@
-klod
+[
+  {
+    "make": "סרס סין",
+    "model": "SERES 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 0,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (סרס 3 EV קרוסאובר חשמלי 163 כ\"ס)"
+  },
+  {
+    "make": "סרס סין",
+    "model": "EV-3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 0,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (סרס EV-3 חשמלי 163 כ\"ס)"
+  },
+  {
+    "make": "סרס",
+    "model": "EV-3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 0,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (סרס EV-3 163 כ\"ס)"
+  },
+  {
+    "make": "סרס",
+    "model": "3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 0,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (סרס 3 163 כ\"ס)"
+  },
+  {
+    "make": "Seres",
+    "model": "SERES 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 0,
+    "seconds": 8.9,
+    "source": "נתון יצרן (Seres 3 EV)"
+  },
+  {
+    "make": "Seres",
+    "model": "3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 0,
+    "seconds": 8.9,
+    "source": "נתון יצרן (Seres 3 EV)"
+  },
+  {
+    "make": "סרס סין",
+    "model": "SERES",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 576,
+    "cc": 0,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (סרס 5 AWD חשמלי כפול מנועים 576 כ\"ס)"
+  },
+  {
+    "make": "סרס סין",
+    "model": "SERES 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 576,
+    "cc": 0,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (סרס 5 AWD 576 כ\"ס)"
+  },
+  {
+    "make": "סרס סין",
+    "model": "SERES 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 0,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (סרס 5 2WD חשמלי 299 כ\"ס)"
+  },
+  {
+    "make": "סרס",
+    "model": "5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 576,
+    "cc": 0,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (סרס 5 576 כ\"ס)"
+  },
+  {
+    "make": "סרס",
+    "model": "5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 0,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (סרס 5 299 כ\"ס)"
+  },
+  {
+    "make": "Seres",
+    "model": "SERES 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 576,
+    "cc": 0,
+    "seconds": 3.7,
+    "source": "נתון יצרן (Seres 5 AWD EV)"
+  },
+  {
+    "make": "Seres",
+    "model": "5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 576,
+    "cc": 0,
+    "seconds": 3.7,
+    "source": "נתון יצרן (Seres 5 AWD)"
+  },
+  {
+    "make": "פוטון סין",
+    "model": "P4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 159,
+    "cc": 1968,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (פוטון P4 / טונלנד 2.0 טורבו דיזל 159 כ\"ס)"
+  },
+  {
+    "make": "פוטון סין",
+    "model": "ETUNLAND",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 0,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (פוטון אי-טונלנד טנדר חשמלי 177 כ\"ס)"
+  },
+  {
+    "make": "פוטון סין",
+    "model": "TUNLAND",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1968,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (פוטון טונלנד 2.0 דיזל 163 כ\"ס)"
+  },
+  {
+    "make": "פוטון",
+    "model": "eTunland",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 0,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (פוטון אי-טונלנד 177 כ\"ס)"
+  },
+  {
+    "make": "פוטון",
+    "model": "eTunland",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 159,
+    "cc": 1968,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (פוטון טונלנד 159 כ\"ס)"
+  },
+  {
+    "make": "Foton",
+    "model": "ETUNLAND",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 0,
+    "seconds": 11.0,
+    "source": "נתון יצרן (Foton eTunland EV)"
+  },
+  {
+    "make": "Foton",
+    "model": "P4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 159,
+    "cc": 1968,
+    "seconds": 11.9,
+    "source": "נתון יצרן (Foton Tunland P4 Diesel)"
+  },
+  {
+    "make": "פוטון סין",
+    "model": "TOANO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 0,
+    "seconds": 15.0,
+    "source": "רישוי רכב / נתון יצרן (פוטון אי טואנו מסחרית חשמלית 170 כ\"ס)"
+  },
+  {
+    "make": "פוטון סין",
+    "model": "E-TOANO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 0,
+    "seconds": 15.0,
+    "source": "רישוי רכב / נתון יצרן (פוטון אי טואנו 170 כ\"ס)"
+  },
+  {
+    "make": "פוטון סין",
+    "model": "TOANO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 2771,
+    "seconds": 18.0,
+    "source": "רישוי רכב / נתון יצרן (פוטון טואנו 2.8 דיזל 150 כ\"ס)"
+  },
+  {
+    "make": "פוטון",
+    "model": "אי טואנו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 0,
+    "seconds": 15.0,
+    "source": "רישוי רכב / נתון יצרן (פוטון אי טואנו 170 כ\"ס)"
+  },
+  {
+    "make": "Foton",
+    "model": "TOANO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 0,
+    "seconds": 15.0,
+    "source": "נתון יצרן (Foton eToano EV)"
+  },
+  {
+    "make": "פוטון סין",
+    "model": "VIEW",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 0,
+    "seconds": 16.0,
+    "source": "רישוי רכב / נתון יצרן (פוטון אי ויו ואן חשמלי 115 כ\"ס)"
+  },
+  {
+    "make": "פוטון סין",
+    "model": "E-VIEW",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 0,
+    "seconds": 16.0,
+    "source": "רישוי רכב / נתון יצרן (פוטון אי ויו 115 כ\"ס)"
+  },
+  {
+    "make": "פוטון סין",
+    "model": "VIEW",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1998,
+    "seconds": 17.5,
+    "source": "רישוי רכב / נתון יצרן (פוטון ויו ואן מסחרי 130 כ\"ס)"
+  },
+  {
+    "make": "פוטון",
+    "model": "ויו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 0,
+    "seconds": 16.0,
+    "source": "רישוי רכב / נתון יצרן (פוטון ויו 115 כ\"ס)"
+  },
+  {
+    "make": "Foton",
+    "model": "VIEW",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 0,
+    "seconds": 16.0,
+    "source": "נתון יצרן (Foton View EV)"
+  },
+  {
+    "make": "פוטון סין",
+    "model": "CAVAN LEPU PLUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 0,
+    "seconds": 14.5,
+    "source": "רישוי רכב / נתון יצרן (פוטון קאוון לפו פלוס מסחרית עירונית חשמלית 120 כ\"ס)"
+  },
+  {
+    "make": "פוטון סין",
+    "model": "LEPU PLUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 0,
+    "seconds": 14.5,
+    "source": "רישוי רכב / נתון יצרן (פוטון לפו פלוס 120 כ\"ס)"
+  },
+  {
+    "make": "פוטון",
+    "model": "קאוון לפו פלוס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 0,
+    "seconds": 14.5,
+    "source": "רישוי רכב / נתון יצרן (פוטון קאוון לפו פלוס 120 כ\"ס)"
+  },
+  {
+    "make": "Foton",
+    "model": "CAVAN LEPU PLUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 0,
+    "seconds": 14.5,
+    "source": "נתון יצרן (Foton Cavan Lepu Plus EV)"
+  }
+]
