@@ -1038,5 +1038,1235 @@
     "cc": 0,
     "seconds": 7.9,
     "source": "נתון יצרן (Forthing Friday EV 204 hp)"
+  },
+  {
+    "make": "פיאט פולין",
+    "model": "FIAT 500 1.2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 69,
+    "cc": 1242,
+    "seconds": 12.9,
+    "source": "רישוי רכב / נתון יצרן (פיאט 500 1.2 בנזין 69 כ\"ס)"
+  },
+  {
+    "make": "פיאט פולין",
+    "model": "FIAT 500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 69,
+    "cc": 1242,
+    "seconds": 12.9,
+    "source": "רישוי רכב / נתון יצרן (פיאט 500 1.2 69 כ\"ס)"
+  },
+  {
+    "make": "פיאט פולין",
+    "model": "FIAT 500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 70,
+    "cc": 999,
+    "seconds": 13.8,
+    "source": "רישוי רכב / נתון יצרן (פיאט 500 1.0 היברידי קל Hybrid 70 כ\"ס)"
+  },
+  {
+    "make": "פיאט פולין",
+    "model": "FIAT 500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 85,
+    "cc": 875,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (פיאט 500 TwinAir טורבו 85 כ\"ס)"
+  },
+  {
+    "make": "פיאט פולין",
+    "model": "FIAT 500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1368,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט 500 1.4 16V 100 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 69,
+    "cc": 1242,
+    "seconds": 12.9,
+    "source": "רישוי רכב / נתון יצרן (פיאט 500 69 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 69,
+    "cc": 1242,
+    "seconds": 12.9,
+    "source": "נתון יצרן (Fiat 500 1.2)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "FIAT 500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 0,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (פיאט 500e חשמלית מלאה 120 כ\"ס)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "FIAT 500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 0,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט 500e Action חשמלית 95 כ\"ס)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "500E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 0,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (פיאט 500e חשמלית 120 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "500e",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 0,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (פיאט 500e 120 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "500E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 0,
+    "seconds": 9.0,
+    "source": "נתון יצרן (Fiat 500e EV)"
+  },
+  {
+    "make": "פיאט סרביה",
+    "model": "500L",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 85,
+    "cc": 1248,
+    "seconds": 14.9,
+    "source": "רישוי רכב / נתון יצרן (פיאט 500L 1.3 MultiJet דיזל 85 כ\"ס)"
+  },
+  {
+    "make": "פיאט סרביה",
+    "model": "500L",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 1368,
+    "seconds": 12.8,
+    "source": "רישוי רכב / נתון יצרן (פיאט 500L 1.4 בנזין 95 כ\"ס)"
+  },
+  {
+    "make": "פיאט סרביה",
+    "model": "500L",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1368,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (פיאט 500L 1.4 T-Jet טורבו 120 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "500l",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 85,
+    "cc": 1248,
+    "seconds": 14.9,
+    "source": "רישוי רכב / נתון יצרן (פיאט 500L 85 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "500L",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 85,
+    "cc": 1248,
+    "seconds": 14.9,
+    "source": "נתון יצרן (Fiat 500L 1.3 MultiJet)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "500X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1368,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (פיאט 500X 1.4 MultiAir טורבו 140 כ\"ס)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "500X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1332,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (פיאט 500X 1.3 FireFly טורבו 150 כ\"ס)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "500X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 999,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (פיאט 500X 1.0 FireFly טורבו 120 כ\"ס)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "500X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1598,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט 500X 1.6 E-TorQ 110 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "500x",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1368,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (פיאט 500X 140 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "500X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1368,
+    "seconds": 9.8,
+    "source": "נתון יצרן (Fiat 500X 1.4 MultiAir)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "PUNTO 1.4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 77,
+    "cc": 1368,
+    "seconds": 13.2,
+    "source": "רישוי רכב / נתון יצרן (פיאט גרנדה פונטו / פונטו איבו 1.4 77 כ\"ס)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "PUNTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 77,
+    "cc": 1368,
+    "seconds": 13.2,
+    "source": "רישוי רכב / נתון יצרן (פיאט פונטו 1.4 77 כ\"ס)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "PUNTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 60,
+    "cc": 1242,
+    "seconds": 14.3,
+    "source": "רישוי רכב / נתון יצרן (פיאט פונטו ספייס 1.2 60 כ\"ס)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "PUNTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 80,
+    "cc": 1242,
+    "seconds": 11.4,
+    "source": "רישוי רכב / נתון יצרן (פיאט פונטו ספייס 16V 1.2 80 כ\"ס)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "PUNTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 1368,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט פונטו איבו 1.4 MultiAir טורבו 135 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "פונטו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 77,
+    "cc": 1368,
+    "seconds": 13.2,
+    "source": "רישוי רכב / נתון יצרן (פיאט פונטו 77 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "PUNTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 77,
+    "cc": 1368,
+    "seconds": 13.2,
+    "source": "נתון יצרן (Fiat Punto 1.4)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "BRAVO 1.4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1368,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (פיאט בראבו 1.4 T-Jet טורבו 120 כ\"ס)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "BRAVO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1368,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (פיאט בראבו 1.4 T-Jet 120 כ\"ס)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "BRAVO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1368,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט בראבו 1.4 T-Jet ספורט 150 כ\"ס)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "BRAVO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1368,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (פיאט בראבו 1.4 MultiAir טורבו 140 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "בראבו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1368,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (פיאט בראבו 120 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "BRAVO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1368,
+    "seconds": 9.6,
+    "source": "נתון יצרן (Fiat Bravo 1.4 T-Jet)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "BRAVA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 103,
+    "cc": 1581,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט בראבה 1.6 16V 103 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "בראבה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 103,
+    "cc": 1581,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט בראבה 103 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "BRAVA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 103,
+    "cc": 1581,
+    "seconds": 11.5,
+    "source": "נתון יצרן (Fiat Brava 1.6)"
+  },
+  {
+    "make": "פיאט טורקיה",
+    "model": "FIAT TIPO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1598,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (פיאט טיפו 1.6 בנזין E-Torq 105/110 כ\"ס)"
+  },
+  {
+    "make": "פיאט טורקיה",
+    "model": "TIPO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1598,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (פיאט טיפו 1.6 105 כ\"ס)"
+  },
+  {
+    "make": "פיאט טורקיה",
+    "model": "TIPO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1598,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (פיאט טיפו 1.6 MultiJet דיזל 120 כ\"ס)"
+  },
+  {
+    "make": "פיאט טורקיה",
+    "model": "TIPO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 999,
+    "seconds": 11.8,
+    "source": "רישוי רכב / נתון יצרן (פיאט טיפו 1.0 FireFly טורבו 100 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "טיפו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1598,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (פיאט טיפו 105 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "TIPO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1598,
+    "seconds": 11.2,
+    "source": "נתון יצרן (Fiat Tipo 1.6)"
+  },
+  {
+    "make": "פיאט פולין",
+    "model": "PANDA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 69,
+    "cc": 1242,
+    "seconds": 14.2,
+    "source": "רישוי רכב / נתון יצרן (פיאט פנדה דור 3 1.2 בנזין 69 כ\"ס)"
+  },
+  {
+    "make": "פיאט פולין",
+    "model": "PANDA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 70,
+    "cc": 999,
+    "seconds": 14.7,
+    "source": "רישוי רכב / נתון יצרן (פיאט פנדה היברידית קלה Hybrid 70 כ\"ס)"
+  },
+  {
+    "make": "פיאט פולין",
+    "model": "PANDA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 60,
+    "cc": 1242,
+    "seconds": 14.0,
+    "source": "רישוי רכב / נתון יצרן (פיאט פנדה דור 2 1.2 60 כ\"ס)"
+  },
+  {
+    "make": "פיאט פולין",
+    "model": "PANDA 4X4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 85,
+    "cc": 875,
+    "seconds": 12.1,
+    "source": "רישוי רכב / נתון יצרן (פיאט פנדה 4X4 TwinAir 85 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "פנדה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 69,
+    "cc": 1242,
+    "seconds": 14.2,
+    "source": "רישוי רכב / נתון יצרן (פיאט פנדה 69 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "PANDA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 69,
+    "cc": 1242,
+    "seconds": 14.2,
+    "source": "נתון יצרן (Fiat Panda 1.2)"
+  },
+  {
+    "make": "פיאט פורטוגל",
+    "model": "DOBLO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1499,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (פיאט דובלו דור 3 1.5 BlueHDi דיזל 130 כ\"ס)"
+  },
+  {
+    "make": "פיאט טורקיה",
+    "model": "DOBLO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1598,
+    "seconds": 13.4,
+    "source": "רישוי רכב / נתון יצרן (פיאט דובלו דור 2 1.6 MultiJet דיזל 105 כ\"ס)"
+  },
+  {
+    "make": "פיאט טורקיה",
+    "model": "DOBLO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1248,
+    "seconds": 14.9,
+    "source": "רישוי רכב / נתון יצרן (פיאט דובלו דור 2 1.3 MultiJet דיזל 90 כ\"ס)"
+  },
+  {
+    "make": "פיאט טורקיה",
+    "model": "DOBLO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1598,
+    "seconds": 12.2,
+    "source": "רישוי רכב / נתון יצרן (פיאט דובלו 1.6 MultiJet 120 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "דובלו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1499,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (פיאט דובלו 130 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "DOBLO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1499,
+    "seconds": 11.0,
+    "source": "נתון יצרן (Fiat Doblo 1.5 Diesel)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "DUCATO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 2184,
+    "seconds": 14.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט דוקאטו מסחרית גדולה 2.2 MultiJet דיזל 140 כ\"ס)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "DUCATO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 2184,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט דוקאטו 2.2 MultiJet 160 כ\"ס)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "DUCATO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 2287,
+    "seconds": 15.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט דוקאטו 2.3 MultiJet דיזל 130 כ\"ס)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "DUCATO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 2287,
+    "seconds": 14.2,
+    "source": "רישוי רכב / נתון יצרן (פיאט דוקאטו 2.3 MultiJet 150 כ\"ס)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "E-DUCATO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 0,
+    "seconds": 15.0,
+    "source": "רישוי רכב / נתון יצרן (פיאט אי-דוקאטו חשמלי מלא 122 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "דוקאטו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 2184,
+    "seconds": 14.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט דוקאטו 140 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "DUCATO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 2184,
+    "seconds": 14.5,
+    "source": "נתון יצרן (Fiat Ducato MultiJet)"
+  },
+  {
+    "make": "פיאט/מדייר סוז",
+    "model": "SEDICI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1586,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט סדיצ'י קרוסאובר 4X4 1.6 120 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "SEDICI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1586,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט סדיצ'י 120 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "סדיצי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1586,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט סדיצ'י 120 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "SEDICI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1586,
+    "seconds": 11.5,
+    "source": "נתון יצרן (Fiat Sedici 1.6 4x4)"
+  },
+  {
+    "make": "פיאט תאילנד",
+    "model": "FIAT FULLBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 2442,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (פיאט פולבק טנדר 2.4 דיזל 180 כ\"ס)"
+  },
+  {
+    "make": "פיאט תאילנד",
+    "model": "FULLBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 2442,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (פיאט פולבק 180 כ\"ס)"
+  },
+  {
+    "make": "פיאט תאילנד",
+    "model": "FULLBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 2442,
+    "seconds": 11.8,
+    "source": "רישוי רכב / נתון יצרן (פיאט פולבק 2.4 דיזל 150 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "פולבק",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 2442,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (פיאט פולבק 180 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "FULLBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 2442,
+    "seconds": 10.4,
+    "source": "נתון יצרן (Fiat Fullback Diesel)"
+  },
+  {
+    "make": "פיאט טורקיה",
+    "model": "FIORINO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1248,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט פיורינו 1.3 MultiJet דיזל 75 כ\"ס)"
+  },
+  {
+    "make": "פיאט טורקיה",
+    "model": "FIORINO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 1248,
+    "seconds": 13.9,
+    "source": "רישוי רכב / נתון יצרן (פיאט פיורינו 1.3 MultiJet 95 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "פיורינו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1248,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט פיורינו 75 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "FIORINO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1248,
+    "seconds": 16.5,
+    "source": "נתון יצרן (Fiat Fiorino)"
+  },
+  {
+    "make": "פיאט טורקיה",
+    "model": "QUBO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1248,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט קובו נוסעים 1.3 MultiJet 75 כ\"ס)"
+  },
+  {
+    "make": "פיאט טורקיה",
+    "model": "QUBO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 1248,
+    "seconds": 13.9,
+    "source": "רישוי רכב / נתון יצרן (פיאט קובו 1.3 MultiJet 95 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "קובו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1248,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט קובו 75 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "QUBO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1248,
+    "seconds": 16.5,
+    "source": "נתון יצרן (Fiat Qubo)"
+  },
+  {
+    "make": "פיאט צרפת",
+    "model": "SCUDO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1997,
+    "seconds": 12.8,
+    "source": "רישוי רכב / נתון יצרן (פיאט סקודו 2.0 MultiJet דיזל 120 כ\"ס)"
+  },
+  {
+    "make": "פיאט צרפת",
+    "model": "SCUDO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 1997,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (פיאט סקודו דור חדש 2.0 BlueHDi 145 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "סקודו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1997,
+    "seconds": 12.8,
+    "source": "רישוי רכב / נתון יצרן (פיאט סקודו 120 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "SCUDO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1997,
+    "seconds": 12.8,
+    "source": "נתון יצרן (Fiat Scudo)"
+  },
+  {
+    "make": "פיאט טורקיה",
+    "model": "LINEA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1368,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (פיאט לינאה 1.4 T-Jet טורבו 120 כ\"ס)"
+  },
+  {
+    "make": "פיאט טורקיה",
+    "model": "LINEA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 77,
+    "cc": 1368,
+    "seconds": 14.6,
+    "source": "רישוי רכב / נתון יצרן (פיאט לינאה 1.4 77 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "לינאה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1368,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (פיאט לינאה 120 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "LINEA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1368,
+    "seconds": 9.2,
+    "source": "נתון יצרן (Fiat Linea)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "CROMA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 2198,
+    "seconds": 10.1,
+    "source": "רישוי רכב / נתון יצרן (פיאט כרומה סטיישן 2.2 147 כ\"ס)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "CROMA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1910,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (פיאט כרומה 1.9 MultiJet דיזל 150 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "כרומה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 2198,
+    "seconds": 10.1,
+    "source": "רישוי רכב / נתון יצרן (פיאט כרומה 147 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "CROMA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 2198,
+    "seconds": 10.1,
+    "source": "נתון יצרן (Fiat Croma)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "MULTIPLA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 103,
+    "cc": 1581,
+    "seconds": 12.6,
+    "source": "רישוי רכב / נתון יצרן (פיאט מולטיפלה 6 מושבים 1.6 103 כ\"ס)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "MULTIPLA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1910,
+    "seconds": 12.2,
+    "source": "רישוי רכב / נתון יצרן (פיאט מולטיפלה 1.9 JTD דיזל 115 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "מולטיפלה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 103,
+    "cc": 1581,
+    "seconds": 12.6,
+    "source": "רישוי רכב / נתון יצרן (פיאט מולטיפלה 103 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "MULTIPLA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 103,
+    "cc": 1581,
+    "seconds": 12.6,
+    "source": "נתון יצרן (Fiat Multipla)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "ULYSSE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1997,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (פיאט אוליזה מיניוואן 7 מושבים 2.0 136 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "אוליזה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1997,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (פיאט אוליזה 136 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "ULYSSE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1997,
+    "seconds": 11.2,
+    "source": "נתון יצרן (Fiat Ulysse)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "UNO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 45,
+    "cc": 999,
+    "seconds": 18.0,
+    "source": "רישוי רכב / נתון יצרן (פיאט אונו 1.0 Fire 45 כ\"ס)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "UNO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 70,
+    "cc": 1372,
+    "seconds": 12.4,
+    "source": "רישוי רכב / נתון יצרן (פיאט אונו 1.4 70 כ\"ס)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "UNO TURBO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 118,
+    "cc": 1372,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (פיאט אונו טורבו i.e. 1.4 118 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "אונו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 45,
+    "cc": 999,
+    "seconds": 18.0,
+    "source": "רישוי רכב / נתון יצרן (פיאט אונו 45 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "UNO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 45,
+    "cc": 999,
+    "seconds": 18.0,
+    "source": "נתון יצרן (Fiat Uno)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "MAREA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 103,
+    "cc": 1581,
+    "seconds": 11.7,
+    "source": "רישוי רכב / נתון יצרן (פיאט מריאה סדאן/סטיישן 1.6 103 כ\"ס)"
+  },
+  {
+    "make": "פיאט איטליה",
+    "model": "MAREA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 1998,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (פיאט מריאה 2.0 20V 5 צילינדרים 147 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "מריאה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 103,
+    "cc": 1581,
+    "seconds": 11.7,
+    "source": "רישוי רכב / נתון יצרן (פיאט מריאה 103 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "MAREA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 103,
+    "cc": 1581,
+    "seconds": 11.7,
+    "source": "נתון יצרן (Fiat Marea)"
+  },
+  {
+    "make": "פיאט טורקיה",
+    "model": "ALBEA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 80,
+    "cc": 1242,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט אלבאה סדאן 1.2 80 כ\"ס)"
+  },
+  {
+    "make": "פיאט טורקיה",
+    "model": "ALBEA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 77,
+    "cc": 1368,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט אלבאה 1.4 77 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "אלבאה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 80,
+    "cc": 1242,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט אלבאה 80 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "ALBEA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 80,
+    "cc": 1242,
+    "seconds": 13.5,
+    "source": "נתון יצרן (Fiat Albea)"
+  },
+  {
+    "make": "פיאט טורקיה",
+    "model": "PALIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 73,
+    "cc": 1242,
+    "seconds": 13.8,
+    "source": "רישוי רכב / נתון יצרן (פיאט פליו / פאליו 1.2 73 כ\"ס)"
+  },
+  {
+    "make": "פיאט טורקיה",
+    "model": "PALIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 103,
+    "cc": 1581,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (פיאט פליו 1.6 16V 103 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "פליו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 73,
+    "cc": 1242,
+    "seconds": 13.8,
+    "source": "רישוי רכב / נתון יצרן (פיאט פליו 73 כ\"ס)"
+  },
+  {
+    "make": "Fiat",
+    "model": "PALIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 73,
+    "cc": 1242,
+    "seconds": 13.8,
+    "source": "נתון יצרן (Fiat Palio)"
+  },
+  {
+    "make": "פיאט",
+    "model": "MATRIX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 2287,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט דוקאטו מטריקס אדריה מוטורהום 130 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "Matrix",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 2287,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט מטריקס 130 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "V60SP",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 2287,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט דוקאטו סאן-ליווינג V60SP קראוואן 130 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "V60sp",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 2287,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט V60sp 130 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "LIDO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 2287,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט לידו מוטורהום 130 כ\"ס)"
+  },
+  {
+    "make": "פיאט",
+    "model": "לידו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 2287,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (פיאט לידו 130 כ\"ס)"
   }
 ]
