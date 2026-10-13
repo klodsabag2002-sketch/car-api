@@ -14,7 +14,7 @@ const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";      // היסטור�
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";    // היסטוריית כלי רכב פרטיים (2): בעלויות
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";     // רכבים עם תג חניה לנכה
 
-// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 8) ----------
+// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 9) ----------
 let accelTable = [];
 const ACCEL_FILES = [
     "acceleration.json",
@@ -24,7 +24,8 @@ const ACCEL_FILES = [
     "acceleration5.json",
     "acceleration6.json",
     "acceleration7.json",
-    "acceleration8.json"
+    "acceleration8.json",
+    "acceleration9.json"
 ];
 
 ACCEL_FILES.forEach(fileName => {
@@ -201,6 +202,40 @@ const HE_MAKE_ALIASES = {
     "דאציה מרוקו": "Dacia",
     "רנו דאצ'יה": "Dacia",
     "רנו דאציה": "Dacia",
+    "דודג'": "Dodge",
+    "דודג": "Dodge",
+    "דודג' קנדה": "Dodge",
+    "דודג קנדה": "Dodge",
+    "דודג' ארה\"ב": "Dodge",
+    "דודג' ארהב": "Dodge",
+    "דודג ארהב": "Dodge",
+    "קרייזלר מקסיקו": "Dodge",
+    "קריזלר מקסיקו": "Dodge",
+    "דונגפנג": "Dongfeng",
+    "דונגפנג סין": "Dongfeng",
+    "דונג פנג": "Dongfeng",
+    "דונג פנג סין": "Dongfeng",
+    "דונפינג": "Dongfeng",
+    "דונפינג סין": "Dongfeng",
+    "די אף אס קיי": "DFSK",
+    "די.אף.אס.קיי": "DFSK",
+    "די אס": "DS",
+    "די אס צרפת": "DS",
+    "די אס גרמניה": "DS",
+    "די.אס": "DS",
+    "די.אס צרפת": "DS",
+    "די.אס גרמניה": "DS",
+    "די-אס": "DS",
+    "דיאס": "DS",
+    "דייהטסו": "Daihatsu",
+    "דייהטסו יפן": "Daihatsu",
+    "דיהטסו": "Daihatsu",
+    "דיהטסו יפן": "Daihatsu",
+    "דיפאל": "Deepal",
+    "דיפאל סין": "Deepal",
+    "דיפל": "Deepal",
+    "דיפל סין": "Deepal",
+    "צ'אנגאן דיפאל": "Deepal",
     "סיאט": "Seat",
     "סקודה": "Skoda",
     "פולקסווגן": "Volkswagen",
