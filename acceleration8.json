@@ -1,5 +1,475 @@
 [
   {
+    "make": "דונגפנג סין",
+    "model": "BOX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 0,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג בוקס חשמלי EV 95)"
+  },
+  {
+    "make": "דונגפנג סין",
+    "model": "בוקס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 0,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג בוקס חשמלי EV 95)"
+  },
+  {
+    "make": "דונגפנג",
+    "model": "BOX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 0,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג בוקס חשמלי 95)"
+  },
+  {
+    "make": "Dongfeng",
+    "model": "BOX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 0,
+    "seconds": 10.6,
+    "source": "נתון יצרן (Dongfeng Box / Nammi Box EV 95)"
+  },
+  {
+    "make": "דונגפנג סין",
+    "model": "MHERO 1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 1088,
+    "cc": 0,
+    "seconds": 4.2,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג מ-הירו 1 חשמלי EV 1088)"
+  },
+  {
+    "make": "דונגפנג סין",
+    "model": "M-HERO 1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 1088,
+    "cc": 0,
+    "seconds": 4.2,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג מ-הירו 1 חשמלי EV 1088)"
+  },
+  {
+    "make": "דונגפנג סין",
+    "model": "MHERO 1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 816,
+    "cc": 1476,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג מ-הירו 1 מאריך טווח EREV 816)"
+  },
+  {
+    "make": "דונגפנג סין",
+    "model": "M-HERO 1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 816,
+    "cc": 1476,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג מ-הירו 1 מאריך טווח EREV 816)"
+  },
+  {
+    "make": "Dongfeng",
+    "model": "MHERO 1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 1088,
+    "cc": 0,
+    "seconds": 4.2,
+    "source": "נתון יצרן (Dongfeng M-Hero 1 EV)"
+  },
+  {
+    "make": "Dongfeng",
+    "model": "M-HERO 1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 1088,
+    "cc": 0,
+    "seconds": 4.2,
+    "source": "נתון יצרן (Dongfeng M-Hero 1 EV)"
+  },
+  {
+    "make": "דונגפנג סין",
+    "model": "GLORY 580",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 146,
+    "cc": 1498,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג / DFSK גלורי 580 1.5 טורבו 146)"
+  },
+  {
+    "make": "דונגפנג סין",
+    "model": "GLORY 580",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג / DFSK גלורי 580 1.5 טורבו 150)"
+  },
+  {
+    "make": "דונגפנג סין",
+    "model": "580",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 146,
+    "cc": 1498,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג גלורי 580 146)"
+  },
+  {
+    "make": "דונגפנג",
+    "model": "גלורי 580",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 146,
+    "cc": 1498,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג גלורי 580 146)"
+  },
+  {
+    "make": "DFSK",
+    "model": "GLORY 580",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 146,
+    "cc": 1498,
+    "seconds": 11.5,
+    "source": "נתון יצרן (DFSK Glory 580 1.5T)"
+  },
+  {
+    "make": "Dongfeng",
+    "model": "GLORY 580",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 146,
+    "cc": 1498,
+    "seconds": 11.5,
+    "source": "נתון יצרן (Dongfeng Glory 580 1.5T)"
+  },
+  {
+    "make": "דונגפנג סין",
+    "model": "MAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1497,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג מייג' 1.5 טורבו 204)"
+  },
+  {
+    "make": "דונגפנג סין",
+    "model": "MAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 292,
+    "cc": 1497,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג מייג' היברידי 292)"
+  },
+  {
+    "make": "דונגפנג",
+    "model": "מייג",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1497,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג מייג' 204)"
+  },
+  {
+    "make": "Dongfeng",
+    "model": "MAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1497,
+    "seconds": 7.9,
+    "source": "נתון יצרן (Dongfeng Mage 1.5T)"
+  },
+  {
+    "make": "Dongfeng",
+    "model": "MAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 292,
+    "cc": 1497,
+    "seconds": 6.0,
+    "source": "נתון יצרן (Dongfeng Mage Hybrid)"
+  },
+  {
+    "make": "דונגפנג סין",
+    "model": "C31",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1498,
+    "seconds": 15.5,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג / DFSK C31 טנדר 102)"
+  },
+  {
+    "make": "דונגפנג",
+    "model": "C31",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1498,
+    "seconds": 15.5,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג C31 102)"
+  },
+  {
+    "make": "DFSK",
+    "model": "C31",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1498,
+    "seconds": 15.5,
+    "source": "נתון יצרן (DFSK C31 1.5)"
+  },
+  {
+    "make": "Dongfeng",
+    "model": "C31",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1498,
+    "seconds": 15.5,
+    "source": "נתון יצרן (Dongfeng C31 1.5)"
+  },
+  {
+    "make": "דונגפנג סין",
+    "model": "C32",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1498,
+    "seconds": 16.0,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג / DFSK C32 דאבל קבינה 102)"
+  },
+  {
+    "make": "דונגפנג",
+    "model": "C32",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1498,
+    "seconds": 16.0,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג C32 102)"
+  },
+  {
+    "make": "DFSK",
+    "model": "C32",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1498,
+    "seconds": 16.0,
+    "source": "נתון יצרן (DFSK C32 1.5)"
+  },
+  {
+    "make": "Dongfeng",
+    "model": "C32",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1498,
+    "seconds": 16.0,
+    "source": "נתון יצרן (Dongfeng C32 1.5)"
+  },
+  {
+    "make": "דונגפנג סין",
+    "model": "C35",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1498,
+    "seconds": 16.2,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג / DFSK C35 מסחרי 102)"
+  },
+  {
+    "make": "דונגפנג סין",
+    "model": "EC35",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 0,
+    "seconds": 14.8,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג EC35 חשמלי EV 82)"
+  },
+  {
+    "make": "דונגפנג",
+    "model": "C35",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1498,
+    "seconds": 16.2,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג C35 102)"
+  },
+  {
+    "make": "DFSK",
+    "model": "C35",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1498,
+    "seconds": 16.2,
+    "source": "נתון יצרן (DFSK C35 1.5)"
+  },
+  {
+    "make": "Dongfeng",
+    "model": "C35",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1498,
+    "seconds": 16.2,
+    "source": "נתון יצרן (Dongfeng C35 1.5)"
+  },
+  {
+    "make": "דונגפנג סין",
+    "model": "K01",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 1240,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג / DFSK K01 טנדר קל 82)"
+  },
+  {
+    "make": "דונגפנג סין",
+    "model": "K01",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 78,
+    "cc": 1310,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג / DFSK K01 טנדר קל 78)"
+  },
+  {
+    "make": "דונגפנג",
+    "model": "K01",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 1240,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג K01 82)"
+  },
+  {
+    "make": "DFSK",
+    "model": "K01",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 1240,
+    "seconds": 16.5,
+    "source": "נתון יצרן (DFSK K01)"
+  },
+  {
+    "make": "Dongfeng",
+    "model": "K01",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 1240,
+    "seconds": 16.5,
+    "source": "נתון יצרן (Dongfeng K01)"
+  },
+  {
+    "make": "דונגפנג סין",
+    "model": "K02",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 1240,
+    "seconds": 17.0,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג / DFSK K02 דאבל קבינה 82)"
+  },
+  {
+    "make": "דונגפנג",
+    "model": "K02",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 1240,
+    "seconds": 17.0,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג K02 82)"
+  },
+  {
+    "make": "DFSK",
+    "model": "K02",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 1240,
+    "seconds": 17.0,
+    "source": "נתון יצרן (DFSK K02)"
+  },
+  {
+    "make": "Dongfeng",
+    "model": "K02",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 1240,
+    "seconds": 17.0,
+    "source": "נתון יצרן (Dongfeng K02)"
+  },
+  {
+    "make": "דונגפנג סין",
+    "model": "K05",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 1240,
+    "seconds": 17.2,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג / DFSK K05 מסחרית קלה 82)"
+  },
+  {
+    "make": "דונגפנג",
+    "model": "K05",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 1240,
+    "seconds": 17.2,
+    "source": "רישוי רכב / נתון יצרן (דונגפנג K05 82)"
+  },
+  {
+    "make": "DFSK",
+    "model": "K05",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 1240,
+    "seconds": 17.2,
+    "source": "נתון יצרן (DFSK K05)"
+  },
+  {
+    "make": "Dongfeng",
+    "model": "K05",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 1240,
+    "seconds": 17.2,
+    "source": "נתון יצרן (Dongfeng K05)"
+  },
+  {
     "make": "קרייזלר מקסיקו",
     "model": "JOURNEY",
     "yearStart": null,
