@@ -1,5 +1,665 @@
 [
   {
+    "make": "דאצ'יה רומניה",
+    "model": "BIGSTER HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1799,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה ביגסטר הייבריד 1.8 109/155)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "BIGSTER HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1598,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה ביגסטר הייבריד 140)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "BIGSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1199,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה ביגסטר 1.2T מילד-הייבריד 140)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "BIGSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 10.1,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה ביגסטר 1.2T 130)"
+  },
+  {
+    "make": "דאצ'יה",
+    "model": "ביגסטר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1799,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה ביגסטר הייבריד 109)"
+  },
+  {
+    "make": "Dacia",
+    "model": "BIGSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1799,
+    "seconds": 9.7,
+    "source": "נתון יצרן (Dacia Bigster Hybrid)"
+  },
+  {
+    "make": "Dacia",
+    "model": "BIGSTER HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1799,
+    "seconds": 9.7,
+    "source": "נתון יצרן (Dacia Bigster Hybrid)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "JOGGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה ג'וגר 1.0 טורבו TCe 110)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "JOGGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 999,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה ג'וגר Eco-G 100)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "JOGGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1598,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה ג'וגר הייבריד 1.6 140)"
+  },
+  {
+    "make": "דאצ'יה",
+    "model": "גוגר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה ג'וגר 110)"
+  },
+  {
+    "make": "דאצ'יה",
+    "model": "ג'וגר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה ג'וגר 110)"
+  },
+  {
+    "make": "Dacia",
+    "model": "JOGGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 11.2,
+    "source": "נתון יצרן (Dacia Jogger TCe 110)"
+  },
+  {
+    "make": "Dacia",
+    "model": "JOGGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1598,
+    "seconds": 9.8,
+    "source": "נתון יצרן (Dacia Jogger Hybrid 140)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "DUSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 131,
+    "cc": 1332,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה דאסטר 1.33 טורבו TCe 131)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "DUSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1332,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה דאסטר 1.33 טורבו TCe 150)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "DUSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 116,
+    "cc": 1461,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה דאסטר 1.5 דיזל dCi 116)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "DUSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1461,
+    "seconds": 11.8,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה דאסטר 1.5 דיזל dCi 109)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "DUSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1197,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה דאסטר 1.2 טורבו TCe 125)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "DUSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1598,
+    "seconds": 10.1,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה דאסטר הייבריד 140)"
+  },
+  {
+    "make": "דאצ'יה",
+    "model": "דאסטר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 131,
+    "cc": 1332,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה דאסטר 131)"
+  },
+  {
+    "make": "דאצ'יה",
+    "model": "דאסטר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1332,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה דאסטר 150)"
+  },
+  {
+    "make": "Dacia",
+    "model": "DUSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 131,
+    "cc": 1332,
+    "seconds": 10.6,
+    "source": "נתון יצרן (Dacia Duster 1.3 TCe 131)"
+  },
+  {
+    "make": "Dacia",
+    "model": "DUSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1332,
+    "seconds": 9.7,
+    "source": "נתון יצרן (Dacia Duster 1.3 TCe 150)"
+  },
+  {
+    "make": "Dacia",
+    "model": "DUSTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 116,
+    "cc": 1461,
+    "seconds": 10.5,
+    "source": "נתון יצרן (Dacia Duster 1.5 dCi 116)"
+  },
+  {
+    "make": "דאציה מרוקו",
+    "model": "DOKKER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 1461,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה דוקר 1.5 דיזל dCi 95)"
+  },
+  {
+    "make": "דאצ'יה מרוקו",
+    "model": "DOKKER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 1461,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה דוקר 1.5 דיזל dCi 95)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "DOKKER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 1461,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה דוקר 1.5 דיזל dCi 95)"
+  },
+  {
+    "make": "דאציה מרוקו",
+    "model": "DOKKER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1461,
+    "seconds": 13.3,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה דוקר 1.5 דיזל dCi 90)"
+  },
+  {
+    "make": "דאציה מרוקו",
+    "model": "DOKKER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1461,
+    "seconds": 13.9,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה דוקר 1.5 דיזל dCi 75)"
+  },
+  {
+    "make": "דאציה מרוקו",
+    "model": "DOKKER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1197,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה דוקר 1.2 טורבו TCe 115)"
+  },
+  {
+    "make": "דאציה מרוקו",
+    "model": "DOKKER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 131,
+    "cc": 1332,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה דוקר 1.33 טורבו TCe 131)"
+  },
+  {
+    "make": "דאצ'יה",
+    "model": "דוקר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 1461,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה דוקר 95)"
+  },
+  {
+    "make": "Dacia",
+    "model": "DOKKER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 1461,
+    "seconds": 12.5,
+    "source": "נתון יצרן (Dacia Dokker 1.5 dCi 95)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "LOGAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 91,
+    "cc": 999,
+    "seconds": 11.6,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה לוגאן 1.0 טורבו TCe 91)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "LOGAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 898,
+    "seconds": 11.1,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה לוגאן 0.9 טורבו TCe 90)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "LOGAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1461,
+    "seconds": 11.8,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה לוגאן 1.5 דיזל dCi 90)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "LOGAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 1461,
+    "seconds": 11.4,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה לוגאן 1.5 דיזל dCi 95)"
+  },
+  {
+    "make": "דאצ'יה",
+    "model": "לוגאן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 91,
+    "cc": 999,
+    "seconds": 11.6,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה לוגאן 91)"
+  },
+  {
+    "make": "Dacia",
+    "model": "LOGAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 91,
+    "cc": 999,
+    "seconds": 11.6,
+    "source": "נתון יצרן (Dacia Logan TCe 90/91)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "LODGY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 131,
+    "cc": 1332,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה לודג'י 1.33 טורבו TCe 131)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "LODGY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1197,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה לודג'י 1.2 טורבו TCe 115)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "LODGY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1461,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה לודג'י 1.5 דיזל dCi 115)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "LODGY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1461,
+    "seconds": 11.6,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה לודג'י 1.5 דיזל dCi 109)"
+  },
+  {
+    "make": "דאצ'יה",
+    "model": "לודגי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 131,
+    "cc": 1332,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה לודג'י 131)"
+  },
+  {
+    "make": "דאצ'יה",
+    "model": "לודג'י",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 131,
+    "cc": 1332,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה לודג'י 131)"
+  },
+  {
+    "make": "Dacia",
+    "model": "LODGY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 131,
+    "cc": 1332,
+    "seconds": 9.3,
+    "source": "נתון יצרן (Dacia Lodgy 1.3 TCe 131)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "SANDERO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 898,
+    "seconds": 11.1,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה סנדרו 0.9 טורבו TCe 90)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "SANDERO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 91,
+    "cc": 999,
+    "seconds": 11.7,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה סנדרו 1.0 טורבו TCe 91)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "SANDERO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 73,
+    "cc": 998,
+    "seconds": 14.2,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה סנדרו 1.0 SCe 73)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "SANDERO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1461,
+    "seconds": 11.8,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה סנדרו 1.5 דיזל dCi 90)"
+  },
+  {
+    "make": "דאצ'יה",
+    "model": "סנדרו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 898,
+    "seconds": 11.1,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה סנדרו 90)"
+  },
+  {
+    "make": "Dacia",
+    "model": "SANDERO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 898,
+    "seconds": 11.1,
+    "source": "נתון יצרן (Dacia Sandero 0.9 TCe)"
+  },
+  {
+    "make": "Dacia",
+    "model": "SANDERO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 91,
+    "cc": 999,
+    "seconds": 11.7,
+    "source": "נתון יצרן (Dacia Sandero 1.0 TCe)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "SANDERO STEPWAY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 91,
+    "cc": 999,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה סנדרו סטפווי 1.0 טורבו TCe 91)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "SANDERO STEPWAY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 898,
+    "seconds": 11.1,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה סנדרו סטפווי 0.9 טורבו TCe 90)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "SANDERO STEPWAY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1461,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה סנדרו סטפווי 1.5 דיזל dCi 90)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "SANDERO STEPWAY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 1461,
+    "seconds": 11.8,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה סנדרו סטפווי 1.5 דיזל dCi 95)"
+  },
+  {
+    "make": "דאצ'יה",
+    "model": "סנדרו stepway",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 91,
+    "cc": 999,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה סנדרו סטפווי 91)"
+  },
+  {
+    "make": "Dacia",
+    "model": "SANDERO STEPWAY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 91,
+    "cc": 999,
+    "seconds": 11.9,
+    "source": "נתון יצרן (Dacia Sandero Stepway 1.0 TCe)"
+  },
+  {
+    "make": "Dacia",
+    "model": "SANDERO STEPWAY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 898,
+    "seconds": 11.1,
+    "source": "נתון יצרן (Dacia Sandero Stepway 0.9 TCe)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "SPRING",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 45,
+    "cc": 0,
+    "seconds": 13.7,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה ספרינג עירוני חשמלי EV 45)"
+  },
+  {
+    "make": "דאצ'יה רומניה",
+    "model": "SPRING",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 65,
+    "cc": 0,
+    "seconds": 13.7,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה ספרינג Extreme חשמלי EV 65)"
+  },
+  {
+    "make": "דאצ'יה",
+    "model": "ספרינג",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 45,
+    "cc": 0,
+    "seconds": 13.7,
+    "source": "רישוי רכב / נתון יצרן (דאצ'יה ספרינג 45)"
+  },
+  {
+    "make": "Dacia",
+    "model": "SPRING",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 45,
+    "cc": 0,
+    "seconds": 13.7,
+    "source": "נתון יצרן (Dacia Spring EV 45)"
+  },
+  {
+    "make": "Dacia",
+    "model": "SPRING",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 65,
+    "cc": 0,
+    "seconds": 13.7,
+    "source": "נתון יצרן (Dacia Spring EV 65)"
+  },
+  {
     "make": "ג'ילי סין",
     "model": "EX5",
     "yearStart": null,
