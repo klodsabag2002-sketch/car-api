@@ -1,1 +1,1032 @@
-klod
+[
+  {
+    "make": "מקלארן אנגליה",
+    "model": "720S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 720,
+    "cc": 3994,
+    "seconds": 2.9,
+    "source": "רישוי רכב / נתון יצרן (מקלארן 720S קופה 4.0 V8 טווין-טורבו 720)"
+  },
+  {
+    "make": "מקלארן אנגליה",
+    "model": "720S SPIDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 720,
+    "cc": 3994,
+    "seconds": 2.9,
+    "source": "רישוי רכב / נתון יצרן (מקלארן 720S ספיידר 4.0 V8 720)"
+  },
+  {
+    "make": "מקלארן",
+    "model": "720S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 720,
+    "cc": 3994,
+    "seconds": 2.9,
+    "source": "רישוי רכב / נתון יצרן (מקלארן 720S 720)"
+  },
+  {
+    "make": "McLaren",
+    "model": "720S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 720,
+    "cc": 3994,
+    "seconds": 2.9,
+    "source": "נתון יצרן (McLaren 720S Coupe / Spider)"
+  },
+  {
+    "make": "מיצובישי תאילנ",
+    "model": "ATTRAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 80,
+    "cc": 1193,
+    "seconds": 13.0,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי אטראז' 1.2 אוטומט CVT 80)"
+  },
+  {
+    "make": "מיצובישי תאילנד",
+    "model": "ATTRAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 80,
+    "cc": 1193,
+    "seconds": 13.0,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי אטראז' 1.2 80)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "אטראז׳",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 80,
+    "cc": 1193,
+    "seconds": 13.0,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי אטראז' 80)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "ATTRAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 80,
+    "cc": 1193,
+    "seconds": 13.0,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי אטראז' 80)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "ATTRAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 80,
+    "cc": 1193,
+    "seconds": 13.0,
+    "source": "נתון יצרן (Mitsubishi Attrage 1.2)"
+  },
+  {
+    "make": "מיצובישי תאילנ",
+    "model": "SPACE STAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 71,
+    "cc": 1193,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי ספייס סטאר 1.2 71)"
+  },
+  {
+    "make": "מיצובישי תאילנ",
+    "model": "SPACE STAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 80,
+    "cc": 1193,
+    "seconds": 12.8,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי ספייס סטאר 1.2 80)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "ספייס סטאר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 71,
+    "cc": 1193,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי ספייס סטאר 71)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "ספייס סטאר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 80,
+    "cc": 1193,
+    "seconds": 12.8,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי ספייס סטאר 80)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "SPACE STAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 71,
+    "cc": 1193,
+    "seconds": 13.5,
+    "source": "נתון יצרן (Mitsubishi Space Star 1.2)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "SPACE STAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 80,
+    "cc": 1193,
+    "seconds": 12.8,
+    "source": "נתון יצרן (Mitsubishi Space Star 1.2)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "OUTLANDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1998,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי אאוטלנדר דור 3 2.0 בנזין 150)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "OUTLANDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 2488,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי אאוטלנדר דור 4 2.5 בנזין 181)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "OUTLANDER PHEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 224,
+    "cc": 2360,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי אאוטלנדר פלאג-אין PHEV 2.4 224)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "OUTLANDER PHEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 203,
+    "cc": 1998,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי אאוטלנדר פלאג-אין PHEV 2.0 203)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "אאוטלנדר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1998,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי אאוטלנדר 150)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "אאוטלנדר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 2488,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי אאוטלנדר 181)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "OUTLANDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1998,
+    "seconds": 11.5,
+    "source": "נתון יצרן (Mitsubishi Outlander 2.0)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "OUTLANDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 2488,
+    "seconds": 10.2,
+    "source": "נתון יצרן (Mitsubishi Outlander 2.5)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "ASX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 148,
+    "cc": 1998,
+    "seconds": 11.3,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי ASX 2.0 בנזין 148/150)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "ASX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1998,
+    "seconds": 11.3,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי ASX 2.0 150)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "ASX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 148,
+    "cc": 1998,
+    "seconds": 11.3,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי ASX 148)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "ASX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 148,
+    "cc": 1998,
+    "seconds": 11.3,
+    "source": "נתון יצרן (Mitsubishi ASX 2.0)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "ECLIPSE CROSS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 152,
+    "cc": 1499,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי אקליפס קרוס 1.5 טורבו בנזין 152)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "ECLIPSE CROSS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1499,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי אקליפס קרוס 1.5 טורבו 163)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "ECLIPSE CROSS PHEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 188,
+    "cc": 2360,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי אקליפס קרוס פלאג-אין PHEV 188)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "אקליפס קרוס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 152,
+    "cc": 1499,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי אקליפס קרוס 152)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "ECLIPSE CROSS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 152,
+    "cc": 1499,
+    "seconds": 9.7,
+    "source": "נתון יצרן (Mitsubishi Eclipse Cross 1.5T)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "LANCER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1499,
+    "seconds": 14.3,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי לנסר הדור החדש 1.5 109)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "LANCER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 117,
+    "cc": 1590,
+    "seconds": 12.8,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי לנסר 1.6 117)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "LANCER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1798,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי לנסר 1.8 140)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "LANCER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 98,
+    "cc": 1584,
+    "seconds": 13.6,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי לנסר קלאסיק 1.6 98)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "לנסר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1499,
+    "seconds": 14.3,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי לנסר 109)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "LANCER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1499,
+    "seconds": 14.3,
+    "source": "נתון יצרן (Mitsubishi Lancer 1.5)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "LANCER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 113,
+    "cc": 1597,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי סופר לנסר 1.6 113)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "סופר לנסר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 113,
+    "cc": 1597,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי סופר לנסר 113)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "LANCER EVOLUTION",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 295,
+    "cc": 1998,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי לנסר איוו X טורבו 4WD 295)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "LANCER EVO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 1997,
+    "seconds": 5.1,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי לנסר איוו 8/9 טורבו 280)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "לנסר איוולושן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 295,
+    "cc": 1998,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי איוולושן 295)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "LANCER EVOLUTION",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 295,
+    "cc": 1998,
+    "seconds": 5.4,
+    "source": "נתון יצרן (Mitsubishi Lancer Evolution X)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "PAJERO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 3200,
+    "seconds": 12.8,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי פאג'רו דקר 3.2 DI-D דיזל 170)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "PAJERO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 3200,
+    "seconds": 11.1,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי פאג'רו 3.2 DI-D דיזל 190)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "PAJERO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 3200,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי פאג'רו 3.2 DI-D 200)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "PAJERO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 3828,
+    "seconds": 10.0,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי פאג'רו 3.8 V6 בנזין 250)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "פג׳רו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 3200,
+    "seconds": 12.8,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי פאג'רו 170)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "פג׳רו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 3200,
+    "seconds": 11.1,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי פאג'רו 190)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "PAJERO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 3200,
+    "seconds": 12.8,
+    "source": "נתון יצרן (Mitsubishi Pajero 3.2 DI-D)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "PAJERO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 3200,
+    "seconds": 11.1,
+    "source": "נתון יצרן (Mitsubishi Pajero 3.2 DI-D)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "GALANT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 133,
+    "cc": 1997,
+    "seconds": 11.8,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי גאלנט ספורט 2.0 133)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "GALANT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 137,
+    "cc": 1997,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי גאלנט 2.0 137)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "GALANT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 2498,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי גאלנט 2.5 V6 163)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "גאלאנט",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 133,
+    "cc": 1997,
+    "seconds": 11.8,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי גאלנט 133)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "GALANT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 133,
+    "cc": 1997,
+    "seconds": 11.8,
+    "source": "נתון יצרן (Mitsubishi Galant 2.0)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "GRANDIS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 2378,
+    "seconds": 11.7,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי גרנדיס 2.4 165)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "גרנדיס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 2378,
+    "seconds": 11.7,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי גרנדיס 165)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "GRANDIS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 2378,
+    "seconds": 11.7,
+    "source": "נתון יצרן (Mitsubishi Grandis 2.4)"
+  },
+  {
+    "make": "מיצובישי תאילנ",
+    "model": "L200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 2477,
+    "seconds": 14.6,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי מגנום/האנטר L200 2.5 דיזל 136)"
+  },
+  {
+    "make": "מיצובישי תאילנ",
+    "model": "L200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 2442,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי טרייטון L200 2.4 דיזל 181)"
+  },
+  {
+    "make": "מיצובישי תאילנ",
+    "model": "L200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 2268,
+    "seconds": 12.4,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי טרייטון 2.2 דיזל 150)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "טרייטון/L200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 2442,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי טרייטון 181)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "L200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 2442,
+    "seconds": 11.2,
+    "source": "נתון יצרן (Mitsubishi Triton / L200)"
+  },
+  {
+    "make": "מיצובישי הולנד",
+    "model": "CARISMA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1597,
+    "seconds": 12.4,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי כריזמה 1.6 100)"
+  },
+  {
+    "make": "מיצובישי הולנד",
+    "model": "CARISMA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1834,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי כריזמה 1.8 GDI 125)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "כריזמה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1597,
+    "seconds": 12.4,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי כריזמה 100)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "CARISMA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1597,
+    "seconds": 12.4,
+    "source": "נתון יצרן (Mitsubishi Carisma 1.6)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "COLT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 1332,
+    "seconds": 11.1,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי קולט 1.3 95)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "COLT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1499,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי קולט 1.5 109)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "COLT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 113,
+    "cc": 1597,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי קולט דור 4 1.6 113)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "קולט",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 1332,
+    "seconds": 11.1,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי קולט 95)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "COLT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 1332,
+    "seconds": 11.1,
+    "source": "נתון יצרן (Mitsubishi Colt 1.3)"
+  },
+  {
+    "make": "מיצובישי ארה\"ב",
+    "model": "ECLIPSE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 210,
+    "cc": 1997,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי אקליפס קופה 2.0 GS-T טורבו 210)"
+  },
+  {
+    "make": "מיצובישי ארה\"ב",
+    "model": "ECLIPSE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 263,
+    "cc": 3828,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי אקליפס דור 4 3.8 V6 263)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "אקליפס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 210,
+    "cc": 1997,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי אקליפס 210)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "ECLIPSE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 210,
+    "cc": 1997,
+    "seconds": 6.8,
+    "source": "נתון יצרן (Mitsubishi Eclipse)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "3000GT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2972,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי 3000GT VR-4 טווין-טורבו 4WD 286)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "GT3000",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2972,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי GT3000 286)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "GT3000",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2972,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי 3000GT 286)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "3000GT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2972,
+    "seconds": 5.9,
+    "source": "נתון יצרן (Mitsubishi 3000GT VR-4)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "GT3000",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2972,
+    "seconds": 5.9,
+    "source": "נתון יצרן (Mitsubishi 3000GT)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "I-MIEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 67,
+    "cc": 0,
+    "seconds": 15.9,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי i-MiEV חשמלית עירונית 67)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "I-miev",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 67,
+    "cc": 0,
+    "seconds": 15.9,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי i-MiEV 67)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "I-MIEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 67,
+    "cc": 0,
+    "seconds": 15.9,
+    "source": "נתון יצרן (Mitsubishi i-MiEV EV)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "L300",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 87,
+    "cc": 2477,
+    "seconds": 21.5,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי L300 מסחרית 2.5 דיזל 87)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "L300",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 87,
+    "cc": 2477,
+    "seconds": 21.5,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי L300 87)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "L300",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 87,
+    "cc": 2477,
+    "seconds": 21.5,
+    "source": "נתון יצרן (Mitsubishi L300)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "L400",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 99,
+    "cc": 2477,
+    "seconds": 19.5,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי L400 מסחרית 2.5 טורבו דיזל 99)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "SPACE GEAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 99,
+    "cc": 2477,
+    "seconds": 19.5,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי ספייס גיר 2.5 דיזל 99)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "L400",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 99,
+    "cc": 2477,
+    "seconds": 19.5,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי L400 99)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "ספייס גיר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 99,
+    "cc": 2477,
+    "seconds": 19.5,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי ספייס גיר 99)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "L400",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 99,
+    "cc": 2477,
+    "seconds": 19.5,
+    "source": "נתון יצרן (Mitsubishi L400 / Space Gear)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "SPACE WAGON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 2351,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי ספייס וואגן 2.4 GDI 150)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "ספייס וואגן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 2351,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי ספייס וואגן 150)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "SPACE WAGON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 2351,
+    "seconds": 12.0,
+    "source": "נתון יצרן (Mitsubishi Space Wagon)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "MONTERO SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 2972,
+    "seconds": 12.2,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי מונטרו ספורט / פאג'רו ספורט 3.0 V6 177)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "מונטרו ספורט",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 2972,
+    "seconds": 12.2,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי מונטרו ספורט 177)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "MONTERO SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 2972,
+    "seconds": 12.2,
+    "source": "נתון יצרן (Mitsubishi Montero Sport)"
+  },
+  {
+    "make": "מיצובישי יפן",
+    "model": "CANTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 2998,
+    "seconds": 18.0,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי פוסו קאנטר משאית קלה 3.0 דיזל 150)"
+  },
+  {
+    "make": "מיצובישי",
+    "model": "קאנטר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 2998,
+    "seconds": 18.0,
+    "source": "רישוי רכב / נתון יצרן (מיצובישי קאנטר 150)"
+  },
+  {
+    "make": "Mitsubishi",
+    "model": "CANTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 2998,
+    "seconds": 18.0,
+    "source": "נתון יצרן (Mitsubishi Fuso Canter)"
+  }
+]
