@@ -1,1 +1,2192 @@
-klod
+[
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "GOLF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן גולף 1.4 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "GOLF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן גולף דור 8 1.5 eTSI 150 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "GOLF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן גולף דור 8 1.0 eTSI 110 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "GOLF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1395,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן גולף 1.4 TSI 125 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "GOLF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 1390,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן גולף דור 6 1.4 TSI 122 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "GOLF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1390,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן גולף 1.4 TSI טווין-צ'ארג'ר 160 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "GOLF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1197,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן גולף 1.2 TSI 105 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "GOLF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1984,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן גולף GTI דור 8 2.0 TSI 245 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "GOLF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 1984,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן גולף GTI דור 7 2.0 TSI 230 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "GOLF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 220,
+    "cc": 1984,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן גולף GTI דור 7 2.0 TSI 220 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "GOLF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1984,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן גולף R 4Motion 2.0 TSI 300 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "GOLF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 1984,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן גולף R דור 8 320 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "גולף",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן גולף 150 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "GOLF",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 8.2,
+    "source": "נתון יצרן (VW Golf 1.4 TSI)"
+  },
+  {
+    "make": "פולקסווגן-ספרד",
+    "model": "POLO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 85,
+    "cc": 1390,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן פולו 1.4 בנזין 85 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן-ספרד",
+    "model": "POLO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 999,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן פולו דור 6 1.0 TSI 95 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן-ספרד",
+    "model": "POLO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן פולו 1.0 TSI 110 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן-ספרד",
+    "model": "POLO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1197,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן פולו דור 5 1.2 TSI 105 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן-ספרד",
+    "model": "POLO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1197,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן פולו 1.2 TSI 90 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן-ספרד",
+    "model": "POLO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1984,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן פולו GTI דור 6 2.0 TSI 200 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן-ספרד",
+    "model": "POLO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 1798,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן פולו GTI דור 5 1.8 TSI 192 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן-ספרד",
+    "model": "POLO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1390,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן פולו GTI 1.4 TSI 180 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "פולו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 999,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן פולו 95 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "POLO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 999,
+    "seconds": 10.8,
+    "source": "נתון יצרן (VW Polo 1.0 TSI)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "PASSAT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן פאסאט דור 8 2.0 TSI 190 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "PASSAT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן פאסאט 1.5 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "PASSAT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן פאסאט 1.4 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "PASSAT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1798,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן פאסאט דור 7 1.8 TSI 160 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "PASSAT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 1395,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן פאסאט GTE פלאג-אין PHEV 218 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "PASSAT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 1984,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן פאסאט 4Motion 2.0 TSI 280 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "פאסאט",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן פאסאט 190 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "PASSAT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 7.5,
+    "source": "נתון יצרן (VW Passat 2.0 TSI)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "VW CC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1798,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן CC / פאסאט CC 1.8 TSI 160 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "PASSAT CC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1798,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן פאסאט CC 1.8 TSI 160 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "VW CC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1984,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן CC 2.0 TSI 200 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "פאסאט cc",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1798,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן פאסאט CC 160 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "VW CC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1798,
+    "seconds": 8.5,
+    "source": "נתון יצרן (VW CC 1.8 TSI)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ARTEON PLUG IN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 1395,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ארטאון eHybrid פלאג-אין PHEV 218 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ARTEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ארטאון 2.0 TSI 190 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ARTEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 1984,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ארטאון 4Motion 2.0 TSI 280 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "ארטאון",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 1395,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ארטאון 218 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "ARTEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 1395,
+    "seconds": 7.8,
+    "source": "נתון יצרן (VW Arteon PHEV)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "TIGUAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טיגואן דור 2/3 1.5 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "TIGUAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טיגואן 1.4 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "TIGUAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1390,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טיגואן דור 1 1.4 TSI 160 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "TIGUAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טיגואן 4Motion 2.0 TSI 190 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "TIGUAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 220,
+    "cc": 1984,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טיגואן 2.0 TSI 220 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "TIGUAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1395,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טיגואן eHybrid פלאג-אין PHEV 245 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "טיגואן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טיגואן 150 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "TIGUAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.2,
+    "source": "נתון יצרן (VW Tiguan 1.5 TSI)"
+  },
+  {
+    "make": "פולקסווגן מקסי",
+    "model": "TIGUAN ALLSPACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טיגואן אולספייס 7 מקומות 1.5 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן מקסי",
+    "model": "TIGUAN ALLSPACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טיגואן אולספייס 4Motion 2.0 TSI 190 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "טיגואן אולספייס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טיגואן אולספייס 150 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "TIGUAN ALLSPACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.6,
+    "source": "נתון יצרן (VW Tiguan Allspace)"
+  },
+  {
+    "make": "פולקסווגן סלוב",
+    "model": "TOUAREG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2967,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טוארג דור 3 3.0 V6 TDI דיזל 286 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן סלוב",
+    "model": "TOUAREG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 2967,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טוארג דור 3 3.0 V6 TDI 231 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן סלוב",
+    "model": "TOUAREG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 2967,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טוארג דור 2 3.0 V6 TDI 240 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן סלוב",
+    "model": "TOUAREG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 2967,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טוארג דור 2 3.0 V6 TDI 245 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "טוארג",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2967,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טוארג 286 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "TOUAREG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2967,
+    "seconds": 6.1,
+    "source": "נתון יצרן (VW Touareg 3.0 V6 TDI)"
+  },
+  {
+    "make": "פולקסווגן ארהב",
+    "model": "ATLAS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 235,
+    "cc": 1984,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן אטלס SUV ענק 2.0 TSI 235 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן ארהב",
+    "model": "ATLAS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 276,
+    "cc": 3597,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן אטלס 3.6 VR6 276 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן ארהב",
+    "model": "ATLAS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 269,
+    "cc": 1984,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן אטלס דור חדש 2.0 TSI 269 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "אטלס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 235,
+    "cc": 1984,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן אטלס 235 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "ATLAS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 235,
+    "cc": 1984,
+    "seconds": 7.9,
+    "source": "נתון יצרן (VW Atlas 2.0T)"
+  },
+  {
+    "make": "פולקסווגן-ספרד",
+    "model": "T-CROSS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן T-קרוס 1.0 TSI 110 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן-ספרד",
+    "model": "T-CROSS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 999,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן T-קרוס 1.0 TSI 115 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן-ספרד",
+    "model": "T-CROSS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן T-קרוס 1.5 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "T קרוס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן T קרוס 110 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "T-CROSS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 10.2,
+    "source": "נתון יצרן (VW T-Cross 1.0 TSI)"
+  },
+  {
+    "make": "פולקסווגן פורט",
+    "model": "T-ROC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן T-רוק 1.5 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן פורט",
+    "model": "T-ROC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן T-רוק 4Motion 2.0 TSI 190 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן פורט",
+    "model": "T-ROC R",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1984,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן T-רוק R ספורט 300 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "T רוק",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן T רוק 150 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "T-ROC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.4,
+    "source": "נתון יצרן (VW T-Roc 1.5 TSI)"
+  },
+  {
+    "make": "פולקסווגן-ספרד",
+    "model": "TAIGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טאיגו קרוס-קופה 1.0 TSI 110 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן-ספרד",
+    "model": "TAIGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טאיגו 1.5 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "טאיגו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טאיגו 110 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "TAIGO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 10.4,
+    "source": "נתון יצרן (VW Taigo 1.0 TSI)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "TAOS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 158,
+    "cc": 1498,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טאוס / טארו קרוסאובר 1.5 TSI 158 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "טארו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 158,
+    "cc": 1498,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טארו 158 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "AMAROK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 2967,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן אמארוק טנדר 3.0 V6 TDI דיזל 258 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "AMAROK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 224,
+    "cc": 2967,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן אמארוק 3.0 V6 TDI 224 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "AMAROK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1968,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן אמארוק 2.0 BiTDI טווין-טורבו דיזל 180 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "אמרוק",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 2967,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן אמארוק 258 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "AMAROK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 2967,
+    "seconds": 7.4,
+    "source": "נתון יצרן (VW Amarok 3.0 V6 TDI)"
+  },
+  {
+    "make": "פולקסווגן מקסי",
+    "model": "JETTA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 1390,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ג'טה דור 6 1.4 TSI 122 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן מקסי",
+    "model": "JETTA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1395,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ג'טה 1.4 TSI 125 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן מקסי",
+    "model": "JETTA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1390,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ג'טה 1.4 TSI 160 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן מקסי",
+    "model": "JETTA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1197,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ג'טה 1.2 TSI 105 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן מקסי",
+    "model": "JETTA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1598,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ג'טה 1.6 TDI דיזל 105 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "גטה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 1390,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ג'טה 122 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "JETTA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 1390,
+    "seconds": 9.8,
+    "source": "נתון יצרן (VW Jetta 1.4 TSI)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "BORA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1595,
+    "seconds": 12.8,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן בורה 1.6 102 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "BORA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1984,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן בורה 2.0 115 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "BORA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1896,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן בורה 1.9 TDI דיזל 110 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "בורה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1595,
+    "seconds": 12.8,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן בורה 102 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "BORA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1595,
+    "seconds": 12.8,
+    "source": "נתון יצרן (VW Bora 1.6)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "VENTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1781,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ונטו 1.8 90 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "VENTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1984,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ונטו 2.0 115 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "ונטו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1781,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ונטו 90 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "VENTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1781,
+    "seconds": 12.5,
+    "source": "נתון יצרן (VW Vento)"
+  },
+  {
+    "make": "פולקסווגן מקסי",
+    "model": "BEETLE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1197,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן חיפושית החדשה 1.2 TSI 105 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן מקסי",
+    "model": "BEETLE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1390,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן חיפושית 1.4 TSI 160 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן מקסי",
+    "model": "BEETLE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1984,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן חיפושית ספורט 2.0 TSI 200 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן מקסי",
+    "model": "BEETLE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1595,
+    "seconds": 11.7,
+    "source": "רישוי רכב / נתון יצרן (ניו ביטל דור 1 1.6 102 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן מקסי",
+    "model": "BEETLE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1984,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (ניו ביטל דור 1 2.0 115 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "חיפושית",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1197,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן חיפושית 105 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "BEETLE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1197,
+    "seconds": 10.9,
+    "source": "נתון יצרן (VW Beetle 1.2 TSI)"
+  },
+  {
+    "make": "פולקסווגן פורט",
+    "model": "SCIROCCO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 210,
+    "cc": 1984,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן שירוקו ספורט 2.0 TSI 210 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן פורט",
+    "model": "SCIROCCO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1984,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן שירוקו 2.0 TSI 200 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן פורט",
+    "model": "SCIROCCO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1390,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן שירוקו 1.4 TSI טווין-צ'ארג'ר 160 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן פורט",
+    "model": "SCIROCCO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 1390,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן שירוקו 1.4 TSI 122 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן פורט",
+    "model": "SCIROCCO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1395,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן שירוקו מתוח פנים 1.4 TSI 125 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן פורט",
+    "model": "SCIROCCO R",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 1984,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן שירוקו R ביצועים 265 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "שירוקו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 210,
+    "cc": 1984,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן שירוקו 210 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "שירוקו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1390,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן שירוקו 160 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "SCIROCCO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 210,
+    "cc": 1984,
+    "seconds": 6.9,
+    "source": "נתון יצרן (VW Scirocco 2.0 TSI)"
+  },
+  {
+    "make": "פולקסווגן פורט",
+    "model": "EOS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1984,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן איוס קבריולה גג קשיח 2.0 TFSI 200 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן פורט",
+    "model": "EOS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 210,
+    "cc": 1984,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן איוס 2.0 TSI 210 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן פורט",
+    "model": "EOS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1390,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן איוס 1.4 TSI 160 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "איוס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1984,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן איוס 200 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "EOS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1984,
+    "seconds": 7.8,
+    "source": "נתון יצרן (VW Eos 2.0 TFSI)"
+  },
+  {
+    "make": "פולקסווגן סלוב",
+    "model": "UP",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 999,
+    "seconds": 13.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן אפ Move Up! 1.0 75 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן סלוב",
+    "model": "UP",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 60,
+    "cc": 999,
+    "seconds": 14.4,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן אפ 1.0 Take Up! 60 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן סלוב",
+    "model": "UP",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 999,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן אפ 1.0 TSI טורבו 90 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן סלוב",
+    "model": "E-UP",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 83,
+    "cc": 0,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן e-Up! חשמלית עירונית 83 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "אפ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 999,
+    "seconds": 13.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן אפ 75 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "UP",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 999,
+    "seconds": 13.2,
+    "source": "נתון יצרן (VW Up! 1.0)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "TOURAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טוראן 7 מקומות 1.5 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "TOURAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טוראן 1.4 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "TOURAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1390,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טוראן 1.4 TSI 140 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "TOURAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1197,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טוראן 1.2 TSI 105 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "TOURAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1598,
+    "seconds": 11.4,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טוראן 1.6 TDI דיזל 115 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "טוראן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טוראן 150 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "TOURAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.9,
+    "source": "נתון יצרן (VW Touran 1.5 TSI)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "PHAETON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 2967,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן פיטון לימוזינת פאר 3.0 V6 TDI 240 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "PHAETON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 335,
+    "cc": 4172,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן פיטון 4.2 V8 335 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "פיטון",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 2967,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן פיטון 240 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "PHAETON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 2967,
+    "seconds": 8.3,
+    "source": "נתון יצרן (VW Phaeton 3.0 TDI)"
+  },
+  {
+    "make": "פולקסווגן פולי",
+    "model": "CADDY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 1968,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן קאדי דור 5 2.0 TDI דיזל 122 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן פולי",
+    "model": "CADDY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 114,
+    "cc": 1498,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן קאדי דור 5 1.5 TSI בנזין 114 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן פולי",
+    "model": "CADDY MAXI D.V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1395,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן קאדי מקסי ואן מסחרי 1.4 TSI 125 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן פולי",
+    "model": "CADDY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1968,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן קאדי דור 4 2.0 TDI דיזל 102 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן פולי",
+    "model": "CADDY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1598,
+    "seconds": 12.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן קאדי 1.6 TDI דיזל 102 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן פולי",
+    "model": "CADDY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1197,
+    "seconds": 11.8,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן קאדי 1.2 TSI 105 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "קאדי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 1968,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן קאדי 122 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "CADDY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 1968,
+    "seconds": 11.2,
+    "source": "נתון יצרן (VW Caddy 2.0 TDI)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1968,
+    "seconds": 14.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טרנספורטר T5 2.0 TDI דיזל 140 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1968,
+    "seconds": 11.3,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן T5 2.0 BiTDI טווין-טורבו דיזל 180 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1968,
+    "seconds": 17.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן T5 2.0 TDI 102 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 2461,
+    "seconds": 15.3,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן T5 2.5 TDI דיזל 130 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "T6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1968,
+    "seconds": 13.0,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טרנספורטר T6 2.0 TDI דיזל 150 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "TRANSPORTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1968,
+    "seconds": 13.0,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טרנספורטר 2.0 TDI 150 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "טרנספורטר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1968,
+    "seconds": 14.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טרנספורטר 140 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "TRANSPORTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1968,
+    "seconds": 14.2,
+    "source": "נתון יצרן (VW Transporter 2.0 TDI)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "CARAVELLE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1968,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן קראוול T6.1 נוסעים 2.0 TDI דיזל 110 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "CARAVELLE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1968,
+    "seconds": 13.0,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן קראוול 2.0 TDI 150 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "CARAVELLE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1968,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן קראוול 2.0 BiTDI דיזל 204 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "קראוול",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1968,
+    "seconds": 13.0,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן קראוול 150 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "CARAVELLE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1968,
+    "seconds": 13.0,
+    "source": "נתון יצרן (VW Caravelle 2.0 TDI)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "MULTIVAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1968,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן מולטיוואן Highline VIP 2.0 BiTDI 204 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "MULTIVAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1984,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן מולטיוואן 2.0 TSI בנזין 204 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "MULTIVAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 1395,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן מולטיוואן T7 eHybrid פלאג-אין PHEV 218 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "מולטיוואן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1968,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן מולטיוואן 204 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "MULTIVAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1968,
+    "seconds": 9.9,
+    "source": "נתון יצרן (VW Multivan 2.0 BiTDI)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "CALIFORNIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1968,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן קליפורניה קאמפר 2.0 BiTDI 204 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "CALIFORNIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1968,
+    "seconds": 14.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן קליפורניה 2.0 TDI 150 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "קליפורניה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1968,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן קליפורניה 204 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "CALIFORNIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1968,
+    "seconds": 11.2,
+    "source": "נתון יצרן (VW California Camper)"
+  },
+  {
+    "make": "פולקסווגן פולי",
+    "model": "CRAFTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 1968,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן קראפטר מסחרית גדולה 2.0 BiTDI דיזל 177 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן פולי",
+    "model": "CRAFTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1968,
+    "seconds": 15.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן קראפטר 2.0 TDI דיזל 140 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן פולי",
+    "model": "CRAFTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1968,
+    "seconds": 18.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן קראפטר 2.0 TDI 109 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "קראפטר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 1968,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן קראפטר 177 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "CRAFTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 1968,
+    "seconds": 13.5,
+    "source": "נתון יצרן (VW Crafter 2.0 BiTDI)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "LT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 2461,
+    "seconds": 21.0,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן LT מסחרית 2.5 TDI 109 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "LT35",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 2461,
+    "seconds": 21.0,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן LT35 2.5 TDI 109 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "LT35",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 158,
+    "cc": 2799,
+    "seconds": 17.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן LT35 2.8 TDI 158 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "Lt",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 2461,
+    "seconds": 21.0,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן LT 109 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "Lt35",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 2461,
+    "seconds": 21.0,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן LT35 109 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "LT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 2461,
+    "seconds": 21.0,
+    "source": "נתון יצרן (VW LT TDI)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ID3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.3 Pro / Pro S חשמלי מלא 204 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ID.3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.3 חשמלי מלא 204 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ID3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 0,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.3 Pure 145 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "Id3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID3 204 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "ID.3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "נתון יצרן (VW ID.3 EV)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "ID3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "נתון יצרן (VW ID.3 Pro)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ID4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.4 Pro קרוסאובר חשמלי מלא 204 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ID.4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.4 חשמלי מלא 204 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ID4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.4 Pro דור מעודכן 286 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ID4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 0,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.4 GTX כפול מנועים AWD 299 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ID4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 148,
+    "cc": 0,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.4 Pure 148 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "Id4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID4 204 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "ID.4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.5,
+    "source": "נתון יצרן (VW ID.4 Pro EV)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "ID4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.5,
+    "source": "נתון יצרן (VW ID.4 EV)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ID5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.5 Pro קופה חשמלי מלא 204 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ID.5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.5 חשמלי 204 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ID5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.5 Pro מנוע מעודכן 286 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ID5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 0,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.5 GTX כפול מנועים AWD 299 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "Id5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID5 204 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "ID.5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.4,
+    "source": "נתון יצרן (VW ID.5 EV)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "ID5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 8.4,
+    "source": "נתון יצרן (VW ID.5 Pro)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ID6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.6 7 מקומות חשמלי מלא 204 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ID.6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.6 חשמלי 204 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ID6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 305,
+    "cc": 0,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.6 Crozz / X AWD כפול מנועים 305 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "Id6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID6 204 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "ID.6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 9.1,
+    "source": "נתון יצרן (VW ID.6 EV)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ID7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.7 Pro סדאן פרימיום חשמלי מלא 286 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ID.7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.7 Pro חשמלי מלא 286 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ID7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.7 GTX כפול מנועים AWD 340 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "Id7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID7 286 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "ID.7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 6.5,
+    "source": "נתון יצרן (VW ID.7 Pro EV)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "ID7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 6.5,
+    "source": "נתון יצרן (VW ID.7 EV)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ID.BUZZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.Buzz ואן רטרו חשמלי מלא 204 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ID BUZZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.Buzz חשמלי 204 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ID.BUZZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.Buzz בסיס גלגלים ארוך LWB 286 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "ID.BUZZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.Buzz GTX כפול מנועים AWD 340 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "Id.buzz",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.Buzz 204 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "ID.BUZZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 10.2,
+    "source": "נתון יצרן (VW ID.Buzz EV)"
+  }
+]
