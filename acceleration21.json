@@ -1,1 +1,1682 @@
-klod
+[
+  {
+    "make": "סיאט סלובקיה",
+    "model": "MII",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 999,
+    "seconds": 13.2,
+    "source": "רישוי רכב / נתון יצרן (סיאט Mii 1.0 75 כ\"ס)"
+  },
+  {
+    "make": "סיאט סלובקיה",
+    "model": "MII",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 60,
+    "cc": 999,
+    "seconds": 14.4,
+    "source": "רישוי רכב / נתון יצרן (סיאט Mii 1.0 60 כ\"ס)"
+  },
+  {
+    "make": "סיאט סלובקיה",
+    "model": "MII ELECTRIC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 83,
+    "cc": 0,
+    "seconds": 12.3,
+    "source": "רישוי רכב / נתון יצרן (סיאט Mii חשמלית 83 כ\"ס)"
+  },
+  {
+    "make": "סיאט",
+    "model": "Mii",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 999,
+    "seconds": 13.2,
+    "source": "רישוי רכב / נתון יצרן (סיאט Mii 75 כ\"ס)"
+  },
+  {
+    "make": "Seat",
+    "model": "MII",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 999,
+    "seconds": 13.2,
+    "source": "נתון יצרן (Seat Mii 1.0)"
+  },
+  {
+    "make": "סיאט צ'כיה",
+    "model": "ATECA STYLE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (סיאט אטקה 1.5 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "סיאט צ'כיה",
+    "model": "ATECA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (סיאט אטקה 1.5 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "סיאט צ'כיה",
+    "model": "ATECA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (סיאט אטקה 1.4 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "סיאט צ'כיה",
+    "model": "ATECA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 999,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (סיאט אטקה 1.0 TSI 115 כ\"ס)"
+  },
+  {
+    "make": "סיאט צ'כיה",
+    "model": "ATECA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (סיאט אטקה 2.0 TSI 4Drive 190 כ\"ס)"
+  },
+  {
+    "make": "סיאט צ'כיה",
+    "model": "ATECA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1968,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (סיאט אטקה 2.0 TDI דיזל 150 כ\"ס)"
+  },
+  {
+    "make": "סיאט",
+    "model": "אטקה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (סיאט אטקה 150 כ\"ס)"
+  },
+  {
+    "make": "Seat",
+    "model": "ATECA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.6,
+    "source": "נתון יצרן (Seat Ateca 1.5 TSI)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "IBIZA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (סיאט איביזה 1.0 TSI 110 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "IBIZA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 999,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (סיאט איביזה FR 1.0 TSI 115 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "IBIZA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 999,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (סיאט איביזה 1.0 TSI ידני 95 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "IBIZA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (סיאט איביזה FR 1.5 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "IBIZA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1197,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (סיאט איביזה דור 4 1.2 TSI 105 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "IBIZA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1197,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (סיאט איביזה 1.2 TSI 90 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "IBIZA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 85,
+    "cc": 1390,
+    "seconds": 12.2,
+    "source": "רישוי רכב / נתון יצרן (סיאט איביזה 1.4 בנזין 85 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "IBIZA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1390,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (סיאט איביזה קופרה 1.4 TSI 180 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "IBIZA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 1798,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (סיאט איביזה קופרה 1.8 TSI 192 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "IBIZA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1595,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (סיאט איביזה דור 3 1.6 100 כ\"ס)"
+  },
+  {
+    "make": "סיאט",
+    "model": "איביזה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (סיאט איביזה 110 כ\"ס)"
+  },
+  {
+    "make": "סיאט",
+    "model": "איביזה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 999,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (סיאט איביזה 115 כ\"ס)"
+  },
+  {
+    "make": "Seat",
+    "model": "IBIZA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 9.5,
+    "source": "נתון יצרן (Seat Ibiza 1.0 TSI)"
+  },
+  {
+    "make": "Seat",
+    "model": "IBIZA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 999,
+    "seconds": 9.3,
+    "source": "נתון יצרן (Seat Ibiza 1.0 TSI)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "ARONA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 10.0,
+    "source": "רישוי רכב / נתון יצרן (סיאט ארונה 1.0 TSI 110 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "ARONA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 999,
+    "seconds": 10.0,
+    "source": "רישוי רכב / נתון יצרן (סיאט ארונה 1.0 TSI 115 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "ARONA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 999,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (סיאט ארונה 1.0 TSI ידני 95 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "ARONA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (סיאט ארונה FR 1.5 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "סיאט",
+    "model": "ארונה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 10.0,
+    "source": "רישוי רכב / נתון יצרן (סיאט ארונה 110 כ\"ס)"
+  },
+  {
+    "make": "Seat",
+    "model": "ARONA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 10.0,
+    "source": "נתון יצרן (Seat Arona 1.0 TSI)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1395,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (סיאט לאון דור 3 1.4 TSI 125 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (סיאט לאון דור 3 1.4 TSI FR 150 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (סיאט לאון דור 4 1.5 eTSI מיקרו-היברידי 150 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 999,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (סיאט לאון 1.0 eTSI 110 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1197,
+    "seconds": 10.0,
+    "source": "רישוי רכב / נתון יצרן (סיאט לאון 1.2 TSI 105 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1197,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (סיאט לאון 1.2 TSI 110 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1798,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (סיאט לאון FR 1.8 TSI 180 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (סיאט לאון 2.0 TSI 190 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1395,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (סיאט לאון e-HYBRID פלאג-אין PHEV 204 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 1984,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (סיאט לאון קופרה 280 2.0 TSI 280 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 290,
+    "cc": 1984,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (סיאט לאון קופרה 290 2.0 TSI 290 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1984,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (סיאט לאון קופרה 300 4Drive 300 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1984,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (סיאט לאון דור 2 FR 2.0 TFSI 200 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1984,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (סיאט לאון דור 2 קופרה 2.0 TFSI 240 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1781,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (סיאט לאון דור 1 20VT טורבו 180 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 225,
+    "cc": 1781,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (סיאט לאון דור 1 קופרה R 225 כ\"ס)"
+  },
+  {
+    "make": "סיאט",
+    "model": "לאון",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1395,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (סיאט לאון 125 כ\"ס)"
+  },
+  {
+    "make": "סיאט",
+    "model": "לאון",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (סיאט לאון 150 כ\"ס)"
+  },
+  {
+    "make": "סיאט",
+    "model": "לאון",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 290,
+    "cc": 1984,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (סיאט לאון קופרה 290 כ\"ס)"
+  },
+  {
+    "make": "Seat",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.4,
+    "source": "נתון יצרן (Seat Leon 1.5 eTSI)"
+  },
+  {
+    "make": "Seat",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1395,
+    "seconds": 9.1,
+    "source": "נתון יצרן (Seat Leon 1.4 TSI)"
+  },
+  {
+    "make": "סיאט צ'כיה",
+    "model": "TOLEDO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1395,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (סיאט טולדו דור 4 1.4 TSI 125 כ\"ס)"
+  },
+  {
+    "make": "סיאט צ'כיה",
+    "model": "TOLEDO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 1390,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (סיאט טולדו דור 4 1.4 TSI 122 כ\"ס)"
+  },
+  {
+    "make": "סיאט צ'כיה",
+    "model": "TOLEDO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1197,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (סיאט טולדו 1.2 TSI 105 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "TOLEDO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1984,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (סיאט טולדו דור 3 2.0 FSI 150 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "TOLEDO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1896,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (סיאט טולדו דור 2 1.9 TDI דיזל 110 כ\"ס)"
+  },
+  {
+    "make": "סיאט",
+    "model": "טולדו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1395,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (סיאט טולדו 125 כ\"ס)"
+  },
+  {
+    "make": "Seat",
+    "model": "TOLEDO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1395,
+    "seconds": 9.0,
+    "source": "נתון יצרן (Seat Toledo 1.4 TSI)"
+  },
+  {
+    "make": "סיאט גרמניה",
+    "model": "TARRACO PHEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1395,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (סיאט טראקו e-HYBRID פלאג-אין PHEV FR 245 כ\"ס)"
+  },
+  {
+    "make": "סיאט גרמניה",
+    "model": "TARRACO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (סיאט טראקו 7 מקומות 1.5 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "סיאט גרמניה",
+    "model": "TARRACO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (סיאט טראקו 2.0 TSI 4Drive 190 כ\"ס)"
+  },
+  {
+    "make": "סיאט גרמניה",
+    "model": "TARRACO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1984,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (סיאט טראקו 2.0 TSI FR 245 כ\"ס)"
+  },
+  {
+    "make": "סיאט",
+    "model": "טראקו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1395,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (סיאט טראקו פלאג-אין 245 כ\"ס)"
+  },
+  {
+    "make": "סיאט",
+    "model": "טראקו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (סיאט טראקו 150 כ\"ס)"
+  },
+  {
+    "make": "Seat",
+    "model": "TARRACO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1395,
+    "seconds": 7.5,
+    "source": "נתון יצרן (Seat Tarraco e-HYBRID PHEV)"
+  },
+  {
+    "make": "Seat",
+    "model": "TARRACO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.5,
+    "source": "נתון יצרן (Seat Tarraco 1.5 TSI)"
+  },
+  {
+    "make": "סיאט פורטוגל",
+    "model": "ALHAMBRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (סיאט אלהמברה 1.4 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "סיאט פורטוגל",
+    "model": "ALHAMBRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1968,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (סיאט אלהמברה 2.0 TDI דיזל 150 כ\"ס)"
+  },
+  {
+    "make": "סיאט פורטוגל",
+    "model": "ALHAMBRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 1968,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (סיאט אלהמברה 2.0 TDI דיזל 177 כ\"ס)"
+  },
+  {
+    "make": "סיאט",
+    "model": "אלהמברה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (סיאט אלהמברה 150 כ\"ס)"
+  },
+  {
+    "make": "Seat",
+    "model": "ALHAMBRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 9.9,
+    "source": "נתון יצרן (Seat Alhambra 1.4 TSI)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "ALTEA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1197,
+    "seconds": 11.3,
+    "source": "רישוי רכב / נתון יצרן (סיאט אלתיאה 1.2 TSI 105 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "ALTEA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1390,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (סיאט אלתיאה 1.4 TSI 125 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "ALTEA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1798,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (סיאט אלתיאה 1.8 TSI 160 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "ALTEA XL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1798,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (סיאט אלתיאה XL 1.8 TSI 160 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "ALTEA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1896,
+    "seconds": 12.3,
+    "source": "רישוי רכב / נתון יצרן (סיאט אלתיאה 1.9 TDI דיזל 105 כ\"ס)"
+  },
+  {
+    "make": "סיאט",
+    "model": "אלתיאה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1197,
+    "seconds": 11.3,
+    "source": "רישוי רכב / נתון יצרן (סיאט אלתיאה 105 כ\"ס)"
+  },
+  {
+    "make": "Seat",
+    "model": "ALTEA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1197,
+    "seconds": 11.3,
+    "source": "נתון יצרן (Seat Altea 1.2 TSI)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "CORDOBA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1598,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (סיאט קורדובה 1.6 100 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "CORDOBA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1390,
+    "seconds": 13.6,
+    "source": "רישוי רכב / נתון יצרן (סיאט קורדובה 1.4 75 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "CORDOBA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1896,
+    "seconds": 11.1,
+    "source": "רישוי רכב / נתון יצרן (סיאט קורדובה 1.9 TDI דיזל 100 כ\"ס)"
+  },
+  {
+    "make": "סיאט",
+    "model": "קורדובה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1598,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (סיאט קורדובה 100 כ\"ס)"
+  },
+  {
+    "make": "Seat",
+    "model": "CORDOBA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1598,
+    "seconds": 11.0,
+    "source": "נתון יצרן (Seat Cordoba)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "INCA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 64,
+    "cc": 1896,
+    "seconds": 20.6,
+    "source": "רישוי רכב / נתון יצרן (סיאט אינקה מסחרית 1.9 SDI דיזל 64 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד",
+    "model": "INCA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 60,
+    "cc": 1390,
+    "seconds": 18.8,
+    "source": "רישוי רכב / נתון יצרן (סיאט אינקה 1.4 בנזין 60 כ\"ס)"
+  },
+  {
+    "make": "סיאט",
+    "model": "אינקה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 64,
+    "cc": 1896,
+    "seconds": 20.6,
+    "source": "רישוי רכב / נתון יצרן (סיאט אינקה 64 כ\"ס)"
+  },
+  {
+    "make": "Seat",
+    "model": "INCA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 64,
+    "cc": 1896,
+    "seconds": 20.6,
+    "source": "נתון יצרן (Seat Inca)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "IMPREZA B3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 107,
+    "cc": 1498,
+    "seconds": 14.0,
+    "source": "רישוי רכב / נתון יצרן (סובארו אימפרזה B3 1.5 107 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "IMPREZA B3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1994,
+    "seconds": 11.6,
+    "source": "רישוי רכב / נתון יצרן (סובארו אימפרזה B3 2.0 150 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "IMPREZA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 114,
+    "cc": 1600,
+    "seconds": 12.4,
+    "source": "רישוי רכב / נתון יצרן (סובארו אימפרזה דור 4/5 1.6 114 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "IMPREZA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 1597,
+    "seconds": 12.9,
+    "source": "רישוי רכב / נתון יצרן (סובארו אימפרזה גרנד ליאונה 1.6 95 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "IMPREZA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1994,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (סובארו אימפרזה 2.0 AWD 125 כ\"ס)"
+  },
+  {
+    "make": "סובארו",
+    "model": "אימפרזה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 107,
+    "cc": 1498,
+    "seconds": 14.0,
+    "source": "רישוי רכב / נתון יצרן (סובארו אימפרזה 107 כ\"ס)"
+  },
+  {
+    "make": "סובארו",
+    "model": "אימפרזה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 114,
+    "cc": 1600,
+    "seconds": 12.4,
+    "source": "רישוי רכב / נתון יצרן (סובארו אימפרזה 114 כ\"ס)"
+  },
+  {
+    "make": "Subaru",
+    "model": "IMPREZA B3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 107,
+    "cc": 1498,
+    "seconds": 14.0,
+    "source": "נתון יצרן (Subaru Impreza B3 1.5)"
+  },
+  {
+    "make": "Subaru",
+    "model": "IMPREZA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 114,
+    "cc": 1600,
+    "seconds": 12.4,
+    "source": "נתון יצרן (Subaru Impreza 1.6)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "BRZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 228,
+    "cc": 2387,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (סובארו BRZ דור 2 ידני 2.4 228 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "BRZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 228,
+    "cc": 2387,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (סובארו BRZ דור 2 אוטומט 2.4 228 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "BRZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1998,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (סובארו BRZ דור 1 ידני 2.0 200 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "BRZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1998,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (סובארו BRZ דור 1 אוטומט 2.0 200 כ\"ס)"
+  },
+  {
+    "make": "סובארו",
+    "model": "BRZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 228,
+    "cc": 2387,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (סובארו BRZ 228 כ\"ס)"
+  },
+  {
+    "make": "Subaru",
+    "model": "BRZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 228,
+    "cc": 2387,
+    "seconds": 6.3,
+    "source": "נתון יצרן (Subaru BRZ 2.4 Manual)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "B4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 175,
+    "cc": 2498,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (סובארו B4 / לגאסי דור 6 2.5 175 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "B4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 167,
+    "cc": 2457,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (סובארו B4 דור 5 2.5 167 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "B4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1994,
+    "seconds": 11.1,
+    "source": "רישוי רכב / נתון יצרן (סובארו B4 דור 5 2.0 150 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "B4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 1994,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (סובארו B4 דור 4 2.0 165 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "B4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 2999,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (סובארו B4 3.0R שישה צילינדרים 245 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "LEGACY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 175,
+    "cc": 2498,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (סובארו לגאסי 2.5 175 כ\"ס)"
+  },
+  {
+    "make": "סובארו",
+    "model": "B4/לגאסי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 175,
+    "cc": 2498,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (סובארו B4 175 כ\"ס)"
+  },
+  {
+    "make": "סובארו",
+    "model": "לגאסי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 175,
+    "cc": 2498,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (סובארו לגאסי 175 כ\"ס)"
+  },
+  {
+    "make": "Subaru",
+    "model": "B4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 175,
+    "cc": 2498,
+    "seconds": 9.6,
+    "source": "נתון יצרן (Subaru Legacy / B4 2.5)"
+  },
+  {
+    "make": "Subaru",
+    "model": "LEGACY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 175,
+    "cc": 2498,
+    "seconds": 9.6,
+    "source": "נתון יצרן (Subaru Legacy 2.5)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "XV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 152,
+    "cc": 1995,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (סובארו XV קרוסטרק 2.0 152 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "XV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 114,
+    "cc": 1600,
+    "seconds": 13.9,
+    "source": "רישוי רכב / נתון יצרן (סובארו XV 1.6 114 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "XV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1995,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (סובארו XV דור 1 2.0 150 כ\"ס)"
+  },
+  {
+    "make": "סובארו",
+    "model": "XV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 152,
+    "cc": 1995,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (סובארו XV 152 כ\"ס)"
+  },
+  {
+    "make": "סובארו",
+    "model": "XV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 114,
+    "cc": 1600,
+    "seconds": 13.9,
+    "source": "רישוי רכב / נתון יצרן (סובארו XV 114 כ\"ס)"
+  },
+  {
+    "make": "Subaru",
+    "model": "XV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 152,
+    "cc": 1995,
+    "seconds": 10.4,
+    "source": "נתון יצרן (Subaru XV 2.0)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "CROSSTREK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 152,
+    "cc": 1995,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (סובארו קרוסטרק דור חדש 2.0 152 כ\"ס)"
+  },
+  {
+    "make": "סובארו",
+    "model": "קרוסטרק",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 152,
+    "cc": 1995,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (סובארו קרוסטרק 152 כ\"ס)"
+  },
+  {
+    "make": "Subaru",
+    "model": "CROSSTREK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 152,
+    "cc": 1995,
+    "seconds": 10.5,
+    "source": "נתון יצרן (Subaru Crosstrek 2.0)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "OUTBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 169,
+    "cc": 2498,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (סובארו אאוטבק דור 6 2.5 169 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "OUTBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 175,
+    "cc": 2498,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (סובארו אאוטבק דור 5 2.5 175 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "OUTBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 167,
+    "cc": 2457,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (סובארו אאוטבק דור 4 2.5 167 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "OUTBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 260,
+    "cc": 3630,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (סובארו אאוטבק 3.6R שישה צילינדרים 260 כ\"ס)"
+  },
+  {
+    "make": "סובארו",
+    "model": "אאוטבק",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 169,
+    "cc": 2498,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (סובארו אאוטבק 169 כ\"ס)"
+  },
+  {
+    "make": "Subaru",
+    "model": "OUTBACK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 169,
+    "cc": 2498,
+    "seconds": 10.2,
+    "source": "נתון יצרן (Subaru Outback 2.5)"
+  },
+  {
+    "make": "סובארו ארהב\"",
+    "model": "EVOLTIS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 260,
+    "cc": 2387,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (סובארו אבולטיס / אסנט 7/8 מקומות 2.4 טורבו 260 כ\"ס)"
+  },
+  {
+    "make": "\"סובארו ארהב",
+    "model": "EVOLTIS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 260,
+    "cc": 2387,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (סובארו אבולטיס 2.4T 260 כ\"ס)"
+  },
+  {
+    "make": "סובארו ארה\"ב",
+    "model": "ASCENT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 260,
+    "cc": 2387,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (סובארו אסנט 2.4T 260 כ\"ס)"
+  },
+  {
+    "make": "סובארו",
+    "model": "אבולטיס/אסנט",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 260,
+    "cc": 2387,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (סובארו אבולטיס 260 כ\"ס)"
+  },
+  {
+    "make": "Subaru",
+    "model": "EVOLTIS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 260,
+    "cc": 2387,
+    "seconds": 7.4,
+    "source": "נתון יצרן (Subaru Evoltis / Ascent 2.4T)"
+  },
+  {
+    "make": "Subaru",
+    "model": "ASCENT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 260,
+    "cc": 2387,
+    "seconds": 7.4,
+    "source": "נתון יצרן (Subaru Ascent 2.4T)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "FORESTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 182,
+    "cc": 2498,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (סובארו פורסטר דור 5 2.5 182 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "FORESTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1995,
+    "seconds": 11.8,
+    "source": "רישוי רכב / נתון יצרן (סובארו פורסטר e-BOXER היברידי 2.0 150 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "FORESTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1995,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (סובארו פורסטר דור 4 2.0 150 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "FORESTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 241,
+    "cc": 1998,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (סובארו פורסטר XT טורבו 2.0 241 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "FORESTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 2457,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (סובארו פורסטר XT דור 3 2.5T 230 כ\"ס)"
+  },
+  {
+    "make": "סובארו",
+    "model": "פורסטר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 182,
+    "cc": 2498,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (סובארו פורסטר 182 כ\"ס)"
+  },
+  {
+    "make": "Subaru",
+    "model": "FORESTER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 182,
+    "cc": 2498,
+    "seconds": 9.3,
+    "source": "נתון יצרן (Subaru Forester 2.5)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "SOLTERRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 217,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (סובארו סולטרה חשמלי מלא כפול מנועים AWD 217 כ\"ס)"
+  },
+  {
+    "make": "סובארו",
+    "model": "סולטרה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 217,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (סובארו סולטרה 217 כ\"ס)"
+  },
+  {
+    "make": "Subaru",
+    "model": "SOLTERRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 217,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "נתון יצרן (Subaru Solterra EV AWD)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "LEVORG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1600,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (סובארו לבורג סטיישן ספורט 1.6 GT טורבו 170 כ\"ס)"
+  },
+  {
+    "make": "סובארו",
+    "model": "לבורג",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1600,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (סובארו לבורג 170 כ\"ס)"
+  },
+  {
+    "make": "Subaru",
+    "model": "LEVORG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1600,
+    "seconds": 8.9,
+    "source": "נתון יצרן (Subaru Levorg 1.6 GT Turbo)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "WRX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 2387,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (סובארו WRX דור חדש ידני 2.4 טורבו 275 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "WRX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 2387,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (סובארו WRX SPT אוטומט 2.4 טורבו 275 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "WRX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 268,
+    "cc": 1998,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (סובארו WRX 2.0 טורבו 268 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "WRX STI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 2457,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (סובארו WRX STI 2.5 טורבו 300 כ\"ס)"
+  },
+  {
+    "make": "סובארו",
+    "model": "WRX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 2387,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (סובארו WRX 275 כ\"ס)"
+  },
+  {
+    "make": "Subaru",
+    "model": "WRX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 2387,
+    "seconds": 5.7,
+    "source": "נתון יצרן (Subaru WRX 2.4T Manual)"
+  },
+  {
+    "make": "Subaru",
+    "model": "WRX STI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 2457,
+    "seconds": 5.2,
+    "source": "נתון יצרן (Subaru WRX STI)"
+  },
+  {
+    "make": "סובארו ארה\"ב",
+    "model": "TRIBECA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 256,
+    "cc": 3630,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (סובארו B9 טריבקה 7 מקומות 3.6 256 כ\"ס)"
+  },
+  {
+    "make": "סובארו ארה\"ב",
+    "model": "TRIBECA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 2999,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (סובארו B9 טריבקה 3.0 245 כ\"ס)"
+  },
+  {
+    "make": "סובארו",
+    "model": "טריבקה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 256,
+    "cc": 3630,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (סובארו טריבקה 256 כ\"ס)"
+  },
+  {
+    "make": "Subaru",
+    "model": "TRIBECA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 256,
+    "cc": 3630,
+    "seconds": 8.9,
+    "source": "נתון יצרן (Subaru Tribeca 3.6)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "LEONE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 73,
+    "cc": 1595,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (סובארו לאונה DL / GL 1.6 73 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "LEONE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1781,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (סובארו לאונה 1.8 90 כ\"ס)"
+  },
+  {
+    "make": "סובארו",
+    "model": "לאונה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 73,
+    "cc": 1595,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (סובארו לאונה 73 כ\"ס)"
+  },
+  {
+    "make": "Subaru",
+    "model": "LEONE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 73,
+    "cc": 1595,
+    "seconds": 13.5,
+    "source": "נתון יצרן (Subaru Leone 1.6)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "BRAT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 73,
+    "cc": 1595,
+    "seconds": 14.8,
+    "source": "רישוי רכב / נתון יצרן (סובארו טנדר בראט 4X4 1.6 73 כ\"ס)"
+  },
+  {
+    "make": "סובארו יפן",
+    "model": "BRAT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 1781,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (סובארו טנדר בראט 1.8 82 כ\"ס)"
+  },
+  {
+    "make": "סובארו",
+    "model": "טנדר (בראט)",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 73,
+    "cc": 1595,
+    "seconds": 14.8,
+    "source": "רישוי רכב / נתון יצרן (סובארו טנדר בראט 73 כ\"ס)"
+  },
+  {
+    "make": "Subaru",
+    "model": "BRAT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 73,
+    "cc": 1595,
+    "seconds": 14.8,
+    "source": "נתון יצרן (Subaru Brat Pickup)"
+  }
+]
