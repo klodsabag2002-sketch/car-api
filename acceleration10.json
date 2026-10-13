@@ -1,5 +1,275 @@
 [
   {
+    "make": "זיקר",
+    "model": "ZEEKR 001",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (זיקר 001 חשמלי Long Range RWD 272)"
+  },
+  {
+    "make": "זיקר",
+    "model": "001",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (זיקר 001 חשמלי Long Range RWD 272)"
+  },
+  {
+    "make": "זיקר",
+    "model": "ZEEKR 001",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 421,
+    "cc": 0,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (זיקר 001 חשמלי RWD 421)"
+  },
+  {
+    "make": "זיקר",
+    "model": "ZEEKR 001",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 544,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (זיקר 001 חשמלי Performance AWD 544)"
+  },
+  {
+    "make": "זיקר",
+    "model": "001",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 544,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (זיקר 001 חשמלי Performance AWD 544)"
+  },
+  {
+    "make": "זיקר",
+    "model": "ZEEKR 001",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 789,
+    "cc": 0,
+    "seconds": 3.3,
+    "source": "רישוי רכב / נתון יצרן (זיקר 001 חשמלי AWD 789)"
+  },
+  {
+    "make": "זיקר",
+    "model": "ZEEKR 001",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 1265,
+    "cc": 0,
+    "seconds": 2.07,
+    "source": "רישוי רכב / נתון יצרן (זיקר 001 FR ספורט קיצוני 1265)"
+  },
+  {
+    "make": "Zeekr",
+    "model": "ZEEKR 001",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 7.2,
+    "source": "נתון יצרן (Zeekr 001 Long Range RWD)"
+  },
+  {
+    "make": "Zeekr",
+    "model": "001",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 7.2,
+    "source": "נתון יצרן (Zeekr 001 Long Range RWD)"
+  },
+  {
+    "make": "Zeekr",
+    "model": "ZEEKR 001",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 544,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "נתון יצרן (Zeekr 001 Performance AWD)"
+  },
+  {
+    "make": "Zeekr",
+    "model": "001",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 544,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "נתון יצרן (Zeekr 001 Performance AWD)"
+  },
+  {
+    "make": "זיקר",
+    "model": "ZEEKR 7X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 646,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (זיקר 7X קריפטון חשמלי כפול מנועים AWD 646)"
+  },
+  {
+    "make": "זיקר",
+    "model": "7X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 646,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (זיקר 7X קריפטון חשמלי כפול מנועים AWD 646)"
+  },
+  {
+    "make": "זיקר",
+    "model": "ZEEKR 7X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 421,
+    "cc": 0,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (זיקר 7X חשמלי RWD 421)"
+  },
+  {
+    "make": "זיקר",
+    "model": "7X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 421,
+    "cc": 0,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (זיקר 7X חשמלי RWD 421)"
+  },
+  {
+    "make": "Zeekr",
+    "model": "ZEEKR 7X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 646,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "נתון יצרן (Zeekr 7X Krypton AWD)"
+  },
+  {
+    "make": "Zeekr",
+    "model": "7X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 646,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "נתון יצרן (Zeekr 7X Krypton AWD)"
+  },
+  {
+    "make": "Zeekr",
+    "model": "ZEEKR 7X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 421,
+    "cc": 0,
+    "seconds": 5.7,
+    "source": "נתון יצרן (Zeekr 7X RWD)"
+  },
+  {
+    "make": "Zeekr",
+    "model": "7X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 421,
+    "cc": 0,
+    "seconds": 5.7,
+    "source": "נתון יצרן (Zeekr 7X RWD)"
+  },
+  {
+    "make": "זיקר",
+    "model": "ZEEKR X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (זיקר X חשמלי Long Range RWD 272)"
+  },
+  {
+    "make": "זיקר",
+    "model": "X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (זיקר X חשמלי Long Range RWD 272)"
+  },
+  {
+    "make": "זיקר",
+    "model": "ZEEKR X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 428,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (זיקר X חשמלי Krypton AWD 428)"
+  },
+  {
+    "make": "זיקר",
+    "model": "X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 428,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (זיקר X חשמלי Krypton AWD 428)"
+  },
+  {
+    "make": "Zeekr",
+    "model": "ZEEKR X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 5.6,
+    "source": "נתון יצרן (Zeekr X Long Range RWD)"
+  },
+  {
+    "make": "Zeekr",
+    "model": "X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 5.6,
+    "source": "נתון יצרן (Zeekr X Long Range RWD)"
+  },
+  {
+    "make": "Zeekr",
+    "model": "ZEEKR X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 428,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "נתון יצרן (Zeekr X Krypton AWD)"
+  },
+  {
+    "make": "Zeekr",
+    "model": "X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 428,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "נתון יצרן (Zeekr X Krypton AWD)"
+  },
+  {
     "make": "וואי סין",
     "model": "WEY COFFEE 01",
     "yearStart": null,
@@ -337,7 +607,7 @@
     "hp": 304,
     "cc": 2953,
     "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (וולוו XC60 3.0 T6 304)"
+    "source": "רישוי רכב / נתון יצרן (וולוו XC60 3.0 T6 AWD 304)"
   },
   {
     "make": "וולבו שבדיה",
