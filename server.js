@@ -14,7 +14,7 @@ const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";
 
-// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 14) ----------
+// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 16) ----------
 let accelTable = [];
 const ACCEL_FILES = [
     "acceleration.json",
@@ -30,7 +30,9 @@ const ACCEL_FILES = [
     "acceleration11.json",
     "acceleration12.json",
     "acceleration13.json",
-    "acceleration14.json"
+    "acceleration14.json",
+    "acceleration15.json",
+    "acceleration16.json"
 ];
 
 ACCEL_FILES.forEach(fileName => {
@@ -330,6 +332,36 @@ const HE_MAKE_ALIASES = {
     "יו דו סין": "Yudo",
     "Yudo": "Yudo",
     "YUDO": "Yudo",
+    "לינק אנד קו": "Lynk & Co",
+    "לינק אנד קו סין": "Lynk & Co",
+    "לינק & קו": "Lynk & Co",
+    "Lynk & Co": "Lynk & Co",
+    "LYNK&CO": "Lynk & Co",
+    "LYNKCO": "Lynk & Co",
+    "ליפמוטור": "Leapmotor",
+    "ליפמוטור סין": "Leapmotor",
+    "ליפ מוטור": "Leapmotor",
+    "ליפ מוטור סין": "Leapmotor",
+    "ליפטומור": "Leapmotor",
+    "Leapmotor": "Leapmotor",
+    "למבורגיני": "Lamborghini",
+    "למבורגיני איטליה": "Lamborghini",
+    "למבורג'יני": "Lamborghini",
+    "למבורג'יני איטליה": "Lamborghini",
+    "Lamborghini": "Lamborghini",
+    "לנד רובר": "Land Rover",
+    "לנדרובר": "Land Rover",
+    "לנדרובר אנגליה": "Land Rover",
+    "לנד רובר אנגליה": "Land Rover",
+    "רובר": "Land Rover",
+    "רובר אנגליה": "Land Rover",
+    "ריינג' רובר": "Land Rover",
+    "ריינג רובר": "Land Rover",
+    "Land Rover": "Land Rover",
+    "Range Rover": "Land Rover",
+    "לקסוס": "Lexus",
+    "לקסוס יפן": "Lexus",
+    "Lexus": "Lexus",
     "סיאט": "Seat",
     "סקודה": "Skoda",
     "פולקסווגן": "Volkswagen",
