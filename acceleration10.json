@@ -1,1 +1,1962 @@
-klod
+[
+  {
+    "make": "וולבו שבדיה",
+    "model": "XC90 RECHARGET8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 309,
+    "cc": 1969,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC90 פלאג-אין T8 משולב 390/455)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "XC90 RECHARGE T8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 309,
+    "cc": 1969,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC90 T8 Recharge 309/455)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "XC90 T8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 309,
+    "cc": 1969,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC90 T8 309)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "XC90 B5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1969,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC90 B5 בנזין מיילד-היברידי 250)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "XC90 T6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 1969,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC90 T6 טורבו+סופרצ'ארג'ר 320)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "XC90 D5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 235,
+    "cc": 1969,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC90 D5 דיזל 235)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "XC90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 210,
+    "cc": 2521,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC90 דור 1 2.5T 210)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "XC90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 238,
+    "cc": 3192,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC90 דור 1 3.2 238)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "XC90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 315,
+    "cc": 4414,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC90 דור 1 4.4 V8 315)"
+  },
+  {
+    "make": "וולבו",
+    "model": "XC90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 309,
+    "cc": 1969,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC90 T8 309)"
+  },
+  {
+    "make": "Volvo",
+    "model": "XC90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 309,
+    "cc": 1969,
+    "seconds": 5.4,
+    "source": "נתון יצרן (Volvo XC90 Recharge T8)"
+  },
+  {
+    "make": "Volvo",
+    "model": "XC90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1969,
+    "seconds": 7.7,
+    "source": "נתון יצרן (Volvo XC90 B5)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "XC60 T8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 389,
+    "cc": 1969,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC60 פלאג-אין T8 משולב 390/407)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "XC60 T8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 309,
+    "cc": 1969,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC60 T8 Recharge 309/455)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "XC60 B5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1969,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC60 B5 AWD 250)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "XC60 T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1969,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC60 T5 דור 2 250)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "XC60 T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1969,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC60 T5 דור 1 245)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "XC60 T6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 306,
+    "cc": 1969,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC60 T6 306)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "XC60 T6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 304,
+    "cc": 2953,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC60 3.0 T6 304)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "XC60 D5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 235,
+    "cc": 1969,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC60 D5 דיזל 235)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "XC60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1969,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC60 250)"
+  },
+  {
+    "make": "וולבו",
+    "model": "XC60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 389,
+    "cc": 1969,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC60 T8 389)"
+  },
+  {
+    "make": "Volvo",
+    "model": "XC60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 389,
+    "cc": 1969,
+    "seconds": 4.9,
+    "source": "נתון יצרן (Volvo XC60 T8 AWD)"
+  },
+  {
+    "make": "Volvo",
+    "model": "XC60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1969,
+    "seconds": 6.9,
+    "source": "נתון יצרן (Volvo XC60 B5/T5)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "XC40 RECHARGET5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 262,
+    "cc": 1477,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC40 פלאג-אין T5 משולב 262)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "XC40 RECHARGE T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 262,
+    "cc": 1477,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC40 פלאג-אין T5 262)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "XC40 RECHARGE T4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 211,
+    "cc": 1477,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC40 פלאג-אין T4 211)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "XC40 RECHARGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 408,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC40 P8 חשמלי כפול מנועים 408)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "XC40 RECHARGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 0,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC40 P6 חשמלי יחיד 231)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "XC40 RECHARGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC40 חשמלי RWD 252)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "XC40 T3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1477,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC40 T3 אוטומט 163)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "XC40 T4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1969,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC40 T4 190)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "XC40 T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 247,
+    "cc": 1969,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC40 T5 AWD 247)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "XC40 B4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 1969,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC40 B4 197)"
+  },
+  {
+    "make": "וולבו",
+    "model": "XC40",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 262,
+    "cc": 1477,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC40 Recharge T5 262)"
+  },
+  {
+    "make": "Volvo",
+    "model": "XC40",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 262,
+    "cc": 1477,
+    "seconds": 7.3,
+    "source": "נתון יצרן (Volvo XC40 Recharge T5)"
+  },
+  {
+    "make": "Volvo",
+    "model": "XC40",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 408,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "נתון יצרן (Volvo XC40 Recharge P8 EV)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "C40P6 RECHARGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 0,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (וולוו C40 P6 Recharge חשמלי 231)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "C40 RECHARGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 0,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (וולוו C40 P6 Recharge חשמלי 231)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "C40 RECHARGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (וולוו C40 Single Motor RWD 252)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "C40 RECHARGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 408,
+    "cc": 0,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (וולוו C40 Twin Motor AWD 408)"
+  },
+  {
+    "make": "וולבו",
+    "model": "C40",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 0,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (וולוו C40 231)"
+  },
+  {
+    "make": "Volvo",
+    "model": "C40",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 0,
+    "seconds": 7.4,
+    "source": "נתון יצרן (Volvo C40 Recharge P6)"
+  },
+  {
+    "make": "Volvo",
+    "model": "C40",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 408,
+    "cc": 0,
+    "seconds": 4.7,
+    "source": "נתון יצרן (Volvo C40 Recharge Twin)"
+  },
+  {
+    "make": "וולבו סין",
+    "model": "EX30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (וולוו EX30 חשמלי Single Motor 272)"
+  },
+  {
+    "make": "וולבו סין",
+    "model": "EX30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 428,
+    "cc": 0,
+    "seconds": 3.6,
+    "source": "רישוי רכב / נתון יצרן (וולוו EX30 חשמלי Twin Motor Performance 428)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "EX30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (וולוו EX30 חשמלי Single Motor 272)"
+  },
+  {
+    "make": "וולבו",
+    "model": "EX30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (וולוו EX30 272)"
+  },
+  {
+    "make": "Volvo",
+    "model": "EX30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 5.7,
+    "source": "נתון יצרן (Volvo EX30 Single Motor)"
+  },
+  {
+    "make": "Volvo",
+    "model": "EX30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 428,
+    "cc": 0,
+    "seconds": 3.6,
+    "source": "נתון יצרן (Volvo EX30 Twin Motor Performance)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "EX90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 408,
+    "cc": 0,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו EX90 חשמלי Twin Motor 408)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "EX90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 517,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו EX90 חשמלי Performance 517)"
+  },
+  {
+    "make": "Volvo",
+    "model": "EX90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 408,
+    "cc": 0,
+    "seconds": 5.9,
+    "source": "נתון יצרן (Volvo EX90 Twin Motor)"
+  },
+  {
+    "make": "Volvo",
+    "model": "EX90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 517,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "נתון יצרן (Volvo EX90 Performance)"
+  },
+  {
+    "make": "וולבו סין",
+    "model": "ES90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (וולוו ES90 סדאן פאר חשמלי)"
+  },
+  {
+    "make": "וולבו סין",
+    "model": "ES90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 408,
+    "cc": 0,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (וולוו ES90 סדאן פאר חשמלי AWD)"
+  },
+  {
+    "make": "Volvo",
+    "model": "ES90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 408,
+    "cc": 0,
+    "seconds": 4.8,
+    "source": "נתון יצרן (Volvo ES90 EV)"
+  },
+  {
+    "make": "וולבו סין",
+    "model": "S60 RECHARGE T8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 309,
+    "cc": 1969,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (וולוו S60 פלאג-אין Recharge T8 309/455)"
+  },
+  {
+    "make": "וולבו סין",
+    "model": "S60 T8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 309,
+    "cc": 1969,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (וולוו S60 T8 309)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "S60 2.0",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 203,
+    "cc": 1999,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (וולוו S60 2.0T פאוורשיפט 203)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "S60 T4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1595,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (וולוו S60 1.6 T4 פאוורשיפט 180)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "S60 T4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1969,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (וולוו S60 2.0 T4 דור 3 190)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "S60 T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1999,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (וולוו S60 T5 2.0T 240)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "S60 T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1969,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (וולוו S60 T5 Drive-E 245)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "S60 T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1969,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (וולוו S60 T5 דור 3 250)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "S60 B4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 1969,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו S60 B4 מילד-הייבריד 197)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "S60 B5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1969,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (וולוו S60 B5 מילד-הייבריד 250)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "S60 T6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 304,
+    "cc": 2953,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (וולוו S60 3.0 T6 AWD 304)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "S60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 210,
+    "cc": 2521,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (וולוו S60 דור 1 2.5T 210)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "S60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 2319,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (וולוו S60 דור 1 T5 250)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "S60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 2521,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (וולוו S60 R 2.5T AWD 300)"
+  },
+  {
+    "make": "וולבו",
+    "model": "S60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 309,
+    "cc": 1969,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (וולוו S60 T8 309)"
+  },
+  {
+    "make": "Volvo",
+    "model": "S60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 309,
+    "cc": 1969,
+    "seconds": 4.4,
+    "source": "נתון יצרן (Volvo S60 Recharge T8)"
+  },
+  {
+    "make": "Volvo",
+    "model": "S60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 203,
+    "cc": 1999,
+    "seconds": 8.2,
+    "source": "נתון יצרן (Volvo S60 2.0T 203)"
+  },
+  {
+    "make": "Volvo",
+    "model": "S60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1969,
+    "seconds": 6.4,
+    "source": "נתון יצרן (Volvo S60 T5/B5)"
+  },
+  {
+    "make": "וולבו סין",
+    "model": "S90 T8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 389,
+    "cc": 1969,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (וולוו S90 פלאג-אין T8 משולב 390/407)"
+  },
+  {
+    "make": "וולבו סין",
+    "model": "S90 T8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 309,
+    "cc": 1969,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (וולוו S90 פלאג-אין T8 309/455)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "S90 T8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 389,
+    "cc": 1969,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (וולוו S90 T8 389)"
+  },
+  {
+    "make": "וולבו סין",
+    "model": "S90 T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1969,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (וולוו S90 T5 250)"
+  },
+  {
+    "make": "וולבו סין",
+    "model": "S90 B5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1969,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו S90 B5 מילד-הייבריד 250)"
+  },
+  {
+    "make": "וולבו סין",
+    "model": "S90 T6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 1969,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו S90 T6 AWD 320)"
+  },
+  {
+    "make": "וולבו",
+    "model": "S90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 389,
+    "cc": 1969,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (וולוו S90 T8 389)"
+  },
+  {
+    "make": "Volvo",
+    "model": "S90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 389,
+    "cc": 1969,
+    "seconds": 4.8,
+    "source": "נתון יצרן (Volvo S90 T8 AWD)"
+  },
+  {
+    "make": "Volvo",
+    "model": "S90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1969,
+    "seconds": 6.8,
+    "source": "נתון יצרן (Volvo S90 T5/B5)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "V40 T4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1969,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו V40 2.0 T4 אוטומט 190)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "V40 T3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 152,
+    "cc": 1498,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (וולוו V40 1.5 T3 אוטומט 152)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "V40 T4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1595,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (וולוו V40 1.6 T4 פאוורשיפט 180)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "V40 T2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1498,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (וולוו V40 1.5 T2 120)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "V40 T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1969,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (וולוו V40 T5 245)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "V40 T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 213,
+    "cc": 1984,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו V40 T5 5 ציל' 213)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "V40 CC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1969,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (וולוו V40 Cross Country T4 190)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "V40 CC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1969,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (וולוו V40 Cross Country T5 AWD 245)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "V40",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1969,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו V40 T4 190)"
+  },
+  {
+    "make": "וולבו",
+    "model": "V40",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1969,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו V40 190)"
+  },
+  {
+    "make": "Volvo",
+    "model": "V40",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1969,
+    "seconds": 6.9,
+    "source": "נתון יצרן (Volvo V40 T4 2.0)"
+  },
+  {
+    "make": "Volvo",
+    "model": "V40",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 152,
+    "cc": 1498,
+    "seconds": 8.3,
+    "source": "נתון יצרן (Volvo V40 T3 1.5)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "V60CC B5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1969,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (וולוו V60 Cross Country B5 AWD 250)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "V60CC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1969,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (וולוו V60 Cross Country B5 250)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "V60 T8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 309,
+    "cc": 1969,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (וולוו V60 Recharge T8 309/455)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "V60 T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1969,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (וולוו V60 T5 250)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "V60 B5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1969,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (וולוו V60 B5 250)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "V60 T4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1969,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (וולוו V60 T4 190)"
+  },
+  {
+    "make": "וולבו",
+    "model": "V60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1969,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (וולוו V60 250)"
+  },
+  {
+    "make": "Volvo",
+    "model": "V60",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1969,
+    "seconds": 6.6,
+    "source": "נתון יצרן (Volvo V60 B5 AWD)"
+  },
+  {
+    "make": "Volvo",
+    "model": "V60CC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1969,
+    "seconds": 6.6,
+    "source": "נתון יצרן (Volvo V60 Cross Country B5)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "C30 2.0",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 1999,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (וולוו C30 2.0 פאוורשיפט 145)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "C30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 1999,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (וולוו C30 2.0 145)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "C30 T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 2521,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (וולוו C30 2.5 T5 230)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "C30 2.4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 2435,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (וולוו C30 2.4i 170)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "C30 1.6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1596,
+    "seconds": 11.8,
+    "source": "רישוי רכב / נתון יצרן (וולוו C30 1.6 ידני 100)"
+  },
+  {
+    "make": "וולבו",
+    "model": "C30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 1999,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (וולוו C30 145)"
+  },
+  {
+    "make": "Volvo",
+    "model": "C30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 1999,
+    "seconds": 9.7,
+    "source": "נתון יצרן (Volvo C30 2.0)"
+  },
+  {
+    "make": "Volvo",
+    "model": "C30",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 2521,
+    "seconds": 7.1,
+    "source": "נתון יצרן (Volvo C30 T5)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "S40 2.0 P.SHIFT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 1999,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (וולוו S40 2.0 פאוורשיפט 145)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "S40 2.0",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 1999,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (וולוו S40 2.0 145)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "S40 2.4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 2435,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (וולוו S40 2.4 140)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "S40 2.4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 2435,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו S40 2.4i 170)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "S40 T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 220,
+    "cc": 2521,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (וולוו S40 2.5 T5 220)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "S40 T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 2521,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (וולוו S40 2.5 T5 230)"
+  },
+  {
+    "make": "וולבו",
+    "model": "S40",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 1999,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (וולוו S40 145)"
+  },
+  {
+    "make": "Volvo",
+    "model": "S40",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 1999,
+    "seconds": 9.8,
+    "source": "נתון יצרן (Volvo S40 2.0)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "V50 2.0",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 1999,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו V50 2.0 פאוורשיפט 145)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "V50 2.4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 2435,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (וולוו V50 2.4 140)"
+  },
+  {
+    "make": "וולבו בלגיה",
+    "model": "V50 T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 2521,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (וולוו V50 T5 230)"
+  },
+  {
+    "make": "וולבו",
+    "model": "V50",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 1999,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו V50 145)"
+  },
+  {
+    "make": "Volvo",
+    "model": "V50",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 1999,
+    "seconds": 9.9,
+    "source": "נתון יצרן (Volvo V50 2.0)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "S80 T4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1595,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (וולוו S80 1.6 T4 פאוורשיפט 180)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "S80 2.0T",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 203,
+    "cc": 1999,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (וולוו S80 2.0T 203)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "S80 T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 241,
+    "cc": 1999,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (וולוו S80 T5 241)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "S80 T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1969,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (וולוו S80 T5 Drive-E 245)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "S80 2.5T",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 2521,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (וולוו S80 2.5T 200)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "S80 2.5T",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 2521,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (וולוו S80 2.5T 231)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "S80 3.2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 238,
+    "cc": 3192,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו S80 3.2 238)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "S80 T6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 285,
+    "cc": 2953,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו S80 3.0 T6 AWD 285)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "S80 T6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 304,
+    "cc": 2953,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (וולוו S80 3.0 T6 AWD 304)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "S80 4.4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 315,
+    "cc": 4414,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (וולוו S80 4.4 V8 AWD 315)"
+  },
+  {
+    "make": "וולבו",
+    "model": "S80",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1595,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (וולוו S80 180)"
+  },
+  {
+    "make": "Volvo",
+    "model": "S80",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1595,
+    "seconds": 9.2,
+    "source": "נתון יצרן (Volvo S80 T4)"
+  },
+  {
+    "make": "Volvo",
+    "model": "S80",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1969,
+    "seconds": 6.5,
+    "source": "נתון יצרן (Volvo S80 T5 Drive-E)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "C70 2.4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 2435,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (וולוו C70 קבריולה 2.4 170)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "C70 T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 220,
+    "cc": 2521,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (וולוו C70 קבריולה 2.5 T5 220)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "C70 T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 2521,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (וולוו C70 קבריולה 2.5 T5 230)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "C70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 2319,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (וולוו C70 דור 1 קופה/קבריו T5 240)"
+  },
+  {
+    "make": "וולבו",
+    "model": "C70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 2521,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (וולוו C70 230)"
+  },
+  {
+    "make": "Volvo",
+    "model": "C70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 2521,
+    "seconds": 8.0,
+    "source": "נתון יצרן (Volvo C70 T5)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "XC70 3.2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 238,
+    "cc": 3192,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC70 3.2 AWD 238)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "XC70 T6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 285,
+    "cc": 2953,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC70 3.0 T6 AWD 285)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "XC70 T6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 304,
+    "cc": 2953,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC70 3.0 T6 AWD 304)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "XC70 D5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 215,
+    "cc": 2400,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC70 D5 דיזל 215)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "XC70 2.5T",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 210,
+    "cc": 2521,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC70 Cross Country דור 1 210)"
+  },
+  {
+    "make": "וולבו",
+    "model": "XC70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 238,
+    "cc": 3192,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (וולוו XC70 238)"
+  },
+  {
+    "make": "Volvo",
+    "model": "XC70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 238,
+    "cc": 3192,
+    "seconds": 8.6,
+    "source": "נתון יצרן (Volvo XC70 3.2 AWD)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "V70 2.5T",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 2521,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (וולוו V70 2.5T 200)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "V70 T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1999,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו V70 T5 240)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "V70 2.4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 2435,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו V70 דור 2 2.4 170)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "V70 R",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 2521,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו V70 R 2.5T AWD 300)"
+  },
+  {
+    "make": "וולבו",
+    "model": "V70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 2521,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (וולוו V70 200)"
+  },
+  {
+    "make": "Volvo",
+    "model": "V70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 2521,
+    "seconds": 8.1,
+    "source": "נתון יצרן (Volvo V70 2.5T)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "V90CC B5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1969,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (וולוו V90 Cross Country B5 250)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "V90CC T6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 1969,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (וולוו V90 Cross Country T6 320)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "V90 T8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 309,
+    "cc": 1969,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (וולוו V90 Recharge T8 309/455)"
+  },
+  {
+    "make": "וולבו",
+    "model": "V90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1969,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (וולוו V90 250)"
+  },
+  {
+    "make": "Volvo",
+    "model": "V90",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1969,
+    "seconds": 7.4,
+    "source": "נתון יצרן (Volvo V90 Cross Country B5)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "S70 2.4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 2435,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (וולוו S70 2.4 140)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "S70 2.4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 2435,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (וולוו S70 2.4 20V 170)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "S70 2.5T",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 193,
+    "cc": 2435,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (וולוו S70 2.5T 193)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "S70 T5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 2319,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (וולוו S70 T5 טורבו 240)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "S70 R",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 2319,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (וולוו S70 R 250)"
+  },
+  {
+    "make": "וולבו",
+    "model": "S70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 2435,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (וולוו S70 170)"
+  },
+  {
+    "make": "Volvo",
+    "model": "S70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 2435,
+    "seconds": 9.0,
+    "source": "נתון יצרן (Volvo S70 2.4)"
+  },
+  {
+    "make": "Volvo",
+    "model": "S70",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 2319,
+    "seconds": 7.3,
+    "source": "נתון יצרן (Volvo S70 T5)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "850 GLT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 2435,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (וולוו 850 GLT 2.4 20V 170)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "850",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 2435,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (וולוו 850 2.4 10V 140)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "850 T-5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 225,
+    "cc": 2319,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (וולוו 850 טורבו T-5 225)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "850 T-5R",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 2319,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו 850 T-5R 240)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "850 R",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 2319,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (וולוו 850 R 250)"
+  },
+  {
+    "make": "וולבו",
+    "model": "850",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 2435,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (וולוו 850 170)"
+  },
+  {
+    "make": "Volvo",
+    "model": "850",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 2435,
+    "seconds": 9.2,
+    "source": "נתון יצרן (Volvo 850 GLT)"
+  },
+  {
+    "make": "Volvo",
+    "model": "850",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 225,
+    "cc": 2319,
+    "seconds": 7.4,
+    "source": "נתון יצרן (Volvo 850 T5)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "944GL TURBO 2000",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1986,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (וולוו 940/944 2.0 טורבו B200FT 155)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "944GL TURBO 2000",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 0,
+    "cc": 1986,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (וולוו 944GL טורבו 2000)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "940",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1986,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (וולוו 940 2.0 טורבו 155)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "940",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 135,
+    "cc": 2316,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (וולוו 940 2.3 LPT טורבו רך 135)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "940",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 2316,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (וולוו 940 2.3 HPT טורבו 165)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "940",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 131,
+    "cc": 2316,
+    "seconds": 11.4,
+    "source": "רישוי רכב / נתון יצרן (וולוו 940 2.3 אטמוספרי 131)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "940",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 112,
+    "cc": 1986,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (וולוו 940 2.0 אטמוספרי 112)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "940",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 0,
+    "cc": 1986,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (וולוו 940 טורבו)"
+  },
+  {
+    "make": "וולבו",
+    "model": "940",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1986,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (וולוו 940 155)"
+  },
+  {
+    "make": "Volvo",
+    "model": "940",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1986,
+    "seconds": 9.6,
+    "source": "נתון יצרן (Volvo 940 2.0 Turbo)"
+  },
+  {
+    "make": "Volvo",
+    "model": "944GL TURBO 2000",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1986,
+    "seconds": 9.6,
+    "source": "נתון יצרן (Volvo 944GL Turbo 2000)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "960 3.0",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 2922,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו 960 3.0 24V 204)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "960 2.5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 2473,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (וולוו 960 2.5 24V 170)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "960",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 2922,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו 960 3.0 204)"
+  },
+  {
+    "make": "וולבו שבדיה",
+    "model": "960",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1986,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (וולוו 960 2.0 16V טורבו 190)"
+  },
+  {
+    "make": "וולבו",
+    "model": "960",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 2922,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (וולוו 960 204)"
+  },
+  {
+    "make": "Volvo",
+    "model": "960",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 2922,
+    "seconds": 8.9,
+    "source": "נתון יצרן (Volvo 960 3.0 24V)"
+  }
+]
