@@ -1,5 +1,145 @@
 [
   {
+    "make": "פולסטאר סין",
+    "model": "POLESTAR2 ELECT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 0,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (פולסטאר 2 Standard Range Single Motor 231 כ\"ס)"
+  },
+  {
+    "make": "פולסטאר סין",
+    "model": "POLESTAR2 ELECT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 408,
+    "cc": 0,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (פולסטאר 2 Long Range Dual Motor AWD 408 כ\"ס)"
+  },
+  {
+    "make": "פולסטאר סין",
+    "model": "POLESTAR2 ELECT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (פולסטאר 2 RWD מתיחת פנים 272 כ\"ס)"
+  },
+  {
+    "make": "פולסטאר סין",
+    "model": "POLESTAR2 ELECT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 0,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (פולסטאר 2 Long Range RWD 299 כ\"ס)"
+  },
+  {
+    "make": "פולסטאר סין",
+    "model": "POLESTAR2 ELECT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 476,
+    "cc": 0,
+    "seconds": 4.2,
+    "source": "רישוי רכב / נתון יצרן (פולסטאר 2 BST / Performance Pack 476 כ\"ס)"
+  },
+  {
+    "make": "פולסטאר סין",
+    "model": "POLESTAR 2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 0,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (פולסטאר 2 231 כ\"ס)"
+  },
+  {
+    "make": "פולסטאר סין",
+    "model": "POLESTAR 2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 408,
+    "cc": 0,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (פולסטאר 2 AWD 408 כ\"ס)"
+  },
+  {
+    "make": "פולסטאר",
+    "model": "2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 0,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (פולסטאר 2 231 כ\"ס)"
+  },
+  {
+    "make": "פולסטאר",
+    "model": "2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 408,
+    "cc": 0,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (פולסטאר 2 408 כ\"ס)"
+  },
+  {
+    "make": "פולסטר",
+    "model": "2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 0,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (פולסטר 2 231 כ\"ס)"
+  },
+  {
+    "make": "פולסטר",
+    "model": "2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 408,
+    "cc": 0,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (פולסטר 2 408 כ\"ס)"
+  },
+  {
+    "make": "Polestar",
+    "model": "2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 0,
+    "seconds": 7.4,
+    "source": "נתון יצרן (Polestar 2 EV)"
+  },
+  {
+    "make": "Polestar",
+    "model": "2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 408,
+    "cc": 0,
+    "seconds": 4.7,
+    "source": "נתון יצרן (Polestar 2 Dual Motor AWD)"
+  },
+  {
+    "make": "Polestar",
+    "model": "POLESTAR 2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 0,
+    "seconds": 7.4,
+    "source": "נתון יצרן (Polestar 2 Standard Range)"
+  },
+  {
     "make": "סקודה צ'כיה",
     "model": "OCTAVIA",
     "yearStart": null,
