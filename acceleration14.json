@@ -1,1 +1,212 @@
-klod
+[
+  {
+    "make": "לינק אנד קו",
+    "model": "LYNKCO 01",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 179,
+    "cc": 1477,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (לינק אנד קו 01 פלאג-אין PHEV 179/261)"
+  },
+  {
+    "make": "לינק אנד קו",
+    "model": "LYNKCO 01",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1477,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (לינק אנד קו 01 פלאג-אין PHEV 180/261)"
+  },
+  {
+    "make": "לינק אנד קו",
+    "model": "01",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 179,
+    "cc": 1477,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (לינק אנד קו 01 179)"
+  },
+  {
+    "make": "לינק אנד קו",
+    "model": "LYNKCO 01",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 276,
+    "cc": 1477,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (לינק אנד קו 01 פלאג-אין משודרג 276)"
+  },
+  {
+    "make": "לינק אנד קו",
+    "model": "01",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 276,
+    "cc": 1477,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (לינק אנד קו 01 משודרג 276)"
+  },
+  {
+    "make": "Lynk & Co",
+    "model": "LYNKCO 01",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 179,
+    "cc": 1477,
+    "seconds": 8.0,
+    "source": "נתון יצרן (Lynk & Co 01 PHEV)"
+  },
+  {
+    "make": "Lynk & Co",
+    "model": "01",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 179,
+    "cc": 1477,
+    "seconds": 8.0,
+    "source": "נתון יצרן (Lynk & Co 01 PHEV)"
+  },
+  {
+    "make": "Lynk & Co",
+    "model": "LYNKCO 01",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1477,
+    "seconds": 8.0,
+    "source": "נתון יצרן (Lynk & Co 01 PHEV)"
+  },
+  {
+    "make": "לינק אנד קו",
+    "model": "LYNKCO 02",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (לינק אנד קו 02 חשמלי מלא RWD 272)"
+  },
+  {
+    "make": "לינק אנד קו",
+    "model": "02",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (לינק אנד קו 02 חשמלי 272)"
+  },
+  {
+    "make": "Lynk & Co",
+    "model": "LYNKCO 02",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 5.5,
+    "source": "נתון יצרן (Lynk & Co 02 EV RWD)"
+  },
+  {
+    "make": "Lynk & Co",
+    "model": "02",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 0,
+    "seconds": 5.5,
+    "source": "נתון יצרן (Lynk & Co 02 EV RWD)"
+  },
+  {
+    "make": "לינק אנד קו",
+    "model": "LYNKCO 08",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 381,
+    "cc": 1499,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (לינק אנד קו 08 פלאג-אין PHEV FWD 381)"
+  },
+  {
+    "make": "לינק אנד קו",
+    "model": "LYNKCO 08",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1499,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (לינק אנד קו 08 פלאג-אין FWD 163)"
+  },
+  {
+    "make": "לינק אנד קו",
+    "model": "LYNKCO 08",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 593,
+    "cc": 1499,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (לינק אנד קו 08 פלאג-אין כפול מנועים AWD 593)"
+  },
+  {
+    "make": "לינק אנד קו",
+    "model": "08",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 381,
+    "cc": 1499,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (לינק אנד קו 08 381)"
+  },
+  {
+    "make": "לינק אנד קו",
+    "model": "08",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 593,
+    "cc": 1499,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (לינק אנד קו 08 593)"
+  },
+  {
+    "make": "Lynk & Co",
+    "model": "LYNKCO 08",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 381,
+    "cc": 1499,
+    "seconds": 6.8,
+    "source": "נתון יצרן (Lynk & Co 08 EM-P FWD)"
+  },
+  {
+    "make": "Lynk & Co",
+    "model": "LYNKCO 08",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 593,
+    "cc": 1499,
+    "seconds": 4.6,
+    "source": "נתון יצרן (Lynk & Co 08 EM-P AWD)"
+  },
+  {
+    "make": "Lynk & Co",
+    "model": "08",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 381,
+    "cc": 1499,
+    "seconds": 6.8,
+    "source": "נתון יצרן (Lynk & Co 08 EM-P)"
+  },
+  {
+    "make": "Lynk & Co",
+    "model": "08",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 593,
+    "cc": 1499,
+    "seconds": 4.6,
+    "source": "נתון יצרן (Lynk & Co 08 EM-P AWD)"
+  }
+]
