@@ -1,1 +1,562 @@
-klod
+[
+  {
+    "make": "\"טסלה ארהב",
+    "model": "MODEL 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 498,
+    "cc": 0,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל 3 לונג ריינג' AWD 498)"
+  },
+  {
+    "make": "טסלה ארהב\"",
+    "model": "MODEL 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 498,
+    "cc": 0,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל 3 לונג ריינג' AWD 498)"
+  },
+  {
+    "make": "טסלה סין",
+    "model": "MODEL 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 498,
+    "cc": 0,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל 3 לונג ריינג' AWD 498)"
+  },
+  {
+    "make": "טסלה סין",
+    "model": "MODEL 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 441,
+    "cc": 0,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל 3 לונג ריינג' AWD 441)"
+  },
+  {
+    "make": "טסלה סין",
+    "model": "MODEL 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 0,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל 3 סטנדרט ריינג' RWD 283)"
+  },
+  {
+    "make": "טסלה סין",
+    "model": "MODEL 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 325,
+    "cc": 0,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל 3 RWD היילנד 325)"
+  },
+  {
+    "make": "טסלה סין",
+    "model": "MODEL 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 513,
+    "cc": 0,
+    "seconds": 3.3,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל 3 פרפורמנס AWD 513)"
+  },
+  {
+    "make": "טסלה סין",
+    "model": "MODEL 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 627,
+    "cc": 0,
+    "seconds": 3.1,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל 3 פרפורמנס היילנד 627)"
+  },
+  {
+    "make": "טסלה",
+    "model": "מודל 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 498,
+    "cc": 0,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל 3 498)"
+  },
+  {
+    "make": "טסלה",
+    "model": "מודל 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 0,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל 3 283)"
+  },
+  {
+    "make": "Tesla",
+    "model": "MODEL 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 498,
+    "cc": 0,
+    "seconds": 4.4,
+    "source": "נתון יצרן (Tesla Model 3 Long Range)"
+  },
+  {
+    "make": "Tesla",
+    "model": "MODEL 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 0,
+    "seconds": 6.1,
+    "source": "נתון יצרן (Tesla Model 3 RWD)"
+  },
+  {
+    "make": "Tesla",
+    "model": "MODEL 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 513,
+    "cc": 0,
+    "seconds": 3.3,
+    "source": "נתון יצרן (Tesla Model 3 Performance)"
+  },
+  {
+    "make": "טסלה גרמניה",
+    "model": "MODEL Y",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 534,
+    "cc": 0,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל Y פרפורמנס AWD 534)"
+  },
+  {
+    "make": "טסלה סין",
+    "model": "MODEL Y",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 534,
+    "cc": 0,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל Y פרפורמנס AWD 534)"
+  },
+  {
+    "make": "טסלה גרמניה",
+    "model": "MODEL Y",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 514,
+    "cc": 0,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל Y לונג ריינג' AWD 514)"
+  },
+  {
+    "make": "טסלה סין",
+    "model": "MODEL Y",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 514,
+    "cc": 0,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל Y לונג ריינג' AWD 514)"
+  },
+  {
+    "make": "טסלה סין",
+    "model": "MODEL Y",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל Y סטנדרט ריינג' RWD 299)"
+  },
+  {
+    "make": "טסלה גרמניה",
+    "model": "MODEL Y",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל Y סטנדרט ריינג' RWD 299)"
+  },
+  {
+    "make": "טסלה",
+    "model": "מודל y",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 534,
+    "cc": 0,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל Y 534)"
+  },
+  {
+    "make": "טסלה",
+    "model": "מודל y",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 514,
+    "cc": 0,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל Y 514)"
+  },
+  {
+    "make": "Tesla",
+    "model": "MODEL Y",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 534,
+    "cc": 0,
+    "seconds": 3.7,
+    "source": "נתון יצרן (Tesla Model Y Performance)"
+  },
+  {
+    "make": "Tesla",
+    "model": "MODEL Y",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 514,
+    "cc": 0,
+    "seconds": 5.0,
+    "source": "נתון יצרן (Tesla Model Y Long Range)"
+  },
+  {
+    "make": "Tesla",
+    "model": "MODEL Y",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 299,
+    "cc": 0,
+    "seconds": 6.9,
+    "source": "נתון יצרן (Tesla Model Y RWD)"
+  },
+  {
+    "make": "\"טסלה ארהב",
+    "model": "MODEL S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 685,
+    "cc": 0,
+    "seconds": 3.2,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל S דואל מוטור AWD 685)"
+  },
+  {
+    "make": "טסלה ארהב\"",
+    "model": "MODEL S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 685,
+    "cc": 0,
+    "seconds": 3.2,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל S דואל מוטור AWD 685)"
+  },
+  {
+    "make": "\"טסלה ארהב",
+    "model": "MODEL S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 670,
+    "cc": 0,
+    "seconds": 3.2,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל S לונג ריינג' 670)"
+  },
+  {
+    "make": "\"טסלה ארהב",
+    "model": "MODEL S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 1020,
+    "cc": 0,
+    "seconds": 2.1,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל S פלייד Plaid 1020)"
+  },
+  {
+    "make": "טסלה ארהב\"",
+    "model": "MODEL S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 1020,
+    "cc": 0,
+    "seconds": 2.1,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל S פלייד Plaid 1020)"
+  },
+  {
+    "make": "\"טסלה ארהב",
+    "model": "MODEL S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 613,
+    "cc": 0,
+    "seconds": 2.5,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל S P100D לודקריס 613)"
+  },
+  {
+    "make": "\"טסלה ארהב",
+    "model": "MODEL S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 525,
+    "cc": 0,
+    "seconds": 4.3,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל S 100D דור קודם 525)"
+  },
+  {
+    "make": "טסלה",
+    "model": "מודל s",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 685,
+    "cc": 0,
+    "seconds": 3.2,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל S 685)"
+  },
+  {
+    "make": "טסלה",
+    "model": "מודל s",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 1020,
+    "cc": 0,
+    "seconds": 2.1,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל S פלייד 1020)"
+  },
+  {
+    "make": "Tesla",
+    "model": "MODEL S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 685,
+    "cc": 0,
+    "seconds": 3.2,
+    "source": "נתון יצרן (Tesla Model S Dual Motor)"
+  },
+  {
+    "make": "Tesla",
+    "model": "MODEL S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 1020,
+    "cc": 0,
+    "seconds": 2.1,
+    "source": "נתון יצרן (Tesla Model S Plaid)"
+  },
+  {
+    "make": "\"טסלה ארהב",
+    "model": "MODEL X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 685,
+    "cc": 0,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל X דואל מוטור AWD 685)"
+  },
+  {
+    "make": "טסלה ארהב\"",
+    "model": "MODEL X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 685,
+    "cc": 0,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל X דואל מוטור AWD 685)"
+  },
+  {
+    "make": "\"טסלה ארהב",
+    "model": "MODEL X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 670,
+    "cc": 0,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל X לונג ריינג' 670)"
+  },
+  {
+    "make": "\"טסלה ארהב",
+    "model": "MODEL X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 1020,
+    "cc": 0,
+    "seconds": 2.6,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל X פלייד Plaid 1020)"
+  },
+  {
+    "make": "טסלה ארהב\"",
+    "model": "MODEL X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 1020,
+    "cc": 0,
+    "seconds": 2.6,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל X פלייד Plaid 1020)"
+  },
+  {
+    "make": "\"טסלה ארהב",
+    "model": "MODEL X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 613,
+    "cc": 0,
+    "seconds": 3.1,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל X P100D לודקריס 613)"
+  },
+  {
+    "make": "\"טסלה ארהב",
+    "model": "MODEL X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 525,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל X 100D 525)"
+  },
+  {
+    "make": "טסלה",
+    "model": "מודל x",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 685,
+    "cc": 0,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל X 685)"
+  },
+  {
+    "make": "טסלה",
+    "model": "מודל x",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 1020,
+    "cc": 0,
+    "seconds": 2.6,
+    "source": "רישוי רכב / נתון יצרן (טסלה מודל X פלייד 1020)"
+  },
+  {
+    "make": "Tesla",
+    "model": "MODEL X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 685,
+    "cc": 0,
+    "seconds": 3.9,
+    "source": "נתון יצרן (Tesla Model X Dual Motor)"
+  },
+  {
+    "make": "Tesla",
+    "model": "MODEL X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 1020,
+    "cc": 0,
+    "seconds": 2.6,
+    "source": "נתון יצרן (Tesla Model X Plaid)"
+  },
+  {
+    "make": "\"טסלה ארהב",
+    "model": "CYBERTRUCK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 0,
+    "seconds": 4.3,
+    "source": "רישוי רכב / נתון יצרן (טסלה סייברטראק דואל מוטור AWD 600)"
+  },
+  {
+    "make": "טסלה ארהב\"",
+    "model": "CYBERTRUCK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 0,
+    "seconds": 4.3,
+    "source": "רישוי רכב / נתון יצרן (טסלה סייברטראק דואל מוטור AWD 600)"
+  },
+  {
+    "make": "\"טסלה ארהב",
+    "model": "CYBERTRUCK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 845,
+    "cc": 0,
+    "seconds": 2.7,
+    "source": "רישוי רכב / נתון יצרן (טסלה סייברטראק סייברביסט Cyberbeast 845)"
+  },
+  {
+    "make": "טסלה ארהב\"",
+    "model": "CYBERTRUCK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 845,
+    "cc": 0,
+    "seconds": 2.7,
+    "source": "רישוי רכב / נתון יצרן (טסלה סייברטראק סייברביסט Cyberbeast 845)"
+  },
+  {
+    "make": "\"טסלה ארהב",
+    "model": "CYBERTRUCK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 315,
+    "cc": 0,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (טסלה סייברטראק RWD 315)"
+  },
+  {
+    "make": "טסלה",
+    "model": "סייברטראק",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 0,
+    "seconds": 4.3,
+    "source": "רישוי רכב / נתון יצרן (טסלה סייברטראק 600)"
+  },
+  {
+    "make": "טסלה",
+    "model": "סייברטראק",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 845,
+    "cc": 0,
+    "seconds": 2.7,
+    "source": "רישוי רכב / נתון יצרן (טסלה סייברטראק 845)"
+  },
+  {
+    "make": "טסלה",
+    "model": "סייבטארק",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 0,
+    "seconds": 4.3,
+    "source": "רישוי רכב / נתון יצרן (טסלה סייברטראק 600)"
+  },
+  {
+    "make": "Tesla",
+    "model": "CYBERTRUCK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 0,
+    "seconds": 4.3,
+    "source": "נתון יצרן (Tesla Cybertruck AWD)"
+  },
+  {
+    "make": "Tesla",
+    "model": "CYBERTRUCK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 845,
+    "cc": 0,
+    "seconds": 2.7,
+    "source": "נתון יצרן (Tesla Cybertruck Cyberbeast)"
+  }
+]
