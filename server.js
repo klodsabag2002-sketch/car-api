@@ -14,7 +14,7 @@ const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";
 
-// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 13) ----------
+// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 14) ----------
 let accelTable = [];
 const ACCEL_FILES = [
     "acceleration.json",
@@ -29,7 +29,8 @@ const ACCEL_FILES = [
     "acceleration10.json",
     "acceleration11.json",
     "acceleration12.json",
-    "acceleration13.json"
+    "acceleration13.json",
+    "acceleration14.json"
 ];
 
 ACCEL_FILES.forEach(fileName => {
@@ -77,7 +78,7 @@ const HE_MAKE_ALIASES = {
     "\"ניסאן ארהב": "Nissan",
     "איווייס": "Aiways",
     "איווייס סין": "Aiways",
-    "איוויס": "Aiways",
+    "איווויס": "Aiways",
     "איוויס סין": "Aiways",
     "איויאיסי": "EVEASY",
     "איויאיסי סין": "EVEASY",
