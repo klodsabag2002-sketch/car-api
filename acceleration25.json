@@ -340,16 +340,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן פאסאט CC 1.8 TSI 160 כ\"ס)"
   },
   {
-    "make": "פולקסווגן גרמן",
-    "model": "VW CC",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 200,
-    "cc": 1984,
-    "seconds": 7.6,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן CC 2.0 TSI 200 כ\"ס)"
-  },
-  {
     "make": "פולקסווגן",
     "model": "פאסאט cc",
     "yearStart": null,
@@ -390,16 +380,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן ארטאון 2.0 TSI 190 כ\"ס)"
   },
   {
-    "make": "פולקסווגן גרמן",
-    "model": "ARTEON",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 280,
-    "cc": 1984,
-    "seconds": 5.6,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ארטאון 4Motion 2.0 TSI 280 כ\"ס)"
-  },
-  {
     "make": "פולקסווגן",
     "model": "ארטאון",
     "yearStart": null,
@@ -427,17 +407,7 @@
     "hp": 150,
     "cc": 1498,
     "seconds": 9.2,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן טיגואן דור 2/3 1.5 TSI 150 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "TIGUAN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1395,
-    "seconds": 9.2,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן טיגואן 1.4 TSI 150 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טיגואן 1.5 TSI 150 כ\"ס)"
   },
   {
     "make": "פולקסווגן גרמן",
@@ -447,37 +417,7 @@
     "hp": 160,
     "cc": 1390,
     "seconds": 8.9,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן טיגואן דור 1 1.4 TSI 160 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "TIGUAN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 190,
-    "cc": 1984,
-    "seconds": 7.5,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן טיגואן 4Motion 2.0 TSI 190 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "TIGUAN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 220,
-    "cc": 1984,
-    "seconds": 6.5,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן טיגואן 2.0 TSI 220 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "TIGUAN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 245,
-    "cc": 1395,
-    "seconds": 7.5,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן טיגואן eHybrid פלאג-אין PHEV 245 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טיגואן 1.4 TSI 160 כ\"ס)"
   },
   {
     "make": "פולקסווגן",
@@ -510,16 +450,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן טיגואן אולספייס 7 מקומות 1.5 TSI 150 כ\"ס)"
   },
   {
-    "make": "פולקסווגן מקסי",
-    "model": "TIGUAN ALLSPACE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 190,
-    "cc": 1984,
-    "seconds": 8.2,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן טיגואן אולספייס 4Motion 2.0 TSI 190 כ\"ס)"
-  },
-  {
     "make": "פולקסווגן",
     "model": "טיגואן אולספייס",
     "yearStart": null,
@@ -550,36 +480,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן טוארג דור 3 3.0 V6 TDI דיזל 286 כ\"ס)"
   },
   {
-    "make": "פולקסווגן סלוב",
-    "model": "TOUAREG",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 231,
-    "cc": 2967,
-    "seconds": 7.5,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן טוארג דור 3 3.0 V6 TDI 231 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן סלוב",
-    "model": "TOUAREG",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 240,
-    "cc": 2967,
-    "seconds": 7.8,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן טוארג דור 2 3.0 V6 TDI 240 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן סלוב",
-    "model": "TOUAREG",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 245,
-    "cc": 2967,
-    "seconds": 7.6,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן טוארג דור 2 3.0 V6 TDI 245 כ\"ס)"
-  },
-  {
     "make": "פולקסווגן",
     "model": "טוארג",
     "yearStart": null,
@@ -597,7 +497,7 @@
     "hp": 286,
     "cc": 2967,
     "seconds": 6.1,
-    "source": "נתון יצרן (VW Touareg 3.0 V6 TDI)"
+    "source": "נתון יצרן (VW Touareg 3.0 TDI)"
   },
   {
     "make": "פולקסווגן ארהב",
@@ -607,27 +507,7 @@
     "hp": 235,
     "cc": 1984,
     "seconds": 7.9,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן אטלס SUV ענק 2.0 TSI 235 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן ארהב",
-    "model": "ATLAS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 276,
-    "cc": 3597,
-    "seconds": 8.1,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן אטלס 3.6 VR6 276 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן ארהב",
-    "model": "ATLAS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 269,
-    "cc": 1984,
-    "seconds": 7.5,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן אטלס דור חדש 2.0 TSI 269 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן אטלס 2.0 TSI 235 כ\"ס)"
   },
   {
     "make": "פולקסווגן",
@@ -660,26 +540,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן T-קרוס 1.0 TSI 110 כ\"ס)"
   },
   {
-    "make": "פולקסווגן-ספרד",
-    "model": "T-CROSS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 115,
-    "cc": 999,
-    "seconds": 10.2,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן T-קרוס 1.0 TSI 115 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן-ספרד",
-    "model": "T-CROSS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1498,
-    "seconds": 8.5,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן T-קרוס 1.5 TSI 150 כ\"ס)"
-  },
-  {
     "make": "פולקסווגן",
     "model": "T קרוס",
     "yearStart": null,
@@ -710,26 +570,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן T-רוק 1.5 TSI 150 כ\"ס)"
   },
   {
-    "make": "פולקסווגן פורט",
-    "model": "T-ROC",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 190,
-    "cc": 1984,
-    "seconds": 7.2,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן T-רוק 4Motion 2.0 TSI 190 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן פורט",
-    "model": "T-ROC R",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 300,
-    "cc": 1984,
-    "seconds": 4.8,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן T-רוק R ספורט 300 כ\"ס)"
-  },
-  {
     "make": "פולקסווגן",
     "model": "T רוק",
     "yearStart": null,
@@ -757,17 +597,7 @@
     "hp": 110,
     "cc": 999,
     "seconds": 10.4,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן טאיגו קרוס-קופה 1.0 TSI 110 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן-ספרד",
-    "model": "TAIGO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1498,
-    "seconds": 8.3,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן טאיגו 1.5 TSI 150 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טאיגו 1.0 TSI 110 כ\"ס)"
   },
   {
     "make": "פולקסווגן",
@@ -791,23 +621,13 @@
   },
   {
     "make": "פולקסווגן",
-    "model": "TAOS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 158,
-    "cc": 1498,
-    "seconds": 8.6,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן טאוס / טארו קרוסאובר 1.5 TSI 158 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן",
     "model": "טארו",
     "yearStart": null,
     "yearEnd": null,
     "hp": 158,
     "cc": 1498,
     "seconds": 8.6,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן טארו 158 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טארו / טאוס 1.5 TSI 158 כ\"ס)"
   },
   {
     "make": "פולקסווגן גרמן",
@@ -817,27 +637,7 @@
     "hp": 258,
     "cc": 2967,
     "seconds": 7.4,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן אמארוק טנדר 3.0 V6 TDI דיזל 258 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "AMAROK",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 224,
-    "cc": 2967,
-    "seconds": 7.9,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן אמארוק 3.0 V6 TDI 224 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "AMAROK",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 180,
-    "cc": 1968,
-    "seconds": 10.9,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן אמארוק 2.0 BiTDI טווין-טורבו דיזל 180 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן אמארוק 3.0 V6 TDI 258 כ\"ס)"
   },
   {
     "make": "פולקסווגן",
@@ -867,47 +667,7 @@
     "hp": 122,
     "cc": 1390,
     "seconds": 9.8,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ג'טה דור 6 1.4 TSI 122 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן מקסי",
-    "model": "JETTA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 125,
-    "cc": 1395,
-    "seconds": 9.6,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ג'טה 1.4 TSI 125 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן מקסי",
-    "model": "JETTA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 160,
-    "cc": 1390,
-    "seconds": 8.3,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ג'טה 1.4 TSI 160 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן מקסי",
-    "model": "JETTA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 105,
-    "cc": 1197,
-    "seconds": 10.9,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ג'טה 1.2 TSI 105 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן מקסי",
-    "model": "JETTA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 105,
-    "cc": 1598,
-    "seconds": 11.5,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ג'טה 1.6 TDI דיזל 105 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ג'טה 1.4 TSI 122 כ\"ס)"
   },
   {
     "make": "פולקסווגן",
@@ -940,26 +700,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן בורה 1.6 102 כ\"ס)"
   },
   {
-    "make": "פולקסווגן גרמן",
-    "model": "BORA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 115,
-    "cc": 1984,
-    "seconds": 11.0,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן בורה 2.0 115 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "BORA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 1896,
-    "seconds": 10.9,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן בורה 1.9 TDI דיזל 110 כ\"ס)"
-  },
-  {
     "make": "פולקסווגן",
     "model": "בורה",
     "yearStart": null,
@@ -968,16 +708,6 @@
     "cc": 1595,
     "seconds": 12.8,
     "source": "רישוי רכב / נתון יצרן (פולקסווגן בורה 102 כ\"ס)"
-  },
-  {
-    "make": "Volkswagen",
-    "model": "BORA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 102,
-    "cc": 1595,
-    "seconds": 12.8,
-    "source": "נתון יצרן (VW Bora 1.6)"
   },
   {
     "make": "פולקסווגן גרמן",
@@ -990,16 +720,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן ונטו 1.8 90 כ\"ס)"
   },
   {
-    "make": "פולקסווגן גרמן",
-    "model": "VENTO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 115,
-    "cc": 1984,
-    "seconds": 10.4,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ונטו 2.0 115 כ\"ס)"
-  },
-  {
     "make": "פולקסווגן",
     "model": "ונטו",
     "yearStart": null,
@@ -1010,16 +730,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן ונטו 90 כ\"ס)"
   },
   {
-    "make": "Volkswagen",
-    "model": "VENTO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 90,
-    "cc": 1781,
-    "seconds": 12.5,
-    "source": "נתון יצרן (VW Vento)"
-  },
-  {
     "make": "פולקסווגן מקסי",
     "model": "BEETLE",
     "yearStart": null,
@@ -1027,47 +737,7 @@
     "hp": 105,
     "cc": 1197,
     "seconds": 10.9,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן חיפושית החדשה 1.2 TSI 105 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן מקסי",
-    "model": "BEETLE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 160,
-    "cc": 1390,
-    "seconds": 8.3,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן חיפושית 1.4 TSI 160 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן מקסי",
-    "model": "BEETLE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 200,
-    "cc": 1984,
-    "seconds": 7.5,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן חיפושית ספורט 2.0 TSI 200 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן מקסי",
-    "model": "BEETLE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 102,
-    "cc": 1595,
-    "seconds": 11.7,
-    "source": "רישוי רכב / נתון יצרן (ניו ביטל דור 1 1.6 102 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן מקסי",
-    "model": "BEETLE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 115,
-    "cc": 1984,
-    "seconds": 10.9,
-    "source": "רישוי רכב / נתון יצרן (ניו ביטל דור 1 2.0 115 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן חיפושית 1.2 TSI 105 כ\"ס)"
   },
   {
     "make": "פולקסווגן",
@@ -1097,57 +767,7 @@
     "hp": 210,
     "cc": 1984,
     "seconds": 6.9,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן שירוקו ספורט 2.0 TSI 210 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן פורט",
-    "model": "SCIROCCO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 200,
-    "cc": 1984,
-    "seconds": 7.1,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן שירוקו 2.0 TSI 200 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן פורט",
-    "model": "SCIROCCO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 160,
-    "cc": 1390,
-    "seconds": 8.0,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן שירוקו 1.4 TSI טווין-צ'ארג'ר 160 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן פורט",
-    "model": "SCIROCCO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 122,
-    "cc": 1390,
-    "seconds": 9.7,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן שירוקו 1.4 TSI 122 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן פורט",
-    "model": "SCIROCCO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 125,
-    "cc": 1395,
-    "seconds": 9.3,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן שירוקו מתוח פנים 1.4 TSI 125 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן פורט",
-    "model": "SCIROCCO R",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 265,
-    "cc": 1984,
-    "seconds": 5.8,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן שירוקו R ביצועים 265 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן שירוקו 2.0 TSI 210 כ\"ס)"
   },
   {
     "make": "פולקסווגן",
@@ -1160,26 +780,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן שירוקו 210 כ\"ס)"
   },
   {
-    "make": "פולקסווגן",
-    "model": "שירוקו",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 160,
-    "cc": 1390,
-    "seconds": 8.0,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן שירוקו 160 כ\"ס)"
-  },
-  {
-    "make": "Volkswagen",
-    "model": "SCIROCCO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 210,
-    "cc": 1984,
-    "seconds": 6.9,
-    "source": "נתון יצרן (VW Scirocco 2.0 TSI)"
-  },
-  {
     "make": "פולקסווגן פורט",
     "model": "EOS",
     "yearStart": null,
@@ -1187,27 +787,7 @@
     "hp": 200,
     "cc": 1984,
     "seconds": 7.8,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן איוס קבריולה גג קשיח 2.0 TFSI 200 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן פורט",
-    "model": "EOS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 210,
-    "cc": 1984,
-    "seconds": 7.8,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן איוס 2.0 TSI 210 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן פורט",
-    "model": "EOS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 160,
-    "cc": 1390,
-    "seconds": 8.8,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן איוס 1.4 TSI 160 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן איוס 2.0 TFSI 200 כ\"ס)"
   },
   {
     "make": "פולקסווגן",
@@ -1220,16 +800,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן איוס 200 כ\"ס)"
   },
   {
-    "make": "Volkswagen",
-    "model": "EOS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 200,
-    "cc": 1984,
-    "seconds": 7.8,
-    "source": "נתון יצרן (VW Eos 2.0 TFSI)"
-  },
-  {
     "make": "פולקסווגן סלוב",
     "model": "UP",
     "yearStart": null,
@@ -1237,37 +807,7 @@
     "hp": 75,
     "cc": 999,
     "seconds": 13.2,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן אפ Move Up! 1.0 75 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן סלוב",
-    "model": "UP",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 60,
-    "cc": 999,
-    "seconds": 14.4,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן אפ 1.0 Take Up! 60 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן סלוב",
-    "model": "UP",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 90,
-    "cc": 999,
-    "seconds": 9.9,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן אפ 1.0 TSI טורבו 90 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן סלוב",
-    "model": "E-UP",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 83,
-    "cc": 0,
-    "seconds": 11.9,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן e-Up! חשמלית עירונית 83 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן אפ 1.0 75 כ\"ס)"
   },
   {
     "make": "פולקסווגן",
@@ -1280,36 +820,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן אפ 75 כ\"ס)"
   },
   {
-    "make": "Volkswagen",
-    "model": "UP",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 75,
-    "cc": 999,
-    "seconds": 13.2,
-    "source": "נתון יצרן (VW Up! 1.0)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "TOURAN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1498,
-    "seconds": 8.9,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן טוראן 7 מקומות 1.5 TSI 150 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "TOURAN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1395,
-    "seconds": 8.9,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן טוראן 1.4 TSI 150 כ\"ס)"
-  },
-  {
     "make": "פולקסווגן גרמן",
     "model": "TOURAN",
     "yearStart": null,
@@ -1320,44 +830,14 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן טוראן 1.4 TSI 140 כ\"ס)"
   },
   {
-    "make": "פולקסווגן גרמן",
-    "model": "TOURAN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 105,
-    "cc": 1197,
-    "seconds": 11.9,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן טוראן 1.2 TSI 105 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "TOURAN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 115,
-    "cc": 1598,
-    "seconds": 11.4,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן טוראן 1.6 TDI דיזל 115 כ\"ס)"
-  },
-  {
     "make": "פולקסווגן",
     "model": "טוראן",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 150,
-    "cc": 1498,
-    "seconds": 8.9,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן טוראן 150 כ\"ס)"
-  },
-  {
-    "make": "Volkswagen",
-    "model": "TOURAN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1498,
-    "seconds": 8.9,
-    "source": "נתון יצרן (VW Touran 1.5 TSI)"
+    "hp": 140,
+    "cc": 1390,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טוראן 140 כ\"ס)"
   },
   {
     "make": "פולקסווגן גרמן",
@@ -1367,17 +847,7 @@
     "hp": 240,
     "cc": 2967,
     "seconds": 8.3,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן פיטון לימוזינת פאר 3.0 V6 TDI 240 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "PHAETON",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 335,
-    "cc": 4172,
-    "seconds": 6.9,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן פיטון 4.2 V8 335 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן פיטון 3.0 TDI 240 כ\"ס)"
   },
   {
     "make": "פולקסווגן",
@@ -1390,16 +860,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן פיטון 240 כ\"ס)"
   },
   {
-    "make": "Volkswagen",
-    "model": "PHAETON",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 240,
-    "cc": 2967,
-    "seconds": 8.3,
-    "source": "נתון יצרן (VW Phaeton 3.0 TDI)"
-  },
-  {
     "make": "פולקסווגן פולי",
     "model": "CADDY",
     "yearStart": null,
@@ -1407,17 +867,7 @@
     "hp": 122,
     "cc": 1968,
     "seconds": 11.2,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן קאדי דור 5 2.0 TDI דיזל 122 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן פולי",
-    "model": "CADDY",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 114,
-    "cc": 1498,
-    "seconds": 11.9,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן קאדי דור 5 1.5 TSI בנזין 114 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן קאדי 2.0 TDI 122 כ\"ס)"
   },
   {
     "make": "פולקסווגן פולי",
@@ -1427,37 +877,7 @@
     "hp": 125,
     "cc": 1395,
     "seconds": 10.9,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן קאדי מקסי ואן מסחרי 1.4 TSI 125 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן פולי",
-    "model": "CADDY",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 102,
-    "cc": 1968,
-    "seconds": 12.0,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן קאדי דור 4 2.0 TDI דיזל 102 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן פולי",
-    "model": "CADDY",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 102,
-    "cc": 1598,
-    "seconds": 12.2,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן קאדי 1.6 TDI דיזל 102 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן פולי",
-    "model": "CADDY",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 105,
-    "cc": 1197,
-    "seconds": 11.8,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן קאדי 1.2 TSI 105 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן קאדי מקסי 1.4 TSI 125 כ\"ס)"
   },
   {
     "make": "פולקסווגן",
@@ -1470,16 +890,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן קאדי 122 כ\"ס)"
   },
   {
-    "make": "Volkswagen",
-    "model": "CADDY",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 122,
-    "cc": 1968,
-    "seconds": 11.2,
-    "source": "נתון יצרן (VW Caddy 2.0 TDI)"
-  },
-  {
     "make": "פולקסווגן גרמן",
     "model": "T5",
     "yearStart": null,
@@ -1487,47 +897,7 @@
     "hp": 140,
     "cc": 1968,
     "seconds": 14.2,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן טרנספורטר T5 2.0 TDI דיזל 140 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "T5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 180,
-    "cc": 1968,
-    "seconds": 11.3,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן T5 2.0 BiTDI טווין-טורבו דיזל 180 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "T5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 102,
-    "cc": 1968,
-    "seconds": 17.9,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן T5 2.0 TDI 102 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "T5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 130,
-    "cc": 2461,
-    "seconds": 15.3,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן T5 2.5 TDI דיזל 130 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "T6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1968,
-    "seconds": 13.0,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן טרנספורטר T6 2.0 TDI דיזל 150 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן T5 2.0 TDI 140 כ\"ס)"
   },
   {
     "make": "פולקסווגן גרמן",
@@ -1550,16 +920,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן טרנספורטר 140 כ\"ס)"
   },
   {
-    "make": "Volkswagen",
-    "model": "TRANSPORTER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 140,
-    "cc": 1968,
-    "seconds": 14.2,
-    "source": "נתון יצרן (VW Transporter 2.0 TDI)"
-  },
-  {
     "make": "פולקסווגן גרמן",
     "model": "CARAVELLE",
     "yearStart": null,
@@ -1567,27 +927,7 @@
     "hp": 110,
     "cc": 1968,
     "seconds": 16.5,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן קראוול T6.1 נוסעים 2.0 TDI דיזל 110 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "CARAVELLE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1968,
-    "seconds": 13.0,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן קראוול 2.0 TDI 150 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "CARAVELLE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 1968,
-    "seconds": 9.9,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן קראוול 2.0 BiTDI דיזל 204 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן קראוול 2.0 TDI 110 כ\"ס)"
   },
   {
     "make": "פולקסווגן",
@@ -1600,16 +940,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן קראוול 150 כ\"ס)"
   },
   {
-    "make": "Volkswagen",
-    "model": "CARAVELLE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1968,
-    "seconds": 13.0,
-    "source": "נתון יצרן (VW Caravelle 2.0 TDI)"
-  },
-  {
     "make": "פולקסווגן גרמן",
     "model": "MULTIVAN",
     "yearStart": null,
@@ -1617,27 +947,7 @@
     "hp": 204,
     "cc": 1968,
     "seconds": 9.9,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן מולטיוואן Highline VIP 2.0 BiTDI 204 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "MULTIVAN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 1984,
-    "seconds": 9.5,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן מולטיוואן 2.0 TSI בנזין 204 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "MULTIVAN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 218,
-    "cc": 1395,
-    "seconds": 9.0,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן מולטיוואן T7 eHybrid פלאג-אין PHEV 218 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן מולטיוואן 2.0 BiTDI 204 כ\"ס)"
   },
   {
     "make": "פולקסווגן",
@@ -1650,16 +960,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן מולטיוואן 204 כ\"ס)"
   },
   {
-    "make": "Volkswagen",
-    "model": "MULTIVAN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 1968,
-    "seconds": 9.9,
-    "source": "נתון יצרן (VW Multivan 2.0 BiTDI)"
-  },
-  {
     "make": "פולקסווגן גרמן",
     "model": "CALIFORNIA",
     "yearStart": null,
@@ -1667,17 +967,7 @@
     "hp": 204,
     "cc": 1968,
     "seconds": 11.2,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן קליפורניה קאמפר 2.0 BiTDI 204 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "CALIFORNIA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1968,
-    "seconds": 14.2,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן קליפורניה 2.0 TDI 150 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן קליפורניה 204 כ\"ס)"
   },
   {
     "make": "פולקסווגן",
@@ -1690,16 +980,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן קליפורניה 204 כ\"ס)"
   },
   {
-    "make": "Volkswagen",
-    "model": "CALIFORNIA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 1968,
-    "seconds": 11.2,
-    "source": "נתון יצרן (VW California Camper)"
-  },
-  {
     "make": "פולקסווגן פולי",
     "model": "CRAFTER",
     "yearStart": null,
@@ -1707,27 +987,7 @@
     "hp": 177,
     "cc": 1968,
     "seconds": 13.5,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן קראפטר מסחרית גדולה 2.0 BiTDI דיזל 177 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן פולי",
-    "model": "CRAFTER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 140,
-    "cc": 1968,
-    "seconds": 15.5,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן קראפטר 2.0 TDI דיזל 140 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן פולי",
-    "model": "CRAFTER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 109,
-    "cc": 1968,
-    "seconds": 18.5,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן קראפטר 2.0 TDI 109 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן קראפטר 2.0 BiTDI 177 כ\"ס)"
   },
   {
     "make": "פולקסווגן",
@@ -1740,26 +1000,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן קראפטר 177 כ\"ס)"
   },
   {
-    "make": "Volkswagen",
-    "model": "CRAFTER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 177,
-    "cc": 1968,
-    "seconds": 13.5,
-    "source": "נתון יצרן (VW Crafter 2.0 BiTDI)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "LT",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 109,
-    "cc": 2461,
-    "seconds": 21.0,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן LT מסחרית 2.5 TDI 109 כ\"ס)"
-  },
-  {
     "make": "פולקסווגן גרמן",
     "model": "LT35",
     "yearStart": null,
@@ -1768,16 +1008,6 @@
     "cc": 2461,
     "seconds": 21.0,
     "source": "רישוי רכב / נתון יצרן (פולקסווגן LT35 2.5 TDI 109 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "LT35",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 158,
-    "cc": 2799,
-    "seconds": 17.5,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן LT35 2.8 TDI 158 כ\"ס)"
   },
   {
     "make": "פולקסווגן",
@@ -1800,16 +1030,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן LT35 109 כ\"ס)"
   },
   {
-    "make": "Volkswagen",
-    "model": "LT",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 109,
-    "cc": 2461,
-    "seconds": 21.0,
-    "source": "נתון יצרן (VW LT TDI)"
-  },
-  {
     "make": "פולקסווגן גרמן",
     "model": "ID3",
     "yearStart": null,
@@ -1817,27 +1037,7 @@
     "hp": 204,
     "cc": 0,
     "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.3 Pro / Pro S חשמלי מלא 204 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "ID.3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.3 חשמלי מלא 204 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "ID3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 145,
-    "cc": 0,
-    "seconds": 9.6,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.3 Pure 145 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.3 204 כ\"ס)"
   },
   {
     "make": "פולקסווגן",
@@ -1850,26 +1050,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן ID3 204 כ\"ס)"
   },
   {
-    "make": "Volkswagen",
-    "model": "ID.3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 7.3,
-    "source": "נתון יצרן (VW ID.3 EV)"
-  },
-  {
-    "make": "Volkswagen",
-    "model": "ID3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 7.3,
-    "source": "נתון יצרן (VW ID.3 Pro)"
-  },
-  {
     "make": "פולקסווגן גרמן",
     "model": "ID4",
     "yearStart": null,
@@ -1877,47 +1057,7 @@
     "hp": 204,
     "cc": 0,
     "seconds": 8.5,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.4 Pro קרוסאובר חשמלי מלא 204 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "ID.4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 8.5,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.4 חשמלי מלא 204 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "ID4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 286,
-    "cc": 0,
-    "seconds": 6.7,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.4 Pro דור מעודכן 286 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "ID4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 299,
-    "cc": 0,
-    "seconds": 6.2,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.4 GTX כפול מנועים AWD 299 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "ID4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 148,
-    "cc": 0,
-    "seconds": 10.9,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.4 Pure 148 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.4 204 כ\"ס)"
   },
   {
     "make": "פולקסווגן",
@@ -1930,26 +1070,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן ID4 204 כ\"ס)"
   },
   {
-    "make": "Volkswagen",
-    "model": "ID.4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 8.5,
-    "source": "נתון יצרן (VW ID.4 Pro EV)"
-  },
-  {
-    "make": "Volkswagen",
-    "model": "ID4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 8.5,
-    "source": "נתון יצרן (VW ID.4 EV)"
-  },
-  {
     "make": "פולקסווגן גרמן",
     "model": "ID5",
     "yearStart": null,
@@ -1957,37 +1077,7 @@
     "hp": 204,
     "cc": 0,
     "seconds": 8.4,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.5 Pro קופה חשמלי מלא 204 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "ID.5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 8.4,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.5 חשמלי 204 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "ID5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 286,
-    "cc": 0,
-    "seconds": 6.7,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.5 Pro מנוע מעודכן 286 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "ID5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 299,
-    "cc": 0,
-    "seconds": 6.3,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.5 GTX כפול מנועים AWD 299 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.5 204 כ\"ס)"
   },
   {
     "make": "פולקסווגן",
@@ -2000,26 +1090,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן ID5 204 כ\"ס)"
   },
   {
-    "make": "Volkswagen",
-    "model": "ID.5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 8.4,
-    "source": "נתון יצרן (VW ID.5 EV)"
-  },
-  {
-    "make": "Volkswagen",
-    "model": "ID5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 8.4,
-    "source": "נתון יצרן (VW ID.5 Pro)"
-  },
-  {
     "make": "פולקסווגן גרמן",
     "model": "ID6",
     "yearStart": null,
@@ -2027,27 +1097,7 @@
     "hp": 204,
     "cc": 0,
     "seconds": 9.1,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.6 7 מקומות חשמלי מלא 204 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "ID.6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 9.1,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.6 חשמלי 204 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "ID6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 305,
-    "cc": 0,
-    "seconds": 6.6,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.6 Crozz / X AWD כפול מנועים 305 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.6 204 כ\"ס)"
   },
   {
     "make": "פולקסווגן",
@@ -2060,16 +1110,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן ID6 204 כ\"ס)"
   },
   {
-    "make": "Volkswagen",
-    "model": "ID.6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 9.1,
-    "source": "נתון יצרן (VW ID.6 EV)"
-  },
-  {
     "make": "פולקסווגן גרמן",
     "model": "ID7",
     "yearStart": null,
@@ -2077,27 +1117,7 @@
     "hp": 286,
     "cc": 0,
     "seconds": 6.5,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.7 Pro סדאן פרימיום חשמלי מלא 286 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "ID.7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 286,
-    "cc": 0,
-    "seconds": 6.5,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.7 Pro חשמלי מלא 286 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "ID7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 340,
-    "cc": 0,
-    "seconds": 5.4,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.7 GTX כפול מנועים AWD 340 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.7 286 כ\"ס)"
   },
   {
     "make": "פולקסווגן",
@@ -2110,26 +1130,6 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן ID7 286 כ\"ס)"
   },
   {
-    "make": "Volkswagen",
-    "model": "ID.7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 286,
-    "cc": 0,
-    "seconds": 6.5,
-    "source": "נתון יצרן (VW ID.7 Pro EV)"
-  },
-  {
-    "make": "Volkswagen",
-    "model": "ID7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 286,
-    "cc": 0,
-    "seconds": 6.5,
-    "source": "נתון יצרן (VW ID.7 EV)"
-  },
-  {
     "make": "פולקסווגן גרמן",
     "model": "ID.BUZZ",
     "yearStart": null,
@@ -2137,37 +1137,7 @@
     "hp": 204,
     "cc": 0,
     "seconds": 10.2,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.Buzz ואן רטרו חשמלי מלא 204 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "ID BUZZ",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 10.2,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.Buzz חשמלי 204 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "ID.BUZZ",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 286,
-    "cc": 0,
-    "seconds": 7.9,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.Buzz בסיס גלגלים ארוך LWB 286 כ\"ס)"
-  },
-  {
-    "make": "פולקסווגן גרמן",
-    "model": "ID.BUZZ",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 340,
-    "cc": 0,
-    "seconds": 6.5,
-    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.Buzz GTX כפול מנועים AWD 340 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.Buzz 204 כ\"ס)"
   },
   {
     "make": "פולקסווגן",
@@ -2180,13 +1150,1433 @@
     "source": "רישוי רכב / נתון יצרן (פולקסווגן ID.Buzz 204 כ\"ס)"
   },
   {
-    "make": "Volkswagen",
-    "model": "ID.BUZZ",
+    "make": "פורד ארהב\"",
+    "model": "MUSTANG",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 204,
+    "hp": 310,
+    "cc": 2261,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (פורד מוסטנג 2.3 אקובוסט טורבו 310 כ\"ס)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "MUSTANG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 450,
+    "cc": 5038,
+    "seconds": 4.3,
+    "source": "רישוי רכב / נתון יצרן (פורד מוסטנג GT 5.0 V8 450 כ\"ס)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "MUSTANG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 480,
+    "cc": 5038,
+    "seconds": 4.2,
+    "source": "רישוי רכב / נתון יצרן (פורד מוסטנג Dark Horse / Mach 1 480 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "מוסטנג",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 2261,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (פורד מוסטנג 310 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "MUSTANG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 2261,
+    "seconds": 5.5,
+    "source": "נתון יצרן (Ford Mustang 2.3 EcoBoost)"
+  },
+  {
+    "make": "פורד מקסיקו",
+    "model": "MUSTANG MACH E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 269,
     "cc": 0,
-    "seconds": 10.2,
-    "source": "נתון יצרן (VW ID.Buzz EV)"
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (פורד מוסטנג מאך-E חשמלי AWD 269 כ\"ס)"
+  },
+  {
+    "make": "פורד מקסיקו",
+    "model": "MUSTANG MACH E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 351,
+    "cc": 0,
+    "seconds": 5.1,
+    "source": "רישוי רכב / נתון יצרן (פורד מוסטנג מאך-E Extended AWD 351 כ\"ס)"
+  },
+  {
+    "make": "פורד מקסיקו",
+    "model": "MUSTANG MACH E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 487,
+    "cc": 0,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (פורד מוסטנג מאך-E GT ביצועים 487 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "מוסטנג Mach-E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 269,
+    "cc": 0,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (פורד מוסטנג מאך-E 269 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "MUSTANG MACH E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 269,
+    "cc": 0,
+    "seconds": 6.1,
+    "source": "נתון יצרן (Ford Mustang Mach-E AWD)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FOCUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 999,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס דור 4 1.0 EcoBoost mHEV 155 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FOCUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 999,
+    "seconds": 10.0,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס 1.0 EcoBoost 125 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FOCUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1496,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס 1.5 EcoBoost 150 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FOCUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 182,
+    "cc": 1496,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס 1.5 EcoBoost 182 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FOCUS ST",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 2261,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס ST ספורט 2.3 EcoBoost 280 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FOCUS RS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 350,
+    "cc": 2261,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס RS AWD 350 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "פוקוס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 999,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס 155 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "FOCUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 999,
+    "seconds": 8.4,
+    "source": "נתון יצרן (Ford Focus 1.0 mHEV)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FIESTA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 1242,
+    "seconds": 13.3,
+    "source": "רישוי רכב / נתון יצרן (פורד פיאסטה 1.25 בנזין 82 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FIESTA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 999,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (פורד פיאסטה 1.0 EcoBoost 100 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FIESTA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 999,
+    "seconds": 9.4,
+    "source": "רישוי רכב / נתון יצרן (פורד פיאסטה 1.0 EcoBoost 125 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FIESTA ST",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1496,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (פורד פיאסטה ST ספורט 1.5 200 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "פיאסטה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 1242,
+    "seconds": 13.3,
+    "source": "רישוי רכב / נתון יצרן (פורד פיאסטה 82 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "FIESTA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 1242,
+    "seconds": 13.3,
+    "source": "נתון יצרן (Ford Fiesta 1.25)"
+  },
+  {
+    "make": "פורד רומניה",
+    "model": "PUMA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 999,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (פורד פומה קרוסאובר 1.0 EcoBoost mHEV 125 כ\"ס)"
+  },
+  {
+    "make": "פורד רומניה",
+    "model": "PUMA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 999,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (פורד פומה 1.0 EcoBoost 155 כ\"ס)"
+  },
+  {
+    "make": "פורד רומניה",
+    "model": "PUMA ST",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1496,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (פורד פומה ST ספורט 1.5 200 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "פומה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 999,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (פורד פומה 125 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "PUMA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 999,
+    "seconds": 9.8,
+    "source": "נתון יצרן (Ford Puma 1.0 EcoBoost)"
+  },
+  {
+    "make": "פורד ספרד",
+    "model": "KUGA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 182,
+    "cc": 1498,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (פורד קוגה 1.5 EcoBoost 182 כ\"ס)"
+  },
+  {
+    "make": "פורד ספרד",
+    "model": "KUGA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (פורד קוגה 1.5 EcoBoost 150 כ\"ס)"
+  },
+  {
+    "make": "פורד ספרד",
+    "model": "KUGA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 225,
+    "cc": 2488,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (פורד קוגה פלאג-אין PHEV 2.5 225 כ\"ס)"
+  },
+  {
+    "make": "פורד ספרד",
+    "model": "KUGA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 2488,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (פורד קוגה היברידית מלאה FHEV 190 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "קוגה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 182,
+    "cc": 1498,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (פורד קוגה 182 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "KUGA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 182,
+    "cc": 1498,
+    "seconds": 9.7,
+    "source": "נתון יצרן (Ford Kuga 1.5T)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "EXPLORER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 290,
+    "cc": 3497,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (פורד אקספלורר 3.5 V6 290 כ\"ס)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "EXPLORER LIMITE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 290,
+    "cc": 3497,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (פורד אקספלורר לימיטד 3.5 290 כ\"ס)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "EXPLORER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 2261,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (פורד אקספלורר דור 6 2.3 EcoBoost 300 כ\"ס)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "EXPLORER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 457,
+    "cc": 2956,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (פורד אקספלורר פלאג-אין PHEV 3.0 V6 457 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "אקספלורר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 290,
+    "cc": 3497,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (פורד אקספלורר 290 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "EXPLORER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 290,
+    "cc": 3497,
+    "seconds": 8.2,
+    "source": "נתון יצרן (Ford Explorer 3.5 V6)"
+  },
+  {
+    "make": "פורד קנדה",
+    "model": "EDGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 248,
+    "cc": 1999,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (פורד אדג' 2.0 EcoBoost טורבו AWD 248 כ\"ס)"
+  },
+  {
+    "make": "פורד קנדה",
+    "model": "EDGE-SEL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 248,
+    "cc": 1999,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (פורד אדג' SEL פלוס 2.0 248 כ\"ס)"
+  },
+  {
+    "make": "פורד קנדה",
+    "model": "EDGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 285,
+    "cc": 3496,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (פורד אדג' דור 1 3.5 V6 285 כ\"ס)"
+  },
+  {
+    "make": "פורד קנדה",
+    "model": "EDGE ST",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 335,
+    "cc": 2694,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (פורד אדג' ST ספורט 2.7 V6 טווין-טורבו 335 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "אדג׳",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 248,
+    "cc": 1999,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (פורד אדג' 248 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "EDGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 248,
+    "cc": 1999,
+    "seconds": 7.8,
+    "source": "נתון יצרן (Ford Edge 2.0 EcoBoost)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "BRONCO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 330,
+    "cc": 2694,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (פורד ברונקו 2.7 V6 אקובוסט 330 כ\"ס)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "BRONCO BADLANDS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 330,
+    "cc": 2694,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (פורד ברונקו בדלנדס שטח 2.7 330 כ\"ס)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "BRONCO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 2261,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (פורד ברונקו 2.3 EcoBoost 300 כ\"ס)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "BRONCO RAPTOR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 418,
+    "cc": 2956,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (פורד ברונקו ראפטור ביצועי שטח 418 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "ברונקו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 330,
+    "cc": 2694,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (פורד ברונקו 330 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "BRONCO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 330,
+    "cc": 2694,
+    "seconds": 6.9,
+    "source": "נתון יצרן (Ford Bronco 2.7 V6)"
+  },
+  {
+    "make": "פורד מקסיקו",
+    "model": "BRONCO SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 1497,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (פורד ברונקו ספורט 1.5 EcoBoost 181 כ\"ס)"
+  },
+  {
+    "make": "פורד מקסיקו",
+    "model": "BRONCO SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1999,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (פורד ברונקו ספורט בדלנדס 2.0 EcoBoost 250 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "ברונקו ספורט",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 1497,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (פורד ברונקו ספורט 181 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "BRONCO SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 1497,
+    "seconds": 8.6,
+    "source": "נתון יצרן (Ford Bronco Sport 1.5T)"
+  },
+  {
+    "make": "פורד מקסיקו",
+    "model": "MAVERICK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 162,
+    "cc": 2485,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (פורד מאבריק טנדר היברידי 2.5 162/191 כ\"ס)"
+  },
+  {
+    "make": "פורד מקסיקו",
+    "model": "MAVERICK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1999,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (פורד מאבריק טנדר 2.0 EcoBoost טורבו AWD 250 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "מאבריק",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 162,
+    "cc": 2485,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (פורד מאבריק 162 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "MAVERICK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 162,
+    "cc": 2485,
+    "seconds": 8.2,
+    "source": "נתון יצרן (Ford Maverick Hybrid)"
+  },
+  {
+    "make": "פורד ד אפריקה",
+    "model": "RANGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 1996,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (פורד ריינג'ר Wildtrak 2.0 Bi-Turbo דיזל 205 כ\"ס)"
+  },
+  {
+    "make": "פורד ד אפריקה",
+    "model": "RANGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 213,
+    "cc": 1996,
+    "seconds": 10.1,
+    "source": "רישוי רכב / נתון יצרן (פורד ריינג'ר ראפטור דור יוצא 2.0 דיזל 213 כ\"ס)"
+  },
+  {
+    "make": "פורד ד אפריקה",
+    "model": "RANGER RAPTOR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 292,
+    "cc": 2956,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (פורד ריינג'ר ראפטור דור חדש 3.0 V6 טווין-טורבו 292 כ\"ס)"
+  },
+  {
+    "make": "פורד ד אפריקה",
+    "model": "RANGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1996,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (פורד ריינג'ר 2.0 דיזל חד-טורבו 170 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "ריינג׳ר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 1996,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (פורד ריינג'ר 205 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "RANGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 205,
+    "cc": 1996,
+    "seconds": 9.8,
+    "source": "נתון יצרן (Ford Ranger Wildtrak 2.0)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "F-150",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 400,
+    "cc": 3497,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (פורד F-150 פול סייז 3.5 V6 EcoBoost 400 כ\"ס)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "F-150",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 430,
+    "cc": 3497,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (פורד F-150 PowerBoost היברידי 430 כ\"ס)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "F-150 LIGHTNING",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 580,
+    "cc": 0,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (פורד F-150 לייטנינג חשמלי מלא 580 כ\"ס)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "F-150 RAPTOR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 450,
+    "cc": 3497,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (פורד F-150 ראפטור 3.5 V6 טווין-טורבו 450 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "F-150",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 400,
+    "cc": 3497,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (פורד F-150 400 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "F-150",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 400,
+    "cc": 3497,
+    "seconds": 5.9,
+    "source": "נתון יצרן (Ford F-150 3.5 EcoBoost)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "F-250",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 475,
+    "cc": 6650,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (פורד F-250 סופר דיוטי 6.7 V8 PowerStroke דיזל 475 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "F-250",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 475,
+    "cc": 6650,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (פורד F-250 475 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "F-250",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 475,
+    "cc": 6650,
+    "seconds": 7.5,
+    "source": "נתון יצרן (Ford F-250 Super Duty)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "F-350",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 475,
+    "cc": 6650,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (פורד F-350 סופר דיוטי 6.7 V8 דיזל 475 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "F-350",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 475,
+    "cc": 6650,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (פורד F-350 475 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "F-350",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 475,
+    "cc": 6650,
+    "seconds": 7.9,
+    "source": "נתון יצרן (Ford F-350 Super Duty)"
+  },
+  {
+    "make": "פורד מקסיקו",
+    "model": "FUSION",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 1999,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (פורד פיוז'ן הייבריד 2.0 141/188 כ\"ס)"
+  },
+  {
+    "make": "פורד מקסיקו",
+    "model": "FUSION",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1999,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (פורד פיוז'ן 2.0 EcoBoost טורבו 240 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "פיוז׳ן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 1999,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (פורד פיוז'ן 141 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "FUSION",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 1999,
+    "seconds": 9.2,
+    "source": "נתון יצרן (Ford Fusion Hybrid)"
+  },
+  {
+    "make": "פורד בלגיה",
+    "model": "MONDEO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 161,
+    "cc": 2261,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (פורד מונדיאו 2.3 בנזין 161 כ\"ס)"
+  },
+  {
+    "make": "פורד בלגיה",
+    "model": "MONDE0",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 161,
+    "cc": 2261,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (פורד מונדיאו ברישוי 2.3 161 כ\"ס)"
+  },
+  {
+    "make": "פורד בלגיה",
+    "model": "MONDEO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 203,
+    "cc": 1999,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (פורד מונדיאו 2.0 EcoBoost טורבו 203 כ\"ס)"
+  },
+  {
+    "make": "פורד בלגיה",
+    "model": "MONDEO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1999,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (פורד מונדיאו 2.0 EcoBoost טורבו 240 כ\"ס)"
+  },
+  {
+    "make": "פורד בלגיה",
+    "model": "MONDEO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 187,
+    "cc": 1999,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (פורד מונדיאו הייבריד 2.0 187 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "מונדאו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 161,
+    "cc": 2261,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (פורד מונדיאו 161 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "MONDEO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 161,
+    "cc": 2261,
+    "seconds": 10.4,
+    "source": "נתון יצרן (Ford Mondeo 2.3)"
+  },
+  {
+    "make": "פורד בלגיה",
+    "model": "S MAX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1999,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (פורד S-Max מיניוואן ספורטיבי 2.0 EcoBoost 240 כ\"ס)"
+  },
+  {
+    "make": "פורד בלגיה",
+    "model": "S-MAX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1999,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (פורד S-Max 2.0 240 כ\"ס)"
+  },
+  {
+    "make": "פורד בלגיה",
+    "model": "S MAX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 203,
+    "cc": 1999,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (פורד S-Max 2.0 EcoBoost 203 כ\"ס)"
+  },
+  {
+    "make": "פורד בלגיה",
+    "model": "S MAX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 161,
+    "cc": 2261,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (פורד S-Max 2.3 161 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "S-מקס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1999,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (פורד S-מקס 240 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "S MAX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 1999,
+    "seconds": 8.2,
+    "source": "נתון יצרן (Ford S-Max 2.0 EcoBoost)"
+  },
+  {
+    "make": "פורד בלגיה",
+    "model": "GALAXY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 1999,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (פורד גלאקסי 7 מקומות 2.0 EcoBoost טורבו 202 כ\"ס)"
+  },
+  {
+    "make": "פורד בלגיה",
+    "model": "GALAXY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 161,
+    "cc": 2261,
+    "seconds": 11.6,
+    "source": "רישוי רכב / נתון יצרן (פורד גלאקסי 2.3 161 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "גלאקסי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 1999,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (פורד גלאקסי 202 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "GALAXY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 1999,
+    "seconds": 8.8,
+    "source": "נתון יצרן (Ford Galaxy 2.0 EcoBoost)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "ESCAPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 1497,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (פורד אסקייפ 1.5 EcoBoost 181 כ\"ס)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "ESCAPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1999,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (פורד אסקייפ 2.0 EcoBoost AWD 250 כ\"ס)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "ESCAPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 2488,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (פורד אסקייפ היברידי 2.5 200 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "אסקייפ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 1497,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (פורד אסקייפ 181 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "ESCAPE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 1497,
+    "seconds": 8.7,
+    "source": "נתון יצרן (Ford Escape 1.5T)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "EXPEDITION",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 3497,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (פורד אקספדישן SUV ענק 3.5 V6 EcoBoost 380 כ\"ס)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "EXPEDITION",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 400,
+    "cc": 3497,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (פורד אקספדישן 3.5 V6 400 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "אקספדישן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 3497,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (פורד אקספדישן 380 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "EXPEDITION",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 380,
+    "cc": 3497,
+    "seconds": 6.7,
+    "source": "נתון יצרן (Ford Expedition 3.5 EcoBoost)"
+  },
+  {
+    "make": "פורד תורכיה",
+    "model": "TOURNEO CONNECT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1753,
+    "seconds": 15.2,
+    "source": "רישוי רכב / נתון יצרן (פורד טורנאו קונקט 1.8 TDCi דיזל 90 כ\"ס)"
+  },
+  {
+    "make": "פורד תורכיה",
+    "model": "TOURNEO CONNECT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1753,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (פורד טורנאו קונקט 1.8 TDCi 110 כ\"ס)"
+  },
+  {
+    "make": "פורד תורכיה",
+    "model": "TOURNEO CONNECT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 1499,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (פורד טורנאו קונקט דור 2 1.5 TDCi 120 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "טורנאו קונקט",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1753,
+    "seconds": 15.2,
+    "source": "רישוי רכב / נתון יצרן (פורד טורנאו קונקט 90 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "TOURNEO CONNECT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1753,
+    "seconds": 15.2,
+    "source": "נתון יצרן (Ford Tourneo Connect)"
+  },
+  {
+    "make": "פורד תורכיה",
+    "model": "CUSTOM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1995,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (פורד טרנזיט / טורנאו קוסטום 2.0 EcoBlue דיזל 130 כ\"ס)"
+  },
+  {
+    "make": "פורד תורכיה",
+    "model": "CUSTOM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1995,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (פורד קוסטום 2.0 EcoBlue 170 כ\"ס)"
+  },
+  {
+    "make": "פורד תורכיה",
+    "model": "TOURNEO CUSTOM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1995,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (פורד טורנאו קאסטום 2.0 130 כ\"ס)"
+  },
+  {
+    "make": "פורד תורכיה",
+    "model": "TRANSIT CUSTOM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1995,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (פורד טרנזיט קוסטום 2.0 130 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "טורנאו קאסטום",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1995,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (פורד טורנאו קאסטום 130 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "טרנזיט קוסטום",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1995,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (פורד טרנזיט קוסטום 130 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "CUSTOM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1995,
+    "seconds": 13.5,
+    "source": "נתון יצרן (Ford Transit/Tourneo Custom)"
+  },
+  {
+    "make": "פורד בלגיה",
+    "model": "TRANSIT 330 KO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 2402,
+    "seconds": 17.5,
+    "source": "רישוי רכב / נתון יצרן (פורד טרנזיט מסחרית 2.4 TDCi דיזל 125 כ\"ס)"
+  },
+  {
+    "make": "פורד תורכיה",
+    "model": "TRANSIT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1995,
+    "seconds": 13.2,
+    "source": "רישוי רכב / נתון יצרן (פורד טרנזיט 2.0 EcoBlue דיזל 170 כ\"ס)"
+  },
+  {
+    "make": "פורד תורכיה",
+    "model": "TRANSIT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1995,
+    "seconds": 14.8,
+    "source": "רישוי רכב / נתון יצרן (פורד טרנזיט 2.0 EcoBlue 130 כ\"ס)"
+  },
+  {
+    "make": "פורד תורכיה",
+    "model": "E-TRANSIT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 269,
+    "cc": 0,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (פורד אי-טרנזיט חשמלי מלא 269 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "טרנזיט",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 2402,
+    "seconds": 17.5,
+    "source": "רישוי רכב / נתון יצרן (פורד טרנזיט 125 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "TRANSIT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1995,
+    "seconds": 13.2,
+    "source": "נתון יצרן (Ford Transit 2.0 EcoBlue)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "ECONOLINE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 225,
+    "cc": 4601,
+    "seconds": 13.8,
+    "source": "רישוי רכב / נתון יצרן (פורד אקונוליין E-150 ואן 4.6 V8 225 כ\"ס)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "ECONOLINE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 255,
+    "cc": 5408,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (פורד אקונוליין E-350 ואן 5.4 V8 255 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "אקונוליין",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 225,
+    "cc": 4601,
+    "seconds": 13.8,
+    "source": "רישוי רכב / נתון יצרן (פורד אקונוליין 225 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "ECONOLINE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 225,
+    "cc": 4601,
+    "seconds": 13.8,
+    "source": "נתון יצרן (Ford Econoline V8)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "TAURUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 288,
+    "cc": 3496,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (פורד טאורוס סדאן 3.5 V6 288 כ\"ס)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "TAURUS SHO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 365,
+    "cc": 3496,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (פורד טאורוס SHO ביצועים 3.5 V6 טווין-טורבו AWD 365 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "טאורוס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 288,
+    "cc": 3496,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (פורד טאורוס 288 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "TAURUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 288,
+    "cc": 3496,
+    "seconds": 7.3,
+    "source": "נתון יצרן (Ford Taurus 3.5 V6)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "ESCORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1597,
+    "seconds": 12.2,
+    "source": "רישוי רכב / נתון יצרן (פורד אסקורט 1.6 90 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "ESCORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 75,
+    "cc": 1391,
+    "seconds": 14.4,
+    "source": "רישוי רכב / נתון יצרן (פורד אסקורט 1.4 75 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "ESCORT RS COSWORTH",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 227,
+    "cc": 1993,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (פורד אסקורט RS קוזוורת' 2.0 טורבו AWD 227 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "אסקורט",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1597,
+    "seconds": 12.2,
+    "source": "רישוי רכב / נתון יצרן (פורד אסקורט 90 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "ESCORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 1597,
+    "seconds": 12.2,
+    "source": "נתון יצרן (Ford Escort 1.6)"
+  },
+  {
+    "make": "פורד ארהב\"",
+    "model": "TRACER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1989,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (מרקורי / פורד טרייסר 2.0 110 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "טרייסר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1989,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (פורד טרייסר 110 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "TRACER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1989,
+    "seconds": 10.8,
+    "source": "נתון יצרן (Ford/Mercury Tracer)"
   }
 ]
