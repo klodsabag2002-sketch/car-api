@@ -1,1 +1,582 @@
-klod
+[
+  {
+    "make": "מקסוס סין",
+    "model": "ETERRON 9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 442,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (מקסוס אי טרון 9 טנדר חשמלי כפול מנועים 442)"
+  },
+  {
+    "make": "מקסוס סין",
+    "model": "ETRON 9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 442,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (מקסוס אי טרון 9 חשמלי 442)"
+  },
+  {
+    "make": "מקסוס",
+    "model": "אי טרון 9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 442,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (מקסוס אי טרון 9 442)"
+  },
+  {
+    "make": "Maxus",
+    "model": "ETERRON 9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 442,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "נתון יצרן (Maxus eTerron 9 EV 4WD)"
+  },
+  {
+    "make": "מקסוס סין",
+    "model": "EDELIVER 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 0,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (מקסוס אי דליוור 3 מסחרית חשמלית 160)"
+  },
+  {
+    "make": "מקסוס סין",
+    "model": "EDELIVER 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 0,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (מקסוס אי דליוור 3 חשמלי 122)"
+  },
+  {
+    "make": "מקסוס",
+    "model": "אי דליוור 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 0,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (מקסוס אי דליוור 3 160)"
+  },
+  {
+    "make": "Maxus",
+    "model": "EDELIVER 3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 0,
+    "seconds": 11.0,
+    "source": "נתון יצרן (Maxus eDeliver 3 EV)"
+  },
+  {
+    "make": "מקסוס סין",
+    "model": "EDELIVER 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 0,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (מקסוס אי דליוור 5 מסחרית חשמלית 163)"
+  },
+  {
+    "make": "מקסוס",
+    "model": "אי דליוור 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 0,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (מקסוס אי דליוור 5 163)"
+  },
+  {
+    "make": "Maxus",
+    "model": "EDELIVER 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 0,
+    "seconds": 10.7,
+    "source": "נתון יצרן (Maxus eDeliver 5 EV)"
+  },
+  {
+    "make": "מקסוס סין",
+    "model": "EDELIVER 7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (מקסוס אי דילברי 7 מסחרית חשמלית 204)"
+  },
+  {
+    "make": "מקסוס",
+    "model": "אי דילברי 7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (מקסוס אי דילברי 7 204)"
+  },
+  {
+    "make": "Maxus",
+    "model": "EDELIVER 7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 10.5,
+    "source": "נתון יצרן (Maxus eDeliver 7 EV)"
+  },
+  {
+    "make": "מקסוס סין",
+    "model": "EDELIVER 9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (מקסוס אי דילברי 9 מסחרית גדולה חשמלית 204)"
+  },
+  {
+    "make": "מקסוס סין",
+    "model": "DELIVER 9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1996,
+    "seconds": 14.5,
+    "source": "רישוי רכב / נתון יצרן (מקסוס דילברי 9 2.0 טורבו דיזל 150)"
+  },
+  {
+    "make": "מקסוס",
+    "model": "אי דילברי 9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (מקסוס אי דילברי 9 204)"
+  },
+  {
+    "make": "Maxus",
+    "model": "EDELIVER 9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 11.5,
+    "source": "נתון יצרן (Maxus eDeliver 9 EV)"
+  },
+  {
+    "make": "מקסוס סין",
+    "model": "MAXUS V80",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 2499,
+    "seconds": 18.0,
+    "source": "רישוי רכב / נתון יצרן (מקסוס V80 מסחרית 2.5 טורבו דיזל 130)"
+  },
+  {
+    "make": "מקסוס סין",
+    "model": "V80",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 2499,
+    "seconds": 18.0,
+    "source": "רישוי רכב / נתון יצרן (מקסוס V80 2.5 דיזל 130)"
+  },
+  {
+    "make": "מקסוס",
+    "model": "V80",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 2499,
+    "seconds": 18.0,
+    "source": "רישוי רכב / נתון יצרן (מקסוס V80 130)"
+  },
+  {
+    "make": "Maxus",
+    "model": "MAXUS V80",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 2499,
+    "seconds": 18.0,
+    "source": "נתון יצרן (Maxus V80 Diesel)"
+  },
+  {
+    "make": "מקסוס סין",
+    "model": "MAXUS EUNIQ 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 174,
+    "cc": 0,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (מקסוס איוניק 5 מיניוואן 7 מקומות חשמלי 174)"
+  },
+  {
+    "make": "מקסוס סין",
+    "model": "EUNIQ 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 174,
+    "cc": 0,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (מקסוס איוניק 5 חשמלי 174)"
+  },
+  {
+    "make": "מקסוס",
+    "model": "מקסוס איוניק 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 174,
+    "cc": 0,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (מקסוס איוניק 5 174)"
+  },
+  {
+    "make": "Maxus",
+    "model": "MAXUS EUNIQ 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 174,
+    "cc": 0,
+    "seconds": 9.5,
+    "source": "נתון יצרן (Maxus Euniq 5 EV)"
+  },
+  {
+    "make": "מקסוס סין",
+    "model": "MAXUS EUNIQ 6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 174,
+    "cc": 0,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (מקסוס איוניק 6 קרוסאובר חשמלי 174)"
+  },
+  {
+    "make": "מקסוס סין",
+    "model": "EUNIQ 6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 174,
+    "cc": 0,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (מקסוס איוניק 6 חשמלי 174)"
+  },
+  {
+    "make": "מקסוס",
+    "model": "מקסוס איוניק 6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 174,
+    "cc": 0,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (מקסוס איוניק 6 174)"
+  },
+  {
+    "make": "Maxus",
+    "model": "MAXUS EUNIQ 6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 174,
+    "cc": 0,
+    "seconds": 9.7,
+    "source": "נתון יצרן (Maxus Euniq 6 EV)"
+  },
+  {
+    "make": "מקסוס סין",
+    "model": "MIFA7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 0,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (מקסוס מיפה 7 מיניוואן חשמלי יוקרתי 245)"
+  },
+  {
+    "make": "מקסוס סין",
+    "model": "MIFA 7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 0,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (מקסוס מיפה 7 חשמלי 245)"
+  },
+  {
+    "make": "מקסוס",
+    "model": "מיפה 7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 0,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (מקסוס מיפה 7 245)"
+  },
+  {
+    "make": "Maxus",
+    "model": "MIFA7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 0,
+    "seconds": 8.9,
+    "source": "נתון יצרן (Maxus Mifa 7 EV)"
+  },
+  {
+    "make": "מקסוס סין",
+    "model": "MIFA9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 0,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (מקסוס מיפה 9 מיניוואן מנהלים חשמלי 245)"
+  },
+  {
+    "make": "מקסוס סין",
+    "model": "MIFA 9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 0,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (מקסוס מיפה 9 חשמלי 245)"
+  },
+  {
+    "make": "מקסוס",
+    "model": "מיפה 9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 0,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (מקסוס מיפה 9 245)"
+  },
+  {
+    "make": "Maxus",
+    "model": "MIFA9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 0,
+    "seconds": 9.2,
+    "source": "נתון יצרן (Maxus Mifa 9 EV)"
+  },
+  {
+    "make": "ניאו רכב סין",
+    "model": "ET5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 489,
+    "cc": 0,
+    "seconds": 4.0,
+    "source": "רישוי רכב / נתון יצרן (ניאו ET5 סדאן ספורט חשמלי כפול מנועים 489)"
+  },
+  {
+    "make": "ניאו רכב סין",
+    "model": "ET5 TOURING",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 489,
+    "cc": 0,
+    "seconds": 4.0,
+    "source": "רישוי רכב / נתון יצרן (ניאו ET5 טורינג סטיישן חשמלי 489)"
+  },
+  {
+    "make": "ניאו",
+    "model": "Et5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 489,
+    "cc": 0,
+    "seconds": 4.0,
+    "source": "רישוי רכב / נתון יצרן (ניאו ET5 489)"
+  },
+  {
+    "make": "NIO",
+    "model": "ET5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 489,
+    "cc": 0,
+    "seconds": 4.0,
+    "source": "נתון יצרן (NIO ET5 AWD EV)"
+  },
+  {
+    "make": "ניאו רכב סין",
+    "model": "ET7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 653,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (ניאו ET7 סדאן יוקרה חשמלי 653)"
+  },
+  {
+    "make": "ניאו",
+    "model": "Et7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 653,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (ניאו ET7 653)"
+  },
+  {
+    "make": "NIO",
+    "model": "ET7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 653,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "נתון יצרן (NIO ET7 AWD EV)"
+  },
+  {
+    "make": "ניאו רכב סין",
+    "model": "EL6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 489,
+    "cc": 0,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (ניאו EL6 קרוסאובר חשמלי AWD 489)"
+  },
+  {
+    "make": "ניאו",
+    "model": "EL6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 489,
+    "cc": 0,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (ניאו EL6 489)"
+  },
+  {
+    "make": "NIO",
+    "model": "EL6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 489,
+    "cc": 0,
+    "seconds": 4.5,
+    "source": "נתון יצרן (NIO EL6 AWD EV)"
+  },
+  {
+    "make": "ניאו רכב סין",
+    "model": "EL7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 653,
+    "cc": 0,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (ניאו EL7 SUV חשמלי עוצמתי 653)"
+  },
+  {
+    "make": "ניאו",
+    "model": "El7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 653,
+    "cc": 0,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (ניאו EL7 653)"
+  },
+  {
+    "make": "NIO",
+    "model": "EL7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 653,
+    "cc": 0,
+    "seconds": 3.9,
+    "source": "נתון יצרן (NIO EL7 AWD EV)"
+  },
+  {
+    "make": "ניאו רכב סין",
+    "model": "EL8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 653,
+    "cc": 0,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (ניאו EL8 רכב פנאי גדול חשמלי 6 מקומות 653)"
+  },
+  {
+    "make": "ניאו",
+    "model": "El8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 653,
+    "cc": 0,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (ניאו EL8 653)"
+  },
+  {
+    "make": "NIO",
+    "model": "EL8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 653,
+    "cc": 0,
+    "seconds": 4.1,
+    "source": "נתון יצרן (NIO EL8 AWD EV)"
+  },
+  {
+    "make": "ניאו רכב סין",
+    "model": "ES8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 543,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (ניאו ES8 דור 1 SUV חשמלי 7 מקומות 543)"
+  },
+  {
+    "make": "ניאו רכב סין",
+    "model": "ES8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 653,
+    "cc": 0,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (ניאו ES8 דור 2 חשמלי 653)"
+  },
+  {
+    "make": "ניאו",
+    "model": "Es8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 543,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (ניאו ES8 543)"
+  },
+  {
+    "make": "NIO",
+    "model": "ES8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 543,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "נתון יצרן (NIO ES8 AWD EV)"
+  }
+]
