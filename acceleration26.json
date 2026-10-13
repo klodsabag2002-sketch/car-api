@@ -898,5 +898,145 @@
     "cc": 2995,
     "seconds": 6.2,
     "source": "נתון יצרן (Porsche Cayenne 3.0T)"
+  },
+  {
+    "make": "פורתינג סין",
+    "model": "S7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 209,
+    "cc": 0,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (פורתינג S7 סדאן חשמלית 209 כ\"ס)"
+  },
+  {
+    "make": "פורתינג סין",
+    "model": "S7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (פורתינג S7 EV חשמלי מלא 218 כ\"ס)"
+  },
+  {
+    "make": "פורתינג סין",
+    "model": "S7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 209,
+    "cc": 1498,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (פורתינג S7 REEV מאריך טווח 209 כ\"ס)"
+  },
+  {
+    "make": "פורתינג",
+    "model": "S7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 209,
+    "cc": 0,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (פורתינג S7 209 כ\"ס)"
+  },
+  {
+    "make": "פורתינג",
+    "model": "S7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (פורתינג S7 218 כ\"ס)"
+  },
+  {
+    "make": "Forthing",
+    "model": "S7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 209,
+    "cc": 0,
+    "seconds": 6.8,
+    "source": "נתון יצרן (Forthing S7 EV)"
+  },
+  {
+    "make": "Forthing",
+    "model": "S7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 0,
+    "seconds": 6.7,
+    "source": "נתון יצרן (Forthing S7 EV 218 hp)"
+  },
+  {
+    "make": "פורתינג סין",
+    "model": "FRIDAY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (פורתינג פריידי קרוסאובר חשמלי מלא 200 כ\"ס)"
+  },
+  {
+    "make": "פורתינג סין",
+    "model": "FRIDAY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (פורתינג פריידי חשמלי 204 כ\"ס)"
+  },
+  {
+    "make": "פורתינג",
+    "model": "פריידי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (פורתינג פריידי 200 כ\"ס)"
+  },
+  {
+    "make": "פורתינג",
+    "model": "פריידי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (פורתינג פריידי 204 כ\"ס)"
+  },
+  {
+    "make": "פורתינג",
+    "model": "FRIDAY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (פורתינג FRIDAY 200 כ\"ס)"
+  },
+  {
+    "make": "Forthing",
+    "model": "FRIDAY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "נתון יצרן (Forthing Friday EV 200 hp)"
+  },
+  {
+    "make": "Forthing",
+    "model": "FRIDAY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.9,
+    "source": "נתון יצרן (Forthing Friday EV 204 hp)"
   }
 ]
