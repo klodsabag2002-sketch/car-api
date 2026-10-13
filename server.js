@@ -8,13 +8,13 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-const CAR_REGISTRY_ID = "053cea08-09bc-40ec-8f7a-156f0677aff3"; // מאגר רישוי רכבים
-const MODELS_ID = "142afde2-6228-49f9-8a29-9b6c3a0cbe40";       // תוצרים ודגמים
-const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";      // היסטוריית כלי רכב פרטיים (1)
-const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";    // היסטוריית כלי רכב פרטיים (2): בעלויות
-const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";     // רכבים עם תג חניה לנכה
+const CAR_REGISTRY_ID = "053cea08-09bc-40ec-8f7a-156f0677aff3";
+const MODELS_ID = "142afde2-6228-49f9-8a29-9b6c3a0cbe40";
+const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";
+const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";
+const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";
 
-// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 12) ----------
+// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 13) ----------
 let accelTable = [];
 const ACCEL_FILES = [
     "acceleration.json",
@@ -28,7 +28,8 @@ const ACCEL_FILES = [
     "acceleration9.json",
     "acceleration10.json",
     "acceleration11.json",
-    "acceleration12.json"
+    "acceleration12.json",
+    "acceleration13.json"
 ];
 
 ACCEL_FILES.forEach(fileName => {
@@ -178,7 +179,17 @@ const HE_MAKE_ALIASES = {
     "קריזלר ארה\"ב": "Jeep",
     "קרייזלר ארה\"ב": "Jeep",
     "פיאט קרייזלר": "Jeep",
-    "יונדאי קוריאה": "Genesis",
+    "יונדאי קוריאה": "Hyundai",
+    "יונדאי טורקיה": "Hyundai",
+    "יונדאי צ'כיה": "Hyundai",
+    "יונדאי צכיה": "Hyundai",
+    "יונדאי הודו": "Hyundai",
+    "יונדאי ארה\"ב": "Hyundai",
+    "יונדאי ארהב": "Hyundai",
+    "יונדאי ארהב\"": "Hyundai",
+    "\"יונדאי ארהב": "Hyundai",
+    "יונדאי": "Hyundai",
+    "Hyundai": "Hyundai",
     "ג'נסיס": "Genesis",
     "גנסיס": "Genesis",
     "ג'נסיס קוריאה": "Genesis",
@@ -300,10 +311,27 @@ const HE_MAKE_ALIASES = {
     "טויוטה ארהב\"": "Toyota",
     "\"טויוטה ארהב": "Toyota",
     "Toyota": "Toyota",
+    "טסלה": "Tesla",
+    "טסלה סין": "Tesla",
+    "טסלה גרמניה": "Tesla",
+    "טסלה ארה\"ב": "Tesla",
+    "טסלה ארהב": "Tesla",
+    "טסלה ארהב\"": "Tesla",
+    "\"טסלה ארהב": "Tesla",
+    "Tesla": "Tesla",
+    "יגואר": "Jaguar",
+    "יגואר אנגליה": "Jaguar",
+    "יגואר בריטניה": "Jaguar",
+    "Jaguar": "Jaguar",
+    "יודו": "Yudo",
+    "יודו סין": "Yudo",
+    "יו דו": "Yudo",
+    "יו דו סין": "Yudo",
+    "Yudo": "Yudo",
+    "YUDO": "Yudo",
     "סיאט": "Seat",
     "סקודה": "Skoda",
     "פולקסווגן": "Volkswagen",
-    "יונדאי": "Hyundai",
     "קיה": "Kia",
     "מרצדס": "Mercedes-Benz"
 };
@@ -500,7 +528,6 @@ app.get('/api/car/:plate', async (req, res) => {
             : (history?.origin ?? null);
         const currentOwnership = registryOwnership || historyOwnership;
 
-        // שמות היצרן: בעברית מהרישוי, ובאנגלית לפי מיפוי, כדי להתאים לקובץ התאוצה
         const makeTexts = [manufacturer, car.tozeret_nm, car.kinuy_mishari, car.sug_degem].filter(Boolean);
         for (const [he, en] of Object.entries(HE_MAKE_ALIASES)) {
             if (String(manufacturer).includes(he) || String(car.tozeret_nm || "").includes(he)) {
