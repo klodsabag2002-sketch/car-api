@@ -14,7 +14,7 @@ const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";
 
-// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 18) ----------
+// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 20) ----------
 let accelTable = [];
 const ACCEL_FILES = [
     "acceleration.json",
@@ -34,7 +34,9 @@ const ACCEL_FILES = [
     "acceleration15.json",
     "acceleration16.json",
     "acceleration17.json",
-    "acceleration18.json"
+    "acceleration18.json",
+    "acceleration19.json",
+    "acceleration20.json"
 ];
 
 ACCEL_FILES.forEach(fileName => {
@@ -400,6 +402,28 @@ const HE_MAKE_ALIASES = {
     "דימלר קריזלר": "Mercedes-Benz",
     "Mercedes-Benz": "Mercedes-Benz",
     "Mercedes": "Mercedes-Benz",
+    "מקלארן": "McLaren",
+    "מקלארן אנגליה": "McLaren",
+    "מקלרן": "McLaren",
+    "McLaren": "McLaren",
+    "מיצובישי": "Mitsubishi",
+    "מיצובושי": "Mitsubishi",
+    "מיצובישי יפן": "Mitsubishi",
+    "מיצובישי תאילנ": "Mitsubishi",
+    "מיצובישי תאילנד": "Mitsubishi",
+    "מיצובישי ארה\"ב": "Mitsubishi",
+    "מיצובישי ארהב": "Mitsubishi",
+    "מיצובישי הולנד": "Mitsubishi",
+    "Mitsubishi": "Mitsubishi",
+    "מקסוס": "Maxus",
+    "מקסוס סין": "Maxus",
+    "Maxus": "Maxus",
+    "MAXUS": "Maxus",
+    "ניאו": "NIO",
+    "ניאו סין": "NIO",
+    "ניאו רכב סין": "NIO",
+    "NIO": "NIO",
+    "Nio": "NIO",
     "סיאט": "Seat",
     "סקודה": "Skoda",
     "פולקסווגן": "Volkswagen",
