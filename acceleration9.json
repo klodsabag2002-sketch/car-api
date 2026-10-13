@@ -1,5 +1,235 @@
 [
   {
+    "make": "וויה סין",
+    "model": "DREAM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 434,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (וויה דרים מיניוואן חשמלי EV AWD 434)"
+  },
+  {
+    "make": "וויה סין",
+    "model": "DREAM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 435,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (וויה דרים מיניוואן חשמלי EV AWD 435)"
+  },
+  {
+    "make": "וויה סין",
+    "model": "DREAM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 394,
+    "cc": 1476,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (וויה דרים מאריך טווח PHEV 394)"
+  },
+  {
+    "make": "וויה סין",
+    "model": "DREAM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 571,
+    "cc": 1476,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (וויה דרים מאריך טווח PHEV 571)"
+  },
+  {
+    "make": "וויה",
+    "model": "דרים",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 434,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (וויה דרים 434)"
+  },
+  {
+    "make": "Voyah",
+    "model": "DREAM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 434,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "נתון יצרן (Voyah Dream EV 434)"
+  },
+  {
+    "make": "Voyah",
+    "model": "DREAM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 435,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "נתון יצרן (Voyah Dream EV 435)"
+  },
+  {
+    "make": "וויה סין",
+    "model": "FREE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 488,
+    "cc": 0,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (וויה פרי קרוסאובר חשמלי EV AWD 488)"
+  },
+  {
+    "make": "וויה סין",
+    "model": "FREE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 490,
+    "cc": 0,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (וויה פרי קרוסאובר חשמלי EV AWD 490)"
+  },
+  {
+    "make": "וויה סין",
+    "model": "FREE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 489,
+    "cc": 1476,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (וויה פרי מאריך טווח EREV 489)"
+  },
+  {
+    "make": "וויה סין",
+    "model": "FREE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 347,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (וויה פרי חשמלי RWD 347)"
+  },
+  {
+    "make": "וויה",
+    "model": "פרי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 488,
+    "cc": 0,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (וויה פרי 488)"
+  },
+  {
+    "make": "Voyah",
+    "model": "FREE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 488,
+    "cc": 0,
+    "seconds": 4.4,
+    "source": "נתון יצרן (Voyah Free EV 488)"
+  },
+  {
+    "make": "Voyah",
+    "model": "FREE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 490,
+    "cc": 0,
+    "seconds": 4.4,
+    "source": "נתון יצרן (Voyah Free EV 490)"
+  },
+  {
+    "make": "וויה סין",
+    "model": "COURAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 435,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (וויה קוראז' חשמלי כפול מנועים AWD 435)"
+  },
+  {
+    "make": "וויה סין",
+    "model": "COURAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 430,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (וויה קוראז' חשמלי כפול מנועים AWD 430)"
+  },
+  {
+    "make": "וויה סין",
+    "model": "COURAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 0,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (וויה קוראז' חשמלי RWD 313)"
+  },
+  {
+    "make": "וויה סין",
+    "model": "COURAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 288,
+    "cc": 0,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (וויה קוראז' חשמלי RWD 288)"
+  },
+  {
+    "make": "וויה סין",
+    "model": "קוראז",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 435,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (וויה קוראז' 435)"
+  },
+  {
+    "make": "וויה סין",
+    "model": "קוראז'",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 435,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (וויה קוראז' 435)"
+  },
+  {
+    "make": "וויה",
+    "model": "קוראז",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 435,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (וויה קוראז' 435)"
+  },
+  {
+    "make": "Voyah",
+    "model": "COURAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 435,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "נתון יצרן (Voyah Courage AWD 435)"
+  },
+  {
+    "make": "Voyah",
+    "model": "COURAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 0,
+    "seconds": 6.8,
+    "source": "נתון יצרן (Voyah Courage RWD 313)"
+  },
+  {
     "make": "הונדה אנגליה",
     "model": "CIVIC 5D",
     "yearStart": null,
