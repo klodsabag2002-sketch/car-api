@@ -14,7 +14,7 @@ const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";
 
-// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 27) ----------
+// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 30) ----------
 let accelTable = [];
 const ACCEL_FILES = [
     "acceleration.json",
@@ -43,7 +43,10 @@ const ACCEL_FILES = [
     "acceleration24.json",
     "acceleration25.json",
     "acceleration26.json",
-    "acceleration27.json"
+    "acceleration27.json",
+    "acceleration28.json",
+    "acceleration29.json",
+    "acceleration30.json"
 ];
 
 ACCEL_FILES.forEach(fileName => {
@@ -539,6 +542,43 @@ const HE_MAKE_ALIASES = {
     "פורד ארהב\"": "Ford",
     "\"פורד ארהב": "Ford",
     "Ford": "Ford",
+    "פורשה": "Porsche",
+    "פורשה גרמניה": "Porsche",
+    "פורשה סלובקיה": "Porsche",
+    "Porsche": "Porsche",
+    "פורתינג": "Forthing",
+    "פורתינג סין": "Forthing",
+    "Forthing": "Forthing",
+    "פיאט": "Fiat",
+    "פיאט איטליה": "Fiat",
+    "פיאט פולין": "Fiat",
+    "פיאט סרביה": "Fiat",
+    "פיאט טורקיה": "Fiat",
+    "פיאט תורכיה": "Fiat",
+    "פיאט פורטוגל": "Fiat",
+    "פיאט/מדייר סוז": "Fiat",
+    "פיאט תאילנד": "Fiat",
+    "Fiat": "Fiat",
+    "פיג'ו": "Peugeot",
+    "פיגו": "Peugeot",
+    "פיג'ו צרפת": "Peugeot",
+    "פיג'ו ספרד": "Peugeot",
+    "פיג'ו סלובקיה": "Peugeot",
+    "פיג'ו צ'כיה": "Peugeot",
+    "פיג'ו צכיה": "Peugeot",
+    "פיג'ו אוסטריה": "Peugeot",
+    "פיג'ו פורטוגל": "Peugeot",
+    "פיג'ו איטליה": "Peugeot",
+    "Peugeot": "Peugeot",
+    "פרארי": "Ferrari",
+    "פרארי איטליה": "Ferrari",
+    "Ferrari": "Ferrari",
+    "צ'רי": "Chery",
+    "צרי": "Chery",
+    "צ'רי סין": "Chery",
+    "צרי סין": "Chery",
+    "Chery": "Chery",
+    "CHERY": "Chery",
     "קיה": "Kia"
 };
 
