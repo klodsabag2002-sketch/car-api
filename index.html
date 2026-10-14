@@ -87,11 +87,6 @@
   .car-name { text-align: center; font-size: 22px; color: #1f5f80; font-weight: bold; margin-top: 4px; }
   .car-trim { text-align: center; font-size: 18px; color: #2a7fa8; font-weight: bold; margin-top: 2px; }
 
-  .car-photo { display: none; width: calc(100% - 20px); margin: 10px auto 0; max-height: 170px; object-fit: contain; border-radius: 10px; background: #fff; }
-  .car-photo.show { display: block; }
-  .photo-credit { display: none; text-align: center; font-size: 11px; color: #2a7fa8; margin-top: 4px; text-decoration: none; }
-  .photo-credit.show { display: block; }
-
   .status-row { display: flex; justify-content: space-around; padding: 18px 6px 6px; }
   .st { text-align: center; width: 33%; }
   .st.clickable { cursor: pointer; }
@@ -203,9 +198,6 @@
           <div id="brandBadge" class="brand-badge" style="display:none;"></div>
         </div>
 
-        <img id="carPhoto" class="car-photo" alt="">
-        <a id="photoCredit" class="photo-credit" target="_blank" rel="noopener"></a>
-
         <div class="car-name"><span id="heroName"></span></div>
         <div class="car-trim" id="heroTrim"></div>
 
@@ -307,16 +299,13 @@
     return parseInt(m[3], 10) + '-' + parseInt(m[2], 10) + '-' + m[1];
   }
 
-  // זיהוי המותג עם בדיקה משולבת של יצרן ודגם
   function findBrand(manufacturer, model) {
     const raw = ((manufacturer || '') + ' ' + (model || '')).toLowerCase();
 
-    // 1. קופרה בעדיפות
     if (raw.includes("cupra") || raw.includes("קופרה")) {
       return { slug: "cupra", color: "#8c6a3d", en: "Cupra" };
     }
 
-    // 2. שאר היצרנים
     const rules = [
       [["seat", "סיאט"], "seat", "#c8a24a", "Seat"],
       [["skoda", "סקודה"], "skoda", "#3c8c3c", "Skoda"],
@@ -361,7 +350,6 @@
     return String(v).trim().replace(/[.\s,;:]+$/g, '');
   }
 
-  // טעינה מקומית מתיקיית logos עם סיומת jpg
   function getLogoSrc(brand) {
     if (!brand) return null;
     return `logos/${brand.slug}.jpg`;
@@ -381,105 +369,12 @@
       logo.style.display = 'block';
       badge.style.display = 'none';
       logo.onerror = function() {
-        // אם התמונה עדיין לא קיימת בתיקיית logos, נציג אות ראשונה
         this.style.display = 'none';
         badge.style.display = 'flex';
       };
     } else {
       logo.style.display = 'none';
       badge.style.display = 'flex';
-    }
-  }
-
-  function extractYears(title) {
-    const m = String(title).match(/(19|20)\d{2}/g);
-    return m ? m.map(Number) : [];
-  }
-
-  function yearScore(title, carYear) {
-    if (!carYear) return -1;
-    const ys = extractYears(title);
-    if (ys.length === 0) return -1;
-    const diff = Math.min(...ys.map(y => Math.abs(y - carYear)));
-    if (diff === 0) return 3;
-    if (diff <= 2) return 1;
-    return -99;
-  }
-
-  async function findCommonsPhoto(brandEn, model, trim, year) {
-    const modelKey = String(model || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-    const trimKey = String(trim || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-    if (!modelKey) return null;
-
-    const queries = [
-      brandEn + ' ' + model + (trim ? ' ' + trim : ''),
-      brandEn + ' ' + model + (year ? ' ' + year : ''),
-      brandEn + ' ' + model
-    ];
-
-    const candidates = new Map();
-
-    for (const q of queries) {
-      const url = 'https://commons.wikimedia.org/w/api.php?action=query&generator=search' +
-        '&gsrsearch=' + encodeURIComponent(q) + '&gsrnamespace=6&gsrlimit=20' +
-        '&prop=imageinfo&iiprop=url|mime|extmetadata&iiurlwidth=800&format=json&origin=*';
-      try {
-        const r = await fetch(url);
-        const j = await r.json();
-        const pages = j.query && j.query.pages ? Object.values(j.query.pages) : [];
-        for (const p of pages) {
-          if (!candidates.has(p.title)) candidates.set(p.title, p);
-        }
-      } catch (e) { }
-    }
-
-    let best = null;
-    for (const p of candidates.values()) {
-      const info = p.imageinfo && p.imageinfo[0];
-      if (!info || !/^image\/(jpeg|png)$/.test(info.mime)) continue;
-
-      const titleKey = String(p.title || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-      if (!titleKey.includes(modelKey)) continue;
-
-      if (trimKey && !titleKey.includes(trimKey)) continue;
-
-      const meta = info.extmetadata || {};
-      const license = meta.LicenseShortName && meta.LicenseShortName.value;
-      if (!license || /non-free|all rights reserved/i.test(license)) continue;
-
-      const ys = yearScore(p.title, year);
-      if (ys === -99) continue;
-
-      const score = ys + 1;
-      if (!best || score > best.score) {
-        best = {
-          score,
-          src: info.thumburl || info.url,
-          page: info.descriptionurl || ('https://commons.wikimedia.org/wiki/' + encodeURIComponent(p.title)),
-          license
-        };
-      }
-    }
-
-    return best ? { src: best.src, page: best.page, license: best.license } : null;
-  }
-
-  async function showCarPhoto(brand, model, trim, year) {
-    const img = document.getElementById('carPhoto');
-    const credit = document.getElementById('photoCredit');
-    img.classList.remove('show');
-    credit.classList.remove('show');
-    img.removeAttribute('src');
-
-    if (!brand || !model) return;
-
-    const found = await findCommonsPhoto(brand.en, model, trim, year);
-    if (found) {
-      img.src = found.src;
-      img.classList.add('show');
-      credit.href = found.page;
-      credit.textContent = 'מקור התמונה: Wikimedia Commons · רישיון: ' + found.license;
-      credit.classList.add('show');
     }
   }
 
@@ -968,11 +863,9 @@
       currentPlate = plate;
 
       const brand = findBrand(d.manufacturer, d.model);
-      const model = cleanText(d.model || '');
       const trim = cleanText(d.trim || '');
 
       await showBrand(d.manufacturer, brand);
-      showCarPhoto(brand, model, trim, d.year);
 
       const kmLine = document.getElementById('kmLine');
       if (d.kmSinceTest != null) {
