@@ -361,10 +361,10 @@
     return String(v).trim().replace(/[.\s,;:]+$/g, '');
   }
 
-  // טעינה מקומית מתיקיית logos
+  // טעינה מקומית מתיקיית logos עם סיומת jpg
   function getLogoSrc(brand) {
     if (!brand) return null;
-    return `logos/${brand.slug}.png`;
+    return `logos/${brand.slug}.jpg`;
   }
 
   async function showBrand(manufacturer, brand) {
