@@ -300,6 +300,16 @@
     "source": "רישוי רכב / נתון יצרן (קיה אקסיד פלאג-אין PHEV 141 כ\"ס)"
   },
   {
+    "make": "קיה סלובקיה",
+    "model": "XCEED",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1591,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (קיה אקסיד 1.6 T-GDI 204 כ\"ס)"
+  },
+  {
     "make": "קיה",
     "model": "Xceed",
     "yearStart": null,
@@ -560,6 +570,16 @@
     "source": "נתון יצרן (Kia Mentor 1.6)"
   },
   {
+    "make": "Kia",
+    "model": "SEPHIA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 80,
+    "cc": 1498,
+    "seconds": 13.5,
+    "source": "נתון יצרן (Kia Sephia 1.5)"
+  },
+  {
     "make": "קיה ד. קוריאה",
     "model": "NIRO",
     "yearStart": null,
@@ -568,16 +588,6 @@
     "cc": 1580,
     "seconds": 11.5,
     "source": "רישוי רכב / נתון יצרן (קיה נירו היברידי 1.6 GDI 141 כ\"ס משולב)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "NIRO PHEV",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 141,
-    "cc": 1580,
-    "seconds": 10.8,
-    "source": "רישוי רכב / נתון יצרן (קיה נירו פלאג-אין PHEV 141 כ\"ס)"
   },
   {
     "make": "קיה ד. קוריאה",
@@ -618,26 +628,6 @@
     "cc": 1580,
     "seconds": 10.8,
     "source": "רישוי רכב / נתון יצרן (קיה נירו פלוס פלאג-אין PHEV 141 כ\"ס משולב)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "NIRO PLUS HEV",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 141,
-    "cc": 1580,
-    "seconds": 11.5,
-    "source": "רישוי רכב / נתון יצרן (קיה נירו פלוס היברידי 141 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "NIRO PLUS EV",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 7.8,
-    "source": "רישוי רכב / נתון יצרן (קיה נירו פלוס חשמלי מלא 204 כ\"ס)"
   },
   {
     "make": "קיה",
@@ -890,16 +880,6 @@
     "source": "רישוי רכב / נתון יצרן (קיה סלטוס 2.0 אטמוספרי 149 כ\"ס)"
   },
   {
-    "make": "קיה ד. קוריאה",
-    "model": "SELTOS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 195,
-    "cc": 1598,
-    "seconds": 8.0,
-    "source": "רישוי רכב / נתון יצרן (קיה סלטוס 1.6 T-GDI טורבו 195 כ\"ס)"
-  },
-  {
     "make": "קיה",
     "model": "סלטוס",
     "yearStart": null,
@@ -948,16 +928,6 @@
     "cc": 1598,
     "seconds": 8.0,
     "source": "רישוי רכב / נתון יצרן (קיה ספורטאז' היברידי HEV 230 כ\"ס)"
-  },
-  {
-    "make": "קיה סלובקיה",
-    "model": "SPORTAGE PHEV",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 265,
-    "cc": 1598,
-    "seconds": 8.2,
-    "source": "רישוי רכב / נתון יצרן (קיה ספורטאז' פלאג-אין PHEV AWD 265 כ\"ס)"
   },
   {
     "make": "קיה סלובקיה",
@@ -1490,16 +1460,6 @@
     "source": "רישוי רכב / נתון יצרן (קיי גי טיבולי 1.6 בנזין 128 כ\"ס)"
   },
   {
-    "make": "קיי גי מוביליט",
-    "model": "TIVOLI",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 115,
-    "cc": 1597,
-    "seconds": 11.5,
-    "source": "רישוי רכב / נתון יצרן (קיי גי טיבולי 1.6 e-XDi דיזל 115 כ\"ס)"
-  },
-  {
     "make": "קיי ג'י מוביליטי",
     "model": "TIVOLI",
     "yearStart": null,
@@ -1528,16 +1488,6 @@
     "cc": 1497,
     "seconds": 9.8,
     "source": "רישוי רכב / נתון יצרן (סאנגיונג טיבולי 163 כ\"ס)"
-  },
-  {
-    "make": "סאנגיונג",
-    "model": "טיבולי",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 128,
-    "cc": 1597,
-    "seconds": 11.0,
-    "source": "רישוי רכב / נתון יצרן (סאנגיונג טיבולי 128 כ\"ס)"
   },
   {
     "make": "KGM",
@@ -1570,16 +1520,6 @@
     "source": "רישוי רכב / נתון יצרן (KGM מוסו טנדר 4X4 2.2 e-XDi טורבו-דיזל 202 כ\"ס)"
   },
   {
-    "make": "קיי גי מוביליט",
-    "model": "MUSSO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 181,
-    "cc": 2157,
-    "seconds": 11.0,
-    "source": "רישוי רכב / נתון יצרן (KGM מוסו 2.2 דיזל 181 כ\"ס)"
-  },
-  {
     "make": "קיי ג'י מוביליטי",
     "model": "MUSSO",
     "yearStart": null,
@@ -1608,16 +1548,6 @@
     "cc": 2157,
     "seconds": 10.0,
     "source": "רישוי רכב / נתון יצרן (סאנגיונג מוסו 202 כ\"ס)"
-  },
-  {
-    "make": "סאנגיונג",
-    "model": "מוסו",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 120,
-    "cc": 2874,
-    "seconds": 16.5,
-    "source": "רישוי רכב / נתון יצרן (סאנגיונג מוסו קלאסי 2.9 TD דיזל מרצדס 120 כ\"ס)"
   },
   {
     "make": "KGM",
@@ -1660,36 +1590,6 @@
     "source": "רישוי רכב / נתון יצרן (סאנגיונג רקסטון דור 2 2.2 דיזל 181 כ\"ס)"
   },
   {
-    "make": "קיי גי מוביליט",
-    "model": "REXTON",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 178,
-    "cc": 2157,
-    "seconds": 12.0,
-    "source": "רישוי רכב / נתון יצרן (סאנגיונג רקסטון 2.2 דיזל 178 כ\"ס)"
-  },
-  {
-    "make": "קיי גי מוביליט",
-    "model": "REXTON",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 155,
-    "cc": 1998,
-    "seconds": 13.4,
-    "source": "רישוי רכב / נתון יצרן (סאנגיונג רקסטון 2.0 e-XDi דיזל 155 כ\"ס)"
-  },
-  {
-    "make": "קיי גי מוביליט",
-    "model": "REXTON",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 165,
-    "cc": 2696,
-    "seconds": 13.8,
-    "source": "רישוי רכב / נתון יצרן (סאנגיונג רקסטון דור 1 2.7 XDi דיזל מרצדס 165 כ\"ס)"
-  },
-  {
     "make": "קיי ג'י מוביליטי",
     "model": "REXTON",
     "yearStart": null,
@@ -1720,16 +1620,6 @@
     "source": "רישוי רכב / נתון יצרן (סאנגיונג רקסטון 202 כ\"ס)"
   },
   {
-    "make": "סאנגיונג",
-    "model": "רקסטון",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 181,
-    "cc": 2157,
-    "seconds": 11.9,
-    "source": "רישוי רכב / נתון יצרן (סאנגיונג רקסטון 181 כ\"ס)"
-  },
-  {
     "make": "KGM",
     "model": "REXTON",
     "yearStart": null,
@@ -1748,5 +1638,855 @@
     "cc": 2157,
     "seconds": 10.7,
     "source": "נתון יצרן (SsangYong Rexton 2.2 Diesel 202hp)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "300C",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 292,
+    "cc": 3604,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר 300C דור 2 3.6 V6 פנטסטאר 292 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "300C",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 3604,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר 300S 3.6 V6 פנטסטאר 300 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "300C",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 363,
+    "cc": 5654,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר 300C דור 2 5.7 V8 HEMI 363 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "300C",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 5654,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר 300C דור ראשון 5.7 V8 HEMI 340 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "300C SRT8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 470,
+    "cc": 6417,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר 300C SRT8 ספורט 6.4 V8 HEMI 470 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "300C SRT8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 425,
+    "cc": 6059,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר 300C SRT8 דור ראשון 6.1 V8 425 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "300C",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 249,
+    "cc": 3518,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר 300C דור 1 3.5 V6 249 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "300C",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 193,
+    "cc": 2736,
+    "seconds": 11.1,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר 300C דור 1 2.7 V6 193 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "300C",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 2987,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר 300C 3.0 CRD דיזל מרצדס 218 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר",
+    "model": "300",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 292,
+    "cc": 3604,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר 300 292 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר",
+    "model": "300C",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 292,
+    "cc": 3604,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר 300C 292 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר",
+    "model": "300",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 249,
+    "cc": 3518,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר 300 249 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר",
+    "model": "300",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 5654,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר 300 HEMI 340 כ\"ס)"
+  },
+  {
+    "make": "Chrysler",
+    "model": "300",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 292,
+    "cc": 3604,
+    "seconds": 6.8,
+    "source": "נתון יצרן (Chrysler 300 3.6 V6 292hp)"
+  },
+  {
+    "make": "Chrysler",
+    "model": "300C",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 5654,
+    "seconds": 6.3,
+    "source": "נתון יצרן (Chrysler 300C 5.7 V8 HEMI)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "300M",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 3518,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר 300M סדאן 3.5 V6 252 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "300M",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 2736,
+    "seconds": 10.0,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר 300M 2.7 V6 204 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר",
+    "model": "300M",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 3518,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר 300M 252 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר",
+    "model": "300m",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 3518,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר 300m 252 כ\"ס)"
+  },
+  {
+    "make": "Chrysler",
+    "model": "300M",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 3518,
+    "seconds": 8.0,
+    "source": "נתון יצרן (Chrysler 300M 3.5 V6)"
+  },
+  {
+    "make": "קרייזלר מקסיקו",
+    "model": "PT CRUISER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 2429,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר PT קרוזר 2.4 143 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר מקסיקו",
+    "model": "PT CRUISER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 1996,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר PT קרוזר 2.0 141 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר מקסיקו",
+    "model": "PT CRUISER GT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 223,
+    "cc": 2429,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר PT קרוזר GT טורבו 2.4 223 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר מקסיקו",
+    "model": "PT CRUISER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 121,
+    "cc": 2148,
+    "seconds": 12.1,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר PT קרוזר 2.2 CRD דיזל 121 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר",
+    "model": "Pt קרוזר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 2429,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר PT קרוזר 143 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר",
+    "model": "פי טי קרוזר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 2429,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר פי טי קרוזר 143 כ\"ס)"
+  },
+  {
+    "make": "Chrysler",
+    "model": "PT CRUISER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 2429,
+    "seconds": 10.3,
+    "source": "נתון יצרן (Chrysler PT Cruiser 2.4)"
+  },
+  {
+    "make": "קרייזלר קנדה",
+    "model": "GRAND VOYAGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 3604,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר גראנד וויאג'ר 3.6 V6 פנטסטאר 283 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר קנדה",
+    "model": "GRAND VOYAGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 193,
+    "cc": 3778,
+    "seconds": 12.6,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר גראנד וויאג'ר 3.8 V6 193 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר קנדה",
+    "model": "GRAND VOYAGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 2777,
+    "seconds": 12.8,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר גראנד וויאג'ר 2.8 CRD טורבו-דיזל 163 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר קנדה",
+    "model": "GRAND VOYAGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 174,
+    "cc": 3301,
+    "seconds": 12.6,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר גראנד וויאג'ר דור 4 3.3 V6 174 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר",
+    "model": "גראנד וויאגר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 3604,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר גראנד וויאגר 283 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר",
+    "model": "גראנד וויאג'ר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 3604,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר גראנד וויאג'ר 283 כ\"ס)"
+  },
+  {
+    "make": "Chrysler",
+    "model": "GRAND VOYAGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 3604,
+    "seconds": 8.5,
+    "source": "נתון יצרן (Chrysler Grand Voyager 3.6 V6)"
+  },
+  {
+    "make": "קרייזלר קנדה",
+    "model": "VOYAGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 174,
+    "cc": 3301,
+    "seconds": 12.4,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר וויאג'ר 3.3 V6 174 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר קנדה",
+    "model": "VOYAGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 2429,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר וויאג'ר 2.4 147 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר קנדה",
+    "model": "VOYAGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 158,
+    "cc": 3301,
+    "seconds": 13.2,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר וויאג'ר דור 3 3.3 V6 158 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר קנדה",
+    "model": "VOYAGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 2499,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר וויאג'ר 2.5 CRD דיזל 143 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר",
+    "model": "וויאגר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 174,
+    "cc": 3301,
+    "seconds": 12.4,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר וויאגר 174 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר",
+    "model": "וויאג'ר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 174,
+    "cc": 3301,
+    "seconds": 12.4,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר וויאג'ר 174 כ\"ס)"
+  },
+  {
+    "make": "Chrysler",
+    "model": "VOYAGER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 174,
+    "cc": 3301,
+    "seconds": 12.4,
+    "source": "נתון יצרן (Chrysler Voyager 3.3 V6)"
+  },
+  {
+    "make": "קרייזלר קנדה",
+    "model": "TOWN & COUNTRY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 3604,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר טאון אנד קאנטרי 3.6 V6 פנטסטאר 283 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר קנדה",
+    "model": "TOWN & COUNTRY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 3778,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר טאון אנד קאנטרי 3.8 V6 197 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר קנדה",
+    "model": "TOWN AND COUNTRY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 3604,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר טאון אנד קאנטרי 283 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר",
+    "model": "טאון אנד קאנטרי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 3604,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר טאון אנד קאנטרי 283 כ\"ס)"
+  },
+  {
+    "make": "Chrysler",
+    "model": "TOWN & COUNTRY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 283,
+    "cc": 3604,
+    "seconds": 8.1,
+    "source": "נתון יצרן (Chrysler Town & Country 3.6 V6)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "NEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 133,
+    "cc": 1996,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר ניאון 2.0 133 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "NEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1598,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר ניאון 1.6 115 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "NEON SRT-4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 2429,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר/דודג' ניאון SRT-4 טורבו 230 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר",
+    "model": "נאון",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 133,
+    "cc": 1996,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר נאון 133 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר",
+    "model": "ניאון",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 133,
+    "cc": 1996,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר ניאון 133 כ\"ס)"
+  },
+  {
+    "make": "Chrysler",
+    "model": "NEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 133,
+    "cc": 1996,
+    "seconds": 9.5,
+    "source": "נתון יצרן (Chrysler Neon 2.0)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "SEBRING",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 186,
+    "cc": 2736,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר סברינג סדאן/קבריולה 2.7 V6 186 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "SEBRING",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 2360,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר סברינג 2.4 World Gas 156 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "SEBRING",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 152,
+    "cc": 2429,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר סברינג דור 2 2.4 152 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "SEBRING",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 203,
+    "cc": 2736,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר סברינג דור 2 2.7 V6 203 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "SEBRING",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 238,
+    "cc": 3518,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר סברינג 3.5 V6 238 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "SEBRING",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1968,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר סברינג 2.0 CRD דיזל 140 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר",
+    "model": "סברינג",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 186,
+    "cc": 2736,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר סברינג 186 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר",
+    "model": "סברינג",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 2360,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר סברינג 156 כ\"ס)"
+  },
+  {
+    "make": "Chrysler",
+    "model": "SEBRING",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 186,
+    "cc": 2736,
+    "seconds": 9.8,
+    "source": "נתון יצרן (Chrysler Sebring 2.7 V6)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "STRATUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 2497,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר סטרטוס סדאן/קבריולה 2.5 V6 163 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "STRATUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 133,
+    "cc": 1996,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר סטרטוס 2.0 133 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "STRATUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 152,
+    "cc": 2429,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר סטרטוס 2.4 152 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר",
+    "model": "סטרטוס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 2497,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר סטרטוס 163 כ\"ס)"
+  },
+  {
+    "make": "Chrysler",
+    "model": "STRATUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 2497,
+    "seconds": 10.5,
+    "source": "נתון יצרן (Chrysler Stratus 2.5 V6)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "SARATOGA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 2972,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר סרטוגה 3.0 V6 141 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "SARATOGA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 101,
+    "cc": 2501,
+    "seconds": 13.5,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר סרטוגה 2.5 101 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר",
+    "model": "סרטוגה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 2972,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר סרטוגה 141 כ\"ס)"
+  },
+  {
+    "make": "Chrysler",
+    "model": "SARATOGA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 2972,
+    "seconds": 11.2,
+    "source": "נתון יצרן (Chrysler Saratoga 3.0 V6)"
+  },
+  {
+    "make": "קרייזלר קנדה",
+    "model": "PACIFICA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 287,
+    "cc": 3604,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר פסיפיקה מיניוואן יוקרה 3.6 V6 פנטסטאר 287 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר קנדה",
+    "model": "PACIFICA HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 260,
+    "cc": 3604,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר פסיפיקה פלאג-אין PHEV היברידית 260 כ\"ס משולב)"
+  },
+  {
+    "make": "קרייזלר קנדה",
+    "model": "PACIFICA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 253,
+    "cc": 3952,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר פסיפיקה קלאסית 4.0 V6 253 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר קנדה",
+    "model": "PACIFICA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 215,
+    "cc": 3778,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר פסיפיקה קלאסית 3.8 V6 215 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר",
+    "model": "פספיקה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 287,
+    "cc": 3604,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר פספיקה 287 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר",
+    "model": "פסיפיקה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 287,
+    "cc": 3604,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר פסיפיקה 287 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר",
+    "model": "פסיפיקה היבריד",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 260,
+    "cc": 3604,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר פסיפיקה פלאג-אין PHEV 260 כ\"ס)"
+  },
+  {
+    "make": "Chrysler",
+    "model": "PACIFICA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 287,
+    "cc": 3604,
+    "seconds": 7.4,
+    "source": "נתון יצרן (Chrysler Pacifica 3.6 V6 287hp)"
+  },
+  {
+    "make": "Chrysler",
+    "model": "PACIFICA HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 260,
+    "cc": 3604,
+    "seconds": 7.8,
+    "source": "נתון יצרן (Chrysler Pacifica Hybrid PHEV 260hp)"
+  },
+  {
+    "make": "קרייזלר גרמניה",
+    "model": "CROSSFIRE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 3199,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר קרוספייר קופה/רודסטר 3.2 V6 מרצדס 218 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר גרמניה",
+    "model": "CROSSFIRE SRT-6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 335,
+    "cc": 3199,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר קרוספייר SRT-6 סופרצ'ארג' 335 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר ארה\"ב",
+    "model": "CROSSFIRE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 3199,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר קרוספייר 218 כ\"ס)"
+  },
+  {
+    "make": "קרייזלר",
+    "model": "קרוספייר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 3199,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (קרייזלר קרוספייר 218 כ\"ס)"
+  },
+  {
+    "make": "Chrysler",
+    "model": "CROSSFIRE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 3199,
+    "seconds": 6.5,
+    "source": "נתון יצרן (Chrysler Crossfire 3.2 V6 218hp)"
+  },
+  {
+    "make": "Chrysler",
+    "model": "CROSSFIRE SRT-6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 335,
+    "cc": 3199,
+    "seconds": 5.0,
+    "source": "נתון יצרן (Chrysler Crossfire SRT-6 335hp)"
   }
 ]
