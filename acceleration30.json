@@ -60,26 +60,6 @@
     "source": "רישוי רכב / נתון יצרן (רולס רויס גוסט בלאק באדג' 600 כ\"ס)"
   },
   {
-    "make": "רולס רויס",
-    "model": "גוסט",
-    "yearStart": null,
-    "yearEnd": 2020,
-    "hp": 570,
-    "cc": 6592,
-    "seconds": 4.9,
-    "source": "רישוי רכב / נתון יצרן (רולס רויס גוסט 570 כ\"ס)"
-  },
-  {
-    "make": "רולס-רויס",
-    "model": "GHOST",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 571,
-    "cc": 6749,
-    "seconds": 4.8,
-    "source": "רישוי רכב / נתון יצרן (רולס-רויס גוסט 571 כ\"ס)"
-  },
-  {
     "make": "Rolls-Royce",
     "model": "GHOST",
     "yearStart": null,
@@ -88,16 +68,6 @@
     "cc": 6749,
     "seconds": 4.8,
     "source": "נתון יצרן (Rolls-Royce Ghost 6.75 V12 571hp)"
-  },
-  {
-    "make": "Rolls-Royce",
-    "model": "GHOST BLACK BADGE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 600,
-    "cc": 6749,
-    "seconds": 4.7,
-    "source": "נתון יצרן (Rolls-Royce Ghost Black Badge 600hp)"
   },
   {
     "make": "רולס רויס",
@@ -118,26 +88,6 @@
     "cc": 0,
     "seconds": 4.5,
     "source": "רישוי רכב / נתון יצרן (רולס רויס ספקטר חשמלי 585 כ\"ס)"
-  },
-  {
-    "make": "רולס-רויס",
-    "model": "SPECTRE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 585,
-    "cc": 0,
-    "seconds": 4.5,
-    "source": "רישוי רכב / נתון יצרן (רולס-רויס ספקטר 585 כ\"ס)"
-  },
-  {
-    "make": "רולס-רויס",
-    "model": "ספקטר",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 585,
-    "cc": 0,
-    "seconds": 4.5,
-    "source": "רישוי רכב / נתון יצרן (רולס-רויס ספקטר 585 כ\"ס)"
   },
   {
     "make": "Rolls-Royce",
@@ -171,16 +121,6 @@
   },
   {
     "make": "רולס רויס",
-    "model": "CULLINAN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 600,
-    "cc": 6749,
-    "seconds": 4.9,
-    "source": "רישוי רכב / נתון יצרן (רולס רויס קאלינן Black Badge 600 כ\"ס)"
-  },
-  {
-    "make": "רולס רויס",
     "model": "קאלינן",
     "yearStart": null,
     "yearEnd": null,
@@ -200,26 +140,6 @@
     "source": "רישוי רכב / נתון יצרן (רולס רויס קאלינן בלאק באדג' 600 כ\"ס)"
   },
   {
-    "make": "רולס רויס",
-    "model": "קלינן",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 571,
-    "cc": 6749,
-    "seconds": 5.2,
-    "source": "רישוי רכב / נתון יצרן (רולס רויס קלינן 571 כ\"ס)"
-  },
-  {
-    "make": "רולס-רויס",
-    "model": "CULLINAN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 571,
-    "cc": 6749,
-    "seconds": 5.2,
-    "source": "רישוי רכב / נתון יצרן (רולס-רויס קאלינן 571 כ\"ס)"
-  },
-  {
     "make": "Rolls-Royce",
     "model": "CULLINAN",
     "yearStart": null,
@@ -230,13 +150,1883 @@
     "source": "נתון יצרן (Rolls-Royce Cullinan 6.75 V12 571hp)"
   },
   {
-    "make": "Rolls-Royce",
-    "model": "CULLINAN BLACK BADGE",
+    "make": "שברולט ד.קוריאה",
+    "model": "AVEO",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 600,
-    "cc": 6749,
-    "seconds": 4.9,
-    "source": "נתון יצרן (Rolls-Royce Cullinan Black Badge 600hp)"
+    "hp": 94,
+    "cc": 1399,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (שברולט אוואו סדאן/האצ'בק 1.4 94 כ\"ס)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "AVEO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 83,
+    "cc": 1399,
+    "seconds": 12.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט אוואו 1.4 83 כ\"ס)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "AVEO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 72,
+    "cc": 1150,
+    "seconds": 13.7,
+    "source": "רישוי רכב / נתון יצרן (שברולט אוואו 1.2 72 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "אבאו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 94,
+    "cc": 1399,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (שברולט אבאו 94 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "אוואו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 94,
+    "cc": 1399,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (שברולט אוואו 94 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "AVEO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 94,
+    "cc": 1399,
+    "seconds": 11.9,
+    "source": "נתון יצרן (Chevrolet Aveo 1.4 94hp)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "OPTRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1598,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט אופטרה סדאן/סטיישן 1.6 109 כ\"ס)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "OPTRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 1799,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (שברולט אופטרה 1.8 122 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "אופטרה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1598,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט אופטרה 109 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "OPTRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1598,
+    "seconds": 11.5,
+    "source": "נתון יצרן (Chevrolet Optra 1.6)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "ORLANDO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1998,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (שברולט אורלנדו 7 מקומות 2.0 VCDi טורבו-דיזל 163 כ\"ס)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "ORLANDO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1364,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט אורלנדו 1.4 טורבו בנזין 140 כ\"ס)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "ORLANDO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 1796,
+    "seconds": 11.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט אורלנדו 1.8 בנזין 141 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "אורלנדו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1998,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (שברולט אורלנדו 163 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "ORLANDO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1998,
+    "seconds": 10.3,
+    "source": "נתון יצרן (Chevrolet Orlando 2.0 VCDi 163hp)"
+  },
+  {
+    "make": "שברולט קנדה",
+    "model": "IMPALA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 305,
+    "cc": 3564,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט אימפלה סדאן פול סייז 3.6 V6 305 כ\"ס)"
+  },
+  {
+    "make": "שברולט קנדה",
+    "model": "IMPALA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 2457,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (שברולט אימפלה 2.5 197 כ\"ס)"
+  },
+  {
+    "make": "שברולט קנדה",
+    "model": "IMPALA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 303,
+    "cc": 5328,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט אימפלה SS דור 9 5.3 V8 303 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "אימפלה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 305,
+    "cc": 3564,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט אימפלה 305 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "IMPALA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 305,
+    "cc": 3564,
+    "seconds": 6.8,
+    "source": "נתון יצרן (Chevrolet Impala 3.6 V6 305hp)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "ALERO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 3350,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט/אולדסמוביל אלרו 3.4 V6 170 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "ALERO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 2198,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (שברולט אלרו 2.2 140 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "אלרו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 3350,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט אלרו 170 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "ALERO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 3350,
+    "seconds": 8.8,
+    "source": "נתון יצרן (Chevrolet Alero 3.4 V6)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "ASTRO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 4293,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט אסטרו ואן 4.3 V6 Vortec 190 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "אסטרו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 4293,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט אסטרו 190 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "ASTRO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 4293,
+    "seconds": 11.5,
+    "source": "נתון יצרן (Chevrolet Astro 4.3 V6)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "EPICA X",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 2492,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (שברולט אפיקה 2.5 שישה צילינדרים בטור 156 כ\"ס)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "EPICA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 144,
+    "cc": 1993,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט אפיקה 2.0 שישה צילינדרים בטור 144 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "אפיקה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 2492,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (שברולט אפיקה 156 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "EPICA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 2492,
+    "seconds": 9.9,
+    "source": "נתון יצרן (Chevrolet Epica 2.5 I6)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "UPLANDER EXT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 3880,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט אפלנדר מיניוואן 3.9 V6 240 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "UPLANDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 3498,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט אפלנדר 3.5 V6 200 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "אפלנדר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 3880,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט אפלנדר 240 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "UPLANDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 240,
+    "cc": 3880,
+    "seconds": 9.8,
+    "source": "נתון יצרן (Chevrolet Uplander 3.9 V6)"
+  },
+  {
+    "make": "שברולט מקסיקו",
+    "model": "EQUINOX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1490,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט אקווינוקס 1.5 טורבו 170 כ\"ס)"
+  },
+  {
+    "make": "שברולט מקסיקו",
+    "model": "EQUINOX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1998,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (שברולט אקווינוקס 2.0 טורבו AWD 252 כ\"ס)"
+  },
+  {
+    "make": "שברולט מקסיקו",
+    "model": "EQUINOX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 182,
+    "cc": 2384,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט אקווינוקס דור 2 2.4 182 כ\"ס)"
+  },
+  {
+    "make": "שברולט מקסיקו",
+    "model": "EQUINOX EV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 213,
+    "cc": 0,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (שברולט אקווינוקס EV חשמלי מלא FWD 213 כ\"ס)"
+  },
+  {
+    "make": "שברולט מקסיקו",
+    "model": "EQUINOX EV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 288,
+    "cc": 0,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט אקווינוקס EV כפול מנועים AWD 288 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "אקווינוקס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1490,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט אקווינוקס 170 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "EQUINOX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1490,
+    "seconds": 9.0,
+    "source": "נתון יצרן (Chevrolet Equinox 1.5 Turbo 170hp)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "BOLT EUV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט בולט EUV קרוסאובר חשמלי 204/200 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "BOLT EV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (שברולט בולט EV האצ'בק חשמלית 204/200 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "בולט euv",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט בולט EUV 204 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "בולט ev",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (שברולט בולט EV 204 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "BOLT EUV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.0,
+    "source": "נתון יצרן (Chevrolet Bolt EUV 204hp)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "BOLT EV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 6.7,
+    "source": "נתון יצרן (Chevrolet Bolt EV 204hp)"
+  },
+  {
+    "make": "שברולט מקסיקו",
+    "model": "BLAZER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 308,
+    "cc": 3649,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט בלייזר RS/Premier קרוסאובר 3.6 V6 308 כ\"ס)"
+  },
+  {
+    "make": "שברולט מקסיקו",
+    "model": "BLAZER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 1998,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט בלייזר 2.0 טורבו 230 כ\"ס)"
+  },
+  {
+    "make": "שברולט מקסיקו",
+    "model": "BLAZER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 193,
+    "cc": 2457,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (שברולט בלייזר 2.5 193 כ\"ס)"
+  },
+  {
+    "make": "שברולט מקסיקו",
+    "model": "BLAZER EV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 288,
+    "cc": 0,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט בלייזר EV חשמלי כפול מנועים AWD 288 כ\"ס)"
+  },
+  {
+    "make": "שברולט מקסיקו",
+    "model": "BLAZER EV SS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 557,
+    "cc": 0,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט בלייזר EV SS ספורט AWD 557 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "בלייזר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 308,
+    "cc": 3649,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט בלייזר 308 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "בלייזר ev",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 288,
+    "cc": 0,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט בלייזר EV 288 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "BLAZER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 308,
+    "cc": 3649,
+    "seconds": 6.8,
+    "source": "נתון יצרן (Chevrolet Blazer 3.6 V6 308hp)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "BLAZER EV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 288,
+    "cc": 0,
+    "seconds": 6.0,
+    "source": "נתון יצרן (Chevrolet Blazer EV AWD 288hp)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "BRIGHTDROP",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 0,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (ברייטדרופ Zevo 400/600 ואן מסחרי חשמלי מלא AWD 300 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "ברייטדרופ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 0,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (ברייטדרופ 300 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "BRIGHTDROP",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 0,
+    "seconds": 8.0,
+    "source": "נתון יצרן (BrightDrop Zevo EV 300hp)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "VOLT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 149,
+    "cc": 1490,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (שברולט וולט דור 2 פלאג-אין חשמלי-מורחב-טווח 149 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "VOLT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1398,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט וולט דור 1 פלאג-אין 150 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "וולט",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 149,
+    "cc": 1490,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (שברולט וולט 149 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "VOLT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 149,
+    "cc": 1490,
+    "seconds": 8.4,
+    "source": "נתון יצרן (Chevrolet Volt PHEV)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "TACUMA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 121,
+    "cc": 1998,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט/דייהו רזו/טקומה 2.0 121 כ\"ס)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "REZZO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1598,
+    "seconds": 12.2,
+    "source": "רישוי רכב / נתון יצרן (שברולט רזו/וויואנט 1.6 105 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "וויאנט/רזו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 121,
+    "cc": 1998,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט וויואנט/רזו 121 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "TACUMA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 121,
+    "cc": 1998,
+    "seconds": 10.8,
+    "source": "נתון יצרן (Chevrolet Tacuma / Rezzo 2.0)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "TAHOE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 420,
+    "cc": 6162,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (שברולט טאהו RST 6.2 EcoTec3 V8 420 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "TAHOE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 355,
+    "cc": 5328,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (שברולט טאהו 5.3 V8 355 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "TAHOE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 277,
+    "cc": 2993,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (שברולט טאהו 3.0 Duramax טורבו-דיזל 277 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "TAHOE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 5328,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט טאהו דור 3 5.3 V8 320 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "טאהו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 420,
+    "cc": 6162,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (שברולט טאהו 420 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "טאהו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 355,
+    "cc": 5328,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (שברולט טאהו 355 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "TAHOE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 420,
+    "cc": 6162,
+    "seconds": 5.9,
+    "source": "נתון יצרן (Chevrolet Tahoe 6.2 V8 420hp)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "TRAVERSE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 3649,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (שברולט טראוורס 7/8 מקומות 3.6 V6 310 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "TRAVERSE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 281,
+    "cc": 3564,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (שברולט טראוורס דור ראשון 3.6 V6 281 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "TRAVERSE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 288,
+    "cc": 3564,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (שברולט טראוורס דור ראשון כפול אגזוז 288 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "TRAVERSE",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 328,
+    "cc": 2498,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (שברולט טראוורס דור 3 2.5 טורבו 328 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "טראוורס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 3649,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (שברולט טראוורס 310 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "טראוורס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 281,
+    "cc": 3564,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (שברולט טראוורס 281 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "TRAVERSE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 3649,
+    "seconds": 7.2,
+    "source": "נתון יצרן (Chevrolet Traverse 3.6 V6 310hp)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "TRAX",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 139,
+    "cc": 1199,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (שברולט טראקס דור 2 1.2 טורבו 139 כ\"ס)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "TRAX",
+    "yearStart": null,
+    "yearEnd": 2022,
+    "hp": 140,
+    "cc": 1364,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט טראקס דור ראשון 1.4 טורבו 140 כ\"ס)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "TRAX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 153,
+    "cc": 1399,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (שברולט טראקס 1.4 טורבו הזרקה ישירה 153 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "טראקס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 139,
+    "cc": 1199,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (שברולט טראקס 139 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "טראקס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1364,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט טראקס 140 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "TRAX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 139,
+    "cc": 1199,
+    "seconds": 8.6,
+    "source": "נתון יצרן (Chevrolet Trax 1.2 Turbo)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "TRAIL BLAZER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1341,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (שברולט טרייל בלייזר קרוסאובר 1.35 טורבו 155 כ\"ס FWD)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "TRAILBLAZER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1341,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (שברולט טריילבלייזר 1.35 טורבו 155 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "TRAILBLAZER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 4157,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט טרייל בלייזר קלאסי 4.2 6 צילינדרים בטור 275 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "TRAILBLAZER SS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 395,
+    "cc": 5967,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט טרייל בלייזר SS ספורט 6.0 V8 395 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "טרייל בלייזר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1341,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (שברולט טרייל בלייזר 155 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "טריילבלייזר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1341,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (שברולט טריילבלייזר 155 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "TRAILBLAZER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1341,
+    "seconds": 9.1,
+    "source": "נתון יצרן (Chevrolet Trailblazer 1.3T 155hp)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "LUMINA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 3350,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (שברולט לומינה APV מיניוואן 3.4 V6 170 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "LUMINA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 3135,
+    "seconds": 13.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט לומינה APV מיניוואן 3.1 V6 120 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "LUMINA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 3791,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט לומינה 3.8 V6 170 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "לומינה מיניוואן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 3350,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (שברולט לומינה 170 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "LUMINA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 3350,
+    "seconds": 11.2,
+    "source": "נתון יצרן (Chevrolet Lumina APV 3.4 V6)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "MALIBU",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1490,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (שברולט מאליבו 1.5 טורבו 163 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "MALIBU",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1490,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (שברולט מאליבו 1.5 טורבו 160 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "MALIBU",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1998,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (שברולט מאליבו 2.0 טורבו 250 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "MALIBU",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 169,
+    "cc": 2384,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט מאליבו דור 7 2.4 169 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "MALIBU",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 3564,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט מאליבו דור 7 3.6 V6 252 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "MALIBU",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 182,
+    "cc": 1796,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (שברולט מאליבו היברידית 1.8 182 כ\"ס משולב)"
+  },
+  {
+    "make": "שברולט",
+    "model": "מאליבו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1490,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (שברולט מאליבו 163 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "MALIBU",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1490,
+    "seconds": 8.6,
+    "source": "נתון יצרן (Chevrolet Malibu 1.5 Turbo 163hp)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "SUBURBAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 420,
+    "cc": 6162,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (שברולט סוברבן פול סייז SUV מוארך 6.2 V8 420 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "SUBURBAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 355,
+    "cc": 5328,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (שברולט סוברבן 5.3 V8 355 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "SUBURBAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 277,
+    "cc": 2993,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט סוברבן 3.0 Duramax דיזל 277 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "סוברבן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 420,
+    "cc": 6162,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (שברולט סוברבן 420 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "SUBURBAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 420,
+    "cc": 6162,
+    "seconds": 6.2,
+    "source": "נתון יצרן (Chevrolet Suburban 6.2 V8)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "SAVANA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 401,
+    "cc": 6599,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט סוואנה ואן מסחרי 6.6 V8 בנזין 401 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "SAVANA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 277,
+    "cc": 2776,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט סוואנה 2.8 Duramax טורבו-דיזל 277 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "SAVANA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 342,
+    "cc": 5967,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט סוואנה 6.0 V8 Vortec 342 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "SAVANA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 260,
+    "cc": 6599,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט סוואנה 6.6 Duramax V8 דיזל 260 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "סוואנה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 401,
+    "cc": 6599,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט סוואנה 401 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "SAVANA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 401,
+    "cc": 6599,
+    "seconds": 8.5,
+    "source": "נתון יצרן (Chevrolet Savana 6.6 V8)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "SONIC LT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 116,
+    "cc": 1598,
+    "seconds": 11.3,
+    "source": "רישוי רכב / נתון יצרן (שברולט סוניק סדאן/האצ'בק 1.6 116 כ\"ס)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "SONIC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 116,
+    "cc": 1598,
+    "seconds": 11.3,
+    "source": "רישוי רכב / נתון יצרן (שברולט סוניק 1.6 116 כ\"ס)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "SONIC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1364,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט סוניק RS טורבו 1.4 140 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "סוניק",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 116,
+    "cc": 1598,
+    "seconds": 11.3,
+    "source": "רישוי רכב / נתון יצרן (שברולט סוניק 116 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "SONIC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 116,
+    "cc": 1598,
+    "seconds": 11.3,
+    "source": "נתון יצרן (Chevrolet Sonic 1.6 116hp)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "SILVERADO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 470,
+    "cc": 6599,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט סילברדו 2500HD 6.6 Duramax טורבו-דיזל V8 470 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "SILVERADO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 445,
+    "cc": 6599,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט סילברדו 6.6 Duramax דיזל 445 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "SILVERADO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 397,
+    "cc": 6599,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (שברולט סילברדו 6.6 Duramax דיזל 397 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "SILVERADO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 420,
+    "cc": 6162,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (שברולט סילברדו 1500 6.2 V8 בנזין 420 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "SILVERADO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 355,
+    "cc": 5328,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (שברולט סילברדו 1500 5.3 V8 355 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "SILVERADO EV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 754,
+    "cc": 0,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט סילברדו EV RST טנדר חשמלי מלא 754 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "SILVERADO EV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 0,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (שברולט סילברדו EV WT טנדר חשמלי 510 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "סילברדו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 470,
+    "cc": 6599,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט סילברדו 470 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "סילברדו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 445,
+    "cc": 6599,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט סילברדו 445 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "סילברדו ev",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 754,
+    "cc": 0,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט סילברדו EV 754 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "SILVERADO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 470,
+    "cc": 6599,
+    "seconds": 6.8,
+    "source": "נתון יצרן (Chevrolet Silverado 2500HD 6.6 Duramax)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "SILVERADO EV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 754,
+    "cc": 0,
+    "seconds": 4.5,
+    "source": "נתון יצרן (Chevrolet Silverado EV RST 754hp)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "SPARK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 98,
+    "cc": 1399,
+    "seconds": 12.6,
+    "source": "רישוי רכב / נתון יצרן (שברולט ספארק מיני 1.4 Ecotec 98 כ\"ס)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "SPARK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 82,
+    "cc": 1206,
+    "seconds": 13.3,
+    "source": "רישוי רכב / נתון יצרן (שברולט ספארק דור 3 1.2 82 כ\"ס)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "SPARK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 68,
+    "cc": 995,
+    "seconds": 15.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט ספארק 1.0 68 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "ספארק",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 98,
+    "cc": 1399,
+    "seconds": 12.6,
+    "source": "רישוי רכב / נתון יצרן (שברולט ספארק 98 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "SPARK",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 98,
+    "cc": 1399,
+    "seconds": 12.6,
+    "source": "נתון יצרן (Chevrolet Spark 1.4 98hp)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "CAMARO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 335,
+    "cc": 3649,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (שברולט קמארו LT קופה 3.6 V6 335 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "CAMARO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 1998,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט קמארו 2.0 טורבו 275 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "CAMARO SS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 455,
+    "cc": 6162,
+    "seconds": 4.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט קמארו SS ספורט 6.2 LT1 V8 455 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "CAMARO ZL1",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 650,
+    "cc": 6162,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט קמארו ZL1 סופרצ'ארג' 6.2 V8 650 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "CAMARO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 426,
+    "cc": 6162,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (שברולט קמארו SS דור 5 6.2 V8 426 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "CAMARO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 323,
+    "cc": 3564,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (שברולט קמארו דור 5 3.6 V6 323 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "קאמרו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 335,
+    "cc": 3649,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (שברולט קאמרו 335 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "קמארו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 335,
+    "cc": 3649,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (שברולט קמארו 335 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "CAMARO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 335,
+    "cc": 3649,
+    "seconds": 5.4,
+    "source": "נתון יצרן (Chevrolet Camaro 3.6 V6 335hp)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "CAMARO SS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 455,
+    "cc": 6162,
+    "seconds": 4.0,
+    "source": "נתון יצרן (Chevrolet Camaro SS 6.2 V8 455hp)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "CAVALIER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 2198,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (שברולט קוואליר 2.2 Ecotec 140 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "CAVALIER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 2190,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט קוואליר 2.2 120 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "CAVALIER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 2392,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (שברולט קוואליר Z24 2.4 150 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "קוואליר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 2198,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (שברולט קוואליר 140 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "CAVALIER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 2198,
+    "seconds": 9.2,
+    "source": "נתון יצרן (Chevrolet Cavalier 2.2)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "COLORADO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 308,
+    "cc": 3647,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (שברולט קולורדו ZR2 טנדר שטח 4X4 3.6 V6 308 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "COLORADO",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 2727,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט קולורדו 2.7 טורבו בנזין 310 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "COLORADO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 2776,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט קולורדו 2.8 Duramax דיזל 181 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "קולורדו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 308,
+    "cc": 3647,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (שברולט קולורדו 308 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "COLORADO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 308,
+    "cc": 3647,
+    "seconds": 7.1,
+    "source": "נתון יצרן (Chevrolet Colorado ZR2 3.6 V6 308hp)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "CORVETTE STINGR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 495,
+    "cc": 6162,
+    "seconds": 3.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט קורבט סטינגריי C8 מנוע מרכזי 6.2 LT2 V8 495 כ\"ס Z51)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "CORVETTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 495,
+    "cc": 6162,
+    "seconds": 3.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט קורבט C8 495 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "CORVETTE Z06",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 670,
+    "cc": 5463,
+    "seconds": 2.7,
+    "source": "רישוי רכב / נתון יצרן (שברולט קורבט C8 Z06 מנוע 5.5 LT6 V8 שטוח 670 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "CORVETTE E-RAY",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 655,
+    "cc": 6162,
+    "seconds": 2.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט קורבט E-Ray הנעה כפולה היברידית AWD 655 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "CORVETTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 460,
+    "cc": 6162,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט קורבט C7 סטינגריי 6.2 LT1 460 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "CORVETTE Z06",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 650,
+    "cc": 6162,
+    "seconds": 3.1,
+    "source": "רישוי רכב / נתון יצרן (שברולט קורבט C7 Z06 סופרצ'ארג' 650 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "קורבט",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 495,
+    "cc": 6162,
+    "seconds": 3.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט קורבט 495 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "CORVETTE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 495,
+    "cc": 6162,
+    "seconds": 3.0,
+    "source": "נתון יצרן (Chevrolet Corvette C8 Stingray 495hp)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "CORVETTE STINGR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 495,
+    "cc": 6162,
+    "seconds": 3.0,
+    "source": "נתון יצרן (Chevrolet Corvette Stingray C8 495hp)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "CORSICA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 3135,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (שברולט קורסיקה 3.1 V6 140 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "CORSICA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 2190,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט קורסיקה 2.2 110 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "קורסיקה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 3135,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (שברולט קורסיקה 140 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "CORSICA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 3135,
+    "seconds": 9.9,
+    "source": "נתון יצרן (Chevrolet Corsica 3.1 V6)"
+  },
+  {
+    "make": "שברולט מקסיקו",
+    "model": "CAPTIVA SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 182,
+    "cc": 2384,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט קפטיבה ספורט 2.4 Ecotec 182 כ\"ס)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "CAPTIVA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 2231,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (שברולט קפטיבה 7 מקומות 2.2 VCDi טורבו-דיזל 184 כ\"ס)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "CAPTIVA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 167,
+    "cc": 2384,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט קפטיבה 2.4 בנזין 167 כ\"ס)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "CAPTIVA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1991,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (שברולט קפטיבה 2.0 VCDi דיזל 150 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "קפטיבה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 182,
+    "cc": 2384,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט קפטיבה 182 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "CAPTIVA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 182,
+    "cc": 2384,
+    "seconds": 9.8,
+    "source": "נתון יצרן (Chevrolet Captiva 2.4)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "CRUZE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1362,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט קרוז סדאן/האצ'בק 1.4 טורבו בנזין 140 כ\"ס)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "CRUZE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 153,
+    "cc": 1399,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט קרוז דור 2 1.4 טורבו הזרקה ישירה 153 כ\"ס)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "CRUZE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 124,
+    "cc": 1598,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט קרוז 1.6 124 כ\"ס)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "CRUZE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 112,
+    "cc": 1598,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט קרוז 1.6 דור 1 112 כ\"ס)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "CRUZE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 141,
+    "cc": 1796,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (שברולט קרוז 1.8 141 כ\"ס)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "CRUZE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1998,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (שברולט קרוז 2.0 VCDi דיזל 163 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "קרוז",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1362,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט קרוז 140 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "CRUZE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1362,
+    "seconds": 9.5,
+    "source": "נתון יצרן (Chevrolet Cruze 1.4 Turbo 140hp)"
   }
 ]
