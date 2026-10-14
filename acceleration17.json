@@ -1,5 +1,115 @@
 [
   {
+    "make": "מרצדס בנץ מקסי",
+    "model": "A200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1333,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (מרצדס A200 סדאן מקסיקו 1.33T 163)"
+  },
+  {
+    "make": "מרצדס בנץ מקסי",
+    "model": "A200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1332,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (מרצדס A200 סדאן מקסיקו 1.33T 163)"
+  },
+  {
+    "make": "מרצדס בנץ מקסי",
+    "model": "A180",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1333,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (מרצדס A180 סדאן מקסיקו 1.33T 136)"
+  },
+  {
+    "make": "מרצדס בנץ מקסי",
+    "model": "A180",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1332,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (מרצדס A180 סדאן מקסיקו 1.33T 136)"
+  },
+  {
+    "make": "מרצדס בנץ מקסי",
+    "model": "A220",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1991,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (מרצדס A220 סדאן 2.0T 190)"
+  },
+  {
+    "make": "מרצדס בנץ מקסי",
+    "model": "A250",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 224,
+    "cc": 1991,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (מרצדס A250 סדאן מקסיקו 2.0T 224)"
+  },
+  {
+    "make": "מרצדס בנץ מקסי",
+    "model": "A35 AMG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 306,
+    "cc": 1991,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (מרצדס A35 AMG סדאן 4MATIC 306)"
+  },
+  {
+    "make": "מרצדס בנץ מקסי",
+    "model": "GLB200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1332,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (מרצדס GLB200 7 מקומות 1.33T 163)"
+  },
+  {
+    "make": "מרצדס בנץ מקסי",
+    "model": "GLB200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1333,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (מרצדס GLB200 7 מקומות 1.33T 163)"
+  },
+  {
+    "make": "מרצדס בנץ מקסי",
+    "model": "GLB250",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 224,
+    "cc": 1991,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (מרצדס GLB250 4MATIC 2.0T 224)"
+  },
+  {
+    "make": "מרצדס בנץ מקסי",
+    "model": "GLB35 AMG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 306,
+    "cc": 1991,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (מרצדס GLB35 AMG 4MATIC 306)"
+  },
+  {
     "make": "מרצדס בנץ גרמן",
     "model": "A180",
     "yearStart": null,
@@ -21,6 +131,26 @@
   },
   {
     "make": "מרצדס בנץ גרמן",
+    "model": "A180",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1333,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (מרצדס A180 1.33T 136)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "A200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1595,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (מרצדס A200 דור 3 1.6T 156)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
     "model": "A200",
     "yearStart": null,
     "yearEnd": null,
@@ -28,6 +158,26 @@
     "cc": 1332,
     "seconds": 8.0,
     "source": "רישוי רכב / נתון יצרן (מרצדס A200 1.33T 163)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "A200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1333,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (מרצדס A200 1.33T 163)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "A250",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 211,
+    "cc": 1991,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (מרצדס A250 דור 3 2.0T 211)"
   },
   {
     "make": "מרצדס בנץ גרמן",
@@ -51,6 +201,16 @@
   },
   {
     "make": "מרצדס בנץ גרמן",
+    "model": "A250E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 1333,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (מרצדס A250e פלאג-אין PHEV 218)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
     "model": "A35 AMG",
     "yearStart": null,
     "yearEnd": null,
@@ -58,6 +218,16 @@
     "cc": 1991,
     "seconds": 4.7,
     "source": "רישוי רכב / נתון יצרן (מרצדס A35 AMG 4MATIC 306)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "A45 AMG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 360,
+    "cc": 1991,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (מרצדס A45 AMG 360)"
   },
   {
     "make": "מרצדס בנץ גרמן",
@@ -111,6 +281,16 @@
   },
   {
     "make": "מרצדס בנץ גרמן",
+    "model": "AMG GT 63 S",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 639,
+    "cc": 3982,
+    "seconds": 3.2,
+    "source": "רישוי רכב / נתון יצרן (מרצדס AMG GT 63 S 4.0 V8 639)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
     "model": "AMG GT",
     "yearStart": null,
     "yearEnd": null,
@@ -141,6 +321,16 @@
   },
   {
     "make": "מרצדס בנץ גרמן",
+    "model": "B180",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 122,
+    "cc": 1595,
+    "seconds": 9.1,
+    "source": "רישוי רכב / נתון יצרן (מרצדס B180 1.6T 122)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
     "model": "B200",
     "yearStart": null,
     "yearEnd": null,
@@ -148,6 +338,16 @@
     "cc": 1332,
     "seconds": 8.2,
     "source": "רישוי רכב / נתון יצרן (מרצדס B200 1.33T 163)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "B200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1595,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (מרצדס B200 1.6T 156)"
   },
   {
     "make": "מרצדס בנץ גרמן",
@@ -164,10 +364,40 @@
     "model": "C180",
     "yearStart": null,
     "yearEnd": null,
+    "hp": 156,
+    "cc": 1796,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C180 W204 1.8 קומפרסור/CGI 156)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "C180",
+    "yearStart": null,
+    "yearEnd": null,
     "hp": 170,
     "cc": 1496,
     "seconds": 8.6,
     "source": "רישוי רכב / נתון יצרן (מרצדס C180 W206 1.5T 170)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "C200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1991,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C200 W205 2.0T 184)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "C200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1497,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C200 מתוח פנים 1.5 EQ Boost 184)"
   },
   {
     "make": "מרצדס בנץ גרמן",
@@ -181,6 +411,36 @@
   },
   {
     "make": "מרצדס בנץ גרמן",
+    "model": "C250",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 211,
+    "cc": 1991,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C250 W205 2.0T 211)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "C250",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1796,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C250 W204 1.8 CGI 204)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "C300",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1991,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C300 W205 2.0T 245)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
     "model": "C300",
     "yearStart": null,
     "yearEnd": null,
@@ -191,6 +451,16 @@
   },
   {
     "make": "מרצדס בנץ גרמן",
+    "model": "C300",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 1999,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C300 W206 2.0T 258)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
     "model": "C300E",
     "yearStart": null,
     "yearEnd": null,
@@ -198,6 +468,26 @@
     "cc": 1999,
     "seconds": 6.1,
     "source": "רישוי רכב / נתון יצרן (מרצדס C300e פלאג-אין PHEV 313)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "C350E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 279,
+    "cc": 1991,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C350e פלאג-אין PHEV 279)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "C43 AMG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 367,
+    "cc": 2996,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C43 AMG דור קודם 3.0 V6 367)"
   },
   {
     "make": "מרצדס בנץ גרמן",
@@ -218,6 +508,16 @@
     "cc": 1991,
     "seconds": 4.6,
     "source": "רישוי רכב / נתון יצרן (מרצדס C43 AMG W206 2.0T 408)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "C63 AMG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 457,
+    "cc": 6208,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C63 AMG W204 אטמוספרי 6.2 V8 457)"
   },
   {
     "make": "מרצדס בנץ גרמן",
@@ -301,6 +601,26 @@
   },
   {
     "make": "מרצדס בנץ הונג",
+    "model": "CLA180",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1333,
+    "seconds": 9.0,
+    "source": "רישוי רכב / נתון יצרן (מרצדס CLA180 דור 2 1.33T 136)"
+  },
+  {
+    "make": "מרצדס בנץ הונג",
+    "model": "CLA200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1595,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (מרצדס CLA200 דור 1 1.6T 156)"
+  },
+  {
+    "make": "מרצדס בנץ הונג",
     "model": "CLA200",
     "yearStart": null,
     "yearEnd": null,
@@ -308,6 +628,26 @@
     "cc": 1332,
     "seconds": 8.2,
     "source": "רישוי רכב / נתון יצרן (מרצדס CLA200 1.33T 163)"
+  },
+  {
+    "make": "מרצדס בנץ הונג",
+    "model": "CLA200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1333,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (מרצדס CLA200 1.33T 163)"
+  },
+  {
+    "make": "מרצדס בנץ הונג",
+    "model": "CLA250",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 211,
+    "cc": 1991,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (מרצדס CLA250 דור 1 2.0T 211)"
   },
   {
     "make": "מרצדס בנץ הונג",
@@ -344,10 +684,20 @@
     "model": "CLA45 AMG",
     "yearStart": null,
     "yearEnd": null,
+    "hp": 360,
+    "cc": 1991,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (מרצדס CLA45 AMG דור 1 360)"
+  },
+  {
+    "make": "מרצדס בנץ הונג",
+    "model": "CLA45 AMG",
+    "yearStart": null,
+    "yearEnd": null,
     "hp": 381,
     "cc": 1991,
     "seconds": 4.2,
-    "source": "רישוי רכב / נתון יצרן (מרצדס CLA45 AMG דור 1 381)"
+    "source": "רישוי רכב / נתון יצרן (מרצדס CLA45 AMG דור 1 מתוח פנים 381)"
   },
   {
     "make": "מרצדס בנץ הונג",
@@ -444,6 +794,16 @@
     "model": "CLS350",
     "yearStart": null,
     "yearEnd": null,
+    "hp": 272,
+    "cc": 3498,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (מרצדס CLS350 דור 1 3.5 V6 272)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "CLS350",
+    "yearStart": null,
+    "yearEnd": null,
     "hp": 306,
     "cc": 3498,
     "seconds": 6.1,
@@ -458,6 +818,26 @@
     "cc": 2999,
     "seconds": 4.5,
     "source": "רישוי רכב / נתון יצרן (מרצדס CLS53 AMG 4MATIC+ 435)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "E200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1991,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (מרצדס E200 W212 2.0T 184)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "E200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1796,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (מרצדס E200 CGI 1.8 184)"
   },
   {
     "make": "מרצדס בנץ גרמן",
@@ -481,6 +861,26 @@
   },
   {
     "make": "מרצדס בנץ גרמן",
+    "model": "E250",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 211,
+    "cc": 1991,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (מרצדס E250 W212 2.0T 211)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "E250",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1796,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (מרצדס E250 CGI 1.8 204)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
     "model": "E300",
     "yearStart": null,
     "yearEnd": null,
@@ -491,6 +891,16 @@
   },
   {
     "make": "מרצדס בנץ גרמן",
+    "model": "E300",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 1999,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (מרצדס E300 W214 2.0T 258)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
     "model": "E300E",
     "yearStart": null,
     "yearEnd": null,
@@ -498,6 +908,16 @@
     "cc": 1991,
     "seconds": 5.7,
     "source": "רישוי רכב / נתון יצרן (מרצדס E300e פלאג-אין PHEV 320)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "E350E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 1991,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (מרצדס E350e פלאג-אין PHEV 286)"
   },
   {
     "make": "מרצדס בנץ גרמן",
@@ -521,6 +941,26 @@
   },
   {
     "make": "מרצדס בנץ גרמן",
+    "model": "S350",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 3498,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (מרצדס S350 W221 3.5 V6 272)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "S400",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 333,
+    "cc": 2996,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (מרצדס S400 W222 3.0 V6 333)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
     "model": "S500",
     "yearStart": null,
     "yearEnd": null,
@@ -528,6 +968,36 @@
     "cc": 2999,
     "seconds": 4.9,
     "source": "רישוי רכב / נתון יצרן (מרצדס S500 W223 3.0T 435)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "S500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 455,
+    "cc": 4663,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (מרצדס S500 W222 4.7 V8 455)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "S500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 388,
+    "cc": 5462,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (מרצדס S500 W221 5.5 V8 388)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "S560",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 469,
+    "cc": 3982,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (מרצדס S560 W222 4.0 V8 469)"
   },
   {
     "make": "מרצדס בנץ גרמן",
@@ -561,6 +1031,16 @@
   },
   {
     "make": "מרצדס בנץ גרמן",
+    "model": "S63 AMG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 612,
+    "cc": 3982,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (מרצדס S63 AMG 4MATIC+ 4.0 V8 612)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
     "model": "SL 43 AMG",
     "yearStart": null,
     "yearEnd": null,
@@ -588,6 +1068,26 @@
     "cc": 3982,
     "seconds": 3.6,
     "source": "רישוי רכב / נתון יצרן (מרצדס SL 63 AMG 4.0 V8 585)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "SL500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 435,
+    "cc": 4663,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (מרצדס SL500 R231 4.7 V8 435)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "SL500",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 388,
+    "cc": 5462,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (מרצדס SL500 R230 5.5 V8 388)"
   },
   {
     "make": "דיימלר קרייזלר",
@@ -654,10 +1154,40 @@
     "model": "GLA200",
     "yearStart": null,
     "yearEnd": null,
+    "hp": 156,
+    "cc": 1595,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (מרצדס GLA200 דור 1 1.6T 156)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "GLA200",
+    "yearStart": null,
+    "yearEnd": null,
     "hp": 163,
     "cc": 1332,
     "seconds": 8.7,
     "source": "רישוי רכב / נתון יצרן (מרצדס GLA200 1.33T 163)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "GLA200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1333,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (מרצדס GLA200 1.33T 163)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "GLA250",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 211,
+    "cc": 1991,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (מרצדס GLA250 דור 1 2.0T 211)"
   },
   {
     "make": "מרצדס בנץ גרמן",
@@ -670,24 +1200,14 @@
     "source": "רישוי רכב / נתון יצרן (מרצדס GLA250 2.0T 224)"
   },
   {
-    "make": "מרצדס בנץ מקסי",
-    "model": "GLB200",
+    "make": "מרצדס בנץ גרמן",
+    "model": "GLA45 AMG",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 163,
-    "cc": 1332,
-    "seconds": 9.1,
-    "source": "רישוי רכב / נתון יצרן (מרצדס GLB200 7 מקומות 1.33T 163)"
-  },
-  {
-    "make": "מרצדס בנץ מקסי",
-    "model": "GLB250",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 224,
+    "hp": 381,
     "cc": 1991,
-    "seconds": 6.9,
-    "source": "רישוי רכב / נתון יצרן (מרצדס GLB250 4MATIC 2.0T 224)"
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (מרצדס GLA45 AMG 381)"
   },
   {
     "make": "מרצדס בנץ גרמן",
@@ -698,6 +1218,26 @@
     "cc": 1999,
     "seconds": 7.8,
     "source": "רישוי רכב / נתון יצרן (מרצדס GLC 200 4MATIC דור 2 2.0T 204)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "GLC200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 1991,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (מרצדס GLC200 דור 1 2.0T 197)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "GLC250",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 211,
+    "cc": 1991,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (מרצדס GLC250 4MATIC 2.0T 211)"
   },
   {
     "make": "מרצדס בנץ גרמן",
@@ -728,6 +1268,36 @@
     "cc": 1999,
     "seconds": 6.7,
     "source": "רישוי רכב / נתון יצרן (מרצדס GLC300e פלאג-אין PHEV 313)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "GLC350E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 1991,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (מרצדס GLC350e פלאג-אין 320)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "GLC43 AMG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 390,
+    "cc": 2996,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (מרצדס GLC43 AMG 3.0 V6 390)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "GLC63 S AMG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 3982,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (מרצדס GLC63 S AMG 4.0 V8 510)"
   },
   {
     "make": "מרצדס בנץ גרמן",
@@ -791,6 +1361,16 @@
   },
   {
     "make": "מרצדס בנץ ארהב",
+    "model": "GLE63 S AMG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 612,
+    "cc": 3982,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (מרצדס GLE63 S AMG 4.0 V8 612)"
+  },
+  {
+    "make": "מרצדס בנץ ארהב",
     "model": "GLS500 4MATIC",
     "yearStart": null,
     "yearEnd": null,
@@ -818,6 +1398,16 @@
     "cc": 3982,
     "seconds": 5.3,
     "source": "רישוי רכב / נתון יצרן (מרצדס GLS580 4MATIC 4.0 V8 489)"
+  },
+  {
+    "make": "מרצדס בנץ ארהב",
+    "model": "GLS63 AMG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 612,
+    "cc": 3982,
+    "seconds": 4.2,
+    "source": "רישוי רכב / נתון יצרן (מרצדס GLS63 AMG 4.0 V8 612)"
   },
   {
     "make": "מרצדס בנץ ארהב",
@@ -901,6 +1491,16 @@
   },
   {
     "make": "מרצדס בנץ גרמן",
+    "model": "EQA250",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 0,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (מרצדס EQA 250 חשמלי 190)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
     "model": "EQA300 4MATIC",
     "yearStart": null,
     "yearEnd": null,
@@ -908,6 +1508,16 @@
     "cc": 0,
     "seconds": 7.7,
     "source": "רישוי רכב / נתון יצרן (מרצדס EQA 300 4MATIC חשמלי 228)"
+  },
+  {
+    "make": "מרצדס בנץ הונג",
+    "model": "EQB 250",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 0,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (מרצדס EQB 250 חשמלי 190)"
   },
   {
     "make": "מרצדס בנץ הונג",
@@ -941,6 +1551,16 @@
   },
   {
     "make": "מרצדס בנץ גרמן",
+    "model": "EQE300",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (מרצדס EQE 300 חשמלי 245)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
     "model": "EQE350",
     "yearStart": null,
     "yearEnd": null,
@@ -968,6 +1588,16 @@
     "cc": 0,
     "seconds": 4.7,
     "source": "רישוי רכב / נתון יצרן (מרצדס EQE 500 4MATIC חשמלי 408)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "EQE43 AMG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 476,
+    "cc": 0,
+    "seconds": 4.2,
+    "source": "רישוי רכב / נתון יצרן (מרצדס EQE 43 AMG 4MATIC 476)"
   },
   {
     "make": "מרצדס בנץ גרמן",
@@ -1144,10 +1774,50 @@
     "model": "A-CLASS",
     "yearStart": null,
     "yearEnd": null,
+    "hp": 163,
+    "cc": 1332,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (מרצדס A-Class 163)"
+  },
+  {
+    "make": "מרצדס",
+    "model": "A-CLASS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1333,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (מרצדס A-Class 163)"
+  },
+  {
+    "make": "מרצדס",
+    "model": "A-CLASS",
+    "yearStart": null,
+    "yearEnd": null,
     "hp": 136,
     "cc": 1332,
     "seconds": 8.8,
     "source": "רישוי רכב / נתון יצרן (מרצדס A-Class 136)"
+  },
+  {
+    "make": "מרצדס",
+    "model": "A200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1333,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (מרצדס A200 163)"
+  },
+  {
+    "make": "מרצדס",
+    "model": "A200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1332,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (מרצדס A200 163)"
   },
   {
     "make": "מרצדס",
@@ -1298,6 +1968,26 @@
     "cc": 3982,
     "seconds": 5.3,
     "source": "רישוי רכב / נתון יצרן (מרצדס GLS 489)"
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "A200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1332,
+    "seconds": 8.1,
+    "source": "נתון יצרן (Mercedes-Benz A200 163hp)"
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "A200",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1333,
+    "seconds": 8.1,
+    "source": "נתון יצרן (Mercedes-Benz A200 163hp)"
   },
   {
     "make": "Mercedes-Benz",
