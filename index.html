@@ -287,7 +287,7 @@
 
 </div>
 
-<!-- טעינה מקומית ישירה מתוך הריפו -->
+<!-- טעינת לוגואים מקומית -->
 <script src="logos.js"></script>
 
 <script>
@@ -310,9 +310,9 @@
     return parseInt(m[3], 10) + '-' + parseInt(m[2], 10) + '-' + m[1];
   }
 
-  function findBrand(manufacturer) {
-    if (!manufacturer) return null;
-    const raw = String(manufacturer).toLowerCase();
+  // בדיקת יצרן ודגם יחד לצורך זיהוי מדויק
+  function findBrand(manufacturer, model) {
+    const raw = ((manufacturer || '') + ' ' + (model || '')).toLowerCase();
 
     // 1. קופרה בעדיפות עליונה
     if (raw.includes("cupra") || raw.includes("קופרה")) {
@@ -320,8 +320,8 @@
     }
 
     // 2. בדיקה במילון הלוגואים מ-logos.js
-    if (typeof MANUAL_LOGOS !== 'undefined') {
-      for (const slugKey of Object.keys(MANUAL_LOGOS)) {
+    if (typeof window.MANUAL_LOGOS !== 'undefined') {
+      for (const slugKey of Object.keys(window.MANUAL_LOGOS)) {
         if (raw.includes(slugKey.toLowerCase())) {
           return { slug: slugKey, color: "#2a7fa8", en: slugKey };
         }
@@ -374,19 +374,35 @@
     return String(v).trim().replace(/[.\s,;:]+$/g, '');
   }
 
-  function fileSlug(text) {
-    return String(text || '').toLowerCase().trim()
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '');
+  function getLogoSrc(brand) {
+    if (!brand) return null;
+    if (typeof window.MANUAL_LOGOS !== 'undefined' && window.MANUAL_LOGOS[brand.slug]) {
+      return window.MANUAL_LOGOS[brand.slug];
+    }
+    return `https://cdn.jsdelivr.net/gh/filippfrahm/car-logos-dataset@master/logos/optimized/${brand.slug}.svg`;
   }
 
-  function loadOk(src) {
-    return new Promise(resolve => {
-      const i = new Image();
-      i.onload = () => resolve(true);
-      i.onerror = () => resolve(false);
-      i.src = src;
-    });
+  async function showBrand(manufacturer, brand) {
+    const logo = document.getElementById('brandLogo');
+    const badge = document.getElementById('brandBadge');
+    const key = (manufacturer || '').trim();
+
+    badge.textContent = key ? key.charAt(0) : '?';
+    badge.style.background = brand ? brand.color : '#2a7fa8';
+
+    const logoSrc = getLogoSrc(brand);
+    if (logoSrc) {
+      logo.src = logoSrc;
+      logo.style.display = 'block';
+      badge.style.display = 'none';
+      logo.onerror = function() {
+        this.style.display = 'none';
+        badge.style.display = 'flex';
+      };
+    } else {
+      logo.style.display = 'none';
+      badge.style.display = 'flex';
+    }
   }
 
   function extractYears(title) {
@@ -481,37 +497,6 @@
     }
   }
 
-  function getLogoSrc(brand) {
-    if (!brand) return null;
-    if (typeof MANUAL_LOGOS !== 'undefined' && MANUAL_LOGOS[brand.slug]) {
-      return MANUAL_LOGOS[brand.slug];
-    }
-    return `https://cdn.jsdelivr.net/gh/filippfrahm/car-logos-dataset@master/logos/optimized/${brand.slug}.svg`;
-  }
-
-  async function showBrand(manufacturer, brand) {
-    const logo = document.getElementById('brandLogo');
-    const badge = document.getElementById('brandBadge');
-    const key = (manufacturer || '').trim();
-
-    badge.textContent = key ? key.charAt(0) : '?';
-    badge.style.background = brand ? brand.color : '#2a7fa8';
-
-    const logoSrc = getLogoSrc(brand);
-    if (logoSrc) {
-      logo.src = logoSrc;
-      logo.style.display = 'block';
-      badge.style.display = 'none';
-      logo.onerror = function() {
-        this.style.display = 'none';
-        badge.style.display = 'flex';
-      };
-    } else {
-      logo.style.display = 'none';
-      badge.style.display = 'flex';
-    }
-  }
-
   function loadHistory() {
     try {
       const list = JSON.parse(localStorage.getItem(HIST_KEY));
@@ -578,7 +563,7 @@
       const icon = document.createElement('div');
       icon.className = 'h-icon';
 
-      const brand = findBrand(item.manufacturer);
+      const brand = findBrand(item.manufacturer, item.name);
       const logoSrc = getLogoSrc(brand);
 
       if (logoSrc) {
@@ -996,7 +981,8 @@
       const d = j.data;
       currentPlate = plate;
 
-      const brand = findBrand(d.manufacturer);
+      // בדיקה משולבת של יצרן ודגם יחד
+      const brand = findBrand(d.manufacturer, d.model);
       const model = cleanText(d.model || '');
       const trim = cleanText(d.trim || '');
 
