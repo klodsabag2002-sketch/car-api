@@ -1,1 +1,962 @@
- <!DOCTYPE html> <html lang="he" dir="rtl"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>פרטי רכב</title> <style> * { box-sizing: border-box; margin: 0; padding: 0; } body { font-family: Arial, Helvetica, sans-serif; background: #f0f0f0; color: #333; direction: rtl; } .phone { max-width: 380px; margin: 0 auto; background: #f0f0f0; min-height: 100vh; padding-bottom: 20px; } .topbar { background: #2a7fa8; color: #fff; height: 52px; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; } .topbar .t { font-size: 18px; flex: 1; text-align: center; } .topbar .i { font-size: 20px; width: 28px; text-align: center; cursor: pointer; } .topbar .i.hidden { visibility: hidden; } .search-box { background: #fff; padding: 16px 12px 14px; } .plate { display: flex; align-items: center; background: #ffd21f; border: 2px solid #111; border-radius: 8px; height: 60px; overflow: hidden; direction: ltr; } .plate .strip { background: #1e5fa8; color: #fff; width: 50px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; } .plate .strip .flag { font-size: 12px; } .plate .strip .il { font-size: 18px; font-weight: bold; line-height: 1; } .plate .strip .he { font-size: 8px; } .plate input { flex: 1; min-width: 0; height: 100%; border: none; background: transparent; outline: none; font-size: 30px; font-weight: bold; text-align: center; letter-spacing: 1px; color: #111; } .plate input::placeholder { color: #8a7a2a; font-size: 15px; letter-spacing: 0; font-weight: normal; } .plate button { border: none; background: #2a7fa8; color: #fff; height: 100%; padding: 0 12px; font-size: 14px; cursor: pointer; flex-shrink: 0; } .plate button:disabled { background: #9cc5da; } .msg { text-align: center; color: #666; font-size: 13px; padding: 8px; display: none; } .msg.err { color: #b42318; background: #fde8e7; border-radius: 8px; margin-top: 8px; } .km-line { display: none; align-items: center; justify-content: center; gap: 6px; color: #2e8b57; font-size: 13px; background: #fff; padding: 0 12px 12px; } .km-line.show { display: flex; } .km-line .km-ic { border: 2px solid #2e8b57; border-radius: 4px; padding: 0 3px; font-size: 11px; font-weight: bold; } .history { background: #fff; margin: 12px 10px 0; border-radius: 14px; box-shadow: 0 2px 6px rgba(42,127,168,.12); display: none; overflow: hidden; } .history.show { display: block; } .history-head { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-bottom: 1px solid #eef3f6; } .history-head .h-title { font-size: 15px; font-weight: bold; color: #1f5f80; } .history-head .h-clear { background: none; border: none; color: #b42318; font-size: 13px; cursor: pointer; } .h-row { display: flex; align-items: center; padding: 12px 14px; border-bottom: 1px solid #f0f3f5; cursor: pointer; } .h-row:last-child { border-bottom: none; } .h-row:active { background: #f5fafc; } .h-icon { width: 44px; height: 44px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; margin-left: 12px; overflow: hidden; border: 1px solid #e2e8f0; } .h-icon img { width: 85%; height: 85%; object-fit: contain; } .h-info { flex: 1; min-width: 0; text-align: right; } .h-name { font-size: 15px; font-weight: bold; color: #222; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } .h-sub { display: flex; align-items: center; gap: 8px; margin-top: 5px; font-size: 12px; color: #4a6b7d; } .h-plate { display: inline-flex; direction: ltr; align-items: stretch; height: 24px; background: #ffd21f; border: 1.5px solid #111; border-radius: 4px; overflow: hidden; } .h-plate-strip { background: #1e5fa8; color: #fff; width: 18px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 6px; line-height: 1.1; font-weight: bold; flex-shrink: 0; } .h-plate-strip .hs { font-size: 7px; } .h-plate-num { font-size: 13px; font-weight: bold; color: #111; padding: 0 7px; display: flex; align-items: center; letter-spacing: .5px; } .h-meta { display: flex; flex-direction: column; align-items: flex-end; justify-content: space-between; margin-right: 8px; height: 40px; } .h-time { font-size: 11px; color: #8a99a3; direction: ltr; } .h-del { background: none; border: none; color: #b0bcc4; font-size: 18px; line-height: 1; cursor: pointer; padding: 0 2px; } .h-del:hover { color: #b42318; } .detail { display: none; } .detail.show { display: block; } .tabs { background: #ffffff; display: none; justify-content: space-around; align-items: stretch; border-bottom: 1px solid #e2e2e2; margin-top: 10px; } .tabs.show { display: flex; } .tab { flex: 1; text-align: center; padding: 10px 0 0; color: #4a6b7d; font-size: 13px; cursor: pointer; border-bottom: 3px solid transparent; } .tab .ic { display: block; font-size: 22px; margin-bottom: 6px; } .tab.active { color: #1f7ea9; font-weight: bold; border-bottom-color: #2a7fa8; } .hero { display: none; } .hero.show { display: block; } .brand-logo-container { width: 96px; height: 96px; margin: 12px auto 6px; background: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.12); border: 2px solid #eef2f5; padding: 10px; overflow: hidden; } .brand-logo { width: 100%; height: 100%; object-fit: contain; } .brand-badge { width: 100%; height: 100%; border-radius: 50%; color: #fff; font-size: 36px; font-weight: bold; display: flex; align-items: center; justify-content: center; } .car-name { text-align: center; font-size: 22px; color: #1f5f80; font-weight: bold; margin-top: 4px; } .car-trim { text-align: center; font-size: 18px; color: #2a7fa8; font-weight: bold; margin-top: 2px; } .car-photo { display: none; width: calc(100% - 20px); margin: 10px auto 0; max-height: 170px; object-fit: contain; border-radius: 10px; background: #fff; } .car-photo.show { display: block; } .photo-credit { display: none; text-align: center; font-size: 11px; color: #2a7fa8; margin-top: 4px; text-decoration: none; } .photo-credit.show { display: block; } .status-row { display: flex; justify-content: space-around; padding: 18px 6px 6px; } .st { text-align: center; width: 33%; } .st.clickable { cursor: pointer; } .st .st-ic { font-size: 30px; line-height: 1; height: 34px; display: flex; align-items: center; justify-content: center; } .st .st-main { font-size: 17px; font-weight: bold; margin-top: 8px; } .st .st-sub { font-size: 13px; margin-top: 3px; font-weight: bold; } .st.ok .st-main, .st.ok .st-sub { color: #3c8d2e; } .st.info .st-main, .st.info .st-sub { color: #2a7fa8; } .st.neutral .st-main, .st.neutral .st-sub { color: #777; } .st.bad .st-main, .st.bad .st-sub { color: #b42318; } .own-btn-wrap { display: none; text-align: center; margin: 4px 0 0; } .own-btn-wrap.show { display: block; } .own-btn { background: #fff; border: 1.5px solid #2a7fa8; color: #2a7fa8; border-radius: 20px; padding: 6px 16px; font-size: 13px; cursor: pointer; } .own-panel { display: none; margin: 10px 10px 0; } .own-panel.show { display: block; } .spec-card { background: #fff; border-radius: 14px; margin: 14px 10px 0; padding: 14px 4px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; box-shadow: 0 2px 6px rgba(42,127,168,.12); } .spec { text-align: center; } .spec .sp-ic { font-size: 20px; height: 28px; display: flex; align-items: center; justify-content: center; } .spec .sp-lbl { font-size: 11px; color: #4a6b7d; margin-top: 4px; line-height: 1.2; } .spec .sp-val { font-size: 13px; font-weight: bold; color: #1f7ea9; margin-top: 3px; direction: ltr; } .spec .sp-val.na { color: #aab8c2; font-weight: normal; direction: rtl; font-size: 12px; } .list-card { background: #fff; border-radius: 12px; margin: 12px 10px 0; overflow: hidden; box-shadow: 0 2px 6px rgba(42,127,168,.12); } .lrow { display: flex; align-items: center; padding: 11px 12px; border-bottom: 1px solid #f0f0f0; } .lrow:last-child { border-bottom: none; } .lrow .li { width: 32px; height: 32px; border-radius: 50%; background: #e6f2f9; display: flex; align-items: center; justify-content: center; margin-left: 10px; font-size: 16px; flex-shrink: 0; } .lrow .ll { color: #4a6b7d; font-size: 13px; text-align: right; } .lrow .sp { flex: 1; } .lrow .lv { color: #1f5f80; font-size: 13px; font-weight: bold; margin-right: 6px; direction: ltr; } .lrow .lv.na { color: #aab8c2; font-weight: normal; direction: rtl; } .lrow .lv.ok { color: #3c8d2e; } .lrow .lv.bad { color: #b42318; } .copy-btn { display: none; background: #e6f2f9; border: 1px solid #2a7fa8; color: #2a7fa8; border-radius: 14px; padding: 3px 10px; font-size: 12px; cursor: pointer; margin-right: 6px; flex-shrink: 0; } .copy-btn.show { display: inline-block; } .test-card { background: #fff; border-radius: 12px; margin: 12px 10px 0; padding: 12px; box-shadow: 0 2px 6px rgba(42,127,168,.12); } .test-row { display: flex; align-items: center; justify-content: space-between; padding: 8px 4px; border-bottom: 1px solid #f0f0f0; } .test-row:last-child { border-bottom: none; } .test-row .tl { color: #4a6b7d; font-size: 13px; } .test-row .tv { color: #1f5f80; font-size: 14px; font-weight: bold; direction: ltr; } .test-row .tv.na { color: #aab8c2; font-weight: normal; direction: rtl; } .test-countdown { text-align: center; font-size: 13px; font-weight: bold; color: #3c8d2e; margin-top: 8px; } .test-countdown.bad { color: #b42318; } .own-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 6px rgba(42,127,168,.12); font-size: 13px; } .own-table th { background: #2a7fa8; color: #fff; padding: 10px 6px; font-weight: bold; text-align: center; } .own-table td { padding: 10px 6px; text-align: center; color: #333; border-bottom: 1px solid #eef3f6; } .own-table tr:nth-child(even) td { background: #f7fbfd; } .own-table tr:last-child td { border-bottom: none; } .own-extra { background: #fff; border-radius: 12px; padding: 10px 14px; margin-top: 10px; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.05); } .own-extra .kv { padding: 4px 0; border-bottom: 1px dashed #eee; } .own-extra .kv:last-child { border-bottom: none; } .own-extra .k { color: #4a6b7d; } .own-extra .v { font-weight: bold; color: #1f5f80; direction: ltr; } .own-msg { background: #fff; border-radius: 12px; padding: 12px; font-size: 13px; color: #4a6b7d; text-align: center; margin-top: 4px; } </style> </head> <body> <div class="phone"> <div class="topbar"> <span class="i" id="favBtn">♡</span> <span class="t" id="topTitle">פרטי רכב</span> <span class="i hidden" id="backBtn">←</span> </div> <div class="search-box"> <div class="plate"> <div class="strip"> <span class="flag">✡</span> <span class="il">IL</span> <span class="he">ישראל</span> </div> <input type="text" id="plateInput" inputmode="numeric" placeholder="הקלד מספר רכב"> <button id="searchBtn">חפש</button> </div> <div id="loader" class="msg">מחפש במאגר משרד התחבורה...</div> <div id="errorMsg" class="msg err"></div> </div> <div id="history" class="history"> <div class="history-head"> <span class="h-title">חיפושים אחרונים</span> <button id="histClear" class="h-clear">נקה הכל</button> </div> <div id="historyList"></div> </div> <div id="detailView" class="detail"> <div id="kmLine" class="km-line"> <span class="km-ic">1½</span> <span id="kmText"></span> </div> <div id="tabs" class="tabs"> <div class="tab active" data-tab="general"><span class="ic">🚗</span>כללי</div> <div class="tab" data-tab="tech"><span class="ic">🔧</span>מפרט טכני</div> <div class="tab" data-tab="safety"><span class="ic">🛡️</span>בטיחות</div> <div class="tab" data-tab="env"><span class="ic">🌿</span>סביבה</div> </div> <div id="cardGeneral"> <div id="hero" class="hero"> <div class="brand-logo-container"> <img id="brandLogo" class="brand-logo" alt="סמל יצרן"> <div id="brandBadge" class="brand-badge" style="display:none;"></div> </div> <img id="carPhoto" class="car-photo" alt=""> <a id="photoCredit" class="photo-credit" target="_blank" rel="noopener"></a> <div class="car-name"><span id="heroName"></span></div> <div class="car-trim" id="heroTrim"></div> <div class="status-row"> <div id="stDisabled" class="st neutral"> <div class="st-ic">🅿️</div> <div class="st-main">תג נכה</div> <div class="st-sub"></div> </div> <div id="stOwn" class="st info clickable"> <div class="st-ic">🛡️</div> <div class="st-main">בעלות</div> <div class="st-sub"></div> </div> <div id="stTest" class="st neutral"> <div class="st-ic">📅</div> <div class="st-main">טסט</div> <div class="st-sub"></div> </div> </div> <div id="ownBtnWrap" class="own-btn-wrap"> <button id="ownBtn" class="own-btn">הצג הסטוריית בעלות</button> </div> <div id="ownPanel" class="own-panel"></div> <div class="spec-card"> <div class="spec"> <div class="sp-ic">🏁</div> <div class="sp-lbl">רמת גימור</div> <div class="sp-val" id="sTrim">אין נתון</div> </div> <div class="spec"> <div class="sp-ic">⚙️</div> <div class="sp-lbl">נפח מנוע</div> <div class="sp-val" id="sEngine">אין נתון</div> </div> <div class="spec"> <div class="sp-ic">⚡</div> <div class="sp-lbl">כוח סוס</div> <div class="sp-val" id="sHp">אין נתון</div> </div> <div class="spec"> <div class="sp-ic">⏱️</div> <div class="sp-lbl">0-100 קמ"ש</div> <div class="sp-val" id="sAccel">אין נתון</div> </div> <div class="spec"> <div class="sp-ic">🚗</div> <div class="sp-lbl">מרכב</div> <div class="sp-val na" id="sBody">אין נתון</div> </div> </div> <div class="list-card"> <div class="lrow"><span class="li">🏭</span><span class="ll">יצרן</span><span class="sp"></span><span class="lv" id="vManufacturer"></span></div> <div class="lrow"><span class="li">🚙</span><span class="ll">דגם</span><span class="sp"></span><span class="lv" id="vModel"></span></div> <div class="lrow"><span class="li">📅</span><span class="ll">שנת ייצור</span><span class="sp"></span><span class="lv" id="vYear"></span></div> <div class="lrow"><span class="li">🎨</span><span class="ll">צבע</span><span class="sp"></span><span class="lv" id="vColor"></span></div> <div class="lrow"><span class="li">🔢</span><span class="ll">מספר רכב</span><span class="sp"></span><span class="lv" id="vPlate"></span></div> <div class="lrow"><span class="li">🔩</span><span class="ll">מספר שלדה</span><span class="sp"></span><span class="lv" id="vChassis"></span><button id="copyChassis" class="copy-btn">העתק</button></div> <div class="lrow"><span class="li">🛞</span><span class="ll">מידות צמיג קדמי</span><span class="sp"></span><span class="lv" id="vTireFront"></span></div> <div class="lrow"><span class="li">🛞</span><span class="ll">מידות צמיג אחורי</span><span class="sp"></span><span class="lv" id="vTireRear"></span></div> <div class="lrow"><span class="li">🔁</span><span class="ll">מספר בעלים</span><span class="sp"></span><span class="lv" id="vOwners"></span></div> </div> <div class="test-card"> <div class="test-row"><span class="tl">טסט אחרון</span><span class="tv" id="vLastTest"></span></div> <div class="test-row"><span class="tl">טסט הבא (תוקף)</span><span class="tv" id="vNextTest"></span></div> <div class="test-countdown" id="vCountdown"></div> </div> </div> </div> <div id="cardTech" style="display:none"></div> <div id="cardSafety" style="display:none"></div> <div id="cardEnv" style="display:none"></div> </div> </div> <script> const API_BASE = "https://car-api-huth.onrender.com"; const HIST_KEY = "carSearchHistory"; const HIST_MAX = 10; let currentPlate = ""; let inDetail = false; function formatPlate(v) { const d = String(v || '').replace(/\D/g, '').slice(0, 8); if (d.length === 8) return d.slice(0, 3) + '-' + d.slice(3, 5) + '-' + d.slice(5); if (d.length === 7) return d.slice(0, 2) + '-' + d.slice(2, 5) + '-' + d.slice(5); return d; } function formatDashDate(v) { const m = String(v || '').match(/^(\d{4})-(\d{2})-(\d{2})/); if (!m) return v || 'אין נתון'; return parseInt(m[3], 10) + '-' + parseInt(m[2], 10) + '-' + m[1]; } // זיהוי המותג עם בדיקה משולבת של יצרן ודגם function findBrand(manufacturer, model) { const raw = ((manufacturer || '') + ' ' + (model || '')).toLowerCase(); // 1. קופרה בעדיפות if (raw.includes("cupra") || raw.includes("קופרה")) { return { slug: "cupra", color: "#8c6a3d", en: "Cupra" }; } // 2. שאר היצרנים const rules = [ [["seat", "סיאט"], "seat", "#c8a24a", "Seat"], [["skoda", "סקודה"], "skoda", "#3c8c3c", "Skoda"], [["hyundai", "יונדאי", "הונדאי"], "hyundai", "#1d3a6e", "Hyundai"], [["toyota", "טויוטה"], "toyota", "#cc0000", "Toyota"], [["kia", "קיה"], "kia", "#b10c1c", "Kia"], [["mazda", "מאזדה", "מזדה"], "mazda", "#a02020", "Mazda"], [["volkswagen", "פולקסווגן", "פולקסוואגן", "vw"], "volkswagen", "#1c4f8f", "Volkswagen"], [["audi", "אאודי", "אודי"], "audi", "#444", "Audi"], [["bmw", "ב.מ.וו", "ב מ וו"], "bmw", "#1c69d4", "BMW"], [["mercedes", "מרצדס"], "mercedes", "#555a60", "Mercedes-Benz"], [["renault", "רנו"], "renault", "#e8c200", "Renault"], [["peugeot", "פיג'ו", "פיגו"], "peugeot", "#1c2d4f", "Peugeot"], [["citroen", "סיטרואן"], "citroen", "#c0392b", "Citroen"], [["mitsubishi", "מיצובישי"], "mitsubishi", "#c0392b", "Mitsubishi"], [["nissan", "ניסאן"], "nissan", "#b30c20", "Nissan"], [["subaru", "סובארו"], "subaru", "#1c4f9c", "Subaru"], [["suzuki", "סוזוקי"], "suzuki", "#1c4f9c", "Suzuki"], [["honda", "הונדה"], "honda", "#cc0000", "Honda"], [["ford", "פורד"], "ford", "#1c4f9c", "Ford"], [["chevrolet", "שברולט"], "chevrolet", "#c8a000", "Chevrolet"], [["tesla", "טסלה"], "tesla", "#c0392b", "Tesla"], [["byd", "בי ווי די", "בי וי די", "ב.י.די"], "byd", "#c0392b", "BYD"], [["geely", "ג'ילי", "גילי"], "geely", "#1c4f9c", "Geely"], [["mg", "אם ג'י", "אם.ג'י", "מ.ג"], "mg", "#c00", "MG"], [["chery", "צ'רי", "צרי"], "chery", "#1c4f9c", "Chery"], [["porsche", "פורשה"], "porsche", "#8b1c1c", "Porsche"], [["volvo", "וולוו", "וולבו"], "volvo", "#1c3d6b", "Volvo"], [["jeep", "ג'יפ", "גיפ"], "jeep", "#556b2f", "Jeep"] ]; for (const [keys, slug, color, en] of rules) { if (keys.some(k => raw.includes(k))) { return { slug, color, en }; } } return null; } function cleanText(v) { if (v === null || v === undefined) return v; return String(v).trim().replace(/[.\s,;:]+$/g, ''); } // טעינה מקומית מתיקיית logos עם סיומת jpg function getLogoSrc(brand) { if (!brand) return null; return `logos/${brand.slug}.jpg`; } async function showBrand(manufacturer, brand) { const logo = document.getElementById('brandLogo'); const badge = document.getElementById('brandBadge'); const key = (manufacturer || '').trim(); badge.textContent = key ? key.charAt(0) : '?'; badge.style.background = brand ? brand.color : '#2a7fa8'; const logoSrc = getLogoSrc(brand); if (logoSrc) { logo.src = logoSrc; logo.style.display = 'block'; badge.style.display = 'none'; logo.onerror = function() { // אם התמונה עדיין לא קיימת בתיקיית logos, נציג אות ראשונה this.style.display = 'none'; badge.style.display = 'flex'; }; } else { logo.style.display = 'none'; badge.style.display = 'flex'; } } function extractYears(title) { const m = String(title).match(/(19|20)\d{2}/g); return m ? m.map(Number) : []; } function yearScore(title, carYear) { if (!carYear) return -1; const ys = extractYears(title); if (ys.length === 0) return -1; const diff = Math.min(...ys.map(y => Math.abs(y - carYear))); if (diff === 0) return 3; if (diff <= 2) return 1; return -99; } async function findCommonsPhoto(brandEn, model, trim, year) { const modelKey = String(model || '').toLowerCase().replace(/[^a-z0-9]/g, ''); const trimKey = String(trim || '').toLowerCase().replace(/[^a-z0-9]/g, ''); if (!modelKey) return null; const queries = [ brandEn + ' ' + model + (trim ? ' ' + trim : ''), brandEn + ' ' + model + (year ? ' ' + year : ''), brandEn + ' ' + model ]; const candidates = new Map(); for (const q of queries) { const url = 'https://commons.wikimedia.org/w/api.php?action=query&generator=search' + '&gsrsearch=' + encodeURIComponent(q) + '&gsrnamespace=6&gsrlimit=20' + '&prop=imageinfo&iiprop=url|mime|extmetadata&iiurlwidth=800&format=json&origin=*'; try { const r = await fetch(url); const j = await r.json(); const pages = j.query && j.query.pages ? Object.values(j.query.pages) : []; for (const p of pages) { if (!candidates.has(p.title)) candidates.set(p.title, p); } } catch (e) { } } let best = null; for (const p of candidates.values()) { const info = p.imageinfo && p.imageinfo[0]; if (!info || !/^image\/(jpeg|png)$/.test(info.mime)) continue; const titleKey = String(p.title || '').toLowerCase().replace(/[^a-z0-9]/g, ''); if (!titleKey.includes(modelKey)) continue; if (trimKey && !titleKey.includes(trimKey)) continue; const meta = info.extmetadata || {}; const license = meta.LicenseShortName && meta.LicenseShortName.value; if (!license || /non-free|all rights reserved/i.test(license)) continue; const ys = yearScore(p.title, year); if (ys === -99) continue; const score = ys + 1; if (!best || score > best.score) { best = { score, src: info.thumburl || info.url, page: info.descriptionurl || ('https://commons.wikimedia.org/wiki/' + encodeURIComponent(p.title)), license }; } } return best ? { src: best.src, page: best.page, license: best.license } : null; } async function showCarPhoto(brand, model, trim, year) { const img = document.getElementById('carPhoto'); const credit = document.getElementById('photoCredit'); img.classList.remove('show'); credit.classList.remove('show'); img.removeAttribute('src'); if (!brand || !model) return; const found = await findCommonsPhoto(brand.en, model, trim, year); if (found) { img.src = found.src; img.classList.add('show'); credit.href = found.page; credit.textContent = 'מקור התמונה: Wikimedia Commons · רישיון: ' + found.license; credit.classList.add('show'); } } function loadHistory() { try { const list = JSON.parse(localStorage.getItem(HIST_KEY)); return Array.isArray(list) ? list : []; } catch (e) { return []; } } function saveHistory(list) { try { localStorage.setItem(HIST_KEY, JSON.stringify(list)); } catch (e) { } } function addToHistory(entry) { const list = loadHistory().filter(x => x.plate !== entry.plate); list.unshift(entry); saveHistory(list.slice(0, HIST_MAX)); } function removeFromHistory(plate) { saveHistory(loadHistory().filter(x => x.plate !== plate)); renderHistory(); } function clearHistory() { saveHistory([]); renderHistory(); } function makePlateEl(number) { const wrap = document.createElement('span'); wrap.className = 'h-plate'; const strip = document.createElement('span'); strip.className = 'h-plate-strip'; const flag = document.createElement('span'); flag.className = 'hs'; flag.textContent = '✡'; const il = document.createElement('span'); il.textContent = 'IL'; strip.appendChild(flag); strip.appendChild(il); const num = document.createElement('span'); num.className = 'h-plate-num'; num.textContent = formatPlate(number); wrap.appendChild(strip); wrap.appendChild(num); return wrap; } function renderHistory() { const box = document.getElementById('history'); const listEl = document.getElementById('historyList'); const list = loadHistory(); listEl.textContent = ''; box.classList.toggle('show', list.length > 0 && !inDetail); for (const item of list) { const row = document.createElement('div'); row.className = 'h-row'; const icon = document.createElement('div'); icon.className = 'h-icon'; const brand = findBrand(item.manufacturer, item.name); const logoSrc = getLogoSrc(brand); if (logoSrc) { const img = document.createElement('img'); img.src = logoSrc; img.onerror = function() { this.remove(); icon.textContent = '🚗'; }; icon.appendChild(img); } else { icon.textContent = '🚗'; } row.appendChild(icon); const info = document.createElement('div'); info.className = 'h-info'; const name = document.createElement('div'); name.className = 'h-name'; name.textContent = item.name || 'רכב'; info.appendChild(name); const sub = document.createElement('div'); sub.className = 'h-sub'; sub.appendChild(makePlateEl(item.plate)); if (item.year) { const y = document.createElement('span'); y.textContent = item.year; sub.appendChild(y); } info.appendChild(sub); row.appendChild(info); const meta = document.createElement('div'); meta.className = 'h-meta'; const del = document.createElement('button'); del.className = 'h-del'; del.textContent = '×'; del.title = 'מחק מההיסטוריה'; del.addEventListener('click', e => { e.stopPropagation(); removeFromHistory(item.plate); }); meta.appendChild(del); const time = document.createElement('div'); time.className = 'h-time'; time.textContent = item.time || ''; meta.appendChild(time); row.appendChild(meta); row.addEventListener('click', () => { document.getElementById('plateInput').value = formatPlate(item.plate); searchCar(); }); listEl.appendChild(row); } } function showDetail() { inDetail = true; document.getElementById('detailView').classList.add('show'); document.getElementById('backBtn').classList.remove('hidden'); renderHistory(); window.scrollTo({ top: 0, behavior: 'smooth' }); } function showHome() { inDetail = false; document.getElementById('detailView').classList.remove('show'); document.getElementById('backBtn').classList.add('hidden'); document.getElementById('errorMsg').style.display = 'none'; closeOwnPanel(); currentPlate = ''; renderHistory(); window.scrollTo({ top: 0, behavior: 'smooth' }); } function setVal(id, value, suffix) { const el = document.getElementById(id); const cleaned = typeof value === 'string' ? cleanText(value) : value; const empty = cleaned === null || cleaned === undefined || cleaned === '' || cleaned === 'לא ידוע'; if (empty) { el.textContent = 'אין נתון'; el.classList.add('na'); } else { el.textContent = suffix ? cleaned + ' ' + suffix : cleaned; el.classList.remove('na'); } } function setStatusBlock(id, subText, cls) { const el = document.getElementById(id); el.className = 'st ' + (cls || 'neutral') + (id === 'stOwn' ? ' clickable' : ''); el.querySelector('.st-sub').textContent = subText || ''; } function fallbackCopy(text) { const t = document.createElement('textarea'); t.value = text; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0'; document.body.appendChild(t); t.select(); let ok = false; try { ok = document.execCommand('copy'); } catch (e) { ok = false; } t.remove(); return ok; } function copyText(text, btn) { const done = (ok) => { btn.textContent = ok ? 'הועתק ✓' : 'נסה שוב'; setTimeout(() => { btn.textContent = 'העתק'; }, 1500); }; if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(text) .then(() => done(true)) .catch(() => done(fallbackCopy(text))); } else { done(fallbackCopy(text)); } } function setupCopyButton(value) { const btn = document.getElementById('copyChassis'); btn.classList.remove('show'); btn.onclick = null; if (value) { btn.classList.add('show'); btn.textContent = 'העתק'; btn.onclick = () => copyText(value, btn); } } function parseDate(v) { if (!v) return null; const d = new Date(v); if (isNaN(d)) return null; return { y: d.getFullYear(), mo: d.getMonth() + 1, d: d.getDate() }; } function fmtDate(p) { if (!p) return 'אין נתון'; return String(p.d).padStart(2, '0') + '/' + String(p.mo).padStart(2, '0') + '/' + p.y; } function daysInMonth(y, mo) { return new Date(y, mo, 0).getDate(); } function calendarDiff(from, to) { let y = to.y - from.y; let m = to.mo - from.mo; let d = to.d - from.d; if (d < 0) { m--; const prevMo = to.mo - 1 === 0 ? 12 : to.mo - 1; const prevY = to.mo - 1 === 0 ? to.y - 1 : to.y; d += daysInMonth(prevY, prevMo); } if (m < 0) { y--; m += 12; } return { months: y * 12 + m, days: d }; } function durationWithDays(months, days) { const parts = []; if (months > 0) { const y = Math.floor(months / 12); const m = months % 12; let yPart = ''; if (y === 1) yPart = 'שנה'; else if (y === 2) yPart = 'שנתיים'; else if (y > 2) yPart = y + ' שנים'; let mPart = ''; if (m === 1) mPart = 'חודש'; else if (m > 1) mPart = m + ' חודשים'; if (yPart && mPart) parts.push(yPart + ' ו-' + mPart); else if (yPart || mPart) parts.push(yPart || mPart); } if (days > 0) parts.push(days === 1 ? 'יום אחד' : days + ' ימים'); return parts.join(' ו-'); } function renderTest(lastTest, nextTest) { setVal('vLastTest', lastTest ? fmtDate(lastTest) : null); setVal('vNextTest', nextTest ? fmtDate(nextTest) : null); const cd = document.getElementById('vCountdown'); cd.classList.remove('bad'); if (!nextTest) { cd.textContent = ''; return; } const now = new Date(); const today = { y: now.getFullYear(), mo: now.getMonth() + 1, d: now.getDate() }; const isFuture = nextTest.y > today.y || (nextTest.y === today.y && (nextTest.mo > today.mo || (nextTest.mo === today.mo && nextTest.d >= today.d))); if (isFuture) { const f = calendarDiff(today, nextTest); cd.textContent = 'טסט הבא בעוד ' + (durationWithDays(f.months, f.days) || 'פחות מיום'); } else { const b = calendarDiff(nextTest, today); cd.classList.add('bad'); cd.textContent = 'הטסט פג תוקף לפני ' + (durationWithDays(b.months, b.days) || 'פחות מיום'); } } function parseOwnDate(v) { if (!v) return null; const s = String(v).trim(); const m = s.match(/^(\d{4})(\d{2})$/) || s.match(/^(\d{4})-(\d{2})/); if (!m) return null; const y = parseInt(m[1], 10); const mo = parseInt(m[2], 10); const nowYear = new Date().getFullYear(); if (mo < 1 || mo > 12 || y < 1950 || y > nowYear) return null; return { y: y, mo: mo }; } function monthsBetween(a, b) { return (b.y - a.y) * 12 + (b.mo - a.mo); } function durationHe(months) { if (months <= 0) return '—'; const y = Math.floor(months / 12); const m = months % 12; let yPart = ''; if (y === 1) yPart = 'שנה'; else if (y === 2) yPart = 'שנתיים'; else if (y > 2) yPart = y + ' שנים'; let mPart = ''; if (m === 1) mPart = 'חודש'; else if (m > 1) mPart = m + ' חודשים'; if (yPart && mPart) return yPart + ' ו-' + mPart; return yPart || mPart; } function mmyyyy(p) { return String(p.mo).padStart(2, '0') + '/' + p.y; } function buildOwnRows(list) { const now = new Date(); const today = { y: now.getFullYear(), mo: now.getMonth() + 1 }; const items = list.map(o => ({ type: o.type, p: parseOwnDate(o.date) })); items.sort((a, b) => { if (!a.p) return 1; if (!b.p) return -1; return a.p.y !== b.p.y ? a.p.y - b.p.y : a.p.mo - b.p.mo; }); const rows = items.map((it, i) => { const next = items[i + 1]; let duration = '—'; if (it.p) { const end = next ? next.p : today; if (end) duration = durationHe(monthsBetween(it.p, end)); } return { type: it.type, date: it.p ? mmyyyy(it.p) : 'לא תקין', duration: duration }; }); return rows.reverse(); } function buildOwnTable(rows) { const table = document.createElement('table'); table.className = 'own-table'; const thead = document.createElement('thead'); const hr = document.createElement('tr'); ['בעלות', 'מתאריך', 'זמן בעלות'].forEach(t => { const th = document.createElement('th'); th.textContent = t; hr.appendChild(th); }); thead.appendChild(hr); table.appendChild(thead); const tbody = document.createElement('tbody'); rows.forEach(r => { const tr = document.createElement('tr'); [r.type, r.date, r.duration].forEach(v => { const td = document.createElement('td'); td.textContent = v; tr.appendChild(td); }); tbody.appendChild(tr); }); table.appendChild(tbody); return table; } function closeOwnPanel() { const p = document.getElementById('ownPanel'); p.classList.remove('show'); p.textContent = ''; document.getElementById('ownBtn').textContent = 'הצג הסטוריית בעלות'; } async function toggleOwnPanel() { const panel = document.getElementById('ownPanel'); if (panel.classList.contains('show')) { closeOwnPanel(); return; } if (!currentPlate) return; document.getElementById('ownBtn').textContent = 'הסתר הסטוריית בעלות'; panel.classList.add('show'); panel.textContent = ''; panel.scrollIntoView({ behavior: 'smooth', block: 'start' }); const msg = (text) => { const m = document.createElement('div'); m.className = 'own-msg'; m.textContent = text; panel.appendChild(m); }; msg('טוען היסטוריה...'); try { const r = await fetch(API_BASE + '/api/history/' + encodeURIComponent(currentPlate)); const j = await r.json(); panel.textContent = ''; if (!j.success) { msg(j.message || 'לא נמצאה היסטוריה לרכב זה'); return; } const h = j.history || {}; const list = j.ownershipList || []; if (list.length) { panel.appendChild(buildOwnTable(buildOwnRows(list))); } else { msg('אין מעברי בעלות במאגר לרכב זה. המאגר כולל רק רכבים פרטיים שנרשמו מ-2017 ואילך.'); } const extra = document.createElement('div'); extra.className = 'own-extra'; const rows = [ ['תאריך רישום ראשון', h.firstRegistration ? formatDashDate(h.firstRegistration) : null], ['ק"מ בטסט האחרון', h.kmSinceTest != null ? h.kmSinceTest.toLocaleString('he-IL') + ' ק"מ' : null] ]; for (const [k, v] of rows) { const line = document.createElement('div'); line.className = 'kv'; const kEl = document.createElement('span'); kEl.className = 'k'; kEl.textContent = k + ': '; const vEl = document.createElement('span'); vEl.className = 'v'; vEl.textContent = v || 'אין נתון'; line.appendChild(kEl); line.appendChild(vEl); extra.appendChild(line); } panel.appendChild(extra); if (h.changes && h.changes.length) { const c = document.createElement('div'); c.className = 'own-extra'; c.textContent = 'שינויים שנרשמו: ' + h.changes.join(' · '); panel.appendChild(c); } } catch (e) { panel.textContent = ''; msg('שגיאה בטעינת ההיסטוריה'); } } async function searchCar() { const plate = document.getElementById('plateInput').value.replace(/\D/g, ''); const btn = document.getElementById('searchBtn'); const loader = document.getElementById('loader'); const err = document.getElementById('errorMsg'); err.style.display = 'none'; document.getElementById('kmLine').classList.remove('show'); document.getElementById('ownBtnWrap').classList.remove('show'); document.getElementById('cardGeneral').style.display = 'none'; document.getElementById('tabs').classList.remove('show'); document.getElementById('hero').classList.remove('show'); setupCopyButton(null); closeOwnPanel(); currentPlate = ''; if (plate.length < 7) { showMsg('errorMsg', 'נא להזין מספר רכב תקין'); err.classList.add('err'); return; } loader.style.display = 'block'; btn.disabled = true; try { const r = await fetch(API_BASE + '/api/car/' + encodeURIComponent(plate)); const j = await r.json(); loader.style.display = 'none'; if (!j.success || !j.data) { showMsg('errorMsg', j.message || 'מספר הרכב אינו קיים במאגר משרד התחבורה'); err.classList.add('err'); return; } const d = j.data; currentPlate = plate; const brand = findBrand(d.manufacturer, d.model); const model = cleanText(d.model || ''); const trim = cleanText(d.trim || ''); await showBrand(d.manufacturer, brand); showCarPhoto(brand, model, trim, d.year); const kmLine = document.getElementById('kmLine'); if (d.kmSinceTest != null) { document.getElementById('kmText').textContent = d.kmSinceTest.toLocaleString('he-IL') + ' ק"מ - קילומטראז\' מעודכן מהטסט האחרון'; kmLine.classList.add('show'); } document.getElementById('heroName').textContent = cleanText((d.manufacturer || '') + ' ' + (d.model || '')); document.getElementById('heroTrim').textContent = trim; if (d.testValid === null || d.testValid === undefined) setStatusBlock('stTest', 'אין נתון', 'neutral'); else if (d.testValid) setStatusBlock('stTest', 'בתוקף', 'ok'); else setStatusBlock('stTest', 'פג תוקף', 'bad'); setStatusBlock('stOwn', d.ownership || 'אין נתון', 'info'); if (Number(d.owners) > 0) document.getElementById('ownBtnWrap').classList.add('show'); if (d.disabled === null || d.disabled === undefined) setStatusBlock('stDisabled', 'אין נתון', 'neutral'); else if (d.disabled) setStatusBlock('stDisabled', 'יש', 'ok'); else setStatusBlock('stDisabled', 'אין', 'neutral'); setVal('sBody', null); setVal('sHp', d.horsepower, 'כ"ס'); setVal('sEngine', d.engineCc, 'סמ"ק'); setVal('sAccel', d.acceleration0to100, 'שניות'); setVal('sTrim', d.trim); setVal('vManufacturer', d.manufacturer); setVal('vModel', d.model); setVal('vYear', d.year); setVal('vColor', d.color); setVal('vPlate', formatPlate(plate)); setVal('vChassis', d.chassis); setupCopyButton(d.chassis); setVal('vTireFront', d.tireFront); setVal('vTireRear', d.tireRear); setVal('vOwners', d.owners); renderTest(parseDate(d.lastTest), parseDate(d.testExpiry)); document.getElementById('hero').classList.add('show'); document.getElementById('tabs').classList.add('show'); document.getElementById('cardGeneral').style.display = ''; addToHistory({ plate: plate, manufacturer: d.manufacturer, name: cleanText((d.manufacturer || '') + ' ' + (d.model || '')), year: d.year ? String(d.year) : '', time: new Date().toLocaleTimeString('he-IL', { hour: '2-digit', minute: '2-digit' }) }); showDetail(); } catch (e) { loader.style.display = 'none'; showMsg('errorMsg', 'שגיאה בחיבור לשרת. השרת עלול להיות במצב המתנה, נסה שוב בעוד רגע'); err.classList.add('err'); console.error(e); } finally { btn.disabled = false; } } function showMsg(id, text) { const el = document.getElementById(id); el.textContent = text; el.style.display = 'block'; } document.getElementById('searchBtn').addEventListener('click', searchCar); document.getElementById('plateInput').addEventListener('input', e => { e.target.value = formatPlate(e.target.value); }); document.getElementById('plateInput').addEventListener('keydown', e => { if (e.key === 'Enter') searchCar(); }); document.getElementById('histClear').addEventListener('click', clearHistory); document.getElementById('stOwn').addEventListener('click', toggleOwnPanel); document.getElementById('ownBtn').addEventListener('click', toggleOwnPanel); document.getElementById('backBtn').addEventListener('click', showHome); document.querySelectorAll('.tab').forEach(tab => { tab.addEventListener('click', () => { document.querySelectorAll('.tab').forEach(t => t.classList.remove('active')); tab.classList.add('active'); const name = tab.dataset.tab; document.getElementById('cardGeneral').style.display = name === 'general' ? '' : 'none'; }); }); renderHistory(); </script> </body> </html>
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>פרטי רכב</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, Helvetica, sans-serif; background: #f0f0f0; color: #333; direction: rtl; }
+  .phone { max-width: 380px; margin: 0 auto; background: #f0f0f0; min-height: 100vh; padding-bottom: 20px; }
+
+  .topbar { background: #2a7fa8; color: #fff; height: 52px; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; }
+  .topbar .t { font-size: 18px; flex: 1; text-align: center; }
+  .topbar .i { font-size: 20px; width: 28px; text-align: center; cursor: pointer; }
+  .topbar .i.hidden { visibility: hidden; }
+
+  .search-box { background: #fff; padding: 16px 12px 14px; }
+  .plate { display: flex; align-items: center; background: #ffd21f; border: 2px solid #111; border-radius: 8px; height: 60px; overflow: hidden; direction: ltr; }
+  .plate .strip { background: #1e5fa8; color: #fff; width: 50px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; }
+  .plate .strip .flag { font-size: 12px; }
+  .plate .strip .il { font-size: 18px; font-weight: bold; line-height: 1; }
+  .plate .strip .he { font-size: 8px; }
+  .plate input { flex: 1; min-width: 0; height: 100%; border: none; background: transparent; outline: none; font-size: 30px; font-weight: bold; text-align: center; letter-spacing: 1px; color: #111; }
+  .plate input::placeholder { color: #8a7a2a; font-size: 15px; letter-spacing: 0; font-weight: normal; }
+  .plate button { border: none; background: #2a7fa8; color: #fff; height: 100%; padding: 0 12px; font-size: 14px; cursor: pointer; flex-shrink: 0; }
+  .plate button:disabled { background: #9cc5da; }
+  .msg { text-align: center; color: #666; font-size: 13px; padding: 8px; display: none; }
+  .msg.err { color: #b42318; background: #fde8e7; border-radius: 8px; margin-top: 8px; }
+
+  .km-line { display: none; align-items: center; justify-content: center; gap: 6px; color: #2e8b57; font-size: 13px; background: #fff; padding: 0 12px 12px; }
+  .km-line.show { display: flex; }
+  .km-line .km-ic { border: 2px solid #2e8b57; border-radius: 4px; padding: 0 3px; font-size: 11px; font-weight: bold; }
+
+  .history { background: #fff; margin: 12px 10px 0; border-radius: 14px; box-shadow: 0 2px 6px rgba(42,127,168,.12); display: none; overflow: hidden; }
+  .history.show { display: block; }
+  .history-head { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-bottom: 1px solid #eef3f6; }
+  .history-head .h-title { font-size: 15px; font-weight: bold; color: #1f5f80; }
+  .history-head .h-clear { background: none; border: none; color: #b42318; font-size: 13px; cursor: pointer; }
+  .h-row { display: flex; align-items: center; padding: 12px 14px; border-bottom: 1px solid #f0f3f5; cursor: pointer; }
+  .h-row:last-child { border-bottom: none; }
+  .h-row:active { background: #f5fafc; }
+  .h-icon { width: 44px; height: 44px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; margin-left: 12px; overflow: hidden; border: 1px solid #e2e8f0; }
+  .h-icon img { width: 85%; height: 85%; object-fit: contain; }
+  .h-info { flex: 1; min-width: 0; text-align: right; }
+  .h-name { font-size: 15px; font-weight: bold; color: #222; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .h-sub { display: flex; align-items: center; gap: 8px; margin-top: 5px; font-size: 12px; color: #4a6b7d; }
+
+  .h-plate { display: inline-flex; direction: ltr; align-items: stretch; height: 24px; background: #ffd21f; border: 1.5px solid #111; border-radius: 4px; overflow: hidden; }
+  .h-plate-strip { background: #1e5fa8; color: #fff; width: 18px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 6px; line-height: 1.1; font-weight: bold; flex-shrink: 0; }
+  .h-plate-strip .hs { font-size: 7px; }
+  .h-plate-num { font-size: 13px; font-weight: bold; color: #111; padding: 0 7px; display: flex; align-items: center; letter-spacing: .5px; }
+
+  .h-meta { display: flex; flex-direction: column; align-items: flex-end; justify-content: space-between; margin-right: 8px; height: 40px; }
+  .h-time { font-size: 11px; color: #8a99a3; direction: ltr; }
+  .h-del { background: none; border: none; color: #b0bcc4; font-size: 18px; line-height: 1; cursor: pointer; padding: 0 2px; }
+  .h-del:hover { color: #b42318; }
+
+  .detail { display: none; }
+  .detail.show { display: block; }
+
+  .tabs { background: #ffffff; display: none; justify-content: space-around; align-items: stretch; border-bottom: 1px solid #e2e2e2; margin-top: 10px; }
+  .tabs.show { display: flex; }
+  .tab { flex: 1; text-align: center; padding: 10px 0 0; color: #4a6b7d; font-size: 13px; cursor: pointer; border-bottom: 3px solid transparent; }
+  .tab .ic { display: block; font-size: 22px; margin-bottom: 6px; }
+  .tab.active { color: #1f7ea9; font-weight: bold; border-bottom-color: #2a7fa8; }
+
+  .hero { display: none; }
+  .hero.show { display: block; }
+
+  .brand-logo-container {
+    width: 96px;
+    height: 96px;
+    margin: 12px auto 6px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    border: 2px solid #eef2f5;
+    padding: 10px;
+    overflow: hidden;
+  }
+  .brand-logo { width: 100%; height: 100%; object-fit: contain; }
+  .brand-badge { width: 100%; height: 100%; border-radius: 50%; color: #fff; font-size: 36px; font-weight: bold; display: flex; align-items: center; justify-content: center; }
+
+  .car-name { text-align: center; font-size: 22px; color: #1f5f80; font-weight: bold; margin-top: 4px; }
+  .car-trim { text-align: center; font-size: 18px; color: #2a7fa8; font-weight: bold; margin-top: 2px; }
+
+  .status-row { display: flex; justify-content: space-around; padding: 18px 6px 6px; }
+  .st { text-align: center; width: 33%; }
+  .st.clickable { cursor: pointer; }
+  .st .st-ic { font-size: 30px; line-height: 1; height: 34px; display: flex; align-items: center; justify-content: center; }
+  .st .st-main { font-size: 17px; font-weight: bold; margin-top: 8px; }
+  .st .st-sub { font-size: 13px; margin-top: 3px; font-weight: bold; }
+  .st.ok .st-main, .st.ok .st-sub { color: #3c8d2e; }
+  .st.info .st-main, .st.info .st-sub { color: #2a7fa8; }
+  .st.neutral .st-main, .st.neutral .st-sub { color: #777; }
+  .st.bad .st-main, .st.bad .st-sub { color: #b42318; }
+
+  .own-btn-wrap { display: none; text-align: center; margin: 4px 0 0; }
+  .own-btn-wrap.show { display: block; }
+  .own-btn { background: #fff; border: 1.5px solid #2a7fa8; color: #2a7fa8; border-radius: 20px; padding: 6px 16px; font-size: 13px; cursor: pointer; }
+
+  .own-panel { display: none; margin: 10px 10px 0; }
+  .own-panel.show { display: block; }
+
+  .spec-card { background: #fff; border-radius: 14px; margin: 14px 10px 0; padding: 14px 4px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; box-shadow: 0 2px 6px rgba(42,127,168,.12); }
+  .spec { text-align: center; }
+  .spec .sp-ic { font-size: 20px; height: 28px; display: flex; align-items: center; justify-content: center; }
+  .spec .sp-lbl { font-size: 11px; color: #4a6b7d; margin-top: 4px; line-height: 1.2; }
+  .spec .sp-val { font-size: 13px; font-weight: bold; color: #1f7ea9; margin-top: 3px; direction: ltr; }
+  .spec .sp-val.na { color: #aab8c2; font-weight: normal; direction: rtl; font-size: 12px; }
+
+  .list-card { background: #fff; border-radius: 12px; margin: 12px 10px 0; overflow: hidden; box-shadow: 0 2px 6px rgba(42,127,168,.12); }
+  .lrow { display: flex; align-items: center; padding: 11px 12px; border-bottom: 1px solid #f0f0f0; }
+  .lrow:last-child { border-bottom: none; }
+  .lrow .li { width: 32px; height: 32px; border-radius: 50%; background: #e6f2f9; display: flex; align-items: center; justify-content: center; margin-left: 10px; font-size: 16px; flex-shrink: 0; }
+  .lrow .ll { color: #4a6b7d; font-size: 13px; text-align: right; }
+  .lrow .sp { flex: 1; }
+  .lrow .lv { color: #1f5f80; font-size: 13px; font-weight: bold; margin-right: 6px; direction: ltr; }
+  .lrow .lv.na { color: #aab8c2; font-weight: normal; direction: rtl; }
+  .lrow .lv.ok { color: #3c8d2e; }
+  .lrow .lv.bad { color: #b42318; }
+  .copy-btn { display: none; background: #e6f2f9; border: 1px solid #2a7fa8; color: #2a7fa8; border-radius: 14px; padding: 3px 10px; font-size: 12px; cursor: pointer; margin-right: 6px; flex-shrink: 0; }
+  .copy-btn.show { display: inline-block; }
+
+  .test-card { background: #fff; border-radius: 12px; margin: 12px 10px 0; padding: 12px; box-shadow: 0 2px 6px rgba(42,127,168,.12); }
+  .test-row { display: flex; align-items: center; justify-content: space-between; padding: 8px 4px; border-bottom: 1px solid #f0f0f0; }
+  .test-row:last-child { border-bottom: none; }
+  .test-row .tl { color: #4a6b7d; font-size: 13px; }
+  .test-row .tv { color: #1f5f80; font-size: 14px; font-weight: bold; direction: ltr; }
+  .test-row .tv.na { color: #aab8c2; font-weight: normal; direction: rtl; }
+  .test-countdown { text-align: center; font-size: 13px; font-weight: bold; color: #3c8d2e; margin-top: 8px; }
+  .test-countdown.bad { color: #b42318; }
+
+  .own-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 6px rgba(42,127,168,.12); font-size: 13px; }
+  .own-table th { background: #2a7fa8; color: #fff; padding: 10px 6px; font-weight: bold; text-align: center; }
+  .own-table td { padding: 10px 6px; text-align: center; color: #333; border-bottom: 1px solid #eef3f6; }
+  .own-table tr:nth-child(even) td { background: #f7fbfd; }
+  .own-table tr:last-child td { border-bottom: none; }
+  .own-extra { background: #fff; border-radius: 12px; padding: 10px 14px; margin-top: 10px; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.05); }
+  .own-extra .kv { padding: 4px 0; border-bottom: 1px dashed #eee; }
+  .own-extra .kv:last-child { border-bottom: none; }
+  .own-extra .k { color: #4a6b7d; }
+  .own-extra .v { font-weight: bold; color: #1f5f80; direction: ltr; }
+  .own-msg { background: #fff; border-radius: 12px; padding: 12px; font-size: 13px; color: #4a6b7d; text-align: center; margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="phone">
+
+  <div class="topbar">
+    <span class="i" id="favBtn">♡</span>
+    <span class="t" id="topTitle">פרטי רכב</span>
+    <span class="i hidden" id="backBtn">←</span>
+  </div>
+
+  <div class="search-box">
+    <div class="plate">
+      <div class="strip">
+        <span class="flag">✡</span>
+        <span class="il">IL</span>
+        <span class="he">ישראל</span>
+      </div>
+      <input type="text" id="plateInput" inputmode="numeric" placeholder="הקלד מספר רכב">
+      <button id="searchBtn">חפש</button>
+    </div>
+    <div id="loader" class="msg">מחפש במאגר משרד התחבורה...</div>
+    <div id="errorMsg" class="msg err"></div>
+  </div>
+
+  <div id="history" class="history">
+    <div class="history-head">
+      <span class="h-title">חיפושים אחרונים</span>
+      <button id="histClear" class="h-clear">נקה הכל</button>
+    </div>
+    <div id="historyList"></div>
+  </div>
+
+  <div id="detailView" class="detail">
+    <div id="kmLine" class="km-line">
+      <span class="km-ic">1½</span>
+      <span id="kmText"></span>
+    </div>
+
+    <div id="tabs" class="tabs">
+      <div class="tab active" data-tab="general"><span class="ic">🚗</span>כללי</div>
+      <div class="tab" data-tab="tech"><span class="ic">🔧</span>מפרט טכני</div>
+      <div class="tab" data-tab="safety"><span class="ic">🛡️</span>בטיחות</div>
+      <div class="tab" data-tab="env"><span class="ic">🌿</span>סביבה</div>
+    </div>
+
+    <div id="cardGeneral">
+      <div id="hero" class="hero">
+        <div class="brand-logo-container">
+          <img id="brandLogo" class="brand-logo" alt="סמל יצרן">
+          <div id="brandBadge" class="brand-badge" style="display:none;"></div>
+        </div>
+
+        <div class="car-name"><span id="heroName"></span></div>
+        <div class="car-trim" id="heroTrim"></div>
+
+        <div class="status-row">
+          <div id="stDisabled" class="st neutral">
+            <div class="st-ic">🅿️</div>
+            <div class="st-main">תג נכה</div>
+            <div class="st-sub"></div>
+          </div>
+          <div id="stOwn" class="st info clickable">
+            <div class="st-ic">🛡️</div>
+            <div class="st-main">בעלות</div>
+            <div class="st-sub"></div>
+          </div>
+          <div id="stTest" class="st neutral">
+            <div class="st-ic">📅</div>
+            <div class="st-main">טסט</div>
+            <div class="st-sub"></div>
+          </div>
+        </div>
+
+        <div id="ownBtnWrap" class="own-btn-wrap">
+          <button id="ownBtn" class="own-btn">הצג הסטוריית בעלות</button>
+        </div>
+        <div id="ownPanel" class="own-panel"></div>
+
+        <div class="spec-card">
+          <div class="spec">
+            <div class="sp-ic">🏁</div>
+            <div class="sp-lbl">רמת גימור</div>
+            <div class="sp-val" id="sTrim">אין נתון</div>
+          </div>
+          <div class="spec">
+            <div class="sp-ic">⚙️</div>
+            <div class="sp-lbl">נפח מנוע</div>
+            <div class="sp-val" id="sEngine">אין נתון</div>
+          </div>
+          <div class="spec">
+            <div class="sp-ic">⚡</div>
+            <div class="sp-lbl">כוח סוס</div>
+            <div class="sp-val" id="sHp">אין נתון</div>
+          </div>
+          <div class="spec">
+            <div class="sp-ic">⏱️</div>
+            <div class="sp-lbl">0-100 קמ"ש</div>
+            <div class="sp-val" id="sAccel">אין נתון</div>
+          </div>
+          <div class="spec">
+            <div class="sp-ic">🚗</div>
+            <div class="sp-lbl">מרכב</div>
+            <div class="sp-val na" id="sBody">אין נתון</div>
+          </div>
+        </div>
+
+        <div class="list-card">
+          <div class="lrow"><span class="li">🏭</span><span class="ll">יצרן</span><span class="sp"></span><span class="lv" id="vManufacturer"></span></div>
+          <div class="lrow"><span class="li">🚙</span><span class="ll">דגם</span><span class="sp"></span><span class="lv" id="vModel"></span></div>
+          <div class="lrow"><span class="li">📅</span><span class="ll">שנת ייצור</span><span class="sp"></span><span class="lv" id="vYear"></span></div>
+          <div class="lrow"><span class="li">🎨</span><span class="ll">צבע</span><span class="sp"></span><span class="lv" id="vColor"></span></div>
+          <div class="lrow"><span class="li">🔢</span><span class="ll">מספר רכב</span><span class="sp"></span><span class="lv" id="vPlate"></span></div>
+          <div class="lrow"><span class="li">🔩</span><span class="ll">מספר שלדה</span><span class="sp"></span><span class="lv" id="vChassis"></span><button id="copyChassis" class="copy-btn">העתק</button></div>
+          <div class="lrow"><span class="li">🛞</span><span class="ll">מידות צמיג קדמי</span><span class="sp"></span><span class="lv" id="vTireFront"></span></div>
+          <div class="lrow"><span class="li">🛞</span><span class="ll">מידות צמיג אחורי</span><span class="sp"></span><span class="lv" id="vTireRear"></span></div>
+          <div class="lrow"><span class="li">🔁</span><span class="ll">מספר בעלים</span><span class="sp"></span><span class="lv" id="vOwners"></span></div>
+        </div>
+
+        <div class="test-card">
+          <div class="test-row"><span class="tl">טסט אחרון</span><span class="tv" id="vLastTest"></span></div>
+          <div class="test-row"><span class="tl">טסט הבא (תוקף)</span><span class="tv" id="vNextTest"></span></div>
+          <div class="test-countdown" id="vCountdown"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="cardTech" style="display:none"></div>
+    <div id="cardSafety" style="display:none"></div>
+    <div id="cardEnv" style="display:none"></div>
+  </div>
+
+</div>
+
+<script>
+  const API_BASE = "https://car-api-huth.onrender.com";
+  const HIST_KEY = "carSearchHistory";
+  const HIST_MAX = 10;
+  let currentPlate = "";
+  let inDetail = false;
+
+  function formatPlate(v) {
+    const d = String(v || '').replace(/\D/g, '').slice(0, 8);
+    if (d.length === 8) return d.slice(0, 3) + '-' + d.slice(3, 5) + '-' + d.slice(5);
+    if (d.length === 7) return d.slice(0, 2) + '-' + d.slice(2, 5) + '-' + d.slice(5);
+    return d;
+  }
+
+  function formatDashDate(v) {
+    const m = String(v || '').match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if (!m) return v || 'אין נתון';
+    return parseInt(m[3], 10) + '-' + parseInt(m[2], 10) + '-' + m[1];
+  }
+
+  function findBrand(manufacturer, model) {
+    const raw = ((manufacturer || '') + ' ' + (model || '')).toLowerCase();
+
+    if (raw.includes("cupra") || raw.includes("קופרה")) {
+      return { slug: "cupra", color: "#8c6a3d", en: "Cupra" };
+    }
+
+    const rules = [
+      [["seat", "סיאט"], "seat", "#c8a24a", "Seat"],
+      [["skoda", "סקודה"], "skoda", "#3c8c3c", "Skoda"],
+      [["hyundai", "יונדאי", "הונדאי"], "hyundai", "#1d3a6e", "Hyundai"],
+      [["toyota", "טויוטה"], "toyota", "#cc0000", "Toyota"],
+      [["kia", "קיה"], "kia", "#b10c1c", "Kia"],
+      [["mazda", "מאזדה", "מזדה"], "mazda", "#a02020", "Mazda"],
+      [["volkswagen", "פולקסווגן", "פולקסוואגן", "vw"], "volkswagen", "#1c4f8f", "Volkswagen"],
+      [["audi", "אאודי", "אודי"], "audi", "#444", "Audi"],
+      [["bmw", "ב.מ.וו", "ב מ וו"], "bmw", "#1c69d4", "BMW"],
+      [["mercedes", "מרצדס"], "mercedes", "#555a60", "Mercedes-Benz"],
+      [["renault", "רנו"], "renault", "#e8c200", "Renault"],
+      [["peugeot", "פיג'ו", "פיגו"], "peugeot", "#1c2d4f", "Peugeot"],
+      [["citroen", "סיטרואן"], "citroen", "#c0392b", "Citroen"],
+      [["mitsubishi", "מיצובישי"], "mitsubishi", "#c0392b", "Mitsubishi"],
+      [["nissan", "ניסאן"], "nissan", "#b30c20", "Nissan"],
+      [["subaru", "סובארו"], "subaru", "#1c4f9c", "Subaru"],
+      [["suzuki", "סוזוקי"], "suzuki", "#1c4f9c", "Suzuki"],
+      [["honda", "הונדה"], "honda", "#cc0000", "Honda"],
+      [["ford", "פורד"], "ford", "#1c4f9c", "Ford"],
+      [["chevrolet", "שברולט"], "chevrolet", "#c8a000", "Chevrolet"],
+      [["tesla", "טסלה"], "tesla", "#c0392b", "Tesla"],
+      [["byd", "בי ווי די", "בי וי די", "ב.י.די"], "byd", "#c0392b", "BYD"],
+      [["geely", "ג'ילי", "גילי"], "geely", "#1c4f9c", "Geely"],
+      [["mg", "אם ג'י", "אם.ג'י", "מ.ג"], "mg", "#c00", "MG"],
+      [["chery", "צ'רי", "צרי"], "chery", "#1c4f9c", "Chery"],
+      [["porsche", "פורשה"], "porsche", "#8b1c1c", "Porsche"],
+      [["volvo", "וולוו", "וולבו"], "volvo", "#1c3d6b", "Volvo"],
+      [["jeep", "ג'יפ", "גיפ"], "jeep", "#556b2f", "Jeep"]
+    ];
+
+    for (const [keys, slug, color, en] of rules) {
+      if (keys.some(k => raw.includes(k))) {
+        return { slug, color, en };
+      }
+    }
+    return null;
+  }
+
+  function cleanText(v) {
+    if (v === null || v === undefined) return v;
+    return String(v).trim().replace(/[.\s,;:]+$/g, '');
+  }
+
+  function getLogoSrc(brand) {
+    if (!brand) return null;
+    return `logos/${brand.slug}.jpg`;
+  }
+
+  async function showBrand(manufacturer, brand) {
+    const logo = document.getElementById('brandLogo');
+    const badge = document.getElementById('brandBadge');
+    const key = (manufacturer || '').trim();
+
+    badge.textContent = key ? key.charAt(0) : '?';
+    badge.style.background = brand ? brand.color : '#2a7fa8';
+
+    const logoSrc = getLogoSrc(brand);
+    if (logoSrc) {
+      logo.src = logoSrc;
+      logo.style.display = 'block';
+      badge.style.display = 'none';
+      logo.onerror = function() {
+        this.style.display = 'none';
+        badge.style.display = 'flex';
+      };
+    } else {
+      logo.style.display = 'none';
+      badge.style.display = 'flex';
+    }
+  }
+
+  function loadHistory() {
+    try {
+      const list = JSON.parse(localStorage.getItem(HIST_KEY));
+      return Array.isArray(list) ? list : [];
+    } catch (e) { return []; }
+  }
+
+  function saveHistory(list) {
+    try { localStorage.setItem(HIST_KEY, JSON.stringify(list)); }
+    catch (e) { }
+  }
+
+  function addToHistory(entry) {
+    const list = loadHistory().filter(x => x.plate !== entry.plate);
+    list.unshift(entry);
+    saveHistory(list.slice(0, HIST_MAX));
+  }
+
+  function removeFromHistory(plate) {
+    saveHistory(loadHistory().filter(x => x.plate !== plate));
+    renderHistory();
+  }
+
+  function clearHistory() {
+    saveHistory([]);
+    renderHistory();
+  }
+
+  function makePlateEl(number) {
+    const wrap = document.createElement('span');
+    wrap.className = 'h-plate';
+
+    const strip = document.createElement('span');
+    strip.className = 'h-plate-strip';
+    const flag = document.createElement('span');
+    flag.className = 'hs';
+    flag.textContent = '✡';
+    const il = document.createElement('span');
+    il.textContent = 'IL';
+    strip.appendChild(flag);
+    strip.appendChild(il);
+
+    const num = document.createElement('span');
+    num.className = 'h-plate-num';
+    num.textContent = formatPlate(number);
+
+    wrap.appendChild(strip);
+    wrap.appendChild(num);
+    return wrap;
+  }
+
+  function renderHistory() {
+    const box = document.getElementById('history');
+    const listEl = document.getElementById('historyList');
+    const list = loadHistory();
+
+    listEl.textContent = '';
+    box.classList.toggle('show', list.length > 0 && !inDetail);
+
+    for (const item of list) {
+      const row = document.createElement('div');
+      row.className = 'h-row';
+
+      const icon = document.createElement('div');
+      icon.className = 'h-icon';
+
+      const brand = findBrand(item.manufacturer, item.name);
+      const logoSrc = getLogoSrc(brand);
+
+      if (logoSrc) {
+        const img = document.createElement('img');
+        img.src = logoSrc;
+        img.onerror = function() {
+          this.remove();
+          icon.textContent = '🚗';
+        };
+        icon.appendChild(img);
+      } else {
+        icon.textContent = '🚗';
+      }
+
+      row.appendChild(icon);
+
+      const info = document.createElement('div');
+      info.className = 'h-info';
+
+      const name = document.createElement('div');
+      name.className = 'h-name';
+      name.textContent = item.name || 'רכב';
+      info.appendChild(name);
+
+      const sub = document.createElement('div');
+      sub.className = 'h-sub';
+      sub.appendChild(makePlateEl(item.plate));
+
+      if (item.year) {
+        const y = document.createElement('span');
+        y.textContent = item.year;
+        sub.appendChild(y);
+      }
+      info.appendChild(sub);
+      row.appendChild(info);
+
+      const meta = document.createElement('div');
+      meta.className = 'h-meta';
+
+      const del = document.createElement('button');
+      del.className = 'h-del';
+      del.textContent = '×';
+      del.title = 'מחק מההיסטוריה';
+      del.addEventListener('click', e => {
+        e.stopPropagation();
+        removeFromHistory(item.plate);
+      });
+      meta.appendChild(del);
+
+      const time = document.createElement('div');
+      time.className = 'h-time';
+      time.textContent = item.time || '';
+      meta.appendChild(time);
+
+      row.appendChild(meta);
+
+      row.addEventListener('click', () => {
+        document.getElementById('plateInput').value = formatPlate(item.plate);
+        searchCar();
+      });
+
+      listEl.appendChild(row);
+    }
+  }
+
+  function showDetail() {
+    inDetail = true;
+    document.getElementById('detailView').classList.add('show');
+    document.getElementById('backBtn').classList.remove('hidden');
+    renderHistory();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function showHome() {
+    inDetail = false;
+    document.getElementById('detailView').classList.remove('show');
+    document.getElementById('backBtn').classList.add('hidden');
+    document.getElementById('errorMsg').style.display = 'none';
+    closeOwnPanel();
+    currentPlate = '';
+    renderHistory();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function setVal(id, value, suffix) {
+    const el = document.getElementById(id);
+    const cleaned = typeof value === 'string' ? cleanText(value) : value;
+    const empty = cleaned === null || cleaned === undefined || cleaned === '' || cleaned === 'לא ידוע';
+    if (empty) { el.textContent = 'אין נתון'; el.classList.add('na'); }
+    else { el.textContent = suffix ? cleaned + ' ' + suffix : cleaned; el.classList.remove('na'); }
+  }
+
+  function setStatusBlock(id, subText, cls) {
+    const el = document.getElementById(id);
+    el.className = 'st ' + (cls || 'neutral') + (id === 'stOwn' ? ' clickable' : '');
+    el.querySelector('.st-sub').textContent = subText || '';
+  }
+
+  function fallbackCopy(text) {
+    const t = document.createElement('textarea');
+    t.value = text;
+    t.setAttribute('readonly', '');
+    t.style.position = 'fixed';
+    t.style.opacity = '0';
+    document.body.appendChild(t);
+    t.select();
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    t.remove();
+    return ok;
+  }
+
+  function copyText(text, btn) {
+    const done = (ok) => {
+      btn.textContent = ok ? 'הועתק ✓' : 'נסה שוב';
+      setTimeout(() => { btn.textContent = 'העתק'; }, 1500);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text)
+        .then(() => done(true))
+        .catch(() => done(fallbackCopy(text)));
+    } else {
+      done(fallbackCopy(text));
+    }
+  }
+
+  function setupCopyButton(value) {
+    const btn = document.getElementById('copyChassis');
+    btn.classList.remove('show');
+    btn.onclick = null;
+    if (value) {
+      btn.classList.add('show');
+      btn.textContent = 'העתק';
+      btn.onclick = () => copyText(value, btn);
+    }
+  }
+
+  function parseDate(v) {
+    if (!v) return null;
+    const d = new Date(v);
+    if (isNaN(d)) return null;
+    return { y: d.getFullYear(), mo: d.getMonth() + 1, d: d.getDate() };
+  }
+
+  function fmtDate(p) {
+    if (!p) return 'אין נתון';
+    return String(p.d).padStart(2, '0') + '/' + String(p.mo).padStart(2, '0') + '/' + p.y;
+  }
+
+  daysInMonth = (y, mo) => new Date(y, mo, 0).getDate();
+
+  function calendarDiff(from, to) {
+    let y = to.y - from.y;
+    let m = to.mo - from.mo;
+    let d = to.d - from.d;
+    if (d < 0) {
+      m--;
+      const prevMo = to.mo - 1 === 0 ? 12 : to.mo - 1;
+      const prevY = to.mo - 1 === 0 ? to.y - 1 : to.y;
+      d += daysInMonth(prevY, prevMo);
+    }
+    if (m < 0) { y--; m += 12; }
+    return { months: y * 12 + m, days: d };
+  }
+
+  function durationWithDays(months, days) {
+    const parts = [];
+    if (months > 0) {
+      const y = Math.floor(months / 12);
+      const m = months % 12;
+      let yPart = '';
+      if (y === 1) yPart = 'שנה';
+      else if (y === 2) yPart = 'שנתיים';
+      else if (y > 2) yPart = y + ' שנים';
+      let mPart = '';
+      if (m === 1) mPart = 'חודש';
+      else if (m > 1) mPart = m + ' חודשים';
+      if (yPart && mPart) parts.push(yPart + ' ו-' + mPart);
+      else if (yPart || mPart) parts.push(yPart || mPart);
+    }
+    if (days > 0) parts.push(days === 1 ? 'יום אחד' : days + ' ימים');
+    return parts.join(' ו-');
+  }
+
+  function renderTest(lastTest, nextTest) {
+    setVal('vLastTest', lastTest ? fmtDate(lastTest) : null);
+    setVal('vNextTest', nextTest ? fmtDate(nextTest) : null);
+
+    const cd = document.getElementById('vCountdown');
+    cd.classList.remove('bad');
+    if (!nextTest) { cd.textContent = ''; return; }
+
+    const now = new Date();
+    const today = { y: now.getFullYear(), mo: now.getMonth() + 1, d: now.getDate() };
+
+    const isFuture = nextTest.y > today.y ||
+      (nextTest.y === today.y && (nextTest.mo > today.mo || (nextTest.mo === today.mo && nextTest.d >= today.d)));
+
+    if (isFuture) {
+      const f = calendarDiff(today, nextTest);
+      cd.textContent = 'טסט הבא בעוד ' + (durationWithDays(f.months, f.days) || 'פחות מיום');
+    } else {
+      const b = calendarDiff(nextTest, today);
+      cd.classList.add('bad');
+      cd.textContent = 'הטסט פג תוקף לפני ' + (durationWithDays(b.months, b.days) || 'פחות מיום');
+    }
+  }
+
+  function parseOwnDate(v) {
+    if (!v) return null;
+    const s = String(v).trim();
+    const m = s.match(/^(\d{4})(\d{2})$/) || s.match(/^(\d{4})-(\d{2})/);
+    if (!m) return null;
+    const y = parseInt(m[1], 10);
+    const mo = parseInt(m[2], 10);
+    const nowYear = new Date().getFullYear();
+    if (mo < 1 || mo > 12 || y < 1950 || y > nowYear) return null;
+    return { y: y, mo: mo };
+  }
+
+  function monthsBetween(a, b) {
+    return (b.y - a.y) * 12 + (b.mo - a.mo);
+  }
+
+  function durationHe(months) {
+    if (months <= 0) return '—';
+    const y = Math.floor(months / 12);
+    const m = months % 12;
+    let yPart = '';
+    if (y === 1) yPart = 'שנה';
+    else if (y === 2) yPart = 'שנתיים';
+    else if (y > 2) yPart = y + ' שנים';
+    let mPart = '';
+    if (m === 1) mPart = 'חודש';
+    else if (m > 1) mPart = m + ' חודשים';
+    if (yPart && mPart) return yPart + ' ו-' + mPart;
+    return yPart || mPart;
+  }
+
+  function mmyyyy(p) {
+    return String(p.mo).padStart(2, '0') + '/' + p.y;
+  }
+
+  function buildOwnRows(list) {
+    const now = new Date();
+    const today = { y: now.getFullYear(), mo: now.getMonth() + 1 };
+
+    const items = list.map(o => ({ type: o.type, p: parseOwnDate(o.date) }));
+    items.sort((a, b) => {
+      if (!a.p) return 1;
+      if (!b.p) return -1;
+      return a.p.y !== b.p.y ? a.p.y - b.p.y : a.p.mo - b.p.mo;
+    });
+
+    const rows = items.map((it, i) => {
+      const next = items[i + 1];
+      let duration = '—';
+      if (it.p) {
+        const end = next ? next.p : today;
+        if (end) duration = durationHe(monthsBetween(it.p, end));
+      }
+      return {
+        type: it.type,
+        date: it.p ? mmyyyy(it.p) : 'לא תקין',
+        duration: duration
+      };
+    });
+
+    return rows.reverse();
+  }
+
+  function buildOwnTable(rows) {
+    const table = document.createElement('table');
+    table.className = 'own-table';
+
+    const thead = document.createElement('thead');
+    const hr = document.createElement('tr');
+    ['בעלות', 'מתאריך', 'זמן בעלות'].forEach(t => {
+      const th = document.createElement('th');
+      th.textContent = t;
+      hr.appendChild(th);
+    });
+    thead.appendChild(hr);
+    table.appendChild(thead);
+
+    const tbody = document.createElement('tbody');
+    rows.forEach(r => {
+      const tr = document.createElement('tr');
+      [r.type, r.date, r.duration].forEach(v => {
+        const td = document.createElement('td');
+        td.textContent = v;
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    });
+    table.appendChild(tbody);
+    return table;
+  }
+
+  function closeOwnPanel() {
+    const p = document.getElementById('ownPanel');
+    p.classList.remove('show');
+    p.textContent = '';
+    document.getElementById('ownBtn').textContent = 'הצג הסטוריית בעלות';
+  }
+
+  async function toggleOwnPanel() {
+    const panel = document.getElementById('ownPanel');
+    if (panel.classList.contains('show')) { closeOwnPanel(); return; }
+    if (!currentPlate) return;
+
+    document.getElementById('ownBtn').textContent = 'הסתר הסטוריית בעלות';
+    panel.classList.add('show');
+    panel.textContent = '';
+    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    const msg = (text) => {
+      const m = document.createElement('div');
+      m.className = 'own-msg';
+      m.textContent = text;
+      panel.appendChild(m);
+    };
+    msg('טוען היסטוריה...');
+
+    try {
+      const r = await fetch(API_BASE + '/api/history/' + encodeURIComponent(currentPlate));
+      const j = await r.json();
+      panel.textContent = '';
+
+      if (!j.success) {
+        msg(j.message || 'לא נמצאה היסטוריה לרכב זה');
+        return;
+      }
+
+      const h = j.history || {};
+      const list = j.ownershipList || [];
+
+      if (list.length) {
+        panel.appendChild(buildOwnTable(buildOwnRows(list)));
+      } else {
+        msg('אין מעברי בעלות במאגר לרכב זה. המאגר כולל רק רכבים פרטיים שנרשמו מ-2017 ואילך.');
+      }
+
+      const extra = document.createElement('div');
+      extra.className = 'own-extra';
+      const rows = [
+        ['תאריך רישום ראשון', h.firstRegistration ? formatDashDate(h.firstRegistration) : null],
+        ['ק"מ בטסט האחרון', h.kmSinceTest != null ? h.kmSinceTest.toLocaleString('he-IL') + ' ק"מ' : null]
+      ];
+      for (const [k, v] of rows) {
+        const line = document.createElement('div');
+        line.className = 'kv';
+        const kEl = document.createElement('span');
+        kEl.className = 'k';
+        kEl.textContent = k + ': ';
+        const vEl = document.createElement('span');
+        vEl.className = 'v';
+        vEl.textContent = v || 'אין נתון';
+        line.appendChild(kEl);
+        line.appendChild(vEl);
+        extra.appendChild(line);
+      }
+      panel.appendChild(extra);
+
+      if (h.changes && h.changes.length) {
+        const c = document.createElement('div');
+        c.className = 'own-extra';
+        c.textContent = 'שינויים שנרשמו: ' + h.changes.join(' · ');
+        panel.appendChild(c);
+      }
+    } catch (e) {
+      panel.textContent = '';
+      msg('שגיאה בטעינת ההיסטוריה');
+    }
+  }
+
+  async function searchCar() {
+    const plate = document.getElementById('plateInput').value.replace(/\D/g, '');
+    const btn = document.getElementById('searchBtn');
+    const loader = document.getElementById('loader');
+    const err = document.getElementById('errorMsg');
+
+    err.style.display = 'none';
+    document.getElementById('kmLine').classList.remove('show');
+    document.getElementById('ownBtnWrap').classList.remove('show');
+    document.getElementById('cardGeneral').style.display = 'none';
+    document.getElementById('tabs').classList.remove('show');
+    document.getElementById('hero').classList.remove('show');
+    setupCopyButton(null);
+    closeOwnPanel();
+    currentPlate = '';
+
+    if (plate.length < 7) {
+      showMsg('errorMsg', 'נא להזין מספר רכב תקין');
+      err.classList.add('err');
+      return;
+    }
+
+    loader.style.display = 'block';
+    btn.disabled = true;
+
+    try {
+      const r = await fetch(API_BASE + '/api/car/' + encodeURIComponent(plate));
+      const j = await r.json();
+      loader.style.display = 'none';
+
+      if (!j.success || !j.data) {
+        showMsg('errorMsg', j.message || 'מספר הרכב אינו קיים במאגר משרד התחבורה');
+        err.classList.add('err');
+        return;
+      }
+
+      const d = j.data;
+      currentPlate = plate;
+
+      const brand = findBrand(d.manufacturer, d.model);
+      const trim = cleanText(d.trim || '');
+
+      await showBrand(d.manufacturer, brand);
+
+      const kmLine = document.getElementById('kmLine');
+      if (d.kmSinceTest != null) {
+        document.getElementById('kmText').textContent =
+          d.kmSinceTest.toLocaleString('he-IL') + ' ק"מ - קילומטראז\' מעודכן מהטסט האחרון';
+        kmLine.classList.add('show');
+      }
+
+      document.getElementById('heroName').textContent = cleanText((d.manufacturer || '') + ' ' + (d.model || ''));
+      document.getElementById('heroTrim').textContent = trim;
+
+      if (d.testValid === null || d.testValid === undefined) setStatusBlock('stTest', 'אין נתון', 'neutral');
+      else if (d.testValid) setStatusBlock('stTest', 'בתוקף', 'ok');
+      else setStatusBlock('stTest', 'פג תוקף', 'bad');
+
+      setStatusBlock('stOwn', d.ownership || 'אין נתון', 'info');
+
+      if (Number(d.owners) > 0) document.getElementById('ownBtnWrap').classList.add('show');
+
+      if (d.disabled === null || d.disabled === undefined) setStatusBlock('stDisabled', 'אין נתון', 'neutral');
+      else if (d.disabled) setStatusBlock('stDisabled', 'יש', 'ok');
+      else setStatusBlock('stDisabled', 'אין', 'neutral');
+
+      setVal('sBody', null);
+      setVal('sHp', d.horsepower, 'כ"ס');
+      setVal('sEngine', d.engineCc, 'סמ"ק');
+      setVal('sAccel', d.acceleration0to100, 'שניות');
+      setVal('sTrim', d.trim);
+
+      setVal('vManufacturer', d.manufacturer);
+      setVal('vModel', d.model);
+      setVal('vYear', d.year);
+      setVal('vColor', d.color);
+      setVal('vPlate', formatPlate(plate));
+      setVal('vChassis', d.chassis);
+      setupCopyButton(d.chassis);
+      setVal('vTireFront', d.tireFront);
+      setVal('vTireRear', d.tireRear);
+      setVal('vOwners', d.owners);
+
+      renderTest(parseDate(d.lastTest), parseDate(d.testExpiry));
+
+      document.getElementById('hero').classList.add('show');
+      document.getElementById('tabs').classList.add('show');
+      document.getElementById('cardGeneral').style.display = '';
+
+      addToHistory({
+        plate: plate,
+        manufacturer: d.manufacturer,
+        name: cleanText((d.manufacturer || '') + ' ' + (d.model || '')),
+        year: d.year ? String(d.year) : '',
+        time: new Date().toLocaleTimeString('he-IL', { hour: '2-digit', minute: '2-digit' })
+      });
+
+      showDetail();
+    } catch (e) {
+      loader.style.display = 'none';
+      showMsg('errorMsg', 'שגיאה בחיבור לשרת. השרת עלול להיות במצב המתנה, נסה שוב בעוד רגע');
+      err.classList.add('err');
+      console.error(e);
+    } finally {
+      btn.disabled = false;
+    }
+  }
+
+  function showMsg(id, text) {
+    const el = document.getElementById(id);
+    el.textContent = text;
+    el.style.display = 'block';
+  }
+
+  document.getElementById('searchBtn').addEventListener('click', searchCar);
+
+  document.getElementById('plateInput').addEventListener('input', e => {
+    e.target.value = formatPlate(e.target.value);
+  });
+  document.getElementById('plateInput').addEventListener('keydown', e => { if (e.key === 'Enter') searchCar(); });
+
+  document.getElementById('histClear').addEventListener('click', clearHistory);
+  document.getElementById('stOwn').addEventListener('click', toggleOwnPanel);
+  document.getElementById('ownBtn').addEventListener('click', toggleOwnPanel);
+  document.getElementById('backBtn').addEventListener('click', showHome);
+
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const name = tab.dataset.tab;
+      document.getElementById('cardGeneral').style.display = name === 'general' ? '' : 'none';
+    });
+  });
+
+  renderHistory();
+</script>
+</body>
+</html>
