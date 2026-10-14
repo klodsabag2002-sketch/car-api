@@ -291,11 +291,11 @@ const HE_MAKE_ALIASES = {
     "וולבו בלגיה": "Volvo",
     "וולוו בלגיה": "Volvo",
     "וולבו סין": "Volvo",
-    "וולוו סין": "Volvo",
+    "וולבו סין": "Volvo",
     "וולבו ארהב": "Volvo",
-    "וולוו ארהב": "Volvo",
+    "וולבו ארהב": "Volvo",
     "וולבו ארה\"ב": "Volvo",
-    "וולוו ארה\"ב": "Volvo",
+    "וולבו ארה\"ב": "Volvo",
     "Volvo": "Volvo",
     "וואי": "WEY",
     "וואי סין": "WEY",
@@ -657,6 +657,16 @@ function norm(s) {
     return String(s || "").toLowerCase().replace(/[^a-z0-9א-ת]/g, "");
 }
 
+function getLogoSlug(manufacturer) {
+    if (!manufacturer) return "car";
+    for (const [he, en] of Object.entries(HE_MAKE_ALIASES)) {
+        if (manufacturer.includes(he)) {
+            return en.toLowerCase().replace(/[^a-z0-9]/g, "");
+        }
+    }
+    return "car";
+}
+
 function lookupAccel(makeTexts, modelTexts, year, hp, cc) {
     const makes = makeTexts.map(norm).filter(Boolean);
     const models = modelTexts.map(norm).filter(Boolean);
@@ -853,6 +863,7 @@ app.get('/api/car/:plate', async (req, res) => {
         }
         const modelTexts = [car.kinuy_mishari, car.degem_nm, car.ramat_gimur, model].filter(Boolean);
         const acceleration = lookupAccel(makeTexts, modelTexts, year, hp, engineCc);
+        const logoSlug = getLogoSlug(manufacturer); // יצירת מזהה הלוגו מהשרת
 
         console.log(`--------------------------------------------------`);
         console.log(`[SEARCH LOG] 🔍 מישהו חיפש רכב!`);
@@ -874,6 +885,7 @@ app.get('/api/car/:plate', async (req, res) => {
                 model,
                 trim,
                 year,
+                logoSlug, // נוסף כדי שהקוד בצד לקוח יוכל להציג את הלוגו ישירות מהשרת
                 color: car.zeva_rechev || car.tzeva_rechev || "לא ידוע",
                 chassis: toText(car.misgeret),
                 tireFront: toText(car.zmig_kidmi),
