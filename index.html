@@ -594,9 +594,7 @@
     return String(p.d).padStart(2, '0') + '/' + String(p.mo).padStart(2, '0') + '/' + p.y;
   }
 
-  function daysInMonth(y, mo) {
-    return new Date(y, mo, 0).getDate();
-  }
+  daysInMonth = (y, mo) => new Date(y, mo, 0).getDate();
 
   function calendarDiff(from, to) {
     let y = to.y - from.y;
