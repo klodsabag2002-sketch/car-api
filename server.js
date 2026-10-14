@@ -679,7 +679,6 @@ function lookupAccel(makeTexts, modelTexts, year, hp, cc) {
 }
 
 app.use((req, res, next) => {
-    // מדפיס לוג רק אם זו לא הפנייה של הבדיקה הראשית
     if (req.url !== '/') {
         console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
     }
@@ -743,20 +742,44 @@ function testStatus(expiry) {
     return d >= today;
 }
 
+// מיפוי וחילוץ מרכב רכב
+const BODY_TYPE_MAP = {
+    "P": "האצ'בק",
+    "M": "סטיישן",
+    "S": "סדאן",
+    "C": "קופה",
+    "J": "SUV / פנאי",
+    "V": "מסחרי / ואן",
+    "הצ'בק": "האצ'בק",
+    "הצבק": "האצ'בק",
+    "סדאן": "סדאן",
+    "סטיישן": "סטיישן",
+    "קופה": "קופה",
+    "פנאי": "SUV / פנאי",
+    "שטח": "רכב שטח"
+};
+
+function resolveBodyType(car, row) {
+    const raw = toText(row?.merkav) || toText(car?.merkav);
+    if (raw) return BODY_TYPE_MAP[raw] || raw;
+
+    const sug = toText(car?.sug_degem) || toText(row?.sug_degem);
+    if (sug && BODY_TYPE_MAP[sug]) return BODY_TYPE_MAP[sug];
+
+    return null;
+}
+
 // בדיקת תו נכה מתוקנת
 async function checkDisabled(plate) {
     try {
         const cleanPlate = String(plate).replace(/\D/g, "");
         
-        // 1. סינון ישיר לפי שם השדה המדויק במאגר: "MISPAR RECHEV" כמחרוזת
         let records = await searchDatastore(DISABLED_ID, { "MISPAR RECHEV": cleanPlate }, 5);
         
-        // 2. ניסיון נוסף כמספר אם לא נמצא כמחרוזת
         if (!records || records.length === 0) {
             records = await searchDatastore(DISABLED_ID, { "MISPAR RECHEV": Number(cleanPlate) }, 5);
         }
 
-        // 3. גיבוי: חיפוש טקסט חופשי אם הסינון הישיר נכשל
         if (!records || records.length === 0) {
             const byText = await searchDatastore(DISABLED_ID, null, 10, cleanPlate);
             records = (byText || []).filter(r => {
@@ -837,7 +860,6 @@ async function findModelRow(car) {
 
 // ---------- API ----------
 
-// נתיב ראשי לבדיקת תקינות וחיבור עבור UptimeRobot
 app.get('/', (req, res) => {
     res.status(200).send('Car API is running successfully!');
 });
@@ -869,6 +891,7 @@ app.get('/api/car/:plate', async (req, res) => {
         const hp = toNumber(row?.koah_sus) ?? toNumber(car.koah_sus);
         const engineCc = toNumber(row?.nefah_manoa) ?? toNumber(car.nefah_manoa);
         const testExpiry = car.tokef_dt || null;
+        const bodyType = resolveBodyType(car, row);
 
         const registryOwnership = labelRegistryOwnership(car.baalut);
         const historyOwnership = ownershipList.length
@@ -893,6 +916,7 @@ app.get('/api/car/:plate', async (req, res) => {
         console.log(`🚗 מספר רכב: ${plate}`);
         console.log(`🏭 יצרן ודגם: ${manufacturer} ${model} ${trim || ""} (${year})`);
         console.log(`⚡ כוח סוס: ${hp != null ? hp : "לא ידוע"} | נפח: ${engineCc != null ? engineCc : "לא ידוע"}`);
+        console.log(`🏎️ מרכב: ${bodyType || "לא ידוע"}`);
         console.log(`🏷️ סוג בעלות: ${currentOwnership || "לא ידוע"}`);
         console.log(`🏁 תאוצה 0-100: ${acceleration ? acceleration.seconds + " שניות" : "לא נמצאה בטבלה"}`);
         console.log(`♿ תג נכה: ${hasDisabledBadge ? "יש" : "אין"}`);
@@ -927,6 +951,8 @@ app.get('/api/car/:plate', async (req, res) => {
                     badgeType: disabledResult.badgeType,
                     issueDate: disabledResult.issueDate
                 } : null,
+                bodyType: bodyType,
+                merkav: bodyType,
                 kmSinceTest: history?.kmSinceTest ?? null
             }
         });
