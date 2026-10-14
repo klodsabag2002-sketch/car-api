@@ -1,233 +1,53 @@
 [
   {
-    "make": "וויה סין",
-    "model": "DREAM",
+    "make": "הונדה אנגליה",
+    "model": "CIVIC",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 434,
-    "cc": 0,
-    "seconds": 5.8,
-    "source": "רישוי רכב / נתון יצרן (וויה דרים מיניוואן חשמלי EV AWD 434)"
+    "hp": 140,
+    "cc": 1799,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק 1.8 i-VTEC אוטומט 140)"
   },
   {
-    "make": "וויה סין",
-    "model": "DREAM",
+    "make": "הונדה אנגליה",
+    "model": "CIVIC",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 435,
-    "cc": 0,
-    "seconds": 5.8,
-    "source": "רישוי רכב / נתון יצרן (וויה דרים מיניוואן חשמלי EV AWD 435)"
+    "hp": 142,
+    "cc": 1798,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק דור 9 1.8 אוטומט 142)"
   },
   {
-    "make": "וויה סין",
-    "model": "DREAM",
+    "make": "הונדה אנגליה",
+    "model": "CIVIC 5D",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 394,
-    "cc": 1476,
-    "seconds": 6.6,
-    "source": "רישוי רכב / נתון יצרן (וויה דרים מאריך טווח PHEV 394)"
+    "hp": 140,
+    "cc": 1799,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק 5 דלתות 1.8 אוטומט 140)"
   },
   {
-    "make": "וויה סין",
-    "model": "DREAM",
+    "make": "הונדה אנגליה",
+    "model": "CIVIC 5D",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 571,
-    "cc": 1476,
-    "seconds": 5.9,
-    "source": "רישוי רכב / נתון יצרן (וויה דרים מאריך טווח PHEV 571)"
+    "hp": 142,
+    "cc": 1798,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק 5 דלתות 1.8 142)"
   },
   {
-    "make": "וויה",
-    "model": "דרים",
+    "make": "הונדה אנגליה",
+    "model": "CIVIC",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 434,
-    "cc": 0,
-    "seconds": 5.8,
-    "source": "רישוי רכב / נתון יצרן (וויה דרים 434)"
-  },
-  {
-    "make": "Voyah",
-    "model": "DREAM",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 434,
-    "cc": 0,
-    "seconds": 5.8,
-    "source": "נתון יצרן (Voyah Dream EV 434)"
-  },
-  {
-    "make": "Voyah",
-    "model": "DREAM",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 435,
-    "cc": 0,
-    "seconds": 5.8,
-    "source": "נתון יצרן (Voyah Dream EV 435)"
-  },
-  {
-    "make": "וויה סין",
-    "model": "FREE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 488,
-    "cc": 0,
-    "seconds": 4.4,
-    "source": "רישוי רכב / נתון יצרן (וויה פרי קרוסאובר חשמלי EV AWD 488)"
-  },
-  {
-    "make": "וויה סין",
-    "model": "FREE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 490,
-    "cc": 0,
-    "seconds": 4.4,
-    "source": "רישוי רכב / נתון יצרן (וויה פרי קרוסאובר חשמלי EV AWD 490)"
-  },
-  {
-    "make": "וויה סין",
-    "model": "FREE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 489,
-    "cc": 1476,
-    "seconds": 4.5,
-    "source": "רישוי רכב / נתון יצרן (וויה פרי מאריך טווח EREV 489)"
-  },
-  {
-    "make": "וויה סין",
-    "model": "FREE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 347,
-    "cc": 0,
-    "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (וויה פרי חשמלי RWD 347)"
-  },
-  {
-    "make": "וויה",
-    "model": "פרי",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 488,
-    "cc": 0,
-    "seconds": 4.4,
-    "source": "רישוי רכב / נתון יצרן (וויה פרי 488)"
-  },
-  {
-    "make": "Voyah",
-    "model": "FREE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 488,
-    "cc": 0,
-    "seconds": 4.4,
-    "source": "נתון יצרן (Voyah Free EV 488)"
-  },
-  {
-    "make": "Voyah",
-    "model": "FREE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 490,
-    "cc": 0,
-    "seconds": 4.4,
-    "source": "נתון יצרן (Voyah Free EV 490)"
-  },
-  {
-    "make": "וויה סין",
-    "model": "COURAGE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 435,
-    "cc": 0,
-    "seconds": 4.9,
-    "source": "רישוי רכב / נתון יצרן (וויה קוראז' חשמלי כפול מנועים AWD 435)"
-  },
-  {
-    "make": "וויה סין",
-    "model": "COURAGE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 430,
-    "cc": 0,
-    "seconds": 4.9,
-    "source": "רישוי רכב / נתון יצרן (וויה קוראז' חשמלי כפול מנועים AWD 430)"
-  },
-  {
-    "make": "וויה סין",
-    "model": "COURAGE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 313,
-    "cc": 0,
-    "seconds": 6.8,
-    "source": "רישוי רכב / נתון יצרן (וויה קוראז' חשמלי RWD 313)"
-  },
-  {
-    "make": "וויה סין",
-    "model": "COURAGE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 288,
-    "cc": 0,
-    "seconds": 6.8,
-    "source": "רישוי רכב / נתון יצרן (וויה קוראז' חשמלי RWD 288)"
-  },
-  {
-    "make": "וויה סין",
-    "model": "קוראז",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 435,
-    "cc": 0,
-    "seconds": 4.9,
-    "source": "רישוי רכב / נתון יצרן (וויה קוראז' 435)"
-  },
-  {
-    "make": "וויה סין",
-    "model": "קוראז'",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 435,
-    "cc": 0,
-    "seconds": 4.9,
-    "source": "רישוי רכב / נתון יצרן (וויה קוראז' 435)"
-  },
-  {
-    "make": "וויה",
-    "model": "קוראז",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 435,
-    "cc": 0,
-    "seconds": 4.9,
-    "source": "רישוי רכב / נתון יצרן (וויה קוראז' 435)"
-  },
-  {
-    "make": "Voyah",
-    "model": "COURAGE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 435,
-    "cc": 0,
-    "seconds": 4.9,
-    "source": "נתון יצרן (Voyah Courage AWD 435)"
-  },
-  {
-    "make": "Voyah",
-    "model": "COURAGE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 313,
-    "cc": 0,
-    "seconds": 6.8,
-    "source": "נתון יצרן (Voyah Courage RWD 313)"
+    "hp": 182,
+    "cc": 1498,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק 1.5 טורבו 182)"
   },
   {
     "make": "הונדה אנגליה",
@@ -241,6 +61,16 @@
   },
   {
     "make": "הונדה אנגליה",
+    "model": "CIVIC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 129,
+    "cc": 988,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק 1.0 טורבו 129)"
+  },
+  {
+    "make": "הונדה אנגליה",
     "model": "CIVIC 5D",
     "yearStart": null,
     "yearEnd": null,
@@ -250,34 +80,54 @@
     "source": "רישוי רכב / נתון יצרן (הונדה סיוויק 5 דלתות 1.0 טורבו 129)"
   },
   {
-    "make": "הונדה אנגליה",
-    "model": "CIVIC 5D",
+    "make": "הונדה טורקיה",
+    "model": "CIVIC",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 142,
-    "cc": 1798,
-    "seconds": 10.4,
-    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק 5 דלתות 1.8 142)"
+    "hp": 182,
+    "cc": 1498,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק סדאן 1.5 טורבו 182)"
   },
   {
-    "make": "הונדה אנגליה",
-    "model": "CIVIC 5D",
+    "make": "הונדה טורקיה",
+    "model": "CIVIC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1598,
+    "seconds": 11.6,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק סדאן 1.6 125)"
+  },
+  {
+    "make": "הונדה טורקיה",
+    "model": "CIVIC",
     "yearStart": null,
     "yearEnd": null,
     "hp": 140,
     "cc": 1799,
-    "seconds": 10.4,
-    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק 5 דלתות 1.8 140)"
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק סדאן 1.8 140)"
   },
   {
-    "make": "הונדה אנגליה",
+    "make": "הונדה יפן",
     "model": "CIVIC",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 319,
+    "hp": 184,
+    "cc": 1993,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק היברידית e:HEV 184)"
+  },
+  {
+    "make": "הונדה יפן",
+    "model": "CIVIC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 329,
     "cc": 1996,
-    "seconds": 5.7,
-    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק טייפ ר FK8 2.0 טורבו 319/320)"
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק טייפ ר FL5 2.0 טורבו 329)"
   },
   {
     "make": "הונדה אנגליה",
@@ -290,14 +140,14 @@
     "source": "רישוי רכב / נתון יצרן (הונדה סיוויק טייפ ר FK8 2.0 טורבו 320)"
   },
   {
-    "make": "הונדה יפן",
+    "make": "הונדה אנגליה",
     "model": "CIVIC",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 329,
+    "hp": 319,
     "cc": 1996,
-    "seconds": 5.4,
-    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק טייפ ר FL5 2.0 טורבו 329)"
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק טייפ ר FK8 2.0 טורבו 319)"
   },
   {
     "make": "הונדה אנגליה",
@@ -330,34 +180,44 @@
     "source": "רישוי רכב / נתון יצרן (הונדה סיוויק טייפ ר EP3 2.0 200)"
   },
   {
-    "make": "הונדה טורקיה",
-    "model": "CIVIC",
+    "make": "הונדה",
+    "model": "סיוויק",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 182,
-    "cc": 1498,
-    "seconds": 8.1,
-    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק סדאן 1.5 טורבו 182)"
+    "hp": 140,
+    "cc": 1799,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק 140)"
   },
   {
-    "make": "הונדה טורקיה",
+    "make": "הונדה",
     "model": "CIVIC",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 125,
-    "cc": 1598,
-    "seconds": 11.6,
-    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק סדאן 1.6 125)"
+    "hp": 140,
+    "cc": 1799,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק 140)"
   },
   {
-    "make": "הונדה יפן",
+    "make": "Honda",
     "model": "CIVIC",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 184,
-    "cc": 1993,
-    "seconds": 7.8,
-    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק היברידית e:HEV 184)"
+    "hp": 140,
+    "cc": 1799,
+    "seconds": 10.9,
+    "source": "נתון יצרן (Honda Civic 1.8 140)"
+  },
+  {
+    "make": "Honda",
+    "model": "CIVIC 5D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1799,
+    "seconds": 10.9,
+    "source": "נתון יצרן (Honda Civic 5D 1.8)"
   },
   {
     "make": "הונדה",
@@ -370,44 +230,24 @@
     "source": "רישוי רכב / נתון יצרן (הונדה סיוויק 182)"
   },
   {
-    "make": "הונדה",
-    "model": "סיוויק טייפ ר",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 319,
-    "cc": 1996,
-    "seconds": 5.7,
-    "source": "רישוי רכב / נתון יצרן (הונדה סיוויק טייפ ר 319)"
-  },
-  {
     "make": "Honda",
-    "model": "CIVIC 5D",
+    "model": "CIVIC",
     "yearStart": null,
     "yearEnd": null,
     "hp": 182,
     "cc": 1498,
     "seconds": 8.2,
-    "source": "נתון יצרן (Honda Civic 5D 1.5T)"
+    "source": "נתון יצרן (Honda Civic 1.5T)"
   },
   {
     "make": "Honda",
     "model": "CIVIC",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 319,
+    "hp": 320,
     "cc": 1996,
     "seconds": 5.7,
-    "source": "נתון יצרן (Honda Civic Type R 319)"
-  },
-  {
-    "make": "Honda",
-    "model": "CIVIC",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 200,
-    "cc": 1998,
-    "seconds": 6.6,
-    "source": "נתון יצרן (Honda Civic Type R 200)"
+    "source": "נתון יצרן (Honda Civic Type R 320)"
   },
   {
     "make": "הונדה הודו",
@@ -438,16 +278,6 @@
     "cc": 1498,
     "seconds": 10.5,
     "source": "רישוי רכב / נתון יצרן (הונדה סיטי 121)"
-  },
-  {
-    "make": "Honda",
-    "model": "HONDA CITY",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 121,
-    "cc": 1498,
-    "seconds": 10.5,
-    "source": "נתון יצרן (Honda City 1.5 121)"
   },
   {
     "make": "Honda",
@@ -610,16 +440,6 @@
     "source": "רישוי רכב / נתון יצרן (הונדה פרלוד 2.2 VTEC ידני 200)"
   },
   {
-    "make": "הונדה יפן",
-    "model": "PRELUDE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 133,
-    "cc": 1997,
-    "seconds": 9.2,
-    "source": "רישוי רכב / נתון יצרן (הונדה פרלוד 2.0 133)"
-  },
-  {
     "make": "הונדה",
     "model": "פרלוד",
     "yearStart": null,
@@ -658,16 +478,6 @@
     "cc": 1498,
     "seconds": 7.7,
     "source": "רישוי רכב / נתון יצרן (הונדה קלריטי פלאג-אין PHEV 212)"
-  },
-  {
-    "make": "הונדה ארהב\"",
-    "model": "CLARITY",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 161,
-    "cc": 0,
-    "seconds": 8.1,
-    "source": "רישוי רכב / נתון יצרן (הונדה קלריטי חשמלי מלא EV 161)"
   },
   {
     "make": "הונדה",
@@ -740,26 +550,6 @@
     "source": "רישוי רכב / נתון יצרן (הונדה CR-V היברידי e:HEV 184)"
   },
   {
-    "make": "הונדה אנגליה",
-    "model": "CR-V",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1997,
-    "seconds": 12.2,
-    "source": "רישוי רכב / נתון יצרן (הונדה CR-V 2.0 150)"
-  },
-  {
-    "make": "הונדה אנגליה",
-    "model": "CR-V",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 160,
-    "cc": 1597,
-    "seconds": 10.0,
-    "source": "רישוי רכב / נתון יצרן (הונדה CR-V 1.6 דיזל 160)"
-  },
-  {
     "make": "הונדה",
     "model": "CR-V",
     "yearStart": null,
@@ -768,16 +558,6 @@
     "cc": 1997,
     "seconds": 12.3,
     "source": "רישוי רכב / נתון יצרן (הונדה CR-V 155)"
-  },
-  {
-    "make": "הונדה",
-    "model": "CR-V",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 192,
-    "cc": 1498,
-    "seconds": 9.5,
-    "source": "רישוי רכב / נתון יצרן (הונדה CR-V 192)"
   },
   {
     "make": "Honda",
@@ -800,16 +580,6 @@
     "source": "נתון יצרן (Honda CR-V 1.5T 192)"
   },
   {
-    "make": "Honda",
-    "model": "CR-V",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 184,
-    "cc": 1993,
-    "seconds": 8.8,
-    "source": "נתון יצרן (Honda CR-V Hybrid 184)"
-  },
-  {
     "make": "הונדה יפן",
     "model": "CR-Z HYBRID",
     "yearStart": null,
@@ -818,16 +588,6 @@
     "cc": 1497,
     "seconds": 9.1,
     "source": "רישוי רכב / נתון יצרן (הונדה CR-Z היברידי ידני 128)"
-  },
-  {
-    "make": "הונדה יפן",
-    "model": "CR-Z HYBRID",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 124,
-    "cc": 1497,
-    "seconds": 9.7,
-    "source": "רישוי רכב / נתון יצרן (הונדה CR-Z היברידי ידני 124)"
   },
   {
     "make": "הונדה יפן",
@@ -860,16 +620,6 @@
     "source": "נתון יצרן (Honda CR-Z Hybrid 128)"
   },
   {
-    "make": "Honda",
-    "model": "CR-Z HYBRID",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 128,
-    "cc": 1497,
-    "seconds": 9.1,
-    "source": "נתון יצרן (Honda CR-Z Hybrid 128)"
-  },
-  {
     "make": "הונדה יפן",
     "model": "FR-V",
     "yearStart": null,
@@ -878,26 +628,6 @@
     "cc": 1799,
     "seconds": 12.5,
     "source": "רישוי רכב / נתון יצרן (הונדה FR-V 1.8 אוטומט 140)"
-  },
-  {
-    "make": "הונדה יפן",
-    "model": "FR-V",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1998,
-    "seconds": 10.5,
-    "source": "רישוי רכב / נתון יצרן (הונדה FR-V 2.0 ידני 150)"
-  },
-  {
-    "make": "הונדה יפן",
-    "model": "FR-V",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 125,
-    "cc": 1668,
-    "seconds": 12.3,
-    "source": "רישוי רכב / נתון יצרן (הונדה FR-V 1.7 ידני 125)"
   },
   {
     "make": "הונדה",
@@ -930,26 +660,6 @@
     "source": "רישוי רכב / נתון יצרן (הונדה HR-V 1.5 אוטומט CVT 130/131)"
   },
   {
-    "make": "הונדה מקסיקו",
-    "model": "HR-V",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 130,
-    "cc": 1498,
-    "seconds": 11.2,
-    "source": "רישוי רכב / נתון יצרן (הונדה HR-V 1.5 אוטומט CVT 130)"
-  },
-  {
-    "make": "הונדה מקסיקו",
-    "model": "HR-V",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 182,
-    "cc": 1498,
-    "seconds": 7.8,
-    "source": "רישוי רכב / נתון יצרן (הונדה HR-V ספורט 1.5 טורבו 182)"
-  },
-  {
     "make": "הונדה יפן",
     "model": "HR-V",
     "yearStart": null,
@@ -980,16 +690,6 @@
     "source": "נתון יצרן (Honda HR-V 1.5 CVT)"
   },
   {
-    "make": "Honda",
-    "model": "HR-V",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 182,
-    "cc": 1498,
-    "seconds": 7.8,
-    "source": "נתון יצרן (Honda HR-V 1.5 Turbo)"
-  },
-  {
     "make": "\"הונדה ארהב",
     "model": "ODYSSEY",
     "yearStart": null,
@@ -1008,16 +708,6 @@
     "cc": 3471,
     "seconds": 6.5,
     "source": "רישוי רכב / נתון יצרן (הונדה אודיסיי 3.5 V6 אוטומט 280)"
-  },
-  {
-    "make": "הונדה ארהב\"",
-    "model": "ODYSSEY",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 248,
-    "cc": 3471,
-    "seconds": 7.8,
-    "source": "רישוי רכב / נתון יצרן (הונדה אודיסיי 3.5 V6 דור 4 248)"
   },
   {
     "make": "הונדה",
@@ -1047,7 +737,7 @@
     "hp": 88,
     "cc": 1339,
     "seconds": 12.4,
-    "source": "רישוי רכב / נתון יצרן (הונדה אינסייט היברידי 1.3 88/98)"
+    "source": "רישוי רכב / נתון יצרן (הונדה אינסייט היברידי 1.3 88)"
   },
   {
     "make": "הונדה יפן",
@@ -1068,16 +758,6 @@
     "cc": 1339,
     "seconds": 12.4,
     "source": "רישוי רכב / נתון יצרן (הונדה אינסייט 88)"
-  },
-  {
-    "make": "Honda",
-    "model": "INSIGHT HYBRID",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 88,
-    "cc": 1339,
-    "seconds": 12.4,
-    "source": "נתון יצרן (Honda Insight Hybrid 1.3)"
   },
   {
     "make": "Honda",
@@ -1114,10 +794,10 @@
     "model": "ACCORD",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 185,
-    "cc": 2356,
-    "seconds": 8.6,
-    "source": "רישוי רכב / נתון יצרן (הונדה אקורד ארה\"ב 2.4 185)"
+    "hp": 192,
+    "cc": 1498,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (הונדה אקורד 1.5 טורבו 192)"
   },
   {
     "make": "הונדה ארהב\"",
@@ -1160,26 +840,6 @@
     "source": "נתון יצרן (Honda Accord 2.0 156)"
   },
   {
-    "make": "Honda",
-    "model": "ACCORD",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 201,
-    "cc": 2354,
-    "seconds": 9.5,
-    "source": "נתון יצרן (Honda Accord 2.4 201)"
-  },
-  {
-    "make": "Honda",
-    "model": "ACCORD",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 192,
-    "cc": 1498,
-    "seconds": 7.5,
-    "source": "נתון יצרן (Honda Accord 1.5T 192)"
-  },
-  {
     "make": "הונדה יפן",
     "model": "JAZZ",
     "yearStart": null,
@@ -1204,40 +864,10 @@
     "model": "JAZZ",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 90,
-    "cc": 1198,
-    "seconds": 12.6,
-    "source": "רישוי רכב / נתון יצרן (הונדה ג'אז 1.2 90)"
-  },
-  {
-    "make": "הונדה יפן",
-    "model": "JAZZ",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 88,
-    "cc": 1339,
-    "seconds": 12.1,
-    "source": "רישוי רכב / נתון יצרן (הונדה ג'אז היברידית 1.3 88)"
-  },
-  {
-    "make": "הונדה יפן",
-    "model": "JAZZ",
-    "yearStart": null,
-    "yearEnd": null,
     "hp": 109,
     "cc": 1498,
     "seconds": 9.4,
     "source": "רישוי רכב / נתון יצרן (הונדה ג'אז היברידית e:HEV 109)"
-  },
-  {
-    "make": "הונדה יפן",
-    "model": "JAZZ",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 122,
-    "cc": 1498,
-    "seconds": 9.3,
-    "source": "רישוי רכב / נתון יצרן (הונדה ג'אז היברידית e:HEV 122)"
   },
   {
     "make": "הונדה",
@@ -1260,16 +890,6 @@
     "source": "נתון יצרן (Honda Jazz 1.3 CVT)"
   },
   {
-    "make": "Honda",
-    "model": "JAZZ",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 109,
-    "cc": 1498,
-    "seconds": 9.4,
-    "source": "נתון יצרן (Honda Jazz e:HEV)"
-  },
-  {
     "make": "הונדה יפן",
     "model": "STREAM",
     "yearStart": null,
@@ -1278,16 +898,6 @@
     "cc": 1998,
     "seconds": 10.5,
     "source": "רישוי רכב / נתון יצרן (הונדה סטרים 2.0 אוטומט 156)"
-  },
-  {
-    "make": "הונדה יפן",
-    "model": "STREAM",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 125,
-    "cc": 1668,
-    "seconds": 11.1,
-    "source": "רישוי רכב / נתון יצרן (הונדה סטרים 1.7 125)"
   },
   {
     "make": "הונדה",
@@ -1310,18 +920,148 @@
     "source": "נתון יצרן (Honda Stream 2.0)"
   },
   {
-    "make": "אף אי דאבל יו",
-    "model": "EHS5",
+    "make": "וויה סין",
+    "model": "DREAM",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 285,
+    "hp": 434,
     "cc": 0,
-    "seconds": 6.9,
-    "source": "רישוי רכב / נתון יצרן (הונגצ'י EHS5 חשמלי RWD 285)"
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (וויה דרים מיניוואן חשמלי EV AWD 434)"
+  },
+  {
+    "make": "וויה סין",
+    "model": "DREAM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 435,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (וויה דרים מיניוואן חשמלי EV AWD 435)"
+  },
+  {
+    "make": "וויה סין",
+    "model": "DREAM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 571,
+    "cc": 1476,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (וויה דרים מאריך טווח PHEV 571)"
+  },
+  {
+    "make": "וויה",
+    "model": "דרים",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 434,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (וויה דרים 434)"
+  },
+  {
+    "make": "Voyah",
+    "model": "DREAM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 434,
+    "cc": 0,
+    "seconds": 5.8,
+    "source": "נתון יצרן (Voyah Dream EV 434)"
+  },
+  {
+    "make": "וויה סין",
+    "model": "FREE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 488,
+    "cc": 0,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (וויה פרי קרוסאובר חשמלי EV AWD 488)"
+  },
+  {
+    "make": "וויה סין",
+    "model": "FREE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 490,
+    "cc": 0,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (וויה פרי קרוסאובר חשמלי EV AWD 490)"
+  },
+  {
+    "make": "וויה סין",
+    "model": "FREE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 489,
+    "cc": 1476,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (וויה פרי מאריך טווח EREV 489)"
+  },
+  {
+    "make": "וויה",
+    "model": "פרי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 488,
+    "cc": 0,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (וויה פרי 488)"
+  },
+  {
+    "make": "Voyah",
+    "model": "FREE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 488,
+    "cc": 0,
+    "seconds": 4.4,
+    "source": "נתון יצרן (Voyah Free EV 488)"
+  },
+  {
+    "make": "וויה סין",
+    "model": "COURAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 435,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (וויה קוראז' חשמלי כפול מנועים AWD 435)"
+  },
+  {
+    "make": "וויה סין",
+    "model": "COURAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 0,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (וויה קוראז' חשמלי RWD 313)"
+  },
+  {
+    "make": "וויה",
+    "model": "קוראז",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 435,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (וויה קוראז' 435)"
+  },
+  {
+    "make": "Voyah",
+    "model": "COURAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 435,
+    "cc": 0,
+    "seconds": 4.9,
+    "source": "נתון יצרן (Voyah Courage AWD 435)"
   },
   {
     "make": "אף אי דאבל יו",
-    "model": "E-HS5",
+    "model": "EHS5",
     "yearStart": null,
     "yearEnd": null,
     "hp": 285,
@@ -1360,16 +1100,6 @@
     "source": "נתון יצרן (Hongqi EHS5 EV 285)"
   },
   {
-    "make": "Hongqi",
-    "model": "E-HS5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 285,
-    "cc": 0,
-    "seconds": 6.9,
-    "source": "נתון יצרן (Hongqi E-HS5 EV)"
-  },
-  {
     "make": "אף אי דאבל יו",
     "model": "EHS7",
     "yearStart": null,
@@ -1378,26 +1108,6 @@
     "cc": 0,
     "seconds": 5.8,
     "source": "רישוי רכב / נתון יצרן (הונגצ'י EHS7 חשמלי RWD 340)"
-  },
-  {
-    "make": "אף אי דאבל יו",
-    "model": "E-HS7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 340,
-    "cc": 0,
-    "seconds": 5.8,
-    "source": "רישוי רכב / נתון יצרן (הונגצ'י EHS7 חשמלי RWD 340)"
-  },
-  {
-    "make": "אף אי דאבל יו",
-    "model": "EHS7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 344,
-    "cc": 0,
-    "seconds": 5.8,
-    "source": "רישוי רכב / נתון יצרן (הונגצ'י EHS7 חשמלי RWD 344)"
   },
   {
     "make": "אף אי דאבל יו",
@@ -1430,26 +1140,6 @@
     "source": "נתון יצרן (Hongqi EHS7 EV 340)"
   },
   {
-    "make": "Hongqi",
-    "model": "E-HS7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 340,
-    "cc": 0,
-    "seconds": 5.8,
-    "source": "נתון יצרן (Hongqi E-HS7 EV)"
-  },
-  {
-    "make": "Hongqi",
-    "model": "EHS7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 619,
-    "cc": 0,
-    "seconds": 3.9,
-    "source": "נתון יצרן (Hongqi EHS7 AWD)"
-  },
-  {
     "make": "אף אי דאבל יו",
     "model": "EH7",
     "yearStart": null,
@@ -1458,26 +1148,6 @@
     "cc": 0,
     "seconds": 5.8,
     "source": "רישוי רכב / נתון יצרן (הונגצ'י EH7 סדאן חשמלי RWD 340)"
-  },
-  {
-    "make": "אף אי דאבל יו",
-    "model": "E-H7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 340,
-    "cc": 0,
-    "seconds": 5.8,
-    "source": "רישוי רכב / נתון יצרן (הונגצ'י EH7 סדאן חשמלי RWD 340)"
-  },
-  {
-    "make": "אף אי דאבל יו",
-    "model": "EH7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 344,
-    "cc": 0,
-    "seconds": 5.8,
-    "source": "רישוי רכב / נתון יצרן (הונגצ'י EH7 סדאן חשמלי RWD 344)"
   },
   {
     "make": "אף אי דאבל יו",
@@ -1510,38 +1180,8 @@
     "source": "נתון יצרן (Hongqi EH7 EV 340)"
   },
   {
-    "make": "Hongqi",
-    "model": "E-H7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 340,
-    "cc": 0,
-    "seconds": 5.8,
-    "source": "נתון יצרן (Hongqi E-H7 EV)"
-  },
-  {
-    "make": "Hongqi",
-    "model": "EH7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 619,
-    "cc": 0,
-    "seconds": 3.5,
-    "source": "נתון יצרן (Hongqi EH7 AWD)"
-  },
-  {
     "make": "אף אי דאבל יו",
     "model": "E-HS9",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 551,
-    "cc": 0,
-    "seconds": 4.9,
-    "source": "רישוי רכב / נתון יצרן (הונגצ'י E-HS9 חשמלי Exclusive 551)"
-  },
-  {
-    "make": "אף אי דאבל יו",
-    "model": "EHS9",
     "yearStart": null,
     "yearEnd": null,
     "hp": 551,
@@ -1560,28 +1200,8 @@
     "source": "רישוי רכב / נתון יצרן (הונגצ'י E-HS9 חשמלי Comfort 435)"
   },
   {
-    "make": "אף אי דאבל יו",
-    "model": "E-HS9",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 436,
-    "cc": 0,
-    "seconds": 6.5,
-    "source": "רישוי רכב / נתון יצרן (הונגצ'י E-HS9 חשמלי Premium 436)"
-  },
-  {
     "make": "הונגצ'י",
     "model": "E-HS9",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 551,
-    "cc": 0,
-    "seconds": 4.9,
-    "source": "רישוי רכב / נתון יצרן (הונגצ'י E-HS9 551)"
-  },
-  {
-    "make": "הונגצ'י",
-    "model": "EHS9",
     "yearStart": null,
     "yearEnd": null,
     "hp": 551,
@@ -1610,16 +1230,6 @@
     "source": "נתון יצרן (Hongqi E-HS9 435)"
   },
   {
-    "make": "Hongqi",
-    "model": "EHS9",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 551,
-    "cc": 0,
-    "seconds": 4.9,
-    "source": "נתון יצרן (Hongqi E-HS9 551)"
-  },
-  {
     "make": "אף אי דאבל יו",
     "model": "H5",
     "yearStart": null,
@@ -1640,46 +1250,6 @@
     "source": "רישוי רכב / נתון יצרן (הונגצ'י אוסדו 2.0 טורבו 224)"
   },
   {
-    "make": "אף אי דאבל יו",
-    "model": "הוסדו",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 224,
-    "cc": 1989,
-    "seconds": 7.8,
-    "source": "רישוי רכב / נתון יצרן (הונגצ'י הוסדו 2.0 טורבו 224)"
-  },
-  {
-    "make": "אף אי דאבל יו",
-    "model": "H5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 169,
-    "cc": 1498,
-    "seconds": 9.5,
-    "source": "רישוי רכב / נתון יצרן (הונגצ'י H5 1.5 טורבו 169)"
-  },
-  {
-    "make": "אף אי דאבל יו",
-    "model": "H5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 190,
-    "cc": 1498,
-    "seconds": 8.0,
-    "source": "רישוי רכב / נתון יצרן (הונגצ'י H5 היברידי 1.5T HEV 190)"
-  },
-  {
-    "make": "הונגצ'י",
-    "model": "הוסדו",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 224,
-    "cc": 1989,
-    "seconds": 7.8,
-    "source": "רישוי רכב / נתון יצרן (הונגצ'י אוסדו / הוסדו 224)"
-  },
-  {
     "make": "הונגצ'י",
     "model": "H5",
     "yearStart": null,
@@ -1698,15 +1268,5 @@
     "cc": 1989,
     "seconds": 7.8,
     "source": "נתון יצרן (Hongqi H5 2.0T)"
-  },
-  {
-    "make": "Hongqi",
-    "model": "OUSADO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 224,
-    "cc": 1989,
-    "seconds": 7.8,
-    "source": "נתון יצרן (Hongqi Ousado 2.0T)"
   }
 ]
