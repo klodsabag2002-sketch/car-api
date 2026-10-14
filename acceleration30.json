@@ -1,1 +1,242 @@
-klod
+[
+  {
+    "make": "רולס רויס",
+    "model": "GHOST",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "hp": 571,
+    "cc": 6749,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (רולס רויס גוסט דור 2 6.75 V12 טווין-טורבו AWD 571 כ\"ס)"
+  },
+  {
+    "make": "רולס רויס",
+    "model": "GHOST BLACK BADGE",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 6749,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (רולס רויס גוסט בלאק באדג' 6.75 V12 600 כ\"ס)"
+  },
+  {
+    "make": "רולס רויס",
+    "model": "GHOST",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 6749,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (רולס רויס גוסט Black Badge 600 כ\"ס)"
+  },
+  {
+    "make": "רולס רויס",
+    "model": "GHOST",
+    "yearStart": 2010,
+    "yearEnd": 2020,
+    "hp": 570,
+    "cc": 6592,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (רולס רויס גוסט דור 1 6.6 V12 טווין-טורבו 570 כ\"ס)"
+  },
+  {
+    "make": "רולס רויס",
+    "model": "גוסט",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "hp": 571,
+    "cc": 6749,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (רולס רויס גוסט 571 כ\"ס)"
+  },
+  {
+    "make": "רולס רויס",
+    "model": "גוסט",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 6749,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (רולס רויס גוסט בלאק באדג' 600 כ\"ס)"
+  },
+  {
+    "make": "רולס רויס",
+    "model": "גוסט",
+    "yearStart": null,
+    "yearEnd": 2020,
+    "hp": 570,
+    "cc": 6592,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (רולס רויס גוסט 570 כ\"ס)"
+  },
+  {
+    "make": "רולס-רויס",
+    "model": "GHOST",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 571,
+    "cc": 6749,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (רולס-רויס גוסט 571 כ\"ס)"
+  },
+  {
+    "make": "Rolls-Royce",
+    "model": "GHOST",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 571,
+    "cc": 6749,
+    "seconds": 4.8,
+    "source": "נתון יצרן (Rolls-Royce Ghost 6.75 V12 571hp)"
+  },
+  {
+    "make": "Rolls-Royce",
+    "model": "GHOST BLACK BADGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 6749,
+    "seconds": 4.7,
+    "source": "נתון יצרן (Rolls-Royce Ghost Black Badge 600hp)"
+  },
+  {
+    "make": "רולס רויס",
+    "model": "SPECTRE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 585,
+    "cc": 0,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (רולס רויס ספקטר קופה חשמלי מלא כפול מנועים AWD 585 כ\"ס)"
+  },
+  {
+    "make": "רולס רויס",
+    "model": "ספקטר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 585,
+    "cc": 0,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (רולס רויס ספקטר חשמלי 585 כ\"ס)"
+  },
+  {
+    "make": "רולס-רויס",
+    "model": "SPECTRE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 585,
+    "cc": 0,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (רולס-רויס ספקטר 585 כ\"ס)"
+  },
+  {
+    "make": "רולס-רויס",
+    "model": "ספקטר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 585,
+    "cc": 0,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (רולס-רויס ספקטר 585 כ\"ס)"
+  },
+  {
+    "make": "Rolls-Royce",
+    "model": "SPECTRE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 585,
+    "cc": 0,
+    "seconds": 4.5,
+    "source": "נתון יצרן (Rolls-Royce Spectre Dual Motor AWD EV 585hp)"
+  },
+  {
+    "make": "רולס רויס",
+    "model": "CULLINAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 571,
+    "cc": 6749,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (רולס רויס קאלינן SUV יוקרה 6.75 V12 טווין-טורבו AWD 571 כ\"ס)"
+  },
+  {
+    "make": "רולס רויס",
+    "model": "CULLINAN BLACK BADGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 6749,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (רולס רויס קאלינן בלאק באדג' 6.75 V12 600 כ\"ס)"
+  },
+  {
+    "make": "רולס רויס",
+    "model": "CULLINAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 6749,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (רולס רויס קאלינן Black Badge 600 כ\"ס)"
+  },
+  {
+    "make": "רולס רויס",
+    "model": "קאלינן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 571,
+    "cc": 6749,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (רולס רויס קאלינן 571 כ\"ס)"
+  },
+  {
+    "make": "רולס רויס",
+    "model": "קאלינן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 6749,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (רולס רויס קאלינן בלאק באדג' 600 כ\"ס)"
+  },
+  {
+    "make": "רולס רויס",
+    "model": "קלינן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 571,
+    "cc": 6749,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (רולס רויס קלינן 571 כ\"ס)"
+  },
+  {
+    "make": "רולס-רויס",
+    "model": "CULLINAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 571,
+    "cc": 6749,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (רולס-רויס קאלינן 571 כ\"ס)"
+  },
+  {
+    "make": "Rolls-Royce",
+    "model": "CULLINAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 571,
+    "cc": 6749,
+    "seconds": 5.2,
+    "source": "נתון יצרן (Rolls-Royce Cullinan 6.75 V12 571hp)"
+  },
+  {
+    "make": "Rolls-Royce",
+    "model": "CULLINAN BLACK BADGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 6749,
+    "seconds": 4.9,
+    "source": "נתון יצרן (Rolls-Royce Cullinan Black Badge 600hp)"
+  }
+]
