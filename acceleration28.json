@@ -1,1 +1,402 @@
-klod
+[
+  {
+    "make": "צ'רי סין",
+    "model": "FX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 186,
+    "cc": 1598,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (צ'רי FX טורבו 1.6 TGDI 186 כ\"ס)"
+  },
+  {
+    "make": "צ'רי סין",
+    "model": "FX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (צ'רי FX EV חשמלי מלא 204 כ\"ס)"
+  },
+  {
+    "make": "צ'רי סין",
+    "model": "FX EV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (צ'רי FX EV 204 כ\"ס)"
+  },
+  {
+    "make": "צ'רי",
+    "model": "Fx",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 186,
+    "cc": 1598,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (צ'רי FX 186 כ\"ס)"
+  },
+  {
+    "make": "צ'רי",
+    "model": "FX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 186,
+    "cc": 1598,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (צ'רי FX 186 כ\"ס)"
+  },
+  {
+    "make": "צ'רי",
+    "model": "FX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (צ'רי FX חשמלי 204 כ\"ס)"
+  },
+  {
+    "make": "Chery",
+    "model": "FX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 186,
+    "cc": 1598,
+    "seconds": 7.8,
+    "source": "נתון יצרן (Chery FX 1.6T)"
+  },
+  {
+    "make": "Chery",
+    "model": "FX EV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.6,
+    "source": "נתון יצרן (Chery FX EV)"
+  },
+  {
+    "make": "צ'רי סין",
+    "model": "ARRIZO 8 PHEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (צ'רי אריזו 8 פלאג-אין PHEV בנזין 143 כ\"ס / משולב 360 כ\"ס)"
+  },
+  {
+    "make": "צ'רי סין",
+    "model": "ARRIZO 8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (צ'רי אריזו 8 PHEV 143 כ\"ס)"
+  },
+  {
+    "make": "צ'רי סין",
+    "model": "ARRIZO 8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 186,
+    "cc": 1598,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (צ'רי אריזו 8 סדאן 1.6 TGDI 186 כ\"ס)"
+  },
+  {
+    "make": "צ'רי סין",
+    "model": "ARRIZO 8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 1598,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (צ'רי אריזו 8 1.6 TGDI 197 כ\"ס)"
+  },
+  {
+    "make": "צ'רי",
+    "model": "אריזו 8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (צ'רי אריזו 8 143 כ\"ס)"
+  },
+  {
+    "make": "צ'רי",
+    "model": "אריזו 8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 186,
+    "cc": 1598,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (צ'רי אריזו 8 186 כ\"ס)"
+  },
+  {
+    "make": "Chery",
+    "model": "ARRIZO 8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 7.0,
+    "source": "נתון יצרן (Chery Arrizo 8 PHEV)"
+  },
+  {
+    "make": "צ'רי סין",
+    "model": "TIGGO 4 HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 1498,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 4 פרו היברידי 1.5 95 כ\"ס בנזין)"
+  },
+  {
+    "make": "צ'רי סין",
+    "model": "TIGGO 4 PRO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 1498,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 4 פרו הייבריד 95 כ\"ס)"
+  },
+  {
+    "make": "צ'רי סין",
+    "model": "TIGGO 4 PRO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 1498,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 4 פרו 1.5 טורבו בנזין 147 כ\"ס)"
+  },
+  {
+    "make": "צ'רי",
+    "model": "טיאגו 4 פרו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 1498,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 4 פרו 95 כ\"ס)"
+  },
+  {
+    "make": "צ'רי",
+    "model": "טיגו 4 פרו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 1498,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 4 פרו 95 כ\"ס)"
+  },
+  {
+    "make": "Chery",
+    "model": "TIGGO 4 PRO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 95,
+    "cc": 1498,
+    "seconds": 9.9,
+    "source": "נתון יצרן (Chery Tiggo 4 Pro Hybrid)"
+  },
+  {
+    "make": "צ'רי סין",
+    "model": "TIGGO7 PRO PHEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 7 פרו פלאג-אין PHEV בנזין 143 כ\"ס / משולב 324 כ\"ס)"
+  },
+  {
+    "make": "צ'רי סין",
+    "model": "TIGGO 7 PRO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 7 פרו PHEV 143 כ\"ס)"
+  },
+  {
+    "make": "צ'רי סין",
+    "model": "TIGGO 7 PRO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 186,
+    "cc": 1598,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 7 פרו 1.6 TGDI טורבו 186 כ\"ס)"
+  },
+  {
+    "make": "צ'רי סין",
+    "model": "TIGGO 7 PRO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 1498,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 7 פרו 1.5 טורבו 147 כ\"ס)"
+  },
+  {
+    "make": "צ'רי",
+    "model": "טיגו 7 פרו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 7 פרו 143 כ\"ס)"
+  },
+  {
+    "make": "צ'רי",
+    "model": "טיגו 7 פרו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 186,
+    "cc": 1598,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 7 פרו 186 כ\"ס)"
+  },
+  {
+    "make": "Chery",
+    "model": "TIGGO 7 PRO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 7.5,
+    "source": "נתון יצרן (Chery Tiggo 7 Pro PHEV)"
+  },
+  {
+    "make": "צ'רי סין",
+    "model": "TIGGO 8 PRO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 186,
+    "cc": 1598,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 8 פרו 7 מקומות 1.6 TGDI טורבו 186 כ\"ס)"
+  },
+  {
+    "make": "צ'רי סין",
+    "model": "TIGGO 8 PRO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 8 פרו e+ פלאג-אין PHEV בנזין 143 כ\"ס / משולב 244 כ\"ס)"
+  },
+  {
+    "make": "צ'רי סין",
+    "model": "TIGGO 8 PRO PHEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 8 פרו PHEV 143 כ\"ס)"
+  },
+  {
+    "make": "צ'רי סין",
+    "model": "TIGGO 8 PRO MAX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 254,
+    "cc": 1998,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 8 פרו מקס 2.0 TGDI AWD 254 כ\"ס)"
+  },
+  {
+    "make": "צ'רי",
+    "model": "טיגו 8 פרו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 186,
+    "cc": 1598,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 8 פרו 186 כ\"ס)"
+  },
+  {
+    "make": "צ'רי",
+    "model": "טיגו 8 פרו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 8 פרו PHEV 143 כ\"ס)"
+  },
+  {
+    "make": "Chery",
+    "model": "TIGGO 8 PRO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 186,
+    "cc": 1598,
+    "seconds": 8.7,
+    "source": "נתון יצרן (Chery Tiggo 8 Pro 1.6T)"
+  },
+  {
+    "make": "צ'רי סין",
+    "model": "TIGGO 9 PHEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 9 פלאג-אין PHEV בנזין 143 כ\"ס / משולב 381 כ\"ס)"
+  },
+  {
+    "make": "צ'רי סין",
+    "model": "TIGGO 9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 9 PHEV 143 כ\"ס)"
+  },
+  {
+    "make": "צ'רי סין",
+    "model": "TIGGO 9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 261,
+    "cc": 1998,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 9 2.0 TGDI טורבו 261 כ\"ס)"
+  },
+  {
+    "make": "צ'רי",
+    "model": "טיגו 9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 9 143 כ\"ס)"
+  },
+  {
+    "make": "Chery",
+    "model": "TIGGO 9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 6.8,
+    "source": "נתון יצרן (Chery Tiggo 9 PHEV)"
+  }
+]
