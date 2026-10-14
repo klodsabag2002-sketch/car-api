@@ -284,6 +284,66 @@
     "model": "SUPERB",
     "yearStart": null,
     "yearEnd": null,
+    "hp": 265,
+    "cc": 1984,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (סקודה סופרב 2.0 TSI 4x4 דור חדש 265 כ\"ס)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "SUPERB SPORTLINE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 1984,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (סקודה סופרב ספורטליין 2.0 TSI 4x4 דור חדש 265 כ\"ס)"
+  },
+  {
+    "make": "סקודה",
+    "model": "SUPERB",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 1984,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (סקודה סופרב 265 כ\"ס)"
+  },
+  {
+    "make": "סקודה",
+    "model": "סופרב",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 1984,
+    "seconds": 5.6,
+    "source": "רישוי רכב / נתון יצרן (סקודה סופרב 265 כ\"ס)"
+  },
+  {
+    "make": "Skoda",
+    "model": "SUPERB",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 1984,
+    "seconds": 5.6,
+    "source": "נתון יצרן (Skoda Superb 2.0 TSI 4x4 265hp)"
+  },
+  {
+    "make": "Skoda",
+    "model": "SUPERB SPORTLINE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 1984,
+    "seconds": 5.6,
+    "source": "נתון יצרן (Skoda Superb Sportline 265hp)"
+  },
+  {
+    "make": "סקודה צ'כיה",
+    "model": "SUPERB",
+    "yearStart": null,
+    "yearEnd": null,
     "hp": 150,
     "cc": 1498,
     "seconds": 9.2,
