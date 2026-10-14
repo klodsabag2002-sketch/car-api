@@ -40,16 +40,6 @@
     "source": "רישוי רכב / נתון יצרן (צ'רי FX HEV היברידי 95 כ\"ס)"
   },
   {
-    "make": "צ'רי סין",
-    "model": "FX HEV",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 95,
-    "cc": 1498,
-    "seconds": 8.2,
-    "source": "רישוי רכב / נתון יצרן (צ'רי FX HEV 95 כ\"ס)"
-  },
-  {
     "make": "צ'רי",
     "model": "Fx",
     "yearStart": null,
@@ -270,16 +260,6 @@
     "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 7 פרו 1.6 TGDI טורבו 186 כ\"ס)"
   },
   {
-    "make": "צ'רי סין",
-    "model": "TIGGO 7 HEV",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 143,
-    "cc": 1499,
-    "seconds": 8.0,
-    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 7 HEV היברידי 8.0 שניות)"
-  },
-  {
     "make": "צ'רי",
     "model": "טיגו 7 פרו",
     "yearStart": null,
@@ -418,5 +398,835 @@
     "cc": 1499,
     "seconds": 6.8,
     "source": "נתון יצרן (Chery Tiggo 9 PHEV)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "ATS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 1998,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק ATS סדאן 2.0 טורבו 272 כ\"ס)"
+  },
+  {
+    "make": "\"קאדילאק ארהב",
+    "model": "ATS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 1998,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק ATS 2.0T 272 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "ATS-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 470,
+    "cc": 3564,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק ATS-V ספורט 3.6 טווין-טורבו 470 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק",
+    "model": "ATS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 1998,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק ATS 272 כ\"ס)"
+  },
+  {
+    "make": "Cadillac",
+    "model": "ATS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 1998,
+    "seconds": 5.9,
+    "source": "נתון יצרן (Cadillac ATS 2.0 Turbo)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "CT5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 237,
+    "cc": 1997,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק CT5 2.0 טורבו 237 כ\"ס)"
+  },
+  {
+    "make": "\"קאדילאק ארהב",
+    "model": "CT5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 237,
+    "cc": 1997,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק CT5 2.0T 237 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "CT5-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 360,
+    "cc": 2990,
+    "seconds": 4.9,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק CT5-V 3.0 טווין-טורבו 360 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "CT5-V BLACKWING",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 668,
+    "cc": 6162,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק CT5-V בלאקווינג 6.2 V8 סופרצ'ארג' 668 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק",
+    "model": "CT5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 237,
+    "cc": 1997,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק CT5 237 כ\"ס)"
+  },
+  {
+    "make": "Cadillac",
+    "model": "CT5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 237,
+    "cc": 1997,
+    "seconds": 6.9,
+    "source": "נתון יצרן (Cadillac CT5 2.0T)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "CT6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 335,
+    "cc": 3649,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק CT6 3.6 V6 אטמוספרי AWD 335 כ\"ס)"
+  },
+  {
+    "make": "\"קאדילאק ארהב",
+    "model": "CT6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 335,
+    "cc": 3649,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק CT6 3.6 335 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "CT6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 404,
+    "cc": 2990,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק CT6 3.0 טווין-טורבו 404 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "CT6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 1998,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק CT6 2.0 טורבו 265 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק",
+    "model": "CT6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 335,
+    "cc": 3649,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק CT6 335 כ\"ס)"
+  },
+  {
+    "make": "Cadillac",
+    "model": "CT6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 335,
+    "cc": 3649,
+    "seconds": 6.1,
+    "source": "נתון יצרן (Cadillac CT6 3.6 AWD)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "CTS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 270,
+    "cc": 3000,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק CTS דור 2 3.0 V6 270 כ\"ס)"
+  },
+  {
+    "make": "\"קאדילאק ארהב",
+    "model": "CTS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 270,
+    "cc": 3000,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק CTS 3.0 270 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "CTS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 1998,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק CTS דור 3 2.0 טורבו 272 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "CTS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 311,
+    "cc": 3564,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק CTS 3.6 V6 311 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "CTS-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 556,
+    "cc": 6162,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק CTS-V דור 2 6.2 סופרצ'ארג' 556 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "CTS-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 640,
+    "cc": 6162,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק CTS-V דור 3 6.2 V8 640 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק",
+    "model": "CTS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 270,
+    "cc": 3000,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק CTS 270 כ\"ס)"
+  },
+  {
+    "make": "Cadillac",
+    "model": "CTS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 270,
+    "cc": 3000,
+    "seconds": 7.5,
+    "source": "נתון יצרן (Cadillac CTS 3.0)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "DTS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 4565,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק DTS פול סייז 4.6 V8 נורת'סטאר 275 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "DTS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 292,
+    "cc": 4565,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק DTS פלטינום 4.6 V8 292 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק",
+    "model": "DTS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 4565,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק DTS 275 כ\"ס)"
+  },
+  {
+    "make": "Cadillac",
+    "model": "DTS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 4565,
+    "seconds": 7.5,
+    "source": "נתון יצרן (Cadillac DTS 4.6 Northstar)"
+  },
+  {
+    "make": "קאדילאק מקסיקו",
+    "model": "SRX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 314,
+    "cc": 3564,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק SRX קרוסאובר 3.6 V6 314 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק מקסיקו",
+    "model": "SRX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 2997,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק SRX 3.0 V6 265 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "SRX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 4565,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק SRX דור ראשון 4.6 V8 320 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק",
+    "model": "SRX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 314,
+    "cc": 3564,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק SRX 314 כ\"ס)"
+  },
+  {
+    "make": "Cadillac",
+    "model": "SRX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 314,
+    "cc": 3564,
+    "seconds": 7.5,
+    "source": "נתון יצרן (Cadillac SRX 3.6)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "STS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 4565,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק STS 4.6 V8 נורת'סטאר 320 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "STS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 302,
+    "cc": 3564,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק STS 3.6 V6 302 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "STS-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 469,
+    "cc": 4371,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק STS-V 4.4 V8 סופרצ'ארג' 469 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק",
+    "model": "STS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 4565,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק STS 320 כ\"ס)"
+  },
+  {
+    "make": "Cadillac",
+    "model": "STS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 320,
+    "cc": 4565,
+    "seconds": 6.2,
+    "source": "נתון יצרן (Cadillac STS 4.6)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "XT4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 237,
+    "cc": 1977,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק XT4 קרוסאובר 2.0 טורבו 237 כ\"ס)"
+  },
+  {
+    "make": "\"קאדילאק ארהב",
+    "model": "XT4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 237,
+    "cc": 1977,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק XT4 2.0T 237 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק",
+    "model": "XT4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 237,
+    "cc": 1977,
+    "seconds": 7.2,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק XT4 237 כ\"ס)"
+  },
+  {
+    "make": "Cadillac",
+    "model": "XT4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 237,
+    "cc": 1977,
+    "seconds": 7.2,
+    "source": "נתון יצרן (Cadillac XT4 2.0 Turbo)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "XT5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 3649,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק XT5 3.6 V6 אטמוספרי AWD 310 כ\"ס)"
+  },
+  {
+    "make": "\"קאדילאק ארהב",
+    "model": "XT5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 3649,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק XT5 3.6 310 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "XT5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 237,
+    "cc": 1998,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק XT5 2.0 טורבו 237 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק",
+    "model": "XT5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 3649,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק XT5 310 כ\"ס)"
+  },
+  {
+    "make": "Cadillac",
+    "model": "XT5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 3649,
+    "seconds": 7.0,
+    "source": "נתון יצרן (Cadillac XT5 3.6 V6)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "XT6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 3649,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק XT6 7 מקומות 3.6 V6 AWD 310 כ\"ס)"
+  },
+  {
+    "make": "\"קאדילאק ארהב",
+    "model": "XT6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 3649,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק XT6 3.6 310 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "XT6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 237,
+    "cc": 1998,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק XT6 2.0 טורבו 237 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק",
+    "model": "XT6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 3649,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק XT6 310 כ\"ס)"
+  },
+  {
+    "make": "Cadillac",
+    "model": "XT6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 3649,
+    "seconds": 7.3,
+    "source": "נתון יצרן (Cadillac XT6 3.6 V6)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "XTS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 304,
+    "cc": 3564,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק XTS סאלון 3.6 V6 304 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "XTS V-SPORT",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 410,
+    "cc": 3564,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק XTS V-Sport 3.6 טווין-טורבו AWD 410 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק",
+    "model": "XTS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 304,
+    "cc": 3564,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק XTS 304 כ\"ס)"
+  },
+  {
+    "make": "Cadillac",
+    "model": "XTS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 304,
+    "cc": 3564,
+    "seconds": 6.8,
+    "source": "נתון יצרן (Cadillac XTS 3.6)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "LYRIQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 515,
+    "cc": 0,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק לייריק AWD כפול מנועים חשמלי מלא 515/500 כ\"ס)"
+  },
+  {
+    "make": "\"קאדילאק ארהב",
+    "model": "LYRIQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 515,
+    "cc": 0,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק LYRIQ AWD חשמלי 515 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "LYRIQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק לייריק RWD הנעה אחורית חשמלי 340 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק",
+    "model": "לייריק",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 515,
+    "cc": 0,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק לייריק 515 כ\"ס)"
+  },
+  {
+    "make": "Cadillac",
+    "model": "LYRIQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 515,
+    "cc": 0,
+    "seconds": 4.6,
+    "source": "נתון יצרן (Cadillac Lyriq AWD EV)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "OPTIQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 0,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק אופטיק קרוסאובר חשמלי מלא AWD 300 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק",
+    "model": "אופטיק",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 0,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק אופטיק 300 כ\"ס)"
+  },
+  {
+    "make": "Cadillac",
+    "model": "OPTIQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 0,
+    "seconds": 6.3,
+    "source": "נתון יצרן (Cadillac Optiq AWD EV)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "ESCALADE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 420,
+    "cc": 6162,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק אסקלייד 6.2 EcoTec3 V8 420 כ\"ס)"
+  },
+  {
+    "make": "\"קאדילאק ארהב",
+    "model": "ESCALADE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 420,
+    "cc": 6162,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק אסקלייד 6.2 420 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "ESCALADE-V",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 682,
+    "cc": 6162,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק אסקלייד V סופרצ'ארג' 6.2 V8 682 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "ESCALADE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 403,
+    "cc": 6162,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק אסקלייד דור 3 6.2 V8 403 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "ESCALADE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 277,
+    "cc": 2993,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק אסקלייד 3.0 Duramax דיזל 277 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "ESCALADE IQ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 750,
+    "cc": 0,
+    "seconds": 5.0,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק אסקלייד IQ חשמלי מלא 750 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק",
+    "model": "אסקלייד",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 420,
+    "cc": 6162,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק אסקלייד 420 כ\"ס)"
+  },
+  {
+    "make": "Cadillac",
+    "model": "ESCALADE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 420,
+    "cc": 6162,
+    "seconds": 6.4,
+    "source": "נתון יצרן (Cadillac Escalade 6.2 V8)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "SEVILLE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 305,
+    "cc": 4565,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק סוויל STS 4.6 V8 נורת'סטאר 305 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "SEVILLE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 275,
+    "cc": 4565,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק סוויל SLS 4.6 V8 275 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק",
+    "model": "סוייל",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 305,
+    "cc": 4565,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק סוויל 305 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק",
+    "model": "סוויל",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 305,
+    "cc": 4565,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק סוויל 305 כ\"ס)"
+  },
+  {
+    "make": "Cadillac",
+    "model": "SEVILLE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 305,
+    "cc": 4565,
+    "seconds": 7.1,
+    "source": "נתון יצרן (Cadillac Seville STS)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "FLEETWOOD",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 260,
+    "cc": 5733,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק פליטווד ברוגהאם 5.7 LT1 V8 260 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק ארה\"ב",
+    "model": "FLEETWOOD",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 185,
+    "cc": 4887,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק פליטווד 4.9 V8 185 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק",
+    "model": "פליטוד",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 260,
+    "cc": 5733,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק פליטווד 260 כ\"ס)"
+  },
+  {
+    "make": "קאדילאק",
+    "model": "פליטווד",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 260,
+    "cc": 5733,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (קאדילאק פליטווד 260 כ\"ס)"
+  },
+  {
+    "make": "Cadillac",
+    "model": "FLEETWOOD",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 260,
+    "cc": 5733,
+    "seconds": 8.5,
+    "source": "נתון יצרן (Cadillac Fleetwood 5.7 V8)"
   }
 ]
