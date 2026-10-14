@@ -1,5 +1,235 @@
 [
   {
+    "make": "מרצדס בנץ גרמן",
+    "model": "C200 D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1597,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C200d W205 מתוח פנים 1.6 דיזל 160)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "C200D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1597,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C200d W205 1.6 דיזל 160)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "C200 D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1993,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C200d W206 2.0 דיזל 163)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "C200D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1993,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C200d W206 2.0 דיזל 163)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "C200 D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1598,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C200d W205 דור ראשון 1.6 דיזל 136)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "C220 D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 2143,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C220d W205 2.1 דיזל 170)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "C220 D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 194,
+    "cc": 1950,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C220d W205 מתוח פנים 2.0 דיזל 194)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "C220 D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1993,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C220d W206 2.0 דיזל 200)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "C220D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 194,
+    "cc": 1950,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C220d 2.0 דיזל 194)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "C250 D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 2143,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C250d W205 2.1 דיזל 204)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "C300 D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1950,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C300d 2.0 דיזל 245)"
+  },
+  {
+    "make": "מרצדס",
+    "model": "C200 D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1597,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C200d 160)"
+  },
+  {
+    "make": "מרצדס",
+    "model": "C200D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1597,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C200d 160)"
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "C200 D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1597,
+    "seconds": 7.9,
+    "source": "נתון יצרן (Mercedes-Benz C200d 160hp)"
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "C200D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1597,
+    "seconds": 7.9,
+    "source": "נתון יצרן (Mercedes-Benz C200d 160hp)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "E200 D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1950,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (מרצדס E200d W213 2.0 דיזל 150)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "E200 D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1597,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (מרצדס E200d W213 1.6 דיזל 160)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "E220 D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 194,
+    "cc": 1950,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (מרצדס E220d W213 2.0 דיזל 194)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "E220 D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 1993,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (מרצדס E220d W214 2.0 דיזל 197)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "E220D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 194,
+    "cc": 1950,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (מרצדס E220d 194)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "E300 D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1950,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (מרצדס E300d 2.0 דיזל 245)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "E350 D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 2987,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (מרצדס E350d 3.0 V6 דיזל 258)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "E350 D",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2925,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (מרצדס E350d 2.9 I6 דיזל 286)"
+  },
+  {
     "make": "מרצדס בנץ מקסי",
     "model": "A200",
     "yearStart": null,
@@ -2060,3 +2290,9 @@
     "source": "נתון יצרן (Mercedes-Benz G63 AMG)"
   }
 ]
+
+תוסיף את הדגם הזה ואת כל הגרסאות האלה חסר נתון ועל הדרך עם חסר רכבים במרצדס זה הזמן להוסיף לקובץ
+
+הרגע אמרתי לך לעשות את כול הדגמים שלהם וכול הגרסאות כמה שאתה יכול ממה שקיים בעולם 
+
+גם מוניות גם הכול תבדוק בכול המקומות מה יש להם שלא יהיה מצב שיחסר לי רכב במרצדס עוד פעם כי זה רכב מאוד פופלרי בארץ בגלל המוניות ויבוא אישי ויבוא מקביל ורגיל תבדוק הכול כולל מוניות
