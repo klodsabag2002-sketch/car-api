@@ -743,18 +743,41 @@ function testStatus(expiry) {
     return d >= today;
 }
 
+// בדיקת תו נכה מתוקנת
 async function checkDisabled(plate) {
     try {
-        const byFilter = await searchDatastore(DISABLED_ID, { mispar_rechev: Number(plate) }, 5);
-        if (byFilter.length > 0) return true;
+        const cleanPlate = String(plate).replace(/\D/g, "");
+        
+        // 1. סינון ישיר לפי שם השדה המדויק במאגר: "MISPAR RECHEV" כמחרוזת
+        let records = await searchDatastore(DISABLED_ID, { "MISPAR RECHEV": cleanPlate }, 5);
+        
+        // 2. ניסיון נוסף כמספר אם לא נמצא כמחרוזת
+        if (!records || records.length === 0) {
+            records = await searchDatastore(DISABLED_ID, { "MISPAR RECHEV": Number(cleanPlate) }, 5);
+        }
 
-        const byText = await searchDatastore(DISABLED_ID, null, 50, plate);
-        const found = byText.some(r =>
-            Object.values(r).some(v => String(v).replace(/\D/g, "") === plate)
-        );
-        return found;
+        // 3. גיבוי: חיפוש טקסט חופשי אם הסינון הישיר נכשל
+        if (!records || records.length === 0) {
+            const byText = await searchDatastore(DISABLED_ID, null, 10, cleanPlate);
+            records = (byText || []).filter(r => {
+                const val = r["MISPAR RECHEV"] || r["mispar_rechev"] || Object.values(r)[1];
+                return String(val).replace(/\D/g, "") === cleanPlate;
+            });
+        }
+
+        if (records && records.length > 0) {
+            const match = records[0];
+            return {
+                hasBadge: true,
+                badgeType: match["SUG TAV"] || match["SUG_TAV"] || null,
+                issueDate: match["TAARICH HAFAKAT TAG"] || match["TAARICH_HAFAKAT_TAG"] || null
+            };
+        }
+
+        return { hasBadge: false, badgeType: null, issueDate: null };
     } catch (e) {
-        return null;
+        console.error("[DISABLED BADGE ERROR]:", e.message);
+        return { hasBadge: false, badgeType: null, issueDate: null, error: true };
     }
 }
 
@@ -831,7 +854,7 @@ app.get('/api/car/:plate', async (req, res) => {
             return res.json({ success: false, message: "המספר אינו קיים במאגר משרד התחבורה" });
         }
 
-        const [row, historyRaw, ownershipList, disabled] = await Promise.all([
+        const [row, historyRaw, ownershipList, disabledResult] = await Promise.all([
             findModelRow(car),
             fetchHistoryRecord(plate),
             fetchOwnershipRows(plate),
@@ -862,6 +885,8 @@ app.get('/api/car/:plate', async (req, res) => {
         const modelTexts = [car.kinuy_mishari, car.degem_nm, car.ramat_gimur, model].filter(Boolean);
         const acceleration = lookupAccel(makeTexts, modelTexts, year, hp, engineCc);
 
+        const hasDisabledBadge = Boolean(disabledResult?.hasBadge);
+
         console.log(`--------------------------------------------------`);
         console.log(`[SEARCH LOG] 🔍 מישהו חיפש רכב!`);
         console.log(`📅 זמן: ${timestamp}`);
@@ -870,7 +895,7 @@ app.get('/api/car/:plate', async (req, res) => {
         console.log(`⚡ כוח סוס: ${hp != null ? hp : "לא ידוע"} | נפח: ${engineCc != null ? engineCc : "לא ידוע"}`);
         console.log(`🏷️ סוג בעלות: ${currentOwnership || "לא ידוע"}`);
         console.log(`🏁 תאוצה 0-100: ${acceleration ? acceleration.seconds + " שניות" : "לא נמצאה בטבלה"}`);
-        console.log(`♿ תג נכה: ${disabled === null ? "לא ידוע" : (disabled ? "יש" : "אין")}`);
+        console.log(`♿ תג נכה: ${hasDisabledBadge ? "יש" : "אין"}`);
         console.log(`🔁 מעברי בעלות: ${ownershipList.length}`);
         console.log(`--------------------------------------------------`);
 
@@ -897,7 +922,11 @@ app.get('/api/car/:plate', async (req, res) => {
                 firstRegistration: history?.firstRegistration ?? null,
                 changes: history?.changes ?? [],
                 owners: ownershipList.length || null,
-                disabled,
+                disabled: hasDisabledBadge,
+                disabledBadgeDetails: hasDisabledBadge ? {
+                    badgeType: disabledResult.badgeType,
+                    issueDate: disabledResult.issueDate
+                } : null,
                 kmSinceTest: history?.kmSinceTest ?? null
             }
         });
