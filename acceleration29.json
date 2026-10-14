@@ -1,6 +1,186 @@
 [
   {
     "make": "קיה ד. קוריאה",
+    "model": "RI0",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1396,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (קיה ריו דור 3 1.4 אוטומט 109 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "RIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1396,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (קיה ריו דור 3 1.4 אוטומט 109 כ\"ס)"
+  },
+  {
+    "make": "קיה",
+    "model": "RI0",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1396,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (קיה ריו 1.4 109 כ\"ס)"
+  },
+  {
+    "make": "קיה",
+    "model": "ריו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1396,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (קיה ריו 1.4 109 כ\"ס)"
+  },
+  {
+    "make": "Kia",
+    "model": "RI0",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1396,
+    "seconds": 12.5,
+    "source": "נתון יצרן (Kia Rio 1.4 109hp)"
+  },
+  {
+    "make": "Kia",
+    "model": "RIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 109,
+    "cc": 1396,
+    "seconds": 12.5,
+    "source": "נתון יצרן (Kia Rio 1.4 109hp)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "RI0",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 85,
+    "cc": 1248,
+    "seconds": 13.1,
+    "source": "רישוי רכב / נתון יצרן (קיה ריו 1.25 ידני 85 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "RIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 85,
+    "cc": 1248,
+    "seconds": 13.1,
+    "source": "רישוי רכב / נתון יצרן (קיה ריו 1.25 ידני 85 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "RI0",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1368,
+    "seconds": 13.4,
+    "source": "רישוי רכב / נתון יצרן (קיה ריו דור 4 1.4 אוטומט 100 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "RIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1368,
+    "seconds": 13.4,
+    "source": "רישוי רכב / נתון יצרן (קיה ריו דור 4 1.4 אוטומט 100 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "RI0",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 998,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (קיה ריו 1.0 טורבו 120 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "RIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 998,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (קיה ריו 1.0 טורבו 120 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "RI0",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 998,
+    "seconds": 11.4,
+    "source": "רישוי רכב / נתון יצרן (קיה ריו 1.0 טורבו 100 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "RIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 998,
+    "seconds": 11.4,
+    "source": "רישוי רכב / נתון יצרן (קיה ריו 1.0 טורבו 100 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "RI0",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 97,
+    "cc": 1399,
+    "seconds": 12.3,
+    "source": "רישוי רכב / נתון יצרן (קיה ריו דור 2 1.4 97 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "RIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 97,
+    "cc": 1399,
+    "seconds": 12.3,
+    "source": "רישוי רכב / נתון יצרן (קיה ריו דור 2 1.4 97 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "RI0",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 112,
+    "cc": 1599,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (קיה ריו דור 2 1.6 112 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "RIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 112,
+    "cc": 1599,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (קיה ריו דור 2 1.6 112 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
     "model": "PICANTO",
     "yearStart": null,
     "yearEnd": null,
@@ -1438,56 +1618,6 @@
     "cc": 3470,
     "seconds": 8.2,
     "source": "נתון יצרן (Kia Carnival 3.5 V6 291hp)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "RIO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 120,
-    "cc": 998,
-    "seconds": 10.2,
-    "source": "רישוי רכב / נתון יצרן (קיה ריו 1.0 T-GDI טורבו 120 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "RIO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 100,
-    "cc": 998,
-    "seconds": 11.4,
-    "source": "רישוי רכב / נתון יצרן (קיה ריו 1.0 T-GDI 100 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "RIO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 100,
-    "cc": 1368,
-    "seconds": 13.4,
-    "source": "רישוי רכב / נתון יצרן (קיה ריו 1.4 אטמוספרי 100 כ\"ס)"
-  },
-  {
-    "make": "קיה",
-    "model": "ריו",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 120,
-    "cc": 998,
-    "seconds": 10.2,
-    "source": "רישוי רכב / נתון יצרן (קיה ריו 120 כ\"ס)"
-  },
-  {
-    "make": "Kia",
-    "model": "RIO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 120,
-    "cc": 998,
-    "seconds": 10.2,
-    "source": "נתון יצרן (Kia Rio 1.0 T-GDI 120hp)"
   },
   {
     "make": "קיה ד. קוריאה",
