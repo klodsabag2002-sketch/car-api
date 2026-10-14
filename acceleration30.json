@@ -1,123 +1,103 @@
 [
   {
-    "make": "רולס רויס",
-    "model": "GHOST",
-    "yearStart": 2020,
-    "yearEnd": null,
-    "hp": 571,
-    "cc": 6749,
-    "seconds": 4.8,
-    "source": "רישוי רכב / נתון יצרן (רולס רויס גוסט דור 2 6.75 V12 טווין-טורבו 571 כ\"ס)"
-  },
-  {
-    "make": "רולס רויס",
-    "model": "GHOST BLACK BADGE",
-    "yearStart": 2021,
-    "yearEnd": null,
-    "hp": 600,
-    "cc": 6749,
-    "seconds": 4.7,
-    "source": "רישוי רכב / נתון יצרן (רולס רויס גוסט בלאק באדג' 6.75 V12 600 כ\"ס)"
-  },
-  {
-    "make": "רולס רויס",
-    "model": "GHOST",
-    "yearStart": 2010,
-    "yearEnd": 2020,
-    "hp": 570,
-    "cc": 6592,
-    "seconds": 4.9,
-    "source": "רישוי רכב / נתון יצרן (רולס רויס גוסט דור 1 570 כ\"ס)"
-  },
-  {
-    "make": "רולס רויס",
-    "model": "גוסט",
+    "make": "שברולט ד.קוריאה",
+    "model": "CRUZE 1.6 LS",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 571,
-    "cc": 6749,
-    "seconds": 4.8,
-    "source": "רישוי רכב / נתון יצרן (רולס רויס גוסט 571 כ\"ס)"
+    "hp": 124,
+    "cc": 1598,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט קרוז 1.6 LS אוטומט 124 כ\"ס)"
   },
   {
-    "make": "Rolls-Royce",
-    "model": "GHOST",
+    "make": "שברולט ד. קוריאה",
+    "model": "CRUZE 1.6 LS",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 571,
-    "cc": 6749,
-    "seconds": 4.8,
-    "source": "נתון יצרן (Rolls-Royce Ghost 571hp)"
+    "hp": 124,
+    "cc": 1598,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט קרוז 1.6 LS אוטומט 124 כ\"ס)"
   },
   {
-    "make": "רולס רויס",
-    "model": "SPECTRE",
+    "make": "שברולט",
+    "model": "CRUZE 1.6 LS",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 585,
-    "cc": 0,
-    "seconds": 4.5,
-    "source": "רישוי רכב / נתון יצרן (רולס רויס ספקטר חשמלי מלא 585 כ\"ס)"
+    "hp": 124,
+    "cc": 1598,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט קרוז 1.6 LS 124 כ\"ס)"
   },
   {
-    "make": "רולס רויס",
-    "model": "ספקטר",
+    "make": "Chevrolet",
+    "model": "CRUZE 1.6 LS",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 585,
-    "cc": 0,
-    "seconds": 4.5,
-    "source": "רישוי רכב / נתון יצרן (רולס רויס ספקטר 585 כ\"ס)"
+    "hp": 124,
+    "cc": 1598,
+    "seconds": 12.0,
+    "source": "נתון יצרן (Chevrolet Cruze 1.6 LS 124hp)"
   },
   {
-    "make": "Rolls-Royce",
-    "model": "SPECTRE",
+    "make": "שברולט ד.קוריאה",
+    "model": "CRUZE 1.6",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 585,
-    "cc": 0,
-    "seconds": 4.5,
-    "source": "נתון יצרן (Rolls-Royce Spectre 585hp)"
+    "hp": 124,
+    "cc": 1598,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט קרוז 1.6 124 כ\"ס)"
   },
   {
-    "make": "רולס רויס",
-    "model": "CULLINAN",
+    "make": "שברולט ד.קוריאה",
+    "model": "CRUZE 1.6",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 571,
-    "cc": 6749,
-    "seconds": 5.2,
-    "source": "רישוי רכב / נתון יצרן (רולס רויס קאלינן 6.75 V12 571 כ\"ס)"
+    "hp": 112,
+    "cc": 1598,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט קרוז דור 1 1.6 112 כ\"ס)"
   },
   {
-    "make": "רולס רויס",
-    "model": "CULLINAN BLACK BADGE",
+    "make": "שברולט ד.קוריאה",
+    "model": "CRUZE 1.8",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 600,
-    "cc": 6749,
-    "seconds": 4.9,
-    "source": "רישוי רכב / נתון יצרן (רולס רויס קאלינן בלאק באדג' 600 כ\"ס)"
+    "hp": 141,
+    "cc": 1796,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (שברולט קרוז 1.8 141 כ\"ס)"
   },
   {
-    "make": "רולס רויס",
-    "model": "קאלינן",
+    "make": "שברולט ד.קוריאה",
+    "model": "CRUZE 1.4",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 571,
-    "cc": 6749,
-    "seconds": 5.2,
-    "source": "רישוי רכב / נתון יצרן (רולס רויס קאלינן 571 כ\"ס)"
+    "hp": 140,
+    "cc": 1362,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט קרוז 1.4 טורבו 140 כ\"ס)"
   },
   {
-    "make": "Rolls-Royce",
-    "model": "CULLINAN",
+    "make": "שברולט ד.קוריאה",
+    "model": "CRUZE LT TURBO",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 571,
-    "cc": 6749,
-    "seconds": 5.2,
-    "source": "נתון יצרן (Rolls-Royce Cullinan 571hp)"
+    "hp": 140,
+    "cc": 1362,
+    "seconds": 9.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט קרוז LT טורבו 140 כ\"ס)"
+  },
+  {
+    "make": "שברולט ד.קוריאה",
+    "model": "CRUZE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 124,
+    "cc": 1598,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט קרוז 1.6 124 כ\"ס)"
   },
   {
     "make": "שברולט ד.קוריאה",
@@ -127,7 +107,7 @@
     "hp": 140,
     "cc": 1362,
     "seconds": 9.5,
-    "source": "רישוי רכב / נתון יצרן (שברולט קרוז 1.4 טורבו 140 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (שברולט קרוז 1.4 טורבו בנזין 140 כ\"ס)"
   },
   {
     "make": "שברולט ד. קוריאה",
@@ -160,6 +140,16 @@
     "source": "רישוי רכב / נתון יצרן (שברולט קרוז 140 כ\"ס)"
   },
   {
+    "make": "שברולט",
+    "model": "קרוז",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 124,
+    "cc": 1598,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט קרוז 124 כ\"ס)"
+  },
+  {
     "make": "Chevrolet",
     "model": "CRUZE",
     "yearStart": null,
@@ -168,6 +158,16 @@
     "cc": 1362,
     "seconds": 9.5,
     "source": "נתון יצרן (Chevrolet Cruze 1.4T 140hp)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "CRUZE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 124,
+    "cc": 1598,
+    "seconds": 12.0,
+    "source": "נתון יצרן (Chevrolet Cruze 1.6 124hp)"
   },
   {
     "make": "שברולט ד.קוריאה",
@@ -400,16 +400,6 @@
     "source": "רישוי רכב / נתון יצרן (שברולט אלרו 3.4 V6 170 כ\"ס)"
   },
   {
-    "make": "שברולט",
-    "model": "אלרו",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 170,
-    "cc": 3350,
-    "seconds": 8.8,
-    "source": "רישוי רכב / נתון יצרן (שברולט אלרו 170 כ\"ס)"
-  },
-  {
     "make": "\"שברולט ארהב",
     "model": "ASTRO",
     "yearStart": null,
@@ -418,16 +408,6 @@
     "cc": 4293,
     "seconds": 11.5,
     "source": "רישוי רכב / נתון יצרן (שברולט אסטרו 4.3 V6 190 כ\"ס)"
-  },
-  {
-    "make": "שברולט",
-    "model": "אסטרו",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 190,
-    "cc": 4293,
-    "seconds": 11.5,
-    "source": "רישוי רכב / נתון יצרן (שברולט אסטרו 190 כ\"ס)"
   },
   {
     "make": "שברולט ד.קוריאה",
@@ -510,26 +490,6 @@
     "source": "רישוי רכב / נתון יצרן (שברולט בולט EV חשמלי 204 כ\"ס)"
   },
   {
-    "make": "שברולט",
-    "model": "בולט euv",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 7.0,
-    "source": "רישוי רכב / נתון יצרן (שברולט בולט EUV 204 כ\"ס)"
-  },
-  {
-    "make": "שברולט",
-    "model": "בולט ev",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 6.7,
-    "source": "רישוי רכב / נתון יצרן (שברולט בולט EV 204 כ\"ס)"
-  },
-  {
     "make": "שברולט מקסיקו",
     "model": "BLAZER",
     "yearStart": null,
@@ -560,16 +520,6 @@
     "source": "רישוי רכב / נתון יצרן (שברולט בלייזר 308 כ\"ס)"
   },
   {
-    "make": "שברולט",
-    "model": "בלייזר ev",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 288,
-    "cc": 0,
-    "seconds": 6.0,
-    "source": "רישוי רכב / נתון יצרן (שברולט בלייזר EV 288 כ\"ס)"
-  },
-  {
     "make": "\"שברולט ארהב",
     "model": "BRIGHTDROP",
     "yearStart": null,
@@ -578,16 +528,6 @@
     "cc": 0,
     "seconds": 8.0,
     "source": "רישוי רכב / נתון יצרן (ברייטדרופ Zevo ואן חשמלי 300 כ\"ס)"
-  },
-  {
-    "make": "שברולט",
-    "model": "ברייטדרופ",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 300,
-    "cc": 0,
-    "seconds": 8.0,
-    "source": "רישוי רכב / נתון יצרן (ברייטדרופ 300 כ\"ס)"
   },
   {
     "make": "\"שברולט ארהב",
@@ -600,16 +540,6 @@
     "source": "רישוי רכב / נתון יצרן (שברולט וולט פלאג-אין 149 כ\"ס)"
   },
   {
-    "make": "שברולט",
-    "model": "וולט",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 149,
-    "cc": 1490,
-    "seconds": 8.4,
-    "source": "רישוי רכב / נתון יצרן (שברולט וולט 149 כ\"ס)"
-  },
-  {
     "make": "שברולט ד.קוריאה",
     "model": "TACUMA",
     "yearStart": null,
@@ -618,16 +548,6 @@
     "cc": 1998,
     "seconds": 10.8,
     "source": "רישוי רכב / נתון יצרן (שברולט רזו/טקומה 2.0 121 כ\"ס)"
-  },
-  {
-    "make": "שברולט",
-    "model": "וויאנט/רזו",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 121,
-    "cc": 1998,
-    "seconds": 10.8,
-    "source": "רישוי רכב / נתון יצרן (שברולט וויואנט/רזו 121 כ\"ס)"
   },
   {
     "make": "\"שברולט ארהב",
@@ -690,26 +610,6 @@
     "source": "רישוי רכב / נתון יצרן (שברולט טראקס 1.2 טורבו 139 כ\"ס)"
   },
   {
-    "make": "שברולט ד.קוריאה",
-    "model": "TRAX",
-    "yearStart": null,
-    "yearEnd": 2022,
-    "hp": 140,
-    "cc": 1364,
-    "seconds": 9.8,
-    "source": "רישוי רכב / נתון יצרן (שברולט טראקס 1.4 טורבו 140 כ\"ס)"
-  },
-  {
-    "make": "שברולט",
-    "model": "טראקס",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 139,
-    "cc": 1199,
-    "seconds": 8.6,
-    "source": "רישוי רכב / נתון יצרן (שברולט טראקס 139 כ\"ס)"
-  },
-  {
     "make": "\"שברולט ארהב",
     "model": "LUMINA",
     "yearStart": null,
@@ -718,16 +618,6 @@
     "cc": 3350,
     "seconds": 11.2,
     "source": "רישוי רכב / נתון יצרן (שברולט לומינה APV 170 כ\"ס)"
-  },
-  {
-    "make": "שברולט",
-    "model": "לומינה מיניוואן",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 170,
-    "cc": 3350,
-    "seconds": 11.2,
-    "source": "רישוי רכב / נתון יצרן (שברולט לומינה 170 כ\"ס)"
   },
   {
     "make": "\"שברולט ארהב",
@@ -760,16 +650,6 @@
     "source": "רישוי רכב / נתון יצרן (שברולט סוברבן 6.2 V8 420 כ\"ס)"
   },
   {
-    "make": "שברולט",
-    "model": "סוברבן",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 420,
-    "cc": 6162,
-    "seconds": 6.2,
-    "source": "רישוי רכב / נתון יצרן (שברולט סוברבן 420 כ\"ס)"
-  },
-  {
     "make": "\"שברולט ארהב",
     "model": "SAVANA",
     "yearStart": null,
@@ -778,16 +658,6 @@
     "cc": 6599,
     "seconds": 8.5,
     "source": "רישוי רכב / נתון יצרן (שברולט סוואנה 6.6 V8 401 כ\"ס)"
-  },
-  {
-    "make": "שברולט",
-    "model": "סוואנה",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 401,
-    "cc": 6599,
-    "seconds": 8.5,
-    "source": "רישוי רכב / נתון יצרן (שברולט סוואנה 401 כ\"ס)"
   },
   {
     "make": "\"שברולט ארהב",
@@ -810,16 +680,6 @@
     "source": "רישוי רכב / נתון יצרן (שברולט סילברדו EV 754 כ\"ס)"
   },
   {
-    "make": "שברולט",
-    "model": "סילברדו",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 470,
-    "cc": 6599,
-    "seconds": 6.8,
-    "source": "רישוי רכב / נתון יצרן (שברולט סילברדו 470 כ\"ס)"
-  },
-  {
     "make": "\"שברולט ארהב",
     "model": "CAMARO",
     "yearStart": null,
@@ -840,16 +700,6 @@
     "source": "רישוי רכב / נתון יצרן (שברולט קמארו SS 6.2 V8 455 כ\"ס)"
   },
   {
-    "make": "שברולט",
-    "model": "קאמרו",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 335,
-    "cc": 3649,
-    "seconds": 5.4,
-    "source": "רישוי רכב / נתון יצרן (שברולט קאמרו 335 כ\"ס)"
-  },
-  {
     "make": "\"שברולט ארהב",
     "model": "CAVALIER",
     "yearStart": null,
@@ -860,16 +710,6 @@
     "source": "רישוי רכב / נתון יצרן (שברולט קוואליר 2.2 140 כ\"ס)"
   },
   {
-    "make": "שברולט",
-    "model": "קוואליר",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 140,
-    "cc": 2198,
-    "seconds": 9.2,
-    "source": "רישוי רכב / נתון יצרן (שברולט קוואליר 140 כ\"ס)"
-  },
-  {
     "make": "\"שברולט ארהב",
     "model": "COLORADO",
     "yearStart": null,
@@ -878,16 +718,6 @@
     "cc": 3647,
     "seconds": 7.1,
     "source": "רישוי רכב / נתון יצרן (שברולט קולורדו ZR2 3.6 V6 308 כ\"ס)"
-  },
-  {
-    "make": "שברולט",
-    "model": "קולורדו",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 308,
-    "cc": 3647,
-    "seconds": 7.1,
-    "source": "רישוי רכב / נתון יצרן (שברולט קולורדו 308 כ\"ס)"
   },
   {
     "make": "\"שברולט ארהב",
@@ -910,16 +740,6 @@
     "source": "רישוי רכב / נתון יצרן (שברולט קורבט C8 495 כ\"ס)"
   },
   {
-    "make": "שברולט",
-    "model": "קורבט",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 495,
-    "cc": 6162,
-    "seconds": 3.0,
-    "source": "רישוי רכב / נתון יצרן (שברולט קורבט 495 כ\"ס)"
-  },
-  {
     "make": "\"שברולט ארהב",
     "model": "CORSICA",
     "yearStart": null,
@@ -928,16 +748,6 @@
     "cc": 3135,
     "seconds": 9.9,
     "source": "רישוי רכב / נתון יצרן (שברולט קורסיקה 3.1 V6 140 כ\"ס)"
-  },
-  {
-    "make": "שברולט",
-    "model": "קורסיקה",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 140,
-    "cc": 3135,
-    "seconds": 9.9,
-    "source": "רישוי רכב / נתון יצרן (שברולט קורסיקה 140 כ\"ס)"
   },
   {
     "make": "שברולט מקסיקו",
@@ -950,14 +760,44 @@
     "source": "רישוי רכב / נתון יצרן (שברולט קפטיבה ספורט 2.4 182 כ\"ס)"
   },
   {
-    "make": "שברולט",
-    "model": "קפטיבה",
+    "make": "רולס רויס",
+    "model": "GHOST",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "hp": 571,
+    "cc": 6749,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (רולס רויס גוסט דור 2 6.75 V12 טווין-טורבו 571 כ\"ס)"
+  },
+  {
+    "make": "רולס רויס",
+    "model": "GHOST BLACK BADGE",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 6749,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (רולס רויס גוסט בלאק באדג' 6.75 V12 600 כ\"ס)"
+  },
+  {
+    "make": "רולס רויס",
+    "model": "SPECTRE",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 182,
-    "cc": 2384,
-    "seconds": 9.8,
-    "source": "רישוי רכב / נתון יצרן (שברולט קפטיבה 182 כ\"ס)"
+    "hp": 585,
+    "cc": 0,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (רולס רויס ספקטר חשמלי מלא 585 כ\"ס)"
+  },
+  {
+    "make": "רולס רויס",
+    "model": "CULLINAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 571,
+    "cc": 6749,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (רולס רויס קאלינן 6.75 V12 571 כ\"ס)"
   },
   {
     "make": "רנו ספרד",
@@ -967,61 +807,11 @@
     "hp": 158,
     "cc": 1332,
     "seconds": 9.7,
-    "source": "רישוי רכב / נתון יצרן (רנו אוסטרל 1.33 TCe מיקרו-היברידי 158 כ\"ס)"
-  },
-  {
-    "make": "רנו ספרד",
-    "model": "AUSTRAL",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 200,
-    "cc": 1199,
-    "seconds": 8.4,
-    "source": "רישוי רכב / נתון יצרן (רנו אוסטרל E-Tech היברידי מלא 200 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "AUSTRAL",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 158,
-    "cc": 1332,
-    "seconds": 9.7,
-    "source": "רישוי רכב / נתון יצרן (רנו אוסטרל 158 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "אוסטרל",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 158,
-    "cc": 1332,
-    "seconds": 9.7,
-    "source": "רישוי רכב / נתון יצרן (רנו אוסטרל 158 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "AUSTRAL",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 158,
-    "cc": 1332,
-    "seconds": 9.7,
-    "source": "נתון יצרן (Renault Austral 1.33 TCe 158hp)"
+    "source": "רישוי רכב / נתון יצרן (רנו אוסטרל 1.33 TCe 158 כ\"ס)"
   },
   {
     "make": "רנו ד.קוריאה",
     "model": "ARKANA HEV",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 94,
-    "cc": 1598,
-    "seconds": 10.8,
-    "source": "רישוי רכב / נתון יצרן (רנו ארקנה E-Tech היברידית 1.6 94 כ\"ס בנזין / משולב 143 כ\"ס)"
-  },
-  {
-    "make": "רנו ד.קוריאה",
-    "model": "ARKANA",
     "yearStart": null,
     "yearEnd": null,
     "hp": 94,
@@ -1030,56 +820,6 @@
     "source": "רישוי רכב / נתון יצרן (רנו ארקנה היברידית 94 כ\"ס)"
   },
   {
-    "make": "רנו ד. קוריאה",
-    "model": "ARKANA HEV",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 94,
-    "cc": 1598,
-    "seconds": 10.8,
-    "source": "רישוי רכב / נתון יצרן (רנו ארקנה HEV 94 כ\"ס)"
-  },
-  {
-    "make": "רנו ד.קוריאה",
-    "model": "ARKANA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 140,
-    "cc": 1332,
-    "seconds": 9.8,
-    "source": "רישוי רכב / נתון יצרן (רנו ארקנה 1.33 TCe טורבו 140 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "ARKANA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 94,
-    "cc": 1598,
-    "seconds": 10.8,
-    "source": "רישוי רכב / נתון יצרן (רנו ארקנה 94 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "ארקנה",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 94,
-    "cc": 1598,
-    "seconds": 10.8,
-    "source": "רישוי רכב / נתון יצרן (רנו ארקנה 94 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "ARKANA HEV",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 94,
-    "cc": 1598,
-    "seconds": 10.8,
-    "source": "נתון יצרן (Renault Arkana E-Tech 143hp)"
-  },
-  {
     "make": "רנו צרפת",
     "model": "ZOE",
     "yearStart": null,
@@ -1087,57 +827,7 @@
     "hp": 88,
     "cc": 0,
     "seconds": 13.5,
-    "source": "רישוי רכב / נתון יצרן (רנו זואי חשמלית דור ראשון 88 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "ZOE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 108,
-    "cc": 0,
-    "seconds": 11.4,
-    "source": "רישוי רכב / נתון יצרן (רנו זואי חשמלית R110 108 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "ZOE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 135,
-    "cc": 0,
-    "seconds": 9.5,
-    "source": "רישוי רכב / נתון יצרן (רנו זואי חשמלית R135 135 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "ZOE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 88,
-    "cc": 0,
-    "seconds": 13.5,
-    "source": "רישוי רכב / נתון יצרן (רנו זואי 88 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "זואי",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 88,
-    "cc": 0,
-    "seconds": 13.5,
-    "source": "רישוי רכב / נתון יצרן (רנו זואי 88 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "ZOE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 88,
-    "cc": 0,
-    "seconds": 13.5,
-    "source": "נתון יצרן (Renault Zoe EV 88hp)"
+    "source": "רישוי רכב / נתון יצרן (רנו זואי חשמלית 88 כ\"ס)"
   },
   {
     "make": "רנו סלובניה",
@@ -1147,57 +837,7 @@
     "hp": 90,
     "cc": 898,
     "seconds": 10.8,
-    "source": "רישוי רכב / נתון יצרן (רנו טווינגו דור 3 0.9 TCe טורבו מנוע אחורי 90 כ\"ס)"
-  },
-  {
-    "make": "רנו סלובניה",
-    "model": "TWINGO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 70,
-    "cc": 999,
-    "seconds": 14.5,
-    "source": "רישוי רכב / נתון יצרן (רנו טווינגו 1.0 SCe 70 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "TWINGO",
-    "yearStart": null,
-    "yearEnd": 2014,
-    "hp": 75,
-    "cc": 1149,
-    "seconds": 12.3,
-    "source": "רישוי רכב / נתון יצרן (רנו טווינגו דור 2 1.2 75 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "TWINGO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 90,
-    "cc": 898,
-    "seconds": 10.8,
-    "source": "רישוי רכב / נתון יצרן (רנו טווינגו 90 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "טווינגו",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 90,
-    "cc": 898,
-    "seconds": 10.8,
-    "source": "רישוי רכב / נתון יצרן (רנו טווינגו 90 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "TWINGO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 90,
-    "cc": 898,
-    "seconds": 10.8,
-    "source": "נתון יצרן (Renault Twingo 0.9 TCe 90hp)"
+    "source": "רישוי רכב / נתון יצרן (רנו טווינגו 0.9 טורבו 90 כ\"ס)"
   },
   {
     "make": "רנו צרפת",
@@ -1207,110 +847,10 @@
     "hp": 170,
     "cc": 1997,
     "seconds": 10.6,
-    "source": "רישוי רכב / נתון יצרן (רנו טראפיק ואן מסחרי 2.0 Blue dCi דיזל 170 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "TRAFIC",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1997,
-    "seconds": 11.6,
-    "source": "רישוי רכב / נתון יצרן (רנו טראפיק 2.0 dCi דיזל 150 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "TRAFIC",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 120,
-    "cc": 1598,
-    "seconds": 12.6,
-    "source": "רישוי רכב / נתון יצרן (רנו טראפיק 1.6 dCi דיזל 120 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "TRAFIC",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 115,
-    "cc": 1995,
-    "seconds": 14.5,
-    "source": "רישוי רכב / נתון יצרן (רנו טראפיק דור 2 2.0 dCi 115 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "TRAFIC",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 170,
-    "cc": 1997,
-    "seconds": 10.6,
-    "source": "רישוי רכב / נתון יצרן (רנו טראפיק 170 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "טראפיק",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 170,
-    "cc": 1997,
-    "seconds": 10.6,
-    "source": "רישוי רכב / נתון יצרן (רנו טראפיק 170 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "TRAFIC",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 170,
-    "cc": 1997,
-    "seconds": 10.6,
-    "source": "נתון יצרן (Renault Trafic 2.0 dCi 170hp)"
+    "source": "רישוי רכב / נתון יצרן (רנו טראפיק 2.0 דיזל 170 כ\"ס)"
   },
   {
     "make": "רנו רומניה",
-    "model": "LOGAN MCV",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 85,
-    "cc": 1598,
-    "seconds": 13.0,
-    "source": "רישוי רכב / נתון יצרן (רנו/דאצ'יה לוגאן MCV סטיישן 7 מקומות 1.6 85 כ\"ס)"
-  },
-  {
-    "make": "רנו רומניה",
-    "model": "LOGAN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 85,
-    "cc": 1598,
-    "seconds": 13.0,
-    "source": "רישוי רכב / נתון יצרן (רנו לוגאן 85 כ\"ס)"
-  },
-  {
-    "make": "רנו רומניה",
-    "model": "LOGAN MCV",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 90,
-    "cc": 898,
-    "seconds": 11.1,
-    "source": "רישוי רכב / נתון יצרן (רנו לוגאן MCV דור 2 0.9 TCe טורבו 90 כ\"ס)"
-  },
-  {
-    "make": "רנו רומניה",
-    "model": "LOGAN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 75,
-    "cc": 1390,
-    "seconds": 13.0,
-    "source": "רישוי רכב / נתון יצרן (רנו לוגאן סדאן 1.4 75 כ\"ס)"
-  },
-  {
-    "make": "רנו",
     "model": "LOGAN MCV",
     "yearStart": null,
     "yearEnd": null,
@@ -1320,26 +860,6 @@
     "source": "רישוי רכב / נתון יצרן (רנו לוגאן MCV 85 כ\"ס)"
   },
   {
-    "make": "רנו",
-    "model": "לוגאן",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 85,
-    "cc": 1598,
-    "seconds": 13.0,
-    "source": "רישוי רכב / נתון יצרן (רנו לוגאן 85 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "LOGAN MCV",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 85,
-    "cc": 1598,
-    "seconds": 13.0,
-    "source": "נתון יצרן (Renault Logan MCV 1.6 85hp)"
-  },
-  {
     "make": "רנו ד.קוריאה",
     "model": "LATITUDE",
     "yearStart": null,
@@ -1347,57 +867,7 @@
     "hp": 175,
     "cc": 1995,
     "seconds": 9.9,
-    "source": "רישוי רכב / נתון יצרן (רנו לטיטוד סאלון 2.0 dCi טורבו-דיזל 175 כ\"ס)"
-  },
-  {
-    "make": "רנו ד. קוריאה",
-    "model": "LATITUDE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 175,
-    "cc": 1995,
-    "seconds": 9.9,
-    "source": "רישוי רכב / נתון יצרן (רנו לטיטוד 2.0 dCi 175 כ\"ס)"
-  },
-  {
-    "make": "רנו ד.קוריאה",
-    "model": "LATITUDE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 140,
-    "cc": 1997,
-    "seconds": 11.9,
-    "source": "רישוי רכב / נתון יצרן (רנו לטיטוד 2.0 בנזין 140 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "LATITUDE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 175,
-    "cc": 1995,
-    "seconds": 9.9,
-    "source": "רישוי רכב / נתון יצרן (רנו לטיטוד 175 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "לטיטוד",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 175,
-    "cc": 1995,
-    "seconds": 9.9,
-    "source": "רישוי רכב / נתון יצרן (רנו לטיטוד 175 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "LATITUDE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 175,
-    "cc": 1995,
-    "seconds": 9.9,
-    "source": "נתון יצרן (Renault Latitude 2.0 dCi 175hp)"
+    "source": "רישוי רכב / נתון יצרן (רנו לטיטוד 2.0 דיזל 175 כ\"ס)"
   },
   {
     "make": "רנו טורקיה",
@@ -1407,57 +877,7 @@
     "hp": 132,
     "cc": 1197,
     "seconds": 10.9,
-    "source": "רישוי רכב / נתון יצרן (רנו מגאן גרנד קופה 1.2 TCe טורבו 132 כ\"ס)"
-  },
-  {
-    "make": "רנו טורקיה",
-    "model": "GRAND COUPE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 116,
-    "cc": 1461,
-    "seconds": 10.8,
-    "source": "רישוי רכב / נתון יצרן (רנו מגאן גרנד קופה 1.5 Blue dCi דיזל 116 כ\"ס)"
-  },
-  {
-    "make": "רנו טורקיה",
-    "model": "GRAND COUPE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 1461,
-    "seconds": 12.5,
-    "source": "רישוי רכב / נתון יצרן (רנו מגאן גרנד קופה 1.5 dCi דיזל 110 כ\"ס)"
-  },
-  {
-    "make": "רנו טורקיה",
-    "model": "GRAND COUPE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 140,
-    "cc": 1332,
-    "seconds": 9.0,
-    "source": "רישוי רכב / נתון יצרן (רנו מגאן גרנד קופה 1.33 TCe טורבו 140 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "GRAND COUPE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 132,
-    "cc": 1197,
-    "seconds": 10.9,
-    "source": "רישוי רכב / נתון יצרן (רנו גרנד קופה 132 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "גרנד קופה",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 132,
-    "cc": 1197,
-    "seconds": 10.9,
-    "source": "רישוי רכב / נתון יצרן (רנו גרנד קופה 132 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (רנו מגאן גרנד קופה 1.2 טורבו 132 כ\"ס)"
   },
   {
     "make": "רנו צרפת",
@@ -1467,47 +887,7 @@
     "hp": 220,
     "cc": 0,
     "seconds": 7.4,
-    "source": "רישוי רכב / נתון יצרן (רנו מגאן E-Tech EV60 חשמלי מלא 220 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "MEGANE E-TECH",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 220,
-    "cc": 0,
-    "seconds": 7.4,
-    "source": "רישוי רכב / נתון יצרן (רנו מגאן E-Tech 220 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "MEGAN E-TECH EV",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 130,
-    "cc": 0,
-    "seconds": 10.0,
-    "source": "רישוי רכב / נתון יצרן (רנו מגאן E-Tech EV40 חשמלי 130 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "מגאן E-tech",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 220,
-    "cc": 0,
-    "seconds": 7.4,
-    "source": "רישוי רכב / נתון יצרן (רנו מגאן E-Tech 220 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "MEGAN E-TECH EV",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 220,
-    "cc": 0,
-    "seconds": 7.4,
-    "source": "נתון יצרן (Renault Megane E-Tech EV60 220hp)"
+    "source": "רישוי רכב / נתון יצרן (רנו מגאן E-Tech חשמלי 220 כ\"ס)"
   },
   {
     "make": "רנו ספרד",
@@ -1517,67 +897,7 @@
     "hp": 140,
     "cc": 1332,
     "seconds": 9.0,
-    "source": "רישוי רכב / נתון יצרן (רנו מגאן האצ'בק/סטיישן 1.33 TCe טורבו 140 כ\"ס)"
-  },
-  {
-    "make": "רנו ספרד",
-    "model": "MEGANE R.S.",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 300,
-    "cc": 1798,
-    "seconds": 5.7,
-    "source": "רישוי רכב / נתון יצרן (רנו מגאן R.S. ספורט 1.8 טורבו 300 כ\"ס)"
-  },
-  {
-    "make": "רנו ספרד",
-    "model": "MEGANE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 132,
-    "cc": 1197,
-    "seconds": 10.6,
-    "source": "רישוי רכב / נתון יצרן (רנו מגאן דור 4 1.2 TCe 132 כ\"ס)"
-  },
-  {
-    "make": "רנו ספרד",
-    "model": "MEGANE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 1461,
-    "seconds": 12.3,
-    "source": "רישוי רכב / נתון יצרן (רנו מגאן 1.5 dCi דיזל 110 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "MEGANE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 140,
-    "cc": 1332,
-    "seconds": 9.0,
-    "source": "רישוי רכב / נתון יצרן (רנו מגאן 140 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "מגאן",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 140,
-    "cc": 1332,
-    "seconds": 9.0,
-    "source": "רישוי רכב / נתון יצרן (רנו מגאן 140 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "MEGANE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 140,
-    "cc": 1332,
-    "seconds": 9.0,
-    "source": "נתון יצרן (Renault Megane 1.33 TCe 140hp)"
+    "source": "רישוי רכב / נתון יצרן (רנו מגאן 1.33 טורבו 140 כ\"ס)"
   },
   {
     "make": "רנו צרפת",
@@ -1587,77 +907,7 @@
     "hp": 110,
     "cc": 1461,
     "seconds": 13.5,
-    "source": "רישוי רכב / נתון יצרן (רנו גרנד סניק 7 מקומות 1.5 dCi טורבו-דיזל 110 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "GRAND SCENIC",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 160,
-    "cc": 1598,
-    "seconds": 10.7,
-    "source": "רישוי רכב / נתון יצרן (רנו גרנד סניק דור 4 1.6 dCi טווין-טורבו דיזל 160 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "GRAND SCENIC",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 140,
-    "cc": 1332,
-    "seconds": 10.4,
-    "source": "רישוי רכב / נתון יצרן (רנו גרנד סניק 1.33 TCe טורבו בנזין 140 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "SCENIC",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 1461,
-    "seconds": 12.8,
-    "source": "רישוי רכב / נתון יצרן (רנו סניק 5 מקומות 1.5 dCi דיזל 110 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "GRAND SCENIC",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 1461,
-    "seconds": 13.5,
-    "source": "רישוי רכב / נתון יצרן (רנו גרנד סניק 110 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "SCENIC",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 1461,
-    "seconds": 12.8,
-    "source": "רישוי רכב / נתון יצרן (רנו סניק 110 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "סניק",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 1461,
-    "seconds": 12.8,
-    "source": "רישוי רכב / נתון יצרן (רנו סניק 110 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "GRAND SCENIC",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 1461,
-    "seconds": 13.5,
-    "source": "נתון יצרן (Renault Grand Scenic 1.5 dCi 110hp)"
+    "source": "רישוי רכב / נתון יצרן (רנו גרנד סניק 1.5 דיזל 110 כ\"ס)"
   },
   {
     "make": "רנו ספרד",
@@ -1667,77 +917,7 @@
     "hp": 110,
     "cc": 1461,
     "seconds": 11.9,
-    "source": "רישוי רכב / נתון יצרן (רנו קדג'אר 1.5 dCi טורבו-דיזל 110 כ\"ס)"
-  },
-  {
-    "make": "רנו ספרד",
-    "model": "KADJAR",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 116,
-    "cc": 1461,
-    "seconds": 11.7,
-    "source": "רישוי רכב / נתון יצרן (רנו קדג'אר 1.5 Blue dCi דיזל 116 כ\"ס)"
-  },
-  {
-    "make": "רנו ספרד",
-    "model": "KADJAR",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 140,
-    "cc": 1332,
-    "seconds": 9.6,
-    "source": "רישוי רכב / נתון יצרן (רנו קדג'אר 1.33 TCe טורבו בנזין 140 כ\"ס)"
-  },
-  {
-    "make": "רנו ספרד",
-    "model": "KADJAR",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 130,
-    "cc": 1197,
-    "seconds": 10.7,
-    "source": "רישוי רכב / נתון יצרן (רנו קדג'אר 1.2 TCe טורבו בנזין 130 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "KADJAR",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 1461,
-    "seconds": 11.9,
-    "source": "רישוי רכב / נתון יצרן (רנו קדג'אר 110 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "קדגא׳ר",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 1461,
-    "seconds": 11.9,
-    "source": "רישוי רכב / נתון יצרן (רנו קדג'אר 110 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "קדגאר",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 1461,
-    "seconds": 11.9,
-    "source": "רישוי רכב / נתון יצרן (רנו קדגאר 110 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "KADJAR",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 1461,
-    "seconds": 11.9,
-    "source": "נתון יצרן (Renault Kadjar 1.5 dCi 110hp)"
+    "source": "רישוי רכב / נתון יצרן (רנו קדג'אר 1.5 דיזל 110 כ\"ס)"
   },
   {
     "make": "רנו טורקיה",
@@ -1747,77 +927,7 @@
     "hp": 115,
     "cc": 1598,
     "seconds": 11.9,
-    "source": "רישוי רכב / נתון יצרן (רנו פלואנס 1.6 16V בנזין 115 כ\"ס)"
-  },
-  {
-    "make": "רנו טורקיה",
-    "model": "FLUENCE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 1461,
-    "seconds": 11.9,
-    "source": "רישוי רכב / נתון יצרן (רנו פלואנס 1.5 dCi טורבו-דיזל 110 כ\"ס)"
-  },
-  {
-    "make": "רנו טורקיה",
-    "model": "FLUENCE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 105,
-    "cc": 1461,
-    "seconds": 12.1,
-    "source": "רישוי רכב / נתון יצרן (רנו פלואנס 1.5 dCi דיזל 105 כ\"ס)"
-  },
-  {
-    "make": "רנו טורקיה",
-    "model": "FLUENCE Z.E.",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 95,
-    "cc": 0,
-    "seconds": 13.0,
-    "source": "רישוי רכב / נתון יצרן (רנו פלואנס Z.E. חשמלית מלאה בטר פלייס 95 כ\"ס)"
-  },
-  {
-    "make": "רנו טורקיה",
-    "model": "FLUENCE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 95,
-    "cc": 0,
-    "seconds": 13.0,
-    "source": "רישוי רכב / נתון יצרן (רנו פלואנס חשמלית 95 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "FLUENCE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 115,
-    "cc": 1598,
-    "seconds": 11.9,
-    "source": "רישוי רכב / נתון יצרן (רנו פלואנס 115 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "פלואנס",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 115,
-    "cc": 1598,
-    "seconds": 11.9,
-    "source": "רישוי רכב / נתון יצרן (רנו פלואנס 115 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "FLUENCE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 115,
-    "cc": 1598,
-    "seconds": 11.9,
-    "source": "נתון יצרן (Renault Fluence 1.6 115hp)"
+    "source": "רישוי רכב / נתון יצרן (רנו פלואנס 1.6 115 כ\"ס)"
   },
   {
     "make": "רנו צרפת",
@@ -1827,87 +937,7 @@
     "hp": 90,
     "cc": 1461,
     "seconds": 14.5,
-    "source": "רישוי רכב / נתון יצרן (רנו קנגו 1.5 dCi טורבו-דיזל 90 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "KANGOO",
-    "yearStart": 2021,
-    "yearEnd": null,
-    "hp": 95,
-    "cc": 1461,
-    "seconds": 13.8,
-    "source": "רישוי רכב / נתון יצרן (רנו קנגו דור 3 1.5 Blue dCi 95 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "KANGOO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 115,
-    "cc": 1461,
-    "seconds": 12.3,
-    "source": "רישוי רכב / נתון יצרן (רנו קנגו 1.5 Blue dCi 115 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "KANGOO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 1461,
-    "seconds": 12.8,
-    "source": "רישוי רכב / נתון יצרן (רנו קנגו 1.5 dCi דיזל 110 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "KANGOO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 70,
-    "cc": 1461,
-    "seconds": 17.5,
-    "source": "רישוי רכב / נתון יצרן (רנו קנגו 1.5 dCi 70 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "KANGOO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 105,
-    "cc": 1598,
-    "seconds": 13.0,
-    "source": "רישוי רכב / נתון יצרן (רנו קנגו 1.6 בנזין 105 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "KANGOO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 90,
-    "cc": 1461,
-    "seconds": 14.5,
-    "source": "רישוי רכב / נתון יצרן (רנו קנגו 90 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "קנגו",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 90,
-    "cc": 1461,
-    "seconds": 14.5,
-    "source": "רישוי רכב / נתון יצרן (רנו קנגו 90 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "KANGOO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 90,
-    "cc": 1461,
-    "seconds": 14.5,
-    "source": "נתון יצרן (Renault Kangoo 1.5 dCi 90hp)"
+    "source": "רישוי רכב / נתון יצרן (רנו קנגו 1.5 דיזל 90 כ\"ס)"
   },
   {
     "make": "רנו טורקיה",
@@ -1917,107 +947,7 @@
     "hp": 118,
     "cc": 1197,
     "seconds": 9.4,
-    "source": "רישוי רכב / נתון יצרן (רנו קליאו דור 4 1.2 TCe טורבו 118/120 כ\"ס)"
-  },
-  {
-    "make": "רנו טורקיה",
-    "model": "CLIO",
-    "yearStart": 2019,
-    "yearEnd": null,
-    "hp": 100,
-    "cc": 999,
-    "seconds": 11.8,
-    "source": "רישוי רכב / נתון יצרן (רנו קליאו דור 5 1.0 TCe טורבו 100 כ\"ס)"
-  },
-  {
-    "make": "רנו טורקיה",
-    "model": "CLIO",
-    "yearStart": 2019,
-    "yearEnd": null,
-    "hp": 90,
-    "cc": 999,
-    "seconds": 12.2,
-    "source": "רישוי רכב / נתון יצרן (רנו קליאו דור 5 1.0 TCe 90 כ\"ס)"
-  },
-  {
-    "make": "רנו טורקיה",
-    "model": "CLIO",
-    "yearStart": 2019,
-    "yearEnd": null,
-    "hp": 130,
-    "cc": 1332,
-    "seconds": 9.0,
-    "source": "רישוי רכב / נתון יצרן (רנו קליאו דור 5 1.33 TCe 130 כ\"ס)"
-  },
-  {
-    "make": "רנו טורקיה",
-    "model": "CLIO",
-    "yearStart": 2020,
-    "yearEnd": null,
-    "hp": 140,
-    "cc": 1598,
-    "seconds": 9.3,
-    "source": "רישוי רכב / נתון יצרן (רנו קליאו E-Tech היברידית 140 כ\"ס)"
-  },
-  {
-    "make": "רנו טורקיה",
-    "model": "CLIO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 90,
-    "cc": 898,
-    "seconds": 12.2,
-    "source": "רישוי רכב / נתון יצרן (רנו קליאו דור 4 0.9 TCe טורבו 90 כ\"ס)"
-  },
-  {
-    "make": "רנו טורקיה",
-    "model": "CLIO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 75,
-    "cc": 1149,
-    "seconds": 14.5,
-    "source": "רישוי רכב / נתון יצרן (רנו קליאו 1.2 75 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "CLIO R.S.",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 200,
-    "cc": 1618,
-    "seconds": 6.7,
-    "source": "רישוי רכב / נתון יצרן (רנו קליאו R.S. ספורט 1.6 טורבו 200 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "CLIO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 118,
-    "cc": 1197,
-    "seconds": 9.4,
-    "source": "רישוי רכב / נתון יצרן (רנו קליאו 118 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "קליאו",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 118,
-    "cc": 1197,
-    "seconds": 9.4,
-    "source": "רישוי רכב / נתון יצרן (רנו קליאו 118 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "CLIO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 118,
-    "cc": 1197,
-    "seconds": 9.4,
-    "source": "נתון יצרן (Renault Clio 1.2 TCe 120hp)"
+    "source": "רישוי רכב / נתון יצרן (רנו קליאו 1.2 טורבו 118 כ\"ס)"
   },
   {
     "make": "רנו ד.קוריאה",
@@ -2027,67 +957,7 @@
     "hp": 158,
     "cc": 1332,
     "seconds": 9.7,
-    "source": "רישוי רכב / נתון יצרן (רנו קוליאוס דור 2 1.33 TCe טורבו 158 כ\"ס)"
-  },
-  {
-    "make": "רנו ד. קוריאה",
-    "model": "KOLEOS",
-    "yearStart": 2017,
-    "yearEnd": null,
-    "hp": 158,
-    "cc": 1332,
-    "seconds": 9.7,
-    "source": "רישוי רכב / נתון יצרן (רנו קוליאוס 1.33 TCe 158 כ\"ס)"
-  },
-  {
-    "make": "רנו ד.קוריאה",
-    "model": "KOLEOS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 177,
-    "cc": 1995,
-    "seconds": 9.5,
-    "source": "רישוי רכב / נתון יצרן (רנו קוליאוס 2.0 dCi דיזל 4X4 177 כ\"ס)"
-  },
-  {
-    "make": "רנו ד.קוריאה",
-    "model": "KOLEOS",
-    "yearStart": null,
-    "yearEnd": 2016,
-    "hp": 170,
-    "cc": 2488,
-    "seconds": 9.9,
-    "source": "רישוי רכב / נתון יצרן (רנו קוליאוס דור 1 2.5 בנזין 170 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "KOLEOS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 158,
-    "cc": 1332,
-    "seconds": 9.7,
-    "source": "רישוי רכב / נתון יצרן (רנו קוליאוס 158 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "קוליאוס",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 158,
-    "cc": 1332,
-    "seconds": 9.7,
-    "source": "רישוי רכב / נתון יצרן (רנו קוליאוס 158 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "KOLEOS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 158,
-    "cc": 1332,
-    "seconds": 9.7,
-    "source": "נתון יצרן (Renault Koleos 1.33 TCe 158hp)"
+    "source": "רישוי רכב / נתון יצרן (רנו קוליאוס 1.33 טורבו 158 כ\"ס)"
   },
   {
     "make": "רנו ספרד",
@@ -2097,506 +967,6 @@
     "hp": 118,
     "cc": 1197,
     "seconds": 10.6,
-    "source": "רישוי רכב / נתון יצרן (רנו קפצ'ור דור 1 1.2 TCe טורבו 118/120 כ\"ס)"
-  },
-  {
-    "make": "רנו ספרד",
-    "model": "CAPTUR",
-    "yearStart": 2020,
-    "yearEnd": null,
-    "hp": 140,
-    "cc": 1332,
-    "seconds": 9.2,
-    "source": "רישוי רכב / נתון יצרן (רנו קפצ'ור דור 2 1.33 TCe טורבו 140 כ\"ס)"
-  },
-  {
-    "make": "רנו ספרד",
-    "model": "CAPTUR",
-    "yearStart": 2020,
-    "yearEnd": null,
-    "hp": 160,
-    "cc": 1598,
-    "seconds": 10.1,
-    "source": "רישוי רכב / נתון יצרן (רנו קפצ'ור פלאג-אין E-Tech PHEV 160 כ\"ס)"
-  },
-  {
-    "make": "רנו ספרד",
-    "model": "CAPTUR",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 90,
-    "cc": 898,
-    "seconds": 13.1,
-    "source": "רישוי רכב / נתון יצרן (רנו קפצ'ור דור 1 0.9 TCe טורבו 90 כ\"ס)"
-  },
-  {
-    "make": "רנו ספרד",
-    "model": "CAPTUR",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 90,
-    "cc": 1461,
-    "seconds": 13.5,
-    "source": "רישוי רכב / נתון יצרן (רנו קפצ'ור 1.5 dCi דיזל 90 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "CAPTUR",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 118,
-    "cc": 1197,
-    "seconds": 10.6,
-    "source": "רישוי רכב / נתון יצרן (רנו קפצ'ור 118 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "קפצ׳ור",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 118,
-    "cc": 1197,
-    "seconds": 10.6,
-    "source": "רישוי רכב / נתון יצרן (רנו קפצ'ור 118 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "קפצור",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 118,
-    "cc": 1197,
-    "seconds": 10.6,
-    "source": "רישוי רכב / נתון יצרן (רנו קפצור 118 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "CAPTUR",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 118,
-    "cc": 1197,
-    "seconds": 10.6,
-    "source": "נתון יצרן (Renault Captur 1.2 TCe 120hp)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "19",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 75,
-    "cc": 1390,
-    "seconds": 12.8,
-    "source": "רישוי רכב / נתון יצרן (רנו 19 קלאסית 1.4 Energy 75 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "19",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 90,
-    "cc": 1721,
-    "seconds": 10.7,
-    "source": "רישוי רכב / נתון יצרן (רנו 19 1.7 90 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "19 16V",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 137,
-    "cc": 1764,
-    "seconds": 8.5,
-    "source": "רישוי רכב / נתון יצרן (רנו 19 ספורט 16V 137 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "19",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 75,
-    "cc": 1390,
-    "seconds": 12.8,
-    "source": "רישוי רכב / נתון יצרן (רנו 19 75 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "19",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 75,
-    "cc": 1390,
-    "seconds": 12.8,
-    "source": "נתון יצרן (Renault 19 1.4)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "5",
-    "yearStart": null,
-    "yearEnd": 1996,
-    "hp": 60,
-    "cc": 1397,
-    "seconds": 14.0,
-    "source": "רישוי רכב / נתון יצרן (רנו 5 סופר 5 קלאסית 1.4 60 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "5 GT TURBO",
-    "yearStart": null,
-    "yearEnd": 1991,
-    "hp": 120,
-    "cc": 1397,
-    "seconds": 7.7,
-    "source": "רישוי רכב / נתון יצרן (רנו 5 GT טורבו ספורט 120 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "5 E-TECH",
-    "yearStart": 2024,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 0,
-    "seconds": 8.0,
-    "source": "רישוי רכב / נתון יצרן (רנו 5 E-Tech חשמלית מלאה רטרו 150 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 60,
-    "cc": 1397,
-    "seconds": 14.0,
-    "source": "רישוי רכב / נתון יצרן (רנו 5 60 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 60,
-    "cc": 1397,
-    "seconds": 14.0,
-    "source": "נתון יצרן (Renault 5)"
-  },
-  {
-    "make": "רנו מרוקו",
-    "model": "EXPRESS",
-    "yearStart": 2021,
-    "yearEnd": null,
-    "hp": 95,
-    "cc": 1461,
-    "seconds": 13.0,
-    "source": "רישוי רכב / נתון יצרן (רנו אקספרס ואן מסחרי 1.5 Blue dCi דיזל 95 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "EXPRESS",
-    "yearStart": null,
-    "yearEnd": 2000,
-    "hp": 55,
-    "cc": 1397,
-    "seconds": 18.5,
-    "source": "רישוי רכב / נתון יצרן (רנו אקספרס טנדרון קלאסי 1.4 55 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "EXPRESS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 95,
-    "cc": 1461,
-    "seconds": 13.0,
-    "source": "רישוי רכב / נתון יצרן (רנו אקספרס 95 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "אקספרס",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 95,
-    "cc": 1461,
-    "seconds": 13.0,
-    "source": "רישוי רכב / נתון יצרן (רנו אקספרס 95 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "EXPRESS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 95,
-    "cc": 1461,
-    "seconds": 13.0,
-    "source": "נתון יצרן (Renault Express Van 1.5 dCi)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "VEL SATIS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 241,
-    "cc": 3498,
-    "seconds": 8.3,
-    "source": "רישוי רכב / נתון יצרן (רנו ול סאטיס סאלון יוקרה 3.5 V6 241 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "VEL SATIS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 165,
-    "cc": 1998,
-    "seconds": 9.6,
-    "source": "רישוי רכב / נתון יצרן (רנו ול סאטיס 2.0 טורבו 165 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "VEL SATIS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 180,
-    "cc": 2958,
-    "seconds": 10.9,
-    "source": "רישוי רכב / נתון יצרן (רנו ול סאטיס 3.0 dCi V6 דיזל 180 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "וול-סאטיס",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 241,
-    "cc": 3498,
-    "seconds": 8.3,
-    "source": "רישוי רכב / נתון יצרן (רנו ול סאטיס 241 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "VEL SATIS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 241,
-    "cc": 3498,
-    "seconds": 8.3,
-    "source": "נתון יצרן (Renault Vel Satis 3.5 V6)"
-  },
-  {
-    "make": "רנו טורקיה",
-    "model": "SYMBOL",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 75,
-    "cc": 1149,
-    "seconds": 13.0,
-    "source": "רישוי רכב / נתון יצרן (רנו סימבול/טליה סדאן 1.2 75 כ\"ס)"
-  },
-  {
-    "make": "רנו טורקיה",
-    "model": "THALIA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 98,
-    "cc": 1390,
-    "seconds": 11.2,
-    "source": "רישוי רכב / נתון יצרן (רנו טליה 1.4 16V 98 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "טליה/סימבול",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 75,
-    "cc": 1149,
-    "seconds": 13.0,
-    "source": "רישוי רכב / נתון יצרן (רנו טליה/סימבול 75 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "SYMBOL",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 75,
-    "cc": 1149,
-    "seconds": 13.0,
-    "source": "נתון יצרן (Renault Symbol / Thalia)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "LAGUNA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 140,
-    "cc": 1997,
-    "seconds": 9.1,
-    "source": "רישוי רכב / נתון יצרן (רנו לגונה דור 3 2.0 16V 140 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "LAGUNA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 170,
-    "cc": 1998,
-    "seconds": 8.7,
-    "source": "רישוי רכב / נתון יצרן (רנו לגונה דור 3 2.0 טורבו 170 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "LAGUNA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 238,
-    "cc": 3498,
-    "seconds": 7.4,
-    "source": "רישוי רכב / נתון יצרן (רנו לגונה קופה 3.5 V6 238 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "LAGUNA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1995,
-    "seconds": 9.5,
-    "source": "רישוי רכב / נתון יצרן (רנו לגונה 2.0 dCi דיזל 150 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "LAGUNA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 140,
-    "cc": 1997,
-    "seconds": 9.1,
-    "source": "רישוי רכב / נתון יצרן (רנו לגונה 140 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "לגונה",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 140,
-    "cc": 1997,
-    "seconds": 9.1,
-    "source": "רישוי רכב / נתון יצרן (רנו לגונה 140 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "LAGUNA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 140,
-    "cc": 1997,
-    "seconds": 9.1,
-    "source": "נתון יצרן (Renault Laguna 2.0 140hp)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "MASTER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 2299,
-    "seconds": 13.9,
-    "source": "רישוי רכב / נתון יצרן (רנו מאסטר ואן משא כבד 2.3 dCi דיזל 150 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "MASTER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 165,
-    "cc": 2299,
-    "seconds": 13.2,
-    "source": "רישוי רכב / נתון יצרן (רנו מאסטר 2.3 dCi טווין-טורבו 165 כ\"ס)"
-  },
-  {
-    "make": "רנו צרפת",
-    "model": "MASTER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 125,
-    "cc": 2299,
-    "seconds": 15.5,
-    "source": "רישוי רכב / נתון יצרן (רנו מאסטר 2.3 dCi 125 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "MASTER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 2299,
-    "seconds": 13.9,
-    "source": "רישוי רכב / נתון יצרן (רנו מאסטר 150 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "מאסטר",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 2299,
-    "seconds": 13.9,
-    "source": "רישוי רכב / נתון יצרן (רנו מאסטר 150 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "MASTER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 2299,
-    "seconds": 13.9,
-    "source": "נתון יצרן (Renault Master 2.3 dCi)"
-  },
-  {
-    "make": "רנו רומניה",
-    "model": "SANDERO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 90,
-    "cc": 898,
-    "seconds": 11.1,
-    "source": "רישוי רכב / נתון יצרן (רנו/דאצ'יה סנדרו סטוופיי 0.9 TCe טורבו 90 כ\"ס)"
-  },
-  {
-    "make": "רנו רומניה",
-    "model": "SANDERO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 75,
-    "cc": 1149,
-    "seconds": 14.5,
-    "source": "רישוי רכב / נתון יצרן (רנו סנדרו 1.2 75 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "SANDERO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 90,
-    "cc": 898,
-    "seconds": 11.1,
-    "source": "רישוי רכב / נתון יצרן (רנו סנדרו 90 כ\"ס)"
-  },
-  {
-    "make": "רנו",
-    "model": "סנדרו",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 90,
-    "cc": 898,
-    "seconds": 11.1,
-    "source": "רישוי רכב / נתון יצרן (רנו סנדרו 90 כ\"ס)"
-  },
-  {
-    "make": "Renault",
-    "model": "SANDERO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 90,
-    "cc": 898,
-    "seconds": 11.1,
-    "source": "נתון יצרן (Renault Sandero Stepway 0.9 TCe)"
+    "source": "רישוי רכב / נתון יצרן (רנו קפצ'ור 1.2 טורבו 118 כ\"ס)"
   }
 ]
