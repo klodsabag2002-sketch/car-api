@@ -887,7 +887,9 @@
       else if (d.disabled) setStatusBlock('stDisabled', 'יש', 'ok');
       else setStatusBlock('stDisabled', 'אין', 'neutral');
 
-      setVal('sBody', null);
+      // מרכב - מעודכן לשליפה מה-API
+      setVal('sBody', d.bodyType || d.merkav);
+
       setVal('sHp', d.horsepower, 'כ"ס');
       setVal('sEngine', d.engineCc, 'סמ"ק');
       setVal('sAccel', d.acceleration0to100, 'שניות');
