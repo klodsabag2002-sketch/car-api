@@ -288,9 +288,6 @@
 </div>
 
 <script>
-  // לוגו קופרה מוטמע ישירות ב-Base64 ללא תלות בקובץ חיצוני
-  const CUPRA_LOGO_B64 = "data:image/jpeg;base64,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";
-
   const API_BASE = "https://car-api-huth.onrender.com";
   const HIST_KEY = "carSearchHistory";
   const HIST_MAX = 10;
@@ -310,11 +307,11 @@
     return parseInt(m[3], 10) + '-' + parseInt(m[2], 10) + '-' + m[1];
   }
 
-  // זיהוי המותג עם בדיקה של היצרן והדגם ביחד
+  // זיהוי המותג עם בדיקה משולבת של יצרן ודגם
   function findBrand(manufacturer, model) {
     const raw = ((manufacturer || '') + ' ' + (model || '')).toLowerCase();
 
-    // 1. קופרה בעדיפות ראשונה
+    // 1. קופרה בעדיפות
     if (raw.includes("cupra") || raw.includes("קופרה")) {
       return { slug: "cupra", color: "#8c6a3d", en: "Cupra" };
     }
@@ -364,12 +361,10 @@
     return String(v).trim().replace(/[.\s,;:]+$/g, '');
   }
 
+  // טעינה מקומית מתיקיית logos
   function getLogoSrc(brand) {
     if (!brand) return null;
-    if (brand.slug === 'cupra') {
-      return CUPRA_LOGO_B64;
-    }
-    return `https://cdn.jsdelivr.net/gh/filippfrahm/car-logos-dataset@master/logos/optimized/${brand.slug}.svg`;
+    return `logos/${brand.slug}.png`;
   }
 
   async function showBrand(manufacturer, brand) {
@@ -386,6 +381,7 @@
       logo.style.display = 'block';
       badge.style.display = 'none';
       logo.onerror = function() {
+        // אם התמונה עדיין לא קיימת בתיקיית logos, נציג אות ראשונה
         this.style.display = 'none';
         badge.style.display = 'flex';
       };
@@ -971,7 +967,6 @@
       const d = j.data;
       currentPlate = plate;
 
-      // בדיקה משולבת של היצרן והדגם יחד
       const brand = findBrand(d.manufacturer, d.model);
       const model = cleanText(d.model || '');
       const trim = cleanText(d.trim || '');
