@@ -1,5 +1,225 @@
 [
   {
+    "make": "טויוטה יפן",
+    "model": "RAV 4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 151,
+    "cc": 1987,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 דור 4 2.0 Valvematic אוטומט 151)"
+  },
+  {
+    "make": "טויוטה יפן",
+    "model": "RAV4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 151,
+    "cc": 1987,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 דור 4 2.0 בנזין 151)"
+  },
+  {
+    "make": "טויוטה",
+    "model": "RAV 4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 151,
+    "cc": 1987,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 151)"
+  },
+  {
+    "make": "טויוטה",
+    "model": "ראב 4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 151,
+    "cc": 1987,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 151)"
+  },
+  {
+    "make": "Toyota",
+    "model": "RAV 4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 151,
+    "cc": 1987,
+    "seconds": 10.7,
+    "source": "נתון יצרן (Toyota RAV4 2.0 Valvematic 151hp)"
+  },
+  {
+    "make": "Toyota",
+    "model": "RAV4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 151,
+    "cc": 1987,
+    "seconds": 10.7,
+    "source": "נתון יצרן (Toyota RAV4 2.0 151hp)"
+  },
+  {
+    "make": "טויוטה יפן",
+    "model": "RAV 4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 152,
+    "cc": 1998,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 דור 3 מוקדם 2.0 152)"
+  },
+  {
+    "make": "טויוטה יפן",
+    "model": "RAV 4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 158,
+    "cc": 1987,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 דור 3 2.0 158)"
+  },
+  {
+    "make": "טויוטה יפן",
+    "model": "RAV 4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 175,
+    "cc": 1987,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 דור 5 2.0 בנזין 175)"
+  },
+  {
+    "make": "טויוטה יפן",
+    "model": "RAV 4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1995,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 דור 4 2.0 D-4D דיזל 143)"
+  },
+  {
+    "make": "טויוטה יפן",
+    "model": "RAV 4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 2231,
+    "seconds": 10.0,
+    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 2.2 D-4D דיזל 150)"
+  },
+  {
+    "make": "טויוטה יפן",
+    "model": "RAV 4 HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 2755,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 היברידי דור 5 FWD 177/218)"
+  },
+  {
+    "make": "טויוטה יפן",
+    "model": "RAV 4 HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 178,
+    "cc": 2487,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 היברידי FWD 178/218)"
+  },
+  {
+    "make": "טויוטה יפן",
+    "model": "RAV 4 HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 222,
+    "cc": 2487,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 היברידי AWD-i 222)"
+  },
+  {
+    "make": "טויוטה יפן",
+    "model": "RAV 4 HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 2494,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 היברידי דור 4 197)"
+  },
+  {
+    "make": "טויוטה יפן",
+    "model": "RAV4 PLUG-IN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 306,
+    "cc": 2487,
+    "seconds": 6.0,
+    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 פלאג-אין PHEV 306)"
+  },
+  {
+    "make": "טויוטה יפן",
+    "model": "RAV4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 175,
+    "cc": 1987,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 בנזין 2.0 175)"
+  },
+  {
+    "make": "טויוטה יפן",
+    "model": "RAV4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 158,
+    "cc": 1987,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 דור 3 2.0 158)"
+  },
+  {
+    "make": "טויוטה",
+    "model": "ראב 4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 2755,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 177)"
+  },
+  {
+    "make": "Toyota",
+    "model": "RAV 4 HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 2755,
+    "seconds": 8.1,
+    "source": "נתון יצרן (Toyota RAV4 Hybrid)"
+  },
+  {
+    "make": "Toyota",
+    "model": "RAV4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 178,
+    "cc": 2487,
+    "seconds": 8.1,
+    "source": "נתון יצרן (Toyota RAV4 Hybrid)"
+  },
+  {
+    "make": "Toyota",
+    "model": "RAV4",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 306,
+    "cc": 2487,
+    "seconds": 6.0,
+    "source": "נתון יצרן (Toyota RAV4 Plug-in Hybrid)"
+  },
+  {
     "make": "טויוטה טורקיה",
     "model": "TOYOTA C-HR",
     "yearStart": null,
@@ -260,16 +480,6 @@
     "source": "רישוי רכב / נתון יצרן (טויוטה קורולה ורסו 1.8 129)"
   },
   {
-    "make": "טויוטה טורקיה",
-    "model": "COROLLA VERSO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 1598,
-    "seconds": 12.7,
-    "source": "רישוי רכב / נתון יצרן (טויוטה קורולה ורסו 1.6 110)"
-  },
-  {
     "make": "טויוטה",
     "model": "קורולה ורסו",
     "yearStart": null,
@@ -348,116 +558,6 @@
     "cc": 1987,
     "seconds": 7.6,
     "source": "נתון יצרן (Toyota Corolla Cross 2.0 Hybrid)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "RAV 4 HYBRID",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 177,
-    "cc": 2755,
-    "seconds": 8.1,
-    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 היברידי דור 5 FWD 177/218)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "RAV 4 HYBRID",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 178,
-    "cc": 2487,
-    "seconds": 8.1,
-    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 היברידי FWD 178/218)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "RAV 4 HYBRID",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 222,
-    "cc": 2487,
-    "seconds": 8.1,
-    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 היברידי AWD-i 222)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "RAV4 PLUG-IN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 306,
-    "cc": 2487,
-    "seconds": 6.0,
-    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 פלאג-אין PHEV 306)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "RAV 4 HYBRID",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 197,
-    "cc": 2494,
-    "seconds": 8.3,
-    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 היברידי דור 4 197)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "RAV4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 175,
-    "cc": 1987,
-    "seconds": 9.8,
-    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 בנזין 2.0 175)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "RAV4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 158,
-    "cc": 1987,
-    "seconds": 10.7,
-    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 דור 3 2.0 158)"
-  },
-  {
-    "make": "טויוטה",
-    "model": "ראב 4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 177,
-    "cc": 2755,
-    "seconds": 8.1,
-    "source": "רישוי רכב / נתון יצרן (טויוטה ראב 4 177)"
-  },
-  {
-    "make": "Toyota",
-    "model": "RAV 4 HYBRID",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 177,
-    "cc": 2755,
-    "seconds": 8.1,
-    "source": "נתון יצרן (Toyota RAV4 Hybrid)"
-  },
-  {
-    "make": "Toyota",
-    "model": "RAV4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 178,
-    "cc": 2487,
-    "seconds": 8.1,
-    "source": "נתון יצרן (Toyota RAV4 Hybrid)"
-  },
-  {
-    "make": "Toyota",
-    "model": "RAV4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 306,
-    "cc": 2487,
-    "seconds": 6.0,
-    "source": "נתון יצרן (Toyota RAV4 Plug-in Hybrid)"
   },
   {
     "make": "טויוטה יפן",
@@ -560,16 +660,6 @@
     "source": "רישוי רכב / נתון יצרן (טויוטה אוולון 3.5 V6 301)"
   },
   {
-    "make": "טויוטה ארהב\"",
-    "model": "AVALON",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 268,
-    "cc": 3456,
-    "seconds": 6.5,
-    "source": "רישוי רכב / נתון יצרן (טויוטה אוולון דור קודם 3.5 V6 268)"
-  },
-  {
     "make": "טויוטה",
     "model": "אוולון",
     "yearStart": null,
@@ -620,26 +710,6 @@
     "source": "רישוי רכב / נתון יצרן (טויוטה אוונסיס 2.0 Valvematic 152)"
   },
   {
-    "make": "טויוטה אנגליה",
-    "model": "AVENSIS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 129,
-    "cc": 1794,
-    "seconds": 10.3,
-    "source": "רישוי רכב / נתון יצרן (טויוטה אוונסיס דור 2 1.8 129)"
-  },
-  {
-    "make": "טויוטה אנגליה",
-    "model": "AVENSIS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 143,
-    "cc": 1995,
-    "seconds": 9.5,
-    "source": "רישוי רכב / נתון יצרן (טויוטה אוונסיס 2.0 D-4D דיזל 143)"
-  },
-  {
     "make": "טויוטה",
     "model": "אוונסיס",
     "yearStart": null,
@@ -668,26 +738,6 @@
     "cc": 1798,
     "seconds": 10.9,
     "source": "רישוי רכב / נתון יצרן (טויוטה אוריס היברידית האצ'בק/סטיישן TS 99/136)"
-  },
-  {
-    "make": "טויוטה אנגליה",
-    "model": "AURIS HYBRID",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 136,
-    "cc": 1798,
-    "seconds": 10.9,
-    "source": "רישוי רכב / נתון יצרן (טויוטה אוריס היברידית 136)"
-  },
-  {
-    "make": "טויוטה טורקיה",
-    "model": "AURIS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 124,
-    "cc": 1598,
-    "seconds": 11.0,
-    "source": "רישוי רכב / נתון יצרן (טויוטה אוריס 1.6 בנזין 124)"
   },
   {
     "make": "טויוטה טורקיה",
@@ -720,16 +770,6 @@
     "source": "רישוי רכב / נתון יצרן (טויוטה אוריס היברידית 99)"
   },
   {
-    "make": "טויוטה",
-    "model": "אוריס",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 124,
-    "cc": 1598,
-    "seconds": 11.0,
-    "source": "רישוי רכב / נתון יצרן (טויוטה אוריס 124)"
-  },
-  {
     "make": "Toyota",
     "model": "AURIS HYBRID",
     "yearStart": null,
@@ -740,16 +780,6 @@
     "source": "נתון יצרן (Toyota Auris Hybrid)"
   },
   {
-    "make": "Toyota",
-    "model": "AURIS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 124,
-    "cc": 1598,
-    "seconds": 11.0,
-    "source": "נתון יצרן (Toyota Auris 1.6)"
-  },
-  {
     "make": "טויוטה צ'כיה",
     "model": "AYGO",
     "yearStart": null,
@@ -758,26 +788,6 @@
     "cc": 998,
     "seconds": 14.2,
     "source": "רישוי רכב / נתון יצרן (טויוטה אייגו 1.0 69)"
-  },
-  {
-    "make": "טויוטה צ'כיה",
-    "model": "AYGO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 72,
-    "cc": 998,
-    "seconds": 13.8,
-    "source": "רישוי רכב / נתון יצרן (טויוטה אייגו מתוחת פנים 1.0 72)"
-  },
-  {
-    "make": "טויוטה צ'כיה",
-    "model": "AYGO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 68,
-    "cc": 998,
-    "seconds": 14.2,
-    "source": "רישוי רכב / נתון יצרן (טויוטה אייגו דור 1 1.0 68)"
   },
   {
     "make": "טויוטה צ'כיה",
@@ -800,16 +810,6 @@
     "source": "רישוי רכב / נתון יצרן (טויוטה אייגו 69)"
   },
   {
-    "make": "טויוטה",
-    "model": "אייגו x",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 72,
-    "cc": 998,
-    "seconds": 14.8,
-    "source": "רישוי רכב / נתון יצרן (טויוטה אייגו X 72)"
-  },
-  {
     "make": "Toyota",
     "model": "AYGO",
     "yearStart": null,
@@ -820,16 +820,6 @@
     "source": "נתון יצרן (Toyota Aygo 1.0)"
   },
   {
-    "make": "Toyota",
-    "model": "AYGO X",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 72,
-    "cc": 998,
-    "seconds": 14.8,
-    "source": "נתון יצרן (Toyota Aygo X 1.0)"
-  },
-  {
     "make": "טויוטה יפן",
     "model": "HIACE",
     "yearStart": null,
@@ -838,26 +828,6 @@
     "cc": 2494,
     "seconds": 18.0,
     "source": "רישוי רכב / נתון יצרן (טויוטה הייאס מסחרי 2.5 D-4D דיזל 117)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "HIACE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 102,
-    "cc": 2494,
-    "seconds": 19.5,
-    "source": "רישוי רכב / נתון יצרן (טויוטה הייאס 2.5 דיזל 102)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "HIACE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 177,
-    "cc": 2755,
-    "seconds": 12.5,
-    "source": "רישוי רכב / נתון יצרן (טויוטה הייאס דור 6 2.8 דיזל 177)"
   },
   {
     "make": "טויוטה",
@@ -904,36 +874,6 @@
     "model": "HIGHLANDER",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 185,
-    "cc": 2672,
-    "seconds": 9.8,
-    "source": "רישוי רכב / נתון יצרן (טויוטה היילנדר 2.7 בנזין 185)"
-  },
-  {
-    "make": "\"טויוטה ארהב",
-    "model": "HIGHLANDER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 185,
-    "cc": 2672,
-    "seconds": 9.8,
-    "source": "רישוי רכב / נתון יצרן (טויוטה היילנדר 2.7 185)"
-  },
-  {
-    "make": "טויוטה ארהב\"",
-    "model": "HIGHLANDER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 295,
-    "cc": 3456,
-    "seconds": 7.0,
-    "source": "רישוי רכב / נתון יצרן (טויוטה היילנדר 3.5 V6 295)"
-  },
-  {
-    "make": "טויוטה ארהב\"",
-    "model": "HIGHLANDER",
-    "yearStart": null,
-    "yearEnd": null,
     "hp": 244,
     "cc": 2487,
     "seconds": 8.0,
@@ -970,36 +910,6 @@
     "source": "נתון יצרן (Toyota Highlander Hybrid)"
   },
   {
-    "make": "טויוטה ארהב\"",
-    "model": "GRAND HIGHLANDER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 265,
-    "cc": 2393,
-    "seconds": 7.5,
-    "source": "רישוי רכב / נתון יצרן (טויוטה גרנד היילנדר 2.4T 265)"
-  },
-  {
-    "make": "טויוטה ארהב\"",
-    "model": "GRAND HIGHLANDER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 362,
-    "cc": 2393,
-    "seconds": 6.3,
-    "source": "רישוי רכב / נתון יצרן (טויוטה גרנד היילנדר Hybrid MAX 362)"
-  },
-  {
-    "make": "Toyota",
-    "model": "GRAND HIGHLANDER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 362,
-    "cc": 2393,
-    "seconds": 6.3,
-    "source": "נתון יצרן (Toyota Grand Highlander Hybrid MAX)"
-  },
-  {
     "make": "טויוטה תאילנד",
     "model": "HILUX",
     "yearStart": null,
@@ -1018,36 +928,6 @@
     "cc": 2393,
     "seconds": 12.8,
     "source": "רישוי רכב / נתון יצרן (טויוטה היילקס 2.4 D-4D דיזל 150)"
-  },
-  {
-    "make": "טויוטה תאילנד",
-    "model": "HILUX VIGO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 120,
-    "cc": 2494,
-    "seconds": 15.0,
-    "source": "רישוי רכב / נתון יצרן (טויוטה היילקס ויגו 2.5 D-4D 120)"
-  },
-  {
-    "make": "טויוטה תאילנד",
-    "model": "HILUX VIGO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 144,
-    "cc": 2494,
-    "seconds": 13.5,
-    "source": "רישוי רכב / נתון יצרן (טויוטה היילקס ויגו 2.5 144)"
-  },
-  {
-    "make": "טויוטה תאילנד",
-    "model": "HILUX VIGO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 171,
-    "cc": 2982,
-    "seconds": 11.5,
-    "source": "רישוי רכב / נתון יצרן (טויוטה היילקס ויגו 3.0 D-4D 171)"
   },
   {
     "make": "טויוטה",
@@ -1070,16 +950,6 @@
     "source": "נתון יצרן (Toyota Hilux 2.8 D-4D)"
   },
   {
-    "make": "Toyota",
-    "model": "HILUX VIGO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 120,
-    "cc": 2494,
-    "seconds": 15.0,
-    "source": "נתון יצרן (Toyota Hilux Vigo 2.5)"
-  },
-  {
     "make": "טויוטה יפן",
     "model": "VENZA",
     "yearStart": null,
@@ -1088,26 +958,6 @@
     "cc": 2487,
     "seconds": 7.6,
     "source": "רישוי רכב / נתון יצרן (טויוטה ונזה היברידית AWD 176/219)"
-  },
-  {
-    "make": "טויוטה ארהב\"",
-    "model": "VENZA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 176,
-    "cc": 2487,
-    "seconds": 7.6,
-    "source": "רישוי רכב / נתון יצרן (טויוטה ונזה היברידית 176)"
-  },
-  {
-    "make": "טויוטה ארהב\"",
-    "model": "VENZA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 268,
-    "cc": 3456,
-    "seconds": 6.7,
-    "source": "רישוי רכב / נתון יצרן (טויוטה ונזה דור 1 3.5 V6 268)"
   },
   {
     "make": "טויוטה",
@@ -1140,16 +990,6 @@
     "source": "רישוי רכב / נתון יצרן (טויוטה ורסו 1.8 Valvematic אוטומט 147)"
   },
   {
-    "make": "טויוטה טורקיה",
-    "model": "VERSO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 132,
-    "cc": 1598,
-    "seconds": 11.7,
-    "source": "רישוי רכב / נתון יצרן (טויוטה ורסו 1.6 132)"
-  },
-  {
     "make": "טויוטה",
     "model": "ורסו",
     "yearStart": null,
@@ -1170,56 +1010,6 @@
     "source": "נתון יצרן (Toyota Verso 1.8)"
   },
   {
-    "make": "טויוטה יפן",
-    "model": "SPACE VERSO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 99,
-    "cc": 1329,
-    "seconds": 13.3,
-    "source": "רישוי רכב / נתון יצרן (טויוטה ספייס ורסו / ורסו S 1.3 99)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "VERSO S",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 99,
-    "cc": 1329,
-    "seconds": 13.3,
-    "source": "רישוי רכב / נתון יצרן (טויוטה ורסו S 1.33 99)"
-  },
-  {
-    "make": "טויוטה",
-    "model": "ספייס ורסו",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 99,
-    "cc": 1329,
-    "seconds": 13.3,
-    "source": "רישוי רכב / נתון יצרן (טויוטה ספייס ורסו 99)"
-  },
-  {
-    "make": "Toyota",
-    "model": "SPACE VERSO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 99,
-    "cc": 1329,
-    "seconds": 13.3,
-    "source": "נתון יצרן (Toyota Space Verso 1.3)"
-  },
-  {
-    "make": "Toyota",
-    "model": "VERSO S",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 99,
-    "cc": 1329,
-    "seconds": 13.3,
-    "source": "נתון יצרן (Toyota Verso-S 1.3)"
-  },
-  {
     "make": "טויוטה צרפת",
     "model": "YARIS HYBRID",
     "yearStart": null,
@@ -1228,26 +1018,6 @@
     "cc": 1490,
     "seconds": 9.7,
     "source": "רישוי רכב / נתון יצרן (טויוטה יאריס היברידית דור 4 1.5 92/116)"
-  },
-  {
-    "make": "טויוטה צרפת",
-    "model": "YARIS HYBRID",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 130,
-    "cc": 1490,
-    "seconds": 9.2,
-    "source": "רישוי רכב / נתון יצרן (טויוטה יאריס היברידית דור 4 משודרגת 130)"
-  },
-  {
-    "make": "טויוטה צרפת",
-    "model": "YARIS HYBRID",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 75,
-    "cc": 1497,
-    "seconds": 11.8,
-    "source": "רישוי רכב / נתון יצרן (טויוטה יאריס היברידית דור 3 75/100)"
   },
   {
     "make": "טויוטה צרפת",
@@ -1260,36 +1030,6 @@
     "source": "רישוי רכב / נתון יצרן (טויוטה יאריס בנזין 1.5 125)"
   },
   {
-    "make": "טויוטה צרפת",
-    "model": "YARIS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 111,
-    "cc": 1496,
-    "seconds": 11.0,
-    "source": "רישוי רכב / נתון יצרן (טויוטה יאריס 1.5 בנזין 111)"
-  },
-  {
-    "make": "טויוטה צרפת",
-    "model": "YARIS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 99,
-    "cc": 1329,
-    "seconds": 11.7,
-    "source": "רישוי רכב / נתון יצרן (טויוטה יאריס 1.33 99)"
-  },
-  {
-    "make": "טויוטה צרפת",
-    "model": "YARIS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 87,
-    "cc": 1298,
-    "seconds": 11.5,
-    "source": "רישוי רכב / נתון יצרן (טויוטה יאריס דור 2 1.3 87)"
-  },
-  {
     "make": "טויוטה יפן",
     "model": "GR YARIS",
     "yearStart": null,
@@ -1298,16 +1038,6 @@
     "cc": 1618,
     "seconds": 5.5,
     "source": "רישוי רכב / נתון יצרן (טויוטה GR יאריס 1.6 טורבו AWD 261)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "GR YARIS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 280,
-    "cc": 1618,
-    "seconds": 5.2,
-    "source": "רישוי רכב / נתון יצרן (טויוטה GR יאריס מתוחת פנים 280)"
   },
   {
     "make": "טויוטה",
@@ -1320,16 +1050,6 @@
     "source": "רישוי רכב / נתון יצרן (טויוטה יאריס 92)"
   },
   {
-    "make": "טויוטה",
-    "model": "יאריס gr",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 261,
-    "cc": 1618,
-    "seconds": 5.5,
-    "source": "רישוי רכב / נתון יצרן (טויוטה GR יאריס 261)"
-  },
-  {
     "make": "Toyota",
     "model": "YARIS HYBRID",
     "yearStart": null,
@@ -1340,26 +1060,6 @@
     "source": "נתון יצרן (Toyota Yaris Hybrid 1.5)"
   },
   {
-    "make": "Toyota",
-    "model": "YARIS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 125,
-    "cc": 1490,
-    "seconds": 10.2,
-    "source": "נתון יצרן (Toyota Yaris 1.5)"
-  },
-  {
-    "make": "Toyota",
-    "model": "GR YARIS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 261,
-    "cc": 1618,
-    "seconds": 5.5,
-    "source": "נתון יצרן (Toyota GR Yaris)"
-  },
-  {
     "make": "טויוטה צרפת",
     "model": "YARIS CROSS HSD",
     "yearStart": null,
@@ -1368,36 +1068,6 @@
     "cc": 1490,
     "seconds": 11.2,
     "source": "רישוי רכב / נתון יצרן (טויוטה יאריס קרוס היברידי 1.5 92/116)"
-  },
-  {
-    "make": "טויוטה צרפת",
-    "model": "YARIS CROSS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 92,
-    "cc": 1490,
-    "seconds": 11.2,
-    "source": "רישוי רכב / נתון יצרן (טויוטה יאריס קרוס 92)"
-  },
-  {
-    "make": "טויוטה צרפת",
-    "model": "YARIS CROSS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 125,
-    "cc": 1490,
-    "seconds": 11.7,
-    "source": "רישוי רכב / נתון יצרן (טויוטה יאריס קרוס בנזין 1.5 125)"
-  },
-  {
-    "make": "טויוטה צרפת",
-    "model": "YARIS CROSS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 130,
-    "cc": 1490,
-    "seconds": 10.7,
-    "source": "רישוי רכב / נתון יצרן (טויוטה יאריס קרוס היברידי 130)"
   },
   {
     "make": "טויוטה",
@@ -1411,16 +1081,6 @@
   },
   {
     "make": "Toyota",
-    "model": "YARIS CROSS HSD",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 92,
-    "cc": 1490,
-    "seconds": 11.2,
-    "source": "נתון יצרן (Toyota Yaris Cross Hybrid)"
-  },
-  {
-    "make": "Toyota",
     "model": "YARIS CROSS",
     "yearStart": null,
     "yearEnd": null,
@@ -1428,36 +1088,6 @@
     "cc": 1490,
     "seconds": 11.2,
     "source": "נתון יצרן (Toyota Yaris Cross Hybrid)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "LAND CRUISER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 173,
-    "cc": 2982,
-    "seconds": 11.7,
-    "source": "רישוי רכב / נתון יצרן (טויוטה לנד קרוזר פראדו 3.0 דיזל D-4D 173)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "LAND CRUISER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 190,
-    "cc": 2982,
-    "seconds": 11.0,
-    "source": "רישוי רכב / נתון יצרן (טויוטה לנד קרוזר 3.0 דיזל 190)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "LAND CRUISER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 177,
-    "cc": 2755,
-    "seconds": 12.1,
-    "source": "רישוי רכב / נתון יצרן (טויוטה לנד קרוזר 2.8 דיזל 177)"
   },
   {
     "make": "טויוטה יפן",
@@ -1474,40 +1104,30 @@
     "model": "LAND CRUISER",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 249,
-    "cc": 3956,
-    "seconds": 9.2,
-    "source": "רישוי רכב / נתון יצרן (טויוטה לנד קרוזר 4.0 V6 בנזין 249)"
+    "hp": 177,
+    "cc": 2755,
+    "seconds": 12.1,
+    "source": "רישוי רכב / נתון יצרן (טויוטה לנד קרוזר 2.8 דיזל 177)"
   },
   {
     "make": "טויוטה יפן",
     "model": "LAND CRUISER",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 282,
-    "cc": 3956,
-    "seconds": 8.8,
-    "source": "רישוי רכב / נתון יצרן (טויוטה לנד קרוזר 4.0 V6 בנזין 282)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "LAND CRUISER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 163,
+    "hp": 190,
     "cc": 2982,
-    "seconds": 12.5,
-    "source": "רישוי רכב / נתון יצרן (טויוטה לנד קרוזר פראדו 120 163)"
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (טויוטה לנד קרוזר 3.0 דיזל 190)"
   },
   {
-    "make": "טויוטה",
-    "model": "לנד קרוזר",
+    "make": "טויוטה יפן",
+    "model": "LAND CRUISER",
     "yearStart": null,
     "yearEnd": null,
     "hp": 173,
     "cc": 2982,
     "seconds": 11.7,
-    "source": "רישוי רכב / נתון יצרן (טויוטה לנד קרוזר 173)"
+    "source": "רישוי רכב / נתון יצרן (טויוטה לנד קרוזר פראדו 3.0 דיזל 173)"
   },
   {
     "make": "טויוטה",
@@ -1518,16 +1138,6 @@
     "cc": 2755,
     "seconds": 9.9,
     "source": "רישוי רכב / נתון יצרן (טויוטה לנד קרוזר 204)"
-  },
-  {
-    "make": "Toyota",
-    "model": "LAND CRUISER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 173,
-    "cc": 2982,
-    "seconds": 11.7,
-    "source": "נתון יצרן (Toyota Land Cruiser Prado 3.0)"
   },
   {
     "make": "Toyota",
@@ -1547,27 +1157,7 @@
     "hp": 296,
     "cc": 3500,
     "seconds": 7.0,
-    "source": "רישוי רכב / נתון יצרן (טויוטה סיינה 3.5 V6 אוטומט 8 היל' 296)"
-  },
-  {
-    "make": "\"טויוטה ארהב",
-    "model": "SIENNA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 296,
-    "cc": 3500,
-    "seconds": 7.0,
     "source": "רישוי רכב / נתון יצרן (טויוטה סיינה 3.5 V6 296)"
-  },
-  {
-    "make": "טויוטה ארהב\"",
-    "model": "SIENNA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 266,
-    "cc": 3456,
-    "seconds": 7.6,
-    "source": "רישוי רכב / נתון יצרן (טויוטה סיינה דור 3 3.5 V6 266)"
   },
   {
     "make": "טויוטה ארהב\"",
@@ -1577,27 +1167,17 @@
     "hp": 245,
     "cc": 2487,
     "seconds": 7.7,
-    "source": "רישוי רכב / נתון יצרן (טויוטה סיינה דור 4 היברידית 2.5 245)"
+    "source": "רישוי רכב / נתון יצרן (טויוטה סיינה היברידית 2.5 245)"
   },
   {
     "make": "טויוטה",
     "model": "סיינה",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 296,
-    "cc": 3500,
-    "seconds": 7.0,
-    "source": "רישוי רכב / נתון יצרן (טויוטה סיינה 296)"
-  },
-  {
-    "make": "Toyota",
-    "model": "SIENNA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 296,
-    "cc": 3500,
-    "seconds": 7.0,
-    "source": "נתון יצרן (Toyota Sienna 3.5 V6)"
+    "hp": 245,
+    "cc": 2487,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (טויוטה סיינה 245)"
   },
   {
     "make": "Toyota",
@@ -1611,443 +1191,13 @@
   },
   {
     "make": "טויוטה ארהב\"",
-    "model": "SEQUOIA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 389,
-    "cc": 3445,
-    "seconds": 5.9,
-    "source": "רישוי רכב / נתון יצרן (טויוטה סקויה i-FORCE MAX 3.4TT היברידי 389/437)"
-  },
-  {
-    "make": "\"טויוטה ארהב",
-    "model": "SEQUOIA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 389,
-    "cc": 3445,
-    "seconds": 5.9,
-    "source": "רישוי רכב / נתון יצרן (טויוטה סקויה 389)"
-  },
-  {
-    "make": "טויוטה ארהב\"",
-    "model": "SEQUOIA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 437,
-    "cc": 3445,
-    "seconds": 5.9,
-    "source": "רישוי רכב / נתון יצרן (טויוטה סקויה היברידית 437)"
-  },
-  {
-    "make": "טויוטה ארהב\"",
-    "model": "SEQUOIA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 381,
-    "cc": 5663,
-    "seconds": 6.7,
-    "source": "רישוי רכב / נתון יצרן (טויוטה סקויה דור 2 5.7 V8 381)"
-  },
-  {
-    "make": "טויוטה",
-    "model": "סקויה",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 389,
-    "cc": 3445,
-    "seconds": 5.9,
-    "source": "רישוי רכב / נתון יצרן (טויוטה סקויה 389)"
-  },
-  {
-    "make": "Toyota",
-    "model": "SEQUOIA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 389,
-    "cc": 3445,
-    "seconds": 5.9,
-    "source": "נתון יצרן (Toyota Sequoia Twin-Turbo Hybrid)"
-  },
-  {
-    "make": "Toyota",
-    "model": "SEQUOIA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 381,
-    "cc": 5663,
-    "seconds": 6.7,
-    "source": "נתון יצרן (Toyota Sequoia 5.7 V8)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "4RUNNER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 270,
-    "cc": 3956,
-    "seconds": 7.7,
-    "source": "רישוי רכב / נתון יצרן (טויוטה 4ראנר 4.0 V6 בנזין 270)"
-  },
-  {
-    "make": "טויוטה ארהב\"",
-    "model": "4RUNNER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 270,
-    "cc": 3956,
-    "seconds": 7.7,
-    "source": "רישוי רכב / נתון יצרן (טויוטה 4ראנר 4.0 V6 270)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "4RUNNER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 278,
-    "cc": 2393,
-    "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (טויוטה 4ראנר דור 6 2.4T 278)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "4RUNNER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 326,
-    "cc": 2393,
-    "seconds": 6.4,
-    "source": "רישוי רכב / נתון יצרן (טויוטה 4ראנר i-FORCE MAX היברידי 326)"
-  },
-  {
-    "make": "טויוטה",
-    "model": "פור ראנר",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 270,
-    "cc": 3956,
-    "seconds": 7.7,
-    "source": "רישוי רכב / נתון יצרן (טויוטה 4ראנר 270)"
-  },
-  {
-    "make": "Toyota",
-    "model": "4RUNNER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 270,
-    "cc": 3956,
-    "seconds": 7.7,
-    "source": "נתון יצרן (Toyota 4Runner 4.0 V6)"
-  },
-  {
-    "make": "טויוטה צרפת",
-    "model": "PROACE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 177,
-    "cc": 1997,
-    "seconds": 8.8,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פרואייס 2.0 דיזל אוטומט 177)"
-  },
-  {
-    "make": "טויוטה צרפת",
-    "model": "PROACE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 120,
-    "cc": 1997,
-    "seconds": 13.3,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פרואייס 2.0 דיזל 120)"
-  },
-  {
-    "make": "טויוטה צרפת",
-    "model": "PROACE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 144,
-    "cc": 1997,
-    "seconds": 11.0,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פרואייס 2.0 דיזל 144)"
-  },
-  {
-    "make": "טויוטה צרפת",
-    "model": "PROACE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 136,
-    "cc": 0,
-    "seconds": 12.1,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פרואייס EV חשמלי 136)"
-  },
-  {
-    "make": "טויוטה",
-    "model": "פרואייס",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 177,
-    "cc": 1997,
-    "seconds": 8.8,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פרואייס 177)"
-  },
-  {
-    "make": "Toyota",
-    "model": "PROACE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 177,
-    "cc": 1997,
-    "seconds": 8.8,
-    "source": "נתון יצרן (Toyota Proace 2.0 D)"
-  },
-  {
-    "make": "טויוטה ספרד",
-    "model": "TOYOTA CITY",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 131,
-    "cc": 1499,
-    "seconds": 10.6,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פרואייס סיטי 1.5 דיזל אוטומט 131)"
-  },
-  {
-    "make": "טויוטה ספרד",
-    "model": "PROACE CITY",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 131,
-    "cc": 1499,
-    "seconds": 10.6,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פרואייס סיטי 1.5 דיזל 131)"
-  },
-  {
-    "make": "טויוטה ספרד",
-    "model": "TOYOTA CITY",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 102,
-    "cc": 1499,
-    "seconds": 12.5,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פרואייס סיטי 1.5 דיזל ידני 102)"
-  },
-  {
-    "make": "טויוטה ספרד",
-    "model": "TOYOTA CITY",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 136,
-    "cc": 0,
-    "seconds": 11.2,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פרואייס סיטי EV חשמלי 136)"
-  },
-  {
-    "make": "טויוטה",
-    "model": "פרואייס סיטי",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 131,
-    "cc": 1499,
-    "seconds": 10.6,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פרואייס סיטי 131)"
-  },
-  {
-    "make": "Toyota",
-    "model": "TOYOTA CITY",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 131,
-    "cc": 1499,
-    "seconds": 10.6,
-    "source": "נתון יצרן (Toyota Proace City 1.5 D)"
-  },
-  {
-    "make": "Toyota",
-    "model": "PROACE CITY",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 131,
-    "cc": 1499,
-    "seconds": 10.6,
-    "source": "נתון יצרן (Toyota Proace City 1.5 D)"
-  },
-  {
-    "make": "טויוטה צרפת",
-    "model": "PROACE MAX",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 180,
-    "cc": 2184,
-    "seconds": 11.0,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פרואייס מקס 2.2 דיזל 180)"
-  },
-  {
-    "make": "טויוטה צרפת",
-    "model": "PROACE MAX",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 140,
-    "cc": 2184,
-    "seconds": 12.5,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פרואייס מקס 2.2 דיזל 140)"
-  },
-  {
-    "make": "Toyota",
-    "model": "PROACE MAX",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 180,
-    "cc": 2184,
-    "seconds": 11.0,
-    "source": "נתון יצרן (Toyota Proace Max 2.2 D)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "PRIUS HYBRID",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 76,
-    "cc": 1497,
-    "seconds": 10.9,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פריוס דור 2 1.5 היברידית 76/110)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "PRIUS HYBRID",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 99,
-    "cc": 1798,
-    "seconds": 10.4,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פריוס דור 3 1.8 היברידית 99/136)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "PRIUS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 98,
-    "cc": 1798,
-    "seconds": 10.6,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פריוס דור 4 1.8 היברידית 98/122)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "PRIUS PLUG-IN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 223,
-    "cc": 1987,
-    "seconds": 6.8,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פריוס דור 5 פלאג-אין PHEV 223)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "PRIUS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 223,
-    "cc": 1987,
-    "seconds": 6.8,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פריוס דור 5 223)"
-  },
-  {
-    "make": "טויוטה",
-    "model": "פריוס",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 76,
-    "cc": 1497,
-    "seconds": 10.9,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פריוס 76)"
-  },
-  {
-    "make": "טויוטה",
-    "model": "פריוס",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 99,
-    "cc": 1798,
-    "seconds": 10.4,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פריוס 99)"
-  },
-  {
-    "make": "Toyota",
-    "model": "PRIUS HYBRID",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 76,
-    "cc": 1497,
-    "seconds": 10.9,
-    "source": "נתון יצרן (Toyota Prius 1.5 Hybrid)"
-  },
-  {
-    "make": "Toyota",
-    "model": "PRIUS HYBRID",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 99,
-    "cc": 1798,
-    "seconds": 10.4,
-    "source": "נתון יצרן (Toyota Prius 1.8 Hybrid)"
-  },
-  {
-    "make": "Toyota",
-    "model": "PRIUS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 223,
-    "cc": 1987,
-    "seconds": 6.8,
-    "source": "נתון יצרן (Toyota Prius Plug-in Hybrid 2.0)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "PRIUS PLUS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 99,
-    "cc": 1798,
-    "seconds": 11.3,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פריוס פלוס 7 מקומות 1.8 היברידי 99/136)"
-  },
-  {
-    "make": "טויוטה",
-    "model": "פריוס פלוס",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 99,
-    "cc": 1798,
-    "seconds": 11.3,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פריוס פלוס 99)"
-  },
-  {
-    "make": "Toyota",
-    "model": "PRIUS PLUS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 99,
-    "cc": 1798,
-    "seconds": 11.3,
-    "source": "נתון יצרן (Toyota Prius+ 7-Seater Hybrid)"
-  },
-  {
-    "make": "טויוטה ארהב\"",
     "model": "CAMRY HYBRID",
     "yearStart": null,
     "yearEnd": null,
     "hp": 208,
     "cc": 2487,
     "seconds": 8.2,
-    "source": "רישוי רכב / נתון יצרן (טויוטה קאמרי היברידית דור 8 2.5 208/218)"
-  },
-  {
-    "make": "\"טויוטה ארהב",
-    "model": "CAMRY HYBRID",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 208,
-    "cc": 2487,
-    "seconds": 8.2,
-    "source": "רישוי רכב / נתון יצרן (טויוטה קאמרי היברידית 208)"
+    "source": "רישוי רכב / נתון יצרן (טויוטה קאמרי היברידית 2.5 208/218)"
   },
   {
     "make": "טויוטה יפן",
@@ -2058,46 +1208,6 @@
     "cc": 2487,
     "seconds": 8.2,
     "source": "רישוי רכב / נתון יצרן (טויוטה קאמרי היברידית 208)"
-  },
-  {
-    "make": "טויוטה ארהב\"",
-    "model": "CAMRY HYBRID",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 225,
-    "cc": 2487,
-    "seconds": 7.8,
-    "source": "רישוי רכב / נתון יצרן (טויוטה קאמרי דור 9 היברידית 2.5 225)"
-  },
-  {
-    "make": "טויוטה ארהב\"",
-    "model": "CAMRY HYBRID",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 200,
-    "cc": 2494,
-    "seconds": 7.9,
-    "source": "רישוי רכב / נתון יצרן (טויוטה קאמרי היברידית דור 7 200)"
-  },
-  {
-    "make": "טויוטה ארהב\"",
-    "model": "CAMRY",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 301,
-    "cc": 3456,
-    "seconds": 6.0,
-    "source": "רישוי רכב / נתון יצרן (טויוטה קאמרי 3.5 V6 בנזין 301)"
-  },
-  {
-    "make": "טויוטה ארהב\"",
-    "model": "CAMRY",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 203,
-    "cc": 2487,
-    "seconds": 7.9,
-    "source": "רישוי רכב / נתון יצרן (טויוטה קאמרי 2.5 בנזין 203)"
   },
   {
     "make": "טויוטה",
@@ -2111,16 +1221,6 @@
   },
   {
     "make": "Toyota",
-    "model": "CAMRY HYBRID",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 208,
-    "cc": 2487,
-    "seconds": 8.2,
-    "source": "נתון יצרן (Toyota Camry Hybrid 2.5)"
-  },
-  {
-    "make": "Toyota",
     "model": "CAMRY",
     "yearStart": null,
     "yearEnd": null,
@@ -2131,303 +1231,43 @@
   },
   {
     "make": "טויוטה יפן",
-    "model": "FJ CRUISER",
+    "model": "PRIUS HYBRID",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 260,
-    "cc": 3956,
-    "seconds": 7.8,
-    "source": "רישוי רכב / נתון יצרן (טויוטה FJ קרוזר 4.0 V6 260)"
+    "hp": 99,
+    "cc": 1798,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (טויוטה פריוס דור 3 1.8 היברידית 99/136)"
   },
   {
-    "make": "טויוטה ארהב\"",
-    "model": "FJ CRUISER",
+    "make": "טויוטה יפן",
+    "model": "PRIUS PLUG-IN",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 260,
-    "cc": 3956,
-    "seconds": 7.8,
-    "source": "רישוי רכב / נתון יצרן (טויוטה FJ קרוזר 4.0 V6 260)"
+    "hp": 223,
+    "cc": 1987,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (טויוטה פריוס דור 5 פלאג-אין PHEV 223)"
   },
   {
     "make": "טויוטה",
-    "model": "FJ קרוזר",
+    "model": "פריוס",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 260,
-    "cc": 3956,
-    "seconds": 7.8,
-    "source": "רישוי רכב / נתון יצרן (טויוטה FJ קרוזר 260)"
+    "hp": 99,
+    "cc": 1798,
+    "seconds": 10.4,
+    "source": "רישוי רכב / נתון יצרן (טויוטה פריוס 99)"
   },
   {
     "make": "Toyota",
-    "model": "FJ CRUISER",
+    "model": "PRIUS",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 260,
-    "cc": 3956,
-    "seconds": 7.8,
-    "source": "נתון יצרן (Toyota FJ Cruiser 4.0 V6)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "GT86",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 200,
-    "cc": 1998,
-    "seconds": 7.6,
-    "source": "רישוי רכב / נתון יצרן (טויוטה GT86 בוקסר ידני 200)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "GT86",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 200,
-    "cc": 1998,
-    "seconds": 8.2,
-    "source": "רישוי רכב / נתון יצרן (טויוטה GT86 בוקסר אוטומט 200)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "GR86",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 234,
-    "cc": 2387,
-    "seconds": 6.3,
-    "source": "רישוי רכב / נתון יצרן (טויוטה GR86 ידני 2.4 234)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "GR86",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 234,
-    "cc": 2387,
-    "seconds": 6.9,
-    "source": "רישוי רכב / נתון יצרן (טויוטה GR86 אוטומט 2.4 234)"
-  },
-  {
-    "make": "טויוטה",
-    "model": "GT86",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 200,
-    "cc": 1998,
-    "seconds": 7.6,
-    "source": "רישוי רכב / נתון יצרן (טויוטה GT86 200)"
-  },
-  {
-    "make": "Toyota",
-    "model": "GT86",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 200,
-    "cc": 1998,
-    "seconds": 7.6,
-    "source": "נתון יצרן (Toyota GT86 2.0)"
-  },
-  {
-    "make": "Toyota",
-    "model": "GR86",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 234,
-    "cc": 2387,
-    "seconds": 6.3,
-    "source": "נתון יצרן (Toyota GR86 2.4)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "MR2",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 140,
-    "cc": 1794,
-    "seconds": 7.9,
-    "source": "רישוי רכב / נתון יצרן (טויוטה MR2 רודסטר 1.8 140)"
-  },
-  {
-    "make": "טויוטה",
-    "model": "MR2",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 140,
-    "cc": 1794,
-    "seconds": 7.9,
-    "source": "רישוי רכב / נתון יצרן (טויוטה MR2 140)"
-  },
-  {
-    "make": "Toyota",
-    "model": "MR2",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 140,
-    "cc": 1794,
-    "seconds": 7.9,
-    "source": "נתון יצרן (Toyota MR2 Roadster 1.8)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "IQ",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 68,
-    "cc": 998,
-    "seconds": 14.7,
-    "source": "רישוי רכב / נתון יצרן (טויוטה iQ עירונית 1.0 68)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "IQ",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 98,
-    "cc": 1329,
-    "seconds": 11.8,
-    "source": "רישוי רכב / נתון יצרן (טויוטה iQ 1.33 98)"
-  },
-  {
-    "make": "Toyota",
-    "model": "IQ",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 68,
-    "cc": 998,
-    "seconds": 14.7,
-    "source": "נתון יצרן (Toyota iQ 1.0)"
-  },
-  {
-    "make": "טויוטה ארהב\"",
-    "model": "TACOMA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 278,
-    "cc": 2393,
-    "seconds": 7.1,
-    "source": "רישוי רכב / נתון יצרן (טויוטה טאקומה דור 4 2.4T 278)"
-  },
-  {
-    "make": "טויוטה ארהב\"",
-    "model": "TACOMA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 326,
-    "cc": 2393,
-    "seconds": 6.3,
-    "source": "רישוי רכב / נתון יצרן (טויוטה טאקומה i-FORCE MAX היברידי 326)"
-  },
-  {
-    "make": "טויוטה ארהב\"",
-    "model": "TACOMA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 278,
-    "cc": 3456,
-    "seconds": 7.7,
-    "source": "רישוי רכב / נתון יצרן (טויוטה טאקומה דור 3 3.5 V6 278)"
-  },
-  {
-    "make": "טויוטה",
-    "model": "טאקומה",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 278,
-    "cc": 3456,
-    "seconds": 7.7,
-    "source": "רישוי רכב / נתון יצרן (טויוטה טאקומה 278)"
-  },
-  {
-    "make": "Toyota",
-    "model": "TACOMA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 278,
-    "cc": 3456,
-    "seconds": 7.7,
-    "source": "נתון יצרן (Toyota Tacoma 3.5 V6)"
-  },
-  {
-    "make": "Toyota",
-    "model": "TACOMA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 278,
-    "cc": 2393,
-    "seconds": 7.1,
-    "source": "נתון יצרן (Toyota Tacoma 2.4 Turbo)"
-  },
-  {
-    "make": "טויוטה ארהב\"",
-    "model": "TUNDRA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 389,
-    "cc": 3445,
-    "seconds": 6.2,
-    "source": "רישוי רכב / נתון יצרן (טויוטה טונדרה 3.4TT טווין-טורבו 389)"
-  },
-  {
-    "make": "טויוטה ארהב\"",
-    "model": "TUNDRA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 437,
-    "cc": 3445,
-    "seconds": 5.7,
-    "source": "רישוי רכב / נתון יצרן (טויוטה טונדרה i-FORCE MAX היברידי 437)"
-  },
-  {
-    "make": "טויוטה ארהב\"",
-    "model": "TUNDRA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 381,
-    "cc": 5663,
-    "seconds": 6.5,
-    "source": "רישוי רכב / נתון יצרן (טויוטה טונדרה דור 2 5.7 V8 381)"
-  },
-  {
-    "make": "טויוטה",
-    "model": "טונדרה",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 389,
-    "cc": 3445,
-    "seconds": 6.2,
-    "source": "רישוי רכב / נתון יצרן (טויוטה טונדרה 389)"
-  },
-  {
-    "make": "Toyota",
-    "model": "TUNDRA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 389,
-    "cc": 3445,
-    "seconds": 6.2,
-    "source": "נתון יצרן (Toyota Tundra 3.4TT)"
-  },
-  {
-    "make": "Toyota",
-    "model": "TUNDRA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 437,
-    "cc": 3445,
-    "seconds": 5.7,
-    "source": "נתון יצרן (Toyota Tundra i-FORCE MAX Hybrid)"
-  },
-  {
-    "make": "Toyota",
-    "model": "TUNDRA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 381,
-    "cc": 5663,
-    "seconds": 6.5,
-    "source": "נתון יצרן (Toyota Tundra 5.7 V8)"
+    "hp": 223,
+    "cc": 1987,
+    "seconds": 6.8,
+    "source": "נתון יצרן (Toyota Prius Plug-in Hybrid 2.0)"
   },
   {
     "make": "טויוטה אוסטריה",
@@ -2438,36 +1278,6 @@
     "cc": 2998,
     "seconds": 4.3,
     "source": "רישוי רכב / נתון יצרן (טויוטה GR סופרה 3.0 טורבו 340)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "GR SUPRA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 340,
-    "cc": 2998,
-    "seconds": 4.3,
-    "source": "רישוי רכב / נתון יצרן (טויוטה GR סופרה 3.0 340)"
-  },
-  {
-    "make": "טויוטה אוסטריה",
-    "model": "GR SUPRA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 258,
-    "cc": 1998,
-    "seconds": 5.2,
-    "source": "רישוי רכב / נתון יצרן (טויוטה GR סופרה 2.0 טורבו 258)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "SUPRA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 330,
-    "cc": 2997,
-    "seconds": 5.1,
-    "source": "רישוי רכב / נתון יצרן (טויוטה סופרה דור 4 MK4 2JZ-GTE טורבו 330)"
   },
   {
     "make": "טויוטה",
@@ -2488,195 +1298,5 @@
     "cc": 2998,
     "seconds": 4.3,
     "source": "נתון יצרן (Toyota GR Supra 3.0 Turbo)"
-  },
-  {
-    "make": "Toyota",
-    "model": "GR SUPRA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 258,
-    "cc": 1998,
-    "seconds": 5.2,
-    "source": "נתון יצרן (Toyota GR Supra 2.0 Turbo)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "STARLET",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 75,
-    "cc": 1332,
-    "seconds": 11.2,
-    "source": "רישוי רכב / נתון יצרן (טויוטה סטארלט 1.3 75)"
-  },
-  {
-    "make": "טויוטה",
-    "model": "סטארלט",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 75,
-    "cc": 1332,
-    "seconds": 11.2,
-    "source": "רישוי רכב / נתון יצרן (טויוטה סטארלט 75)"
-  },
-  {
-    "make": "Toyota",
-    "model": "STARLET",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 75,
-    "cc": 1332,
-    "seconds": 11.2,
-    "source": "נתון יצרן (Toyota Starlet 1.3)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "CELICA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 143,
-    "cc": 1794,
-    "seconds": 8.7,
-    "source": "רישוי רכב / נתון יצרן (טויוטה סליקה דור 7 1.8 143)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "CELICA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 192,
-    "cc": 1796,
-    "seconds": 7.4,
-    "source": "רישוי רכב / נתון יצרן (טויוטה סליקה T-Sport 1.8 192)"
-  },
-  {
-    "make": "טויוטה",
-    "model": "סליקה",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 143,
-    "cc": 1794,
-    "seconds": 8.7,
-    "source": "רישוי רכב / נתון יצרן (טויוטה סליקה 143)"
-  },
-  {
-    "make": "Toyota",
-    "model": "CELICA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 143,
-    "cc": 1794,
-    "seconds": 8.7,
-    "source": "נתון יצרן (Toyota Celica 1.8)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "PREVIA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 156,
-    "cc": 2362,
-    "seconds": 11.2,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פראוויה 2.4 156)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "PREVIA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 170,
-    "cc": 2362,
-    "seconds": 10.8,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פראוויה דור 3 2.4 170)"
-  },
-  {
-    "make": "טויוטה",
-    "model": "פריווה",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 156,
-    "cc": 2362,
-    "seconds": 11.2,
-    "source": "רישוי רכב / נתון יצרן (טויוטה פראוויה 156)"
-  },
-  {
-    "make": "Toyota",
-    "model": "PREVIA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 156,
-    "cc": 2362,
-    "seconds": 11.2,
-    "source": "נתון יצרן (Toyota Previa 2.4)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "CROWN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 236,
-    "cc": 2487,
-    "seconds": 7.6,
-    "source": "רישוי רכב / נתון יצרן (טויוטה קראון קרוסאובר 2.5 היברידי AWD 236)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "CROWN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 340,
-    "cc": 2393,
-    "seconds": 5.7,
-    "source": "רישוי רכב / נתון יצרן (טויוטה קראון Hybrid MAX 2.4T 340)"
-  },
-  {
-    "make": "טויוטה יפן",
-    "model": "CROWN SIGNIA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 240,
-    "cc": 2487,
-    "seconds": 7.1,
-    "source": "רישוי רכב / נתון יצרן (טויוטה קראון סיגניה SUV 2.5 היברידי 240)"
-  },
-  {
-    "make": "טויוטה",
-    "model": "קראון",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 236,
-    "cc": 2487,
-    "seconds": 7.6,
-    "source": "רישוי רכב / נתון יצרן (טויוטה קראון 236)"
-  },
-  {
-    "make": "טויוטה",
-    "model": "קראון סיגנה",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 240,
-    "cc": 2487,
-    "seconds": 7.1,
-    "source": "רישוי רכב / נתון יצרן (טויוטה קראון סיגניה 240)"
-  },
-  {
-    "make": "Toyota",
-    "model": "CROWN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 236,
-    "cc": 2487,
-    "seconds": 7.6,
-    "source": "נתון יצרן (Toyota Crown Crossover Hybrid)"
-  },
-  {
-    "make": "Toyota",
-    "model": "CROWN SIGNIA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 240,
-    "cc": 2487,
-    "seconds": 7.1,
-    "source": "נתון יצרן (Toyota Crown Signia Hybrid)"
   }
 ]
