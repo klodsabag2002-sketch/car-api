@@ -742,34 +742,85 @@ function testStatus(expiry) {
     return d >= today;
 }
 
-// מיפוי וחילוץ מרכב רכב
+// ---------- מילון תרגומי מרכב מלא ----------
 const BODY_TYPE_MAP = {
+    // מונחים באנגלית וראשי תיבות
+    "MPV": "מיניוואן",
+    "SUV": "פנאי / שטח",
+    "HATCHBACK": "האצ'בק",
+    "SEDAN": "סדאן",
+    "ESTATE": "סטיישן",
+    "STATION": "סטיישן",
+    "COUPE": "קופה",
+    "CABRIO": "קבריולה (גג פתוח)",
+    "CABRIOLET": "קבריולה (גג פתוח)",
+    "CONVERTIBLE": "קבריולה (גג פתוח)",
+    "PICKUP": "טנדר",
+    "PICK-UP": "טנדר",
+    "VAN": "מסחרי / ואן",
+    "MINIVAN": "מיניוואן",
+    "CROSSOVER": "קרוסאובר",
+
+    // שמות בעברית
+    "הצ'בק": "האצ'בק",
+    "הצבק": "האצ'בק",
+    "האצ'בק": "האצ'בק",
+    "האצבק": "האצ'בק",
+    "סדאן": "סדאן",
+    "סטיישן": "סטיישן",
+    "קופה": "קופה",
+    "פנאי": "פנאי / שטח",
+    "שטח": "רכב שטח",
+    "טנדר": "טנדר",
+    "מסחרי": "מסחרי / ואן",
+    "ואן": "מסחרי / ואן",
+    "מיניוואן": "מיניוואן",
+    "משא אחוד": "מסחרי סגור (משא אחוד)",
+    "משא בלתי אחוד": "טנדר / מסחרי פתוח",
+    "רכב שדה": "רכב שטח",
+    "אוטובוס זעיר": "טרנזיט / היסעים",
+
+    // אותיות סוג דגם ממשלתי (sug_degem)
     "P": "האצ'בק",
     "M": "סטיישן",
     "S": "סדאן",
     "C": "קופה",
-    "J": "SUV / פנאי",
+    "J": "פנאי / שטח (SUV)",
     "V": "מסחרי / ואן",
-    "הצ'בק": "האצ'בק",
-    "הצבק": "האצ'בק",
-    "סדאן": "סדאן",
-    "סטיישן": "סטיישן",
-    "קופה": "קופה",
-    "פנאי": "SUV / פנאי",
-    "שטח": "רכב שטח"
+    "T": "טנדר",
+
+    // קידודים הפוכים ממסדי הנתונים של משרד התחבורה
+    "בק'צה": "האצ'בק",
+    "הצב'ק": "האצ'בק",
+    "נאדס": "סדאן",
+    "נדאן": "סדאן",
+    "ןישייטס": "סטיישן",
+    "הפוק": "קופה",
+    "טחש": "רכב שטח",
+    "טחשו": "פנאי / שטח",
+    "רדנט": "טנדר",
+    "ןאו": "ואן / מסחרי",
+    "נאווינימ": "מיניוואן"
 };
 
 function resolveBodyType(car, row) {
-    const raw = toText(row?.merkav) || toText(car?.merkav);
-    if (raw) return BODY_TYPE_MAP[raw] || raw;
+    const rawMerkav = toText(row?.merkav) || toText(car?.merkav);
+    if (rawMerkav) {
+        const clean = rawMerkav.trim();
+        if (BODY_TYPE_MAP[clean]) return BODY_TYPE_MAP[clean];
+        if (BODY_TYPE_MAP[clean.toUpperCase()]) return BODY_TYPE_MAP[clean.toUpperCase()];
+        return clean;
+    }
 
     const sug = toText(car?.sug_degem) || toText(row?.sug_degem);
-    if (sug && BODY_TYPE_MAP[sug]) return BODY_TYPE_MAP[sug];
+    if (sug && BODY_TYPE_MAP[sug.trim().toUpperCase()]) {
+        return BODY_TYPE_MAP[sug.trim().toUpperCase()];
+    }
 
     return null;
 }
 
-// בדיקת תו נכה מתוקנת
+// בדיקת תו נכה
 async function checkDisabled(plate) {
     try {
         const cleanPlate = String(plate).replace(/\D/g, "");
