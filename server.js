@@ -65,7 +65,23 @@ ACCEL_FILES.forEach(fileName => {
     }
 });
 
-// שמות יצרנים בעברית מהרישוי -> שם באנגלית כמו בקובץ התאוצה
+// ---------- טעינת קובץ הלוגואים (logos / logos.json) ----------
+let logosMap = {};
+try {
+    const logosFileName = fs.existsSync(path.join(__dirname, "logos.json")) ? "logos.json" : "logos";
+    const logosFilePath = path.join(__dirname, logosFileName);
+    if (fs.existsSync(logosFilePath)) {
+        const logosRaw = fs.readFileSync(logosFilePath, "utf8");
+        logosMap = JSON.parse(logosRaw);
+        console.log(`[LOGOS OK] מפת הלוגואים נטענה בהצלחה מ-${logosFileName} (${Object.keys(logosMap).length} יצרנים)`);
+    } else {
+        console.warn(`[LOGOS WARN] קובץ logos לא נמצא`);
+    }
+} catch (e) {
+    console.error(`[LOGOS ERROR] שגיאה בטעינת קובץ logos:`, e.message);
+}
+
+// שמות יצרנים בעברית מהרישוי -> שם באנגלית כמו בקובץ התאוצה והלוגו
 const HE_MAKE_ALIASES = {
     "אבארט": "Abarth",
     "קופרה": "Cupra",
@@ -657,14 +673,41 @@ function norm(s) {
     return String(s || "").toLowerCase().replace(/[^a-z0-9א-ת]/g, "");
 }
 
-function getLogoSlug(manufacturer) {
-    if (!manufacturer) return "car";
+function resolveEnglishMake(manufacturer) {
+    if (!manufacturer) return null;
     for (const [he, en] of Object.entries(HE_MAKE_ALIASES)) {
         if (manufacturer.includes(he)) {
-            return en.toLowerCase().replace(/[^a-z0-9]/g, "");
+            return en;
         }
     }
+    return null;
+}
+
+function getLogoSlug(manufacturer) {
+    const en = resolveEnglishMake(manufacturer);
+    if (en) {
+        return en.toLowerCase().replace(/[^a-z0-9]/g, "");
+    }
     return "car";
+}
+
+function getLogoUrl(manufacturer) {
+    const en = resolveEnglishMake(manufacturer);
+    if (en) {
+        const keyExact = en.toLowerCase().trim();
+        const keyNoSpace = keyExact.replace(/[^a-z0-9]/g, "");
+        
+        if (logosMap[keyExact]) return logosMap[keyExact];
+        if (logosMap[keyNoSpace]) return logosMap[keyNoSpace];
+        
+        for (const [k, url] of Object.entries(logosMap)) {
+            const cleanK = k.toLowerCase().replace(/[^a-z0-9]/g, "");
+            if (cleanK === keyNoSpace || cleanK.includes(keyNoSpace) || keyNoSpace.includes(cleanK)) {
+                return url;
+            }
+        }
+    }
+    return null;
 }
 
 function lookupAccel(makeTexts, modelTexts, year, hp, cc) {
@@ -821,6 +864,11 @@ async function findModelRow(car) {
 
 // ---------- API ----------
 
+// שליפת מפת הלוגואים המלאה (אופציונלי לאפליקציה)
+app.get('/api/logos', (req, res) => {
+    res.json({ success: true, logos: logosMap });
+});
+
 app.get('/api/car/:plate', async (req, res) => {
     const plate = req.params.plate.replace(/\D/g, "");
     const timestamp = new Date().toISOString();
@@ -863,7 +911,8 @@ app.get('/api/car/:plate', async (req, res) => {
         }
         const modelTexts = [car.kinuy_mishari, car.degem_nm, car.ramat_gimur, model].filter(Boolean);
         const acceleration = lookupAccel(makeTexts, modelTexts, year, hp, engineCc);
-        const logoSlug = getLogoSlug(manufacturer); // יצירת מזהה הלוגו מהשרת
+        const logoSlug = getLogoSlug(manufacturer);
+        const logoUrl = getLogoUrl(manufacturer);
 
         console.log(`--------------------------------------------------`);
         console.log(`[SEARCH LOG] 🔍 מישהו חיפש רכב!`);
@@ -873,6 +922,7 @@ app.get('/api/car/:plate', async (req, res) => {
         console.log(`⚡ כוח סוס: ${hp != null ? hp : "לא ידוע"} | נפח: ${engineCc != null ? engineCc : "לא ידוע"}`);
         console.log(`🏷️ סוג בעלות: ${currentOwnership || "לא ידוע"}`);
         console.log(`🏁 תאוצה 0-100: ${acceleration ? acceleration.seconds + " שניות" : "לא נמצאה בטבלה"}`);
+        console.log(`🖼️ כתובת לוגו: ${logoUrl || "לא נמצא לוגו"}`);
         console.log(`♿ תג נכה: ${disabled === null ? "לא ידוע" : (disabled ? "יש" : "אין")}`);
         console.log(`🔁 מעברי בעלות: ${ownershipList.length}`);
         console.log(`--------------------------------------------------`);
@@ -885,7 +935,8 @@ app.get('/api/car/:plate', async (req, res) => {
                 model,
                 trim,
                 year,
-                logoSlug, // נוסף כדי שהקוד בצד לקוח יוכל להציג את הלוגו ישירות מהשרת
+                logoSlug,
+                logoUrl,
                 color: car.zeva_rechev || car.tzeva_rechev || "לא ידוע",
                 chassis: toText(car.misgeret),
                 tireFront: toText(car.zmig_kidmi),
@@ -947,7 +998,8 @@ app.get('/api/debug/:plate', async (req, res) => {
             disabled_sample_fields: disabledSample[0] ? Object.keys(disabledSample[0]) : [],
             disabled_sample: disabledSample[0] || null,
             disabled_match: disabledMatch,
-            accel_table_rows: accelTable.length
+            accel_table_rows: accelTable.length,
+            logos_loaded: Object.keys(logosMap).length
         });
     } catch (error) {
         console.error("שגיאה:", error);
