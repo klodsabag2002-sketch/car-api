@@ -1,6 +1,266 @@
 [
   {
     "make": "קיה ד. קוריאה",
+    "model": "PICANTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 84,
+    "cc": 1248,
+    "seconds": 13.7,
+    "source": "רישוי רכב / נתון יצרן (קיה פיקנטו דור 2 1.25 אוטומט 84 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "PICANTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 85,
+    "cc": 1248,
+    "seconds": 13.4,
+    "source": "רישוי רכב / נתון יצרן (קיה פיקנטו 1.25 85 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "PICANTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 84,
+    "cc": 1197,
+    "seconds": 13.8,
+    "source": "רישוי רכב / נתון יצרן (קיה פיקנטו דור 3 1.25 D-CVVT 84 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "PICANTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 67,
+    "cc": 998,
+    "seconds": 14.6,
+    "source": "רישוי רכב / נתון יצרן (קיה פיקנטו 1.0 67 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "PICANTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 69,
+    "cc": 998,
+    "seconds": 14.4,
+    "source": "רישוי רכב / נתון יצרן (קיה פיקנטו דור 2 1.0 69 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "PICANTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 65,
+    "cc": 1086,
+    "seconds": 15.8,
+    "source": "רישוי רכב / נתון יצרן (קיה פיקנטו דור 1 1.1 65 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "PICANTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 998,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (קיה פיקנטו GT-Line טורבו 1.0 T-GDI 100 כ\"ס)"
+  },
+  {
+    "make": "קיה",
+    "model": "פיקנטו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 84,
+    "cc": 1248,
+    "seconds": 13.7,
+    "source": "רישוי רכב / נתון יצרן (קיה פיקנטו 1.25 84 כ\"ס)"
+  },
+  {
+    "make": "קיה",
+    "model": "פיקנטו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 84,
+    "cc": 1197,
+    "seconds": 13.8,
+    "source": "רישוי רכב / נתון יצרן (קיה פיקנטו 84 כ\"ס)"
+  },
+  {
+    "make": "Kia",
+    "model": "PICANTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 84,
+    "cc": 1248,
+    "seconds": 13.7,
+    "source": "נתון יצרן (Kia Picanto 1.25 84hp)"
+  },
+  {
+    "make": "Kia",
+    "model": "PICANTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 84,
+    "cc": 1197,
+    "seconds": 13.8,
+    "source": "נתון יצרן (Kia Picanto 1.2)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "SORENTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 2359,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (קיה סורנטו דור 2 מתוח פנים 2.4 GDI 192 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "SORENTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 188,
+    "cc": 2359,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (קיה סורנטו דור 3 2.4 GDI 188 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "SORENTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 174,
+    "cc": 2359,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (קיה סורנטו דור 2 2.4 MPI 174 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "SORENTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 2497,
+    "seconds": 10.1,
+    "source": "רישוי רכב / נתון יצרן (קיה סורנטו דור 4 7 מקומות 2.5 בנזין 180 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "SORENTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 230,
+    "cc": 1598,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (קיה סורנטו 1.6 T-GDI היברידי 230 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "SORENTO PHEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 1598,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (קיה סורנטו פלאג-אין PHEV AWD 265 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "SORENTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 2151,
+    "seconds": 9.2,
+    "source": "רישוי רכב / נתון יצרן (קיה סורנטו 2.2 CRDi דיזל 202 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "SORENTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 2199,
+    "seconds": 9.4,
+    "source": "רישוי רכב / נתון יצרן (קיה סורנטו דור 3 2.2 CRDi 200 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "SORENTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 2199,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (קיה סורנטו דור 2 2.2 CRDi 197 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "SORENTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 277,
+    "cc": 3470,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (קיה סורנטו 3.5 V6 277 כ\"ס)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
+    "model": "SORENTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 281,
+    "cc": 2497,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (קיה סורנטו 2.5 T-GDI טורבו 281 כ\"ס)"
+  },
+  {
+    "make": "קיה",
+    "model": "סורנטו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 2359,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (קיה סורנטו 2.4 GDI 192 כ\"ס)"
+  },
+  {
+    "make": "קיה",
+    "model": "סורנטו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 2497,
+    "seconds": 10.1,
+    "source": "רישוי רכב / נתון יצרן (קיה סורנטו 180 כ\"ס)"
+  },
+  {
+    "make": "Kia",
+    "model": "SORENTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 2359,
+    "seconds": 10.5,
+    "source": "נתון יצרן (Kia Sorento 2.4 GDI 192hp)"
+  },
+  {
+    "make": "Kia",
+    "model": "SORENTO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 2497,
+    "seconds": 10.1,
+    "source": "נתון יצרן (Kia Sorento 2.5 180hp)"
+  },
+  {
+    "make": "קיה ד. קוריאה",
     "model": "EV3",
     "yearStart": 2024,
     "yearEnd": null,
@@ -691,66 +951,6 @@
   },
   {
     "make": "קיה ד. קוריאה",
-    "model": "SORENTO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 180,
-    "cc": 2497,
-    "seconds": 10.1,
-    "source": "רישוי רכב / נתון יצרן (קיה סורנטו 7 מקומות 2.5 בנזין 180 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "SORENTO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 230,
-    "cc": 1598,
-    "seconds": 8.6,
-    "source": "רישוי רכב / נתון יצרן (קיה סורנטו 1.6 T-GDI היברידי 230 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "SORENTO PHEV",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 265,
-    "cc": 1598,
-    "seconds": 8.4,
-    "source": "רישוי רכב / נתון יצרן (קיה סורנטו פלאג-אין PHEV AWD 265 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "SORENTO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 202,
-    "cc": 2151,
-    "seconds": 9.2,
-    "source": "רישוי רכב / נתון יצרן (קיה סורנטו 2.2 CRDi דיזל 202 כ\"ס)"
-  },
-  {
-    "make": "קיה",
-    "model": "סורנטו",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 180,
-    "cc": 2497,
-    "seconds": 10.1,
-    "source": "רישוי רכב / נתון יצרן (קיה סורנטו 180 כ\"ס)"
-  },
-  {
-    "make": "Kia",
-    "model": "SORENTO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 180,
-    "cc": 2497,
-    "seconds": 10.1,
-    "source": "נתון יצרן (Kia Sorento 2.5 180hp)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
     "model": "STONIC",
     "yearStart": null,
     "yearEnd": null,
@@ -1038,46 +1238,6 @@
     "cc": 1591,
     "seconds": 11.5,
     "source": "נתון יצרן (Kia Forte 1.6)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "PICANTO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 84,
-    "cc": 1197,
-    "seconds": 13.8,
-    "source": "רישוי רכב / נתון יצרן (קיה פיקנטו 1.25 D-CVVT 84 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "PICANTO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 67,
-    "cc": 998,
-    "seconds": 14.6,
-    "source": "רישוי רכב / נתון יצרן (קיה פיקנטו 1.0 67 כ\"ס)"
-  },
-  {
-    "make": "קיה",
-    "model": "פיקנטו",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 84,
-    "cc": 1197,
-    "seconds": 13.8,
-    "source": "רישוי רכב / נתון יצרן (קיה פיקנטו 84 כ\"ס)"
-  },
-  {
-    "make": "Kia",
-    "model": "PICANTO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 84,
-    "cc": 1197,
-    "seconds": 13.8,
-    "source": "נתון יצרן (Kia Picanto 1.2)"
   },
   {
     "make": "קיה ד. קוריאה",
@@ -2000,26 +2160,6 @@
     "source": "רישוי רכב / נתון יצרן (קרייזלר וויאג'ר 2.4 147 כ\"ס)"
   },
   {
-    "make": "קרייזלר קנדה",
-    "model": "VOYAGER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 158,
-    "cc": 3301,
-    "seconds": 13.2,
-    "source": "רישוי רכב / נתון יצרן (קרייזלר וויאג'ר דור 3 3.3 V6 158 כ\"ס)"
-  },
-  {
-    "make": "קרייזלר קנדה",
-    "model": "VOYAGER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 143,
-    "cc": 2499,
-    "seconds": 13.5,
-    "source": "רישוי רכב / נתון יצרן (קרייזלר וויאג'ר 2.5 CRD דיזל 143 כ\"ס)"
-  },
-  {
     "make": "קרייזלר",
     "model": "וויאגר",
     "yearStart": null,
@@ -2060,26 +2200,6 @@
     "source": "רישוי רכב / נתון יצרן (קרייזלר טאון אנד קאנטרי 3.6 V6 פנטסטאר 283 כ\"ס)"
   },
   {
-    "make": "קרייזלר קנדה",
-    "model": "TOWN & COUNTRY",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 197,
-    "cc": 3778,
-    "seconds": 11.5,
-    "source": "רישוי רכב / נתון יצרן (קרייזלר טאון אנד קאנטרי 3.8 V6 197 כ\"ס)"
-  },
-  {
-    "make": "קרייזלר קנדה",
-    "model": "TOWN AND COUNTRY",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 283,
-    "cc": 3604,
-    "seconds": 8.1,
-    "source": "רישוי רכב / נתון יצרן (קרייזלר טאון אנד קאנטרי 283 כ\"ס)"
-  },
-  {
     "make": "קרייזלר",
     "model": "טאון אנד קאנטרי",
     "yearStart": null,
@@ -2108,26 +2228,6 @@
     "cc": 1996,
     "seconds": 9.5,
     "source": "רישוי רכב / נתון יצרן (קרייזלר ניאון 2.0 133 כ\"ס)"
-  },
-  {
-    "make": "קרייזלר ארה\"ב",
-    "model": "NEON",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 115,
-    "cc": 1598,
-    "seconds": 10.8,
-    "source": "רישוי רכב / נתון יצרן (קרייזלר ניאון 1.6 115 כ\"ס)"
-  },
-  {
-    "make": "קרייזלר ארה\"ב",
-    "model": "NEON SRT-4",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 230,
-    "cc": 2429,
-    "seconds": 5.6,
-    "source": "רישוי רכב / נתון יצרן (קרייזלר/דודג' ניאון SRT-4 טורבו 230 כ\"ס)"
   },
   {
     "make": "קרייזלר",
@@ -2177,47 +2277,7 @@
     "hp": 156,
     "cc": 2360,
     "seconds": 10.3,
-    "source": "רישוי רכב / נתון יצרן (קרייזלר סברינג 2.4 World Gas 156 כ\"ס)"
-  },
-  {
-    "make": "קרייזלר ארה\"ב",
-    "model": "SEBRING",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 152,
-    "cc": 2429,
-    "seconds": 10.9,
-    "source": "רישוי רכב / נתון יצרן (קרייזלר סברינג דור 2 2.4 152 כ\"ס)"
-  },
-  {
-    "make": "קרייזלר ארה\"ב",
-    "model": "SEBRING",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 203,
-    "cc": 2736,
-    "seconds": 9.5,
-    "source": "רישוי רכב / נתון יצרן (קרייזלר סברינג דור 2 2.7 V6 203 כ\"ס)"
-  },
-  {
-    "make": "קרייזלר ארה\"ב",
-    "model": "SEBRING",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 238,
-    "cc": 3518,
-    "seconds": 7.4,
-    "source": "רישוי רכב / נתון יצרן (קרייזלר סברינג 3.5 V6 238 כ\"ס)"
-  },
-  {
-    "make": "קרייזלר ארה\"ב",
-    "model": "SEBRING",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 140,
-    "cc": 1968,
-    "seconds": 10.6,
-    "source": "רישוי רכב / נתון יצרן (קרייזלר סברינג 2.0 CRD דיזל 140 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (קרייזלר סברינג 2.4 156 כ\"ס)"
   },
   {
     "make": "קרייזלר",
@@ -2228,16 +2288,6 @@
     "cc": 2736,
     "seconds": 9.8,
     "source": "רישוי רכב / נתון יצרן (קרייזלר סברינג 186 כ\"ס)"
-  },
-  {
-    "make": "קרייזלר",
-    "model": "סברינג",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 156,
-    "cc": 2360,
-    "seconds": 10.3,
-    "source": "רישוי רכב / נתון יצרן (קרייזלר סברינג 156 כ\"ס)"
   },
   {
     "make": "Chrysler",
@@ -2258,26 +2308,6 @@
     "cc": 2497,
     "seconds": 10.5,
     "source": "רישוי רכב / נתון יצרן (קרייזלר סטרטוס סדאן/קבריולה 2.5 V6 163 כ\"ס)"
-  },
-  {
-    "make": "קרייזלר ארה\"ב",
-    "model": "STRATUS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 133,
-    "cc": 1996,
-    "seconds": 10.9,
-    "source": "רישוי רכב / נתון יצרן (קרייזלר סטרטוס 2.0 133 כ\"ס)"
-  },
-  {
-    "make": "קרייזלר ארה\"ב",
-    "model": "STRATUS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 152,
-    "cc": 2429,
-    "seconds": 10.4,
-    "source": "רישוי רכב / נתון יצרן (קרייזלר סטרטוס 2.4 152 כ\"ס)"
   },
   {
     "make": "קרייזלר",
@@ -2308,16 +2338,6 @@
     "cc": 2972,
     "seconds": 11.2,
     "source": "רישוי רכב / נתון יצרן (קרייזלר סרטוגה 3.0 V6 141 כ\"ס)"
-  },
-  {
-    "make": "קרייזלר ארה\"ב",
-    "model": "SARATOGA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 101,
-    "cc": 2501,
-    "seconds": 13.5,
-    "source": "רישוי רכב / נתון יצרן (קרייזלר סרטוגה 2.5 101 כ\"ס)"
   },
   {
     "make": "קרייזלר",
@@ -2360,26 +2380,6 @@
     "source": "רישוי רכב / נתון יצרן (קרייזלר פסיפיקה פלאג-אין PHEV היברידית 260 כ\"ס משולב)"
   },
   {
-    "make": "קרייזלר קנדה",
-    "model": "PACIFICA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 253,
-    "cc": 3952,
-    "seconds": 9.5,
-    "source": "רישוי רכב / נתון יצרן (קרייזלר פסיפיקה קלאסית 4.0 V6 253 כ\"ס)"
-  },
-  {
-    "make": "קרייזלר קנדה",
-    "model": "PACIFICA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 215,
-    "cc": 3778,
-    "seconds": 10.5,
-    "source": "רישוי רכב / נתון יצרן (קרייזלר פסיפיקה קלאסית 3.8 V6 215 כ\"ס)"
-  },
-  {
     "make": "קרייזלר",
     "model": "פספיקה",
     "yearStart": null,
@@ -2400,16 +2400,6 @@
     "source": "רישוי רכב / נתון יצרן (קרייזלר פסיפיקה 287 כ\"ס)"
   },
   {
-    "make": "קרייזלר",
-    "model": "פסיפיקה היבריד",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 260,
-    "cc": 3604,
-    "seconds": 7.8,
-    "source": "רישוי רכב / נתון יצרן (קרייזלר פסיפיקה פלאג-אין PHEV 260 כ\"ס)"
-  },
-  {
     "make": "Chrysler",
     "model": "PACIFICA",
     "yearStart": null,
@@ -2418,16 +2408,6 @@
     "cc": 3604,
     "seconds": 7.4,
     "source": "נתון יצרן (Chrysler Pacifica 3.6 V6 287hp)"
-  },
-  {
-    "make": "Chrysler",
-    "model": "PACIFICA HYBRID",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 260,
-    "cc": 3604,
-    "seconds": 7.8,
-    "source": "נתון יצרן (Chrysler Pacifica Hybrid PHEV 260hp)"
   },
   {
     "make": "קרייזלר גרמניה",
@@ -2450,16 +2430,6 @@
     "source": "רישוי רכב / נתון יצרן (קרייזלר קרוספייר SRT-6 סופרצ'ארג' 335 כ\"ס)"
   },
   {
-    "make": "קרייזלר ארה\"ב",
-    "model": "CROSSFIRE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 218,
-    "cc": 3199,
-    "seconds": 6.5,
-    "source": "רישוי רכב / נתון יצרן (קרייזלר קרוספייר 218 כ\"ס)"
-  },
-  {
     "make": "קרייזלר",
     "model": "קרוספייר",
     "yearStart": null,
@@ -2478,15 +2448,5 @@
     "cc": 3199,
     "seconds": 6.5,
     "source": "נתון יצרן (Chrysler Crossfire 3.2 V6 218hp)"
-  },
-  {
-    "make": "Chrysler",
-    "model": "CROSSFIRE SRT-6",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 335,
-    "cc": 3199,
-    "seconds": 5.0,
-    "source": "נתון יצרן (Chrysler Crossfire SRT-6 335hp)"
   }
 ]
