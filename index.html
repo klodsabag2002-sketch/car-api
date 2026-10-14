@@ -7,7 +7,7 @@
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: Arial, Helvetica, sans-serif; background: #f0f0f0; color: #333; direction: rtl; }
-  .phone { max-width: 380px; margin: 0 auto; background: #f0f0f0; min-height: 100vh; padding-bottom: 20px; }
+  .phone { max-width: 380px; margin: 0 auto; background: #f0f0f0; min-height: 100vh; padding-bottom: 30px; }
 
   .topbar { background: #2a7fa8; color: #fff; height: 52px; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; }
   .topbar .t { font-size: 18px; flex: 1; text-align: center; }
@@ -105,12 +105,25 @@
   .own-panel { display: none; margin: 10px 10px 0; }
   .own-panel.show { display: block; }
 
-  .spec-card { background: #fff; border-radius: 14px; margin: 14px 10px 0; padding: 14px 4px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; box-shadow: 0 2px 6px rgba(42,127,168,.12); }
+  .spec-card { background: #fff; border-radius: 14px; margin: 14px 10px 0; padding: 14px 4px 10px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; box-shadow: 0 2px 6px rgba(42,127,168,.12); position: relative; }
   .spec { text-align: center; }
   .spec .sp-ic { font-size: 20px; height: 28px; display: flex; align-items: center; justify-content: center; }
   .spec .sp-lbl { font-size: 11px; color: #4a6b7d; margin-top: 4px; line-height: 1.2; }
   .spec .sp-val { font-size: 13px; font-weight: bold; color: #1f7ea9; margin-top: 3px; direction: ltr; }
   .spec .sp-val.na { color: #aab8c2; font-weight: normal; direction: rtl; font-size: 12px; }
+
+  /* הערת הבהרה לתאוצה 0-100 */
+  .accel-disclaimer {
+    margin: 6px 14px 0;
+    font-size: 11px;
+    color: #7b8f9a;
+    line-height: 1.35;
+    text-align: center;
+    background: #eef6f9;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border-right: 3px solid #2a7fa8;
+  }
 
   .list-card { background: #fff; border-radius: 12px; margin: 12px 10px 0; overflow: hidden; box-shadow: 0 2px 6px rgba(42,127,168,.12); }
   .lrow { display: flex; align-items: center; padding: 11px 12px; border-bottom: 1px solid #f0f0f0; }
@@ -145,6 +158,66 @@
   .own-extra .k { color: #4a6b7d; }
   .own-extra .v { font-weight: bold; color: #1f5f80; direction: ltr; }
   .own-msg { background: #fff; border-radius: 12px; padding: 12px; font-size: 13px; color: #4a6b7d; text-align: center; margin-top: 4px; }
+
+  /* כפתור דיווח על מידע חסר */
+  .report-btn-wrap { text-align: center; margin: 18px 10px 10px; }
+  .report-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    border: 1.5px dashed #2a7fa8;
+    color: #2a7fa8;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+    transition: all 0.2s;
+  }
+  .report-btn:active { background: #eaf3f7; }
+
+  /* חלונית דיווח (Modal) */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .modal-overlay.show { display: flex; }
+  .modal-card {
+    background: #fff;
+    width: 100%;
+    max-width: 340px;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    position: relative;
+    direction: rtl;
+    text-align: right;
+  }
+  .modal-title { font-size: 16px; font-weight: bold; color: #1f5f80; margin-bottom: 6px; }
+  .modal-sub { font-size: 12px; color: #666; margin-bottom: 14px; }
+  .modal-field-lbl { font-size: 12px; font-weight: bold; color: #333; margin: 10px 0 4px; }
+  .modal-select, .modal-textarea {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    background: #f8fafc;
+  }
+  .modal-textarea { height: 75px; resize: none; margin-top: 4px; }
+  .modal-actions { display: flex; gap: 10px; margin-top: 16px; }
+  .modal-submit { flex: 1; background: #2a7fa8; color: #fff; border: none; padding: 10px; border-radius: 8px; font-weight: bold; font-size: 14px; cursor: pointer; }
+  .modal-close { background: #e2e8f0; color: #475569; border: none; padding: 10px 14px; border-radius: 8px; font-size: 13px; cursor: pointer; }
 </style>
 </head>
 <body>
@@ -252,6 +325,11 @@
           </div>
         </div>
 
+        <!-- הערת ניסוח על נתוני 0-100 -->
+        <div class="accel-disclaimer">
+          ℹ️ נתוני התאוצה מבוססים על מאגרים חיצוניים שונים ומשמשים להערכה בלבד, אין להסתמך עליהם במדויק.
+        </div>
+
         <div class="list-card">
           <div class="lrow"><span class="li">🏭</span><span class="ll">יצרן</span><span class="sp"></span><span class="lv" id="vManufacturer"></span></div>
           <div class="lrow"><span class="li">🚙</span><span class="ll">דגם</span><span class="sp"></span><span class="lv" id="vModel"></span></div>
@@ -269,6 +347,14 @@
           <div class="test-row"><span class="tl">טסט הבא (תוקף)</span><span class="tv" id="vNextTest"></span></div>
           <div class="test-countdown" id="vCountdown"></div>
         </div>
+
+        <!-- כפתור דיווח על פרטים חסרים -->
+        <div class="report-btn-wrap">
+          <button class="report-btn" id="openReportBtn">
+            <span>✏️</span> חסרים פרטים ברכב? דווח לנו
+          </button>
+        </div>
+
       </div>
     </div>
 
@@ -279,11 +365,42 @@
 
 </div>
 
+<!-- חלונית קופצת (Modal) לדיווח על פרטים חסרים -->
+<div id="reportModal" class="modal-overlay">
+  <div class="modal-card">
+    <div class="modal-title">דיווח על פרט חסר או שגוי</div>
+    <div class="modal-sub" id="reportCarHeader">מספר רכב: -</div>
+
+    <div class="modal-field-lbl">מה חסר או דורש תיקון?</div>
+    <select id="reportCategory" class="modal-select">
+      <option value="תאוצה 0-100">תאוצה 0-100 קמ"ש</option>
+      <option value="סוג מרכב">סוג מרכב</option>
+      <option value="רמת גימור">רמת גימור</option>
+      <option value="כוח סוס / נפח">כוח סוס / נפח מנוע</option>
+      <option value="תג נכה">זכאות לתו נכה</option>
+      <option value="אחר">פרט אחר</option>
+    </select>
+
+    <div class="modal-field-lbl">פרטים נוספים / הערה (אופציונלי):</div>
+    <textarea id="reportText" class="modal-textarea" placeholder="למשל: תאוצה אמיתית היא 6.2 שניות לפי קטלוג יצרן..."></textarea>
+
+    <div class="modal-actions">
+      <button id="submitReportBtn" class="modal-submit">שלח דיווח במייל</button>
+      <button id="closeReportBtn" class="modal-close">ביטול</button>
+    </div>
+  </div>
+</div>
+
 <script>
   const API_BASE = "https://car-api-huth.onrender.com";
   const HIST_KEY = "carSearchHistory";
   const HIST_MAX = 10;
+  
+  // כתובת המייל המעודכנת לקבלת דיווחים
+  const REPORT_EMAIL = "Klodsabag2002@gmail.com"; 
+
   let currentPlate = "";
+  let currentCarData = null;
   let inDetail = false;
 
   function formatPlate(v) {
@@ -525,6 +642,7 @@
     document.getElementById('errorMsg').style.display = 'none';
     closeOwnPanel();
     currentPlate = '';
+    currentCarData = null;
     renderHistory();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -836,6 +954,7 @@
     setupCopyButton(null);
     closeOwnPanel();
     currentPlate = '';
+    currentCarData = null;
 
     if (plate.length < 7) {
       showMsg('errorMsg', 'נא להזין מספר רכב תקין');
@@ -859,6 +978,7 @@
 
       const d = j.data;
       currentPlate = plate;
+      currentCarData = d;
 
       const brand = findBrand(d.manufacturer, d.model);
       const trim = cleanText(d.trim || '');
@@ -887,9 +1007,7 @@
       else if (d.disabled) setStatusBlock('stDisabled', 'יש', 'ok');
       else setStatusBlock('stDisabled', 'אין', 'neutral');
 
-      // מרכב - מעודכן לשליפה מה-API
       setVal('sBody', d.bodyType || d.merkav);
-
       setVal('sHp', d.horsepower, 'כ"ס');
       setVal('sEngine', d.engineCc, 'סמ"ק');
       setVal('sAccel', d.acceleration0to100, 'שניות');
@@ -936,6 +1054,54 @@
     el.textContent = text;
     el.style.display = 'block';
   }
+
+  // ---------- מנגנון דיווח על פרט חסר (Modal) ----------
+  const reportModal = document.getElementById('reportModal');
+  const openReportBtn = document.getElementById('openReportBtn');
+  const closeReportBtn = document.getElementById('closeReportBtn');
+  const submitReportBtn = document.getElementById('submitReportBtn');
+
+  openReportBtn.addEventListener('click', () => {
+    if (!currentPlate) return;
+    const name = currentCarData ? (currentCarData.manufacturer + ' ' + currentCarData.model + ' (' + currentCarData.year + ')') : '';
+    document.getElementById('reportCarHeader').textContent = 'רכב: ' + formatPlate(currentPlate) + ' ' + name;
+    document.getElementById('reportText').value = '';
+    reportModal.classList.add('show');
+  });
+
+  closeReportBtn.addEventListener('click', () => {
+    reportModal.classList.remove('show');
+  });
+
+  reportModal.addEventListener('click', (e) => {
+    if (e.target === reportModal) reportModal.classList.remove('show');
+  });
+
+  submitReportBtn.addEventListener('click', () => {
+    const category = document.getElementById('reportCategory').value;
+    const userNotes = document.getElementById('reportText').value.trim();
+
+    const subject = encodeURIComponent(`דיווח על פרט חסר ברכב ${formatPlate(currentPlate)} [${category}]`);
+    
+    let body = `היי,\nנמצא פרט חסר או שגוי באפליקציה עבור הרכב הבא:\n\n`;
+    body += `מספר רכב: ${formatPlate(currentPlate)}\n`;
+    if (currentCarData) {
+      body += `יצרן ודגם: ${currentCarData.manufacturer} ${currentCarData.model} (${currentCarData.year})\n`;
+      body += `רמת גימור קיימת: ${currentCarData.trim || 'אין'}\n`;
+      body += `כוח סוס: ${currentCarData.horsepower || 'אין'}\n`;
+      body += `תאוצה 0-100 קיימת: ${currentCarData.acceleration0to100 || 'אין'}\n`;
+      body += `מרכב קיים: ${currentCarData.bodyType || 'אין'}\n`;
+    }
+    body += `\nנושא הדיווח: ${category}\n`;
+    if (userNotes) {
+      body += `הערות המשתמש:\n${userNotes}\n`;
+    }
+    body += `\nתאריך דיווח: ${new Date().toLocaleString('he-IL')}\n`;
+
+    // פותח חלון מייל למשתמש ישירות אל Klodsabag2002@gmail.com
+    window.location.href = `mailto:${REPORT_EMAIL}?subject=${subject}&body=${encodeURIComponent(body)}`;
+    reportModal.classList.remove('show');
+  });
 
   document.getElementById('searchBtn').addEventListener('click', searchCar);
 
