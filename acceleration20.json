@@ -1,5 +1,154 @@
-
 [
+  {
+    "make": "ניסאן יפן",
+    "model": "X-TRAIL HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1497,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אקס-טרייל e-Power היברידי בנזין 156 כ\"ס / משולב 204 כ\"ס)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "X-TRAIL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1497,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אקס-טרייל e-Power 156)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "X-TRAIL HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1497,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אקס טרייל היבריד 156)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "אקס טרייל",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1497,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אקס טרייל 156)"
+  },
+  {
+    "make": "Nissan",
+    "model": "X-TRAIL HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1497,
+    "seconds": 8.0,
+    "source": "נתון יצרן (Nissan X-Trail e-Power 156hp)"
+  },
+  {
+    "make": "Nissan",
+    "model": "X-TRAIL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1497,
+    "seconds": 8.0,
+    "source": "נתון יצרן (Nissan X-Trail e-Power 156hp)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "QASHQAI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1598,
+    "seconds": 11.1,
+    "source": "רישוי רכב / נתון יצרן (ניסאן קשקאי 1.6 dCi טורבו-דיזל 130)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "קשקאי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1598,
+    "seconds": 11.1,
+    "source": "רישוי רכב / נתון יצרן (ניסאן קשקאי 1.6 דיזל 130)"
+  },
+  {
+    "make": "Nissan",
+    "model": "QASHQAI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 130,
+    "cc": 1598,
+    "seconds": 11.1,
+    "source": "נתון יצרן (Nissan Qashqai 1.6 dCi 130hp)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "QASHQAI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 110,
+    "cc": 1461,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (ניסאן קשקאי 1.5 dCi דיזל 110)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "QASHQAI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1461,
+    "seconds": 11.8,
+    "source": "רישוי רכב / נתון יצרן (ניסאן קשקאי 1.5 dCi דיזל 115)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "QASHQAI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1997,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (ניסאן קשקאי דור 1 2.0 בנזין 140)"
+  },
+  {
+    "make": "ניסאן אנגליה",
+    "model": "QASHQAI+2",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1997,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (ניסאן קשקאי+2 7 מקומות 2.0 140)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "X-TRAIL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1997,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אקס-טרייל דור 1/2 2.0 140)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "X-TRAIL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 169,
+    "cc": 2488,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אקס-טרייל 2.5 בנזין 169)"
+  },
   {
     "make": "סאאב שבדיה",
     "model": "9-5",
