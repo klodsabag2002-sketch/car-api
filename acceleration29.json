@@ -300,16 +300,6 @@
     "source": "רישוי רכב / נתון יצרן (קיה אקסיד פלאג-אין PHEV 141 כ\"ס)"
   },
   {
-    "make": "קיה סלובקיה",
-    "model": "XCEED",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 1591,
-    "seconds": 7.5,
-    "source": "רישוי רכב / נתון יצרן (קיה אקסיד 1.6 T-GDI 204 כ\"ס)"
-  },
-  {
     "make": "קיה",
     "model": "Xceed",
     "yearStart": null,
@@ -371,16 +361,6 @@
   },
   {
     "make": "קיה ד. קוריאה",
-    "model": "OPTIMA PHEV",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 156,
-    "cc": 1999,
-    "seconds": 9.4,
-    "source": "רישוי רכב / נתון יצרן (קיה אופטימה פלאג-אין PHEV 156/205 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
     "model": "OPTIMA",
     "yearStart": null,
     "yearEnd": null,
@@ -388,16 +368,6 @@
     "cc": 1685,
     "seconds": 10.0,
     "source": "רישוי רכב / נתון יצרן (קיה אופטימה 1.7 CRDi דיזל 141 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "OPTIMA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 165,
-    "cc": 1999,
-    "seconds": 10.5,
-    "source": "רישוי רכב / נתון יצרן (קיה אופטימה 2.0 בנזין 165 כ\"ס)"
   },
   {
     "make": "קיה",
@@ -428,16 +398,6 @@
     "cc": 3778,
     "seconds": 7.5,
     "source": "רישוי רכב / נתון יצרן (קיה אופאריוס סאלון 3.8 V6 266 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "OPIRUS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 203,
-    "cc": 3497,
-    "seconds": 9.2,
-    "source": "רישוי רכב / נתון יצרן (קיה אופאריוס 3.5 V6 203 כ\"ס)"
   },
   {
     "make": "קיה",
@@ -540,26 +500,6 @@
     "source": "רישוי רכב / נתון יצרן (קיה מגנטיס דור 2 2.0 144 כ\"ס)"
   },
   {
-    "make": "קיה ד. קוריאה",
-    "model": "MAGENTIS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 164,
-    "cc": 1998,
-    "seconds": 9.9,
-    "source": "רישוי רכב / נתון יצרן (קיה מגנטיס דור 2 מתוח פנים 2.0 164 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "MAGENTIS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 136,
-    "cc": 1997,
-    "seconds": 11.2,
-    "source": "רישוי רכב / נתון יצרן (קיה מגנטיס דור ראשון 2.0 136 כ\"ס)"
-  },
-  {
     "make": "קיה",
     "model": "מגנטיס",
     "yearStart": null,
@@ -588,16 +528,6 @@
     "cc": 1598,
     "seconds": 12.5,
     "source": "רישוי רכב / נתון יצרן (קיה מנטור 1.6 88 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "SEPHIA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 80,
-    "cc": 1498,
-    "seconds": 13.5,
-    "source": "רישוי רכב / נתון יצרן (קיה ספיה / מנטור 1.5 80 כ\"ס)"
   },
   {
     "make": "קיה",
@@ -630,16 +560,6 @@
     "source": "נתון יצרן (Kia Mentor 1.6)"
   },
   {
-    "make": "Kia",
-    "model": "SEPHIA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 80,
-    "cc": 1498,
-    "seconds": 13.5,
-    "source": "נתון יצרן (Kia Sephia 1.5)"
-  },
-  {
     "make": "קיה ד. קוריאה",
     "model": "NIRO",
     "yearStart": null,
@@ -648,16 +568,6 @@
     "cc": 1580,
     "seconds": 11.5,
     "source": "רישוי רכב / נתון יצרן (קיה נירו היברידי 1.6 GDI 141 כ\"ס משולב)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "NIRO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 129,
-    "cc": 1580,
-    "seconds": 10.4,
-    "source": "רישוי רכב / נתון יצרן (קיה נירו דור 2 היברידי 1.6 GDI 129 כ\"ס)"
   },
   {
     "make": "קיה ד. קוריאה",
@@ -698,16 +608,6 @@
     "cc": 1580,
     "seconds": 11.5,
     "source": "נתון יצרן (Kia Niro Hybrid 141hp)"
-  },
-  {
-    "make": "Kia",
-    "model": "NIRO EV",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 7.8,
-    "source": "נתון יצרן (Kia e-Niro EV 204hp)"
   },
   {
     "make": "קיה ד. קוריאה",
@@ -771,26 +671,6 @@
   },
   {
     "make": "קיה ד. קוריאה",
-    "model": "SOUL",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 132,
-    "cc": 1591,
-    "seconds": 11.0,
-    "source": "רישוי רכב / נתון יצרן (קיה סול 1.6 בנזין 132 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "SOUL",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 128,
-    "cc": 1582,
-    "seconds": 11.2,
-    "source": "רישוי רכב / נתון יצרן (קיה סול 1.6 CRDi דיזל 128 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
     "model": "SOUL EV",
     "yearStart": null,
     "yearEnd": null,
@@ -798,16 +678,6 @@
     "cc": 0,
     "seconds": 7.9,
     "source": "רישוי רכב / נתון יצרן (קיה סול EV חשמלי מלא 204 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "SOUL EV",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 0,
-    "seconds": 11.2,
-    "source": "רישוי רכב / נתון יצרן (קיה סול EV דור 1 חשמלי 110 כ\"ס)"
   },
   {
     "make": "קיה",
@@ -870,36 +740,6 @@
     "source": "רישוי רכב / נתון יצרן (קיה סורנטו 2.2 CRDi דיזל 202 כ\"ס)"
   },
   {
-    "make": "קיה ד. קוריאה",
-    "model": "SORENTO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 281,
-    "cc": 2497,
-    "seconds": 7.4,
-    "source": "רישוי רכב / נתון יצרן (קיה סורנטו 2.5 T-GDI טורבו 281 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "SORENTO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 188,
-    "cc": 2359,
-    "seconds": 10.5,
-    "source": "רישוי רכב / נתון יצרן (קיה סורנטו דור 3 2.4 GDI 188 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "SORENTO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 200,
-    "cc": 2199,
-    "seconds": 9.4,
-    "source": "רישוי רכב / נתון יצרן (קיה סורנטו דור 3 2.2 CRDi 200 כ\"ס)"
-  },
-  {
     "make": "קיה",
     "model": "סורנטו",
     "yearStart": null,
@@ -940,16 +780,6 @@
     "source": "רישוי רכב / נתון יצרן (קיה סטוניק 1.0 T-GDI 120 כ\"ס)"
   },
   {
-    "make": "קיה ד. קוריאה",
-    "model": "STONIC",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 100,
-    "cc": 1368,
-    "seconds": 13.7,
-    "source": "רישוי רכב / נתון יצרן (קיה סטוניק 1.4 אטמוספרי 100 כ\"ס)"
-  },
-  {
     "make": "קיה",
     "model": "סטוניק",
     "yearStart": null,
@@ -978,26 +808,6 @@
     "cc": 3342,
     "seconds": 4.9,
     "source": "רישוי רכב / נתון יצרן (קיה סטינגר GT ספורט 3.3 טווין-טורבו V6 AWD 370 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "STINGER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 255,
-    "cc": 1998,
-    "seconds": 6.0,
-    "source": "רישוי רכב / נתון יצרן (קיה סטינגר 2.0 T-GDI טורבו 255 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "STINGER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 304,
-    "cc": 2497,
-    "seconds": 5.4,
-    "source": "רישוי רכב / נתון יצרן (קיה סטינגר 2.5 T-GDI 304 כ\"ס)"
   },
   {
     "make": "קיה",
@@ -1048,26 +858,6 @@
     "cc": 1482,
     "seconds": 8.6,
     "source": "רישוי רכב / נתון יצרן (קיה סיד 1.5 T-GDI 160 כ\"ס)"
-  },
-  {
-    "make": "קיה סלובקיה",
-    "model": "CEED",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 135,
-    "cc": 1591,
-    "seconds": 10.8,
-    "source": "רישוי רכב / נתון יצרן (קיה סיד דור 2 1.6 GDI 135 כ\"ס)"
-  },
-  {
-    "make": "קיה סלובקיה",
-    "model": "CEED",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 128,
-    "cc": 1582,
-    "seconds": 11.1,
-    "source": "רישוי רכב / נתון יצרן (קיה סיד דור 2 1.6 CRDi 128 כ\"ס)"
   },
   {
     "make": "קיה",
@@ -1154,16 +944,6 @@
     "model": "SPORTAGE",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 160,
-    "cc": 1598,
-    "seconds": 9.4,
-    "source": "רישוי רכב / נתון יצרן (קיה ספורטאז' דור 5 מתוח פנים 1.6 T-GDI 160 כ\"ס)"
-  },
-  {
-    "make": "קיה סלובקיה",
-    "model": "SPORTAGE",
-    "yearStart": null,
-    "yearEnd": null,
     "hp": 230,
     "cc": 1598,
     "seconds": 8.0,
@@ -1188,36 +968,6 @@
     "cc": 1591,
     "seconds": 12.1,
     "source": "רישוי רכב / נתון יצרן (קיה ספורטאז' דור 4 1.6 בנזין 132 כ\"ס)"
-  },
-  {
-    "make": "קיה סלובקיה",
-    "model": "SPORTAGE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 155,
-    "cc": 1999,
-    "seconds": 11.1,
-    "source": "רישוי רכב / נתון יצרן (קיה ספורטאז' 2.0 בנזין 155 כ\"ס)"
-  },
-  {
-    "make": "קיה סלובקיה",
-    "model": "SPORTAGE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 136,
-    "cc": 1598,
-    "seconds": 11.4,
-    "source": "רישוי רכב / נתון יצרן (קיה ספורטאז' 1.6 CRDi דיזל 136 כ\"ס)"
-  },
-  {
-    "make": "קיה סלובקיה",
-    "model": "SPORTAGE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 184,
-    "cc": 1995,
-    "seconds": 9.5,
-    "source": "רישוי רכב / נתון יצרן (קיה ספורטאז' 2.0 CRDi דיזל 184 כ\"ס)"
   },
   {
     "make": "קיה",
@@ -1260,36 +1010,6 @@
     "source": "רישוי רכב / נתון יצרן (קיה סראטו 1.6 122 כ\"ס)"
   },
   {
-    "make": "קיה ד. קוריאה",
-    "model": "CERATO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 105,
-    "cc": 1599,
-    "seconds": 12.0,
-    "source": "רישוי רכב / נתון יצרן (קיה סראטו דור 1 1.6 105 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "CERATO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 130,
-    "cc": 1591,
-    "seconds": 10.2,
-    "source": "רישוי רכב / נתון יצרן (קיה סראטו דור 3 1.6 130 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "CERATO KOUP",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 156,
-    "cc": 1998,
-    "seconds": 9.3,
-    "source": "רישוי רכב / נתון יצרן (קיה סראטו קופ 2.0 156 כ\"ס)"
-  },
-  {
     "make": "קיה",
     "model": "סראטו",
     "yearStart": null,
@@ -1324,30 +1044,10 @@
     "model": "FORTE",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 130,
-    "cc": 1591,
-    "seconds": 11.6,
-    "source": "רישוי רכב / נתון יצרן (קיה פורטה דור 2 1.6 GDI 130 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "FORTE",
-    "yearStart": null,
-    "yearEnd": null,
     "hp": 136,
     "cc": 1598,
     "seconds": 10.4,
     "source": "רישוי רכב / נתון יצרן (קיה פורטה 1.6 CRDi דיזל 136 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "FORTE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 128,
-    "cc": 1582,
-    "seconds": 11.0,
-    "source": "רישוי רכב / נתון יצרן (קיה פורטה דור 2 1.6 CRDi דיזל 128 כ\"ס)"
   },
   {
     "make": "קיה",
@@ -1384,40 +1084,10 @@
     "model": "PICANTO",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 84,
-    "cc": 1248,
-    "seconds": 13.7,
-    "source": "רישוי רכב / נתון יצרן (קיה פיקנטו דור 2 1.25 84 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "PICANTO",
-    "yearStart": null,
-    "yearEnd": null,
     "hp": 67,
     "cc": 998,
     "seconds": 14.6,
     "source": "רישוי רכב / נתון יצרן (קיה פיקנטו 1.0 67 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "PICANTO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 69,
-    "cc": 998,
-    "seconds": 14.4,
-    "source": "רישוי רכב / נתון יצרן (קיה פיקנטו 1.0 69 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "PICANTO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 100,
-    "cc": 998,
-    "seconds": 10.3,
-    "source": "רישוי רכב / נתון יצרן (קיה פיקנטו GT-Line טורבו 1.0 T-GDI 100 כ\"ס)"
   },
   {
     "make": "קיה",
@@ -1448,16 +1118,6 @@
     "cc": 2665,
     "seconds": 21.0,
     "source": "רישוי רכב / נתון יצרן (קיה פרג'יו ואן מסחרי 2.7 דיזל 83 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "PREGIO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 94,
-    "cc": 2476,
-    "seconds": 19.5,
-    "source": "רישוי רכב / נתון יצרן (קיה פרג'יו 2.5 TCI דיזל 94 כ\"ס)"
   },
   {
     "make": "קיה",
@@ -1520,26 +1180,6 @@
     "source": "רישוי רכב / נתון יצרן (קיה קארנס 7 מקומות 2.0 GDI 165 כ\"ס)"
   },
   {
-    "make": "קיה ד. קוריאה",
-    "model": "CARENS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 141,
-    "cc": 1685,
-    "seconds": 10.4,
-    "source": "רישוי רכב / נתון יצרן (קיה קארנס 1.7 CRDi דיזל 141 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "CARENS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 145,
-    "cc": 1998,
-    "seconds": 11.0,
-    "source": "רישוי רכב / נתון יצרן (קיה קארנס דור 2 2.0 145 כ\"ס)"
-  },
-  {
     "make": "קיה",
     "model": "קארנס",
     "yearStart": null,
@@ -1570,16 +1210,6 @@
     "source": "רישוי רכב / נתון יצרן (קיה קדנזה סאלון 3.3 V6 290 כ\"ס)"
   },
   {
-    "make": "קיה ד. קוריאה",
-    "model": "CADENZA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 290,
-    "cc": 3470,
-    "seconds": 7.2,
-    "source": "רישוי רכב / נתון יצרן (קיה קדנזה 3.5 V6 290 כ\"ס)"
-  },
-  {
     "make": "קיה",
     "model": "קדנזה",
     "yearStart": null,
@@ -1608,16 +1238,6 @@
     "cc": 1998,
     "seconds": 10.9,
     "source": "רישוי רכב / נתון יצרן (קיה קלארוס 2.0 133 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "CLARUS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 116,
-    "cc": 1793,
-    "seconds": 11.5,
-    "source": "רישוי רכב / נתון יצרן (קיה קלארוס 1.8 116 כ\"ס)"
   },
   {
     "make": "קיה",
@@ -1670,26 +1290,6 @@
     "source": "רישוי רכב / נתון יצרן (קיה קרניבל היברידי 1.6 T-GDI 245 כ\"ס)"
   },
   {
-    "make": "קיה ד. קוריאה",
-    "model": "CARNIVAL",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 276,
-    "cc": 3342,
-    "seconds": 8.6,
-    "source": "רישוי רכב / נתון יצרן (קיה קרניבל דור 3 3.3 V6 276 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "CARNIVAL",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 200,
-    "cc": 2199,
-    "seconds": 10.3,
-    "source": "רישוי רכב / נתון יצרן (קיה קרניבל דור 3 2.2 CRDi 200 כ\"ס)"
-  },
-  {
     "make": "קיה",
     "model": "קרניבל",
     "yearStart": null,
@@ -1740,36 +1340,6 @@
     "source": "רישוי רכב / נתון יצרן (קיה ריו 1.4 אטמוספרי 100 כ\"ס)"
   },
   {
-    "make": "קיה ד. קוריאה",
-    "model": "RIO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 109,
-    "cc": 1396,
-    "seconds": 12.0,
-    "source": "רישוי רכב / נתון יצרן (קיה ריו דור 3 1.4 109 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "RIO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 85,
-    "cc": 1248,
-    "seconds": 13.1,
-    "source": "רישוי רכב / נתון יצרן (קיה ריו דור 3 1.25 85 כ\"ס)"
-  },
-  {
-    "make": "קיה ד. קוריאה",
-    "model": "RIO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 112,
-    "cc": 1399,
-    "seconds": 12.3,
-    "source": "רישוי רכב / נתון יצרן (קיה ריו דור 2 1.4 112 כ\"ס)"
-  },
-  {
     "make": "קיה",
     "model": "ריו",
     "yearStart": null,
@@ -1800,16 +1370,6 @@
     "source": "רישוי רכב / נתון יצרן (קיה שומה 1.6 110 כ\"ס)"
   },
   {
-    "make": "קיה ד. קוריאה",
-    "model": "SHUMA",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 88,
-    "cc": 1498,
-    "seconds": 13.0,
-    "source": "רישוי רכב / נתון יצרן (קיה שומה 1.5 88 כ\"ס)"
-  },
-  {
     "make": "קיה",
     "model": "שומה",
     "yearStart": null,
@@ -1828,5 +1388,365 @@
     "cc": 1598,
     "seconds": 11.5,
     "source": "נתון יצרן (Kia Shuma 1.6)"
+  },
+  {
+    "make": "קיי גי מוביליט",
+    "model": "TORRES",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1497,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (KGM טורס 1.5 T-GDI טורבו בנזין 163 כ\"ס FWD)"
+  },
+  {
+    "make": "קיי גי מוביליט",
+    "model": "TORRES",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 207,
+    "cc": 0,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (KGM טורס EVX חשמלי מלא 207 כ\"ס)"
+  },
+  {
+    "make": "קיי גי מוביליט",
+    "model": "TORRES EVX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 207,
+    "cc": 0,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (KGM טורס EVX חשמלי 207 כ\"ס)"
+  },
+  {
+    "make": "קיי ג'י מוביליטי",
+    "model": "TORRES",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1497,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (KGM טורס 163 כ\"ס)"
+  },
+  {
+    "make": "קיי ג'י מוביליטי",
+    "model": "טורס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1497,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (KGM טורס 163 כ\"ס)"
+  },
+  {
+    "make": "סאנגיונג",
+    "model": "טורס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1497,
+    "seconds": 10.9,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג טורס 163 כ\"ס)"
+  },
+  {
+    "make": "KGM",
+    "model": "TORRES",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1497,
+    "seconds": 10.9,
+    "source": "נתון יצרן (KGM Torres 1.5 T-GDI 163hp)"
+  },
+  {
+    "make": "KGM",
+    "model": "TORRES EVX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 207,
+    "cc": 0,
+    "seconds": 8.1,
+    "source": "נתון יצרן (KGM Torres EVX 207hp)"
+  },
+  {
+    "make": "קיי גי מוביליט",
+    "model": "TIVOLI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1497,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (KGM טיבולי 1.5 T-GDI טורבו בנזין 163 כ\"ס)"
+  },
+  {
+    "make": "קיי גי מוביליט",
+    "model": "TIVOLI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 128,
+    "cc": 1597,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (קיי גי טיבולי 1.6 בנזין 128 כ\"ס)"
+  },
+  {
+    "make": "קיי גי מוביליט",
+    "model": "TIVOLI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1597,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (קיי גי טיבולי 1.6 e-XDi דיזל 115 כ\"ס)"
+  },
+  {
+    "make": "קיי ג'י מוביליטי",
+    "model": "TIVOLI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1497,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (KGM טיבולי 163 כ\"ס)"
+  },
+  {
+    "make": "קיי ג'י מוביליטי",
+    "model": "טיבולי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1497,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (KGM טיבולי 163 כ\"ס)"
+  },
+  {
+    "make": "סאנגיונג",
+    "model": "טיבולי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1497,
+    "seconds": 9.8,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג טיבולי 163 כ\"ס)"
+  },
+  {
+    "make": "סאנגיונג",
+    "model": "טיבולי",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 128,
+    "cc": 1597,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג טיבולי 128 כ\"ס)"
+  },
+  {
+    "make": "KGM",
+    "model": "TIVOLI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1497,
+    "seconds": 9.8,
+    "source": "נתון יצרן (KGM Tivoli 1.5T 163hp)"
+  },
+  {
+    "make": "SsangYong",
+    "model": "TIVOLI",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1497,
+    "seconds": 9.8,
+    "source": "נתון יצרן (SsangYong Tivoli 1.5T 163hp)"
+  },
+  {
+    "make": "קיי גי מוביליט",
+    "model": "MUSSO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 2157,
+    "seconds": 10.0,
+    "source": "רישוי רכב / נתון יצרן (KGM מוסו טנדר 4X4 2.2 e-XDi טורבו-דיזל 202 כ\"ס)"
+  },
+  {
+    "make": "קיי גי מוביליט",
+    "model": "MUSSO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 2157,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (KGM מוסו 2.2 דיזל 181 כ\"ס)"
+  },
+  {
+    "make": "קיי ג'י מוביליטי",
+    "model": "MUSSO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 2157,
+    "seconds": 10.0,
+    "source": "רישוי רכב / נתון יצרן (KGM מוסו 202 כ\"ס)"
+  },
+  {
+    "make": "קיי ג'י מוביליטי",
+    "model": "מוסו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 2157,
+    "seconds": 10.0,
+    "source": "רישוי רכב / נתון יצרן (KGM מוסו 202 כ\"ס)"
+  },
+  {
+    "make": "סאנגיונג",
+    "model": "מוסו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 2157,
+    "seconds": 10.0,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג מוסו 202 כ\"ס)"
+  },
+  {
+    "make": "סאנגיונג",
+    "model": "מוסו",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 120,
+    "cc": 2874,
+    "seconds": 16.5,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג מוסו קלאסי 2.9 TD דיזל מרצדס 120 כ\"ס)"
+  },
+  {
+    "make": "KGM",
+    "model": "MUSSO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 2157,
+    "seconds": 10.0,
+    "source": "נתון יצרן (KGM Musso 2.2 Diesel 202hp)"
+  },
+  {
+    "make": "SsangYong",
+    "model": "MUSSO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 2157,
+    "seconds": 10.0,
+    "source": "נתון יצרן (SsangYong Musso 2.2 Diesel 202hp)"
+  },
+  {
+    "make": "קיי גי מוביליט",
+    "model": "REXTON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 2157,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (KGM רקסטון 7 מקומות 4X4 2.2 e-XDi דיזל 202 כ\"ס)"
+  },
+  {
+    "make": "קיי גי מוביליט",
+    "model": "REXTON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 2157,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג רקסטון דור 2 2.2 דיזל 181 כ\"ס)"
+  },
+  {
+    "make": "קיי גי מוביליט",
+    "model": "REXTON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 178,
+    "cc": 2157,
+    "seconds": 12.0,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג רקסטון 2.2 דיזל 178 כ\"ס)"
+  },
+  {
+    "make": "קיי גי מוביליט",
+    "model": "REXTON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 1998,
+    "seconds": 13.4,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג רקסטון 2.0 e-XDi דיזל 155 כ\"ס)"
+  },
+  {
+    "make": "קיי גי מוביליט",
+    "model": "REXTON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 165,
+    "cc": 2696,
+    "seconds": 13.8,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג רקסטון דור 1 2.7 XDi דיזל מרצדס 165 כ\"ס)"
+  },
+  {
+    "make": "קיי ג'י מוביליטי",
+    "model": "REXTON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 2157,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (KGM רקסטון 202 כ\"ס)"
+  },
+  {
+    "make": "קיי ג'י מוביליטי",
+    "model": "רקסטון",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 2157,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (KGM רקסטון 202 כ\"ס)"
+  },
+  {
+    "make": "סאנגיונג",
+    "model": "רקסטון",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 2157,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג רקסטון 202 כ\"ס)"
+  },
+  {
+    "make": "סאנגיונג",
+    "model": "רקסטון",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 181,
+    "cc": 2157,
+    "seconds": 11.9,
+    "source": "רישוי רכב / נתון יצרן (סאנגיונג רקסטון 181 כ\"ס)"
+  },
+  {
+    "make": "KGM",
+    "model": "REXTON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 2157,
+    "seconds": 10.7,
+    "source": "נתון יצרן (KGM Rexton 2.2 Diesel 202hp)"
+  },
+  {
+    "make": "SsangYong",
+    "model": "REXTON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 202,
+    "cc": 2157,
+    "seconds": 10.7,
+    "source": "נתון יצרן (SsangYong Rexton 2.2 Diesel 202hp)"
   }
 ]
