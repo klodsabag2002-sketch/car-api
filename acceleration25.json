@@ -1,5 +1,305 @@
 [
   {
+    "make": "פורד גרמניה",
+    "model": "FOCUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1596,
+    "seconds": 11.7,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס דור 3 1.6 Ti-VCT אוטומט 125 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FOCUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1596,
+    "seconds": 12.3,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס דור 3 1.6 Ti-VCT 105 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FOCUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1596,
+    "seconds": 12.8,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס דור 2 1.6 אוטומט 100 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FOCUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 115,
+    "cc": 1596,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס דור 2 1.6 Ti-VCT 115 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FOCUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 145,
+    "cc": 1999,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס דור 2 2.0 145 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FOCUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 170,
+    "cc": 1999,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס דור 3 2.0 GDI 170 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FOCUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1596,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס דור 3 1.6 EcoBoost טורבו 180 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FOCUS ST",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 1999,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס ST דור 3 2.0 EcoBoost 250 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FOCUS ST",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 225,
+    "cc": 2521,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס ST דור 2 2.5 טורבו 225 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FOCUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 999,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס דור 4 1.0 EcoBoost mHEV 155 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FOCUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 999,
+    "seconds": 10.0,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס 1.0 EcoBoost 125 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FOCUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1496,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס 1.5 EcoBoost 150 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FOCUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 182,
+    "cc": 1496,
+    "seconds": 8.3,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס 1.5 EcoBoost 182 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FOCUS ST",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 280,
+    "cc": 2261,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס ST ספורט 2.3 EcoBoost 280 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FOCUS RS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 350,
+    "cc": 2261,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס RS AWD 350 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "FOCUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1596,
+    "seconds": 11.7,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס 1.6 125 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "פוקוס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1596,
+    "seconds": 11.7,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס 1.6 125 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "פוקוס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1596,
+    "seconds": 12.8,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס 100 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "פוקוס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 999,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (פורד פוקוס 155 כ\"ס)"
+  },
+  {
+    "make": "Ford",
+    "model": "FOCUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1596,
+    "seconds": 11.7,
+    "source": "נתון יצרן (Ford Focus 1.6 Ti-VCT 125hp)"
+  },
+  {
+    "make": "Ford",
+    "model": "FOCUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 155,
+    "cc": 999,
+    "seconds": 8.4,
+    "source": "נתון יצרן (Ford Focus 1.0 mHEV)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "C-MAX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1596,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (פורד C-Max מיניוואן 1.6 125 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "C-MAX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1596,
+    "seconds": 9.4,
+    "source": "רישוי רכב / נתון יצרן (פורד C-Max 1.6 EcoBoost 150 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "GRAND C-MAX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1596,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (פורד גרנד C-Max 7 מקומות 1.6 EcoBoost 150 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "C-מקס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1596,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (פורד C-Max 125 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "גרנד C-מקס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1596,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (פורד גרנד C-Max 150 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "B-MAX",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1596,
+    "seconds": 12.1,
+    "source": "רישוי רכב / נתון יצרן (פורד B-Max מיקרו-ואן דלתות הזזה 1.6 105 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "B-מקס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1596,
+    "seconds": 12.1,
+    "source": "רישוי רכב / נתון יצרן (פורד B-Max 105 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FUSION",
+    "yearStart": null,
+    "yearEnd": 2012,
+    "hp": 100,
+    "cc": 1596,
+    "seconds": 12.5,
+    "source": "רישוי רכב / נתון יצרן (פורד פיוז'ן אירופאית 1.6 100 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
+    "model": "FUSION",
+    "yearStart": null,
+    "yearEnd": 2012,
+    "hp": 80,
+    "cc": 1388,
+    "seconds": 14.0,
+    "source": "רישוי רכב / נתון יצרן (פורד פיוז'ן אירופאית 1.4 80 כ\"ס)"
+  },
+  {
     "make": "פולקסווגן גרמן",
     "model": "GOLF",
     "yearStart": null,
@@ -1251,86 +1551,6 @@
   },
   {
     "make": "פורד גרמניה",
-    "model": "FOCUS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 155,
-    "cc": 999,
-    "seconds": 8.4,
-    "source": "רישוי רכב / נתון יצרן (פורד פוקוס דור 4 1.0 EcoBoost mHEV 155 כ\"ס)"
-  },
-  {
-    "make": "פורד גרמניה",
-    "model": "FOCUS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 125,
-    "cc": 999,
-    "seconds": 10.0,
-    "source": "רישוי רכב / נתון יצרן (פורד פוקוס 1.0 EcoBoost 125 כ\"ס)"
-  },
-  {
-    "make": "פורד גרמניה",
-    "model": "FOCUS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 150,
-    "cc": 1496,
-    "seconds": 8.8,
-    "source": "רישוי רכב / נתון יצרן (פורד פוקוס 1.5 EcoBoost 150 כ\"ס)"
-  },
-  {
-    "make": "פורד גרמניה",
-    "model": "FOCUS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 182,
-    "cc": 1496,
-    "seconds": 8.3,
-    "source": "רישוי רכב / נתון יצרן (פורד פוקוס 1.5 EcoBoost 182 כ\"ס)"
-  },
-  {
-    "make": "פורד גרמניה",
-    "model": "FOCUS ST",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 280,
-    "cc": 2261,
-    "seconds": 5.7,
-    "source": "רישוי רכב / נתון יצרן (פורד פוקוס ST ספורט 2.3 EcoBoost 280 כ\"ס)"
-  },
-  {
-    "make": "פורד גרמניה",
-    "model": "FOCUS RS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 350,
-    "cc": 2261,
-    "seconds": 4.7,
-    "source": "רישוי רכב / נתון יצרן (פורד פוקוס RS AWD 350 כ\"ס)"
-  },
-  {
-    "make": "פורד",
-    "model": "פוקוס",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 155,
-    "cc": 999,
-    "seconds": 8.4,
-    "source": "רישוי רכב / נתון יצרן (פורד פוקוס 155 כ\"ס)"
-  },
-  {
-    "make": "Ford",
-    "model": "FOCUS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 155,
-    "cc": 999,
-    "seconds": 8.4,
-    "source": "נתון יצרן (Ford Focus 1.0 mHEV)"
-  },
-  {
-    "make": "פורד גרמניה",
     "model": "FIESTA",
     "yearStart": null,
     "yearEnd": null,
@@ -1790,16 +2010,6 @@
     "source": "רישוי רכב / נתון יצרן (פורד ריינג'ר ראפטור דור חדש 3.0 V6 טווין-טורבו 292 כ\"ס)"
   },
   {
-    "make": "פורד ד אפריקה",
-    "model": "RANGER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 170,
-    "cc": 1996,
-    "seconds": 11.5,
-    "source": "רישוי רכב / נתון יצרן (פורד ריינג'ר 2.0 דיזל חד-טורבו 170 כ\"ס)"
-  },
-  {
     "make": "פורד",
     "model": "ריינג׳ר",
     "yearStart": null,
@@ -1828,16 +2038,6 @@
     "cc": 3497,
     "seconds": 5.9,
     "source": "רישוי רכב / נתון יצרן (פורד F-150 פול סייז 3.5 V6 EcoBoost 400 כ\"ס)"
-  },
-  {
-    "make": "פורד ארהב\"",
-    "model": "F-150",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 430,
-    "cc": 3497,
-    "seconds": 5.4,
-    "source": "רישוי רכב / נתון יצרן (פורד F-150 PowerBoost היברידי 430 כ\"ס)"
   },
   {
     "make": "פורד ארהב\"",
@@ -1900,16 +2100,6 @@
     "source": "רישוי רכב / נתון יצרן (פורד F-250 475 כ\"ס)"
   },
   {
-    "make": "Ford",
-    "model": "F-250",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 475,
-    "cc": 6650,
-    "seconds": 7.5,
-    "source": "נתון יצרן (Ford F-250 Super Duty)"
-  },
-  {
     "make": "פורד ארהב\"",
     "model": "F-350",
     "yearStart": null,
@@ -1928,16 +2118,6 @@
     "cc": 6650,
     "seconds": 7.9,
     "source": "רישוי רכב / נתון יצרן (פורד F-350 475 כ\"ס)"
-  },
-  {
-    "make": "Ford",
-    "model": "F-350",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 475,
-    "cc": 6650,
-    "seconds": 7.9,
-    "source": "נתון יצרן (Ford F-350 Super Duty)"
   },
   {
     "make": "פורד מקסיקו",
@@ -1991,16 +2171,6 @@
   },
   {
     "make": "פורד בלגיה",
-    "model": "MONDE0",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 161,
-    "cc": 2261,
-    "seconds": 10.4,
-    "source": "רישוי רכב / נתון יצרן (פורד מונדיאו ברישוי 2.3 161 כ\"ס)"
-  },
-  {
-    "make": "פורד בלגיה",
     "model": "MONDEO",
     "yearStart": null,
     "yearEnd": null,
@@ -2018,16 +2188,6 @@
     "cc": 1999,
     "seconds": 7.5,
     "source": "רישוי רכב / נתון יצרן (פורד מונדיאו 2.0 EcoBoost טורבו 240 כ\"ס)"
-  },
-  {
-    "make": "פורד בלגיה",
-    "model": "MONDEO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 187,
-    "cc": 1999,
-    "seconds": 9.2,
-    "source": "רישוי רכב / נתון יצרן (פורד מונדיאו הייבריד 2.0 187 כ\"ס)"
   },
   {
     "make": "פורד",
@@ -2070,26 +2230,6 @@
     "source": "רישוי רכב / נתון יצרן (פורד S-Max 2.0 240 כ\"ס)"
   },
   {
-    "make": "פורד בלגיה",
-    "model": "S MAX",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 203,
-    "cc": 1999,
-    "seconds": 8.5,
-    "source": "רישוי רכב / נתון יצרן (פורד S-Max 2.0 EcoBoost 203 כ\"ס)"
-  },
-  {
-    "make": "פורד בלגיה",
-    "model": "S MAX",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 161,
-    "cc": 2261,
-    "seconds": 11.2,
-    "source": "רישוי רכב / נתון יצרן (פורד S-Max 2.3 161 כ\"ס)"
-  },
-  {
     "make": "פורד",
     "model": "S-מקס",
     "yearStart": null,
@@ -2098,16 +2238,6 @@
     "cc": 1999,
     "seconds": 8.2,
     "source": "רישוי רכב / נתון יצרן (פורד S-מקס 240 כ\"ס)"
-  },
-  {
-    "make": "Ford",
-    "model": "S MAX",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 240,
-    "cc": 1999,
-    "seconds": 8.2,
-    "source": "נתון יצרן (Ford S-Max 2.0 EcoBoost)"
   },
   {
     "make": "פורד בלגיה",
@@ -2120,16 +2250,6 @@
     "source": "רישוי רכב / נתון יצרן (פורד גלאקסי 7 מקומות 2.0 EcoBoost טורבו 202 כ\"ס)"
   },
   {
-    "make": "פורד בלגיה",
-    "model": "GALAXY",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 161,
-    "cc": 2261,
-    "seconds": 11.6,
-    "source": "רישוי רכב / נתון יצרן (פורד גלאקסי 2.3 161 כ\"ס)"
-  },
-  {
     "make": "פורד",
     "model": "גלאקסי",
     "yearStart": null,
@@ -2138,16 +2258,6 @@
     "cc": 1999,
     "seconds": 8.8,
     "source": "רישוי רכב / נתון יצרן (פורד גלאקסי 202 כ\"ס)"
-  },
-  {
-    "make": "Ford",
-    "model": "GALAXY",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 202,
-    "cc": 1999,
-    "seconds": 8.8,
-    "source": "נתון יצרן (Ford Galaxy 2.0 EcoBoost)"
   },
   {
     "make": "פורד ארהב\"",
@@ -2160,26 +2270,6 @@
     "source": "רישוי רכב / נתון יצרן (פורד אסקייפ 1.5 EcoBoost 181 כ\"ס)"
   },
   {
-    "make": "פורד ארהב\"",
-    "model": "ESCAPE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 250,
-    "cc": 1999,
-    "seconds": 6.9,
-    "source": "רישוי רכב / נתון יצרן (פורד אסקייפ 2.0 EcoBoost AWD 250 כ\"ס)"
-  },
-  {
-    "make": "פורד ארהב\"",
-    "model": "ESCAPE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 200,
-    "cc": 2488,
-    "seconds": 8.7,
-    "source": "רישוי רכב / נתון יצרן (פורד אסקייפ היברידי 2.5 200 כ\"ס)"
-  },
-  {
     "make": "פורד",
     "model": "אסקייפ",
     "yearStart": null,
@@ -2190,16 +2280,6 @@
     "source": "רישוי רכב / נתון יצרן (פורד אסקייפ 181 כ\"ס)"
   },
   {
-    "make": "Ford",
-    "model": "ESCAPE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 181,
-    "cc": 1497,
-    "seconds": 8.7,
-    "source": "נתון יצרן (Ford Escape 1.5T)"
-  },
-  {
     "make": "פורד ארהב\"",
     "model": "EXPEDITION",
     "yearStart": null,
@@ -2207,17 +2287,7 @@
     "hp": 380,
     "cc": 3497,
     "seconds": 6.7,
-    "source": "רישוי רכב / נתון יצרן (פורד אקספדישן SUV ענק 3.5 V6 EcoBoost 380 כ\"ס)"
-  },
-  {
-    "make": "פורד ארהב\"",
-    "model": "EXPEDITION",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 400,
-    "cc": 3497,
-    "seconds": 6.4,
-    "source": "רישוי רכב / נתון יצרן (פורד אקספדישן 3.5 V6 400 כ\"ס)"
+    "source": "רישוי רכב / נתון יצרן (פורד אקספדישן 3.5 V6 EcoBoost 380 כ\"ס)"
   },
   {
     "make": "פורד",
@@ -2230,16 +2300,6 @@
     "source": "רישוי רכב / נתון יצרן (פורד אקספדישן 380 כ\"ס)"
   },
   {
-    "make": "Ford",
-    "model": "EXPEDITION",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 380,
-    "cc": 3497,
-    "seconds": 6.7,
-    "source": "נתון יצרן (Ford Expedition 3.5 EcoBoost)"
-  },
-  {
     "make": "פורד תורכיה",
     "model": "TOURNEO CONNECT",
     "yearStart": null,
@@ -2248,26 +2308,6 @@
     "cc": 1753,
     "seconds": 15.2,
     "source": "רישוי רכב / נתון יצרן (פורד טורנאו קונקט 1.8 TDCi דיזל 90 כ\"ס)"
-  },
-  {
-    "make": "פורד תורכיה",
-    "model": "TOURNEO CONNECT",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 1753,
-    "seconds": 12.5,
-    "source": "רישוי רכב / נתון יצרן (פורד טורנאו קונקט 1.8 TDCi 110 כ\"ס)"
-  },
-  {
-    "make": "פורד תורכיה",
-    "model": "TOURNEO CONNECT",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 120,
-    "cc": 1499,
-    "seconds": 12.0,
-    "source": "רישוי רכב / נתון יצרן (פורד טורנאו קונקט דור 2 1.5 TDCi 120 כ\"ס)"
   },
   {
     "make": "פורד",
@@ -2280,16 +2320,6 @@
     "source": "רישוי רכב / נתון יצרן (פורד טורנאו קונקט 90 כ\"ס)"
   },
   {
-    "make": "Ford",
-    "model": "TOURNEO CONNECT",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 90,
-    "cc": 1753,
-    "seconds": 15.2,
-    "source": "נתון יצרן (Ford Tourneo Connect)"
-  },
-  {
     "make": "פורד תורכיה",
     "model": "CUSTOM",
     "yearStart": null,
@@ -2298,36 +2328,6 @@
     "cc": 1995,
     "seconds": 13.5,
     "source": "רישוי רכב / נתון יצרן (פורד טרנזיט / טורנאו קוסטום 2.0 EcoBlue דיזל 130 כ\"ס)"
-  },
-  {
-    "make": "פורד תורכיה",
-    "model": "CUSTOM",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 170,
-    "cc": 1995,
-    "seconds": 11.2,
-    "source": "רישוי רכב / נתון יצרן (פורד קוסטום 2.0 EcoBlue 170 כ\"ס)"
-  },
-  {
-    "make": "פורד תורכיה",
-    "model": "TOURNEO CUSTOM",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 130,
-    "cc": 1995,
-    "seconds": 13.5,
-    "source": "רישוי רכב / נתון יצרן (פורד טורנאו קאסטום 2.0 130 כ\"ס)"
-  },
-  {
-    "make": "פורד תורכיה",
-    "model": "TRANSIT CUSTOM",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 130,
-    "cc": 1995,
-    "seconds": 13.5,
-    "source": "רישוי רכב / נתון יצרן (פורד טרנזיט קוסטום 2.0 130 כ\"ס)"
   },
   {
     "make": "פורד",
@@ -2350,26 +2350,6 @@
     "source": "רישוי רכב / נתון יצרן (פורד טרנזיט קוסטום 130 כ\"ס)"
   },
   {
-    "make": "Ford",
-    "model": "CUSTOM",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 130,
-    "cc": 1995,
-    "seconds": 13.5,
-    "source": "נתון יצרן (Ford Transit/Tourneo Custom)"
-  },
-  {
-    "make": "פורד בלגיה",
-    "model": "TRANSIT 330 KO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 125,
-    "cc": 2402,
-    "seconds": 17.5,
-    "source": "רישוי רכב / נתון יצרן (פורד טרנזיט מסחרית 2.4 TDCi דיזל 125 כ\"ס)"
-  },
-  {
     "make": "פורד תורכיה",
     "model": "TRANSIT",
     "yearStart": null,
@@ -2380,44 +2360,14 @@
     "source": "רישוי רכב / נתון יצרן (פורד טרנזיט 2.0 EcoBlue דיזל 170 כ\"ס)"
   },
   {
-    "make": "פורד תורכיה",
-    "model": "TRANSIT",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 130,
-    "cc": 1995,
-    "seconds": 14.8,
-    "source": "רישוי רכב / נתון יצרן (פורד טרנזיט 2.0 EcoBlue 130 כ\"ס)"
-  },
-  {
-    "make": "פורד תורכיה",
-    "model": "E-TRANSIT",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 269,
-    "cc": 0,
-    "seconds": 9.5,
-    "source": "רישוי רכב / נתון יצרן (פורד אי-טרנזיט חשמלי מלא 269 כ\"ס)"
-  },
-  {
     "make": "פורד",
     "model": "טרנזיט",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 125,
-    "cc": 2402,
-    "seconds": 17.5,
-    "source": "רישוי רכב / נתון יצרן (פורד טרנזיט 125 כ\"ס)"
-  },
-  {
-    "make": "Ford",
-    "model": "TRANSIT",
     "yearStart": null,
     "yearEnd": null,
     "hp": 170,
     "cc": 1995,
     "seconds": 13.2,
-    "source": "נתון יצרן (Ford Transit 2.0 EcoBlue)"
+    "source": "רישוי רכב / נתון יצרן (פורד טרנזיט 170 כ\"ס)"
   },
   {
     "make": "פורד ארהב\"",
@@ -2430,16 +2380,6 @@
     "source": "רישוי רכב / נתון יצרן (פורד אקונוליין E-150 ואן 4.6 V8 225 כ\"ס)"
   },
   {
-    "make": "פורד ארהב\"",
-    "model": "ECONOLINE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 255,
-    "cc": 5408,
-    "seconds": 12.5,
-    "source": "רישוי רכב / נתון יצרן (פורד אקונוליין E-350 ואן 5.4 V8 255 כ\"ס)"
-  },
-  {
     "make": "פורד",
     "model": "אקונוליין",
     "yearStart": null,
@@ -2448,16 +2388,6 @@
     "cc": 4601,
     "seconds": 13.8,
     "source": "רישוי רכב / נתון יצרן (פורד אקונוליין 225 כ\"ס)"
-  },
-  {
-    "make": "Ford",
-    "model": "ECONOLINE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 225,
-    "cc": 4601,
-    "seconds": 13.8,
-    "source": "נתון יצרן (Ford Econoline V8)"
   },
   {
     "make": "פורד ארהב\"",
@@ -2470,16 +2400,6 @@
     "source": "רישוי רכב / נתון יצרן (פורד טאורוס סדאן 3.5 V6 288 כ\"ס)"
   },
   {
-    "make": "פורד ארהב\"",
-    "model": "TAURUS SHO",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 365,
-    "cc": 3496,
-    "seconds": 5.4,
-    "source": "רישוי רכב / נתון יצרן (פורד טאורוס SHO ביצועים 3.5 V6 טווין-טורבו AWD 365 כ\"ס)"
-  },
-  {
     "make": "פורד",
     "model": "טאורוס",
     "yearStart": null,
@@ -2488,16 +2408,6 @@
     "cc": 3496,
     "seconds": 7.3,
     "source": "רישוי רכב / נתון יצרן (פורד טאורוס 288 כ\"ס)"
-  },
-  {
-    "make": "Ford",
-    "model": "TAURUS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 288,
-    "cc": 3496,
-    "seconds": 7.3,
-    "source": "נתון יצרן (Ford Taurus 3.5 V6)"
   },
   {
     "make": "פורד גרמניה",
@@ -2510,26 +2420,6 @@
     "source": "רישוי רכב / נתון יצרן (פורד אסקורט 1.6 90 כ\"ס)"
   },
   {
-    "make": "פורד גרמניה",
-    "model": "ESCORT",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 75,
-    "cc": 1391,
-    "seconds": 14.4,
-    "source": "רישוי רכב / נתון יצרן (פורד אסקורט 1.4 75 כ\"ס)"
-  },
-  {
-    "make": "פורד גרמניה",
-    "model": "ESCORT RS COSWORTH",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 227,
-    "cc": 1993,
-    "seconds": 5.8,
-    "source": "רישוי רכב / נתון יצרן (פורד אסקורט RS קוזוורת' 2.0 טורבו AWD 227 כ\"ס)"
-  },
-  {
     "make": "פורד",
     "model": "אסקורט",
     "yearStart": null,
@@ -2538,16 +2428,6 @@
     "cc": 1597,
     "seconds": 12.2,
     "source": "רישוי רכב / נתון יצרן (פורד אסקורט 90 כ\"ס)"
-  },
-  {
-    "make": "Ford",
-    "model": "ESCORT",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 90,
-    "cc": 1597,
-    "seconds": 12.2,
-    "source": "נתון יצרן (Ford Escort 1.6)"
   },
   {
     "make": "פורד ארהב\"",
@@ -2568,15 +2448,5 @@
     "cc": 1989,
     "seconds": 10.8,
     "source": "רישוי רכב / נתון יצרן (פורד טרייסר 110 כ\"ס)"
-  },
-  {
-    "make": "Ford",
-    "model": "TRACER",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 110,
-    "cc": 1989,
-    "seconds": 10.8,
-    "source": "נתון יצרן (Ford/Mercury Tracer)"
   }
 ]
