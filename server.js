@@ -679,7 +679,10 @@ function lookupAccel(makeTexts, modelTexts, year, hp, cc) {
 }
 
 app.use((req, res, next) => {
-    console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+    // מדפיס לוג רק אם זו לא הפנייה של הבדיקה הראשית
+    if (req.url !== '/') {
+        console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+    }
     next();
 });
 
@@ -810,6 +813,11 @@ async function findModelRow(car) {
 }
 
 // ---------- API ----------
+
+// נתיב ראשי לבדיקת תקינות וחיבור עבור UptimeRobot
+app.get('/', (req, res) => {
+    res.status(200).send('Car API is running successfully!');
+});
 
 app.get('/api/car/:plate', async (req, res) => {
     const plate = req.params.plate.replace(/\D/g, "");
