@@ -283,6 +283,17 @@ app.get('/api/car/:plate', async (req, res) => {
             fetchOwnershipRows(plate),
             checkDisabled(plate)
         ]);
+
+        // ==========================================
+        // הוספת הדפסה בלוגים של כל השדות שחוזרים מהמאגר
+        // ==========================================
+        if (row) {
+            console.log("=== מפתחות זמינים בשורת המאגר (row) ===");
+            console.log(Object.keys(row));
+        } else {
+            console.log("=== לא נמצאה שורת דגם (row) במאגר MODELS_ID עבור רכב זה ===");
+        }
+
         const history = buildHistory(historyRaw);
 
         const manufacturer = car.tozeret_nm || "לא ידוע";
@@ -347,11 +358,10 @@ app.get('/api/car/:plate', async (req, res) => {
             powerSteering: fflag("hege_koah_ind")
         };
 
-        // שיוך השדה הנכון למצלמת רוורס במאגר התקינה הממשלתי
         const safety = {
             laneDeparture: fflag("bakarat_stiya_menativ_ind"),
             pedestrianDetection: fflag("zihuy_holchey_regel_ind"),
-            rearCamera: fflag("matzlema_ahorit_ind") || fflag("matzlemet_reverse_ind") || fflag("matzlema_ahorite_ind")
+            rearCamera: fflag("matzlema_ahorit_ind") || fflag("matzlemet_reverse_ind")
         };
 
         res.json({
