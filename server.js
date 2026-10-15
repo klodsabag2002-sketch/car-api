@@ -816,6 +816,24 @@ function resolveBodyType(car, row) {
     return null;
 }
 
+// פונקציית תרגום סוג הנעה
+function resolveDrivetrain(row, car) {
+    const rawCode = toText(row?.hanaa_cd) || toText(car?.hanaa_cd);
+    const rawNm = toText(row?.hanaa_nm) || toText(car?.hanaa_nm);
+    const combined = ((rawCode || '') + ' ' + (rawNm || '')).toLowerCase();
+
+    if (combined.includes('4x4') || combined.includes('4wd') || combined.includes('awd') || combined.includes('כפולה') || rawCode === '4') {
+        return 'הנעה כפולה (4X4)';
+    }
+    if (combined.includes('rwd') || combined.includes('אחורית') || rawCode === '2') {
+        return 'הנעה אחורית (RWD)';
+    }
+    if (combined.includes('fwd') || combined.includes('קדמית') || rawCode === '1') {
+        return 'הנעה קדמית (FWD)';
+    }
+    return rawNm || 'הנעה קדמית (FWD)';
+}
+
 // בדיקת תו נכה
 async function checkDisabled(plate) {
     try {
@@ -1000,7 +1018,72 @@ app.get('/api/car/:plate', async (req, res) => {
                 } : null,
                 bodyType: bodyType,
                 merkav: bodyType,
-                kmSinceTest: history?.kmSinceTest ?? null
+                kmSinceTest: history?.kmSinceTest ?? null,
+
+                // מפרט טכני, מידות, גרירה והנעה
+                technical: {
+                    drivetrain: resolveDrivetrain(row, car),
+                    totalWeight: toNumber(row?.mishkal_kolel) ?? toNumber(car.mishkal_kolel),
+                    curbWeight: toNumber(row?.mishkal_azmi) ?? toNumber(car.mishkal_azmi),
+                    height: toNumber(row?.gova) ?? toNumber(car.gova),
+                    length: toNumber(row?.orech) ?? toNumber(car.orech),
+                    width: toNumber(row?.rohav) ?? toNumber(car.rohav),
+                    wheelbase: toNumber(row?.merhak_sranim) ?? toNumber(car.merhak_sranim),
+                    doors: toNumber(row?.mispar_dlatot) ?? toNumber(car.mispar_dlatot),
+                    seats: toNumber(row?.mispar_moshavim) ?? toNumber(car.mispar_moshavim),
+                    powerWindows: toNumber(row?.halonot_hashmal) ?? toNumber(car.halonot_hashmal),
+                    airbags: toNumber(row?.kariot_avir) ?? toNumber(car.kariot_avir),
+                    transmission: toText(row?.tevat_hiluhim_nm) || toText(car.tevat_hiluhim_nm) || (car.gear === 'O' ? 'אוטומטי' : 'אוטומטי'),
+                    fuelType: toText(row?.delek_nm) || toText(car.delek_nm) || 'בנזין',
+                    engineCode: toText(row?.degem_manoa) || toText(car.degem_manoa),
+                    hasTowHitch: Number(row?.vav_grira_ind || car.vav_grira_ind) === 1,
+                    towBrakes: toNumber(row?.kosher_grira_im_blamim) ?? toNumber(car.kosher_grira_im_blamim),
+                    towNoBrakes: toNumber(row?.kosher_grira_bli_blamim) ?? toNumber(car.kosher_grira_bli_blamim)
+                },
+
+                // אבזור נוחות (0 או 1)
+                equipment: {
+                    ac: Number(row?.mazgan_ind ?? 1) === 1,
+                    alloyWheels: Number(row?.galgaley_sagsoget_ind) === 1,
+                    sunroof: Number(row?.sunroof_ind) === 1,
+                    abs: Number(row?.abs_ind ?? 1) === 1,
+                    esp: Number(row?.bakarat_yatzivut_ind ?? 1) === 1,
+                    powerSteering: Number(row?.hege_koah_ind ?? 1) === 1,
+                    cruiseControl: Number(row?.bakarat_shyut_ind) === 1,
+                    leatherSeats: Number(row?.ripudey_or_ind) === 1,
+                    powerSeats: Number(row?.kivnun_moshavim_hashmali_ind) === 1,
+                    heatedSeats: Number(row?.himum_moshavim_ind) === 1,
+                    keyless: Number(row?.keyless_ind) === 1,
+                    fogLights: Number(row?.pansey_arafel_ind) === 1,
+                    ledHeadlights: Number(row?.pansey_led_ind) === 1,
+                    leatherSteeringWheel: Number(row?.hege_metzupa_or_ind) === 1,
+                    steeringControls: Number(row?.shlita_mehahege_ind) === 1,
+                    soundSystem: Number(row?.maarehet_shema_ind ?? 1) === 1
+                },
+
+                // מערכות בטיחות
+                safety: {
+                    safetyScore: toNumber(row?.ramat_eivzur_betihut) ?? toNumber(car.ramat_eivzur_betihut),
+                    autonomousBraking: Number(row?.blimat_herum_otonomit_ind || row?.blimat_herum_ind) === 1,
+                    laneDeparture: Number(row?.hatraat_stiat_nativ_ind || row?.stiat_nativ_ind) === 1,
+                    laneKeepAssist: Number(row?.mneiat_stiat_nativ_ind) === 1,
+                    adaptiveCruise: Number(row?.bakarat_shyut_adaptivit_ind) === 1,
+                    blindSpot: Number(row?.zihuy_rehev_beshetah_met_ind || row?.shetah_met_ind) === 1,
+                    forwardCollision: Number(row?.hatraat_hitnagshut_kidmit_ind) === 1,
+                    pedestrianDetection: Number(row?.zihuy_holhey_regel_ind) === 1,
+                    trafficSigns: Number(row?.zihuy_tamrurey_tnua_ind) === 1,
+                    rearviewCamera: Number(row?.matzlema_ahorit_ind) === 1,
+                    parkingSensors: Number(row?.hayeyshey_hanaya_ind) === 1,
+                    autoHighBeam: Number(row?.shlita_beor_gvoha_ind) === 1,
+                    tirePressure: Number(row?.hayeyshey_lahatz_avir_ind) === 1
+                },
+
+                // סביבה וזיהום
+                environment: {
+                    pollutionLevel: toNumber(row?.ramat_zihum) ?? toNumber(car.ramat_zihum),
+                    co2Emissions: toNumber(row?.plitat_co2) ?? toNumber(car.plitat_co2),
+                    licenseGroup: toNumber(row?.kvutzat_agrah_cd) ?? toNumber(car.kvutzat_agrah_cd)
+                }
             }
         });
     } catch (error) {
@@ -1059,7 +1142,6 @@ app.post('/api/report', async (req, res) => {
         const { plate, category, notes, carInfo } = req.body;
         console.log(`[REPORT] דיווח חדש על רכב ${plate}: ${category}`);
 
-        // שימוש בפורמט Form URL-Encoded לעקיפת חסימות Cloudflare משרתים
         const params = new URLSearchParams();
         params.append("access_key", "57cbc2ae-17ad-4c60-b73a-6558c56e8f01");
         params.append("subject", `דיווח מהאפליקציה: רכב ${plate} [${category}]`);
