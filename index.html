@@ -68,18 +68,9 @@
   .hero.show { display: block; }
 
   .brand-logo-container {
-    width: 96px;
-    height: 96px;
-    margin: 12px auto 6px;
-    background: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-    border: 2px solid #eef2f5;
-    padding: 10px;
-    overflow: hidden;
+    width: 96px; height: 96px; margin: 12px auto 6px; background: #ffffff;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12); border: 2px solid #eef2f5; padding: 10px; overflow: hidden;
   }
   .brand-logo { width: 100%; height: 100%; object-fit: contain; }
   .brand-badge { width: 100%; height: 100%; border-radius: 50%; color: #fff; font-size: 36px; font-weight: bold; display: flex; align-items: center; justify-content: center; }
@@ -101,7 +92,6 @@
   .own-btn-wrap { display: none; text-align: center; margin: 4px 0 0; }
   .own-btn-wrap.show { display: block; }
   .own-btn { background: #fff; border: 1.5px solid #2a7fa8; color: #2a7fa8; border-radius: 20px; padding: 6px 16px; font-size: 13px; cursor: pointer; font-weight: bold; }
-
   .own-panel { display: none; margin: 10px 10px 0; }
   .own-panel.show { display: block; }
 
@@ -113,15 +103,8 @@
   .spec .sp-val.na { color: #aab8c2; font-weight: normal; direction: rtl; font-size: 12px; }
 
   .accel-disclaimer {
-    margin: 6px 14px 0;
-    font-size: 11px;
-    color: #7b8f9a;
-    line-height: 1.35;
-    text-align: center;
-    background: #eef6f9;
-    padding: 6px 10px;
-    border-radius: 8px;
-    border-right: 3px solid #2a7fa8;
+    margin: 6px 14px 0; font-size: 11px; color: #7b8f9a; line-height: 1.35;
+    text-align: center; background: #eef6f9; padding: 6px 10px; border-radius: 8px; border-right: 3px solid #2a7fa8;
   }
 
   .list-card { background: #fff; border-radius: 12px; margin: 12px 10px 0; overflow: hidden; box-shadow: 0 2px 6px rgba(42,127,168,.12); }
@@ -144,84 +127,65 @@
   .test-countdown { text-align: center; font-size: 13px; font-weight: bold; color: #3c8d2e; margin-top: 8px; }
   .test-countdown.bad { color: #b42318; }
 
-  .own-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 6px rgba(42,127,168,.12); font-size: 13px; }
-  .own-table th { background: #2a7fa8; color: #fff; padding: 10px 6px; font-weight: bold; text-align: center; }
-  .own-table td { padding: 10px 6px; text-align: center; color: #333; border-bottom: 1px solid #eef3f6; }
-  .own-table tr:nth-child(even) td { background: #f7fbfd; }
-  .own-table tr:last-child td { border-bottom: none; }
-  .own-extra { background: #fff; border-radius: 12px; padding: 10px 14px; margin-top: 10px; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.05); }
-  .own-extra .kv { padding: 4px 0; border-bottom: 1px dashed #eee; }
-  .own-extra .kv:last-child { border-bottom: none; }
-  .own-extra .k { color: #4a6b7d; }
-  .own-extra .v { font-weight: bold; color: #1f5f80; direction: ltr; }
-  .own-msg { background: #fff; border-radius: 12px; padding: 12px; font-size: 13px; color: #4a6b7d; text-align: center; margin-top: 4px; }
+  /* ----------------- עיצוב חדש לכרטיסיות מפרט, אבזור, בטיחות ----------------- */
+  .grid-card {
+    background: #fff; border-radius: 14px; margin: 12px 10px 0; padding: 16px 12px;
+    box-shadow: 0 2px 6px rgba(42,127,168,.12);
+  }
+  .grid-card-title {
+    font-size: 14px; font-weight: bold; color: #1f5f80; margin-bottom: 12px; border-bottom: 1.5px solid #eef3f6; padding-bottom: 6px;
+  }
+  .tech-grid-3 {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px 6px; text-align: center;
+  }
+  .tech-box .tb-ic { font-size: 24px; height: 30px; display: flex; align-items: center; justify-content: center; }
+  .tech-box .tb-lbl { font-size: 11px; color: #5a7382; margin-top: 4px; }
+  .tech-box .tb-val { font-size: 14px; font-weight: bold; color: #1f5f80; margin-top: 3px; }
+
+  .equip-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 14px; margin-top: 6px;
+  }
+  .equip-item {
+    display: flex; align-items: center; justify-content: space-between; font-size: 13px;
+    padding: 8px 10px; background: #f8fafc; border-radius: 8px; border: 1px solid #edf2f7;
+  }
+  .equip-label { display: flex; align-items: center; gap: 6px; font-weight: 500; color: #334155; }
+  .equip-badge {
+    font-size: 14px; font-weight: bold; width: 22px; height: 22px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; line-height: 1; flex-shrink: 0;
+  }
+  .equip-badge.v { background: #dcfce7; color: #16a34a; }
+  .equip-badge.x { background: #fee2e2; color: #dc2626; }
+
+  .safety-score-box {
+    background: linear-gradient(135deg, #1f7ea9, #2a7fa8); color: #fff;
+    border-radius: 12px; padding: 14px; text-align: center; margin-bottom: 14px;
+  }
+  .safety-score-val { font-size: 32px; font-weight: bold; line-height: 1.1; }
+  .safety-score-sub { font-size: 12px; opacity: 0.9; margin-top: 4px; }
 
   .report-btn-wrap { text-align: center; margin: 18px 10px 10px; }
   .report-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #ffffff;
-    border: 1.5px dashed #2a7fa8;
-    color: #2a7fa8;
-    border-radius: 12px;
-    padding: 10px 20px;
-    font-size: 13px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+    display: inline-flex; align-items: center; gap: 8px; background: #ffffff;
+    border: 1.5px dashed #2a7fa8; color: #2a7fa8; border-radius: 12px; padding: 10px 20px;
+    font-size: 13px; font-weight: bold; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.04);
   }
-  .report-btn:active { background: #eaf3f7; }
 
   .modal-overlay {
-    display: none;
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.5);
-    z-index: 1000;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+    display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center; padding: 20px;
   }
   .modal-overlay.show { display: flex; }
-  .modal-card {
-    background: #fff;
-    width: 100%;
-    max-width: 340px;
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    direction: rtl;
-    text-align: right;
-  }
+  .modal-card { background: #fff; width: 100%; max-width: 340px; border-radius: 16px; padding: 20px; direction: rtl; text-align: right; }
   .modal-title { font-size: 16px; font-weight: bold; color: #1f5f80; margin-bottom: 6px; }
   .modal-sub { font-size: 12px; color: #666; margin-bottom: 14px; }
   .modal-field-lbl { font-size: 12px; font-weight: bold; color: #333; margin: 10px 0 4px; }
-  .modal-select, .modal-textarea {
-    width: 100%;
-    padding: 9px;
-    border: 1px solid #cbd5e1;
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 13px;
-    outline: none;
-    background: #f8fafc;
-  }
+  .modal-select, .modal-textarea { width: 100%; padding: 9px; border: 1px solid #cbd5e1; border-radius: 8px; font-family: inherit; font-size: 13px; outline: none; background: #f8fafc; }
   .modal-textarea { height: 75px; resize: none; margin-top: 4px; }
   .modal-actions { display: flex; gap: 10px; margin-top: 16px; }
   .modal-submit { flex: 1; background: #2a7fa8; color: #fff; border: none; padding: 10px; border-radius: 8px; font-weight: bold; font-size: 14px; cursor: pointer; }
-  .modal-submit:disabled { background: #94c0d6; cursor: not-allowed; }
   .modal-close { background: #e2e8f0; color: #475569; border: none; padding: 10px 14px; border-radius: 8px; font-size: 13px; cursor: pointer; }
-  
-  .report-status {
-    display: none;
-    font-size: 12px;
-    text-align: center;
-    padding: 8px;
-    border-radius: 8px;
-    margin-top: 12px;
-    font-weight: bold;
-  }
+  .report-status { display: none; font-size: 12px; text-align: center; padding: 8px; border-radius: 8px; margin-top: 12px; font-weight: bold; }
   .report-status.success { display: block; background: #dcfce7; color: #166534; }
   .report-status.error { display: block; background: #fee2e2; color: #991b1b; }
 </style>
@@ -271,6 +235,7 @@
       <div class="tab" data-tab="env"><span class="ic">🌿</span>סביבה</div>
     </div>
 
+    <!-- 1. לשונית כללי -->
     <div id="cardGeneral">
       <div id="hero" class="hero">
         <div class="brand-logo-container">
@@ -359,18 +324,98 @@
             <span>✏️</span> חסרים פרטים ברכב? לחץ כאן לדיווח
           </button>
         </div>
-
       </div>
     </div>
 
-    <!-- כרטיסיות מידע נוספות -->
-    <div id="cardTech" style="display:none; padding: 20px; text-align: center; color: #666;">מפרט טכני בקרוב...</div>
-    <div id="cardSafety" style="display:none; padding: 20px; text-align: center; color: #666;">נתוני בטיחות בקרוב...</div>
-    <div id="cardEnv" style="display:none; padding: 20px; text-align: center; color: #666;">נתוני סביבה בקרוב...</div>
+    <!-- 2. לשונית מפרט טכני מלא + אבזור -->
+    <div id="cardTech" style="display:none;">
+      <!-- נתוני שלדה ומידות -->
+      <div class="grid-card">
+        <div class="grid-card-title">מידות, משקלים ומבנה</div>
+        <div class="tech-grid-3">
+          <div class="tech-box">
+            <div class="tb-ic">🏋️</div>
+            <div class="tb-lbl">משקל כולל</div>
+            <div class="tb-val" id="tWeightTotal">אין נתון</div>
+          </div>
+          <div class="tech-box">
+            <div class="tb-ic">📏</div>
+            <div class="tb-lbl">גובה (ס"מ)</div>
+            <div class="tb-val" id="tHeight">אין נתון</div>
+          </div>
+          <div class="tech-box">
+            <div class="tb-ic">🔌</div>
+            <div class="tb-lbl">חלונות חשמל</div>
+            <div class="tb-val" id="tWindows">אין נתון</div>
+          </div>
+          <div class="tech-box">
+            <div class="tb-ic">🪑</div>
+            <div class="tb-lbl">מושבים</div>
+            <div class="tb-val" id="tSeats">אין נתון</div>
+          </div>
+          <div class="tech-box">
+            <div class="tb-ic">🚪</div>
+            <div class="tb-lbl">דלתות</div>
+            <div class="tb-val" id="tDoors">אין נתון</div>
+          </div>
+          <div class="tech-box">
+            <div class="tb-ic">🎈</div>
+            <div class="tb-lbl">כריות אוויר</div>
+            <div class="tb-val" id="tAirbags">אין נתון</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- נתוני הנעה וגרירה -->
+      <div class="grid-card">
+        <div class="grid-card-title">הנעה, תמסורת וגרירה</div>
+        <div class="list-card" style="margin: 0; box-shadow: none;">
+          <div class="lrow"><span class="li">⚙️</span><span class="ll">סוג הנעה</span><span class="sp"></span><span class="lv" id="tDrivetrain">אין נתון</span></div>
+          <div class="lrow"><span class="li">🕹️</span><span class="ll">תיבת הילוכים</span><span class="sp"></span><span class="lv" id="tTrans">אין נתון</span></div>
+          <div class="lrow"><span class="li">⛽</span><span class="ll">סוג דלק</span><span class="sp"></span><span class="lv" id="tFuel">אין נתון</span></div>
+          <div class="lrow"><span class="li">🪝</span><span class="ll">היתר וו גרירה</span><span class="sp"></span><span class="lv" id="tTowHitch">אין נתון</span></div>
+          <div class="lrow"><span class="li">⚖️</span><span class="ll">כושר גרירה (עם בלמים)</span><span class="sp"></span><span class="lv" id="tTowBrakes">אין נתון</span></div>
+          <div class="lrow"><span class="li">⚖️</span><span class="ll">כושר גרירה (ללא בלמים)</span><span class="sp"></span><span class="lv" id="tTowNoBrakes">אין נתון</span></div>
+          <div class="lrow"><span class="li">📐</span><span class="ll">אורך / רוחב (ס"מ)</span><span class="sp"></span><span class="lv" id="tDimensions">אין נתון</span></div>
+          <div class="lrow"><span class="li">🔩</span><span class="ll">קוד מנוע</span><span class="sp"></span><span class="lv" id="tEngineCode">אין נתון</span></div>
+        </div>
+      </div>
+
+      <!-- רשימת אבזור נוחות (V ירוק או X אדום) -->
+      <div class="grid-card">
+        <div class="grid-card-title">רשימת אבזור מקורי</div>
+        <div class="equip-grid" id="equipGrid"></div>
+      </div>
+    </div>
+
+    <!-- 3. לשונית בטיחות מלאה -->
+    <div id="cardSafety" style="display:none;">
+      <div class="grid-card">
+        <div class="safety-score-box">
+          <div class="safety-score-val" id="safeScoreVal">0</div>
+          <div class="safety-score-sub">רמת אבזור בטיחות רשמית (משרד התחבורה מתוך 8)</div>
+        </div>
+        <div class="grid-card-title">מערכות בטיחות מקוריות ברכב</div>
+        <div class="equip-grid" id="safetyGrid"></div>
+      </div>
+    </div>
+
+    <!-- 4. לשונית סביבה וזיהום -->
+    <div id="cardEnv" style="display:none;">
+      <div class="grid-card">
+        <div class="grid-card-title">דירוג ירוק, זיהום ואגרות</div>
+        <div class="list-card" style="margin: 0; box-shadow: none;">
+          <div class="lrow"><span class="li">🌿</span><span class="ll">רמת זיהום אוויר (1-15)</span><span class="sp"></span><span class="lv" id="ePollution">אין נתון</span></div>
+          <div class="lrow"><span class="li">💨</span><span class="ll">פליטת CO2</span><span class="sp"></span><span class="lv" id="eCo2">אין נתון</span></div>
+          <div class="lrow"><span class="li">🏷️</span><span class="ll">קבוצת אגרה שנתית</span><span class="sp"></span><span class="lv" id="eLicenseGroup">אין נתון</span></div>
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>
 
+<!-- מודל דיווח -->
 <div id="reportModal" class="modal-overlay">
   <div class="modal-card">
     <div class="modal-title">דיווח על פרט חסר או שגוי</div>
@@ -422,8 +467,6 @@
 
   function findBrand(manufacturer, model) {
     const raw = ((manufacturer || '') + ' ' + (model || '')).toLowerCase();
-    
-    // מותאם בדיוק מדויק לשמות קבצי ה-jpg שהעלת לתיקיית logos
     const rules = [
       [["cupra", "קופרה"], "cupra", "#8c6a3d", "Cupra"],
       [["audi", "אאודי", "אודי"], "audi", "#444", "Audi"],
@@ -677,6 +720,7 @@
 
   function setVal(id, value, suffix) {
     const el = document.getElementById(id);
+    if (!el) return;
     const cleaned = typeof value === 'string' ? cleanText(value) : value;
     const empty = cleaned === null || cleaned === undefined || cleaned === '' || cleaned === 'לא ידוע';
     if (empty) { el.textContent = 'אין נתון'; el.classList.add('na'); }
@@ -941,6 +985,93 @@
     }
   }
 
+  // פונקציית עזר ליצירת רשימת פריטים עם V ירוק או X אדום
+  function renderBoolGrid(containerId, items) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = '';
+    items.forEach(it => {
+      const div = document.createElement('div');
+      div.className = 'equip-item';
+      div.innerHTML = `
+        <span class="equip-label"><span>${it.icon}</span>${it.label}</span>
+        <span class="equip-badge ${it.val ? 'v' : 'x'}">${it.val ? '✓' : '✗'}</span>
+      `;
+      container.appendChild(div);
+    });
+  }
+
+  // מילוי כל הלשוניות (מפרט טכני, אבזור, בטיחות, סביבה)
+  function renderAdditionalTabs(d) {
+    const t = d.technical || {};
+    const eq = d.equipment || {};
+    const sf = d.safety || {};
+    const ev = d.environment || {};
+
+    // 1. קוביות מפרט עליונות
+    setVal('tWeightTotal', t.totalWeight ? t.totalWeight.toLocaleString('he-IL') : null, 'ק"ג');
+    setVal('tHeight', t.height);
+    setVal('tWindows', t.powerWindows);
+    setVal('tSeats', t.seats);
+    setVal('tDoors', t.doors);
+    setVal('tAirbags', t.airbags);
+
+    // 2. רשימת תמסורת, הנעה וגרירה
+    setVal('tDrivetrain', t.drivetrain);
+    setVal('tTrans', t.transmission);
+    setVal('tFuel', t.fuelType);
+    setVal('tTowHitch', t.hasTowHitch ? 'מורשה ברישיון ✓' : 'ללא היתר');
+    setVal('tTowBrakes', t.towBrakes, 'ק"ג');
+    setVal('tTowNoBrakes', t.towNoBrakes, 'ק"ג');
+    if (t.length && t.width) {
+      setVal('tDimensions', `${t.length} / ${t.width}`);
+    } else {
+      setVal('tDimensions', null);
+    }
+    setVal('tEngineCode', t.engineCode);
+
+    // 3. אבזור נוחות (V / X)
+    renderBoolGrid('equipGrid', [
+      { icon: '❄️', label: 'מיזוג אוויר', val: eq.ac },
+      { icon: '🔘', label: 'חישוקי מגנזיום', val: eq.alloyWheels },
+      { icon: '🪟', label: 'חלון גג (סאן-רוף)', val: eq.sunroof },
+      { icon: '🛑', label: 'מערכת ABS', val: eq.abs },
+      { icon: '⚖️', label: 'בקרת יציבות (ESP)', val: eq.esp },
+      { icon: '🎯', label: 'בקרת שיוט', val: eq.cruiseControl },
+      { icon: '💺', label: 'ריפודי עור', val: eq.leatherSeats },
+      { icon: '⚡', label: 'מושבים חשמליים', val: eq.powerSeats },
+      { icon: '🔥', label: 'חימום מושבים', val: eq.heatedSeats },
+      { icon: '🔑', label: 'מפתח חכם (Keyless)', val: eq.keyless },
+      { icon: '💡', label: 'פנסי LED ראשיים', val: eq.ledHeadlights },
+      { icon: '🌫️', label: 'פנסי ערפל', val: eq.fogLights },
+      { icon: '🎛️', label: 'שליטה מההגה', val: eq.steeringControls },
+      { icon: '📻', label: 'מערכת שמע מקורית', val: eq.soundSystem }
+    ]);
+
+    // 4. מערכות בטיחות
+    const score = sf.safetyScore != null ? sf.safetyScore : '—';
+    document.getElementById('safeScoreVal').textContent = score;
+
+    renderBoolGrid('safetyGrid', [
+      { icon: '🚨', label: 'בלימת חירום אוטונומית', val: sf.autonomousBraking },
+      { icon: '⚠️', label: 'התרעת התנגשות קדמית', val: sf.forwardCollision },
+      { icon: '🛣️', label: 'התרעת סטייה מנתיב', val: sf.laneDeparture },
+      { icon: '🔄', label: 'תיקון היגוי אקטיבי', val: sf.laneKeepAssist },
+      { icon: '🚗', label: 'בקרת שיוט אדפטיבית', val: sf.adaptiveCruise },
+      { icon: '👁️', label: 'ניטור שטחים מתים', val: sf.blindSpot },
+      { icon: '🚶', label: 'זיהוי הולכי רגל', val: sf.pedestrianDetection },
+      { icon: '🚸', label: 'זיהוי תמרורי תנועה', val: sf.trafficSigns },
+      { icon: '📷', label: 'מצלמת נסיעה לאחור', val: sf.rearviewCamera },
+      { icon: '🅿️', label: 'חיישני חניה', val: sf.parkingSensors },
+      { icon: '🔦', label: 'אורות גבוהים אוטומטיים', val: sf.autoHighBeam },
+      { icon: '🛞', label: 'חיישני לחץ אוויר (TPMS)', val: sf.tirePressure }
+    ]);
+
+    // 5. סביבה וזיהום
+    setVal('ePollution', ev.pollutionLevel ? `דרגה ${ev.pollutionLevel}` : null);
+    setVal('eCo2', ev.co2Emissions, 'גרם/ק"מ');
+    setVal('eLicenseGroup', ev.licenseGroup ? `קבוצה ${ev.licenseGroup}` : null);
+  }
+
   async function searchCar() {
     const plate = document.getElementById('plateInput').value.replace(/\D/g, '');
     const btn = document.getElementById('searchBtn');
@@ -951,6 +1082,9 @@
     document.getElementById('kmLine').classList.remove('show');
     document.getElementById('ownBtnWrap').classList.remove('show');
     document.getElementById('cardGeneral').style.display = 'none';
+    document.getElementById('cardTech').style.display = 'none';
+    document.getElementById('cardSafety').style.display = 'none';
+    document.getElementById('cardEnv').style.display = 'none';
     document.getElementById('tabs').classList.remove('show');
     document.getElementById('hero').classList.remove('show');
     setupCopyButton(null);
@@ -988,7 +1122,7 @@
       if (d.kmSinceTest != null) {
         document.getElementById('kmText').textContent =
           d.kmSinceTest.toLocaleString('he-IL') + ' ק"מ - קילומטראז\' מעודכן מהטסט האחרון';
-        kmLine.classList.add('show');
+        document.getElementById('kmLine').classList.add('show');
       }
 
       document.getElementById('heroName').textContent = cleanText((d.manufacturer || '') + ' ' + (d.model || ''));
@@ -1021,6 +1155,13 @@
       setVal('vOwners', d.owners);
 
       renderTest(parseDate(d.lastTest), parseDate(d.testExpiry));
+
+      // מילוי כל הלשוניות הנוספות
+      renderAdditionalTabs(d);
+
+      // איפוס לטאב הראשי
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelector('.tab[data-tab="general"]').classList.add('active');
 
       document.getElementById('hero').classList.add('show');
       document.getElementById('tabs').classList.add('show');
