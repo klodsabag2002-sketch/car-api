@@ -263,7 +263,7 @@
       <span id="kmText"></span>
     </div>
 
-    <!-- 4 הטאבים המקוריים -->
+    <!-- 4 הטאבים -->
     <div id="tabs" class="tabs">
       <div class="tab active" data-tab="general"><span class="ic">🚗</span>כללי</div>
       <div class="tab" data-tab="tech"><span class="ic">🔧</span>מפרט טכני</div>
@@ -363,10 +363,10 @@
       </div>
     </div>
 
-    <!-- הלשוניות הנוספות נשמרות ריקות כמו שביקשת -->
-    <div id="cardTech" style="display:none"></div>
-    <div id="cardSafety" style="display:none"></div>
-    <div id="cardEnv" style="display:none"></div>
+    <!-- כרטיסיות מידע נוספות -->
+    <div id="cardTech" style="display:none; padding: 20px; text-align: center; color: #666;">מפרט טכני בקרוב...</div>
+    <div id="cardSafety" style="display:none; padding: 20px; text-align: center; color: #666;">נתוני בטיחות בקרוב...</div>
+    <div id="cardEnv" style="display:none; padding: 20px; text-align: center; color: #666;">נתוני סביבה בקרוב...</div>
   </div>
 
 </div>
@@ -422,18 +422,17 @@
 
   function findBrand(manufacturer, model) {
     const raw = ((manufacturer || '') + ' ' + (model || '')).toLowerCase();
-    if (raw.includes("cupra") || raw.includes("קופרה")) {
-      return { slug: "cupra", color: "#8c6a3d", en: "Cupra" };
-    }
+    
     const rules = [
+      [["cupra", "קופרה"], "cupra", "#8c6a3d", "Cupra"],
+      [["audi", "אאודי", "אודי"], "audi", "#444", "Audi"],
       [["seat", "סיאט"], "seat", "#c8a24a", "Seat"],
       [["skoda", "סקודה"], "skoda", "#3c8c3c", "Skoda"],
       [["hyundai", "יונדאי", "הונדאי"], "hyundai", "#1d3a6e", "Hyundai"],
       [["toyota", "טויוטה"], "toyota", "#cc0000", "Toyota"],
       [["kia", "קיה"], "kia", "#b10c1c", "Kia"],
       [["mazda", "מאזדה", "מזדה"], "mazda", "#a02020", "Mazda"],
-      [["volkswagen", "פולקסווגן", "vw"], "volkswagen", "#1c4f8f", "Volkswagen"],
-      [["audi", "אאודי", "אודי"], "audi", "#444", "Audi"],
+      [["volkswagen", "פולקסווגן", "פולקסוואגן", "vw"], "volkswagen", "#1c4f8f", "Volkswagen"],
       [["bmw", "ב.מ.וו", "ב מ וו"], "bmw", "#1c69d4", "BMW"],
       [["mercedes", "מרצדס"], "mercedes", "#555a60", "Mercedes-Benz"],
       [["renault", "רנו"], "renault", "#e8c200", "Renault"],
@@ -455,6 +454,7 @@
       [["volvo", "וולוו", "וולבו"], "volvo", "#1c3d6b", "Volvo"],
       [["jeep", "ג'יפ"], "jeep", "#556b2f", "Jeep"]
     ];
+
     for (const [keys, slug, color, en] of rules) {
       if (keys.some(k => raw.includes(k))) return { slug, color, en };
     }
@@ -987,7 +987,7 @@
     }
   }
 
-  // מעבר בין לשוניות
+  // מעבר בין לשוניות (טאבים)
   document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', () => {
       document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -1000,7 +1000,7 @@
     });
   });
 
-  // ---------- מנגנון דיווח ישיר ב-FormData (עוקף חסימות שרתי ענן) ----------
+  // מנגנון דיווח
   const reportModal = document.getElementById('reportModal');
   const openReportBtn = document.getElementById('openReportBtn');
   const closeReportBtn = document.getElementById('closeReportBtn');
