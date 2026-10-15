@@ -800,7 +800,7 @@ const BODY_TYPE_MAP = {
 };
 
 function resolveBodyType(car, row) {
-    const rawMerkav = toText(row?.merkav) || toText(car?.merkav);
+    const rawMerkav = toText(row?.merkav) || toText(car?.merkav) || toText(row?.shilda_nm) || toText(car?.shilda_nm);
     if (rawMerkav) {
         const clean = rawMerkav.trim();
         if (BODY_TYPE_MAP[clean]) return BODY_TYPE_MAP[clean];
@@ -820,9 +820,9 @@ function resolveBodyType(car, row) {
 async function checkDisabled(plate) {
     try {
         const cleanPlate = String(plate).replace(/\D/g, "");
-        
+
         let records = await searchDatastore(DISABLED_ID, { "MISPAR RECHEV": cleanPlate }, 5);
-        
+
         if (!records || records.length === 0) {
             records = await searchDatastore(DISABLED_ID, { "MISPAR RECHEV": Number(cleanPlate) }, 5);
         }
@@ -913,13 +913,12 @@ app.get('/', (req, res) => {
 
 app.get('/api/car/:plate', async (req, res) => {
     const plate = req.params.plate.replace(/\D/g, "");
-    const timestamp = new Date().toISOString();
 
     try {
         const car = await fetchCarRecord(plate);
 
         if (!car) {
-            console.warn(`[SEARCH LOG] ❌ 🚗 חיפוש רכב (לא נמצא במאגר): מספר ${plate} | שעה: ${timestamp}`);
+            console.warn(`[SEARCH LOG] חיפוש רכב (לא נמצא): ${plate}`);
             return res.json({ success: false, message: "המספר אינו קיים במאגר משרד התחבורה" });
         }
 
@@ -954,20 +953,58 @@ app.get('/api/car/:plate', async (req, res) => {
         }
         const modelTexts = [car.kinuy_mishari, car.degem_nm, car.ramat_gimur, model].filter(Boolean);
         const acceleration = lookupAccel(makeTexts, modelTexts, year, hp, engineCc);
-
         const hasDisabledBadge = Boolean(disabledResult?.hasBadge);
 
+        // ---------- עזרים לשדות שאומתו מהמאגר ----------
+        // מחזיר ערך מהשורה של הדגם, ואם אין, מרישוי הרכב. ריק = null
+        const fv = (key) => {
+            const a = row ? row[key] : undefined;
+            const b = car[key];
+            const v = (a !== undefined && a !== null && String(a).trim() !== "") ? a : b;
+            return (v === undefined || v === null || String(v).trim() === "") ? null : v;
+        };
+        const fnum = (key) => {
+            const v = fv(key);
+            if (v === null) return null;
+            const n = Number(v);
+            return Number.isNaN(n) ? null : n;
+        };
+        // 1 = true, 0 = false, ריק = null (לא ידוע)
+        const fflag = (key) => {
+            const n = fnum(key);
+            return n === null ? null : n === 1;
+        };
+
+        const technical = {
+            drivetrain: fv("hanaa_nm"),              // למשל "4X2"
+            totalWeight: fnum("mishkal_kolel"),      // ק"ג
+            towWithBrakes: fnum("kosher_grira_im_blamim"),
+            towWithoutBrakes: fnum("kosher_grira_bli_blamim"),
+            doors: fnum("mispar_dlatot"),
+            seats: fnum("mispar_moshavim"),
+            windows: fnum("mispar_halonot_hashmal"),
+            airbags: fnum("mispar_kariot_avir"),
+            safetyLevel: fnum("ramat_eivzur_betihuty")
+        };
+
+        const equipment = {
+            ac: fflag("mazgan_ind"),
+            abs: fflag("abs_ind"),
+            sunroof: fflag("halon_bagg_ind"),
+            alloyWheels: fflag("galgaley_sagsoget_kala_ind"),
+            powerSteering: fflag("hege_koah_ind")
+        };
+
+        const safety = {
+            laneDeparture: fflag("bakarat_stiya_menativ_ind"),
+            pedestrianDetection: fflag("zihuy_holchey_regel_ind"),
+            rearCamera: fflag("matzlemet_reverse_ind")
+        };
+
+        const timestamp = new Date().toISOString();
         console.log(`--------------------------------------------------`);
-        console.log(`[SEARCH LOG] 🔍 מישהו חיפש רכב!`);
-        console.log(`📅 זמן: ${timestamp}`);
-        console.log(`🚗 מספר רכב: ${plate}`);
-        console.log(`🏭 יצרן ודגם: ${manufacturer} ${model} ${trim || ""} (${year})`);
-        console.log(`⚡ כוח סוס: ${hp != null ? hp : "לא ידוע"} | נפח: ${engineCc != null ? engineCc : "לא ידוע"}`);
-        console.log(`🏎️ מרכב: ${bodyType || "לא ידוע"}`);
-        console.log(`🏷️ סוג בעלות: ${currentOwnership || "לא ידוע"}`);
-        console.log(`🏁 תאוצה 0-100: ${acceleration ? acceleration.seconds + " שניות" : "לא נמצאה בטבלה"}`);
-        console.log(`♿ תג נכה: ${hasDisabledBadge ? "יש" : "אין"}`);
-        console.log(`🔁 מעברי בעלות: ${ownershipList.length}`);
+        console.log(`[SEARCH LOG] מישהו חיפש רכב | ${timestamp}`);
+        console.log(`מספר רכב: ${plate} | ${manufacturer} ${model} (${year})`);
         console.log(`--------------------------------------------------`);
 
         res.json({
@@ -998,13 +1035,16 @@ app.get('/api/car/:plate', async (req, res) => {
                     badgeType: disabledResult.badgeType,
                     issueDate: disabledResult.issueDate
                 } : null,
-                bodyType: bodyType,
+                bodyType,
                 merkav: bodyType,
-                kmSinceTest: history?.kmSinceTest ?? null
+                kmSinceTest: history?.kmSinceTest ?? null,
+                technical,
+                equipment,
+                safety
             }
         });
     } catch (error) {
-        console.error(`[SEARCH LOG] 💥 שגיאה בחיפוש מספר ${plate}:`, error);
+        console.error(`[SEARCH LOG] שגיאה בחיפוש מספר ${plate}:`, error);
         res.status(500).json({ success: false, error: "שגיאה בשליפה" });
     }
 });
@@ -1023,33 +1063,6 @@ app.get('/api/history/:plate', async (req, res) => {
         res.json({ success: true, history: history || {}, ownershipList });
     } catch (e) {
         res.status(500).json({ success: false, message: "שגיאה בשליפת ההיסטוריה" });
-    }
-});
-
-app.get('/api/debug/:plate', async (req, res) => {
-    try {
-        const car = await fetchCarRecord(req.params.plate);
-        if (!car) return res.json({ success: false, message: "לא נמצא" });
-        const row = await findModelRow(car);
-        const hist = await fetchHistoryRecord(req.params.plate);
-        const own = await fetchOwnershipRows(req.params.plate);
-        const disabledSample = await searchDatastore(DISABLED_ID, null, 1);
-        const disabledMatch = await checkDisabled(req.params.plate);
-        res.json({
-            success: true,
-            car_fields: Object.keys(car),
-            car,
-            model_row: row,
-            history: hist,
-            ownership: own,
-            disabled_sample_fields: disabledSample[0] ? Object.keys(disabledSample[0]) : [],
-            disabled_sample: disabledSample[0] || null,
-            disabled_match: disabledMatch,
-            accel_table_rows: accelTable.length
-        });
-    } catch (error) {
-        console.error("שגיאה:", error);
-        res.status(500).json({ success: false, error: error.message });
     }
 });
 
