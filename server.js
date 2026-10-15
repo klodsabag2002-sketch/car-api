@@ -293,9 +293,9 @@ const HE_MAKE_ALIASES = {
     "וולבו סין": "Volvo",
     "וולוו סין": "Volvo",
     "וולבו ארהב": "Volvo",
-    "וולבו ארהב": "Volvo",
+    "וולוו ארהב": "Volvo",
     "וולבו ארה\"ב": "Volvo",
-    "וולבו ארה\"ב": "Volvo",
+    "וולוו ארה\"ב": "Volvo",
     "Volvo": "Volvo",
     "וואי": "WEY",
     "וואי סין": "WEY",
@@ -614,7 +614,7 @@ const HE_MAKE_ALIASES = {
     "קרייזלר מקסיקו": "Chrysler",
     "קריזלר מקסיקו": "Chrysler",
     "קרייזלר קנדה": "Chrysler",
-    "קרייזלר קנדה": "Chrysler",
+    "קריזלר קנדה": "Chrysler",
     "Chrysler": "Chrysler",
     "CHRYSLER": "Chrysler",
     "רולס רויס": "Rolls-Royce",
@@ -993,10 +993,11 @@ app.get('/api/car/:plate', async (req, res) => {
             powerSteering: fflag("hege_koah_ind")
         };
 
+        // תיקון האיות המדויק מהלוג: matzlemat_reverse_ind (עם a)
         const safety = {
-            laneDeparture: fflag("bakarat_stiya_menativ_ind"),
-            pedestrianDetection: fflag("zihuy_holchey_regel_ind"),
-            rearCamera: fflag("matzlemet_reverse_ind")
+            laneDeparture: fflag("bakarat_stiya_menativ_ind") ?? fflag("bakarat_stiya_activ_s"),
+            pedestrianDetection: fflag("zihuy_holchey_regel_ind") ?? fflag("blimat_hirum_lifnei_holhei_regel_ofanaim"),
+            rearCamera: fflag("matzlemat_reverse_ind") ?? fflag("matzlemet_reverse_ind")
         };
 
         const timestamp = new Date().toISOString();
