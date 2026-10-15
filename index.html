@@ -112,7 +112,6 @@
   .spec .sp-val { font-size: 13px; font-weight: bold; color: #1f7ea9; margin-top: 3px; direction: ltr; }
   .spec .sp-val.na { color: #aab8c2; font-weight: normal; direction: rtl; font-size: 12px; }
 
-  /* הערת הבהרה לתאוצה 0-100 */
   .accel-disclaimer {
     margin: 6px 14px 0;
     font-size: 11px;
@@ -159,7 +158,6 @@
   .own-extra .v { font-weight: bold; color: #1f5f80; direction: ltr; }
   .own-msg { background: #fff; border-radius: 12px; padding: 12px; font-size: 13px; color: #4a6b7d; text-align: center; margin-top: 4px; }
 
-  /* כפתור דיווח על מידע חסר */
   .report-btn-wrap { text-align: center; margin: 18px 10px 10px; }
   .report-btn {
     display: inline-flex;
@@ -178,7 +176,6 @@
   }
   .report-btn:active { background: #eaf3f7; }
 
-  /* חלונית דיווח (Modal) */
   .modal-overlay {
     display: none;
     position: fixed;
@@ -216,8 +213,21 @@
   }
   .modal-textarea { height: 75px; resize: none; margin-top: 4px; }
   .modal-actions { display: flex; gap: 10px; margin-top: 16px; }
-  .modal-submit { flex: 1; background: #2a7fa8; color: #fff; border: none; padding: 10px; border-radius: 8px; font-weight: bold; font-size: 14px; cursor: pointer; }
+  .modal-submit { flex: 1; background: #2a7fa8; color: #fff; border: none; padding: 10px; border-radius: 8px; font-weight: bold; font-size: 14px; cursor: pointer; transition: background 0.2s; }
+  .modal-submit:disabled { background: #94c0d6; cursor: not-allowed; }
   .modal-close { background: #e2e8f0; color: #475569; border: none; padding: 10px 14px; border-radius: 8px; font-size: 13px; cursor: pointer; }
+  
+  .report-status {
+    display: none;
+    font-size: 12px;
+    text-align: center;
+    padding: 8px;
+    border-radius: 8px;
+    margin-top: 12px;
+    font-weight: bold;
+  }
+  .report-status.success { display: block; background: #dcfce7; color: #166534; }
+  .report-status.error { display: block; background: #fee2e2; color: #991b1b; }
 </style>
 </head>
 <body>
@@ -325,7 +335,6 @@
           </div>
         </div>
 
-        <!-- הערת ניסוח על נתוני 0-100 -->
         <div class="accel-disclaimer">
           ℹ️ נתוני התאוצה מבוססים על מאגרים חיצוניים שונים ומשמשים להערכה בלבד, אין להסתמך עליהם במדויק.
         </div>
@@ -348,10 +357,9 @@
           <div class="test-countdown" id="vCountdown"></div>
         </div>
 
-        <!-- כפתור דיווח על פרטים חסרים -->
         <div class="report-btn-wrap">
           <button class="report-btn" id="openReportBtn">
-            <span>✏️</span> חסרים פרטים ברכב? דווח לנו
+            <span>✏️</span> חסרים פרטים ברכב? לחץ כאן לדיווח
           </button>
         </div>
 
@@ -365,7 +373,6 @@
 
 </div>
 
-<!-- חלונית קופצת (Modal) לדיווח על פרטים חסרים -->
 <div id="reportModal" class="modal-overlay">
   <div class="modal-card">
     <div class="modal-title">דיווח על פרט חסר או שגוי</div>
@@ -381,11 +388,13 @@
       <option value="אחר">פרט אחר</option>
     </select>
 
-    <div class="modal-field-lbl">פרטים נוספים / הערה (אופציונלי):</div>
+    <div class="modal-field-lbl">פרטים נוספים / הערה:</div>
     <textarea id="reportText" class="modal-textarea" placeholder="למשל: תאוצה אמיתית היא 6.2 שניות לפי קטלוג יצרן..."></textarea>
 
+    <div id="reportStatus" class="report-status"></div>
+
     <div class="modal-actions">
-      <button id="submitReportBtn" class="modal-submit">שלח דיווח במייל</button>
+      <button id="submitReportBtn" class="modal-submit">שלח דיווח</button>
       <button id="closeReportBtn" class="modal-close">ביטול</button>
     </div>
   </div>
@@ -396,8 +405,8 @@
   const HIST_KEY = "carSearchHistory";
   const HIST_MAX = 10;
   
-  // כתובת המייל המעודכנת לקבלת דיווחים
-  const REPORT_EMAIL = "Klodsabag2002@gmail.com"; 
+  // מפתח הגישה האישי שלך ל-Web3Forms
+  const WEB3FORMS_KEY = "B0efa2c2-72c6-4532-8899-0e3ce53e2a61"; 
 
   let currentPlate = "";
   let currentCarData = null;
@@ -1055,17 +1064,22 @@
     el.style.display = 'block';
   }
 
-  // ---------- מנגנון דיווח על פרט חסר (Modal) ----------
+  // ---------- מנגנון דיווח שקט ומקצועי ----------
   const reportModal = document.getElementById('reportModal');
   const openReportBtn = document.getElementById('openReportBtn');
   const closeReportBtn = document.getElementById('closeReportBtn');
   const submitReportBtn = document.getElementById('submitReportBtn');
+  const reportStatus = document.getElementById('reportStatus');
 
   openReportBtn.addEventListener('click', () => {
     if (!currentPlate) return;
     const name = currentCarData ? (currentCarData.manufacturer + ' ' + currentCarData.model + ' (' + currentCarData.year + ')') : '';
     document.getElementById('reportCarHeader').textContent = 'רכב: ' + formatPlate(currentPlate) + ' ' + name;
     document.getElementById('reportText').value = '';
+    reportStatus.className = 'report-status';
+    reportStatus.textContent = '';
+    submitReportBtn.disabled = false;
+    submitReportBtn.textContent = 'שלח דיווח';
     reportModal.classList.add('show');
   });
 
@@ -1077,30 +1091,54 @@
     if (e.target === reportModal) reportModal.classList.remove('show');
   });
 
-  submitReportBtn.addEventListener('click', () => {
+  submitReportBtn.addEventListener('click', async () => {
     const category = document.getElementById('reportCategory').value;
     const userNotes = document.getElementById('reportText').value.trim();
 
-    const subject = encodeURIComponent(`דיווח על פרט חסר ברכב ${formatPlate(currentPlate)} [${category}]`);
-    
-    let body = `היי,\nנמצא פרט חסר או שגוי באפליקציה עבור הרכב הבא:\n\n`;
-    body += `מספר רכב: ${formatPlate(currentPlate)}\n`;
-    if (currentCarData) {
-      body += `יצרן ודגם: ${currentCarData.manufacturer} ${currentCarData.model} (${currentCarData.year})\n`;
-      body += `רמת גימור קיימת: ${currentCarData.trim || 'אין'}\n`;
-      body += `כוח סוס: ${currentCarData.horsepower || 'אין'}\n`;
-      body += `תאוצה 0-100 קיימת: ${currentCarData.acceleration0to100 || 'אין'}\n`;
-      body += `מרכב קיים: ${currentCarData.bodyType || 'אין'}\n`;
-    }
-    body += `\nנושא הדיווח: ${category}\n`;
-    if (userNotes) {
-      body += `הערות המשתמש:\n${userNotes}\n`;
-    }
-    body += `\nתאריך דיווח: ${new Date().toLocaleString('he-IL')}\n`;
+    submitReportBtn.disabled = true;
+    submitReportBtn.textContent = 'שולח...';
+    reportStatus.className = 'report-status';
+    reportStatus.textContent = '';
 
-    // פותח חלון מייל למשתמש ישירות אל Klodsabag2002@gmail.com
-    window.location.href = `mailto:${REPORT_EMAIL}?subject=${subject}&body=${encodeURIComponent(body)}`;
-    reportModal.classList.remove('show');
+    const payload = {
+      access_key: WEB3FORMS_KEY,
+      subject: `דיווח על פרט חסר ברכב ${formatPlate(currentPlate)} [${category}]`,
+      from_name: "מערכת בדיקת רכב",
+      plate_number: formatPlate(currentPlate),
+      vehicle_name: currentCarData ? `${currentCarData.manufacturer} ${currentCarData.model} (${currentCarData.year})` : 'לא ידוע',
+      category: category,
+      user_notes: userNotes || 'אין הערות נוספות',
+      current_specs: currentCarData ? JSON.stringify({
+        trim: currentCarData.trim,
+        hp: currentCarData.horsepower,
+        accel: currentCarData.acceleration0to100,
+        body: currentCarData.bodyType
+      }, null, 2) : 'אין נתונים'
+    };
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const result = await response.json();
+
+      if (result.success) {
+        reportStatus.className = 'report-status success';
+        reportStatus.textContent = 'הדיווח נשלח בהצלחה! תודה שעזרת לנו לעדכן.';
+        setTimeout(() => {
+          reportModal.classList.remove('show');
+        }, 2000);
+      } else {
+        throw new Error(result.message || 'שגיאה בשליחה');
+      }
+    } catch (err) {
+      reportStatus.className = 'report-status error';
+      reportStatus.textContent = 'אירעה שגיאה בשליחה. אנא נסה שוב מאוחר יותר.';
+      submitReportBtn.disabled = false;
+      submitReportBtn.textContent = 'נסה שוב';
+    }
   });
 
   document.getElementById('searchBtn').addEventListener('click', searchCar);
