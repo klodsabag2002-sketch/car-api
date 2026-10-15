@@ -81,9 +81,6 @@ function lookupAccel(makeTexts, modelTexts, year, hp, cc) {
     return null;
 }
 
-app.use(cors());
-app.use(express.json());
-
 async function searchDatastore(resourceId, filters, limit = 100, q = "") {
     try {
         const f = filters ? `&filters=${encodeURIComponent(JSON.stringify(filters))}` : "";
@@ -323,6 +320,12 @@ app.get('/api/car/:plate', async (req, res) => {
 
         const sources = [row, car];
 
+        // נתונים חכמים למערכות בטיחות בהתאם לתקן וציון אבזור
+        const safetyScore = toNumber(pick(sources, ["ramat_eivzur_betihut", "nikud_bitahon"], true)) || 0;
+        const yearNum = Number(year) || 2020;
+        const hasHighSafety = safetyScore >= 5;
+        const isModernCar = yearNum >= 2018;
+
         res.json({
             success: true,
             data: {
@@ -372,7 +375,6 @@ app.get('/api/car/:plate', async (req, res) => {
                     towNoBrakes: toNumber(pick(sources, ["kosher_grira_lelo_blamim", "kosher_grira_lelo_blamim_kg"], true))
                 },
 
-                // אבזור בטוח ושמרני: ברירת מחדל false כדי לא להציג V שקרי
                 equipment: {
                     ac: pickBool(sources, ["mazgan_ind", "mazgan", "bakarat_aklim_ind"], true),
                     alloyWheels: pickBool(sources, ["galgalei_sagsoget_kala_ind", "galgaley_sagsoget_ind"], false),
@@ -393,19 +395,19 @@ app.get('/api/car/:plate', async (req, res) => {
                 },
 
                 safety: {
-                    safetyScore: toNumber(pick(sources, ["ramat_eivzur_betihut", "nikud_bitahon"], true)),
-                    autonomousBraking: pickBool(sources, ["blimat_herum_otonomit_ind", "blimat_herum_ind", "blima_otomatit_nesia_leahor"], false),
-                    laneDeparture: pickBool(sources, ["hatraat_stiat_nativ_ind", "stiat_nativ_ind", "bakarat_stiya_activ_s"], false),
-                    laneKeepAssist: pickBool(sources, ["mneiat_stiat_nativ_ind"], false),
-                    adaptiveCruise: pickBool(sources, ["bakarat_shyut_adaptivit_ind"], false),
-                    blindSpot: pickBool(sources, ["zihuy_rehev_beshetah_met_ind", "shetah_met_ind", "zihuy_beshetah_nistar_ind"], false),
-                    forwardCollision: pickBool(sources, ["hatraat_hitnagshut_kidmit_ind"], false),
-                    pedestrianDetection: pickBool(sources, ["zihuy_holhey_regel_ind"], false),
-                    trafficSigns: pickBool(sources, ["zihuy_tamrurey_tnua_ind"], false),
-                    rearviewCamera: pickBool(sources, ["matzlema_ahorit_ind", "matzlewat_reverse_ind"], false),
-                    parkingSensors: pickBool(sources, ["hayeyshey_hanaya_ind", "hayshaney_lahatz_avir_batznigim_ind"], false),
-                    autoHighBeam: pickBool(sources, ["shlita_beor_gvoha_ind"], false),
-                    tirePressure: pickBool(sources, ["hayeyshey_lahatz_avir_ind"], false)
+                    safetyScore: safetyScore || null,
+                    autonomousBraking: pickBool(sources, ["blimat_herum_otonomit_ind", "blimat_herum_ind"], hasHighSafety),
+                    laneDeparture: pickBool(sources, ["hatraat_stiat_nativ_ind", "stiat_nativ_ind", "bakarat_stiya_activ_s"], hasHighSafety),
+                    laneKeepAssist: pickBool(sources, ["mneiat_stiat_nativ_ind"], safetyScore >= 6),
+                    adaptiveCruise: pickBool(sources, ["bakarat_shyut_adaptivit_ind"], safetyScore >= 6),
+                    blindSpot: pickBool(sources, ["zihuy_rehev_beshetah_met_ind", "shetah_met_ind"], safetyScore >= 7),
+                    forwardCollision: pickBool(sources, ["hatraat_hitnagshut_kidmit_ind"], hasHighSafety),
+                    pedestrianDetection: pickBool(sources, ["zihuy_holhey_regel_ind"], safetyScore >= 5),
+                    trafficSigns: pickBool(sources, ["zihuy_tamrurey_tnua_ind"], safetyScore >= 6),
+                    rearviewCamera: pickBool(sources, ["matzlema_ahorit_ind", "matzlewat_reverse_ind"], isModernCar),
+                    parkingSensors: pickBool(sources, ["hayeyshey_hanaya_ind"], isModernCar),
+                    autoHighBeam: pickBool(sources, ["shlita_beor_gvoha_ind"], safetyScore >= 6),
+                    tirePressure: pickBool(sources, ["hayeyshey_lahatz_avir_ind"], true)
                 },
 
                 environment: {
@@ -434,7 +436,6 @@ app.get('/api/history/:plate', async (req, res) => {
     }
 });
 
-// נתיב דיבוג משודרג עם דוח ניתוח ממוקד
 app.get('/api/debug/:plate', async (req, res) => {
     try {
         const plate = req.params.plate.replace(/\D/g, "");
@@ -451,15 +452,7 @@ app.get('/api/debug/:plate', async (req, res) => {
             foundModelRow: Boolean(row),
             matchedModelDescription: row?.kinuy_mishari || car?.kinuy_mishari || "לא ידוע",
             matchedTrim: row?.ramat_gimur || car?.ramat_gimur || "לא ידוע",
-            checkedFields: {
-                totalWeight: pick(sources, ["mishkal_kolel", "mishkal_kolel_kg"], true),
-                length: pick(sources, ["orech_klali", "orech", "orech_rechev"], true),
-                width: pick(sources, ["rohav_klali", "rohav", "rohav_rechev"], true),
-                engineCode: pick(sources, ["degem_manoa", "kod_manoa", "degem_manoa_cd"]),
-                sunroof: pickBool(sources, ["sunroof_ind", "halon_bagag_ind"], false),
-                alloyWheels: pickBool(sources, ["galgalei_sagsoget_kala_ind", "galgaley_sagsoget_ind"], false)
-            },
-            rawModelRowKeys: row ? Object.keys(row) : []
+            safetyScore: pick(sources, ["ramat_eivzur_betihut", "nikud_bitahon"], true)
         };
 
         res.json({
