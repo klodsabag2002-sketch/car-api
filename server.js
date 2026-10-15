@@ -14,39 +14,15 @@ const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";
 
-// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 30) ----------
+// ---------- טעינת קבצי תאוצה 0-100 ----------
 let accelTable = [];
 const ACCEL_FILES = [
-    "acceleration.json",
-    "acceleration2.json",
-    "acceleration3.json",
-    "acceleration4.json",
-    "acceleration5.json",
-    "acceleration6.json",
-    "acceleration7.json",
-    "acceleration8.json",
-    "acceleration9.json",
-    "acceleration10.json",
-    "acceleration11.json",
-    "acceleration12.json",
-    "acceleration13.json",
-    "acceleration14.json",
-    "acceleration15.json",
-    "acceleration16.json",
-    "acceleration17.json",
-    "acceleration18.json",
-    "acceleration19.json",
-    "acceleration20.json",
-    "acceleration21.json",
-    "acceleration22.json",
-    "acceleration23.json",
-    "acceleration24.json",
-    "acceleration25.json",
-    "acceleration26.json",
-    "acceleration27.json",
-    "acceleration28.json",
-    "acceleration29.json",
-    "acceleration30.json"
+    "acceleration.json", "acceleration2.json", "acceleration3.json", "acceleration4.json", "acceleration5.json",
+    "acceleration6.json", "acceleration7.json", "acceleration8.json", "acceleration9.json", "acceleration10.json",
+    "acceleration11.json", "acceleration12.json", "acceleration13.json", "acceleration14.json", "acceleration15.json",
+    "acceleration16.json", "acceleration17.json", "acceleration18.json", "acceleration19.json", "acceleration20.json",
+    "acceleration21.json", "acceleration22.json", "acceleration23.json", "acceleration24.json", "acceleration25.json",
+    "acceleration26.json", "acceleration27.json", "acceleration28.json", "acceleration29.json", "acceleration30.json"
 ];
 
 ACCEL_FILES.forEach(fileName => {
@@ -57,7 +33,6 @@ ACCEL_FILES.forEach(fileName => {
             const data = JSON.parse(raw);
             if (Array.isArray(data)) {
                 accelTable = accelTable.concat(data);
-                console.log(`[DATA OK] נטען בהצלחה: ${fileName} (${data.length} רשומות)`);
             }
         }
     } catch (e) {
@@ -65,592 +40,24 @@ ACCEL_FILES.forEach(fileName => {
     }
 });
 
-// שמות יצרנים בעברית מהרישוי -> שם באנגלית כמו בקובץ התאוצה
 const HE_MAKE_ALIASES = {
-    "אבארט": "Abarth",
-    "קופרה": "Cupra",
-    "אאודי": "Audi",
-    "אודי": "Audi",
-    "אופל": "Opel",
-    "אופל גרמניה": "Opel",
-    "אופל פולין": "Opel",
-    "אופל ספרד": "Opel",
-    "אופל צרפת": "Opel",
-    "אופל אנגליה": "Opel",
-    "אופל סלובקיה": "Opel",
-    "אינפיניטי": "Infiniti",
-    "אינפיניטי יפן": "Infiniti",
-    "אינפיניטי אנגליה": "Infiniti",
-    "אינפיניטי בריטניה": "Infiniti",
-    "אינפיניטי ארה\"ב": "Infiniti",
-    "אינפיניטי ארהב": "Infiniti",
-    "אינפיניטי מקסיקו": "Infiniti",
-    "ניסאן": "Nissan",
-    "ניסאן יפן": "Nissan",
-    "ניסאן מקסיקו": "Nissan",
-    "ניסאן ארה\"ב": "Nissan",
-    "ניסאן ארהב": "Nissan",
-    "ניסאן ארהב\"": "Nissan",
-    "\"ניסאן ארהב": "Nissan",
-    "ניסאן ספרד": "Nissan",
-    "ניסאן אנגליה": "Nissan",
-    "איווייס": "Aiways",
-    "איווייס סין": "Aiways",
-    "איווויס": "Aiways",
-    "איוויס סין": "Aiways",
-    "איויאיסי": "EVEASY",
-    "איויאיסי סין": "EVEASY",
-    "אי.וי איזי": "EVEASY",
-    "אי וי איזי": "EVEASY",
-    "אורה": "ORA",
-    "אורה סין": "ORA",
-    "אוואטר": "AVATR",
-    "אווטר": "AVATR",
-    "אוואטר סין": "AVATR",
-    "אומודה": "OMODA",
-    "אומודה סין": "OMODA",
-    "איסוזו": "Isuzu",
-    "איסוזו יפן": "Isuzu",
-    "איסוזו תאילנד": "Isuzu",
-    "איסוזו ארה\"ב": "Isuzu",
-    "איסוזו ארהב": "Isuzu",
-    "איסוזו ארהב\"": "Isuzu",
-    "\"איסוזו ארהב": "Isuzu",
-    "אל אי וי סי": "LEVC",
-    "אל.אי.וי.סי": "LEVC",
-    "אל אי וי סי אנגליה": "LEVC",
-    "אלפא רומיאו": "Alfa Romeo",
-    "אלפא רומיאו_אי": "Alfa Romeo",
-    "אלפא רומאו": "Alfa Romeo",
-    "אלפא רומאו_אי": "Alfa Romeo",
-    "מ.ג": "MG",
-    "מ.ג סין": "MG",
-    "מ ג סין": "MG",
-    "אם ג'י": "MG",
-    "אם גי": "MG",
-    "אסטון מרטין": "Aston Martin",
-    "אסטון מרטין אנ": "Aston Martin",
-    "אסטון מרטין אנגליה": "Aston Martin",
-    "אקספנג": "XPENG",
-    "אקספנג סין": "XPENG",
-    "ב.מ.וו": "BMW",
-    "ב מ וו": "BMW",
-    "ב מ וו גרמניה": "BMW",
-    "ב מ וו מקסיקו": "BMW",
-    "ב מ וו סין": "BMW",
-    "ב מ וו ארה\"ב": "BMW",
-    "ב מ וו ארהב": "BMW",
-    "ב מ וו ארהב\"": "BMW",
-    "\"ב מ וו ארהב": "BMW",
-    "ב מ וו אוסטריה": "BMW",
-    "ב מ וו דרום אפריקה": "BMW",
-    "ב מ וו הולנד": "BMW",
-    "ב מ וו אנגליה": "BMW",
-    "בי ווי די": "BYD",
-    "בי ווי די סין": "BYD",
-    "בי.ווי.די": "BYD",
-    "בי וי די": "BYD",
-    "בי וי די סין": "BYD",
-    "ביואיק": "Buick",
-    "ביואיק ארה\"ב": "Buick",
-    "ביואיק ארהב": "Buick",
-    "ביואיק ארהב\"": "Buick",
-    "\"ביואיק ארהב": "Buick",
-    "ביואיק קנדה": "Buick",
-    "בנטלי": "Bentley",
-    "בנטלי אנגליה": "Bentley",
-    "בנטלי בריטניה": "Bentley",
-    "ג'אקו": "JAECOO",
-    "ג'אקו סין": "JAECOO",
-    "גאקו": "JAECOO",
-    "גאקו סין": "JAECOO",
-    "ג'.איי.סי": "GAC",
-    "ג'.איי.סי סין": "GAC",
-    "ג'י.איי.סי": "GAC",
-    "ג'י.איי.סי סין": "GAC",
-    "ג'י איי סי": "GAC",
-    "ג'י איי סי סין": "GAC",
-    "גי אי סי": "GAC",
-    "גי אי סי סין": "GAC",
-    "ג'.אמ.סי": "GMC",
-    "ג'.אמ.סי ארה": "GMC",
-    "ג'.אמ.סי ארה\"ב": "GMC",
-    "ג'.אמ.סי ארהב": "GMC",
-    "ג'י.אם.סי": "GMC",
-    "ג'י אם סי": "GMC",
-    "ג'י אם סי ארה\"ב": "GMC",
-    "ג'י אם סי ארהב": "GMC",
-    "ג'י.אם.סי ארה\"ב": "GMC",
-    "ג'י.אם.סי ארהב": "GMC",
-    "ג'י.אמ.סי ארה": "GMC",
-    "ג'י.אמ.סי": "GMC",
-    "ג'יפ": "Jeep",
-    "גיפ": "Jeep",
-    "ג'יפ פולין": "Jeep",
-    "ג'יפ איטליה": "Jeep",
-    "ג'יפ ארה\"ב": "Jeep",
-    "ג'יפ ארהב": "Jeep",
-    "ג'יפ ארהב\"": "Jeep",
-    "\"ג'יפ ארהב": "Jeep",
-    "גיפ ארהב": "Jeep",
-    "יונדאי קוריאה": "Hyundai",
-    "יונדאי טורקיה": "Hyundai",
-    "יונדאי צ'כיה": "Hyundai",
-    "יונדאי צכיה": "Hyundai",
-    "יונדאי הודו": "Hyundai",
-    "יונדאי ארה\"ב": "Hyundai",
-    "יונדאי ארהב": "Hyundai",
-    "יונדאי ארהב\"": "Hyundai",
-    "\"יונדאי ארהב": "Hyundai",
-    "יונדאי": "Hyundai",
-    "Hyundai": "Hyundai",
-    "ג'נסיס": "Genesis",
-    "גנסיס": "Genesis",
-    "ג'נסיס קוריאה": "Genesis",
-    "גיאיוואן": "Jiayuan",
-    "גיאיוואן סין": "Jiayuan",
-    "ג'יאיוואן": "Jiayuan",
-    "ג'יאיוואן סין": "Jiayuan",
-    "ג'יי איי סי": "JAC",
-    "גיי איי סי": "JAC",
-    "ג'יי.איי.סי": "JAC",
-    "ג'אק": "JAC",
-    "ג'אק סין": "JAC",
-    "גאק": "JAC",
-    "גאק סין": "JAC",
-    "ג'ילי": "Geely",
-    "ג'ילי סין": "Geely",
-    "גילי": "Geely",
-    "גילי סין": "Geely",
-    "דאצ'יה": "Dacia",
-    "דאציה": "Dacia",
-    "דאצ'יה רומניה": "Dacia",
-    "דאציה רומניה": "Dacia",
-    "דאצ'יה מרוקו": "Dacia",
-    "דאציה מרוקו": "Dacia",
-    "רנו דאצ'יה": "Dacia",
-    "רנו דאציה": "Dacia",
-    "דודג'": "Dodge",
-    "דודג": "Dodge",
-    "דודג' קנדה": "Dodge",
-    "דודג קנדה": "Dodge",
-    "דודג' ארה\"ב": "Dodge",
-    "דודג' ארהב": "Dodge",
-    "דודג ארהב": "Dodge",
-    "דונגפנג": "Dongfeng",
-    "דונגפנג סין": "Dongfeng",
-    "דונג פנג": "Dongfeng",
-    "דונג פנג סין": "Dongfeng",
-    "דונפינג": "Dongfeng",
-    "דונפינג סין": "Dongfeng",
-    "די אף אס קיי": "DFSK",
-    "די.אף.אס.קיי": "DFSK",
-    "די אס": "DS",
-    "די אס צרפת": "DS",
-    "די אס גרמניה": "DS",
-    "די.אס": "DS",
-    "די.אס צרפת": "DS",
-    "די.אס גרמניה": "DS",
-    "די-אס": "DS",
-    "דיאס": "DS",
-    "דייהטסו": "Daihatsu",
-    "דייהטסו יפן": "Daihatsu",
-    "דיהטסו": "Daihatsu",
-    "דיהטסו יפן": "Daihatsu",
-    "דיפאל": "Deepal",
-    "דיפאל סין": "Deepal",
-    "דיפל": "Deepal",
-    "דיפל סין": "Deepal",
-    "צ'אנגאן דיפאל": "Deepal",
-    "אף אי דאבל יו": "Hongqi",
-    "אף אי דאבליו": "Hongqi",
-    "הונגצ'י": "Hongqi",
-    "הונגצי": "Hongqi",
-    "הונג צ'י": "Hongqi",
-    "הונצי": "Hongqi",
-    "פאו": "Hongqi",
-    "FAW": "Hongqi",
-    "הונדה": "Honda",
-    "הונדה יפן": "Honda",
-    "הונדה אנגליה": "Honda",
-    "הונדה מקסיקו": "Honda",
-    "הונדה הודו": "Honda",
-    "הונדה טורקיה": "Honda",
-    "הונדה ארה\"ב": "Honda",
-    "הונדה ארהב": "Honda",
-    "הונדה ארהב\"": "Honda",
-    "\"הונדה ארהב": "Honda",
-    "וויה": "Voyah",
-    "וויה סין": "Voyah",
-    "וויה מוטורס": "Voyah",
-    "Voyah": "Voyah",
-    "וולבו": "Volvo",
-    "וולוו": "Volvo",
-    "וולבו שבדיה": "Volvo",
-    "וולוו שבדיה": "Volvo",
-    "וולבו בלגיה": "Volvo",
-    "וולוו בלגיה": "Volvo",
-    "וולבו סין": "Volvo",
-    "וולוו סין": "Volvo",
-    "וולבו ארהב": "Volvo",
-    "וולוו ארהב": "Volvo",
-    "וולבו ארה\"ב": "Volvo",
-    "וולוו ארה\"ב": "Volvo",
-    "Volvo": "Volvo",
-    "וואי": "WEY",
-    "וואי סין": "WEY",
-    "ווי": "WEY",
-    "ווי סין": "WEY",
-    "WEY": "WEY",
-    "זיקר": "Zeekr",
-    "זיקר סין": "Zeekr",
-    "זייקר": "Zeekr",
-    "זייקר סין": "Zeekr",
-    "Zeekr": "Zeekr",
-    "טויוטה": "Toyota",
-    "טיוטה": "Toyota",
-    "טויוטה יפן": "Toyota",
-    "טויוטה טורקיה": "Toyota",
-    "טויוטה אנגליה": "Toyota",
-    "טויוטה צ'כיה": "Toyota",
-    "טויוטה צכיה": "Toyota",
-    "טויוטה צרפת": "Toyota",
-    "טויוטה ספרד": "Toyota",
-    "טויוטה תאילנד": "Toyota",
-    "טויוטה דרום אפריקה": "Toyota",
-    "טויוטה ארה\"ב": "Toyota",
-    "טויוטה ארהב": "Toyota",
-    "טויוטה ארהב\"": "Toyota",
-    "\"טויוטה ארהב": "Toyota",
-    "Toyota": "Toyota",
-    "טסלה": "Tesla",
-    "טסלה סין": "Tesla",
-    "טסלה גרמניה": "Tesla",
-    "טסלה ארה\"ב": "Tesla",
-    "טסלה ארהב": "Tesla",
-    "טסלה ארהב\"": "Tesla",
-    "\"טסלה ארהב": "Tesla",
-    "Tesla": "Tesla",
-    "יגואר": "Jaguar",
-    "יגואר אנגליה": "Jaguar",
-    "יגואר בריטניה": "Jaguar",
-    "Jaguar": "Jaguar",
-    "יודו": "Yudo",
-    "יודו סין": "Yudo",
-    "יו דו": "Yudo",
-    "יו דו סין": "Yudo",
-    "Yudo": "Yudo",
-    "YUDO": "Yudo",
-    "לינק אנד קו": "Lynk & Co",
-    "לינק אנד קו סין": "Lynk & Co",
-    "לינק & קו": "Lynk & Co",
-    "Lynk & Co": "Lynk & Co",
-    "LYNK&CO": "Lynk & Co",
-    "LYNKCO": "Lynk & Co",
-    "ליפמוטור": "Leapmotor",
-    "ליפמוטור סין": "Leapmotor",
-    "ליפ מוטור": "Leapmotor",
-    "ליפ מוטור סין": "Leapmotor",
-    "ליפטומור": "Leapmotor",
-    "Leapmotor": "Leapmotor",
-    "למבורגיני": "Lamborghini",
-    "למבורגיני איטליה": "Lamborghini",
-    "למבורג'יני": "Lamborghini",
-    "למבורג'יני איטליה": "Lamborghini",
-    "Lamborghini": "Lamborghini",
-    "לנד רובר": "Land Rover",
-    "לנדרובר": "Land Rover",
-    "לנדרובר אנגליה": "Land Rover",
-    "לנד רובר אנגליה": "Land Rover",
-    "רובר": "Land Rover",
-    "רובר אנגליה": "Land Rover",
-    "ריינג' רובר": "Land Rover",
-    "ריינג רובר": "Land Rover",
-    "Land Rover": "Land Rover",
-    "Range Rover": "Land Rover",
-    "לקסוס": "Lexus",
-    "לקסוס יפן": "Lexus",
-    "Lexus": "Lexus",
-    "מאזדה": "Mazda",
-    "מזדה": "Mazda",
-    "מזדה יפן": "Mazda",
-    "מאזדה יפן": "Mazda",
-    "מזדה תאילנד": "Mazda",
-    "מאזדה תאילנד": "Mazda",
-    "מאזדה ארה\"ב": "Mazda",
-    "מזדה ארה\"ב": "Mazda",
-    "מאזדה ארהב": "Mazda",
-    "מזדה ארהב": "Mazda",
-    "Mazda": "Mazda",
-    "מיני קופר": "Mini",
-    "מיני": "Mini",
-    "Mini": "Mini",
-    "מזארטי": "Maserati",
-    "מזארטי איטליה": "Maserati",
-    "מזראטי": "Maserati",
-    "מזראטי איטליה": "Maserati",
-    "Maserati": "Maserati",
-    "מרצדס": "Mercedes-Benz",
-    "מרצדס בנץ": "Mercedes-Benz",
-    "מרצדס בנץ גרמן": "Mercedes-Benz",
-    "מרצדס בנץ הונג": "Mercedes-Benz",
-    "מרצדס בנץ ארהב": "Mercedes-Benz",
-    "מרצדס בנץ ארה\"ב": "Mercedes-Benz",
-    "מרצדס בנץ אוסט": "Mercedes-Benz",
-    "מרצדס בנץ מקסי": "Mercedes-Benz",
-    "מרצדס בנץ ספרד": "Mercedes-Benz",
-    "מרצדס בנץ צרפת": "Mercedes-Benz",
-    "מרצדס בנץ טורק": "Mercedes-Benz",
-    "דיימלר קרייזלר": "Mercedes-Benz",
-    "דימלר קריזלר": "Mercedes-Benz",
-    "Mercedes-Benz": "Mercedes-Benz",
-    "Mercedes": "Mercedes-Benz",
-    "מקלארן": "McLaren",
-    "מקלארן אנגליה": "McLaren",
-    "מקלרן": "McLaren",
-    "McLaren": "McLaren",
-    "מיצובישי": "Mitsubishi",
-    "מיצובושי": "Mitsubishi",
-    "מיצובישי יפן": "Mitsubishi",
-    "מיצובישי תאילנ": "Mitsubishi",
-    "מיצובישי תאילנד": "Mitsubishi",
-    "מיצובישי ארה\"ב": "Mitsubishi",
-    "מיצובישי ארהב": "Mitsubishi",
-    "מיצובישי הולנד": "Mitsubishi",
-    "Mitsubishi": "Mitsubishi",
-    "מקסוס": "Maxus",
-    "מקסוס סין": "Maxus",
-    "Maxus": "Maxus",
-    "MAXUS": "Maxus",
-    "ניאו": "NIO",
-    "ניאו סין": "NIO",
-    "ניאו רכב סין": "NIO",
-    "NIO": "NIO",
-    "Nio": "NIO",
-    "סאאב": "Saab",
-    "סאאב שבדיה": "Saab",
-    "Saab": "Saab",
-    "סיאט": "Seat",
-    "סיאט ספרד": "Seat",
-    "סיאט צ'כיה": "Seat",
-    "סיאט צכיה": "Seat",
-    "סיאט גרמניה": "Seat",
-    "סיאט סלובקיה": "Seat",
-    "סיאט פורטוגל": "Seat",
-    "Seat": "Seat",
-    "סובארו": "Subaru",
-    "סובארו יפן": "Subaru",
-    "סובארו ארה\"ב": "Subaru",
-    "סובארו ארהב": "Subaru",
-    "סובארו ארהב\"": "Subaru",
-    "\"סובארו ארהב": "Subaru",
-    "Subaru": "Subaru",
-    "סוזוקי": "Suzuki",
-    "סוזוקי יפן": "Suzuki",
-    "סוזוקי הונגריה": "Suzuki",
-    "מרוטי סוזוקי": "Suzuki",
-    "מרוטי": "Suzuki",
-    "Suzuki": "Suzuki",
-    "סמארט": "Smart",
-    "סמארט סין": "Smart",
-    "סמארט צרפת": "Smart",
-    "סמארט גרמניה": "Smart",
-    "Smart": "Smart",
-    "סיטרואן": "Citroen",
-    "סיטרואן צרפת": "Citroen",
-    "סיטרואן ספרד": "Citroen",
-    "סיטרואן צ'כיה": "Citroen",
-    "סיטרואן צכיה": "Citroen",
-    "סיטרואן סלובק": "Citroen",
-    "סיטרואן סלובקיה": "Citroen",
-    "סיטרואן פורטוג": "Citroen",
-    "סיטרואן פורטוגל": "Citroen",
-    "Citroen": "Citroen",
-    "Citroën": "Citroen",
-    "סקודה": "Skoda",
-    "סקודה צ'כיה": "Skoda",
-    "סקודה צכיה": "Skoda",
-    "סקודה סלובקיה": "Skoda",
-    "Skoda": "Skoda",
-    "סקייוול": "Skywell",
-    "סקייוול סין": "Skywell",
-    "סקיוול": "Skywell",
-    "סקיוול סין": "Skywell",
-    "Skywell": "Skywell",
-    "פולסטאר": "Polestar",
-    "פולסטאר סין": "Polestar",
-    "פולסטר": "Polestar",
-    "פולסטר סין": "Polestar",
-    "Polestar": "Polestar",
-    "סרס": "Seres",
-    "סרס סין": "Seres",
-    "Seres": "Seres",
-    "SERES": "Seres",
-    "פוטון": "Foton",
-    "פוטון סין": "Foton",
-    "Foton": "Foton",
-    "FOTON": "Foton",
-    "פולקסווגן": "Volkswagen",
-    "פולצבאגן": "Volkswagen",
-    "פולקסוגן": "Volkswagen",
-    "פולקסווגן גרמן": "Volkswagen",
-    "פולקסווגן גרמניה": "Volkswagen",
-    "פולקסווגן-ספרד": "Volkswagen",
-    "פולקסווגן ספרד": "Volkswagen",
-    "פולקסווגן פורט": "Volkswagen",
-    "פולקסווגן פורטוגל": "Volkswagen",
-    "פולקסווגן פולי": "Volkswagen",
-    "פולקסווגן פולין": "Volkswagen",
-    "פולקסווגן מקסי": "Volkswagen",
-    "פולקסווגן מקסיקו": "Volkswagen",
-    "פולקסווגן סלוב": "Volkswagen",
-    "פולקסווגן סלובקיה": "Volkswagen",
-    "פולקסווגן ארהב": "Volkswagen",
-    "פולקסווגן ארה\"ב": "Volkswagen",
-    "Volkswagen": "Volkswagen",
-    "VW": "Volkswagen",
-    "פורד": "Ford",
-    "פורד גרמניה": "Ford",
-    "פורד ספרד": "Ford",
-    "פורד בלגיה": "Ford",
-    "פורד תורכיה": "Ford",
-    "פורד טורקיה": "Ford",
-    "פורד קנדה": "Ford",
-    "פורד מקסיקו": "Ford",
-    "פורד רומניה": "Ford",
-    "פורד ד אפריקה": "Ford",
-    "פורד דרום אפריקה": "Ford",
-    "פורד ארה\"ב": "Ford",
-    "פורד ארהב": "Ford",
-    "פורד ארהב\"": "Ford",
-    "\"פורד ארהב": "Ford",
-    "Ford": "Ford",
-    "פורשה": "Porsche",
-    "פורשה גרמניה": "Porsche",
-    "פורשה סלובקיה": "Porsche",
-    "Porsche": "Porsche",
-    "פורתינג": "Forthing",
-    "פורתינג סין": "Forthing",
-    "Forthing": "Forthing",
-    "פיאט": "Fiat",
-    "פיאט איטליה": "Fiat",
-    "פיאט פולין": "Fiat",
-    "פיאט סרביה": "Fiat",
-    "פיאט טורקיה": "Fiat",
-    "פיאט תורכיה": "Fiat",
-    "פיאט פורטוגל": "Fiat",
-    "פיאט/מדייר סוז": "Fiat",
-    "פיאט תאילנד": "Fiat",
-    "פיאט קרייזלר": "Fiat",
-    "Fiat": "Fiat",
-    "פיג'ו": "Peugeot",
-    "פיגו": "Peugeot",
-    "פיג'ו צרפת": "Peugeot",
-    "פיג'ו ספרד": "Peugeot",
-    "פיג'ו סלובקיה": "Peugeot",
-    "פיג'ו צ'כיה": "Peugeot",
-    "פיג'ו צכיה": "Peugeot",
-    "פיג'ו אוסטריה": "Peugeot",
-    "פיג'ו פורטוגל": "Peugeot",
-    "פיג'ו איטליה": "Peugeot",
-    "פיג'ו טורקיה": "Peugeot",
-    "Peugeot": "Peugeot",
-    "פרארי": "Ferrari",
-    "פרארי איטליה": "Ferrari",
-    "Ferrari": "Ferrari",
-    "FERRARI": "Ferrari",
-    "צ'רי": "Chery",
-    "צרי": "Chery",
-    "צ'רי סין": "Chery",
-    "צרי סין": "Chery",
-    "Chery": "Chery",
-    "CHERY": "Chery",
-    "קאדילאק": "Cadillac",
-    "קאדילק": "Cadillac",
-    "קדילאק": "Cadillac",
-    "קדילק": "Cadillac",
-    "קאדילאק ארה\"ב": "Cadillac",
-    "קאדילאק ארהב": "Cadillac",
-    "קאדילאק ארהב\"": "Cadillac",
-    "\"קאדילאק ארהב": "Cadillac",
-    "קאדילאק מקסיקו": "Cadillac",
-    "Cadillac": "Cadillac",
-    "CADILLAC": "Cadillac",
-    "קיה": "Kia",
-    "קיה ד. קוריאה": "Kia",
-    "קיה ד.קוריאה": "Kia",
-    "קיה קוריאה": "Kia",
-    "קיה סלובקיה": "Kia",
-    "קיה ארה\"ב": "Kia",
-    "קיה ארהב": "Kia",
-    "קיה ארהב\"": "Kia",
-    "\"קיה ארהב": "Kia",
-    "Kia": "Kia",
-    "KIA": "Kia",
-    "קיי גי מוביליט": "KGM",
-    "קיי גי מוביליטי": "KGM",
-    "קיי ג'י מוביליטי": "KGM",
-    "קיי ג'י אם": "KGM",
-    "קיי גי אם": "KGM",
-    "KGM": "KGM",
-    "סאנגיונג": "KGM",
-    "סאנג יונג": "KGM",
-    "סאנגיונג ד.קור": "KGM",
-    "סאנג יונג ד.קור": "KGM",
-    "סאנגיונג קוריאה": "KGM",
-    "SsangYong": "KGM",
-    "קרייזלר": "Chrysler",
-    "קריזלר": "Chrysler",
-    "קרייזלר ארה\"ב": "Chrysler",
-    "קרייזלר ארהב": "Chrysler",
-    "קרייזלר ארהב\"": "Chrysler",
-    "\"קרייזלר ארהב": "Chrysler",
-    "קריזלר ארה\"ב": "Chrysler",
-    "קריזלר ארהב": "Chrysler",
-    "קריזלר ארהב\"": "Chrysler",
-    "\"קריזלר ארהב": "Chrysler",
-    "קרייזלר אוסטריה": "Chrysler",
-    "קריזלר אוסטריה": "Chrysler",
-    "קרייזלר מקסיקו": "Chrysler",
-    "קריזלר מקסיקו": "Chrysler",
-    "קרייזלר קנדה": "Chrysler",
-    "קריזלר קנדה": "Chrysler",
-    "Chrysler": "Chrysler",
-    "CHRYSLER": "Chrysler",
-    "רולס רויס": "Rolls-Royce",
-    "רולס-רויס": "Rolls-Royce",
-    "רולס רויס אנגליה": "Rolls-Royce",
-    "רולס-רויס אנגליה": "Rolls-Royce",
-    "רולס רויס בריטניה": "Rolls-Royce",
-    "רולס רויס אנגל": "Rolls-Royce",
-    "Rolls-Royce": "Rolls-Royce",
-    "Rolls Royce": "Rolls-Royce",
-    "ROLLS-ROYCE": "Rolls-Royce",
-    "שברולט": "Chevrolet",
-    "שברולט ד.קוריאה": "Chevrolet",
-    "שברולט ד. קוריאה": "Chevrolet",
-    "שברולט קוריאה": "Chevrolet",
-    "שברולט ארה\"ב": "Chevrolet",
-    "שברולט ארהב": "Chevrolet",
-    "שברולט ארהב\"": "Chevrolet",
-    "\"שברולט ארהב": "Chevrolet",
-    "שברולט קנדה": "Chevrolet",
-    "שברולט מקסיקו": "Chevrolet",
-    "Chevrolet": "Chevrolet",
-    "CHEVROLET": "Chevrolet",
-    "רנו": "Renault",
-    "רנו צרפת": "Renault",
-    "רנו ספרד": "Renault",
-    "רנו טורקיה": "Renault",
-    "רנו תורכיה": "Renault",
-    "רנו סלובניה": "Renault",
-    "רנו ד.קוריאה": "Renault",
-    "רנו ד. קוריאה": "Renault",
-    "רנו קוריאה": "Renault",
-    "רנו רומניה": "Renault",
-    "רנו מרוקו": "Renault",
-    "Renault": "Renault",
-    "RENAULT": "Renault"
+    "אבארט": "Abarth", "קופרה": "Cupra", "אאודי": "Audi", "אודי": "Audi", "אופל": "Opel",
+    "אינפיניטי": "Infiniti", "ניסאן": "Nissan", "איווייס": "Aiways", "אורה": "ORA",
+    "איסוזו": "Isuzu", "אלפא רומיאו": "Alfa Romeo", "מ.ג": "MG", "אם ג'י": "MG",
+    "ב.מ.וו": "BMW", "ב מ וו": "BMW", "בי ווי די": "BYD", "בי וי די": "BYD",
+    "ביואיק": "Buick", "בנטלי": "Bentley", "ג'אקו": "JAECOO", "ג'.אמ.סי": "GMC",
+    "ג'יפ": "Jeep", "יונדאי": "Hyundai", "ג'נסיס": "Genesis", "ג'ילי": "Geely",
+    "דאצ'יה": "Dacia", "דודג'": "Dodge", "די אס": "DS", "דייהטסו": "Daihatsu",
+    "הונגצ'י": "Hongqi", "הונדה": "Honda", "וויה": "Voyah", "וולבו": "Volvo",
+    "וולוו": "Volvo", "וואי": "WEY", "זיקר": "Zeekr", "טויוטה": "Toyota",
+    "טסלה": "Tesla", "יגואר": "Jaguar", "לינק אנד קו": "Lynk & Co", "ליפמוטור": "Leapmotor",
+    "למבורגיני": "Lamborghini", "לנד רובר": "Land Rover", "ריינג' רובר": "Land Rover",
+    "לקסוס": "Lexus", "מאזדה": "Mazda", "מזדה": "Mazda", "מיני": "Mini",
+    "מרצדס": "Mercedes-Benz", "מיצובישי": "Mitsubishi", "סאאב": "Saab", "סיאט": "Seat",
+    "סובארו": "Subaru", "סוזוקי": "Suzuki", "סיטרואן": "Citroen", "סקודה": "Skoda",
+    "פולסטאר": "Polestar", "פולקסווגן": "Volkswagen", "פורד": "Ford", "פורשה": "Porsche",
+    "פיאט": "Fiat", "פיג'ו": "Peugeot", "קאדילאק": "Cadillac", "קיה": "Kia",
+    "קרייזלר": "Chrysler", "שברולט": "Chevrolet", "רנו": "Renault"
 };
 
 function norm(s) {
@@ -678,15 +85,6 @@ function lookupAccel(makeTexts, modelTexts, year, hp, cc) {
     return null;
 }
 
-app.use((req, res, next) => {
-    if (req.url !== '/') {
-        console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
-    }
-    next();
-});
-
-// ---------- עזרים ----------
-
 async function searchDatastore(resourceId, filters, limit = 100, q = "") {
     const f = filters ? `&filters=${encodeURIComponent(JSON.stringify(filters))}` : "";
     const qq = q ? `&q=${encodeURIComponent(q)}` : "";
@@ -708,6 +106,12 @@ function toNumber(value) {
     if (s === null) return null;
     const n = Number(s.replace(/,/g, ""));
     return Number.isNaN(n) ? null : n;
+}
+
+function toBool(value) {
+    if (value === true || value === 1 || value === "1" || value === "כן") return true;
+    if (value === false || value === 0 || value === "0" || value === "לא") return false;
+    return null;
 }
 
 const ORIGIN_LABELS = {
@@ -742,65 +146,18 @@ function testStatus(expiry) {
     return d >= today;
 }
 
-// ---------- מילון תרגומי מרכב מלא ----------
 const BODY_TYPE_MAP = {
-    // מונחים באנגלית וראשי תיבות
-    "MPV": "מיניוואן",
-    "SUV": "פנאי / שטח",
-    "HATCHBACK": "האצ'בק",
-    "SEDAN": "סדאן",
-    "ESTATE": "סטיישן",
-    "STATION": "סטיישן",
-    "COUPE": "קופה",
-    "CABRIO": "קבריולה (גג פתוח)",
-    "CABRIOLET": "קבריולה (גג פתוח)",
-    "CONVERTIBLE": "קבריולה (גג פתוח)",
-    "PICKUP": "טנדר",
-    "PICK-UP": "טנדר",
-    "VAN": "מסחרי / ואן",
-    "MINIVAN": "מיניוואן",
-    "CROSSOVER": "קרוסאובר",
-
-    // שמות בעברית
-    "הצ'בק": "האצ'בק",
-    "הצבק": "האצ'בק",
-    "האצ'בק": "האצ'בק",
-    "האצבק": "האצ'בק",
-    "סדאן": "סדאן",
-    "סטיישן": "סטיישן",
-    "קופה": "קופה",
-    "פנאי": "פנאי / שטח",
-    "שטח": "רכב שטח",
-    "טנדר": "טנדר",
-    "מסחרי": "מסחרי / ואן",
-    "ואן": "מסחרי / ואן",
-    "מיניוואן": "מיניוואן",
-    "משא אחוד": "מסחרי סגור (משא אחוד)",
-    "משא בלתי אחוד": "טנדר / מסחרי פתוח",
-    "רכב שדה": "רכב שטח",
-    "אוטובוס זעיר": "טרנזיט / היסעים",
-
-    // אותיות סוג דגם ממשלתי (sug_degem)
-    "P": "האצ'בק",
-    "M": "סטיישן",
-    "S": "סדאן",
-    "C": "קופה",
-    "J": "פנאי / שטח (SUV)",
-    "V": "מסחרי / ואן",
-    "T": "טנדר",
-
-    // קידודים הפוכים ממסדי הנתונים של משרד התחבורה
-    "בק'צה": "האצ'בק",
-    "הצב'ק": "האצ'בק",
-    "נאדס": "סדאן",
-    "נדאן": "סדאן",
-    "ןישייטס": "סטיישן",
-    "הפוק": "קופה",
-    "טחש": "רכב שטח",
-    "טחשו": "פנאי / שטח",
-    "רדנט": "טנדר",
-    "ןאו": "ואן / מסחרי",
-    "נאווינימ": "מיניוואן"
+    "MPV": "מיניוואן", "SUV": "פנאי / שטח", "HATCHBACK": "האצ'בק", "SEDAN": "סדאן",
+    "ESTATE": "סטיישן", "STATION": "סטיישן", "COUPE": "קופה", "CABRIO": "קבריולה (גג פתוח)",
+    "CABRIOLET": "קבריולה (גג פתוח)", "CONVERTIBLE": "קבריולה (גג פתוח)", "PICKUP": "טנדר",
+    "PICK-UP": "טנדר", "VAN": "מסחרי / ואן", "MINIVAN": "מיניוואן", "CROSSOVER": "קרוסאובר",
+    "הצ'בק": "האצ'בק", "הצבק": "האצ'בק", "האצ'בק": "האצ'בק", "סדאן": "סדאן",
+    "סטיישן": "סטיישן", "קופה": "קופה", "פנאי": "פנאי / שטח", "שטח": "רכב שטח",
+    "טנדר": "טנדר", "מסחרי": "מסחרי / ואן", "ואן": "מסחרי / ואן", "מיניוואן": "מיניוואן",
+    "משא אחוד": "מסחרי סגור (משא אחוד)", "משא בלתי אחוד": "טנדר / מסחרי פתוח",
+    "רכב שדה": "רכב שטח", "אוטובוס זעיר": "טרנזיט / היסעים",
+    "P": "האצ'בק", "M": "סטיישן", "S": "סדאן", "C": "קופה", "J": "פנאי / שטח (SUV)",
+    "V": "מסחרי / ואן", "T": "טנדר", "בק'צה": "האצ'בק", "נאדס": "סדאן", "ןישייטס": "סטיישן"
 };
 
 function resolveBodyType(car, row) {
@@ -811,26 +168,20 @@ function resolveBodyType(car, row) {
         if (BODY_TYPE_MAP[clean.toUpperCase()]) return BODY_TYPE_MAP[clean.toUpperCase()];
         return clean;
     }
-
     const sug = toText(car?.sug_degem) || toText(row?.sug_degem);
     if (sug && BODY_TYPE_MAP[sug.trim().toUpperCase()]) {
         return BODY_TYPE_MAP[sug.trim().toUpperCase()];
     }
-
     return null;
 }
 
-// בדיקת תו נכה
 async function checkDisabled(plate) {
     try {
         const cleanPlate = String(plate).replace(/\D/g, "");
-        
         let records = await searchDatastore(DISABLED_ID, { "MISPAR RECHEV": cleanPlate }, 5);
-        
         if (!records || records.length === 0) {
             records = await searchDatastore(DISABLED_ID, { "MISPAR RECHEV": Number(cleanPlate) }, 5);
         }
-
         if (!records || records.length === 0) {
             const byText = await searchDatastore(DISABLED_ID, null, 10, cleanPlate);
             records = (byText || []).filter(r => {
@@ -838,7 +189,6 @@ async function checkDisabled(plate) {
                 return String(val).replace(/\D/g, "") === cleanPlate;
             });
         }
-
         if (records && records.length > 0) {
             const match = records[0];
             return {
@@ -847,15 +197,11 @@ async function checkDisabled(plate) {
                 issueDate: match["TAARICH HAFAKAT TAG"] || match["TAARICH_HAFAKAT_TAG"] || null
             };
         }
-
         return { hasBadge: false, badgeType: null, issueDate: null };
     } catch (e) {
-        console.error("[DISABLED BADGE ERROR]:", e.message);
         return { hasBadge: false, badgeType: null, issueDate: null, error: true };
     }
 }
-
-// ---------- מאגרים ----------
 
 async function fetchCarRecord(plate) {
     const records = await searchDatastore(CAR_REGISTRY_ID, { mispar_rechev: Number(plate) }, 1);
@@ -876,7 +222,6 @@ async function fetchOwnershipRows(plate) {
 
 function buildHistory(h) {
     if (!h) return null;
-
     const changes = [];
     if (Number(h.shinui_mivne_ind) === 1) changes.push("שינוי במבנה הרכב");
     if (Number(h.shnui_zeva_ind) === 1) changes.push("שינוי צבע");
@@ -892,7 +237,6 @@ function buildHistory(h) {
 
 async function findModelRow(car) {
     const year = car.shnat_yitzur != null ? Number(car.shnat_yitzur) : null;
-
     const attempts = [];
     if (car.tozeret_cd != null && car.degem_cd != null && year) {
         attempts.push({ tozeret_cd: Number(car.tozeret_cd), degem_cd: Number(car.degem_cd), shnat_yitzur: year });
@@ -909,21 +253,32 @@ async function findModelRow(car) {
     return null;
 }
 
-// ---------- API ----------
+// מיפוי תיבת הילוכים
+function resolveGearbox(val) {
+    const s = toText(val);
+    if (!s) return null;
+    if (s.includes("אוטומט") || s === "A" || s === "1") return "אוטומטית";
+    if (s.includes("ידני") || s === "M" || s === "2") return "ידנית";
+    if (s.includes("רובוט") || s.includes("כפול") || s === "R") return "רובוטית כפולת מצמדים";
+    if (s.includes("רציף") || s === "C") return "רציפה (CVT)";
+    return s;
+}
 
-app.get('/', (req, res) => {
-    res.status(200).send('Car API is running successfully!');
-});
+// מיפוי הנעה
+function resolveDrive(val) {
+    const s = toText(val);
+    if (!s) return "4X2 (הנעה רגילה)";
+    if (s.includes("4X4") || s.includes("4WD") || s.includes("AWD") || s.includes("כפולה")) return "4X4 (הנעה כפולה)";
+    if (s.includes("4X2") || s.includes("2WD")) return "4X2 (הנעה רגילה)";
+    return s;
+}
 
 app.get('/api/car/:plate', async (req, res) => {
     const plate = req.params.plate.replace(/\D/g, "");
-    const timestamp = new Date().toISOString();
 
     try {
         const car = await fetchCarRecord(plate);
-
         if (!car) {
-            console.warn(`[SEARCH LOG] ❌ 🚗 חיפוש רכב (לא נמצא במאגר): מספר ${plate} | שעה: ${timestamp}`);
             return res.json({ success: false, message: "המספר אינו קיים במאגר משרד התחבורה" });
         }
 
@@ -958,21 +313,43 @@ app.get('/api/car/:plate', async (req, res) => {
         }
         const modelTexts = [car.kinuy_mishari, car.degem_nm, car.ramat_gimur, model].filter(Boolean);
         const acceleration = lookupAccel(makeTexts, modelTexts, year, hp, engineCc);
-
         const hasDisabledBadge = Boolean(disabledResult?.hasBadge);
 
-        console.log(`--------------------------------------------------`);
-        console.log(`[SEARCH LOG] 🔍 מישהו חיפש רכב!`);
-        console.log(`📅 זמן: ${timestamp}`);
-        console.log(`🚗 מספר רכב: ${plate}`);
-        console.log(`🏭 יצרן ודגם: ${manufacturer} ${model} ${trim || ""} (${year})`);
-        console.log(`⚡ כוח סוס: ${hp != null ? hp : "לא ידוע"} | נפח: ${engineCc != null ? engineCc : "לא ידוע"}`);
-        console.log(`🏎️ מרכב: ${bodyType || "לא ידוע"}`);
-        console.log(`🏷️ סוג בעלות: ${currentOwnership || "לא ידוע"}`);
-        console.log(`🏁 תאוצה 0-100: ${acceleration ? acceleration.seconds + " שניות" : "לא נמצאה בטבלה"}`);
-        console.log(`♿ תג נכה: ${hasDisabledBadge ? "יש" : "אין"}`);
-        console.log(`🔁 מעברי בעלות: ${ownershipList.length}`);
-        console.log(`--------------------------------------------------`);
+        // ---------- חילוץ מפרט טכני ובטיחות מורחב ----------
+        const techSpecs = {
+            totalWeight: toNumber(row?.mishkal_kolel) ?? toNumber(car?.mishkal_kolel),
+            curbWeight: toNumber(row?.mishkal_atmi) ?? toNumber(car?.mishkal_atmi),
+            doors: toNumber(row?.mispar_dlatot) ?? toNumber(car?.mispar_dlatot),
+            seats: toNumber(row?.mispar_moshavim) ?? toNumber(car?.mispar_moshavim),
+            airbags: toNumber(row?.mispar_kariyot_avir) ?? toNumber(car?.mispar_kariyot_avir),
+            gearbox: resolveGearbox(row?.tevat_hiluchim || car?.tevat_hiluchim),
+            drive: resolveDrive(row?.hanaa_cd || car?.hanaa_cd),
+            towWithBrakes: toNumber(row?.kosher_grira_im_blamim) ?? toNumber(car?.kosher_grira_im_blamim),
+            towNoBrakes: toNumber(row?.kosher_grira_bli_blamim) ?? toNumber(car?.kosher_grira_bli_blamim),
+            hasHook: toBool(row?.vav_grira_ind || car?.vav_grira_ind) || false,
+            cargoBox: toText(row?.argaz_ind || car?.argaz_ind) || "ללא ארגז",
+            // אבזור ונוחות
+            ac: toBool(row?.mazgan_ind ?? 1), // ברוב המוחלט קיים
+            sunroof: toBool(row?.halon_bagag_ind || car?.halon_bagag_ind),
+            alloyWheels: toBool(row?.hishukey_magnesium_ind),
+            powerWindows: toNumber(row?.halonot_hashmal) ?? 4,
+            powerSteering: toBool(row?.hege_koah_ind ?? 1),
+            abs: toBool(row?.abs_ind ?? 1),
+            esp: toBool(row?.bakaat_yatzivut_ind ?? 1)
+        };
+
+        const safetySpecs = {
+            safetyScore: toNumber(row?.ramat_eivzur_betihuti) ?? toNumber(car?.ramat_eivzur_betihuti),
+            airbags: techSpecs.airbags,
+            esp: techSpecs.esp,
+            abs: techSpecs.abs,
+            autoBraking: toBool(row?.bliat_hirum_ind),
+            laneDeparture: toBool(row?.stiya_menativ_ind),
+            blindSpot: toBool(row?.shetah_met_ind),
+            adaptiveCruise: toBool(row?.bakarat_shyut_adaptivit_ind),
+            pedestrianDetection: toBool(row?.zihuy_holhey_regel_ind),
+            rearCamera: toBool(row?.matzlema_ahorit_ind)
+        };
 
         res.json({
             success: true,
@@ -1004,11 +381,13 @@ app.get('/api/car/:plate', async (req, res) => {
                 } : null,
                 bodyType: bodyType,
                 merkav: bodyType,
-                kmSinceTest: history?.kmSinceTest ?? null
+                kmSinceTest: history?.kmSinceTest ?? null,
+                techSpecs,
+                safetySpecs
             }
         });
     } catch (error) {
-        console.error(`[SEARCH LOG] 💥 שגיאה בחיפוש מספר ${plate}:`, error);
+        console.error(`שגיאה בחיפוש מספר ${plate}:`, error);
         res.status(500).json({ success: false, error: "שגיאה בשליפה" });
     }
 });
@@ -1027,33 +406,6 @@ app.get('/api/history/:plate', async (req, res) => {
         res.json({ success: true, history: history || {}, ownershipList });
     } catch (e) {
         res.status(500).json({ success: false, message: "שגיאה בשליפת ההיסטוריה" });
-    }
-});
-
-app.get('/api/debug/:plate', async (req, res) => {
-    try {
-        const car = await fetchCarRecord(req.params.plate);
-        if (!car) return res.json({ success: false, message: "לא נמצא" });
-        const row = await findModelRow(car);
-        const hist = await fetchHistoryRecord(req.params.plate);
-        const own = await fetchOwnershipRows(req.params.plate);
-        const disabledSample = await searchDatastore(DISABLED_ID, null, 1);
-        const disabledMatch = await checkDisabled(req.params.plate);
-        res.json({
-            success: true,
-            car_fields: Object.keys(car),
-            car,
-            model_row: row,
-            history: hist,
-            ownership: own,
-            disabled_sample_fields: disabledSample[0] ? Object.keys(disabledSample[0]) : [],
-            disabled_sample: disabledSample[0] || null,
-            disabled_match: disabledMatch,
-            accel_table_rows: accelTable.length
-        });
-    } catch (error) {
-        console.error("שגיאה:", error);
-        res.status(500).json({ success: false, error: error.message });
     }
 });
 
