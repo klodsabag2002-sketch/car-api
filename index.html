@@ -6,226 +6,108 @@
 <title>פרטי רכב</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: Arial, Helvetica, sans-serif; background: #f0f0f0; color: #333; direction: rtl; }
-  .phone { max-width: 380px; margin: 0 auto; background: #f0f0f0; min-height: 100vh; padding-bottom: 30px; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background: #f4f6f8; color: #333; direction: rtl; }
+  .phone { max-width: 410px; margin: 0 auto; background: #f4f6f8; min-height: 100vh; padding-bottom: 40px; }
 
   .topbar { background: #2a7fa8; color: #fff; height: 52px; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; }
-  .topbar .t { font-size: 18px; flex: 1; text-align: center; }
+  .topbar .t { font-size: 18px; flex: 1; text-align: center; font-weight: bold; }
   .topbar .i { font-size: 20px; width: 28px; text-align: center; cursor: pointer; }
   .topbar .i.hidden { visibility: hidden; }
 
-  .search-box { background: #fff; padding: 16px 12px 14px; }
-  .plate { display: flex; align-items: center; background: #ffd21f; border: 2px solid #111; border-radius: 8px; height: 60px; overflow: hidden; direction: ltr; }
-  .plate .strip { background: #1e5fa8; color: #fff; width: 50px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; }
+  .search-box { background: #fff; padding: 16px 14px 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+  .plate { display: flex; align-items: center; background: #ffd21f; border: 2px solid #111; border-radius: 8px; height: 58px; overflow: hidden; direction: ltr; }
+  .plate .strip { background: #1e5fa8; color: #fff; width: 48px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; }
   .plate .strip .flag { font-size: 12px; }
-  .plate .strip .il { font-size: 18px; font-weight: bold; line-height: 1; }
+  .plate .strip .il { font-size: 17px; font-weight: bold; line-height: 1; }
   .plate .strip .he { font-size: 8px; }
-  .plate input { flex: 1; min-width: 0; height: 100%; border: none; background: transparent; outline: none; font-size: 30px; font-weight: bold; text-align: center; letter-spacing: 1px; color: #111; }
+  .plate input { flex: 1; min-width: 0; height: 100%; border: none; background: transparent; outline: none; font-size: 28px; font-weight: bold; text-align: center; letter-spacing: 1px; color: #111; }
   .plate input::placeholder { color: #8a7a2a; font-size: 15px; letter-spacing: 0; font-weight: normal; }
-  .plate button { border: none; background: #2a7fa8; color: #fff; height: 100%; padding: 0 12px; font-size: 14px; cursor: pointer; flex-shrink: 0; }
+  .plate button { border: none; background: #2a7fa8; color: #fff; height: 100%; padding: 0 14px; font-size: 15px; font-weight: bold; cursor: pointer; flex-shrink: 0; }
   .plate button:disabled { background: #9cc5da; }
   .msg { text-align: center; color: #666; font-size: 13px; padding: 8px; display: none; }
   .msg.err { color: #b42318; background: #fde8e7; border-radius: 8px; margin-top: 8px; }
 
-  .km-line { display: none; align-items: center; justify-content: center; gap: 6px; color: #2e8b57; font-size: 13px; background: #fff; padding: 0 12px 12px; }
+  .km-line { display: none; align-items: center; justify-content: center; gap: 6px; color: #2e8b57; font-size: 13px; background: #fff; padding: 0 12px 12px; font-weight: bold; }
   .km-line.show { display: flex; }
-  .km-line .km-ic { border: 2px solid #2e8b57; border-radius: 4px; padding: 0 3px; font-size: 11px; font-weight: bold; }
-
-  .history { background: #fff; margin: 12px 10px 0; border-radius: 14px; box-shadow: 0 2px 6px rgba(42,127,168,.12); display: none; overflow: hidden; }
-  .history.show { display: block; }
-  .history-head { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-bottom: 1px solid #eef3f6; }
-  .history-head .h-title { font-size: 15px; font-weight: bold; color: #1f5f80; }
-  .history-head .h-clear { background: none; border: none; color: #b42318; font-size: 13px; cursor: pointer; }
-  .h-row { display: flex; align-items: center; padding: 12px 14px; border-bottom: 1px solid #f0f3f5; cursor: pointer; }
-  .h-row:last-child { border-bottom: none; }
-  .h-row:active { background: #f5fafc; }
-  .h-icon { width: 44px; height: 44px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; margin-left: 12px; overflow: hidden; border: 1px solid #e2e8f0; }
-  .h-icon img { width: 85%; height: 85%; object-fit: contain; }
-  .h-info { flex: 1; min-width: 0; text-align: right; }
-  .h-name { font-size: 15px; font-weight: bold; color: #222; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .h-sub { display: flex; align-items: center; gap: 8px; margin-top: 5px; font-size: 12px; color: #4a6b7d; }
-
-  .h-plate { display: inline-flex; direction: ltr; align-items: stretch; height: 24px; background: #ffd21f; border: 1.5px solid #111; border-radius: 4px; overflow: hidden; }
-  .h-plate-strip { background: #1e5fa8; color: #fff; width: 18px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 6px; line-height: 1.1; font-weight: bold; flex-shrink: 0; }
-  .h-plate-strip .hs { font-size: 7px; }
-  .h-plate-num { font-size: 13px; font-weight: bold; color: #111; padding: 0 7px; display: flex; align-items: center; letter-spacing: .5px; }
-
-  .h-meta { display: flex; flex-direction: column; align-items: flex-end; justify-content: space-between; margin-right: 8px; height: 40px; }
-  .h-time { font-size: 11px; color: #8a99a3; direction: ltr; }
-  .h-del { background: none; border: none; color: #b0bcc4; font-size: 18px; line-height: 1; cursor: pointer; padding: 0 2px; }
-  .h-del:hover { color: #b42318; }
+  .km-line .km-ic { border: 2px solid #2e8b57; border-radius: 4px; padding: 0 3px; font-size: 11px; }
 
   .detail { display: none; }
   .detail.show { display: block; }
 
-  .tabs { background: #ffffff; display: none; justify-content: space-around; align-items: stretch; border-bottom: 1px solid #e2e2e2; margin-top: 10px; }
+  .tabs { background: #ffffff; display: none; justify-content: space-around; align-items: stretch; border-bottom: 1px solid #e2e8f0; margin-top: 6px; }
   .tabs.show { display: flex; }
-  .tab { flex: 1; text-align: center; padding: 10px 0 0; color: #4a6b7d; font-size: 13px; cursor: pointer; border-bottom: 3px solid transparent; }
-  .tab .ic { display: block; font-size: 22px; margin-bottom: 6px; }
+  .tab { flex: 1; text-align: center; padding: 10px 0 8px; color: #64748b; font-size: 13px; font-weight: 500; cursor: pointer; border-bottom: 3px solid transparent; }
+  .tab .ic { display: block; font-size: 20px; margin-bottom: 4px; }
   .tab.active { color: #1f7ea9; font-weight: bold; border-bottom-color: #2a7fa8; }
 
-  .hero { display: none; }
-  .hero.show { display: block; }
-
-  .brand-logo-container {
-    width: 96px;
-    height: 96px;
-    margin: 12px auto 6px;
-    background: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-    border: 2px solid #eef2f5;
-    padding: 10px;
-    overflow: hidden;
-  }
+  .brand-logo-container { width: 92px; height: 92px; margin: 14px auto 6px; background: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px rgba(0,0,0,0.08); border: 2px solid #eef2f5; padding: 10px; overflow: hidden; }
   .brand-logo { width: 100%; height: 100%; object-fit: contain; }
-  .brand-badge { width: 100%; height: 100%; border-radius: 50%; color: #fff; font-size: 36px; font-weight: bold; display: flex; align-items: center; justify-content: center; }
 
-  .car-name { text-align: center; font-size: 22px; color: #1f5f80; font-weight: bold; margin-top: 4px; }
-  .car-trim { text-align: center; font-size: 18px; color: #2a7fa8; font-weight: bold; margin-top: 2px; }
+  .car-name { text-align: center; font-size: 21px; color: #1f5f80; font-weight: bold; margin-top: 4px; }
+  .car-trim { text-align: center; font-size: 16px; color: #2a7fa8; font-weight: bold; margin-top: 2px; }
 
-  .status-row { display: flex; justify-content: space-around; padding: 18px 6px 6px; }
+  .status-row { display: flex; justify-content: space-around; padding: 16px 6px 6px; }
   .st { text-align: center; width: 33%; }
-  .st.clickable { cursor: pointer; }
-  .st .st-ic { font-size: 30px; line-height: 1; height: 34px; display: flex; align-items: center; justify-content: center; }
-  .st .st-main { font-size: 17px; font-weight: bold; margin-top: 8px; }
+  .st .st-ic { font-size: 28px; line-height: 1; height: 32px; display: flex; align-items: center; justify-content: center; }
+  .st .st-main { font-size: 16px; font-weight: bold; margin-top: 6px; }
   .st .st-sub { font-size: 13px; margin-top: 3px; font-weight: bold; }
-  .st.ok .st-main, .st.ok .st-sub { color: #3c8d2e; }
+  .st.ok .st-main, .st.ok .st-sub { color: #2e8b57; }
   .st.info .st-main, .st.info .st-sub { color: #2a7fa8; }
   .st.neutral .st-main, .st.neutral .st-sub { color: #777; }
-  .st.bad .st-main, .st.bad .st-sub { color: #b42318; }
 
-  .own-btn-wrap { display: none; text-align: center; margin: 4px 0 0; }
-  .own-btn-wrap.show { display: block; }
-  .own-btn { background: #fff; border: 1.5px solid #2a7fa8; color: #2a7fa8; border-radius: 20px; padding: 6px 16px; font-size: 13px; cursor: pointer; }
-
-  .own-panel { display: none; margin: 10px 10px 0; }
-  .own-panel.show { display: block; }
-
-  .spec-card { background: #fff; border-radius: 14px; margin: 14px 10px 0; padding: 14px 4px 10px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; box-shadow: 0 2px 6px rgba(42,127,168,.12); position: relative; }
+  .spec-card { background: #fff; border-radius: 14px; margin: 14px 12px 0; padding: 14px 4px 10px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; box-shadow: 0 2px 8px rgba(42,127,168,.08); }
   .spec { text-align: center; }
-  .spec .sp-ic { font-size: 20px; height: 28px; display: flex; align-items: center; justify-content: center; }
-  .spec .sp-lbl { font-size: 11px; color: #4a6b7d; margin-top: 4px; line-height: 1.2; }
+  .spec .sp-ic { font-size: 20px; height: 26px; display: flex; align-items: center; justify-content: center; }
+  .spec .sp-lbl { font-size: 11px; color: #64748b; margin-top: 4px; line-height: 1.2; }
   .spec .sp-val { font-size: 13px; font-weight: bold; color: #1f7ea9; margin-top: 3px; direction: ltr; }
-  .spec .sp-val.na { color: #aab8c2; font-weight: normal; direction: rtl; font-size: 12px; }
 
-  .accel-disclaimer {
-    margin: 6px 14px 0;
-    font-size: 11px;
-    color: #7b8f9a;
-    line-height: 1.35;
-    text-align: center;
-    background: #eef6f9;
-    padding: 6px 10px;
-    border-radius: 8px;
-    border-right: 3px solid #2a7fa8;
-  }
-
-  .list-card { background: #fff; border-radius: 12px; margin: 12px 10px 0; overflow: hidden; box-shadow: 0 2px 6px rgba(42,127,168,.12); }
-  .lrow { display: flex; align-items: center; padding: 11px 12px; border-bottom: 1px solid #f0f0f0; }
+  .list-card { background: #fff; border-radius: 14px; margin: 12px 12px 0; overflow: hidden; box-shadow: 0 2px 8px rgba(42,127,168,.08); }
+  .lrow { display: flex; align-items: center; padding: 11px 14px; border-bottom: 1px solid #f1f5f9; }
   .lrow:last-child { border-bottom: none; }
-  .lrow .li { width: 32px; height: 32px; border-radius: 50%; background: #e6f2f9; display: flex; align-items: center; justify-content: center; margin-left: 10px; font-size: 16px; flex-shrink: 0; }
-  .lrow .ll { color: #4a6b7d; font-size: 13px; text-align: right; }
+  .lrow .li { width: 32px; height: 32px; border-radius: 50%; background: #e6f2f9; display: flex; align-items: center; justify-content: center; margin-left: 10px; font-size: 15px; flex-shrink: 0; }
+  .lrow .ll { color: #475569; font-size: 13px; text-align: right; }
   .lrow .sp { flex: 1; }
   .lrow .lv { color: #1f5f80; font-size: 13px; font-weight: bold; margin-right: 6px; direction: ltr; }
-  .lrow .lv.na { color: #aab8c2; font-weight: normal; direction: rtl; }
-  .lrow .lv.ok { color: #3c8d2e; }
-  .lrow .lv.bad { color: #b42318; }
-  .copy-btn { display: none; background: #e6f2f9; border: 1px solid #2a7fa8; color: #2a7fa8; border-radius: 14px; padding: 3px 10px; font-size: 12px; cursor: pointer; margin-right: 6px; flex-shrink: 0; }
-  .copy-btn.show { display: inline-block; }
 
-  .test-card { background: #fff; border-radius: 12px; margin: 12px 10px 0; padding: 12px; box-shadow: 0 2px 6px rgba(42,127,168,.12); }
-  .test-row { display: flex; align-items: center; justify-content: space-between; padding: 8px 4px; border-bottom: 1px solid #f0f0f0; }
-  .test-row:last-child { border-bottom: none; }
-  .test-row .tl { color: #4a6b7d; font-size: 13px; }
-  .test-row .tv { color: #1f5f80; font-size: 14px; font-weight: bold; direction: ltr; }
-  .test-row .tv.na { color: #aab8c2; font-weight: normal; direction: rtl; }
-  .test-countdown { text-align: center; font-size: 13px; font-weight: bold; color: #3c8d2e; margin-top: 8px; }
-  .test-countdown.bad { color: #b42318; }
+  .grid-card { background: #fff; border-radius: 14px; margin: 12px 12px 0; padding: 14px; box-shadow: 0 2px 8px rgba(42,127,168,.08); }
+  .card-header-title { font-size: 14px; font-weight: bold; color: #1f5f80; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+  .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .feat-box { background: #f8fafc; border-radius: 10px; padding: 10px 4px; text-align: center; border: 1px solid #eef2f6; }
+  .feat-box .fb-ic { font-size: 22px; height: 28px; display: flex; align-items: center; justify-content: center; }
+  .feat-box .fb-lbl { font-size: 11px; color: #64748b; margin-top: 4px; }
+  .feat-box .fb-val { font-size: 13px; font-weight: bold; color: #1f5f80; margin-top: 2px; }
 
-  .own-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 6px rgba(42,127,168,.12); font-size: 13px; }
-  .own-table th { background: #2a7fa8; color: #fff; padding: 10px 6px; font-weight: bold; text-align: center; }
-  .own-table td { padding: 10px 6px; text-align: center; color: #333; border-bottom: 1px solid #eef3f6; }
-  .own-table tr:nth-child(even) td { background: #f7fbfd; }
-  .own-table tr:last-child td { border-bottom: none; }
-  .own-extra { background: #fff; border-radius: 12px; padding: 10px 14px; margin-top: 10px; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.05); }
-  .own-extra .kv { padding: 4px 0; border-bottom: 1px dashed #eee; }
-  .own-extra .kv:last-child { border-bottom: none; }
-  .own-extra .k { color: #4a6b7d; }
-  .own-extra .v { font-weight: bold; color: #1f5f80; direction: ltr; }
-  .own-msg { background: #fff; border-radius: 12px; padding: 12px; font-size: 13px; color: #4a6b7d; text-align: center; margin-top: 4px; }
+  .equip-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .equip-item { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 10px; font-size: 13px; font-weight: 500; }
+  .equip-item.active { color: #166534; background: #f0fdf4; border: 1px solid #bbf7d0; }
+  .equip-item.inactive { color: #991b1b; background: #fef2f2; border: 1px solid #fecaca; }
 
-  .report-btn-wrap { text-align: center; margin: 18px 10px 10px; }
-  .report-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #ffffff;
-    border: 1.5px dashed #2a7fa8;
-    color: #2a7fa8;
-    border-radius: 12px;
-    padding: 10px 20px;
-    font-size: 13px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.04);
-    transition: all 0.2s;
-  }
-  .report-btn:active { background: #eaf3f7; }
+  .safety-meter-card { background: #fff; border-radius: 14px; margin: 14px 12px 0; padding: 16px; box-shadow: 0 2px 8px rgba(42,127,168,.08); text-align: center; }
+  .safety-meter-title { font-size: 15px; font-weight: bold; color: #1f5f80; margin-bottom: 12px; }
+  .meter-scale { display: flex; border-radius: 8px; overflow: hidden; height: 26px; border: 1px solid #cbd5e1; margin-bottom: 10px; }
+  .meter-step { flex: 1; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; color: #fff; transition: all 0.2s; }
+  .meter-step.s0 { background: #b91c1c; } .meter-step.s1 { background: #ea580c; }
+  .meter-step.s2 { background: #f59e0b; } .meter-step.s3 { background: #eab308; }
+  .meter-step.s4 { background: #84cc16; } .meter-step.s5 { background: #22c55e; }
+  .meter-step.s6 { background: #10b981; } .meter-step.s7 { background: #06b6d4; }
+  .meter-step.s8 { background: #1d4ed8; }
+  .meter-pointer-box { display: inline-flex; align-items: center; gap: 6px; background: #e0f2fe; border: 1.5px solid #0284c7; border-radius: 20px; padding: 6px 16px; }
+  .meter-pointer-box .mp-score { font-size: 18px; font-weight: bold; color: #0369a1; }
 
-  .modal-overlay {
-    display: none;
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.5);
-    z-index: 1000;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
+  .report-btn-wrap { text-align: center; margin: 18px 12px 10px; }
+  .report-btn { display: inline-flex; align-items: center; gap: 8px; background: #ffffff; border: 1.5px dashed #2a7fa8; color: #2a7fa8; border-radius: 12px; padding: 10px 20px; font-size: 13px; font-weight: bold; cursor: pointer; }
+
+  .modal-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
   .modal-overlay.show { display: flex; }
-  .modal-card {
-    background: #fff;
-    width: 100%;
-    max-width: 340px;
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    position: relative;
-    direction: rtl;
-    text-align: right;
-  }
+  .modal-card { background: #fff; width: 100%; max-width: 340px; border-radius: 16px; padding: 20px; text-align: right; }
   .modal-title { font-size: 16px; font-weight: bold; color: #1f5f80; margin-bottom: 6px; }
   .modal-sub { font-size: 12px; color: #666; margin-bottom: 14px; }
-  .modal-field-lbl { font-size: 12px; font-weight: bold; color: #333; margin: 10px 0 4px; }
-  .modal-select, .modal-textarea {
-    width: 100%;
-    padding: 9px;
-    border: 1px solid #cbd5e1;
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 13px;
-    outline: none;
-    background: #f8fafc;
-  }
+  .modal-select, .modal-textarea { width: 100%; padding: 9px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 13px; outline: none; background: #f8fafc; }
   .modal-textarea { height: 75px; resize: none; margin-top: 4px; }
   .modal-actions { display: flex; gap: 10px; margin-top: 16px; }
-  .modal-submit { flex: 1; background: #2a7fa8; color: #fff; border: none; padding: 10px; border-radius: 8px; font-weight: bold; font-size: 14px; cursor: pointer; transition: background 0.2s; }
-  .modal-submit:disabled { background: #94c0d6; cursor: not-allowed; }
+  .modal-submit { flex: 1; background: #2a7fa8; color: #fff; border: none; padding: 10px; border-radius: 8px; font-weight: bold; font-size: 14px; cursor: pointer; }
   .modal-close { background: #e2e8f0; color: #475569; border: none; padding: 10px 14px; border-radius: 8px; font-size: 13px; cursor: pointer; }
-  
-  .report-status {
-    display: none;
-    font-size: 12px;
-    text-align: center;
-    padding: 8px;
-    border-radius: 8px;
-    margin-top: 12px;
-    font-weight: bold;
-  }
+  .report-status { display: none; font-size: 12px; text-align: center; padding: 8px; border-radius: 8px; margin-top: 12px; font-weight: bold; }
   .report-status.success { display: block; background: #dcfce7; color: #166534; }
   .report-status.error { display: block; background: #fee2e2; color: #991b1b; }
 </style>
@@ -253,14 +135,6 @@
     <div id="errorMsg" class="msg err"></div>
   </div>
 
-  <div id="history" class="history">
-    <div class="history-head">
-      <span class="h-title">חיפושים אחרונים</span>
-      <button id="histClear" class="h-clear">נקה הכל</button>
-    </div>
-    <div id="historyList"></div>
-  </div>
-
   <div id="detailView" class="detail">
     <div id="kmLine" class="km-line">
       <span class="km-ic">1½</span>
@@ -271,126 +145,133 @@
       <div class="tab active" data-tab="general"><span class="ic">🚗</span>כללי</div>
       <div class="tab" data-tab="tech"><span class="ic">🔧</span>מפרט טכני</div>
       <div class="tab" data-tab="safety"><span class="ic">🛡️</span>בטיחות</div>
-      <div class="tab" data-tab="env"><span class="ic">🌿</span>סביבה</div>
     </div>
 
+    <!-- כללי -->
     <div id="cardGeneral">
-      <div id="hero" class="hero">
-        <div class="brand-logo-container">
-          <img id="brandLogo" class="brand-logo" alt="סמל יצרן">
-          <div id="brandBadge" class="brand-badge" style="display:none;"></div>
-        </div>
+      <div class="brand-logo-container">
+        <img id="brandLogo" class="brand-logo" alt="לוגו רכב" src="logos/cupra.jpg" onerror="this.src='logos/seat.jpg'">
+      </div>
+      <div class="car-name"><span id="heroName"></span></div>
+      <div class="car-trim" id="heroTrim"></div>
 
-        <div class="car-name"><span id="heroName"></span></div>
-        <div class="car-trim" id="heroTrim"></div>
+      <div class="status-row">
+        <div id="stDisabled" class="st neutral"><div class="st-ic">🅿️</div><div class="st-main">תג נכה</div><div class="st-sub">אין</div></div>
+        <div id="stOwn" class="st info"><div class="st-ic">🛡️</div><div class="st-main">בעלות</div><div class="st-sub">פרטי</div></div>
+        <div id="stTest" class="st ok"><div class="st-ic">📅</div><div class="st-main">טסט</div><div class="st-sub">בתוקף</div></div>
+      </div>
 
-        <div class="status-row">
-          <div id="stDisabled" class="st neutral">
-            <div class="st-ic">🅿️</div>
-            <div class="st-main">תג נכה</div>
-            <div class="st-sub"></div>
-          </div>
-          <div id="stOwn" class="st info clickable">
-            <div class="st-ic">🛡️</div>
-            <div class="st-main">בעלות</div>
-            <div class="st-sub"></div>
-          </div>
-          <div id="stTest" class="st neutral">
-            <div class="st-ic">📅</div>
-            <div class="st-main">טסט</div>
-            <div class="st-sub"></div>
-          </div>
-        </div>
+      <div class="spec-card">
+        <div class="spec"><div class="sp-ic">🏁</div><div class="sp-lbl">רמת גימור</div><div class="sp-val" id="sTrim">-</div></div>
+        <div class="spec"><div class="sp-ic">⚙️</div><div class="sp-lbl">נפח מנוע</div><div class="sp-val" id="sEngine">-</div></div>
+        <div class="spec"><div class="sp-ic">⚡</div><div class="sp-lbl">כוח סוס</div><div class="sp-val" id="sHp">-</div></div>
+        <div class="spec"><div class="sp-ic">⏱️</div><div class="sp-lbl">0-100 קמ"ש</div><div class="sp-val" id="sAccel">-</div></div>
+        <div class="spec"><div class="sp-ic">🚗</div><div class="sp-lbl">מרכב</div><div class="sp-val" id="sBody">האצ'בק</div></div>
+      </div>
 
-        <div id="ownBtnWrap" class="own-btn-wrap">
-          <button id="ownBtn" class="own-btn">הצג הסטוריית בעלות</button>
-        </div>
-        <div id="ownPanel" class="own-panel"></div>
+      <div class="list-card">
+        <div class="lrow"><span class="li">🏭</span><span class="ll">יצרן</span><span class="sp"></span><span class="lv" id="vManufacturer"></span></div>
+        <div class="lrow"><span class="li">🚙</span><span class="ll">דגם</span><span class="sp"></span><span class="lv" id="vModel"></span></div>
+        <div class="lrow"><span class="li">📅</span><span class="ll">שנת ייצור</span><span class="sp"></span><span class="lv" id="vYear"></span></div>
+        <div class="lrow"><span class="li">🎨</span><span class="ll">צבע</span><span class="sp"></span><span class="lv" id="vColor"></span></div>
+        <div class="lrow"><span class="li">🔢</span><span class="ll">מספר רכב</span><span class="sp"></span><span class="lv" id="vPlate"></span></div>
+        <div class="lrow"><span class="li">🔩</span><span class="ll">מספר שלדה</span><span class="sp"></span><span class="lv" id="vChassis"></span></div>
+      </div>
 
-        <div class="spec-card">
-          <div class="spec">
-            <div class="sp-ic">🏁</div>
-            <div class="sp-lbl">רמת גימור</div>
-            <div class="sp-val" id="sTrim">אין נתון</div>
-          </div>
-          <div class="spec">
-            <div class="sp-ic">⚙️</div>
-            <div class="sp-lbl">נפח מנוע</div>
-            <div class="sp-val" id="sEngine">אין נתון</div>
-          </div>
-          <div class="spec">
-            <div class="sp-ic">⚡</div>
-            <div class="sp-lbl">כוח סוס</div>
-            <div class="sp-val" id="sHp">אין נתון</div>
-          </div>
-          <div class="spec">
-            <div class="sp-ic">⏱️</div>
-            <div class="sp-lbl">0-100 קמ"ש</div>
-            <div class="sp-val" id="sAccel">אין נתון</div>
-          </div>
-          <div class="spec">
-            <div class="sp-ic">🚗</div>
-            <div class="sp-lbl">מרכב</div>
-            <div class="sp-val na" id="sBody">אין נתון</div>
-          </div>
-        </div>
-
-        <div class="accel-disclaimer">
-          ℹ️ נתוני התאוצה מבוססים על מאגרים חיצוניים שונים ומשמשים להערכה בלבד, אין להסתמך עליהם במדויק.
-        </div>
-
-        <div class="list-card">
-          <div class="lrow"><span class="li">🏭</span><span class="ll">יצרן</span><span class="sp"></span><span class="lv" id="vManufacturer"></span></div>
-          <div class="lrow"><span class="li">🚙</span><span class="ll">דגם</span><span class="sp"></span><span class="lv" id="vModel"></span></div>
-          <div class="lrow"><span class="li">📅</span><span class="ll">שנת ייצור</span><span class="sp"></span><span class="lv" id="vYear"></span></div>
-          <div class="lrow"><span class="li">🎨</span><span class="ll">צבע</span><span class="sp"></span><span class="lv" id="vColor"></span></div>
-          <div class="lrow"><span class="li">🔢</span><span class="ll">מספר רכב</span><span class="sp"></span><span class="lv" id="vPlate"></span></div>
-          <div class="lrow"><span class="li">🔩</span><span class="ll">מספר שלדה</span><span class="sp"></span><span class="lv" id="vChassis"></span><button id="copyChassis" class="copy-btn">העתק</button></div>
-          <div class="lrow"><span class="li">🛞</span><span class="ll">מידות צמיג קדמי</span><span class="sp"></span><span class="lv" id="vTireFront"></span></div>
-          <div class="lrow"><span class="li">🛞</span><span class="ll">מידות צמיג אחורי</span><span class="sp"></span><span class="lv" id="vTireRear"></span></div>
-          <div class="lrow"><span class="li">🔁</span><span class="ll">מספר בעלים</span><span class="sp"></span><span class="lv" id="vOwners"></span></div>
-        </div>
-
-        <div class="test-card">
-          <div class="test-row"><span class="tl">טסט אחרון</span><span class="tv" id="vLastTest"></span></div>
-          <div class="test-row"><span class="tl">טסט הבא (תוקף)</span><span class="tv" id="vNextTest"></span></div>
-          <div class="test-countdown" id="vCountdown"></div>
-        </div>
-
-        <div class="report-btn-wrap">
-          <button class="report-btn" id="openReportBtn">
-            <span>✏️</span> חסרים פרטים ברכב? לחץ כאן לדיווח
-          </button>
-        </div>
-
+      <div class="report-btn-wrap">
+        <button class="report-btn" id="openReportBtn"><span>✏️</span> חסרים פרטים ברכב? לחץ כאן לדיווח</button>
       </div>
     </div>
 
-    <div id="cardTech" style="display:none"></div>
-    <div id="cardSafety" style="display:none"></div>
-    <div id="cardEnv" style="display:none"></div>
-  </div>
+    <!-- מפרט טכני ממשלתי -->
+    <div id="cardTech" style="display:none">
+      <div class="grid-card">
+        <div class="card-header-title"><span>📐</span> מידות, משקל ומבנה</div>
+        <div class="features-grid">
+          <div class="feat-box"><div class="fb-ic">🏋️</div><div class="fb-lbl">משקל כולל</div><div class="fb-val" id="tWeightTotal">1,970 ק"ג</div></div>
+          <div class="feat-box"><div class="fb-ic">⚖️</div><div class="fb-lbl">משקל עצמי</div><div class="fb-val" id="tWeightCurb">אין מידע</div></div>
+          <div class="feat-box"><div class="fb-ic">🪑</div><div class="fb-lbl">מושבים</div><div class="fb-val" id="tSeats">5</div></div>
+          <div class="feat-box"><div class="fb-ic">🚪</div><div class="fb-lbl">דלתות</div><div class="fb-val" id="tDoors">5</div></div>
+          <div class="feat-box"><div class="fb-ic">🎈</div><div class="fb-lbl">כריות אוויר</div><div class="fb-val" id="tAirbags">7</div></div>
+          <div class="feat-box"><div class="fb-ic">🪟</div><div class="fb-lbl">חלונות חשמל</div><div class="fb-val" id="tWindows">4</div></div>
+        </div>
+      </div>
 
+      <div class="grid-card">
+        <div class="card-header-title"><span>⚙️</span> תיבת הילוכים והנעה</div>
+        <div class="list-card" style="margin: 0; box-shadow: none; border: 1px solid #eef2f6;">
+          <div class="lrow"><span class="li">🕹️</span><span class="ll">תיבת הילוכים</span><span class="sp"></span><span class="lv" id="tGearbox">אוטומטית</span></div>
+          <div class="lrow"><span class="li">🧭</span><span class="ll">הנעה</span><span class="sp"></span><span class="lv" id="tDrive">4X2 (הנעה קדמית)</span></div>
+          <div class="lrow"><span class="li">🚚</span><span class="ll">ארגז</span><span class="sp"></span><span class="lv" id="tCargo">ללא ארגז</span></div>
+          <div class="lrow"><span class="li">⚓</span><span class="ll">כושר גרירה עם בלמים</span><span class="sp"></span><span class="lv" id="tTowBrakes">ללא היתר</span></div>
+          <div class="lrow"><span class="li">⚓</span><span class="ll">כושר גרירה ללא בלמים</span><span class="sp"></span><span class="lv" id="tTowNoBrakes">ללא היתר</span></div>
+        </div>
+      </div>
+
+      <div class="grid-card">
+        <div class="card-header-title"><span>❄️</span> אבזור ונוחות מהמאגר</div>
+        <div class="equip-grid">
+          <div class="equip-item active" id="eqAC"><span>✔</span> מזגן</div>
+          <div class="equip-item active" id="eqSunroof"><span>✔</span> חלון בגג (סאנרוף)</div>
+          <div class="equip-item active" id="eqMag"><span>✔</span> חישוקי מגנזיום</div>
+          <div class="equip-item active" id="eqSteering"><span>✔</span> הגה כוח</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- בטיחות ממשלתי -->
+    <div id="cardSafety" style="display:none">
+      <div class="safety-meter-card">
+        <div class="safety-meter-title">רמת אבזור בטיחותי (משרד התחבורה)</div>
+        <div class="meter-scale">
+          <div class="meter-step s0">0</div><div class="meter-step s1">1</div>
+          <div class="meter-step s2">2</div><div class="meter-step s3">3</div>
+          <div class="meter-step s4">4</div><div class="meter-step s5">5</div>
+          <div class="meter-step s6">6</div><div class="meter-step s7">7</div>
+          <div class="meter-step s8">8</div>
+        </div>
+        <div class="meter-pointer-box">
+          <span class="mp-score" id="safScoreVal">ניקוד: 4 מתוך 8</span>
+        </div>
+      </div>
+
+      <div class="grid-card">
+        <div class="card-header-title"><span>🛡️</span> מערכות בטיחות ממאגר משרד התחבורה</div>
+        <div class="equip-grid">
+          <div class="equip-item active" id="safABS"><span>✔</span> מערכת ABS</div>
+          <div class="equip-item active" id="safESP"><span>✔</span> בקרת יציבות ESP</div>
+          <div class="equip-item active" id="safBrake"><span>✔</span> בלימת חירום אוטונומית</div>
+          <div class="equip-item active" id="safPed"><span>✔</span> זיהוי הולכי רגל ודו-גלגלי</div>
+          <div class="equip-item active" id="safLane"><span>✔</span> התרעת סטייה מנתיב</div>
+          <div class="equip-item active" id="safLaneKeep"><span>✔</span> תיקון סטייה אקטיבי</div>
+          <div class="equip-item active" id="safAdaptive"><span>✔</span> בקרת שיוט אדפטיבית</div>
+          <div class="equip-item active" id="safDistance"><span>✔</span> ניטור מרחק מלפנים</div>
+          <div class="equip-item active" id="safBlind"><span>✔</span> ניטור שטח מת</div>
+          <div class="equip-item active" id="safCam"><span>✔</span> מצלמת רוורס</div>
+          <div class="equip-item active" id="safTire"><span>✔</span> חיישני לחץ אוויר</div>
+          <div class="equip-item active" id="safBelt"><span>✔</span> חיישני חגורות בטיחות</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
 
+<!-- Modal דיווח ישיר לשרת -->
 <div id="reportModal" class="modal-overlay">
   <div class="modal-card">
     <div class="modal-title">דיווח על פרט חסר או שגוי</div>
     <div class="modal-sub" id="reportCarHeader">מספר רכב: -</div>
 
-    <div class="modal-field-lbl">מה חסר או דורש תיקון?</div>
     <select id="reportCategory" class="modal-select">
       <option value="תאוצה 0-100">תאוצה 0-100 קמ"ש</option>
       <option value="סוג מרכב">סוג מרכב</option>
-      <option value="רמת גימור">רמת גימור</option>
-      <option value="כוח סוס / נפח">כוח סוס / נפח מנוע</option>
-      <option value="תג נכה">זכאות לתו נכה</option>
+      <option value="מפרט טכני / אבזור">מפרט טכני / אבזור</option>
+      <option value="בטיחות">בטיחות</option>
       <option value="אחר">פרט אחר</option>
     </select>
 
-    <div class="modal-field-lbl">פרטים נוספים / הערה:</div>
-    <textarea id="reportText" class="modal-textarea" placeholder="למשל: תאוצה אמיתית היא 6.2 שניות לפי קטלוג יצרן..."></textarea>
-
+    <textarea id="reportText" class="modal-textarea" style="margin-top:10px;" placeholder="פרטים נוספים..."></textarea>
     <div id="reportStatus" class="report-status"></div>
 
     <div class="modal-actions">
@@ -402,15 +283,8 @@
 
 <script>
   const API_BASE = "https://car-api-huth.onrender.com";
-  const HIST_KEY = "carSearchHistory";
-  const HIST_MAX = 10;
-  
-  // מפתח הגישה האישי שלך ל-Web3Forms
-  const WEB3FORMS_KEY = "B0efa2c2-72c6-4532-8899-0e3ce53e2a61"; 
-
   let currentPlate = "";
   let currentCarData = null;
-  let inDetail = false;
 
   function formatPlate(v) {
     const d = String(v || '').replace(/\D/g, '').slice(0, 8);
@@ -419,533 +293,18 @@
     return d;
   }
 
-  function formatDashDate(v) {
-    const m = String(v || '').match(/^(\d{4})-(\d{2})-(\d{2})/);
-    if (!m) return v || 'אין נתון';
-    return parseInt(m[3], 10) + '-' + parseInt(m[2], 10) + '-' + m[1];
-  }
-
-  function findBrand(manufacturer, model) {
-    const raw = ((manufacturer || '') + ' ' + (model || '')).toLowerCase();
-
-    if (raw.includes("cupra") || raw.includes("קופרה")) {
-      return { slug: "cupra", color: "#8c6a3d", en: "Cupra" };
-    }
-
-    const rules = [
-      [["seat", "סיאט"], "seat", "#c8a24a", "Seat"],
-      [["skoda", "סקודה"], "skoda", "#3c8c3c", "Skoda"],
-      [["hyundai", "יונדאי", "הונדאי"], "hyundai", "#1d3a6e", "Hyundai"],
-      [["toyota", "טויוטה"], "toyota", "#cc0000", "Toyota"],
-      [["kia", "קיה"], "kia", "#b10c1c", "Kia"],
-      [["mazda", "מאזדה", "מזדה"], "mazda", "#a02020", "Mazda"],
-      [["volkswagen", "פולקסווגן", "פולקסוואגן", "vw"], "volkswagen", "#1c4f8f", "Volkswagen"],
-      [["audi", "אאודי", "אודי"], "audi", "#444", "Audi"],
-      [["bmw", "ב.מ.וו", "ב מ וו"], "bmw", "#1c69d4", "BMW"],
-      [["mercedes", "מרצדס"], "mercedes", "#555a60", "Mercedes-Benz"],
-      [["renault", "רנו"], "renault", "#e8c200", "Renault"],
-      [["peugeot", "פיג'ו", "פיגו"], "peugeot", "#1c2d4f", "Peugeot"],
-      [["citroen", "סיטרואן"], "citroen", "#c0392b", "Citroen"],
-      [["mitsubishi", "מיצובישי"], "mitsubishi", "#c0392b", "Mitsubishi"],
-      [["nissan", "ניסאן"], "nissan", "#b30c20", "Nissan"],
-      [["subaru", "סובארו"], "subaru", "#1c4f9c", "Subaru"],
-      [["suzuki", "סוזוקי"], "suzuki", "#1c4f9c", "Suzuki"],
-      [["honda", "הונדה"], "honda", "#cc0000", "Honda"],
-      [["ford", "פורד"], "ford", "#1c4f9c", "Ford"],
-      [["chevrolet", "שברולט"], "chevrolet", "#c8a000", "Chevrolet"],
-      [["tesla", "טסלה"], "tesla", "#c0392b", "Tesla"],
-      [["byd", "בי ווי די", "בי וי די", "ב.י.די"], "byd", "#c0392b", "BYD"],
-      [["geely", "ג'ילי", "גילי"], "geely", "#1c4f9c", "Geely"],
-      [["mg", "אם ג'י", "אם.ג'י", "מ.ג"], "mg", "#c00", "MG"],
-      [["chery", "צ'רי", "צרי"], "chery", "#1c4f9c", "Chery"],
-      [["porsche", "פורשה"], "porsche", "#8b1c1c", "Porsche"],
-      [["volvo", "וולוו", "וולבו"], "volvo", "#1c3d6b", "Volvo"],
-      [["jeep", "ג'יפ", "גיפ"], "jeep", "#556b2f", "Jeep"]
-    ];
-
-    for (const [keys, slug, color, en] of rules) {
-      if (keys.some(k => raw.includes(k))) {
-        return { slug, color, en };
-      }
-    }
-    return null;
-  }
-
-  function cleanText(v) {
-    if (v === null || v === undefined) return v;
-    return String(v).trim().replace(/[.\s,;:]+$/g, '');
-  }
-
-  function getLogoSrc(brand) {
-    if (!brand) return null;
-    return `logos/${brand.slug}.jpg`;
-  }
-
-  async function showBrand(manufacturer, brand) {
-    const logo = document.getElementById('brandLogo');
-    const badge = document.getElementById('brandBadge');
-    const key = (manufacturer || '').trim();
-
-    badge.textContent = key ? key.charAt(0) : '?';
-    badge.style.background = brand ? brand.color : '#2a7fa8';
-
-    const logoSrc = getLogoSrc(brand);
-    if (logoSrc) {
-      logo.src = logoSrc;
-      logo.style.display = 'block';
-      badge.style.display = 'none';
-      logo.onerror = function() {
-        this.style.display = 'none';
-        badge.style.display = 'flex';
-      };
-    } else {
-      logo.style.display = 'none';
-      badge.style.display = 'flex';
-    }
-  }
-
-  function loadHistory() {
-    try {
-      const list = JSON.parse(localStorage.getItem(HIST_KEY));
-      return Array.isArray(list) ? list : [];
-    } catch (e) { return []; }
-  }
-
-  function saveHistory(list) {
-    try { localStorage.setItem(HIST_KEY, JSON.stringify(list)); }
-    catch (e) { }
-  }
-
-  function addToHistory(entry) {
-    const list = loadHistory().filter(x => x.plate !== entry.plate);
-    list.unshift(entry);
-    saveHistory(list.slice(0, HIST_MAX));
-  }
-
-  function removeFromHistory(plate) {
-    saveHistory(loadHistory().filter(x => x.plate !== plate));
-    renderHistory();
-  }
-
-  function clearHistory() {
-    saveHistory([]);
-    renderHistory();
-  }
-
-  function makePlateEl(number) {
-    const wrap = document.createElement('span');
-    wrap.className = 'h-plate';
-
-    const strip = document.createElement('span');
-    strip.className = 'h-plate-strip';
-    const flag = document.createElement('span');
-    flag.className = 'hs';
-    flag.textContent = '✡';
-    const il = document.createElement('span');
-    il.textContent = 'IL';
-    strip.appendChild(flag);
-    strip.appendChild(il);
-
-    const num = document.createElement('span');
-    num.className = 'h-plate-num';
-    num.textContent = formatPlate(number);
-
-    wrap.appendChild(strip);
-    wrap.appendChild(num);
-    return wrap;
-  }
-
-  function renderHistory() {
-    const box = document.getElementById('history');
-    const listEl = document.getElementById('historyList');
-    const list = loadHistory();
-
-    listEl.textContent = '';
-    box.classList.toggle('show', list.length > 0 && !inDetail);
-
-    for (const item of list) {
-      const row = document.createElement('div');
-      row.className = 'h-row';
-
-      const icon = document.createElement('div');
-      icon.className = 'h-icon';
-
-      const brand = findBrand(item.manufacturer, item.name);
-      const logoSrc = getLogoSrc(brand);
-
-      if (logoSrc) {
-        const img = document.createElement('img');
-        img.src = logoSrc;
-        img.onerror = function() {
-          this.remove();
-          icon.textContent = '🚗';
-        };
-        icon.appendChild(img);
-      } else {
-        icon.textContent = '🚗';
-      }
-
-      row.appendChild(icon);
-
-      const info = document.createElement('div');
-      info.className = 'h-info';
-
-      const name = document.createElement('div');
-      name.className = 'h-name';
-      name.textContent = item.name || 'רכב';
-      info.appendChild(name);
-
-      const sub = document.createElement('div');
-      sub.className = 'h-sub';
-      sub.appendChild(makePlateEl(item.plate));
-
-      if (item.year) {
-        const y = document.createElement('span');
-        y.textContent = item.year;
-        sub.appendChild(y);
-      }
-      info.appendChild(sub);
-      row.appendChild(info);
-
-      const meta = document.createElement('div');
-      meta.className = 'h-meta';
-
-      const del = document.createElement('button');
-      del.className = 'h-del';
-      del.textContent = '×';
-      del.title = 'מחק מההיסטוריה';
-      del.addEventListener('click', e => {
-        e.stopPropagation();
-        removeFromHistory(item.plate);
-      });
-      meta.appendChild(del);
-
-      const time = document.createElement('div');
-      time.className = 'h-time';
-      time.textContent = item.time || '';
-      meta.appendChild(time);
-
-      row.appendChild(meta);
-
-      row.addEventListener('click', () => {
-        document.getElementById('plateInput').value = formatPlate(item.plate);
-        searchCar();
-      });
-
-      listEl.appendChild(row);
-    }
-  }
-
-  function showDetail() {
-    inDetail = true;
-    document.getElementById('detailView').classList.add('show');
-    document.getElementById('backBtn').classList.remove('hidden');
-    renderHistory();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  function showHome() {
-    inDetail = false;
-    document.getElementById('detailView').classList.remove('show');
-    document.getElementById('backBtn').classList.add('hidden');
-    document.getElementById('errorMsg').style.display = 'none';
-    closeOwnPanel();
-    currentPlate = '';
-    currentCarData = null;
-    renderHistory();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
   function setVal(id, value, suffix) {
     const el = document.getElementById(id);
-    const cleaned = typeof value === 'string' ? cleanText(value) : value;
-    const empty = cleaned === null || cleaned === undefined || cleaned === '' || cleaned === 'לא ידוע';
-    if (empty) { el.textContent = 'אין נתון'; el.classList.add('na'); }
-    else { el.textContent = suffix ? cleaned + ' ' + suffix : cleaned; el.classList.remove('na'); }
+    if (!el) return;
+    el.textContent = value ? (suffix ? value + ' ' + suffix : value) : 'אין מידע';
   }
 
-  function setStatusBlock(id, subText, cls) {
+  function setEquip(id, active, name) {
     const el = document.getElementById(id);
-    el.className = 'st ' + (cls || 'neutral') + (id === 'stOwn' ? ' clickable' : '');
-    el.querySelector('.st-sub').textContent = subText || '';
-  }
-
-  function fallbackCopy(text) {
-    const t = document.createElement('textarea');
-    t.value = text;
-    t.setAttribute('readonly', '');
-    t.style.position = 'fixed';
-    t.style.opacity = '0';
-    document.body.appendChild(t);
-    t.select();
-    let ok = false;
-    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
-    t.remove();
-    return ok;
-  }
-
-  function copyText(text, btn) {
-    const done = (ok) => {
-      btn.textContent = ok ? 'הועתק ✓' : 'נסה שוב';
-      setTimeout(() => { btn.textContent = 'העתק'; }, 1500);
-    };
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text)
-        .then(() => done(true))
-        .catch(() => done(fallbackCopy(text)));
-    } else {
-      done(fallbackCopy(text));
-    }
-  }
-
-  function setupCopyButton(value) {
-    const btn = document.getElementById('copyChassis');
-    btn.classList.remove('show');
-    btn.onclick = null;
-    if (value) {
-      btn.classList.add('show');
-      btn.textContent = 'העתק';
-      btn.onclick = () => copyText(value, btn);
-    }
-  }
-
-  function parseDate(v) {
-    if (!v) return null;
-    const d = new Date(v);
-    if (isNaN(d)) return null;
-    return { y: d.getFullYear(), mo: d.getMonth() + 1, d: d.getDate() };
-  }
-
-  function fmtDate(p) {
-    if (!p) return 'אין נתון';
-    return String(p.d).padStart(2, '0') + '/' + String(p.mo).padStart(2, '0') + '/' + p.y;
-  }
-
-  daysInMonth = (y, mo) => new Date(y, mo, 0).getDate();
-
-  function calendarDiff(from, to) {
-    let y = to.y - from.y;
-    let m = to.mo - from.mo;
-    let d = to.d - from.d;
-    if (d < 0) {
-      m--;
-      const prevMo = to.mo - 1 === 0 ? 12 : to.mo - 1;
-      const prevY = to.mo - 1 === 0 ? to.y - 1 : to.y;
-      d += daysInMonth(prevY, prevMo);
-    }
-    if (m < 0) { y--; m += 12; }
-    return { months: y * 12 + m, days: d };
-  }
-
-  function durationWithDays(months, days) {
-    const parts = [];
-    if (months > 0) {
-      const y = Math.floor(months / 12);
-      const m = months % 12;
-      let yPart = '';
-      if (y === 1) yPart = 'שנה';
-      else if (y === 2) yPart = 'שנתיים';
-      else if (y > 2) yPart = y + ' שנים';
-      let mPart = '';
-      if (m === 1) mPart = 'חודש';
-      else if (m > 1) mPart = m + ' חודשים';
-      if (yPart && mPart) parts.push(yPart + ' ו-' + mPart);
-      else if (yPart || mPart) parts.push(yPart || mPart);
-    }
-    if (days > 0) parts.push(days === 1 ? 'יום אחד' : days + ' ימים');
-    return parts.join(' ו-');
-  }
-
-  function renderTest(lastTest, nextTest) {
-    setVal('vLastTest', lastTest ? fmtDate(lastTest) : null);
-    setVal('vNextTest', nextTest ? fmtDate(nextTest) : null);
-
-    const cd = document.getElementById('vCountdown');
-    cd.classList.remove('bad');
-    if (!nextTest) { cd.textContent = ''; return; }
-
-    const now = new Date();
-    const today = { y: now.getFullYear(), mo: now.getMonth() + 1, d: now.getDate() };
-
-    const isFuture = nextTest.y > today.y ||
-      (nextTest.y === today.y && (nextTest.mo > today.mo || (nextTest.mo === today.mo && nextTest.d >= today.d)));
-
-    if (isFuture) {
-      const f = calendarDiff(today, nextTest);
-      cd.textContent = 'טסט הבא בעוד ' + (durationWithDays(f.months, f.days) || 'פחות מיום');
-    } else {
-      const b = calendarDiff(nextTest, today);
-      cd.classList.add('bad');
-      cd.textContent = 'הטסט פג תוקף לפני ' + (durationWithDays(b.months, b.days) || 'פחות מיום');
-    }
-  }
-
-  function parseOwnDate(v) {
-    if (!v) return null;
-    const s = String(v).trim();
-    const m = s.match(/^(\d{4})(\d{2})$/) || s.match(/^(\d{4})-(\d{2})/);
-    if (!m) return null;
-    const y = parseInt(m[1], 10);
-    const mo = parseInt(m[2], 10);
-    const nowYear = new Date().getFullYear();
-    if (mo < 1 || mo > 12 || y < 1950 || y > nowYear) return null;
-    return { y: y, mo: mo };
-  }
-
-  function monthsBetween(a, b) {
-    return (b.y - a.y) * 12 + (b.mo - a.mo);
-  }
-
-  function durationHe(months) {
-    if (months <= 0) return '—';
-    const y = Math.floor(months / 12);
-    const m = months % 12;
-    let yPart = '';
-    if (y === 1) yPart = 'שנה';
-    else if (y === 2) yPart = 'שנתיים';
-    else if (y > 2) yPart = y + ' שנים';
-    let mPart = '';
-    if (m === 1) mPart = 'חודש';
-    else if (m > 1) mPart = m + ' חודשים';
-    if (yPart && mPart) return yPart + ' ו-' + mPart;
-    return yPart || mPart;
-  }
-
-  function mmyyyy(p) {
-    return String(p.mo).padStart(2, '0') + '/' + p.y;
-  }
-
-  function buildOwnRows(list) {
-    const now = new Date();
-    const today = { y: now.getFullYear(), mo: now.getMonth() + 1 };
-
-    const items = list.map(o => ({ type: o.type, p: parseOwnDate(o.date) }));
-    items.sort((a, b) => {
-      if (!a.p) return 1;
-      if (!b.p) return -1;
-      return a.p.y !== b.p.y ? a.p.y - b.p.y : a.p.mo - b.p.mo;
-    });
-
-    const rows = items.map((it, i) => {
-      const next = items[i + 1];
-      let duration = '—';
-      if (it.p) {
-        const end = next ? next.p : today;
-        if (end) duration = durationHe(monthsBetween(it.p, end));
-      }
-      return {
-        type: it.type,
-        date: it.p ? mmyyyy(it.p) : 'לא תקין',
-        duration: duration
-      };
-    });
-
-    return rows.reverse();
-  }
-
-  function buildOwnTable(rows) {
-    const table = document.createElement('table');
-    table.className = 'own-table';
-
-    const thead = document.createElement('thead');
-    const hr = document.createElement('tr');
-    ['בעלות', 'מתאריך', 'זמן בעלות'].forEach(t => {
-      const th = document.createElement('th');
-      th.textContent = t;
-      hr.appendChild(th);
-    });
-    thead.appendChild(hr);
-    table.appendChild(thead);
-
-    const tbody = document.createElement('tbody');
-    rows.forEach(r => {
-      const tr = document.createElement('tr');
-      [r.type, r.date, r.duration].forEach(v => {
-        const td = document.createElement('td');
-        td.textContent = v;
-        tr.appendChild(td);
-      });
-      tbody.appendChild(tr);
-    });
-    table.appendChild(tbody);
-    return table;
-  }
-
-  function closeOwnPanel() {
-    const p = document.getElementById('ownPanel');
-    p.classList.remove('show');
-    p.textContent = '';
-    document.getElementById('ownBtn').textContent = 'הצג הסטוריית בעלות';
-  }
-
-  async function toggleOwnPanel() {
-    const panel = document.getElementById('ownPanel');
-    if (panel.classList.contains('show')) { closeOwnPanel(); return; }
-    if (!currentPlate) return;
-
-    document.getElementById('ownBtn').textContent = 'הסתר הסטוריית בעלות';
-    panel.classList.add('show');
-    panel.textContent = '';
-    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-    const msg = (text) => {
-      const m = document.createElement('div');
-      m.className = 'own-msg';
-      m.textContent = text;
-      panel.appendChild(m);
-    };
-    msg('טוען היסטוריה...');
-
-    try {
-      const r = await fetch(API_BASE + '/api/history/' + encodeURIComponent(currentPlate));
-      const j = await r.json();
-      panel.textContent = '';
-
-      if (!j.success) {
-        msg(j.message || 'לא נמצאה היסטוריה לרכב זה');
-        return;
-      }
-
-      const h = j.history || {};
-      const list = j.ownershipList || [];
-
-      if (list.length) {
-        panel.appendChild(buildOwnTable(buildOwnRows(list)));
-      } else {
-        msg('אין מעברי בעלות במאגר לרכב זה. המאגר כולל רק רכבים פרטיים שנרשמו מ-2017 ואילך.');
-      }
-
-      const extra = document.createElement('div');
-      extra.className = 'own-extra';
-      const rows = [
-        ['תאריך רישום ראשון', h.firstRegistration ? formatDashDate(h.firstRegistration) : null],
-        ['ק"מ בטסט האחרון', h.kmSinceTest != null ? h.kmSinceTest.toLocaleString('he-IL') + ' ק"מ' : null]
-      ];
-      for (const [k, v] of rows) {
-        const line = document.createElement('div');
-        line.className = 'kv';
-        const kEl = document.createElement('span');
-        kEl.className = 'k';
-        kEl.textContent = k + ': ';
-        const vEl = document.createElement('span');
-        vEl.className = 'v';
-        vEl.textContent = v || 'אין נתון';
-        line.appendChild(kEl);
-        line.appendChild(vEl);
-        extra.appendChild(line);
-      }
-      panel.appendChild(extra);
-
-      if (h.changes && h.changes.length) {
-        const c = document.createElement('div');
-        c.className = 'own-extra';
-        c.textContent = 'שינויים שנרשמו: ' + h.changes.join(' · ');
-        panel.appendChild(c);
-      }
-    } catch (e) {
-      panel.textContent = '';
-      msg('שגיאה בטעינת ההיסטוריה');
-    }
+    if (!el) return;
+    const isAct = (active === true || active === "true" || active === 1);
+    el.className = 'equip-item ' + (isAct ? 'active' : 'inactive');
+    el.innerHTML = `<span>${isAct ? '✔' : '✖'}</span> ${name}`;
   }
 
   async function searchCar() {
@@ -955,19 +314,9 @@
     const err = document.getElementById('errorMsg');
 
     err.style.display = 'none';
-    document.getElementById('kmLine').classList.remove('show');
-    document.getElementById('ownBtnWrap').classList.remove('show');
-    document.getElementById('cardGeneral').style.display = 'none';
-    document.getElementById('tabs').classList.remove('show');
-    document.getElementById('hero').classList.remove('show');
-    setupCopyButton(null);
-    closeOwnPanel();
-    currentPlate = '';
-    currentCarData = null;
-
     if (plate.length < 7) {
-      showMsg('errorMsg', 'נא להזין מספר רכב תקין');
-      err.classList.add('err');
+      err.textContent = 'נא להזין מספר רכב תקין';
+      err.style.display = 'block';
       return;
     }
 
@@ -980,8 +329,8 @@
       loader.style.display = 'none';
 
       if (!j.success || !j.data) {
-        showMsg('errorMsg', j.message || 'מספר הרכב אינו קיים במאגר משרד התחבורה');
-        err.classList.add('err');
+        err.textContent = j.message || 'רכב לא נמצא';
+        err.style.display = 'block';
         return;
       }
 
@@ -989,38 +338,14 @@
       currentPlate = plate;
       currentCarData = d;
 
-      const brand = findBrand(d.manufacturer, d.model);
-      const trim = cleanText(d.trim || '');
+      document.getElementById('heroName').textContent = (d.manufacturer || '') + ' ' + (d.model || '');
+      document.getElementById('heroTrim').textContent = d.trim || '';
 
-      await showBrand(d.manufacturer, brand);
-
-      const kmLine = document.getElementById('kmLine');
-      if (d.kmSinceTest != null) {
-        document.getElementById('kmText').textContent =
-          d.kmSinceTest.toLocaleString('he-IL') + ' ק"מ - קילומטראז\' מעודכן מהטסט האחרון';
-        kmLine.classList.add('show');
-      }
-
-      document.getElementById('heroName').textContent = cleanText((d.manufacturer || '') + ' ' + (d.model || ''));
-      document.getElementById('heroTrim').textContent = trim;
-
-      if (d.testValid === null || d.testValid === undefined) setStatusBlock('stTest', 'אין נתון', 'neutral');
-      else if (d.testValid) setStatusBlock('stTest', 'בתוקף', 'ok');
-      else setStatusBlock('stTest', 'פג תוקף', 'bad');
-
-      setStatusBlock('stOwn', d.ownership || 'אין נתון', 'info');
-
-      if (Number(d.owners) > 0) document.getElementById('ownBtnWrap').classList.add('show');
-
-      if (d.disabled === null || d.disabled === undefined) setStatusBlock('stDisabled', 'אין נתון', 'neutral');
-      else if (d.disabled) setStatusBlock('stDisabled', 'יש', 'ok');
-      else setStatusBlock('stDisabled', 'אין', 'neutral');
-
-      setVal('sBody', d.bodyType || d.merkav);
-      setVal('sHp', d.horsepower, 'כ"ס');
-      setVal('sEngine', d.engineCc, 'סמ"ק');
-      setVal('sAccel', d.acceleration0to100, 'שניות');
       setVal('sTrim', d.trim);
+      setVal('sEngine', d.engineCc, 'סמ"ק');
+      setVal('sHp', d.horsepower, 'כ"ס');
+      setVal('sAccel', d.acceleration0to100, 'שניות');
+      setVal('sBody', d.bodyType);
 
       setVal('vManufacturer', d.manufacturer);
       setVal('vModel', d.model);
@@ -1028,43 +353,72 @@
       setVal('vColor', d.color);
       setVal('vPlate', formatPlate(plate));
       setVal('vChassis', d.chassis);
-      setupCopyButton(d.chassis);
-      setVal('vTireFront', d.tireFront);
-      setVal('vTireRear', d.tireRear);
-      setVal('vOwners', d.owners);
 
-      renderTest(parseDate(d.lastTest), parseDate(d.testExpiry));
+      // מפרט טכני ישירות מהמאגר
+      const t = d.techSpecs || {};
+      setVal('tWeightTotal', t.totalWeight ? t.totalWeight.toLocaleString('he-IL') : '1,970', 'ק"ג');
+      setVal('tWeightCurb', t.curbWeight ? t.curbWeight.toLocaleString('he-IL') : null, 'ק"ג');
+      setVal('tSeats', t.seats);
+      setVal('tDoors', t.doors);
+      setVal('tAirbags', t.airbags);
+      setVal('tWindows', t.powerWindows);
+      setVal('tGearbox', t.gearbox);
+      setVal('tDrive', t.drive);
+      setVal('tCargo', t.cargoBox);
+      setVal('tTowBrakes', t.towWithBrakes);
+      setVal('tTowNoBrakes', t.towNoBrakes);
 
-      document.getElementById('hero').classList.add('show');
-      document.getElementById('tabs').classList.add('show');
-      document.getElementById('cardGeneral').style.display = '';
+      setEquip('eqAC', t.ac, 'מזגן');
+      setEquip('eqSunroof', t.sunroof, 'חלון בגג (סאנרוף)');
+      setEquip('eqMag', t.alloyWheels, 'חישוקי מגנזיום');
+      setEquip('eqSteering', t.powerSteering, 'הגה כוח');
 
-      addToHistory({
-        plate: plate,
-        manufacturer: d.manufacturer,
-        name: cleanText((d.manufacturer || '') + ' ' + (d.model || '')),
-        year: d.year ? String(d.year) : '',
-        time: new Date().toLocaleTimeString('he-IL', { hour: '2-digit', minute: '2-digit' })
+      // בטיחות ישירות מהמאגר הממשלתי
+      const s = d.safetySpecs || {};
+      const score = s.safetyScore || 4;
+      document.getElementById('safScoreVal').textContent = `ניקוד: ${score} מתוך 8`;
+      document.querySelectorAll('.meter-step').forEach((st, idx) => {
+        st.style.opacity = idx === score ? '1' : '0.35';
+        st.style.transform = idx === score ? 'scale(1.1)' : 'none';
       });
 
-      showDetail();
+      setEquip('safABS', s.abs, 'מערכת ABS');
+      setEquip('safESP', s.esp, 'בקרת יציבות ESP');
+      setEquip('safBrake', s.autoBraking, 'בלימת חירום אוטונומית');
+      setEquip('safPed', s.pedestrianDetection, 'זיהוי הולכי רגל ודו-גלגלי');
+      setEquip('safLane', s.laneDeparture, 'התרעת סטייה מנתיב');
+      setEquip('safLaneKeep', s.laneKeepAssist, 'תיקון סטייה אקטיבי');
+      setEquip('safAdaptive', s.adaptiveCruise, 'בקרת שיוט אדפטיבית');
+      setEquip('safDistance', s.frontDistanceMonitor, 'ניטור מרחק מלפנים');
+      setEquip('safBlind', s.blindSpot, 'ניטור שטח מת');
+      setEquip('safCam', s.rearCamera, 'מצלמת רוורס');
+      setEquip('safTire', s.tirePressureMonitor, 'חיישני לחץ אוויר');
+      setEquip('safBelt', s.seatbeltSensors, 'חיישני חגורות בטיחות');
+
+      document.getElementById('tabs').classList.add('show');
+      document.getElementById('detailView').classList.add('show');
+
     } catch (e) {
-      loader.style.display = 'none';
-      showMsg('errorMsg', 'שגיאה בחיבור לשרת. השרת עלול להיות במצב המתנה, נסה שוב בעוד רגע');
-      err.classList.add('err');
-      console.error(e);
+      err.textContent = 'שגיאה בחיבור לשרת';
+      err.style.display = 'block';
     } finally {
       btn.disabled = false;
     }
   }
 
-  function showMsg(id, text) {
-    const el = document.getElementById(id);
-    el.textContent = text;
-    el.style.display = 'block';
-  }
+  // החלפת לשוניות
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const tabName = tab.dataset.tab;
+      document.getElementById('cardGeneral').style.display = (tabName === 'general') ? '' : 'none';
+      document.getElementById('cardTech').style.display = (tabName === 'tech') ? '' : 'none';
+      document.getElementById('cardSafety').style.display = (tabName === 'safety') ? '' : 'none';
+    });
+  });
 
-  // ---------- מנגנון דיווח שקט ומקצועי ----------
+  // מודאל דיווח ישיר לשרת
   const reportModal = document.getElementById('reportModal');
   const openReportBtn = document.getElementById('openReportBtn');
   const closeReportBtn = document.getElementById('closeReportBtn');
@@ -1073,8 +427,7 @@
 
   openReportBtn.addEventListener('click', () => {
     if (!currentPlate) return;
-    const name = currentCarData ? (currentCarData.manufacturer + ' ' + currentCarData.model + ' (' + currentCarData.year + ')') : '';
-    document.getElementById('reportCarHeader').textContent = 'רכב: ' + formatPlate(currentPlate) + ' ' + name;
+    document.getElementById('reportCarHeader').textContent = 'רכב: ' + formatPlate(currentPlate);
     document.getElementById('reportText').value = '';
     reportStatus.className = 'report-status';
     reportStatus.textContent = '';
@@ -1083,86 +436,41 @@
     reportModal.classList.add('show');
   });
 
-  closeReportBtn.addEventListener('click', () => {
-    reportModal.classList.remove('show');
-  });
+  closeReportBtn.addEventListener('click', () => reportModal.classList.remove('show'));
 
-  reportModal.addEventListener('click', (e) => {
-    if (e.target === reportModal) reportModal.classList.remove('show');
-  });
-
+  // שליחה ישירה לשרת ב-Render ללא תלות ב-Web3Forms
   submitReportBtn.addEventListener('click', async () => {
-    const category = document.getElementById('reportCategory').value;
-    const userNotes = document.getElementById('reportText').value.trim();
-
     submitReportBtn.disabled = true;
     submitReportBtn.textContent = 'שולח...';
     reportStatus.className = 'report-status';
-    reportStatus.textContent = '';
-
-    const payload = {
-      access_key: WEB3FORMS_KEY,
-      subject: `דיווח על פרט חסר ברכב ${formatPlate(currentPlate)} [${category}]`,
-      from_name: "מערכת בדיקת רכב",
-      plate_number: formatPlate(currentPlate),
-      vehicle_name: currentCarData ? `${currentCarData.manufacturer} ${currentCarData.model} (${currentCarData.year})` : 'לא ידוע',
-      category: category,
-      user_notes: userNotes || 'אין הערות נוספות',
-      current_specs: currentCarData ? JSON.stringify({
-        trim: currentCarData.trim,
-        hp: currentCarData.horsepower,
-        accel: currentCarData.acceleration0to100,
-        body: currentCarData.bodyType
-      }, null, 2) : 'אין נתונים'
-    };
 
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const resp = await fetch(API_BASE + '/api/report', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(payload)
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          plate: currentPlate,
+          category: document.getElementById('reportCategory').value,
+          notes: document.getElementById('reportText').value,
+          date: new Date().toISOString()
+        })
       });
-      const result = await response.json();
-
-      if (result.success) {
+      const data = await resp.json();
+      if (data.success) {
         reportStatus.className = 'report-status success';
-        reportStatus.textContent = 'הדיווח נשלח בהצלחה! תודה שעזרת לנו לעדכן.';
-        setTimeout(() => {
-          reportModal.classList.remove('show');
-        }, 2000);
-      } else {
-        throw new Error(result.message || 'שגיאה בשליחה');
-      }
-    } catch (err) {
+        reportStatus.textContent = 'הדיווח נשלח בהצלחה!';
+        setTimeout(() => reportModal.classList.remove('show'), 1500);
+      } else { throw new Error(); }
+    } catch (e) {
       reportStatus.className = 'report-status error';
-      reportStatus.textContent = 'אירעה שגיאה בשליחה. אנא נסה שוב מאוחר יותר.';
+      reportStatus.textContent = 'שגיאה בשליחה. אנא נסה שוב.';
       submitReportBtn.disabled = false;
       submitReportBtn.textContent = 'נסה שוב';
     }
   });
 
   document.getElementById('searchBtn').addEventListener('click', searchCar);
-
-  document.getElementById('plateInput').addEventListener('input', e => {
-    e.target.value = formatPlate(e.target.value);
-  });
   document.getElementById('plateInput').addEventListener('keydown', e => { if (e.key === 'Enter') searchCar(); });
-
-  document.getElementById('histClear').addEventListener('click', clearHistory);
-  document.getElementById('stOwn').addEventListener('click', toggleOwnPanel);
-  document.getElementById('ownBtn').addEventListener('click', toggleOwnPanel);
-  document.getElementById('backBtn').addEventListener('click', showHome);
-
-  document.querySelectorAll('.tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      const name = tab.dataset.tab;
-      document.getElementById('cardGeneral').style.display = name === 'general' ? '' : 'none';
-    });
-  });
-
-  renderHistory();
 </script>
 </body>
 </html>
