@@ -688,18 +688,23 @@ app.use((req, res, next) => {
 // ---------- עזרים ----------
 
 async function searchDatastore(resourceId, filters, limit = 100, q = "") {
-    const f = filters ? `&filters=${encodeURIComponent(JSON.stringify(filters))}` : "";
-    const qq = q ? `&q=${encodeURIComponent(q)}` : "";
-    const url = `https://data.gov.il/api/3/action/datastore_search?resource_id=${resourceId}${f}${qq}&limit=${limit}`;
-    const response = await fetch(url);
-    const data = await response.json();
-    return data?.success ? (data.result?.records || []) : [];
+    try {
+        const f = filters ? `&filters=${encodeURIComponent(JSON.stringify(filters))}` : "";
+        const qq = q ? `&q=${encodeURIComponent(q)}` : "";
+        const url = `https://data.gov.il/api/3/action/datastore_search?resource_id=${resourceId}${f}${qq}&limit=${limit}`;
+        const response = await fetch(url);
+        const data = await response.json();
+        return data?.success ? (data.result?.records || []) : [];
+    } catch (e) {
+        console.error(`[DATASTORE SEARCH ERROR] ${resourceId}:`, e.message);
+        return [];
+    }
 }
 
 function toText(value) {
     if (value == null) return null;
     const s = String(value).trim();
-    if (s === "" || /^dnf$/i.test(s)) return null;
+    if (s === "" || /^dnf$/i.test(s) || s === "null" || s === "undefined") return null;
     return s;
 }
 
@@ -708,6 +713,35 @@ function toNumber(value) {
     if (s === null) return null;
     const n = Number(s.replace(/,/g, ""));
     return Number.isNaN(n) ? null : n;
+}
+
+// פונקציית חילוץ גמישה: בודקת רשימת מפתחות ומחזירה את הערך הראשון שקיים
+function pick(sources, keys, asNumber = false) {
+    for (const src of sources) {
+        if (!src) continue;
+        for (const k of keys) {
+            if (src[k] !== undefined && src[k] !== null && String(src[k]).trim() !== "") {
+                const val = asNumber ? toNumber(src[k]) : toText(src[k]);
+                if (val !== null) return val;
+            }
+        }
+    }
+    return null;
+}
+
+// פונקציית חילוץ של שדה בינארי (0/1 או 'כן'/'לא')
+function pickBool(sources, keys, defaultVal = false) {
+    for (const src of sources) {
+        if (!src) continue;
+        for (const k of keys) {
+            if (src[k] !== undefined && src[k] !== null && String(src[k]).trim() !== "") {
+                const raw = String(src[k]).trim().toLowerCase();
+                if (raw === "1" || raw === "true" || raw === "כן" || raw === "y" || raw === "yes") return true;
+                if (raw === "0" || raw === "false" || raw === "לא" || raw === "n" || raw === "no") return false;
+            }
+        }
+    }
+    return defaultVal;
 }
 
 const ORIGIN_LABELS = {
@@ -800,7 +834,7 @@ const BODY_TYPE_MAP = {
 };
 
 function resolveBodyType(car, row) {
-    const rawMerkav = toText(row?.merkav) || toText(car?.merkav);
+    const rawMerkav = toText(row?.merkav) || toText(car?.merkav) || toText(row?.shilda_nm) || toText(car?.shilda_nm);
     if (rawMerkav) {
         const clean = rawMerkav.trim();
         if (BODY_TYPE_MAP[clean]) return BODY_TYPE_MAP[clean];
@@ -816,13 +850,13 @@ function resolveBodyType(car, row) {
     return null;
 }
 
-// פונקציית תרגום סוג הנעה
+// פונקציית תרגום סוג הנעה סופר-גמישה
 function resolveDrivetrain(row, car) {
-    const rawCode = toText(row?.hanaa_cd) || toText(car?.hanaa_cd);
-    const rawNm = toText(row?.hanaa_nm) || toText(car?.hanaa_nm);
+    const rawCode = pick([row, car], ["hanaa_cd", "hanaa", "sug_hanaa_cd", "drive_type_cd"]);
+    const rawNm = pick([row, car], ["hanaa_nm", "sug_hanaa_nm", "drive_type_nm", "sug_hanaa"]);
     const combined = ((rawCode || '') + ' ' + (rawNm || '')).toLowerCase();
 
-    if (combined.includes('4x4') || combined.includes('4wd') || combined.includes('awd') || combined.includes('כפולה') || rawCode === '4') {
+    if (combined.includes('4x4') || combined.includes('4wd') || combined.includes('awd') || combined.includes('כפולה') || combined.includes('ארבע') || rawCode === '4') {
         return 'הנעה כפולה (4X4)';
     }
     if (combined.includes('rwd') || combined.includes('אחורית') || rawCode === '2') {
@@ -840,11 +874,9 @@ async function checkDisabled(plate) {
         const cleanPlate = String(plate).replace(/\D/g, "");
         
         let records = await searchDatastore(DISABLED_ID, { "MISPAR RECHEV": cleanPlate }, 5);
-        
         if (!records || records.length === 0) {
             records = await searchDatastore(DISABLED_ID, { "MISPAR RECHEV": Number(cleanPlate) }, 5);
         }
-
         if (!records || records.length === 0) {
             const byText = await searchDatastore(DISABLED_ID, null, 10, cleanPlate);
             records = (byText || []).filter(r => {
@@ -904,21 +936,46 @@ function buildHistory(h) {
     };
 }
 
+// פונקציית איתור שורת דגם עמידה ביותר
 async function findModelRow(car) {
     const year = car.shnat_yitzur != null ? Number(car.shnat_yitzur) : null;
+    const tozeret_cd = car.tozeret_cd != null ? Number(car.tozeret_cd) : null;
+    const degem_cd_raw = car.degem_cd != null ? String(car.degem_cd).trim() : null;
 
     const attempts = [];
-    if (car.tozeret_cd != null && car.degem_cd != null && year) {
-        attempts.push({ tozeret_cd: Number(car.tozeret_cd), degem_cd: Number(car.degem_cd), shnat_yitzur: year });
+
+    // 1. קוד יצרן + קוד דגם מדויק (כמחרוזת) + שנת ייצור
+    if (tozeret_cd && degem_cd_raw && year) {
+        attempts.push({ tozeret_cd, degem_cd: degem_cd_raw, shnat_yitzur: year });
+        if (!isNaN(Number(degem_cd_raw))) {
+            attempts.push({ tozeret_cd, degem_cd: Number(degem_cd_raw), shnat_yitzur: year });
+        }
     }
+
+    // 2. קוד יצרן + קוד דגם (ללא שנת ייצור, למקרה שיש פער של שנתון)
+    if (tozeret_cd && degem_cd_raw) {
+        attempts.push({ tozeret_cd, degem_cd: degem_cd_raw });
+        if (!isNaN(Number(degem_cd_raw))) {
+            attempts.push({ tozeret_cd, degem_cd: Number(degem_cd_raw) });
+        }
+    }
+
+    // 3. שם דגם טקסטואלי + שנת ייצור
     if (car.degem_nm && year) {
-        attempts.push({ degem_nm: String(car.degem_nm), shnat_yitzur: year });
+        attempts.push({ degem_nm: String(car.degem_nm).trim(), shnat_yitzur: year });
+    }
+
+    // 4. כינוי מסחרי + קוד יצרן
+    if (tozeret_cd && car.kinuy_mishari) {
+        attempts.push({ tozeret_cd, kinuy_mishari: String(car.kinuy_mishari).trim() });
     }
 
     for (const filters of attempts) {
-        const rows = await searchDatastore(MODELS_ID, filters, 100);
-        if (rows.length === 0) continue;
-        return rows.find(r => toNumber(r.koah_sus) != null) || rows[0];
+        const rows = await searchDatastore(MODELS_ID, filters, 25);
+        if (rows && rows.length > 0) {
+            // עדיפות לשורה עשירה במידע (משקל, כוח סוס או מידות)
+            return rows.find(r => r.mishkal_kolel != null || r.koah_sus != null || r.gova != null) || rows[0];
+        }
     }
     return null;
 }
@@ -937,7 +994,7 @@ app.get('/api/car/:plate', async (req, res) => {
         const car = await fetchCarRecord(plate);
 
         if (!car) {
-            console.warn(`[SEARCH LOG] ❌ 🚗 חיפוש רכב (לא נמצא במאגר): מספר ${plate} | שעה: ${timestamp}`);
+            console.warn(`[SEARCH LOG] ❌ חיפוש רכב (לא נמצא): ${plate}`);
             return res.json({ success: false, message: "המספר אינו קיים במאגר משרד התחבורה" });
         }
 
@@ -951,10 +1008,10 @@ app.get('/api/car/:plate', async (req, res) => {
 
         const manufacturer = car.tozeret_nm || "לא ידוע";
         const model = car.kinuy_mishari || car.degem_nm || row?.kinuy_mishari || "לא ידוע";
-        const trim = toText(row?.ramat_gimur) || toText(car.ramat_gimur) || null;
+        const trim = pick([row, car], ["ramat_gimur", "ramat_eivzur", "gimur"]);
         const year = car.shnat_yitzur || "לא ידוע";
-        const hp = toNumber(row?.koah_sus) ?? toNumber(car.koah_sus);
-        const engineCc = toNumber(row?.nefah_manoa) ?? toNumber(car.nefah_manoa);
+        const hp = pick([row, car], ["koah_sus", "hespak", "hp"], true);
+        const engineCc = pick([row, car], ["nefah_manoa", "cc"], true);
         const testExpiry = car.tokef_dt || null;
         const bodyType = resolveBodyType(car, row);
 
@@ -970,23 +1027,67 @@ app.get('/api/car/:plate', async (req, res) => {
                 makeTexts.push(en);
             }
         }
-        const modelTexts = [car.kinuy_mishari, car.degem_nm, car.ramat_gimur, model].filter(Boolean);
+        const modelTexts = [car.kinuy_mishari, car.degem_nm, trim, model].filter(Boolean);
         const acceleration = lookupAccel(makeTexts, modelTexts, year, hp, engineCc);
-
         const hasDisabledBadge = Boolean(disabledResult?.hasBadge);
 
-        console.log(`--------------------------------------------------`);
-        console.log(`[SEARCH LOG] 🔍 מישהו חיפש רכב!`);
-        console.log(`📅 זמן: ${timestamp}`);
-        console.log(`🚗 מספר רכב: ${plate}`);
-        console.log(`🏭 יצרן ודגם: ${manufacturer} ${model} ${trim || ""} (${year})`);
-        console.log(`⚡ כוח סוס: ${hp != null ? hp : "לא ידוע"} | נפח: ${engineCc != null ? engineCc : "לא ידוע"}`);
-        console.log(`🏎️ מרכב: ${bodyType || "לא ידוע"}`);
-        console.log(`🏷️ סוג בעלות: ${currentOwnership || "לא ידוע"}`);
-        console.log(`🏁 תאוצה 0-100: ${acceleration ? acceleration.seconds + " שניות" : "לא נמצאה בטבלה"}`);
-        console.log(`♿ תג נכה: ${hasDisabledBadge ? "יש" : "אין"}`);
-        console.log(`🔁 מעברי בעלות: ${ownershipList.length}`);
-        console.log(`--------------------------------------------------`);
+        const sources = [row, car];
+
+        // 1. מפרט טכני, מידות, גרירה והנעה (סנכרון מלא של כל שמות השדות ב-gov.il)
+        const totalWeight = pick(sources, ["mishkal_kolel", "mishkal_kolel_kg", "total_weight"], true);
+        const curbWeight = pick(sources, ["mishkal_azmi", "mishkal_azmi_kg", "curb_weight"], true);
+        const height = pick(sources, ["gova", "gova_rechev", "height"], true);
+        const length = pick(sources, ["orech_klali", "orech", "length"], true);
+        const width = pick(sources, ["rohav_klali", "rohav", "width"], true);
+        const wheelbase = pick(sources, ["merhak_sranim", "basis_galgalim", "wheelbase"], true);
+        const doors = pick(sources, ["mispar_dlatot", "dlatot", "doors"], true);
+        const seats = pick(sources, ["mispar_moshavim", "moshavim", "seats"], true);
+        const powerWindows = pick(sources, ["halonot_hashmal_halonot", "halonot_hashmal", "windows"], true);
+        const airbags = pick(sources, ["kariot_avir", "kariot", "airbags"], true);
+        const transmission = pick(sources, ["tevat_hiluhim_nm", "tevat_hiluhim", "gear_type_nm", "gear_nm"]) || (car?.gear === 'O' ? 'אוטומטי' : 'אוטומטי');
+        const fuelType = pick(sources, ["sug_delek_nm", "delek_nm", "fuel_type_nm", "sug_delek"]) || 'בנזין';
+        const engineCode = pick(sources, ["degem_manoa", "kod_manoa", "engine_code"]);
+        const hasTowHitch = pickBool(sources, ["vav_grira_ind", "vav_grira", "tow_hitch_ind"], false);
+        const towBrakes = pick(sources, ["kosher_grira_im_blamim_kg", "kosher_grira_im_blamim", "tow_with_brakes"], true);
+        const towNoBrakes = pick(sources, ["kosher_grira_lelo_blamim_kg", "kosher_grira_bli_blamim", "kosher_grira_lelo_blamim"], true);
+
+        // 2. אבזור נוחות (V / X)
+        const ac = pickBool(sources, ["mazgan_ind", "mazgan", "climate_control_ind", "bakarat_aklim_ind"], true);
+        const alloyWheels = pickBool(sources, ["galgalei_sagsoget_kala_ind", "galgaley_sagsoget_ind", "alloy_wheels_ind"], false);
+        const sunroof = pickBool(sources, ["sunroof_ind", "halon_bagag_ind", "sunroof"], false);
+        const abs = pickBool(sources, ["abs_ind", "abs", "maarehet_abs_ind"], true);
+        const esp = pickBool(sources, ["bakarat_yatzivut_ind", "esp_ind", "esp", "stability_control_ind"], true);
+        const powerSteering = pickBool(sources, ["hege_koah_ind", "power_steering_ind", "hege_koach_ind"], true);
+        const cruiseControl = pickBool(sources, ["bakarat_shyut_ind", "cruise_control_ind", "bakarat_shiut_ind"], false);
+        const leatherSeats = pickBool(sources, ["ripudey_or_ind", "ripud_or_ind", "leather_seats_ind"], false);
+        const powerSeats = pickBool(sources, ["kivnun_moshavim_hashmali_ind", "power_seats_ind"], false);
+        const heatedSeats = pickBool(sources, ["himum_moshavim_ind", "heated_seats_ind"], false);
+        const keyless = pickBool(sources, ["keyless_ind", "keyless_entry_ind", "hanaya_bekaftor_ind"], false);
+        const fogLights = pickBool(sources, ["pansey_arafel_ind", "fog_lights_ind"], false);
+        const ledHeadlights = pickBool(sources, ["pansey_led_ind", "led_lights_ind", "pansey_ksenon_ind"], false);
+        const leatherSteeringWheel = pickBool(sources, ["hege_metzupa_or_ind", "leather_steering_ind"], false);
+        const steeringControls = pickBool(sources, ["shlita_mehahege_ind", "steering_controls_ind"], false);
+        const soundSystem = pickBool(sources, ["maarehet_shema_ind", "sound_system_ind"], true);
+
+        // 3. בטיחות
+        const safetyScore = pick(sources, ["ramat_eivzur_betihut", "nikud_bitahon", "safety_score"], true);
+        const autonomousBraking = pickBool(sources, ["blimat_herum_otonomit_ind", "blimat_herum_ind", "aeb_ind"], false);
+        const laneDeparture = pickBool(sources, ["hatraat_stiat_nativ_ind", "stiat_nativ_ind", "ldw_ind"], false);
+        const laneKeepAssist = pickBool(sources, ["mneiat_stiat_nativ_ind", "lka_ind"], false);
+        const adaptiveCruise = pickBool(sources, ["bakarat_shyut_adaptivit_ind", "acc_ind"], false);
+        const blindSpot = pickBool(sources, ["zihuy_rehev_beshetah_met_ind", "shetah_met_ind", "bsm_ind"], false);
+        const forwardCollision = pickBool(sources, ["hatraat_hitnagshut_kidmit_ind", "fcw_ind"], false);
+        const pedestrianDetection = pickBool(sources, ["zihuy_holhey_regel_ind", "pedestrian_ind"], false);
+        const trafficSigns = pickBool(sources, ["zihuy_tamrurey_tnua_ind", "tsr_ind"], false);
+        const rearviewCamera = pickBool(sources, ["matzlema_ahorit_ind", "rearview_camera_ind"], false);
+        const parkingSensors = pickBool(sources, ["hayeyshey_hanaya_ind", "parking_sensors_ind"], false);
+        const autoHighBeam = pickBool(sources, ["shlita_beor_gvoha_ind", "auto_high_beam_ind"], false);
+        const tirePressure = pickBool(sources, ["hayeyshey_lahatz_avir_ind", "tpms_ind"], false);
+
+        // 4. סביבה
+        const pollutionLevel = pick(sources, ["ramat_zihum", "darjat_zihum", "pollution_level"], true);
+        const co2Emissions = pick(sources, ["plitat_co2", "co2", "co2_emissions"], true);
+        const licenseGroup = pick(sources, ["kvutzat_agrah_cd", "kvutzat_agrah", "agrah_group"], true);
 
         res.json({
             success: true,
@@ -1016,73 +1117,69 @@ app.get('/api/car/:plate', async (req, res) => {
                     badgeType: disabledResult.badgeType,
                     issueDate: disabledResult.issueDate
                 } : null,
-                bodyType: bodyType,
+                bodyType,
                 merkav: bodyType,
                 kmSinceTest: history?.kmSinceTest ?? null,
 
-                // מפרט טכני, מידות, גרירה והנעה
                 technical: {
                     drivetrain: resolveDrivetrain(row, car),
-                    totalWeight: toNumber(row?.mishkal_kolel) ?? toNumber(car.mishkal_kolel),
-                    curbWeight: toNumber(row?.mishkal_azmi) ?? toNumber(car.mishkal_azmi),
-                    height: toNumber(row?.gova) ?? toNumber(car.gova),
-                    length: toNumber(row?.orech) ?? toNumber(car.orech),
-                    width: toNumber(row?.rohav) ?? toNumber(car.rohav),
-                    wheelbase: toNumber(row?.merhak_sranim) ?? toNumber(car.merhak_sranim),
-                    doors: toNumber(row?.mispar_dlatot) ?? toNumber(car.mispar_dlatot),
-                    seats: toNumber(row?.mispar_moshavim) ?? toNumber(car.mispar_moshavim),
-                    powerWindows: toNumber(row?.halonot_hashmal) ?? toNumber(car.halonot_hashmal),
-                    airbags: toNumber(row?.kariot_avir) ?? toNumber(car.kariot_avir),
-                    transmission: toText(row?.tevat_hiluhim_nm) || toText(car.tevat_hiluhim_nm) || (car.gear === 'O' ? 'אוטומטי' : 'אוטומטי'),
-                    fuelType: toText(row?.delek_nm) || toText(car.delek_nm) || 'בנזין',
-                    engineCode: toText(row?.degem_manoa) || toText(car.degem_manoa),
-                    hasTowHitch: Number(row?.vav_grira_ind || car.vav_grira_ind) === 1,
-                    towBrakes: toNumber(row?.kosher_grira_im_blamim) ?? toNumber(car.kosher_grira_im_blamim),
-                    towNoBrakes: toNumber(row?.kosher_grira_bli_blamim) ?? toNumber(car.kosher_grira_bli_blamim)
+                    totalWeight,
+                    curbWeight,
+                    height,
+                    length,
+                    width,
+                    wheelbase,
+                    doors,
+                    seats,
+                    powerWindows,
+                    airbags,
+                    transmission,
+                    fuelType,
+                    engineCode,
+                    hasTowHitch,
+                    towBrakes,
+                    towNoBrakes
                 },
 
-                // אבזור נוחות (0 או 1)
                 equipment: {
-                    ac: Number(row?.mazgan_ind ?? 1) === 1,
-                    alloyWheels: Number(row?.galgaley_sagsoget_ind) === 1,
-                    sunroof: Number(row?.sunroof_ind) === 1,
-                    abs: Number(row?.abs_ind ?? 1) === 1,
-                    esp: Number(row?.bakarat_yatzivut_ind ?? 1) === 1,
-                    powerSteering: Number(row?.hege_koah_ind ?? 1) === 1,
-                    cruiseControl: Number(row?.bakarat_shyut_ind) === 1,
-                    leatherSeats: Number(row?.ripudey_or_ind) === 1,
-                    powerSeats: Number(row?.kivnun_moshavim_hashmali_ind) === 1,
-                    heatedSeats: Number(row?.himum_moshavim_ind) === 1,
-                    keyless: Number(row?.keyless_ind) === 1,
-                    fogLights: Number(row?.pansey_arafel_ind) === 1,
-                    ledHeadlights: Number(row?.pansey_led_ind) === 1,
-                    leatherSteeringWheel: Number(row?.hege_metzupa_or_ind) === 1,
-                    steeringControls: Number(row?.shlita_mehahege_ind) === 1,
-                    soundSystem: Number(row?.maarehet_shema_ind ?? 1) === 1
+                    ac,
+                    alloyWheels,
+                    sunroof,
+                    abs,
+                    esp,
+                    powerSteering,
+                    cruiseControl,
+                    leatherSeats,
+                    powerSeats,
+                    heatedSeats,
+                    keyless,
+                    fogLights,
+                    ledHeadlights,
+                    leatherSteeringWheel,
+                    steeringControls,
+                    soundSystem
                 },
 
-                // מערכות בטיחות
                 safety: {
-                    safetyScore: toNumber(row?.ramat_eivzur_betihut) ?? toNumber(car.ramat_eivzur_betihut),
-                    autonomousBraking: Number(row?.blimat_herum_otonomit_ind || row?.blimat_herum_ind) === 1,
-                    laneDeparture: Number(row?.hatraat_stiat_nativ_ind || row?.stiat_nativ_ind) === 1,
-                    laneKeepAssist: Number(row?.mneiat_stiat_nativ_ind) === 1,
-                    adaptiveCruise: Number(row?.bakarat_shyut_adaptivit_ind) === 1,
-                    blindSpot: Number(row?.zihuy_rehev_beshetah_met_ind || row?.shetah_met_ind) === 1,
-                    forwardCollision: Number(row?.hatraat_hitnagshut_kidmit_ind) === 1,
-                    pedestrianDetection: Number(row?.zihuy_holhey_regel_ind) === 1,
-                    trafficSigns: Number(row?.zihuy_tamrurey_tnua_ind) === 1,
-                    rearviewCamera: Number(row?.matzlema_ahorit_ind) === 1,
-                    parkingSensors: Number(row?.hayeyshey_hanaya_ind) === 1,
-                    autoHighBeam: Number(row?.shlita_beor_gvoha_ind) === 1,
-                    tirePressure: Number(row?.hayeyshey_lahatz_avir_ind) === 1
+                    safetyScore,
+                    autonomousBraking,
+                    laneDeparture,
+                    laneKeepAssist,
+                    adaptiveCruise,
+                    blindSpot,
+                    forwardCollision,
+                    pedestrianDetection,
+                    trafficSigns,
+                    rearviewCamera,
+                    parkingSensors,
+                    autoHighBeam,
+                    tirePressure
                 },
 
-                // סביבה וזיהום
                 environment: {
-                    pollutionLevel: toNumber(row?.ramat_zihum) ?? toNumber(car.ramat_zihum),
-                    co2Emissions: toNumber(row?.plitat_co2) ?? toNumber(car.plitat_co2),
-                    licenseGroup: toNumber(row?.kvutzat_agrah_cd) ?? toNumber(car.kvutzat_agrah_cd)
+                    pollutionLevel,
+                    co2Emissions,
+                    licenseGroup
                 }
             }
         });
@@ -1122,6 +1219,7 @@ app.get('/api/debug/:plate', async (req, res) => {
             success: true,
             car_fields: Object.keys(car),
             car,
+            model_row_fields: row ? Object.keys(row) : [],
             model_row: row,
             history: hist,
             ownership: own,
