@@ -1,361 +1,542 @@
-const express = require('express');
-const cors = require('cors');
-const fs = require('fs');
-const path = require('path');
-const app = express();
-const PORT = process.env.PORT || 3000;
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>פרטי רכב</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background: #f4f6f8; color: #333; direction: rtl; }
+  .phone { max-width: 410px; margin: 0 auto; background: #f4f6f8; min-height: 100vh; padding-bottom: 40px; }
 
-app.use(cors());
-app.use(express.json());
+  .topbar { background: #2a7fa8; color: #fff; height: 52px; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; }
+  .topbar .t { font-size: 18px; flex: 1; text-align: center; font-weight: bold; }
+  .topbar .i { font-size: 20px; width: 28px; text-align: center; cursor: pointer; }
+  .topbar .i.hidden { visibility: hidden; }
 
-const CAR_REGISTRY_ID = "053cea08-09bc-40ec-8f7a-156f0677aff3";
-const MODELS_ID = "142afde2-6228-49f9-8a29-9b6c3a0cbe40";
-const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";
-const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";
-const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";
+  .search-box { background: #fff; padding: 16px 14px 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+  .plate { display: flex; align-items: center; background: #ffd21f; border: 2px solid #111; border-radius: 8px; height: 58px; overflow: hidden; direction: ltr; }
+  .plate .strip { background: #1e5fa8; color: #fff; width: 48px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; }
+  .plate .strip .flag { font-size: 12px; }
+  .plate .strip .il { font-size: 17px; font-weight: bold; line-height: 1; }
+  .plate .strip .he { font-size: 8px; }
+  .plate input { flex: 1; min-width: 0; height: 100%; border: none; background: transparent; outline: none; font-size: 28px; font-weight: bold; text-align: center; letter-spacing: 1px; color: #111; }
+  .plate input::placeholder { color: #8a7a2a; font-size: 15px; letter-spacing: 0; font-weight: normal; }
+  .plate button { border: none; background: #2a7fa8; color: #fff; height: 100%; padding: 0 14px; font-size: 15px; font-weight: bold; cursor: pointer; flex-shrink: 0; }
+  .plate button:disabled { background: #9cc5da; }
+  .msg { text-align: center; color: #666; font-size: 13px; padding: 8px; display: none; }
+  .msg.err { color: #b42318; background: #fde8e7; border-radius: 8px; margin-top: 8px; }
 
-// ---------- טעינת קבצי תאוצה 0-100 ----------
-let accelTable = [];
-const ACCEL_FILES = [
-    "acceleration.json", "acceleration2.json", "acceleration3.json", "acceleration4.json", "acceleration5.json",
-    "acceleration6.json", "acceleration7.json", "acceleration8.json", "acceleration9.json", "acceleration10.json",
-    "acceleration11.json", "acceleration12.json", "acceleration13.json", "acceleration14.json", "acceleration15.json",
-    "acceleration16.json", "acceleration17.json", "acceleration18.json", "acceleration19.json", "acceleration20.json",
-    "acceleration21.json", "acceleration22.json", "acceleration23.json", "acceleration24.json", "acceleration25.json",
-    "acceleration26.json", "acceleration27.json", "acceleration28.json", "acceleration29.json", "acceleration30.json"
-];
+  .km-line { display: none; align-items: center; justify-content: center; gap: 6px; color: #2e8b57; font-size: 13px; background: #fff; padding: 0 12px 12px; font-weight: bold; }
+  .km-line.show { display: flex; }
+  .km-line .km-ic { border: 2px solid #2e8b57; border-radius: 4px; padding: 0 3px; font-size: 11px; }
 
-ACCEL_FILES.forEach(fileName => {
+  .history { background: #fff; margin: 14px 12px 0; border-radius: 14px; box-shadow: 0 2px 6px rgba(42,127,168,.1); display: none; overflow: hidden; }
+  .history.show { display: block; }
+  .history-head { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-bottom: 1px solid #eef3f6; }
+  .history-head .h-title { font-size: 15px; font-weight: bold; color: #1f5f80; }
+  .history-head .h-clear { background: none; border: none; color: #b42318; font-size: 13px; cursor: pointer; }
+  .h-row { display: flex; align-items: center; padding: 12px 14px; border-bottom: 1px solid #f0f3f5; cursor: pointer; }
+  .h-row:last-child { border-bottom: none; }
+  .h-icon { width: 44px; height: 44px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; margin-left: 12px; overflow: hidden; border: 1px solid #e2e8f0; }
+  .h-icon img { width: 85%; height: 85%; object-fit: contain; }
+  .h-info { flex: 1; min-width: 0; text-align: right; }
+  .h-name { font-size: 15px; font-weight: bold; color: #222; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .h-sub { display: flex; align-items: center; gap: 8px; margin-top: 5px; font-size: 12px; color: #4a6b7d; }
+  .h-plate { display: inline-flex; direction: ltr; align-items: stretch; height: 22px; background: #ffd21f; border: 1.5px solid #111; border-radius: 4px; overflow: hidden; }
+  .h-plate-strip { background: #1e5fa8; color: #fff; width: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 5px; font-weight: bold; }
+  .h-plate-num { font-size: 12px; font-weight: bold; color: #111; padding: 0 6px; display: flex; align-items: center; }
+  .h-meta { display: flex; flex-direction: column; align-items: flex-end; justify-content: space-between; height: 38px; }
+  .h-time { font-size: 11px; color: #8a99a3; direction: ltr; }
+  .h-del { background: none; border: none; color: #b0bcc4; font-size: 18px; cursor: pointer; padding: 0 2px; }
+
+  .detail { display: none; }
+  .detail.show { display: block; }
+
+  .tabs { background: #ffffff; display: none; justify-content: space-around; align-items: stretch; border-bottom: 1px solid #e2e8f0; margin-top: 6px; }
+  .tabs.show { display: flex; }
+  .tab { flex: 1; text-align: center; padding: 10px 0 8px; color: #64748b; font-size: 13px; font-weight: 500; cursor: pointer; border-bottom: 3px solid transparent; transition: all 0.2s; }
+  .tab .ic { display: block; font-size: 20px; margin-bottom: 4px; }
+  .tab.active { color: #1f7ea9; font-weight: bold; border-bottom-color: #2a7fa8; }
+
+  .brand-logo-container { width: 92px; height: 92px; margin: 14px auto 6px; background: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px rgba(0,0,0,0.08); border: 2px solid #eef2f5; padding: 10px; overflow: hidden; }
+  .brand-logo { width: 100%; height: 100%; object-fit: contain; }
+  .brand-badge { width: 100%; height: 100%; border-radius: 50%; color: #fff; font-size: 34px; font-weight: bold; display: flex; align-items: center; justify-content: center; }
+
+  .car-name { text-align: center; font-size: 21px; color: #1f5f80; font-weight: bold; margin-top: 4px; }
+  .car-trim { text-align: center; font-size: 16px; color: #2a7fa8; font-weight: bold; margin-top: 2px; }
+
+  .status-row { display: flex; justify-content: space-around; padding: 16px 6px 6px; }
+  .st { text-align: center; width: 33%; }
+  .st.clickable { cursor: pointer; }
+  .st .st-ic { font-size: 28px; line-height: 1; height: 32px; display: flex; align-items: center; justify-content: center; }
+  .st .st-main { font-size: 16px; font-weight: bold; margin-top: 6px; }
+  .st .st-sub { font-size: 13px; margin-top: 3px; font-weight: bold; }
+  .st.ok .st-main, .st.ok .st-sub { color: #2e8b57; }
+  .st.info .st-main, .st.info .st-sub { color: #2a7fa8; }
+  .st.neutral .st-main, .st.neutral .st-sub { color: #777; }
+  .st.bad .st-main, .st.bad .st-sub { color: #b42318; }
+
+  .spec-card { background: #fff; border-radius: 14px; margin: 14px 12px 0; padding: 14px 4px 10px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; box-shadow: 0 2px 8px rgba(42,127,168,.08); }
+  .spec { text-align: center; }
+  .spec .sp-ic { font-size: 20px; height: 26px; display: flex; align-items: center; justify-content: center; }
+  .spec .sp-lbl { font-size: 11px; color: #64748b; margin-top: 4px; line-height: 1.2; }
+  .spec .sp-val { font-size: 13px; font-weight: bold; color: #1f7ea9; margin-top: 3px; direction: ltr; }
+
+  .accel-disclaimer { margin: 8px 16px 0; font-size: 11px; color: #64748b; line-height: 1.35; text-align: center; background: #eef6f9; padding: 6px 10px; border-radius: 8px; border-right: 3px solid #2a7fa8; }
+
+  .list-card { background: #fff; border-radius: 14px; margin: 12px 12px 0; overflow: hidden; box-shadow: 0 2px 8px rgba(42,127,168,.08); }
+  .lrow { display: flex; align-items: center; padding: 11px 14px; border-bottom: 1px solid #f1f5f9; }
+  .lrow:last-child { border-bottom: none; }
+  .lrow .li { width: 32px; height: 32px; border-radius: 50%; background: #e6f2f9; display: flex; align-items: center; justify-content: center; margin-left: 10px; font-size: 15px; flex-shrink: 0; }
+  .lrow .ll { color: #475569; font-size: 13px; text-align: right; }
+  .lrow .sp { flex: 1; }
+  .lrow .lv { color: #1f5f80; font-size: 13px; font-weight: bold; margin-right: 6px; direction: ltr; }
+
+  .test-card { background: #fff; border-radius: 14px; margin: 12px 12px 0; padding: 12px 14px; box-shadow: 0 2px 8px rgba(42,127,168,.08); }
+  .test-row { display: flex; align-items: center; justify-content: space-between; padding: 8px 4px; border-bottom: 1px solid #f1f5f9; }
+  .test-row:last-child { border-bottom: none; }
+  .test-row .tl { color: #475569; font-size: 13px; }
+  .test-row .tv { color: #1f5f80; font-size: 14px; font-weight: bold; direction: ltr; }
+  .test-countdown { text-align: center; font-size: 13px; font-weight: bold; color: #2e8b57; margin-top: 8px; }
+
+  .grid-card { background: #fff; border-radius: 14px; margin: 12px 12px 0; padding: 14px; box-shadow: 0 2px 8px rgba(42,127,168,.08); }
+  .card-header-title { font-size: 14px; font-weight: bold; color: #1f5f80; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+  .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .feat-box { background: #f8fafc; border-radius: 10px; padding: 10px 4px; text-align: center; border: 1px solid #eef2f6; }
+  .feat-box .fb-ic { font-size: 22px; height: 28px; display: flex; align-items: center; justify-content: center; }
+  .feat-box .fb-lbl { font-size: 11px; color: #64748b; margin-top: 4px; }
+  .feat-box .fb-val { font-size: 13px; font-weight: bold; color: #1f5f80; margin-top: 2px; }
+
+  /* טבלת צ'קבוקסים */
+  .equip-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .equip-item { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 10px; font-size: 13px; font-weight: 500; }
+  .equip-item.active { color: #166534; background: #f0fdf4; border: 1px solid #bbf7d0; }
+  .equip-item.inactive { color: #991b1b; background: #fef2f2; border: 1px solid #fecaca; }
+
+  /* מד בטיחות מודרני מ-0 עד 8 */
+  .safety-meter-card { background: #fff; border-radius: 14px; margin: 14px 12px 0; padding: 16px; box-shadow: 0 2px 8px rgba(42,127,168,.08); text-align: center; }
+  .safety-meter-title { font-size: 15px; font-weight: bold; color: #1f5f80; margin-bottom: 12px; }
+  .meter-scale-wrap { position: relative; margin: 16px 4px 10px; }
+  .meter-scale { display: flex; border-radius: 8px; overflow: hidden; height: 26px; border: 1px solid #cbd5e1; }
+  .meter-step { flex: 1; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; color: #fff; }
+  .meter-step.s0 { background: #b91c1c; }
+  .meter-step.s1 { background: #ea580c; }
+  .meter-step.s2 { background: #f59e0b; }
+  .meter-step.s3 { background: #eab308; }
+  .meter-step.s4 { background: #84cc16; }
+  .meter-step.s5 { background: #22c55e; }
+  .meter-step.s6 { background: #10b981; }
+  .meter-step.s7 { background: #06b6d4; }
+  .meter-step.s8 { background: #1d4ed8; }
+  .meter-pointer-box { display: inline-flex; align-items: center; gap: 6px; background: #e0f2fe; border: 1.5px solid #0284c7; border-radius: 20px; padding: 6px 16px; margin-top: 10px; }
+  .meter-pointer-box .mp-score { font-size: 18px; font-weight: bold; color: #0369a1; }
+  .meter-pointer-box .mp-txt { font-size: 12px; color: #0284c7; font-weight: 500; }
+
+  .report-btn-wrap { text-align: center; margin: 18px 12px 10px; }
+  .report-btn { display: inline-flex; align-items: center; gap: 8px; background: #ffffff; border: 1.5px dashed #2a7fa8; color: #2a7fa8; border-radius: 12px; padding: 10px 20px; font-size: 13px; font-weight: bold; cursor: pointer; }
+
+  .modal-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+  .modal-overlay.show { display: flex; }
+  .modal-card { background: #fff; width: 100%; max-width: 340px; border-radius: 16px; padding: 20px; text-align: right; }
+  .modal-title { font-size: 16px; font-weight: bold; color: #1f5f80; margin-bottom: 6px; }
+  .modal-sub { font-size: 12px; color: #666; margin-bottom: 14px; }
+  .modal-select, .modal-textarea { width: 100%; padding: 9px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 13px; outline: none; background: #f8fafc; }
+  .modal-textarea { height: 75px; resize: none; margin-top: 4px; }
+  .modal-actions { display: flex; gap: 10px; margin-top: 16px; }
+  .modal-submit { flex: 1; background: #2a7fa8; color: #fff; border: none; padding: 10px; border-radius: 8px; font-weight: bold; font-size: 14px; cursor: pointer; }
+  .modal-close { background: #e2e8f0; color: #475569; border: none; padding: 10px 14px; border-radius: 8px; font-size: 13px; cursor: pointer; }
+  .report-status { display: none; font-size: 12px; text-align: center; padding: 8px; border-radius: 8px; margin-top: 12px; font-weight: bold; }
+  .report-status.success { display: block; background: #dcfce7; color: #166534; }
+  .report-status.error { display: block; background: #fee2e2; color: #991b1b; }
+</style>
+</head>
+<body>
+<div class="phone">
+
+  <div class="topbar">
+    <span class="i" id="favBtn">♡</span>
+    <span class="t" id="topTitle">פרטי רכב</span>
+    <span class="i hidden" id="backBtn">←</span>
+  </div>
+
+  <div class="search-box">
+    <div class="plate">
+      <div class="strip">
+        <span class="flag">✡</span>
+        <span class="il">IL</span>
+        <span class="he">ישראל</span>
+      </div>
+      <input type="text" id="plateInput" inputmode="numeric" placeholder="הקלד מספר רכב">
+      <button id="searchBtn">חפש</button>
+    </div>
+    <div id="loader" class="msg">מחפש במאגר משרד התחבורה...</div>
+    <div id="errorMsg" class="msg err"></div>
+  </div>
+
+  <div id="history" class="history">
+    <div class="history-head">
+      <span class="h-title">חיפושים אחרונים</span>
+      <button id="histClear" class="h-clear">נקה הכל</button>
+    </div>
+    <div id="historyList"></div>
+  </div>
+
+  <div id="detailView" class="detail">
+    <div id="kmLine" class="km-line">
+      <span class="km-ic">1½</span>
+      <span id="kmText"></span>
+    </div>
+
+    <div id="tabs" class="tabs">
+      <div class="tab active" data-tab="general"><span class="ic">🚗</span>כללי</div>
+      <div class="tab" data-tab="tech"><span class="ic">🔧</span>מפרט טכני</div>
+      <div class="tab" data-tab="safety"><span class="ic">🛡️</span>בטיחות</div>
+      <div class="tab" data-tab="env"><span class="ic">🌿</span>סביבה</div>
+    </div>
+
+    <!-- 1. כללי -->
+    <div id="cardGeneral">
+      <div class="brand-logo-container">
+        <img id="brandLogo" class="brand-logo" alt="סמל יצרן">
+        <div id="brandBadge" class="brand-badge" style="display:none;"></div>
+      </div>
+
+      <div class="car-name"><span id="heroName"></span></div>
+      <div class="car-trim" id="heroTrim"></div>
+
+      <div class="status-row">
+        <div id="stDisabled" class="st neutral">
+          <div class="st-ic">🅿️</div>
+          <div class="st-main">תג נכה</div>
+          <div class="st-sub"></div>
+        </div>
+        <div id="stOwn" class="st info">
+          <div class="st-ic">🛡️</div>
+          <div class="st-main">בעלות</div>
+          <div class="st-sub"></div>
+        </div>
+        <div id="stTest" class="st neutral">
+          <div class="st-ic">📅</div>
+          <div class="st-main">טסט</div>
+          <div class="st-sub"></div>
+        </div>
+      </div>
+
+      <div class="spec-card">
+        <div class="spec"><div class="sp-ic">🏁</div><div class="sp-lbl">רמת גימור</div><div class="sp-val" id="sTrim">אין נתון</div></div>
+        <div class="spec"><div class="sp-ic">⚙️</div><div class="sp-lbl">נפח מנוע</div><div class="sp-val" id="sEngine">אין נתון</div></div>
+        <div class="spec"><div class="sp-ic">⚡</div><div class="sp-lbl">כוח סוס</div><div class="sp-val" id="sHp">אין נתון</div></div>
+        <div class="spec"><div class="sp-ic">⏱️</div><div class="sp-lbl">0-100 קמ"ש</div><div class="sp-val" id="sAccel">אין נתון</div></div>
+        <div class="spec"><div class="sp-ic">🚗</div><div class="sp-lbl">מרכב</div><div class="sp-val" id="sBody">אין נתון</div></div>
+      </div>
+
+      <div class="accel-disclaimer">
+        ℹ️ נתוני התאוצה מבוססים על מאגרים חיצוניים שונים ומשמשים להערכה בלבד, אין להסתמך עליהם במדויק.
+      </div>
+
+      <div class="list-card">
+        <div class="lrow"><span class="li">🏭</span><span class="ll">יצרן</span><span class="sp"></span><span class="lv" id="vManufacturer"></span></div>
+        <div class="lrow"><span class="li">🚙</span><span class="ll">דגם</span><span class="sp"></span><span class="lv" id="vModel"></span></div>
+        <div class="lrow"><span class="li">📅</span><span class="ll">שנת ייצור</span><span class="sp"></span><span class="lv" id="vYear"></span></div>
+        <div class="lrow"><span class="li">🎨</span><span class="ll">צבע</span><span class="sp"></span><span class="lv" id="vColor"></span></div>
+        <div class="lrow"><span class="li">🔢</span><span class="ll">מספר רכב</span><span class="sp"></span><span class="lv" id="vPlate"></span></div>
+        <div class="lrow"><span class="li">🔩</span><span class="ll">מספר שלדה</span><span class="sp"></span><span class="lv" id="vChassis"></span></div>
+        <div class="lrow"><span class="li">🛞</span><span class="ll">מידות צמיג קדמי</span><span class="sp"></span><span class="lv" id="vTireFront"></span></div>
+        <div class="lrow"><span class="li">🛞</span><span class="ll">מידות צמיג אחורי</span><span class="sp"></span><span class="lv" id="vTireRear"></span></div>
+        <div class="lrow"><span class="li">🔁</span><span class="ll">מספר בעלים</span><span class="sp"></span><span class="lv" id="vOwners"></span></div>
+      </div>
+
+      <div class="test-card">
+        <div class="test-row"><span class="tl">טסט אחרון</span><span class="tv" id="vLastTest"></span></div>
+        <div class="test-row"><span class="tl">טסט הבא (תוקף)</span><span class="tv" id="vNextTest"></span></div>
+        <div class="test-countdown" id="vCountdown"></div>
+      </div>
+
+      <div class="report-btn-wrap">
+        <button class="report-btn" id="openReportBtn"><span>✏️</span> חסרים פרטים ברכב? לחץ כאן לדיווח</button>
+      </div>
+    </div>
+
+    <!-- 2. מפרט טכני מתוקן -->
+    <div id="cardTech" style="display:none">
+      <div class="grid-card">
+        <div class="card-header-title"><span>📐</span> מידות, משקל ומבנה</div>
+        <div class="features-grid">
+          <div class="feat-box"><div class="fb-ic">🏋️</div><div class="fb-lbl">משקל כולל</div><div class="fb-val" id="tWeightTotal">אין מידע</div></div>
+          <div class="feat-box"><div class="fb-ic">⚖️</div><div class="fb-lbl">משקל עצמי</div><div class="fb-val" id="tWeightCurb">אין מידע</div></div>
+          <div class="feat-box"><div class="fb-ic">🪑</div><div class="fb-lbl">מושבים</div><div class="fb-val" id="tSeats">5</div></div>
+          <div class="feat-box"><div class="fb-ic">🚪</div><div class="fb-lbl">דלתות</div><div class="fb-val" id="tDoors">5</div></div>
+          <div class="feat-box"><div class="fb-ic">🎈</div><div class="fb-lbl">כריות אוויר</div><div class="fb-val" id="tAirbags">7</div></div>
+          <div class="feat-box"><div class="fb-ic">🪟</div><div class="fb-lbl">חלונות חשמל</div><div class="fb-val" id="tWindows">4</div></div>
+        </div>
+      </div>
+
+      <div class="grid-card">
+        <div class="card-header-title"><span>⚙️</span> תיבת הילוכים, הנעה וגרירה</div>
+        <div class="list-card" style="margin: 0; box-shadow: none; border: 1px solid #eef2f6;">
+          <div class="lrow"><span class="li">🕹️</span><span class="ll">תיבת הילוכים</span><span class="sp"></span><span class="lv" id="tGearbox">אוטומטית</span></div>
+          <div class="lrow"><span class="li">🧭</span><span class="ll">הנעה</span><span class="sp"></span><span class="lv" id="tDrive">4X2 (הנעה קדמית)</span></div>
+          <div class="lrow"><span class="li">🚚</span><span class="ll">ארגז</span><span class="sp"></span><span class="lv" id="tCargo">ללא ארגז</span></div>
+          <div class="lrow"><span class="li">🪝</span><span class="ll">וו גרירה</span><span class="sp"></span><span class="lv" id="tHook">ללא</span></div>
+          <div class="lrow"><span class="li">⚓</span><span class="ll">כושר גרירה עם בלמים</span><span class="sp"></span><span class="lv" id="tTowBrakes">ללא היתר</span></div>
+          <div class="lrow"><span class="li">⚓</span><span class="ll">כושר גרירה ללא בלמים</span><span class="sp"></span><span class="lv" id="tTowNoBrakes">ללא היתר</span></div>
+        </div>
+      </div>
+
+      <div class="grid-card">
+        <div class="card-header-title"><span>❄️</span> אבזור ונוחות</div>
+        <div class="equip-grid">
+          <div class="equip-item active" id="eqAC"><span>✔</span> מזגן</div>
+          <div class="equip-item active" id="eqSunroof"><span>✔</span> חלון בגג (סאנרוף)</div>
+          <div class="equip-item active" id="eqMag"><span>✔</span> חישוקי מגנזיום</div>
+          <div class="equip-item active" id="eqSteering"><span>✔</span> הגה כוח</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. בטיחות עם מד רשמי צבעוני -->
+    <div id="cardSafety" style="display:none">
+      <div class="safety-meter-card">
+        <div class="safety-meter-title">רמת אבזור בטיחותי (משרד התחבורה)</div>
+        
+        <div class="meter-scale-wrap">
+          <div class="meter-scale">
+            <div class="meter-step s0">0</div>
+            <div class="meter-step s1">1</div>
+            <div class="meter-step s2">2</div>
+            <div class="meter-step s3">3</div>
+            <div class="meter-step s4">4</div>
+            <div class="meter-step s5">5</div>
+            <div class="meter-step s6">6</div>
+            <div class="meter-step s7">7</div>
+            <div class="meter-step s8">8</div>
+          </div>
+        </div>
+
+        <div class="meter-pointer-box">
+          <span class="mp-score" id="safScoreVal">ניקוד: 4</span>
+          <span class="mp-txt">רמת אבזור גבוהה</span>
+        </div>
+      </div>
+
+      <div class="grid-card">
+        <div class="card-header-title"><span>🛡️</span> מערכות בטיחות אקטיביות וסיוע לנהג</div>
+        <div class="equip-grid">
+          <div class="equip-item active" id="safABS"><span>✔</span> מערכת ABS</div>
+          <div class="equip-item active" id="safESP"><span>✔</span> בקרת יציבות ESP</div>
+          <div class="equip-item active" id="safBrake"><span>✔</span> בלימת חירום אוטונומית</div>
+          <div class="equip-item active" id="safPed"><span>✔</span> זיהוי הולכי רגל ודו-גלגלי</div>
+          <div class="equip-item active" id="safLane"><span>✔</span> התרעת סטייה מנתיב</div>
+          <div class="equip-item active" id="safLaneKeep"><span>✔</span> תיקון סטייה אקטיבי</div>
+          <div class="equip-item active" id="safAdaptive"><span>✔</span> בקרת שיוט אדפטיבית</div>
+          <div class="equip-item active" id="safDistance"><span>✔</span> ניטור מרחק מלפנים</div>
+          <div class="equip-item active" id="safBlind"><span>✔</span> ניטור שטח מת</div>
+          <div class="equip-item active" id="safCam"><span>✔</span> מצלמת רוורס</div>
+          <div class="equip-item active" id="safTire"><span>✔</span> חיישני לחץ אוויר</div>
+          <div class="equip-item active" id="safBelt"><span>✔</span> חיישני חגורות בטיחות</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. סביבה -->
+    <div id="cardEnv" style="display:none">
+      <div class="grid-card" style="text-align:center; padding: 30px 10px;">
+        <div style="font-size: 34px; margin-bottom: 8px;">🌿</div>
+        <div style="font-weight: bold; color: #1f5f80;">דרגת זיהום אוויר וסביבה</div>
+        <div style="font-size: 13px; color: #64748b; margin-top: 6px;">ציון קבוצת זיהום ומדדי פליטה.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal דיווח -->
+<div id="reportModal" class="modal-overlay">
+  <div class="modal-card">
+    <div class="modal-title">דיווח על פרט חסר או שגוי</div>
+    <div class="modal-sub" id="reportCarHeader">מספר רכב: -</div>
+
+    <select id="reportCategory" class="modal-select">
+      <option value="תאוצה 0-100">תאוצה 0-100 קמ"ש</option>
+      <option value="סוג מרכב">סוג מרכב</option>
+      <option value="מפרט טכני / אבזור">מפרט טכני / אבזור</option>
+      <option value="בטיחות">בטיחות</option>
+      <option value="אחר">פרט אחר</option>
+    </select>
+
+    <textarea id="reportText" class="modal-textarea" style="margin-top:10px;" placeholder="פרטים נוספים..."></textarea>
+    <div id="reportStatus" class="report-status"></div>
+
+    <div class="modal-actions">
+      <button id="submitReportBtn" class="modal-submit">שלח דיווח</button>
+      <button id="closeReportBtn" class="modal-close">ביטול</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const API_BASE = "https://car-api-huth.onrender.com";
+  const HIST_KEY = "carSearchHistory";
+  const HIST_MAX = 10;
+  const WEB3FORMS_KEY = "B0efa2c2-72c6-4532-8899-0e3ce53e2a61";
+
+  let currentPlate = "";
+  let currentCarData = null;
+  let inDetail = false;
+
+  function formatPlate(v) {
+    const d = String(v || '').replace(/\D/g, '').slice(0, 8);
+    if (d.length === 8) return d.slice(0, 3) + '-' + d.slice(3, 5) + '-' + d.slice(5);
+    if (d.length === 7) return d.slice(0, 2) + '-' + d.slice(2, 5) + '-' + d.slice(5);
+    return d;
+  }
+
+  function findBrand(manufacturer, model) {
+    const raw = ((manufacturer || '') + ' ' + (model || '')).toLowerCase();
+    if (raw.includes("cupra") || raw.includes("קופרה")) return { slug: "cupra", color: "#8c6a3d" };
+    return null;
+  }
+
+  function cleanText(v) {
+    return v ? String(v).trim().replace(/[.\s,;:]+$/g, '') : '';
+  }
+
+  function setVal(id, value, suffix) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const empty = value === null || value === undefined || value === '';
+    el.textContent = empty ? 'אין מידע' : (suffix ? value + ' ' + suffix : value);
+  }
+
+  function setEquip(id, active, name) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.className = 'equip-item ' + (active ? 'active' : 'inactive');
+    el.innerHTML = `<span>${active ? '✔' : '✖'}</span> ${name}`;
+  }
+
+  async function searchCar() {
+    const plate = document.getElementById('plateInput').value.replace(/\D/g, '');
+    const btn = document.getElementById('searchBtn');
+    const loader = document.getElementById('loader');
+    const err = document.getElementById('errorMsg');
+
+    err.style.display = 'none';
+    document.getElementById('kmLine').classList.remove('show');
+    document.getElementById('detailView').classList.remove('show');
+    document.getElementById('tabs').classList.remove('show');
+
+    if (plate.length < 7) {
+      err.textContent = 'נא להזין מספר רכב תקין';
+      err.style.display = 'block';
+      return;
+    }
+
+    loader.style.display = 'block';
+    btn.disabled = true;
+
     try {
-        const filePath = path.join(__dirname, fileName);
-        if (fs.existsSync(filePath)) {
-            const raw = fs.readFileSync(filePath, "utf8");
-            const data = JSON.parse(raw);
-            if (Array.isArray(data)) accelTable = accelTable.concat(data);
-        }
+      const r = await fetch(API_BASE + '/api/car/' + encodeURIComponent(plate));
+      const j = await r.json();
+      loader.style.display = 'none';
+
+      if (!j.success || !j.data) {
+        err.textContent = j.message || 'רכב לא נמצא';
+        err.style.display = 'block';
+        return;
+      }
+
+      const d = j.data;
+      currentPlate = plate;
+      currentCarData = d;
+
+      document.getElementById('heroName').textContent = cleanText((d.manufacturer || '') + ' ' + (d.model || ''));
+      document.getElementById('heroTrim').textContent = cleanText(d.trim || '');
+
+      setVal('sBody', d.bodyType || d.merkav);
+      setVal('sHp', d.horsepower, 'כ"ס');
+      setVal('sEngine', d.engineCc, 'סמ"ק');
+      setVal('sAccel', d.acceleration0to100, 'שניות');
+      setVal('sTrim', d.trim);
+
+      setVal('vManufacturer', d.manufacturer);
+      setVal('vModel', d.model);
+      setVal('vYear', d.year);
+      setVal('vColor', d.color);
+      setVal('vPlate', formatPlate(plate));
+      setVal('vChassis', d.chassis);
+      setVal('vTireFront', d.tireFront);
+      setVal('vTireRear', d.tireRear);
+      setVal('vOwners', d.owners);
+
+      const t = d.techSpecs || {};
+      setVal('tWeightTotal', t.totalWeight ? t.totalWeight.toLocaleString('he-IL') : null, 'ק"ג');
+      setVal('tWeightCurb', t.curbWeight ? t.curbWeight.toLocaleString('he-IL') : null, 'ק"ג');
+      setVal('tSeats', t.seats);
+      setVal('tDoors', t.doors);
+      setVal('tAirbags', t.airbags);
+      setVal('tWindows', t.powerWindows);
+
+      setVal('tGearbox', t.gearbox);
+      setVal('tDrive', t.drive);
+      setVal('tCargo', t.cargoBox);
+      setVal('tHook', t.hasHook ? 'קיים' : 'ללא וו גרירה');
+      setVal('tTowBrakes', t.towWithBrakes);
+      setVal('tTowNoBrakes', t.towNoBrakes);
+
+      setEquip('eqAC', t.ac, 'מזגן');
+      setEquip('eqSunroof', t.sunroof, 'חלון בגג (סאנרוף)');
+      setEquip('eqMag', t.alloyWheels, 'חישוקי מגנזיום');
+      setEquip('eqSteering', t.powerSteering, 'הגה כוח');
+
+      const s = d.safetySpecs || {};
+      const score = s.safetyScore != null ? s.safetyScore : 4;
+      document.getElementById('safScoreVal').textContent = `ניקוד בטיחות: ${score} מתוך 8`;
+
+      // הדגשת המדרגה במד הבטיחות
+      document.querySelectorAll('.meter-step').forEach((st, idx) => {
+        st.style.opacity = idx === score ? '1' : '0.4';
+        st.style.transform = idx === score ? 'scale(1.1)' : 'none';
+      });
+
+      setEquip('safABS', s.abs, 'מערכת ABS');
+      setEquip('safESP', s.esp, 'בקרת יציבות ESP');
+      setEquip('safBrake', s.autoBraking, 'בלימת חירום אוטונומית');
+      setEquip('safPed', s.pedestrianDetection, 'זיהוי הולכי רגל ודו-גלגלי');
+      setEquip('safLane', s.laneDeparture, 'התרעת סטייה מנתיב');
+      setEquip('safLaneKeep', s.laneKeepAssist, 'תיקון סטייה אקטיבי');
+      setEquip('safAdaptive', s.adaptiveCruise, 'בקרת שיוט אדפטיבית');
+      setEquip('safDistance', s.frontDistanceMonitor, 'ניטור מרחק מלפנים');
+      setEquip('safBlind', s.blindSpot, 'ניטור שטח מת');
+      setEquip('safCam', s.rearCamera, 'מצלמת רוורס');
+      setEquip('safTire', s.tirePressureMonitor, 'חיישני לחץ אוויר');
+      setEquip('safBelt', s.seatbeltSensors, 'חיישני חגורות בטיחות');
+
+      document.getElementById('tabs').classList.add('show');
+      document.getElementById('detailView').classList.add('show');
     } catch (e) {
-        console.error(`[DATA ERROR] ${fileName}:`, e.message);
+      err.textContent = 'שגיאה בחיבור לשרת';
+      err.style.display = 'block';
+    } finally {
+      btn.disabled = false;
     }
-});
+  }
 
-const HE_MAKE_ALIASES = {
-    "אבארט": "Abarth", "קופרה": "Cupra", "אאודי": "Audi", "אודי": "Audi", "אופל": "Opel",
-    "אינפיניטי": "Infiniti", "ניסאן": "Nissan", "איווייס": "Aiways", "אורה": "ORA",
-    "איסוזו": "Isuzu", "אלפא רומיאו": "Alfa Romeo", "מ.ג": "MG", "אם ג'י": "MG",
-    "ב.מ.וו": "BMW", "ב מ וו": "BMW", "בי ווי די": "BYD", "בי וי די": "BYD",
-    "ביואיק": "Buick", "בנטלי": "Bentley", "ג'אקו": "JAECOO", "ג'.אמ.סי": "GMC",
-    "ג'יפ": "Jeep", "יונדאי": "Hyundai", "ג'נסיס": "Genesis", "ג'ילי": "Geely",
-    "דאצ'יה": "Dacia", "דודג'": "Dodge", "די אס": "DS", "דייהטסו": "Daihatsu",
-    "הונגצ'י": "Hongqi", "הונדה": "Honda", "וויה": "Voyah", "וולבו": "Volvo",
-    "וולוו": "Volvo", "וואי": "WEY", "זיקר": "Zeekr", "טויוטה": "Toyota",
-    "טסלה": "Tesla", "יגואר": "Jaguar", "לינק אנד קו": "Lynk & Co", "ליפמוטור": "Leapmotor",
-    "למבורגיני": "Lamborghini", "לנד רובר": "Land Rover", "ריינג' רובר": "Land Rover",
-    "לקסוס": "Lexus", "מאזדה": "Mazda", "מזדה": "Mazda", "מיני": "Mini",
-    "מרצדס": "Mercedes-Benz", "מיצובישי": "Mitsubishi", "סאאב": "Saab", "סיאט": "Seat",
-    "סובארו": "Subaru", "סוזוקי": "Suzuki", "סיטרואן": "Citroen", "סקודה": "Skoda",
-    "פולסטאר": "Polestar", "פולקסווגן": "Volkswagen", "פורד": "Ford", "פורשה": "Porsche",
-    "פיאט": "Fiat", "פיג'ו": "Peugeot", "קאדילאק": "Cadillac", "קיה": "Kia",
-    "קרייזלר": "Chrysler", "שברולט": "Chevrolet", "רנו": "Renault"
-};
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const tabName = tab.dataset.tab;
+      document.getElementById('cardGeneral').style.display = (tabName === 'general') ? '' : 'none';
+      document.getElementById('cardTech').style.display = (tabName === 'tech') ? '' : 'none';
+      document.getElementById('cardSafety').style.display = (tabName === 'safety') ? '' : 'none';
+      document.getElementById('cardEnv').style.display = (tabName === 'env') ? '' : 'none';
+    });
+  });
 
-function norm(s) {
-    return String(s || "").toLowerCase().replace(/[^a-z0-9א-ת]/g, "");
-}
-
-function lookupAccel(makeTexts, modelTexts, year, hp, cc) {
-    const makes = makeTexts.map(norm).filter(Boolean);
-    const models = modelTexts.map(norm).filter(Boolean);
-    const y = Number(year);
-
-    for (const r of accelTable) {
-        const rMake = norm(r.make);
-        const rModel = norm(r.model);
-        if (!makes.some(m => m.includes(rMake))) continue;
-        if (!models.some(m => m.includes(rModel))) continue;
-        if (!Number.isNaN(y) && r.yearStart != null) {
-            if (y < r.yearStart) continue;
-            if (r.yearEnd != null && y > r.yearEnd) continue;
-        }
-        if (hp != null && r.hp != null && Math.abs(r.hp - hp) > 2) continue;
-        if (cc != null && r.cc != null && Math.abs(r.cc - cc) > 30) continue;
-        return { seconds: r.seconds, source: r.source || "נתון יצרן" };
-    }
-    return null;
-}
-
-async function searchDatastore(resourceId, filters, limit = 100, q = "") {
-    const f = filters ? `&filters=${encodeURIComponent(JSON.stringify(filters))}` : "";
-    const qq = q ? `&q=${encodeURIComponent(q)}` : "";
-    const url = `https://data.gov.il/api/3/action/datastore_search?resource_id=${resourceId}${f}${qq}&limit=${limit}`;
-    const response = await fetch(url);
-    const data = await response.json();
-    return data?.success ? (data.result?.records || []) : [];
-}
-
-function toText(value) {
-    if (value == null) return null;
-    const s = String(value).trim();
-    if (s === "" || /^dnf$/i.test(s)) return null;
-    return s;
-}
-
-function toNumber(value) {
-    const s = toText(value);
-    if (s === null) return null;
-    const n = Number(s.replace(/,/g, ""));
-    return Number.isNaN(n) ? null : n;
-}
-
-function toBool(value) {
-    if (value === true || value === 1 || value === "1" || value === "כן") return true;
-    if (value === false || value === 0 || value === "0" || value === "לא") return false;
-    return null;
-}
-
-const ORIGIN_LABELS = {
-    "": "פרטי", "החכר": "החכרה (ליסינג)", "השכרה": "השכרה", "יבוא אישי": "יבוא אישי",
-    "יבוא אישי-משומש": "יבוא אישי משומש", "מדינת ישראל": "רכב ממשלתי",
-    "ביס לנהיגה\"": "בית ספר לנהיגה", "משומש מיבואן": "משומש מיבואן"
-};
-
-function labelOwnership(raw) {
-    const t = toText(raw);
-    return t === null ? "פרטי" : (ORIGIN_LABELS[t] || t);
-}
-
-function labelRegistryOwnership(raw) {
-    const t = toText(raw);
-    return t === null ? null : (ORIGIN_LABELS[t] || t);
-}
-
-function testStatus(expiry) {
-    if (!expiry) return null;
-    const d = new Date(expiry);
-    if (isNaN(d)) return null;
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    return d >= today;
-}
-
-const BODY_TYPE_MAP = {
-    "MPV": "מיניוואן", "SUV": "פנאי / שטח", "HATCHBACK": "האצ'בק", "SEDAN": "סדאן",
-    "ESTATE": "סטיישן", "STATION": "סטיישן", "COUPE": "קופה", "CABRIO": "קבריולה",
-    "PICKUP": "טנדר", "VAN": "מסחרי / ואן", "MINIVAN": "מיניוואן", "CROSSOVER": "קרוסאובר",
-    "האצ'בק": "האצ'בק", "סדאן": "סדאן", "סטיישן": "סטיישן", "קופה": "קופה", "פנאי": "פנאי / שטח"
-};
-
-function resolveBodyType(car, row) {
-    const rawMerkav = toText(row?.merkav) || toText(car?.merkav);
-    if (rawMerkav) {
-        const clean = rawMerkav.trim();
-        if (BODY_TYPE_MAP[clean]) return BODY_TYPE_MAP[clean];
-        if (BODY_TYPE_MAP[clean.toUpperCase()]) return BODY_TYPE_MAP[clean.toUpperCase()];
-        return clean;
-    }
-    const sug = toText(car?.sug_degem) || toText(row?.sug_degem);
-    if (sug && BODY_TYPE_MAP[sug.trim().toUpperCase()]) return BODY_TYPE_MAP[sug.trim().toUpperCase()];
-    return null;
-}
-
-function resolveDrive(val) {
-    const s = String(val || "").trim();
-    if (s === "1" || s === "4X2" || s.toLowerCase() === "2wd") return "4X2 (הנעה קדמית)";
-    if (s === "2" || s === "4X4" || s.toLowerCase() === "awd" || s.toLowerCase() === "4wd") return "4X4 (הנעה כפולה)";
-    if (s === "3") return "4X2 (הנעה אחורית)";
-    return s || "4X2 (הנעה קדמית)";
-}
-
-function resolveGearbox(val) {
-    const s = String(val || "").trim();
-    if (s.includes("אוטומט") || s === "A" || s === "1") return "אוטומטית";
-    if (s.includes("ידני") || s === "M" || s === "2") return "ידנית";
-    if (s.includes("רובוט") || s.includes("כפול") || s === "R") return "רובוטית כפולת מצמדים (DSG)";
-    if (s.includes("רציף") || s === "C") return "רציפה (CVT)";
-    return s || "אוטומטית";
-}
-
-async function checkDisabled(plate) {
-    try {
-        const cleanPlate = String(plate).replace(/\D/g, "");
-        let records = await searchDatastore(DISABLED_ID, { "MISPAR RECHEV": cleanPlate }, 5);
-        if (!records || records.length === 0) records = await searchDatastore(DISABLED_ID, { "MISPAR RECHEV": Number(cleanPlate) }, 5);
-        if (records && records.length > 0) {
-            const match = records[0];
-            return {
-                hasBadge: true,
-                badgeType: match["SUG TAV"] || match["SUG_TAV"] || null,
-                issueDate: match["TAARICH HAFAKAT TAG"] || match["TAARICH_HAFAKAT_TAG"] || null
-            };
-        }
-        return { hasBadge: false, badgeType: null, issueDate: null };
-    } catch (e) {
-        return { hasBadge: false, badgeType: null, issueDate: null };
-    }
-}
-
-async function fetchCarRecord(plate) {
-    const records = await searchDatastore(CAR_REGISTRY_ID, { mispar_rechev: Number(plate) }, 1);
-    return records[0] || null;
-}
-
-async function fetchHistoryRecord(plate) {
-    const records = await searchDatastore(HISTORY_ID, { mispar_rechev: Number(plate) }, 1);
-    return records[0] || null;
-}
-
-async function fetchOwnershipRows(plate) {
-    const rows = await searchDatastore(OWNERSHIP_ID, { mispar_rechev: Number(plate) }, 100);
-    return rows
-        .map(r => ({ date: toText(r.baalut_dt), type: labelOwnership(r.baalut) }))
-        .sort((a, b) => String(a.date).localeCompare(String(b.date)));
-}
-
-async function findModelRow(car) {
-    const year = car.shnat_yitzur != null ? Number(car.shnat_yitzur) : null;
-    const attempts = [];
-    if (car.tozeret_cd != null && car.degem_cd != null && year) {
-        attempts.push({ tozeret_cd: Number(car.tozeret_cd), degem_cd: Number(car.degem_cd), shnat_yitzur: year });
-    }
-    if (car.degem_nm && year) {
-        attempts.push({ degem_nm: String(car.degem_nm), shnat_yitzur: year });
-    }
-    for (const filters of attempts) {
-        const rows = await searchDatastore(MODELS_ID, filters, 100);
-        if (rows.length === 0) continue;
-        return rows.find(r => toNumber(r.koah_sus) != null) || rows[0];
-    }
-    return null;
-}
-
-app.get('/api/car/:plate', async (req, res) => {
-    const plate = req.params.plate.replace(/\D/g, "");
-
-    try {
-        const car = await fetchCarRecord(plate);
-        if (!car) {
-            return res.json({ success: false, message: "המספר אינו קיים במאגר משרד התחבורה" });
-        }
-
-        const [row, historyRaw, ownershipList, disabledResult] = await Promise.all([
-            findModelRow(car),
-            fetchHistoryRecord(plate),
-            fetchOwnershipRows(plate),
-            checkDisabled(plate)
-        ]);
-
-        const manufacturer = car.tozeret_nm || "לא ידוע";
-        const model = car.kinuy_mishari || car.degem_nm || row?.kinuy_mishari || "לא ידוע";
-        const trim = toText(row?.ramat_gimur) || toText(car.ramat_gimur) || null;
-        const year = car.shnat_yitzur || "לא ידוע";
-        const hp = toNumber(row?.koah_sus) ?? toNumber(car.koah_sus);
-        const engineCc = toNumber(row?.nefah_manoa) ?? toNumber(car.nefah_manoa);
-        const testExpiry = car.tokef_dt || null;
-        const bodyType = resolveBodyType(car, row);
-
-        const registryOwnership = labelRegistryOwnership(car.baalut);
-        const historyOwnership = ownershipList.length ? ownershipList[ownershipList.length - 1].type : null;
-        const currentOwnership = registryOwnership || historyOwnership || "פרטי";
-
-        const makeTexts = [manufacturer, car.tozeret_nm, car.kinuy_mishari].filter(Boolean);
-        for (const [he, en] of Object.entries(HE_MAKE_ALIASES)) {
-            if (String(manufacturer).includes(he)) makeTexts.push(en);
-        }
-        const modelTexts = [car.kinuy_mishari, car.degem_nm, car.ramat_gimur, model].filter(Boolean);
-        const acceleration = lookupAccel(makeTexts, modelTexts, year, hp, engineCc);
-
-        // שליפת ציון בטיחות ממשלתי (ramat_eivzur_betihuty או ramat_eivzur_betihuti)
-        const safetyScore = toNumber(row?.ramat_eivzur_betihuty) ?? toNumber(row?.ramat_eivzur_betihuti) ?? toNumber(car?.ramat_eivzur_betihuty) ?? 4;
-
-        // חילוץ נתוני גרירה וארגז
-        const towWithBrakesVal = toNumber(row?.kosher_grira_im_blamim) ?? toNumber(car?.kosher_grira_im_blamim);
-        const towNoBrakesVal = toNumber(row?.kosher_grira_bli_blamim) ?? toNumber(car?.kosher_grira_bli_blamim);
-
-        const isModern = Number(year) >= 2018;
-
-        const techSpecs = {
-            totalWeight: toNumber(row?.mishkal_kolel) ?? toNumber(car?.mishkal_kolel),
-            curbWeight: toNumber(row?.mishkal_atmi) ?? toNumber(car?.mishkal_atmi),
-            doors: toNumber(row?.mispar_dlatot) ?? toNumber(car?.mispar_dlatot) ?? 5,
-            seats: toNumber(row?.mispar_moshavim) ?? toNumber(car?.mispar_moshavim) ?? 5,
-            airbags: toNumber(row?.mispar_kariyot_avir) ?? toNumber(car?.mispar_kariyot_avir) ?? (isModern ? 7 : null),
-            gearbox: resolveGearbox(row?.tevat_hiluchim || car?.tevat_hiluchim),
-            drive: resolveDrive(row?.hanaa_cd || car?.hanaa_cd),
-            towWithBrakes: (towWithBrakesVal && towWithBrakesVal > 0) ? `${towWithBrakesVal.toLocaleString('he-IL')} ק"ג` : "ללא היתר גרירה",
-            towNoBrakes: (towNoBrakesVal && towNoBrakesVal > 0) ? `${towNoBrakesVal.toLocaleString('he-IL')} ק"ג` : "ללא היתר גרירה",
-            hasHook: toBool(row?.vav_grira_ind || car?.vav_grira_ind) || false,
-            cargoBox: toText(row?.argaz_ind || car?.argaz_ind) || "ללא ארגז",
-            ac: true,
-            sunroof: toBool(row?.halon_bagag_ind || car?.halon_bagag_ind) ?? (trim && (trim.includes("VZ") || trim.includes("קופרה")) ? true : null),
-            alloyWheels: toBool(row?.hishukey_magnesium_ind) ?? true,
-            powerWindows: toNumber(row?.halonot_hashmal) ?? 4,
-            powerSteering: true,
-            abs: true,
-            esp: true
-        };
-
-        const safetySpecs = {
-            safetyScore: safetyScore,
-            airbags: techSpecs.airbags,
-            esp: true,
-            abs: true,
-            autoBraking: true,
-            laneDeparture: true,
-            laneKeepAssist: true,
-            adaptiveCruise: true,
-            blindSpot: true,
-            pedestrianDetection: true,
-            rearCamera: true,
-            frontDistanceMonitor: true,
-            tirePressureMonitor: true,
-            seatbeltSensors: true,
-            highBeamControl: false
-        };
-
-        res.json({
-            success: true,
-            data: {
-                plate,
-                manufacturer,
-                model,
-                trim,
-                year,
-                color: car.zeva_rechev || car.tzeva_rechev || "לא ידוע",
-                chassis: toText(car.misgeret),
-                tireFront: toText(car.zmig_kidmi),
-                tireRear: toText(car.zmig_ahori),
-                lastTest: toText(car.mivchan_acharon_dt),
-                engineCc,
-                horsepower: hp,
-                acceleration0to100: acceleration ? acceleration.seconds : null,
-                testExpiry,
-                testValid: testStatus(testExpiry),
-                ownership: currentOwnership,
-                owners: ownershipList.length || null,
-                disabled: Boolean(disabledResult?.hasBadge),
-                bodyType,
-                merkav: bodyType,
-                kmSinceTest: historyRaw?.kilometer_test_aharon ? toNumber(historyRaw.kilometer_test_aharon) : null,
-                techSpecs,
-                safetySpecs
-            }
-        });
-    } catch (error) {
-        console.error("API error:", error);
-        res.status(500).json({ success: false, error: "שגיאה בשליפה" });
-    }
-});
-
-app.get('/api/history/:plate', async (req, res) => {
-    const plate = req.params.plate.replace(/\D/g, "");
-    try {
-        const [historyRaw, ownershipList] = await Promise.all([
-            fetchHistoryRecord(plate),
-            fetchOwnershipRows(plate)
-        ]);
-        res.json({ success: true, history: historyRaw || {}, ownershipList });
-    } catch (e) {
-        res.status(500).json({ success: false, message: "שגיאה" });
-    }
-});
-
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+  document.getElementById('searchBtn').addEventListener('click', searchCar);
+  document.getElementById('plateInput').addEventListener('keydown', e => { if (e.key === 'Enter') searchCar(); });
+</script>
+</body>
+</html>
