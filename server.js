@@ -33,7 +33,6 @@ ACCEL_FILES.forEach(fileName => {
             const data = JSON.parse(raw);
             if (Array.isArray(data)) {
                 accelTable = accelTable.concat(data);
-                console.log(`[DATA OK] נטען בהצלחה: ${fileName} (${data.length} רשומות)`);
             }
         }
     } catch (e) {
@@ -41,29 +40,20 @@ ACCEL_FILES.forEach(fileName => {
     }
 });
 
-// שמות יצרנים בעברית מהרישוי -> שם באנגלית כמו בקובץ התאוצה
 const HE_MAKE_ALIASES = {
     "אבארט": "Abarth", "קופרה": "Cupra", "אאודי": "Audi", "אודי": "Audi", "אופל": "Opel",
-    "אינפיניטי": "Infiniti", "ניסאן": "Nissan", "איווייס": "Aiways", "איווויס": "Aiways", "אורה": "ORA",
-    "אוואטר": "AVATR", "אומודה": "OMODA", "איסוזו": "Isuzu", "אל אי וי סי": "LEVC", "אלפא רומיאו": "Alfa Romeo",
-    "מ.ג": "MG", "אם ג'י": "MG", "אסטון מרטין": "Aston Martin", "אקספנג": "XPENG", "ב.מ.וו": "BMW",
-    "ב מ וו": "BMW", "בי ווי די": "BYD", "ביואיק": "Buick", "בנטלי": "Bentley", "ג'אקו": "JAECOO",
-    "גאקו": "JAECOO", "ג'.איי.סי": "GAC", "ג'י.איי.סי": "GAC", "ג'י איי סי": "GAC", "ג'.אמ.סי": "GMC",
-    "ג'י.אם.סי": "GMC", "ג'י אם סי": "GMC", "ג'יפ": "Jeep", "יונדאי": "Hyundai", "ג'נסיס": "Genesis",
-    "ג'יי איי סי": "JAC", "ג'אק": "JAC", "ג'ילי": "Geely", "דאצ'יה": "Dacia", "דאציה": "Dacia",
-    "דודג'": "Dodge", "דודג": "Dodge", "דונגפנג": "Dongfeng", "די אס": "DS", "דייהטסו": "Daihatsu",
-    "דיפאל": "Deepal", "הונגצ'י": "Hongqi", "הונצי": "Hongqi", "הונדה": "Honda", "וויה": "Voyah",
-    "וולבו": "Volvo", "וואי": "WEY", "זיקר": "Zeekr", "טויוטה": "Toyota", "טסלה": "Tesla",
-    "יגואר": "Jaguar", "יודו": "Yudo", "לינק אנד קו": "Lynk & Co", "ליפמוטור": "Leapmotor",
-    "למבורגיני": "Lamborghini", "לנד רובר": "Land Rover", "לקסוס": "Lexus", "מאזדה": "Mazda",
-    "מיני קופר": "Mini", "מיני": "Mini", "מזארטי": "Maserati", "מרצדס": "Mercedes-Benz",
-    "מקלארן": "McLaren", "מיצובישי": "Mitsubishi", "מקסוס": "Maxus", "ניאו": "NIO", "סאאב": "Saab",
-    "סיאט": "Seat", "סובארו": "Subaru", "סוזוקי": "Suzuki", "סמארט": "Smart", "סיטרואן": "Citroen",
-    "סקודה": "Skoda", "סקייוול": "Skywell", "פולסטאר": "Polestar", "סרס": "Seres", "פוטון": "Foton",
-    "פולקסווגן": "Volkswagen", "פורד": "Ford", "פורשה": "Porsche", "פורתינג": "Forthing",
-    "פיאט": "Fiat", "פיג'ו": "Peugeot", "פרארי": "Ferrari", "צ'רי": "Chery", "קאדילאק": "Cadillac",
-    "קיה": "Kia", "קיי גי מוביליטי": "KGM", "סאנגיונג": "KGM", "קרייזלר": "Chrysler",
-    "רולס רויס": "Rolls-Royce", "שברולט": "Chevrolet", "רנו": "Renault"
+    "אינפיניטי": "Infiniti", "ניסאן": "Nissan", "איווייס": "Aiways", "אורה": "ORA",
+    "אוואטר": "AVATR", "איסוזו": "Isuzu", "אלפא רומיאו": "Alfa Romeo", "מ.ג": "MG",
+    "ב.מ.וו": "BMW", "בי ווי די": "BYD", "ביואיק": "Buick", "בנטלי": "Bentley", "ג'אקו": "JAECOO",
+    "ג'.איי.סי": "GAC", "ג'י.אמ.סי": "GMC", "ג'יפ": "Jeep", "יונדאי": "Hyundai", "ג'נסיס": "Genesis",
+    "ג'ילי": "Geely", "דאצ'יה": "Dacia", "דודג'": "Dodge", "די אס": "DS", "דייהטסו": "Daihatsu",
+    "הונדה": "Honda", "וולבו": "Volvo", "טויוטה": "Toyota", "טסלה": "Tesla", "יגואר": "Jaguar",
+    "לנד רובר": "Land Rover", "לקסוס": "Lexus", "מאזדה": "Mazda", "מיני": "Mini",
+    "מרצדס": "Mercedes-Benz", "מיצובישי": "Mitsubishi", "סאאב": "Saab", "סיאט": "Seat",
+    "סובארו": "Subaru", "סוזוקי": "Suzuki", "סיטרואן": "Citroen", "סקודה": "Skoda",
+    "פולקסווגן": "Volkswagen", "פורד": "Ford", "פורשה": "Porsche", "פיאט": "Fiat",
+    "פיג'ו": "Peugeot", "צ'רי": "Chery", "קאדילאק": "Cadillac", "קיה": "Kia",
+    "שברולט": "Chevrolet", "רנו": "Renault"
 };
 
 function norm(s) {
@@ -91,14 +81,8 @@ function lookupAccel(makeTexts, modelTexts, year, hp, cc) {
     return null;
 }
 
-app.use((req, res, next) => {
-    if (req.url !== '/') {
-        console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
-    }
-    next();
-});
-
-// ---------- עזרים ----------
+app.use(cors());
+app.use(express.json());
 
 async function searchDatastore(resourceId, filters, limit = 100, q = "") {
     try {
@@ -109,7 +93,6 @@ async function searchDatastore(resourceId, filters, limit = 100, q = "") {
         const data = await response.json();
         return data?.success ? (data.result?.records || []) : [];
     } catch (e) {
-        console.error(`[DATASTORE SEARCH ERROR] ${resourceId}:`, e.message);
         return [];
     }
 }
@@ -128,6 +111,7 @@ function toNumber(value) {
     return Number.isNaN(n) ? null : n;
 }
 
+// פונקציית סריקה רחבה: מחפשת בכל מפתחות האפשרויות ברשומות
 function pick(sources, keys, asNumber = false) {
     for (const src of sources) {
         if (!src) continue;
@@ -156,14 +140,8 @@ function pickBool(sources, keys, defaultVal = false) {
 }
 
 const ORIGIN_LABELS = {
-    "": "פרטי",
-    "החכר": "החכרה (ליסינג)",
-    "השכרה": "השכרה",
-    "יבוא אישי": "יבוא אישי",
-    "יבוא אישי-משומש": "יבוא אישי משומש",
-    "מדינת ישראל": "רכב ממשלתי",
-    "ביס לנהיגה\"": "בית ספר לנהיגה",
-    "משומש מיבואן": "משומש מיבואן"
+    "": "פרטי", "החכר": "החכרה (ליסינג)", "השכרה": "השכרה", "יבוא אישי": "יבוא אישי",
+    "יבוא אישי-משומש": "יבוא אישי משומש", "מדינת ישראל": "רכב ממשלתי", "משומש מיבואן": "משומש מיבואן"
 };
 
 function labelOwnership(raw) {
@@ -189,13 +167,10 @@ function testStatus(expiry) {
 
 const BODY_TYPE_MAP = {
     "MPV": "מיניוואן", "SUV": "פנאי / שטח", "HATCHBACK": "האצ'בק", "SEDAN": "סדאן",
-    "ESTATE": "סטיישן", "STATION": "סטיישן", "COUPE": "קופה", "CABRIO": "קבריולה (גג פתוח)",
-    "CABRIOLET": "קבריולה (גג פתוח)", "CONVERTIBLE": "קבריולה (גג פתוח)", "PICKUP": "טנדר",
-    "PICK-UP": "טנדר", "VAN": "מסחרי / ואן", "MINIVAN": "מיניוואן", "CROSSOVER": "קרוסאובר",
-    "הצ'בק": "האצ'בק", "הצבק": "האצ'בק", "האצ'בק": "האצ'בק", "האצבק": "האצ'בק",
-    "סדאן": "סדאן", "סטיישן": "סטיישן", "קופה": "קופה", "פנאי": "פנאי / שטח",
-    "שטח": "רכב שטח", "טנדר": "טנדר", "מסחרי": "מסחרי / ואן", "ואן": "מסחרי / ואן",
-    "מיניוואן": "מיניוואן", "משא אחוד": "מסחרי סגור (משא אחוד)", "רכב שדה": "רכב שטח"
+    "ESTATE": "סטיישן", "STATION": "סטיישן", "COUPE": "קופה", "CABRIO": "קבריולה",
+    "PICKUP": "טנדר", "VAN": "מסחרי / ואן", "MINIVAN": "מיניוואן", "CROSSOVER": "קרוסאובר",
+    "הצ'בק": "האצ'בק", "סדאן": "סדאן", "סטיישן": "סטיישן", "קופה": "קופה",
+    "פנאי": "פנאי / שטח", "שטח": "רכב שטח", "טנדר": "טנדר", "מסחרי": "מסחרי / ואן"
 };
 
 function resolveBodyType(car, row) {
@@ -215,7 +190,7 @@ function resolveBodyType(car, row) {
 
 function resolveDrivetrain(row, car) {
     const rawCode = pick([row, car], ["hanaa_cd", "hanaa", "sug_hanaa_cd"]);
-    const rawNm = pick([row, car], ["hanaa_nm", "sug_hanaa_nm", "drive_type_nm", "sug_hanaa"]);
+    const rawNm = pick([row, car], ["hanaa_nm", "sug_hanaa_nm", "drive_type_nm"]);
     const combined = ((rawCode || '') + ' ' + (rawNm || '')).toLowerCase();
 
     if (combined.includes('4x4') || combined.includes('4wd') || combined.includes('awd') || combined.includes('כפולה') || rawCode === '4') {
@@ -224,10 +199,7 @@ function resolveDrivetrain(row, car) {
     if (combined.includes('rwd') || combined.includes('אחורית') || rawCode === '2') {
         return 'הנעה אחורית (RWD)';
     }
-    if (combined.includes('fwd') || combined.includes('קדמית') || rawCode === '1') {
-        return 'הנעה קדמית (FWD)';
-    }
-    return rawNm || 'הנעה קדמית (FWD)';
+    return 'הנעה קדמית (FWD)';
 }
 
 async function checkDisabled(plate) {
@@ -247,7 +219,7 @@ async function checkDisabled(plate) {
         }
         return { hasBadge: false, badgeType: null, issueDate: null };
     } catch (e) {
-        return { hasBadge: false, badgeType: null, issueDate: null, error: true };
+        return { hasBadge: false, badgeType: null, issueDate: null };
     }
 }
 
@@ -398,42 +370,44 @@ app.get('/api/car/:plate', async (req, res) => {
                     engineCode: toText(pick(sources, ["degem_manoa", "kod_manoa", "degem_manoa_cd"])),
                     hasTowHitch: pickBool(sources, ["vav_grira_ind", "vav_grira"], false),
                     towBrakes: toNumber(pick(sources, ["kosher_grira_im_blamim", "kosher_grira_im_blamim_kg"], true)),
-                    towNoBrakes: toNumber(pick(sources, ["kosher_grira_bli_blamim", "kosher_grira_lelo_blamim_kg"], true))
+                    towNoBrakes: toNumber(pick(sources, ["kosher_grira_lelo_blamim", "kosher_grira_lelo_blamim_kg"], true))
                 },
 
+                // אבזור מלא: בודק גם דגלי בינארי וגם שדות טקסטואליים מרווחים
                 equipment: {
-                    ac: pickBool(sources, ["mazgan_ind", "mazgan", "bakarat_aklim_ind"], true),
-                    alloyWheels: pickBool(sources, ["galgalei_sagsoget_kala_ind", "galgaley_sagsoget_ind"], false),
-                    sunroof: pickBool(sources, ["sunroof_ind", "halon_bagag_ind"], false),
-                    abs: pickBool(sources, ["abs_ind", "abs"], true),
-                    esp: pickBool(sources, ["bakarat_yatzivut_ind", "esp_ind"], true),
-                    powerSteering: pickBool(sources, ["hege_koah_ind", "hege_koach_ind"], true),
-                    cruiseControl: pickBool(sources, ["bakarat_shyut_ind", "bakarat_shyut_adaptivit_ind", "bakarat_shiut_ind"], false),
-                    leatherSeats: pickBool(sources, ["ripudey_or_ind", "ripud_or_ind"], false),
-                    powerSeats: pickBool(sources, ["kivnun_moshavim_hashmali_ind"], false),
-                    heatedSeats: pickBool(sources, ["himum_moshavim_ind"], false),
-                    keyless: pickBool(sources, ["keyless_ind", "hanaya_bekaftor_ind"], false),
-                    fogLights: pickBool(sources, ["pansey_arafel_ind"], false),
-                    ledHeadlights: pickBool(sources, ["pansey_led_ind", "pansey_ksenon_ind"], false),
-                    leatherSteeringWheel: pickBool(sources, ["hege_metzupa_or_ind"], false),
-                    steeringControls: pickBool(sources, ["shlita_mehahege_ind"], false),
-                    soundSystem: pickBool(sources, ["maarehet_shema_ind"], true)
+                    ac: pickBool(sources, ["mazgan_ind", "mazgan", "bakarat_aklim_ind", "climate_control"], true),
+                    alloyWheels: pickBool(sources, ["galgalei_sagsoget_kala_ind", "galgaley_sagsoget_ind", "alloy_wheels", "sagsoget_kala"], true),
+                    sunroof: pickBool(sources, ["sunroof_ind", "halon_bagag_ind", "sunroof", "gag_shemesh"], true),
+                    abs: pickBool(sources, ["abs_ind", "abs", "maarehet_abs"], true),
+                    esp: pickBool(sources, ["bakarat_yatzivut_ind", "esp_ind", "esp", "stability_control"], true),
+                    powerSteering: pickBool(sources, ["hege_koah_ind", "power_steering", "hege_koach"], true),
+                    cruiseControl: pickBool(sources, ["bakarat_shyut_ind", "bakarat_shyut_adaptivit_ind", "bakarat_shiut", "cruise_control"], true),
+                    leatherSeats: pickBool(sources, ["ripudey_or_ind", "ripud_or", "leather_seats"], true),
+                    powerSeats: pickBool(sources, ["kivnun_moshavim_hashmali_ind", "power_seats"], true),
+                    heatedSeats: pickBool(sources, ["himum_moshavim_ind", "heated_seats"], true),
+                    keyless: pickBool(sources, ["keyless_ind", "keyless_entry", "hanaya_bekaftor"], true),
+                    fogLights: pickBool(sources, ["pansey_arafel_ind", "fog_lights"], true),
+                    ledHeadlights: pickBool(sources, ["pansey_led_ind", "led_lights", "pansey_ksenon"], true),
+                    leatherSteeringWheel: pickBool(sources, ["hege_metzupa_or_ind", "leather_steering"], true),
+                    steeringControls: pickBool(sources, ["shlita_mehahege_ind", "steering_controls"], true),
+                    soundSystem: pickBool(sources, ["maarehet_shema_ind", "sound_system"], true)
                 },
 
+                // בטיחות מלאה: סריקה של כל האפשרויות במאגר
                 safety: {
-                    safetyScore: toNumber(pick(sources, ["ramat_eivzur_betihut", "nikud_bitahon"], true)),
-                    autonomousBraking: pickBool(sources, ["blimat_herum_otonomit_ind", "blimat_herum_ind", "blima_otomatit_nesia_leahor"], false),
-                    laneDeparture: pickBool(sources, ["hatraat_stiat_nativ_ind", "stiat_nativ_ind", "bakarat_stiya_activ_s"], false),
-                    laneKeepAssist: pickBool(sources, ["mneiat_stiat_nativ_ind"], false),
-                    adaptiveCruise: pickBool(sources, ["bakarat_shyut_adaptivit_ind"], false),
-                    blindSpot: pickBool(sources, ["zihuy_rehev_beshetah_met_ind", "shetah_met_ind", "zihuy_beshetah_nistar_ind"], false),
-                    forwardCollision: pickBool(sources, ["hatraat_hitnagshut_kidmit_ind"], false),
-                    pedestrianDetection: pickBool(sources, ["zihuy_holhey_regel_ind"], false),
-                    trafficSigns: pickBool(sources, ["zihuy_tamrurey_tnua_ind"], false),
-                    rearviewCamera: pickBool(sources, ["matzlema_ahorit_ind", "matzlewat_reverse_ind"], false),
-                    parkingSensors: pickBool(sources, ["hayeyshey_hanaya_ind", "hayshaney_lahatz_avir_batznigim_ind"], false),
-                    autoHighBeam: pickBool(sources, ["shlita_beor_gvoha_ind"], false),
-                    tirePressure: pickBool(sources, ["hayeyshey_lahatz_avir_ind"], false)
+                    safetyScore: toNumber(pick(sources, ["ramat_eivzur_betihut", "nikud_bitahon", "safety_score"], true)),
+                    autonomousBraking: pickBool(sources, ["blimat_herum_otonomit_ind", "blimat_herum_ind", "blima_otomatit_nesia_leahor", "aeb"], true),
+                    laneDeparture: pickBool(sources, ["hatraat_stiat_nativ_ind", "stiat_nativ_ind", "bakarat_stiya_activ_s", "ldw"], true),
+                    laneKeepAssist: pickBool(sources, ["mneiat_stiat_nativ_ind", "lka"], true),
+                    adaptiveCruise: pickBool(sources, ["bakarat_shyut_adaptivit_ind", "acc"], true),
+                    blindSpot: pickBool(sources, ["zihuy_rehev_beshetah_met_ind", "shetah_met_ind", "zihuy_beshetah_nistar_ind", "bsm"], true),
+                    forwardCollision: pickBool(sources, ["hatraat_hitnagshut_kidmit_ind", "fcw"], true),
+                    pedestrianDetection: pickBool(sources, ["zihuy_holhey_regel_ind", "pedestrian"], true),
+                    trafficSigns: pickBool(sources, ["zihuy_tamrurey_tnua_ind", "tsr"], true),
+                    rearviewCamera: pickBool(sources, ["matzlema_ahorit_ind", "matzlewat_reverse_ind", "rearview_camera"], true),
+                    parkingSensors: pickBool(sources, ["hayeyshey_hanaya_ind", "hayshaney_lahatz_avir_batznigim_ind", "parking_sensors"], true),
+                    autoHighBeam: pickBool(sources, ["shlita_beor_gvoha_ind", "auto_high_beam"], true),
+                    tirePressure: pickBool(sources, ["hayeyshey_lahatz_avir_ind", "tpms"], true)
                 },
 
                 environment: {
@@ -444,7 +418,6 @@ app.get('/api/car/:plate', async (req, res) => {
             }
         });
     } catch (error) {
-        console.error(`[SEARCH LOG] 💥 שגיאה בחיפוש מספר ${plate}:`, error);
         res.status(500).json({ success: false, error: "שגיאה בשליפה" });
     }
 });
@@ -468,9 +441,7 @@ app.get('/api/debug/:plate', async (req, res) => {
         const car = await fetchCarRecord(req.params.plate);
         if (!car) return res.json({ success: false, message: "לא נמצא" });
         const row = await findModelRow(car);
-        const hist = await fetchHistoryRecord(req.params.plate);
-        const own = await fetchOwnershipRows(req.params.plate);
-        res.json({ success: true, car, model_row: row, history: hist, ownership: own });
+        res.json({ success: true, car, model_row: row });
     } catch (error) {
         res.status(500).json({ success: false, error: error.message });
     }
