@@ -10,7 +10,7 @@
   .phone { max-width: 380px; margin: 0 auto; background: #f0f0f0; min-height: 100vh; padding-bottom: 30px; }
 
   .topbar { background: #2a7fa8; color: #fff; height: 52px; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; }
-  .topbar .t { font-size: 18px; flex: 1; text-align: center; }
+  .topbar .t { font-size: 18px; flex: 1; text-align: center; font-weight: bold; }
   .topbar .i { font-size: 20px; width: 28px; text-align: center; cursor: pointer; }
   .topbar .i.hidden { visibility: hidden; }
 
@@ -22,14 +22,14 @@
   .plate .strip .he { font-size: 8px; }
   .plate input { flex: 1; min-width: 0; height: 100%; border: none; background: transparent; outline: none; font-size: 30px; font-weight: bold; text-align: center; letter-spacing: 1px; color: #111; }
   .plate input::placeholder { color: #8a7a2a; font-size: 15px; letter-spacing: 0; font-weight: normal; }
-  .plate button { border: none; background: #2a7fa8; color: #fff; height: 100%; padding: 0 12px; font-size: 14px; cursor: pointer; flex-shrink: 0; }
+  .plate button { border: none; background: #2a7fa8; color: #fff; height: 100%; padding: 0 12px; font-size: 14px; cursor: pointer; flex-shrink: 0; font-weight: bold; }
   .plate button:disabled { background: #9cc5da; }
   .msg { text-align: center; color: #666; font-size: 13px; padding: 8px; display: none; }
   .msg.err { color: #b42318; background: #fde8e7; border-radius: 8px; margin-top: 8px; }
 
-  .km-line { display: none; align-items: center; justify-content: center; gap: 6px; color: #2e8b57; font-size: 13px; background: #fff; padding: 0 12px 12px; }
+  .km-line { display: none; align-items: center; justify-content: center; gap: 6px; color: #2e8b57; font-size: 13px; background: #fff; padding: 0 12px 12px; font-weight: bold; }
   .km-line.show { display: flex; }
-  .km-line .km-ic { border: 2px solid #2e8b57; border-radius: 4px; padding: 0 3px; font-size: 11px; font-weight: bold; }
+  .km-line .km-ic { border: 2px solid #2e8b57; border-radius: 4px; padding: 0 3px; font-size: 11px; }
 
   .history { background: #fff; margin: 12px 10px 0; border-radius: 14px; box-shadow: 0 2px 6px rgba(42,127,168,.12); display: none; overflow: hidden; }
   .history.show { display: block; }
@@ -100,7 +100,7 @@
 
   .own-btn-wrap { display: none; text-align: center; margin: 4px 0 0; }
   .own-btn-wrap.show { display: block; }
-  .own-btn { background: #fff; border: 1.5px solid #2a7fa8; color: #2a7fa8; border-radius: 20px; padding: 6px 16px; font-size: 13px; cursor: pointer; }
+  .own-btn { background: #fff; border: 1.5px solid #2a7fa8; color: #2a7fa8; border-radius: 20px; padding: 6px 16px; font-size: 13px; cursor: pointer; font-weight: bold; }
 
   .own-panel { display: none; margin: 10px 10px 0; }
   .own-panel.show { display: block; }
@@ -149,6 +149,12 @@
   .own-table td { padding: 10px 6px; text-align: center; color: #333; border-bottom: 1px solid #eef3f6; }
   .own-table tr:nth-child(even) td { background: #f7fbfd; }
   .own-table tr:last-child td { border-bottom: none; }
+  .own-extra { background: #fff; border-radius: 12px; padding: 10px 14px; margin-top: 10px; font-size: 13px; box-shadow: 0 1px 3px rgba(0,0,0,.05); }
+  .own-extra .kv { padding: 4px 0; border-bottom: 1px dashed #eee; }
+  .own-extra .kv:last-child { border-bottom: none; }
+  .own-extra .k { color: #4a6b7d; }
+  .own-extra .v { font-weight: bold; color: #1f5f80; direction: ltr; }
+  .own-msg { background: #fff; border-radius: 12px; padding: 12px; font-size: 13px; color: #4a6b7d; text-align: center; margin-top: 4px; }
 
   .report-btn-wrap { text-align: center; margin: 18px 10px 10px; }
   .report-btn {
@@ -265,7 +271,6 @@
       <div class="tab" data-tab="env"><span class="ic">🌿</span>סביבה</div>
     </div>
 
-    <!-- כרטיס כללי המלא -->
     <div id="cardGeneral">
       <div id="hero" class="hero">
         <div class="brand-logo-container">
@@ -358,7 +363,7 @@
       </div>
     </div>
 
-    <!-- שאר הלשוניות נשארות ריקות כרגע -->
+    <!-- הלשוניות הנוספות נשמרות ריקות כמו שביקשת -->
     <div id="cardTech" style="display:none"></div>
     <div id="cardSafety" style="display:none"></div>
     <div id="cardEnv" style="display:none"></div>
@@ -366,7 +371,6 @@
 
 </div>
 
-<!-- מודאל הדיווח -->
 <div id="reportModal" class="modal-overlay">
   <div class="modal-card">
     <div class="modal-title">דיווח על פרט חסר או שגוי</div>
@@ -398,7 +402,7 @@
   const API_BASE = "https://car-api-huth.onrender.com";
   const HIST_KEY = "carSearchHistory";
   const HIST_MAX = 10;
-  
+
   let currentPlate = "";
   let currentCarData = null;
   let inDetail = false;
@@ -408,6 +412,12 @@
     if (d.length === 8) return d.slice(0, 3) + '-' + d.slice(3, 5) + '-' + d.slice(5);
     if (d.length === 7) return d.slice(0, 2) + '-' + d.slice(2, 5) + '-' + d.slice(5);
     return d;
+  }
+
+  function formatDashDate(v) {
+    const m = String(v || '').match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if (!m) return v || 'אין נתון';
+    return parseInt(m[3], 10) + '-' + parseInt(m[2], 10) + '-' + m[1];
   }
 
   function findBrand(manufacturer, model) {
@@ -683,7 +693,6 @@
     return parts.join(' ו-');
   }
 
-  // הצגת הטסט המדויקת בחודשים וימים כמו פעם
   function renderTest(lastTest, nextTest) {
     setVal('vLastTest', lastTest ? fmtDate(lastTest) : null);
     setVal('vNextTest', nextTest ? fmtDate(nextTest) : null);
@@ -708,6 +717,97 @@
     }
   }
 
+  function parseOwnDate(v) {
+    if (!v) return null;
+    const s = String(v).trim();
+    const m = s.match(/^(\d{4})(\d{2})$/) || s.match(/^(\d{4})-(\d{2})/);
+    if (!m) return null;
+    const y = parseInt(m[1], 10);
+    const mo = parseInt(m[2], 10);
+    const nowYear = new Date().getFullYear();
+    if (mo < 1 || mo > 12 || y < 1950 || y > nowYear) return null;
+    return { y: y, mo: mo };
+  }
+
+  function monthsBetween(a, b) {
+    return (b.y - a.y) * 12 + (b.mo - a.mo);
+  }
+
+  function durationHe(months) {
+    if (months <= 0) return '—';
+    const y = Math.floor(months / 12);
+    const m = months % 12;
+    let yPart = '';
+    if (y === 1) yPart = 'שנה';
+    else if (y === 2) yPart = 'שנתיים';
+    else if (y > 2) yPart = y + ' שנים';
+    let mPart = '';
+    if (m === 1) mPart = 'חודש';
+    else if (m > 1) mPart = m + ' חודשים';
+    if (yPart && mPart) return yPart + ' ו-' + mPart;
+    return yPart || mPart;
+  }
+
+  function mmyyyy(p) {
+    return String(p.mo).padStart(2, '0') + '/' + p.y;
+  }
+
+  function buildOwnRows(list) {
+    const now = new Date();
+    const today = { y: now.getFullYear(), mo: now.getMonth() + 1 };
+
+    const items = list.map(o => ({ type: o.type, p: parseOwnDate(o.date) }));
+    items.sort((a, b) => {
+      if (!a.p) return 1;
+      if (!b.p) return -1;
+      return a.p.y !== b.p.y ? a.p.y - b.p.y : a.p.mo - b.p.mo;
+    });
+
+    const rows = items.map((it, i) => {
+      const next = items[i + 1];
+      let duration = '—';
+      if (it.p) {
+        const end = next ? next.p : today;
+        if (end) duration = durationHe(monthsBetween(it.p, end));
+      }
+      return {
+        type: it.type,
+        date: it.p ? mmyyyy(it.p) : 'לא תקין',
+        duration: duration
+      };
+    });
+
+    return rows.reverse();
+  }
+
+  function buildOwnTable(rows) {
+    const table = document.createElement('table');
+    table.className = 'own-table';
+
+    const thead = document.createElement('thead');
+    const hr = document.createElement('tr');
+    ['בעלות', 'מתאריך', 'זמן בעלות'].forEach(t => {
+      const th = document.createElement('th');
+      th.textContent = t;
+      hr.appendChild(th);
+    });
+    thead.appendChild(hr);
+    table.appendChild(thead);
+
+    const tbody = document.createElement('tbody');
+    rows.forEach(r => {
+      const tr = document.createElement('tr');
+      [r.type, r.date, r.duration].forEach(v => {
+        const td = document.createElement('td');
+        td.textContent = v;
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    });
+    table.appendChild(tbody);
+    return table;
+  }
+
   function closeOwnPanel() {
     const p = document.getElementById('ownPanel');
     p.classList.remove('show');
@@ -722,31 +822,65 @@
 
     document.getElementById('ownBtn').textContent = 'הסתר הסטוריית בעלות';
     panel.classList.add('show');
-    panel.textContent = 'טוען היסטוריה...';
+    panel.textContent = '';
+
+    const msg = (text) => {
+      const m = document.createElement('div');
+      m.className = 'own-msg';
+      m.textContent = text;
+      panel.appendChild(m);
+    };
+    msg('טוען היסטוריה...');
 
     try {
       const r = await fetch(API_BASE + '/api/history/' + encodeURIComponent(currentPlate));
       const j = await r.json();
       panel.textContent = '';
 
-      if (!j.success || !j.ownershipList || !j.ownershipList.length) {
-        panel.textContent = 'אין מעברי בעלות במאגר לרכב זה';
+      if (!j.success) {
+        msg(j.message || 'לא נמצאה היסטוריה לרכב זה');
         return;
       }
 
-      const table = document.createElement('table');
-      table.className = 'own-table';
-      table.innerHTML = `<thead><tr><th>בעלות</th><th>מתאריך</th></tr></thead>`;
-      const tbody = document.createElement('tbody');
-      j.ownershipList.forEach(row => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `<td>${row.type}</td><td>${row.date || '—'}</td>`;
-        tbody.appendChild(tr);
-      });
-      table.appendChild(tbody);
-      panel.appendChild(table);
+      const h = j.history || {};
+      const list = j.ownershipList || [];
+
+      if (list.length) {
+        panel.appendChild(buildOwnTable(buildOwnRows(list)));
+      } else {
+        msg('אין מעברי בעלות במאגר לרכב זה. המאגר כולל רק רכבים פרטיים שנרשמו מ-2017 ואילך.');
+      }
+
+      const extra = document.createElement('div');
+      extra.className = 'own-extra';
+      const rows = [
+        ['תאריך רישום ראשון', h.firstRegistration ? formatDashDate(h.firstRegistration) : null],
+        ['ק"מ בטסט האחרון', h.kmSinceTest != null ? h.kmSinceTest.toLocaleString('he-IL') + ' ק"מ' : null]
+      ];
+      for (const [k, v] of rows) {
+        const line = document.createElement('div');
+        line.className = 'kv';
+        const kEl = document.createElement('span');
+        kEl.className = 'k';
+        kEl.textContent = k + ': ';
+        const vEl = document.createElement('span');
+        vEl.className = 'v';
+        vEl.textContent = v || 'אין נתון';
+        line.appendChild(kEl);
+        line.appendChild(vEl);
+        extra.appendChild(line);
+      }
+      panel.appendChild(extra);
+
+      if (h.changes && h.changes.length) {
+        const c = document.createElement('div');
+        c.className = 'own-extra';
+        c.textContent = 'שינויים שנרשמו: ' + h.changes.join(' · ');
+        panel.appendChild(c);
+      }
     } catch (e) {
-      panel.textContent = 'שגיאה בטעינת ההיסטוריה';
+      panel.textContent = '';
+      msg('שגיאה בטעינת ההיסטוריה');
     }
   }
 
@@ -866,7 +1000,7 @@
     });
   });
 
-  // ---------- מנגנון דיווח ישיר לשרת (שמעביר למייל) ----------
+  // ---------- מנגנון דיווח יציב דרך השרת (ללא שגיאות Web3Forms) ----------
   const reportModal = document.getElementById('reportModal');
   const openReportBtn = document.getElementById('openReportBtn');
   const closeReportBtn = document.getElementById('closeReportBtn');
