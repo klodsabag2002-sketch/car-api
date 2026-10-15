@@ -1,5 +1,275 @@
 [
   {
+    "make": "ג'אקו סין",
+    "model": "JAECOO 5 HEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו 5 היברידי HEV 143 כ\"ס)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "JAECOO 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו 5 היברידי HEV 143 כ\"ס)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "J5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו J5 HEV 143 כ\"ס)"
+  },
+  {
+    "make": "ג'אקו",
+    "model": "JAECOO 5 HEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו 5 HEV 143 כ\"ס)"
+  },
+  {
+    "make": "JAECOO",
+    "model": "JAECOO 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 8.5,
+    "source": "נתון יצרן (JAECOO 5 HEV 143hp)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "JAECOO 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 1598,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו 5 1.6T טורבו בנזין 147)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "J5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 1598,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו J5 1.6T 147)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "JAECOO 5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו 5 חשמלי EV 204)"
+  },
+  {
+    "make": "ג'אקו",
+    "model": "J5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 1598,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו J5 147)"
+  },
+  {
+    "make": "JAECOO",
+    "model": "J5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 1598,
+    "seconds": 8.9,
+    "source": "נתון יצרן (JAECOO 5 1.6T)"
+  },
+  {
+    "make": "JAECOO",
+    "model": "5",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 1598,
+    "seconds": 8.9,
+    "source": "נתון יצרן (JAECOO 5 1.6T)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "JAECOO 7 PHEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו 7 פלאג-אין PHEV 143/347)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "JAECOO 7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו 7 פלאג-אין PHEV 143)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "J7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו J7 פלאג-אין PHEV 143)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "JAECOO 7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 1598,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו 7 1.6T בנזין 147)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "J7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 147,
+    "cc": 1598,
+    "seconds": 10.3,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו J7 1.6T 147)"
+  },
+  {
+    "make": "ג'אקו",
+    "model": "J7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו J7 PHEV 143)"
+  },
+  {
+    "make": "JAECOO",
+    "model": "J7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 8.5,
+    "source": "נתון יצרן (JAECOO 7 PHEV)"
+  },
+  {
+    "make": "JAECOO",
+    "model": "7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 8.5,
+    "source": "נתון יצרן (JAECOO 7 PHEV)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "JAECOO8 PHEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו 8 פלאג-אין PHEV AWD 143/600)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "JAECOO 8 PHEV",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו 8 פלאג-אין PHEV AWD 143/600)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "JAECOO 8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו 8 PHEV 143)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "J8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו J8 PHEV 143)"
+  },
+  {
+    "make": "ג'אקו סין",
+    "model": "JAECOO 8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 249,
+    "cc": 1998,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו 8 2.0T בנזין 249)"
+  },
+  {
+    "make": "ג'אקו",
+    "model": "J8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 5.4,
+    "source": "רישוי רכב / נתון יצרן (ג'אקו J8 PHEV 143)"
+  },
+  {
+    "make": "JAECOO",
+    "model": "J8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 5.4,
+    "source": "נתון יצרן (JAECOO 8 PHEV)"
+  },
+  {
+    "make": "JAECOO",
+    "model": "8",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 143,
+    "cc": 1499,
+    "seconds": 5.4,
+    "source": "נתון יצרן (JAECOO 8 PHEV)"
+  },
+  {
     "make": "ג'י.אמ.סי ארה",
     "model": "HUMMER EV SUV",
     "yearStart": null,
@@ -410,226 +680,6 @@
     "source": "נתון יצרן (GAC Hyptec GT 340)"
   },
   {
-    "make": "ג'אקו סין",
-    "model": "JAECOO 5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 147,
-    "cc": 1598,
-    "seconds": 8.9,
-    "source": "רישוי רכב / נתון יצרן (ג'אקו 5 1.6T טורבו 147)"
-  },
-  {
-    "make": "ג'אקו סין",
-    "model": "J5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 147,
-    "cc": 1598,
-    "seconds": 8.9,
-    "source": "רישוי רכב / נתון יצרן (ג'אקו J5 1.6T 147)"
-  },
-  {
-    "make": "ג'אקו סין",
-    "model": "JAECOO 5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 7.7,
-    "source": "רישוי רכב / נתון יצרן (ג'אקו 5 חשמלי EV 204)"
-  },
-  {
-    "make": "ג'אקו",
-    "model": "J5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 147,
-    "cc": 1598,
-    "seconds": 8.9,
-    "source": "רישוי רכב / נתון יצרן (ג'אקו J5 147)"
-  },
-  {
-    "make": "JAECOO",
-    "model": "J5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 147,
-    "cc": 1598,
-    "seconds": 8.9,
-    "source": "נתון יצרן (JAECOO 5 1.6T)"
-  },
-  {
-    "make": "JAECOO",
-    "model": "5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 147,
-    "cc": 1598,
-    "seconds": 8.9,
-    "source": "נתון יצרן (JAECOO 5 1.6T)"
-  },
-  {
-    "make": "ג'אקו סין",
-    "model": "JAECOO 7 PHEV",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 143,
-    "cc": 1499,
-    "seconds": 8.5,
-    "source": "רישוי רכב / נתון יצרן (ג'אקו 7 פלאג-אין PHEV 143/347)"
-  },
-  {
-    "make": "ג'אקו סין",
-    "model": "JAECOO 7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 143,
-    "cc": 1499,
-    "seconds": 8.5,
-    "source": "רישוי רכב / נתון יצרן (ג'אקו 7 פלאג-אין PHEV 143)"
-  },
-  {
-    "make": "ג'אקו סין",
-    "model": "J7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 143,
-    "cc": 1499,
-    "seconds": 8.5,
-    "source": "רישוי רכב / נתון יצרן (ג'אקו J7 פלאג-אין PHEV 143)"
-  },
-  {
-    "make": "ג'אקו סין",
-    "model": "JAECOO 7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 147,
-    "cc": 1598,
-    "seconds": 10.3,
-    "source": "רישוי רכב / נתון יצרן (ג'אקו 7 1.6T בנזין 147)"
-  },
-  {
-    "make": "ג'אקו סין",
-    "model": "J7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 147,
-    "cc": 1598,
-    "seconds": 10.3,
-    "source": "רישוי רכב / נתון יצרן (ג'אקו J7 1.6T 147)"
-  },
-  {
-    "make": "ג'אקו",
-    "model": "J7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 143,
-    "cc": 1499,
-    "seconds": 8.5,
-    "source": "רישוי רכב / נתון יצרן (ג'אקו J7 PHEV 143)"
-  },
-  {
-    "make": "JAECOO",
-    "model": "J7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 143,
-    "cc": 1499,
-    "seconds": 8.5,
-    "source": "נתון יצרן (JAECOO 7 PHEV)"
-  },
-  {
-    "make": "JAECOO",
-    "model": "7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 143,
-    "cc": 1499,
-    "seconds": 8.5,
-    "source": "נתון יצרן (JAECOO 7 PHEV)"
-  },
-  {
-    "make": "ג'אקו סין",
-    "model": "JAECOO8 PHEV",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 143,
-    "cc": 1499,
-    "seconds": 5.4,
-    "source": "רישוי רכב / נתון יצרן (ג'אקו 8 פלאג-אין PHEV AWD 143/600)"
-  },
-  {
-    "make": "ג'אקו סין",
-    "model": "JAECOO 8 PHEV",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 143,
-    "cc": 1499,
-    "seconds": 5.4,
-    "source": "רישוי רכב / נתון יצרן (ג'אקו 8 פלאג-אין PHEV AWD 143/600)"
-  },
-  {
-    "make": "ג'אקו סין",
-    "model": "JAECOO 8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 143,
-    "cc": 1499,
-    "seconds": 5.4,
-    "source": "רישוי רכב / נתון יצרן (ג'אקו 8 PHEV 143)"
-  },
-  {
-    "make": "ג'אקו סין",
-    "model": "J8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 143,
-    "cc": 1499,
-    "seconds": 5.4,
-    "source": "רישוי רכב / נתון יצרן (ג'אקו J8 PHEV 143)"
-  },
-  {
-    "make": "ג'אקו סין",
-    "model": "JAECOO 8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 249,
-    "cc": 1998,
-    "seconds": 8.5,
-    "source": "רישוי רכב / נתון יצרן (ג'אקו 8 2.0T בנזין 249)"
-  },
-  {
-    "make": "ג'אקו",
-    "model": "J8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 143,
-    "cc": 1499,
-    "seconds": 5.4,
-    "source": "רישוי רכב / נתון יצרן (ג'אקו J8 PHEV 143)"
-  },
-  {
-    "make": "JAECOO",
-    "model": "J8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 143,
-    "cc": 1499,
-    "seconds": 5.4,
-    "source": "נתון יצרן (JAECOO 8 PHEV)"
-  },
-  {
-    "make": "JAECOO",
-    "model": "8",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 143,
-    "cc": 1499,
-    "seconds": 5.4,
-    "source": "נתון יצרן (JAECOO 8 PHEV)"
-  },
-  {
     "make": "בנטלי",
     "model": "BENTAYGA",
     "yearStart": null,
@@ -720,256 +770,6 @@
     "source": "נתון יצרן (Bentley Bentayga Speed W12)"
   },
   {
-    "make": "בנטלי",
-    "model": "CONTINENTAL GT",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 550,
-    "cc": 3996,
-    "seconds": 4.0,
-    "source": "רישוי רכב / נתון יצרן (בנטלי קונטיננטל GT V8 550)"
-  },
-  {
-    "make": "בנטלי אנגליה",
-    "model": "CONTINENTAL GT",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 550,
-    "cc": 3996,
-    "seconds": 4.0,
-    "source": "רישוי רכב / נתון יצרן (בנטלי קונטיננטל GT V8 550)"
-  },
-  {
-    "make": "בנטלי",
-    "model": "קונטיננטל GT",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 550,
-    "cc": 3996,
-    "seconds": 4.0,
-    "source": "רישוי רכב / נתון יצרן (בנטלי קונטיננטל GT V8 550)"
-  },
-  {
-    "make": "בנטלי",
-    "model": "קונטיננטל",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 550,
-    "cc": 3996,
-    "seconds": 4.0,
-    "source": "רישוי רכב / נתון יצרן (בנטלי קונטיננטל V8 550)"
-  },
-  {
-    "make": "בנטלי",
-    "model": "CONTINENTAL GT",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 635,
-    "cc": 5950,
-    "seconds": 3.7,
-    "source": "רישוי רכב / נתון יצרן (בנטלי קונטיננטל GT W12 635)"
-  },
-  {
-    "make": "בנטלי",
-    "model": "CONTINENTAL GT",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 659,
-    "cc": 5950,
-    "seconds": 3.6,
-    "source": "רישוי רכב / נתון יצרן (בנטלי קונטיננטל GT Speed 659)"
-  },
-  {
-    "make": "בנטלי",
-    "model": "CONTINENTAL GT",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 782,
-    "cc": 3996,
-    "seconds": 3.2,
-    "source": "רישוי רכב / נתון יצרן (בנטלי קונטיננטל GT Speed היברידי 782)"
-  },
-  {
-    "make": "בנטלי",
-    "model": "CONTINENTAL GT",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 507,
-    "cc": 3993,
-    "seconds": 4.8,
-    "source": "רישוי רכב / נתון יצרן (בנטלי קונטיננטל GT V8 דור קודם 507)"
-  },
-  {
-    "make": "בנטלי",
-    "model": "CONTINENTAL GT",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 575,
-    "cc": 5998,
-    "seconds": 4.5,
-    "source": "רישוי רכב / נתון יצרן (בנטלי קונטיננטל GT W12 דור קודם 575)"
-  },
-  {
-    "make": "Bentley",
-    "model": "CONTINENTAL GT",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 550,
-    "cc": 3996,
-    "seconds": 4.0,
-    "source": "נתון יצרן (Bentley Continental GT V8)"
-  },
-  {
-    "make": "Bentley",
-    "model": "CONTINENTAL GT",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 635,
-    "cc": 5950,
-    "seconds": 3.7,
-    "source": "נתון יצרן (Bentley Continental GT W12)"
-  },
-  {
-    "make": "Bentley",
-    "model": "CONTINENTAL",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 550,
-    "cc": 3996,
-    "seconds": 4.0,
-    "source": "נתון יצרן (Bentley Continental V8)"
-  },
-  {
-    "make": "בנטלי",
-    "model": "FLYING SPUR",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 550,
-    "cc": 3996,
-    "seconds": 4.1,
-    "source": "רישוי רכב / נתון יצרן (בנטלי פליינג ספור 4.0 V8 550)"
-  },
-  {
-    "make": "בנטלי אנגליה",
-    "model": "FLYING SPUR",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 550,
-    "cc": 3996,
-    "seconds": 4.1,
-    "source": "רישוי רכב / נתון יצרן (בנטלי פליינג ספור 4.0 V8 550)"
-  },
-  {
-    "make": "בנטלי",
-    "model": "פליינג ספור",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 550,
-    "cc": 3996,
-    "seconds": 4.1,
-    "source": "רישוי רכב / נתון יצרן (בנטלי פליינג ספור 4.0 V8 550)"
-  },
-  {
-    "make": "בנטלי",
-    "model": "FLYING SPUR",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 635,
-    "cc": 5950,
-    "seconds": 3.8,
-    "source": "רישוי רכב / נתון יצרן (בנטלי פליינג ספור 6.0 W12 635)"
-  },
-  {
-    "make": "בנטלי",
-    "model": "FLYING SPUR",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 544,
-    "cc": 2900,
-    "seconds": 4.3,
-    "source": "רישוי רכב / נתון יצרן (בנטלי פליינג ספור היברידי PHEV 544)"
-  },
-  {
-    "make": "בנטלי",
-    "model": "FLYING SPUR",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 782,
-    "cc": 3996,
-    "seconds": 3.5,
-    "source": "רישוי רכב / נתון יצרן (בנטלי פליינג ספור Speed היברידי 782)"
-  },
-  {
-    "make": "Bentley",
-    "model": "FLYING SPUR",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 550,
-    "cc": 3996,
-    "seconds": 4.1,
-    "source": "נתון יצרן (Bentley Flying Spur V8)"
-  },
-  {
-    "make": "Bentley",
-    "model": "FLYING SPUR",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 635,
-    "cc": 5950,
-    "seconds": 3.8,
-    "source": "נתון יצרן (Bentley Flying Spur W12)"
-  },
-  {
-    "make": "בנטלי",
-    "model": "MULSANNE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 512,
-    "cc": 6752,
-    "seconds": 5.3,
-    "source": "רישוי רכב / נתון יצרן (בנטלי מולסאן 6.75 V8 512)"
-  },
-  {
-    "make": "בנטלי אנגליה",
-    "model": "MULSANNE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 512,
-    "cc": 6752,
-    "seconds": 5.3,
-    "source": "רישוי רכב / נתון יצרן (בנטלי מולסאן 6.75 V8 512)"
-  },
-  {
-    "make": "בנטלי",
-    "model": "מולסאן",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 512,
-    "cc": 6752,
-    "seconds": 5.3,
-    "source": "רישוי רכב / נתון יצרן (בנטלי מולסאן 6.75 V8 512)"
-  },
-  {
-    "make": "בנטלי",
-    "model": "MULSANNE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 537,
-    "cc": 6752,
-    "seconds": 4.9,
-    "source": "רישוי רכב / נתון יצרן (בנטלי מולסאן Speed 6.75 V8 537)"
-  },
-  {
-    "make": "Bentley",
-    "model": "MULSANNE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 512,
-    "cc": 6752,
-    "seconds": 5.3,
-    "source": "נתון יצרן (Bentley Mulsanne 6.75)"
-  },
-  {
     "make": "ביואיק ארהב\"",
     "model": "LE SABRE",
     "yearStart": null,
@@ -1048,406 +848,6 @@
     "cc": 3791,
     "seconds": 8.9,
     "source": "נתון יצרן (Buick LeSabre 3.8)"
-  },
-  {
-    "make": "ביואיק קנדה",
-    "model": "LACROSSE CX",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 200,
-    "cc": 3791,
-    "seconds": 8.5,
-    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 3.8 V6 200)"
-  },
-  {
-    "make": "ביואיק קנדה",
-    "model": "LACROSSE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 200,
-    "cc": 3791,
-    "seconds": 8.5,
-    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 3.8 V6 200)"
-  },
-  {
-    "make": "ביואיק ארהב\"",
-    "model": "LACROSSE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 200,
-    "cc": 3791,
-    "seconds": 8.5,
-    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 3.8 V6 200)"
-  },
-  {
-    "make": "ביואיק ארהב\"",
-    "model": "LACROSSE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 255,
-    "cc": 2997,
-    "seconds": 7.8,
-    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 3.0 V6 255)"
-  },
-  {
-    "make": "ביואיק ארהב\"",
-    "model": "LACROSSE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 280,
-    "cc": 3564,
-    "seconds": 6.8,
-    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 3.6 V6 280)"
-  },
-  {
-    "make": "ביואיק ארהב\"",
-    "model": "LACROSSE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 303,
-    "cc": 3564,
-    "seconds": 6.6,
-    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 3.6 V6 303/305)"
-  },
-  {
-    "make": "ביואיק ארהב\"",
-    "model": "LACROSSE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 182,
-    "cc": 2384,
-    "seconds": 9.2,
-    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 2.4 Ecotec 182)"
-  },
-  {
-    "make": "ביואיק קנדה",
-    "model": "LACROSSE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 240,
-    "cc": 3564,
-    "seconds": 7.5,
-    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 3.6 V6 240)"
-  },
-  {
-    "make": "ביואיק",
-    "model": "לה קרוס",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 200,
-    "cc": 3791,
-    "seconds": 8.5,
-    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 200)"
-  },
-  {
-    "make": "ביואיק",
-    "model": "לה-קרוס",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 200,
-    "cc": 3791,
-    "seconds": 8.5,
-    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 200)"
-  },
-  {
-    "make": "ביואיק",
-    "model": "לה קרוס",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 280,
-    "cc": 3564,
-    "seconds": 6.8,
-    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 3.6 280)"
-  },
-  {
-    "make": "ביואיק",
-    "model": "לה קרוס",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 303,
-    "cc": 3564,
-    "seconds": 6.6,
-    "source": "רישוי רכב / נתון יצרן (ביואיק לה קרוס 3.6 303)"
-  },
-  {
-    "make": "Buick",
-    "model": "LACROSSE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 200,
-    "cc": 3791,
-    "seconds": 8.5,
-    "source": "נתון יצרן (Buick LaCrosse 3.8)"
-  },
-  {
-    "make": "Buick",
-    "model": "LACROSSE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 280,
-    "cc": 3564,
-    "seconds": 6.8,
-    "source": "נתון יצרן (Buick LaCrosse 3.6)"
-  },
-  {
-    "make": "Buick",
-    "model": "LACROSSE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 303,
-    "cc": 3564,
-    "seconds": 6.6,
-    "source": "נתון יצרן (Buick LaCrosse 3.6)"
-  },
-  {
-    "make": "ביואיק ארהב\"",
-    "model": "LUCERNE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 197,
-    "cc": 3791,
-    "seconds": 9.1,
-    "source": "רישוי רכב / נתון יצרן (ביואיק לוצרן 3.8 V6 197)"
-  },
-  {
-    "make": "\"ביואיק ארהב",
-    "model": "LUCERNE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 197,
-    "cc": 3791,
-    "seconds": 9.1,
-    "source": "רישוי רכב / נתון יצרן (ביואיק לוצרן 3.8 V6 197)"
-  },
-  {
-    "make": "ביואיק ארה\"ב",
-    "model": "LUCERNE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 197,
-    "cc": 3791,
-    "seconds": 9.1,
-    "source": "רישוי רכב / נתון יצרן (ביואיק לוצרן 3.8 V6 197)"
-  },
-  {
-    "make": "ביואיק ארהב\"",
-    "model": "LUCERNE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 227,
-    "cc": 3880,
-    "seconds": 8.4,
-    "source": "רישוי רכב / נתון יצרן (ביואיק לוצרן 3.9 V6 227)"
-  },
-  {
-    "make": "ביואיק ארהב\"",
-    "model": "LUCERNE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 275,
-    "cc": 4565,
-    "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (ביואיק לוצרן 4.6 V8 Northstar 275)"
-  },
-  {
-    "make": "ביואיק ארהב\"",
-    "model": "LUCERNE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 292,
-    "cc": 4565,
-    "seconds": 7.1,
-    "source": "רישוי רכב / נתון יצרן (ביואיק לוצרן 4.6 V8 Super 292)"
-  },
-  {
-    "make": "ביואיק",
-    "model": "לוצרן",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 197,
-    "cc": 3791,
-    "seconds": 9.1,
-    "source": "רישוי רכב / נתון יצרן (ביואיק לוצרן 197)"
-  },
-  {
-    "make": "Buick",
-    "model": "LUCERNE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 197,
-    "cc": 3791,
-    "seconds": 9.1,
-    "source": "נתון יצרן (Buick Lucerne 3.8)"
-  },
-  {
-    "make": "Buick",
-    "model": "LUCERNE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 275,
-    "cc": 4565,
-    "seconds": 7.3,
-    "source": "נתון יצרן (Buick Lucerne 4.6 V8)"
-  },
-  {
-    "make": "ביואיק ארהב\"",
-    "model": "ENCLAVE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 275,
-    "cc": 3564,
-    "seconds": 8.3,
-    "source": "רישוי רכב / נתון יצרן (ביואיק אנקלייב 3.6 V6 275)"
-  },
-  {
-    "make": "ביואיק ארהב\"",
-    "model": "ENCLAVE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 288,
-    "cc": 3564,
-    "seconds": 8.0,
-    "source": "רישוי רכב / נתון יצרן (ביואיק אנקלייב 3.6 V6 288)"
-  },
-  {
-    "make": "ביואיק ארהב\"",
-    "model": "ENCLAVE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 310,
-    "cc": 3564,
-    "seconds": 7.2,
-    "source": "רישוי רכב / נתון יצרן (ביואיק אנקלייב 3.6 V6 310)"
-  },
-  {
-    "make": "\"ביואיק ארהב",
-    "model": "ENCLAVE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 288,
-    "cc": 3564,
-    "seconds": 8.0,
-    "source": "רישוי רכב / נתון יצרן (ביואיק אנקלייב 288)"
-  },
-  {
-    "make": "ביואיק",
-    "model": "אנקלייב",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 288,
-    "cc": 3564,
-    "seconds": 8.0,
-    "source": "רישוי רכב / נתון יצרן (ביואיק אנקלייב 288)"
-  },
-  {
-    "make": "Buick",
-    "model": "ENCLAVE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 288,
-    "cc": 3564,
-    "seconds": 8.0,
-    "source": "נתון יצרן (Buick Enclave 3.6)"
-  },
-  {
-    "make": "ביואיק ארהב\"",
-    "model": "PARK AVENUE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 205,
-    "cc": 3791,
-    "seconds": 8.8,
-    "source": "רישוי רכב / נתון יצרן (ביואיק פארק אבניו 3.8 V6 205)"
-  },
-  {
-    "make": "\"ביואיק ארהב",
-    "model": "PARK AVENUE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 205,
-    "cc": 3791,
-    "seconds": 8.8,
-    "source": "רישוי רכב / נתון יצרן (ביואיק פארק אבניו 3.8 V6 205)"
-  },
-  {
-    "make": "ביואיק ארהב\"",
-    "model": "PARK AVENUE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 240,
-    "cc": 3791,
-    "seconds": 7.5,
-    "source": "רישוי רכב / נתון יצרן (ביואיק פארק אבניו Ultra Supercharged 240)"
-  },
-  {
-    "make": "ביואיק",
-    "model": "פארק אבניו",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 205,
-    "cc": 3791,
-    "seconds": 8.8,
-    "source": "רישוי רכב / נתון יצרן (ביואיק פארק אבניו 205)"
-  },
-  {
-    "make": "Buick",
-    "model": "PARK AVENUE",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 205,
-    "cc": 3791,
-    "seconds": 8.8,
-    "source": "נתון יצרן (Buick Park Avenue 3.8)"
-  },
-  {
-    "make": "ביואיק ארהב\"",
-    "model": "RENDEZVOUS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 185,
-    "cc": 3350,
-    "seconds": 11.2,
-    "source": "רישוי רכב / נתון יצרן (ביואיק רנדוו 3.4 V6 185)"
-  },
-  {
-    "make": "\"ביואיק ארהב",
-    "model": "RENDEZVOUS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 185,
-    "cc": 3350,
-    "seconds": 11.2,
-    "source": "רישוי רכב / נתון יצרן (ביואיק רנדוו 3.4 V6 185)"
-  },
-  {
-    "make": "ביואיק ארהב\"",
-    "model": "RENDEZVOUS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 242,
-    "cc": 3564,
-    "seconds": 9.2,
-    "source": "רישוי רכב / נתון יצרן (ביואיק רנדוו 3.6 V6 242)"
-  },
-  {
-    "make": "ביואיק",
-    "model": "רנדוו",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 185,
-    "cc": 3350,
-    "seconds": 11.2,
-    "source": "רישוי רכב / נתון יצרן (ביואיק רנדוו 185)"
-  },
-  {
-    "make": "Buick",
-    "model": "RENDEZVOUS",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 185,
-    "cc": 3350,
-    "seconds": 11.2,
-    "source": "נתון יצרן (Buick Rendezvous 3.4)"
   },
   {
     "make": "בי ווי די סין",
@@ -1538,515 +938,5 @@
     "cc": 0,
     "seconds": 7.3,
     "source": "נתון יצרן (BYD Atto 3 EV 204)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "BYD DOLPHIN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 7.0,
-    "source": "רישוי רכב / נתון יצרן (BYD דולפין חשמלי EV 204)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "DOLPHIN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 7.0,
-    "source": "רישוי רכב / נתון יצרן (BYD דולפין חשמלי EV 204)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "דולפין",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 7.0,
-    "source": "רישוי רכב / נתון יצרן (BYD דולפין חשמלי EV 204)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "DOLPHIN SURF",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 7.0,
-    "source": "רישוי רכב / נתון יצרן (BYD דולפין סרף 204)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "דולפין סרף",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 7.0,
-    "source": "רישוי רכב / נתון יצרן (BYD דולפין סרף 204)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "BYD DOLPHIN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 95,
-    "cc": 0,
-    "seconds": 12.3,
-    "source": "רישוי רכב / נתון יצרן (BYD דולפין Active 95)"
-  },
-  {
-    "make": "BYD",
-    "model": "DOLPHIN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 7.0,
-    "source": "נתון יצרן (BYD Dolphin EV 204)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "HAN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 518,
-    "cc": 0,
-    "seconds": 3.9,
-    "source": "רישוי רכב / נתון יצרן (BYD האן כפול הנעה AWD 518)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "BYD HAN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 518,
-    "cc": 0,
-    "seconds": 3.9,
-    "source": "רישוי רכב / נתון יצרן (BYD האן כפול הנעה AWD 518)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "האן",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 518,
-    "cc": 0,
-    "seconds": 3.9,
-    "source": "רישוי רכב / נתון יצרן (BYD האן כפול הנעה AWD 518)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "HAN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 245,
-    "cc": 0,
-    "seconds": 7.9,
-    "source": "רישוי רכב / נתון יצרן (BYD האן הנעה קדמית FWD 245)"
-  },
-  {
-    "make": "BYD",
-    "model": "HAN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 518,
-    "cc": 0,
-    "seconds": 3.9,
-    "source": "נתון יצרן (BYD Han AWD 518)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "TANG",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 518,
-    "cc": 0,
-    "seconds": 4.6,
-    "source": "רישוי רכב / נתון יצרן (BYD טאנג 7 מקומות AWD 518)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "BYD TANG",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 518,
-    "cc": 0,
-    "seconds": 4.6,
-    "source": "רישוי רכב / נתון יצרן (BYD טאנג 7 מקומות AWD 518)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "טאנג",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 518,
-    "cc": 0,
-    "seconds": 4.6,
-    "source": "רישוי רכב / נתון יצרן (BYD טאנג 7 מקומות AWD 518)"
-  },
-  {
-    "make": "BYD",
-    "model": "TANG",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 518,
-    "cc": 0,
-    "seconds": 4.6,
-    "source": "נתון יצרן (BYD Tang AWD 518)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "BYD SEALION 7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 231,
-    "cc": 0,
-    "seconds": 7.5,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל אריה 7 Boost הנעה אחורית 231)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "SEALION 7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 231,
-    "cc": 0,
-    "seconds": 7.5,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל אריה 7 Boost 231)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "SEALION 7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 313,
-    "cc": 0,
-    "seconds": 6.7,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל אריה 7 Comfort RWD 313)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "BYD SEALION 7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 530,
-    "cc": 0,
-    "seconds": 4.5,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל אריה 7 Excellence AWD 530)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "SEALION 7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 530,
-    "cc": 0,
-    "seconds": 4.5,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל אריה 7 Excellence AWD 530)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "סי ליאון 07",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 231,
-    "cc": 0,
-    "seconds": 7.5,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל אריה 7 231)"
-  },
-  {
-    "make": "BYD",
-    "model": "SEALION 7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 231,
-    "cc": 0,
-    "seconds": 7.5,
-    "source": "נתון יצרן (BYD Sealion 7 Boost)"
-  },
-  {
-    "make": "BYD",
-    "model": "SEALION 7",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 530,
-    "cc": 0,
-    "seconds": 4.5,
-    "source": "נתון יצרן (BYD Sealion 7 AWD)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "SEALION 5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 197,
-    "cc": 1498,
-    "seconds": 7.9,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל אריה 5 פלאג-אין DM-i 197)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "BYD SEALION 5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 197,
-    "cc": 1498,
-    "seconds": 7.9,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל אריה 5 פלאג-אין DM-i 197)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "סי ליאון 05",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 197,
-    "cc": 1498,
-    "seconds": 7.9,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל אריה 5 פלאג-אין DM-i 197)"
-  },
-  {
-    "make": "BYD",
-    "model": "SEALION 5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 197,
-    "cc": 1498,
-    "seconds": 7.9,
-    "source": "נתון יצרן (BYD Sealion 5 DM-i)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "SEAL",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 530,
-    "cc": 0,
-    "seconds": 3.8,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל Excellence כפול הנעה AWD 530)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "BYD SEAL",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 530,
-    "cc": 0,
-    "seconds": 3.8,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל Excellence כפול הנעה AWD 530)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "SEAL",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 313,
-    "cc": 0,
-    "seconds": 5.9,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל Design הנעה אחורית RWD 313)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "סיל",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 530,
-    "cc": 0,
-    "seconds": 3.8,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל Excellence AWD 530)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "סיל",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 313,
-    "cc": 0,
-    "seconds": 5.9,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל Design RWD 313)"
-  },
-  {
-    "make": "BYD",
-    "model": "SEAL",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 530,
-    "cc": 0,
-    "seconds": 3.8,
-    "source": "נתון יצרן (BYD Seal AWD 530)"
-  },
-  {
-    "make": "BYD",
-    "model": "SEAL",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 313,
-    "cc": 0,
-    "seconds": 5.9,
-    "source": "נתון יצרן (BYD Seal RWD 313)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "BYD SEAL 5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 212,
-    "cc": 1498,
-    "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל 5 פלאג-אין DM-i 212)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "SEAL 5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 212,
-    "cc": 1498,
-    "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל 5 פלאג-אין DM-i 212)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "SEAL 5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 180,
-    "cc": 1498,
-    "seconds": 7.9,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל 5 פלאג-אין DM-i 180)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "סיל 5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 212,
-    "cc": 1498,
-    "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל 5 DM-i 212)"
-  },
-  {
-    "make": "BYD",
-    "model": "SEAL 5",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 212,
-    "cc": 1498,
-    "seconds": 7.3,
-    "source": "נתון יצרן (BYD Seal 5 DM-i)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "SEAL U",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 218,
-    "cc": 0,
-    "seconds": 9.3,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל יו חשמלי EV Comfort 218)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "BYD SEAL U",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 218,
-    "cc": 0,
-    "seconds": 9.3,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל יו חשמלי EV Comfort 218)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "SEAL U",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 218,
-    "cc": 1498,
-    "seconds": 8.9,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל יו DM-i פלאג-אין Boost 218)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "SEAL U",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 324,
-    "cc": 1498,
-    "seconds": 5.9,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל יו DM-i פלאג-אין AWD 324)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "סיל u",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 218,
-    "cc": 0,
-    "seconds": 9.3,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל U חשמלי 218)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "סיל u",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 218,
-    "cc": 1498,
-    "seconds": 8.9,
-    "source": "רישוי רכב / נתון יצרן (BYD סיל U פלאג-אין 218)"
-  },
-  {
-    "make": "BYD",
-    "model": "SEAL U",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 218,
-    "cc": 0,
-    "seconds": 9.3,
-    "source": "נתון יצרן (BYD Seal U EV 218)"
-  },
-  {
-    "make": "BYD",
-    "model": "SEAL U",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 218,
-    "cc": 1498,
-    "seconds": 8.9,
-    "source": "נתון יצרן (BYD Seal U DM-i 218)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "ETP3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 136,
-    "cc": 0,
-    "seconds": 13.0,
-    "source": "רישוי רכב / נתון יצרן (BYD ETP3 מסחרי חשמלי 136)"
-  },
-  {
-    "make": "בי ווי די סין",
-    "model": "BYD ETP3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 136,
-    "cc": 0,
-    "seconds": 13.0,
-    "source": "רישוי רכב / נתון יצרן (BYD ETP3 מסחרי חשמלי 136)"
-  },
-  {
-    "make": "BYD",
-    "model": "ETP3",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 136,
-    "cc": 0,
-    "seconds": 13.0,
-    "source": "נתון יצרן (BYD ETP3 EV 136)"
   }
 ]
