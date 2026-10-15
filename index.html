@@ -67,22 +67,74 @@
   .hero { display: none; }
   .hero.show { display: block; }
 
+  /* --- הגדרות סמל תלת-ממד 360 מעלות --- */
+  .logo-3d-scene {
+    perspective: 800px;
+    width: 108px;
+    height: 108px;
+    margin: 12px auto 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
   .brand-logo-container {
     width: 96px;
     height: 96px;
-    margin: 12px auto 6px;
     background: #ffffff;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.14), inset 0 0 10px rgba(0,0,0,0.04);
     border: 2px solid #eef2f5;
     padding: 10px;
     overflow: hidden;
+    cursor: grab;
+    touch-action: none;
+    transform-style: preserve-3d;
+    transition: transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease;
   }
-  .brand-logo { width: 100%; height: 100%; object-fit: contain; }
-  .brand-badge { width: 100%; height: 100%; border-radius: 50%; color: #fff; font-size: 36px; font-weight: bold; display: flex; align-items: center; justify-content: center; }
+
+  .brand-logo-container.dragging {
+    cursor: grabbing;
+    transition: none;
+    box-shadow: 0 12px 24px rgba(42,127,168,0.28), inset 0 0 12px rgba(0,0,0,0.08);
+  }
+
+  .brand-logo { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; 
+    pointer-events: none; 
+  }
+
+  .brand-badge { 
+    width: 100%; 
+    height: 100%; 
+    border-radius: 50%; 
+    color: #fff; 
+    font-size: 36px; 
+    font-weight: bold; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    pointer-events: none;
+  }
+
+  .spin-hint {
+    text-align: center;
+    font-size: 11px;
+    color: #5a87a1;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    opacity: 0.85;
+  }
 
   .car-name { text-align: center; font-size: 22px; color: #1f5f80; font-weight: bold; margin-top: 4px; }
   .car-trim { text-align: center; font-size: 18px; color: #2a7fa8; font-weight: bold; margin-top: 2px; }
@@ -273,10 +325,13 @@
 
     <div id="cardGeneral">
       <div id="hero" class="hero">
-        <div class="brand-logo-container">
-          <img id="brandLogo" class="brand-logo" alt="סמל יצרן">
-          <div id="brandBadge" class="brand-badge" style="display:none;"></div>
+        <div class="logo-3d-scene">
+          <div class="brand-logo-container" id="logoSpinner">
+            <img id="brandLogo" class="brand-logo" alt="סמל יצרן">
+            <div id="brandBadge" class="brand-badge" style="display:none;"></div>
+          </div>
         </div>
+        <div class="spin-hint"><span>✨</span> גרור או סובב סביב הציר 360°</div>
 
         <div class="car-name"><span id="heroName"></span></div>
         <div class="car-trim" id="heroTrim"></div>
@@ -530,7 +585,12 @@
   async function showBrand(manufacturer, brand) {
     const logo = document.getElementById('brandLogo');
     const badge = document.getElementById('brandBadge');
+    const spinner = document.getElementById('logoSpinner');
     const key = (manufacturer || '').trim();
+
+    if (spinner) {
+      spinner.style.transform = 'rotateY(0deg) rotateX(0deg)';
+    }
 
     badge.textContent = key ? key.charAt(0) : '?';
     badge.style.background = brand ? brand.color : '#2a7fa8';
@@ -1216,6 +1276,64 @@
   document.getElementById('stOwn').addEventListener('click', toggleOwnPanel);
   document.getElementById('ownBtn').addEventListener('click', toggleOwnPanel);
   document.getElementById('backBtn').addEventListener('click', showHome);
+
+  // מנגנון סיבוב 360 מעלות לסמל הרכב בגרירה
+  (function initLogo360() {
+    const spinner = document.getElementById('logoSpinner');
+    if (!spinner) return;
+
+    let isDragging = false;
+    let startX = 0, startY = 0;
+    let currentRotY = 0, currentRotX = 0;
+
+    function startDrag(clientX, clientY) {
+      isDragging = true;
+      startX = clientX - (currentRotY / 1.6);
+      startY = clientY + (currentRotX / 1.2);
+      spinner.classList.add('dragging');
+    }
+
+    function moveDrag(clientX, clientY) {
+      if (!isDragging) return;
+      currentRotY = (clientX - startX) * 1.6;
+      currentRotX = Math.max(-65, Math.min(65, -(clientY - startY) * 1.2));
+      spinner.style.transform = `rotateY(${currentRotY}deg) rotateX(${currentRotX}deg)`;
+    }
+
+    function endDrag() {
+      if (!isDragging) return;
+      isDragging = false;
+      spinner.classList.remove('dragging');
+      currentRotY = 0;
+      currentRotX = 0;
+      spinner.style.transform = `rotateY(0deg) rotateX(0deg)`;
+    }
+
+    // אירועי מגע לטלפון
+    spinner.addEventListener('touchstart', e => {
+      if (e.touches.length === 1) {
+        startDrag(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchmove', e => {
+      if (isDragging && e.touches.length === 1) {
+        moveDrag(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchend', endDrag);
+    window.addEventListener('touchcancel', endDrag);
+
+    // אירועי עכבר למחשב
+    spinner.addEventListener('mousedown', e => {
+      startDrag(e.clientX, e.clientY);
+    });
+    window.addEventListener('mousemove', e => {
+      moveDrag(e.clientX, e.clientY);
+    });
+    window.addEventListener('mouseup', endDrag);
+  })();
 
   renderHistory();
 </script>
