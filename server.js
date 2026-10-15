@@ -463,6 +463,26 @@ app.get('/api/history/:plate', async (req, res) => {
     }
 });
 
+// נתיב דיבוג מוחזר לנוחות בדיקה
+app.get('/api/debug/:plate', async (req, res) => {
+    try {
+        const car = await fetchCarRecord(req.params.plate);
+        if (!car) return res.json({ success: false, message: "לא נמצא" });
+        const row = await findModelRow(car);
+        const hist = await fetchHistoryRecord(req.params.plate);
+        const own = await fetchOwnershipRows(req.params.plate);
+        res.json({
+            success: true,
+            car,
+            model_row: row,
+            history: hist,
+            ownership: own
+        });
+    } catch (error) {
+        res.status(500).json({ success: false, error: error.message });
+    }
+});
+
 app.listen(PORT, () => {
     console.log(`השרת רץ בפורט ${PORT}`);
 });
