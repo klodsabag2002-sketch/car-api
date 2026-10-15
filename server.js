@@ -347,11 +347,11 @@ app.get('/api/car/:plate', async (req, res) => {
             powerSteering: fflag("hege_koah_ind")
         };
 
-        // תיקון וידוא קריאת מצלמת רוורס ממספר שמות אפשריים במאגר
+        // שיוך השדה הנכון למצלמת רוורס במאגר התקינה הממשלתי
         const safety = {
             laneDeparture: fflag("bakarat_stiya_menativ_ind"),
             pedestrianDetection: fflag("zihuy_holchey_regel_ind"),
-            rearCamera: fflag("matzlemet_reverse_ind") || fflag("matzlema_ahori") || fflag("mazlema_ahori") || fflag("matzlemet_ruvers_ind")
+            rearCamera: fflag("matzlema_ahorit_ind") || fflag("matzlemet_reverse_ind") || fflag("matzlema_ahorite_ind")
         };
 
         res.json({
