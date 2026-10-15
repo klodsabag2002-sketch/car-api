@@ -383,22 +383,22 @@ app.get('/api/car/:plate', async (req, res) => {
 
                 technical: {
                     drivetrain: resolveDrivetrain(row, car),
-                    totalWeight: pick(sources, ["mishkal_kolel", "mishkal_kolel_kg"], true),
-                    curbWeight: pick(sources, ["mishkal_azmi", "mishkal_azmi_kg"], true),
-                    height: pick(sources, ["gova", "gova_rechev"], true),
-                    length: pick(sources, ["orech_klali", "orech"], true),
-                    width: pick(sources, ["rohav_klali", "rohav"], true),
-                    wheelbase: pick(sources, ["merhak_sranim", "basis_galgalim"], true),
-                    doors: pick(sources, ["mispar_dlatot", "dlatot"], true),
-                    seats: pick(sources, ["mispar_moshavim", "moshavim"], true),
-                    powerWindows: pick(sources, ["halonot_hashmal_halonot", "halonot_hashmal"], true),
-                    airbags: pick(sources, ["kariot_avir", "kariot"], true),
-                    transmission: pick(sources, ["tevat_hiluhim_nm", "tevat_hiluhim", "gear_nm"]) || 'אוטומטי',
-                    fuelType: pick(sources, ["sug_delek_nm", "delek_nm", "sug_delek"]) || 'בנזין',
-                    engineCode: pick(sources, ["degem_manoa", "kod_manoa"]),
+                    totalWeight: toNumber(pick(sources, ["mishkal_kolel", "mishkal_kolel_kg"], true)),
+                    curbWeight: toNumber(pick(sources, ["mishkal_azmi", "mishkal_azmi_kg"], true)),
+                    height: toNumber(pick(sources, ["gova", "gova_rechev"], true)),
+                    length: toNumber(pick(sources, ["orech_klali", "orech"], true)),
+                    width: toNumber(pick(sources, ["rohav_klali", "rohav"], true)),
+                    wheelbase: toNumber(pick(sources, ["merhak_sranim", "basis_galgalim"], true)),
+                    doors: toNumber(pick(sources, ["mispar_dlatot", "dlatot"], true)),
+                    seats: toNumber(pick(sources, ["mispar_moshavim", "moshavim"], true)),
+                    powerWindows: toNumber(pick(sources, ["halonot_hashmal", "halonot_hashmal_halonot"], true)) ?? 4,
+                    airbags: toNumber(pick(sources, ["kariot_avir", "mispar_kariot_avir"], true)),
+                    transmission: toText(pick(sources, ["tevat_hiluhim_nm", "tevat_hiluhim", "gear_nm"])) || 'אוטומטי',
+                    fuelType: toText(pick(sources, ["sug_delek_nm", "delek_nm", "sug_delek"])) || 'בנזין',
+                    engineCode: toText(pick(sources, ["degem_manoa", "kod_manoa"])),
                     hasTowHitch: pickBool(sources, ["vav_grira_ind", "vav_grira"], false),
-                    towBrakes: pick(sources, ["kosher_grira_im_blamim_kg", "kosher_grira_im_blamim"], true),
-                    towNoBrakes: pick(sources, ["kosher_grira_lelo_blamim_kg", "kosher_grira_bli_blamim"], true)
+                    towBrakes: toNumber(pick(sources, ["kosher_grira_im_blamim", "kosher_grira_im_blamim_kg"], true)),
+                    towNoBrakes: toNumber(pick(sources, ["kosher_grira_bli_blamim", "kosher_grira_lelo_blamim_kg"], true))
                 },
 
                 equipment: {
@@ -408,7 +408,7 @@ app.get('/api/car/:plate', async (req, res) => {
                     abs: pickBool(sources, ["abs_ind", "abs"], true),
                     esp: pickBool(sources, ["bakarat_yatzivut_ind", "esp_ind"], true),
                     powerSteering: pickBool(sources, ["hege_koah_ind", "hege_koach_ind"], true),
-                    cruiseControl: pickBool(sources, ["bakarat_shyut_ind", "bakarat_shiut_ind"], false),
+                    cruiseControl: pickBool(sources, ["bakarat_shyut_ind", "bakarat_shyut_adaptivit_ind", "bakarat_shiut_ind"], false),
                     leatherSeats: pickBool(sources, ["ripudey_or_ind", "ripud_or_ind"], false),
                     powerSeats: pickBool(sources, ["kivnun_moshavim_hashmali_ind"], false),
                     heatedSeats: pickBool(sources, ["himum_moshavim_ind"], false),
@@ -421,25 +421,25 @@ app.get('/api/car/:plate', async (req, res) => {
                 },
 
                 safety: {
-                    safetyScore: pick(sources, ["ramat_eivzur_betihut", "nikud_bitahon"], true),
-                    autonomousBraking: pickBool(sources, ["blimat_herum_otonomit_ind", "blimat_herum_ind"], false),
-                    laneDeparture: pickBool(sources, ["hatraat_stiat_nativ_ind", "stiat_nativ_ind"], false),
+                    safetyScore: toNumber(pick(sources, ["ramat_eivzur_betihut", "nikud_bitahon"], true)),
+                    autonomousBraking: pickBool(sources, ["blimat_herum_otonomit_ind", "blimat_herum_ind", "blima_otomatit_nesia_leahor"], false),
+                    laneDeparture: pickBool(sources, ["hatraat_stiat_nativ_ind", "stiat_nativ_ind", "bakarat_stiya_activ_s"], false),
                     laneKeepAssist: pickBool(sources, ["mneiat_stiat_nativ_ind"], false),
                     adaptiveCruise: pickBool(sources, ["bakarat_shyut_adaptivit_ind"], false),
-                    blindSpot: pickBool(sources, ["zihuy_rehev_beshetah_met_ind", "shetah_met_ind"], false),
+                    blindSpot: pickBool(sources, ["zihuy_rehev_beshetah_met_ind", "shetah_met_ind", "zihuy_beshetah_nistar_ind"], false),
                     forwardCollision: pickBool(sources, ["hatraat_hitnagshut_kidmit_ind"], false),
                     pedestrianDetection: pickBool(sources, ["zihuy_holhey_regel_ind"], false),
                     trafficSigns: pickBool(sources, ["zihuy_tamrurey_tnua_ind"], false),
-                    rearviewCamera: pickBool(sources, ["matzlema_ahorit_ind"], false),
-                    parkingSensors: pickBool(sources, ["hayeyshey_hanaya_ind"], false),
+                    rearviewCamera: pickBool(sources, ["matzlema_ahorit_ind", "matzlewat_reverse_ind"], false),
+                    parkingSensors: pickBool(sources, ["hayeyshey_hanaya_ind", "hayshaney_lahatz_avir_batznigim_ind"], false),
                     autoHighBeam: pickBool(sources, ["shlita_beor_gvoha_ind"], false),
                     tirePressure: pickBool(sources, ["hayeyshey_lahatz_avir_ind"], false)
                 },
 
                 environment: {
-                    pollutionLevel: pick(sources, ["ramat_zihum", "darjat_zihum"], true),
-                    co2Emissions: pick(sources, ["plitat_co2", "co2"], true),
-                    licenseGroup: pick(sources, ["kvutzat_agrah_cd", "kvutzat_agrah"], true)
+                    pollutionLevel: toNumber(pick(sources, ["ramat_zihum", "darjat_zihum"], true)),
+                    co2Emissions: toNumber(pick(sources, ["plitat_co2", "co2"], true)),
+                    licenseGroup: toNumber(pick(sources, ["kvutzat_agrah_cd", "kvutzat_agrah"], true))
                 }
             }
         });
@@ -463,7 +463,6 @@ app.get('/api/history/:plate', async (req, res) => {
     }
 });
 
-// נתיב דיבוג מוחזר לנוחות בדיקה
 app.get('/api/debug/:plate', async (req, res) => {
     try {
         const car = await fetchCarRecord(req.params.plate);
@@ -471,13 +470,7 @@ app.get('/api/debug/:plate', async (req, res) => {
         const row = await findModelRow(car);
         const hist = await fetchHistoryRecord(req.params.plate);
         const own = await fetchOwnershipRows(req.params.plate);
-        res.json({
-            success: true,
-            car,
-            model_row: row,
-            history: hist,
-            ownership: own
-        });
+        res.json({ success: true, car, model_row: row, history: hist, ownership: own });
     } catch (error) {
         res.status(500).json({ success: false, error: error.message });
     }
