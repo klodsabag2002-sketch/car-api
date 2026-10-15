@@ -1000,7 +1000,7 @@
     });
   });
 
-  // ---------- מנגנון דיווח יציב דרך השרת (ללא שגיאות Web3Forms) ----------
+  // ---------- מנגנון דיווח ישיר ב-FormData (עוקף חסימות שרתי ענן) ----------
   const reportModal = document.getElementById('reportModal');
   const openReportBtn = document.getElementById('openReportBtn');
   const closeReportBtn = document.getElementById('closeReportBtn');
@@ -1031,16 +1031,19 @@
     reportStatus.className = 'report-status';
     reportStatus.textContent = '';
 
+    const formData = new FormData();
+    formData.append("access_key", "57cbc2ae-17ad-4c60-b73a-6558c56e8f01");
+    formData.append("subject", `דיווח מהאפליקציה על רכב ${formatPlate(currentPlate)} [${category}]`);
+    formData.append("from_name", "מערכת בדיקת רכב");
+    formData.append("מספר רכב", formatPlate(currentPlate));
+    formData.append("פרטי רכב", currentCarData ? `${currentCarData.manufacturer} ${currentCarData.model} (${currentCarData.year})` : 'לא ידוע');
+    formData.append("נושא הדיווח", category);
+    formData.append("הערות", userNotes || 'ללא הערות נוספות');
+
     try {
-      const response = await fetch(`${API_BASE}/api/report`, {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          plate: formatPlate(currentPlate),
-          category: category,
-          notes: userNotes || 'ללא הערות',
-          carInfo: currentCarData ? `${currentCarData.manufacturer} ${currentCarData.model} (${currentCarData.year})` : ''
-        })
+        body: formData
       });
 
       const result = await response.json();
@@ -1050,7 +1053,7 @@
         reportStatus.textContent = 'הדיווח נשלח בהצלחה!';
         setTimeout(() => { reportModal.classList.remove('show'); }, 1800);
       } else {
-        throw new Error();
+        throw new Error(result.message || 'שגיאה בשליחה');
       }
     } catch (err) {
       reportStatus.className = 'report-status error';
