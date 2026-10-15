@@ -744,7 +744,6 @@ function testStatus(expiry) {
 
 // ---------- מילון תרגומי מרכב מלא ----------
 const BODY_TYPE_MAP = {
-    // מונחים באנגלית וראשי תיבות
     "MPV": "מיניוואן",
     "SUV": "פנאי / שטח",
     "HATCHBACK": "האצ'בק",
@@ -761,7 +760,6 @@ const BODY_TYPE_MAP = {
     "MINIVAN": "מיניוואן",
     "CROSSOVER": "קרוסאובר",
 
-    // שמות בעברית
     "הצ'בק": "האצ'בק",
     "הצבק": "האצ'בק",
     "האצ'בק": "האצ'בק",
@@ -780,7 +778,6 @@ const BODY_TYPE_MAP = {
     "רכב שדה": "רכב שטח",
     "אוטובוס זעיר": "טרנזיט / היסעים",
 
-    // אותיות סוג דגם ממשלתי (sug_degem)
     "P": "האצ'בק",
     "M": "סטיישן",
     "S": "סדאן",
@@ -789,7 +786,6 @@ const BODY_TYPE_MAP = {
     "V": "מסחרי / ואן",
     "T": "טנדר",
 
-    // קידודים הפוכים ממסדי הנתונים של משרד התחבורה
     "בק'צה": "האצ'בק",
     "הצב'ק": "האצ'בק",
     "נאדס": "סדאן",
@@ -1054,6 +1050,43 @@ app.get('/api/debug/:plate', async (req, res) => {
     } catch (error) {
         console.error("שגיאה:", error);
         res.status(500).json({ success: false, error: error.message });
+    }
+});
+
+// ---------- קבלת דיווח מהאתר והעברתו ישירות ל-Web3Forms ----------
+app.post('/api/report', async (req, res) => {
+    try {
+        const { plate, category, notes, carInfo } = req.body;
+        console.log(`[REPORT] דיווח חדש על רכב ${plate}: ${category}`);
+
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                access_key: "57cbc2ae-17ad-4c60-b73a-6558c56e8f01",
+                subject: `דיווח מהאפליקציה: רכב ${plate} [${category}]`,
+                from_name: "מערכת בדיקת רכב",
+                "מספר רכב": plate,
+                "סוג דיווח": category,
+                "הערות": notes || "ללא הערות",
+                "פרטי רכב": carInfo || ""
+            })
+        });
+
+        const result = await response.json();
+        console.log('[WEB3FORMS RESULT]:', result);
+        
+        if (result.success) {
+            return res.json({ success: true });
+        } else {
+            return res.status(400).json({ success: false, message: result.message });
+        }
+    } catch (err) {
+        console.error('[REPORT ERROR]:', err);
+        return res.status(500).json({ success: false });
     }
 });
 
