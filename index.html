@@ -212,7 +212,7 @@
   .modal-submit { flex: 1; background: #2a7fa8; color: #fff; border: none; padding: 10px; border-radius: 8px; font-weight: bold; font-size: 14px; cursor: pointer; }
   .modal-submit:disabled { background: #94c0d6; cursor: not-allowed; }
   .modal-close { background: #e2e8f0; color: #475569; border: none; padding: 10px 14px; border-radius: 8px; font-size: 13px; cursor: pointer; }
-  
+
   .report-status {
     display: none;
     font-size: 12px;
@@ -364,7 +364,7 @@
     </div>
 
     <!-- כרטיסיות מידע נוספות -->
-    <div id="cardTech" style="display:none; padding: 20px; text-align: center; color: #666;">מפרט טכני בקרוב...</div>
+    <div id="cardTech" style="display:none;"></div>
     <div id="cardSafety" style="display:none; padding: 20px; text-align: center; color: #666;">נתוני בטיחות בקרוב...</div>
     <div id="cardEnv" style="display:none; padding: 20px; text-align: center; color: #666;">נתוני סביבה בקרוב...</div>
   </div>
@@ -422,7 +422,7 @@
 
   function findBrand(manufacturer, model) {
     const raw = ((manufacturer || '') + ' ' + (model || '')).toLowerCase();
-    
+
     // מותאם בדיוק מדויק לשמות קבצי ה-jpg שהעלת לתיקיית logos
     const rules = [
       [["cupra", "קופרה"], "cupra", "#8c6a3d", "Cupra"],
@@ -941,6 +941,94 @@
     }
   }
 
+  // ---------- לשונית "מפרט טכני" ----------
+  function renderTech(d) {
+    const box = document.getElementById('cardTech');
+    box.textContent = '';
+    box.style.cssText = 'padding: 4px 0 20px;';
+
+    const t = d.technical || {};
+    const e = d.equipment || {};
+    const s = d.safety || {};
+
+    // 0 = "אין", null = "אין נתון"
+    const u = (n, unit) => {
+      if (n === null || n === undefined) return null;
+      if (n === 0) return 'אין';
+      return unit ? n + ' ' + unit : String(n);
+    };
+
+    const card = (title, rows) => {
+      const c = document.createElement('div');
+      c.style.cssText = 'background:#fff;border-radius:12px;margin:10px 10px 0;padding:4px 12px;box-shadow:0 2px 6px rgba(42,127,168,.12);';
+
+      const h = document.createElement('div');
+      h.textContent = title;
+      h.style.cssText = 'font-weight:bold;color:#1f5f80;padding:10px 0 6px;font-size:14px;';
+      c.appendChild(h);
+
+      rows.forEach(([label, value]) => {
+        const r = document.createElement('div');
+        r.style.cssText = 'display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:13px;';
+
+        const l = document.createElement('span');
+        l.textContent = label;
+        l.style.color = '#4a6b7d';
+
+        const v = document.createElement('span');
+        v.style.cssText = 'font-weight:bold;';
+        if (value === null || value === undefined || value === '') {
+          v.textContent = 'אין נתון';
+          v.style.color = '#aab8c2';
+          v.style.fontWeight = 'normal';
+        } else if (typeof value === 'boolean') {
+          v.textContent = value ? 'V' : 'X';
+          v.style.color = value ? '#3c8d2e' : '#b42318';
+        } else {
+          v.textContent = String(value);
+          v.style.color = '#1f5f80';
+        }
+
+        r.appendChild(l);
+        r.appendChild(v);
+        c.appendChild(r);
+      });
+
+      box.appendChild(c);
+    };
+
+    card('הנעה וגרירה', [
+      ['הנעה', t.drivetrain],
+      ['משקל כולל', u(t.totalWeight, 'ק"ג')],
+      ['כושר גרירה עם בלמים', u(t.towWithBrakes, 'ק"ג')],
+      ['כושר גרירה בלי בלמים', u(t.towWithoutBrakes, 'ק"ג')]
+    ]);
+
+    card('מבנה ואבזור', [
+      ['מספר דלתות', t.doors],
+      ['מספר מושבים', t.seats],
+      ['חלונות חשמליים', u(t.windows)],
+      ['כריות אוויר', u(t.airbags)],
+      ['מזגן', e.ac],
+      ['ABS', e.abs],
+      ['גג שמש', e.sunroof],
+      ['גלגלי סגסוגת', e.alloyWheels],
+      ['הגה בכוח', e.powerSteering]
+    ]);
+
+    card('בטיחות', [
+      ['שמירת נתיב', s.laneDeparture],
+      ['זיהוי הולכי רגל', s.pedestrianDetection],
+      ['מצלמת רברס', s.rearCamera],
+      ['רמת אבזור בטיחותי', t.safetyLevel]
+    ]);
+
+    const note = document.createElement('div');
+    note.textContent = 'הנתונים ממאגרי משרד התחבורה. "אין נתון" משמעו שהמאגר לא כולל את השדה לרכב הזה.';
+    note.style.cssText = 'font-size:11px;color:#7b8f9a;text-align:center;margin:12px 14px 0;line-height:1.4;';
+    box.appendChild(note);
+  }
+
   async function searchCar() {
     const plate = document.getElementById('plateInput').value.replace(/\D/g, '');
     const btn = document.getElementById('searchBtn');
@@ -1034,6 +1122,7 @@
         time: new Date().toLocaleTimeString('he-IL', { hour: '2-digit', minute: '2-digit' })
       });
 
+      renderTech(d);
       showDetail();
     } catch (e) {
       loader.style.display = 'none';
