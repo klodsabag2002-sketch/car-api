@@ -338,6 +338,74 @@
   }
   .report-status.success { display: block; background: rgba(34, 197, 94, 0.15); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.4); text-shadow: 0 0 8px rgba(74,222,128,0.4); }
   .report-status.error { display: block; background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.4); text-shadow: 0 0 8px rgba(248,113,113,0.4); }
+
+  /* --- מסך מעבר סייבר הולוגרפי ייחודי לחברה --- */
+  #cyberTransitionOverlay {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle, rgba(15,23,42,0.95) 0%, rgba(3,7,18,0.98) 100%);
+    backdrop-filter: blur(20px);
+    z-index: 9999;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  #cyberTransitionOverlay.show {
+    display: flex;
+    opacity: 1;
+  }
+  .transit-holo-ring {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid rgba(56,189,248,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 40px rgba(56,189,248,0.4), inset 0 0 20px rgba(56,189,248,0.2);
+    animation: holoPulse 1.5s ease-in-out infinite alternate;
+  }
+  @keyframes holoPulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 20px rgba(56,189,248,0.3); }
+    100% { transform: scale(1.05); box-shadow: 0 0 50px rgba(56,189,248,0.7); }
+  }
+  .transit-logo {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.8));
+  }
+  .transit-badge {
+    font-size: 50px;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 0 15px rgba(255,255,255,0.8);
+  }
+  .transit-title {
+    margin-top: 24px;
+    font-size: 22px;
+    font-weight: 900;
+    color: #f8fafc;
+    letter-spacing: 1px;
+    text-shadow: 0 0 12px rgba(56,189,248,0.6);
+  }
+  .transit-sub {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #38bdf8;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(56,189,248,0.4);
+    animation: blinkText 1s infinite alternate;
+  }
+  @keyframes blinkText {
+    0% { opacity: 0.4; }
+    100% { opacity: 1; }
+  }
 </style>
 </head>
 <body>
@@ -486,6 +554,16 @@
     <div id="cardEnv" style="display:none; padding: 40px; text-align: center; color: #94a3b8; font-weight: 800;">נתוני סביבה בקרוב...</div>
   </div>
 
+</div>
+
+<!-- מסך מעבר סייבר הולוגרפי -->
+<div id="cyberTransitionOverlay">
+  <div class="transit-holo-ring" id="transitHoloRing">
+    <img id="transitLogo" class="transit-logo" style="display:none;" alt="">
+    <div id="transitBadge" class="transit-badge" style="display:none;"></div>
+  </div>
+  <div class="transit-title" id="transitTitle">טוען פרוטוקול רכב...</div>
+  <div class="transit-sub">SYNCHRONIZING CYBERNETIC LINK</div>
 </div>
 
 <div id="reportModal" class="modal-overlay">
@@ -1151,6 +1229,56 @@
     box.appendChild(note);
   }
 
+  // הפעלת מסך המעבר ההולוגרפי הייחודי לפי מותג הרכב
+  function triggerCyberTransition(brand, manufacturer, model, onComplete) {
+    const overlay = document.getElementById('cyberTransitionOverlay');
+    const ring = document.getElementById('transitHoloRing');
+    const transitLogo = document.getElementById('transitLogo');
+    const transitBadge = document.getElementById('transitBadge');
+    const transitTitle = document.getElementById('transitTitle');
+
+    const brandName = brand ? brand.en : (manufacturer || 'רכב יוקרה');
+    transitTitle.textContent = `מתחבר למערכות ${brandName}...`;
+
+    if (brand && brand.color) {
+      ring.style.borderColor = brand.color;
+      ring.style.boxShadow = `0 0 50px ${brand.color}, inset 0 0 25px ${brand.color}`;
+      transitBadge.style.background = brand.color;
+    } else {
+      ring.style.borderColor = '#38bdf8';
+      ring.style.boxShadow = '0 0 40px rgba(56,189,248,0.4), inset 0 0 20px rgba(56,189,248,0.2)';
+      transitBadge.style.background = '#0284c7';
+    }
+
+    const logoSrc = getLogoSrc(brand);
+    const key = (manufacturer || '').trim();
+    transitBadge.textContent = key ? key.charAt(0) : '?';
+
+    if (logoSrc) {
+      transitLogo.src = logoSrc;
+      transitLogo.style.display = 'block';
+      transitBadge.style.display = 'none';
+      transitLogo.onerror = function() {
+        this.style.display = 'none';
+        transitBadge.style.display = 'flex';
+      };
+    } else {
+      transitLogo.style.display = 'none';
+      transitBadge.style.display = 'flex';
+    }
+
+    overlay.classList.add('show');
+
+    setTimeout(() => {
+      overlay.style.opacity = '0';
+      setTimeout(() => {
+        overlay.classList.remove('show');
+        overlay.style.opacity = '1';
+        if (typeof onComplete === 'function') onComplete();
+      }, 400);
+    }, 1200);
+  }
+
   async function searchCar() {
     const plate = document.getElementById('plateInput').value.replace(/\D/g, '');
     const btn = document.getElementById('searchBtn');
@@ -1193,59 +1321,64 @@
       currentCarData = d;
 
       const brand = findBrand(d.manufacturer, d.model);
-      await showBrand(d.manufacturer, brand);
 
-      if (d.kmSinceTest != null) {
-        document.getElementById('kmText').textContent =
-          d.kmSinceTest.toLocaleString('he-IL') + ' ק"מ - קילומטראז\' מעודכן מהטסט האחרון';
-        kmLine.classList.add('show');
-      }
+      // הפעלת מסך המעבר ההולוגרפי המותאם אישית לחברה לפני הצגת הנתונים
+      triggerCyberTransition(brand, d.manufacturer, d.model, async () => {
+        await showBrand(d.manufacturer, brand);
 
-      document.getElementById('heroName').textContent = cleanText((d.manufacturer || '') + ' ' + (d.model || ''));
-      document.getElementById('heroTrim').textContent = cleanText(d.trim || '');
+        if (d.kmSinceTest != null) {
+          document.getElementById('kmText').textContent =
+            d.kmSinceTest.toLocaleString('he-IL') + ' ק"מ - קילומטראז\' מעודכן מהטסט האחרון';
+          kmLine.classList.add('show');
+        }
 
-      if (d.testValid === null || d.testValid === undefined) setStatusBlock('stTest', 'אין נתון', 'neutral');
-      else if (d.testValid) setStatusBlock('stTest', 'בתוקף', 'ok');
-      else setStatusBlock('stTest', 'פג תוקף', 'bad');
+        document.getElementById('heroName').textContent = cleanText((d.manufacturer || '') + ' ' + (d.model || ''));
+        document.getElementById('heroTrim').textContent = cleanText(d.trim || '');
 
-      setStatusBlock('stOwn', d.ownership || 'אין נתון', 'info');
-      if (Number(d.owners) > 0) document.getElementById('ownBtnWrap').classList.add('show');
+        if (d.testValid === null || d.testValid === undefined) setStatusBlock('stTest', 'אין נתון', 'neutral');
+        else if (d.testValid) setStatusBlock('stTest', 'בתוקף', 'ok');
+        else setStatusBlock('stTest', 'פג תוקף', 'bad');
 
-      setStatusBlock('stDisabled', d.disabled ? 'יש' : 'אין', d.disabled ? 'ok' : 'neutral');
+        setStatusBlock('stOwn', d.ownership || 'אין נתון', 'info');
+        if (Number(d.owners) > 0) document.getElementById('ownBtnWrap').classList.add('show');
 
-      setVal('sBody', d.bodyType || d.merkav);
-      setVal('sHp', d.horsepower, 'כ"ס');
-      setVal('sEngine', d.engineCc, 'סמ"ק');
-      setVal('sAccel', d.acceleration0to100, 'שניות');
-      setVal('sTrim', d.trim);
+        setStatusBlock('stDisabled', d.disabled ? 'יש' : 'אין', d.disabled ? 'ok' : 'neutral');
 
-      setVal('vManufacturer', d.manufacturer);
-      setVal('vModel', d.model);
-      setVal('vYear', d.year);
-      setVal('vColor', d.color);
-      setVal('vPlate', formatPlate(plate));
-      setVal('vChassis', d.chassis);
-      setupCopyButton(d.chassis);
-      setVal('vTireFront', d.tireFront);
-      setVal('vTireRear', d.tireRear);
-      setVal('vOwners', d.owners);
+        setVal('sBody', d.bodyType || d.merkav);
+        setVal('sHp', d.horsepower, 'כ"ס');
+        setVal('sEngine', d.engineCc, 'סמ"ק');
+        setVal('sAccel', d.acceleration0to100, 'שניות');
+        setVal('sTrim', d.trim);
 
-      renderTest(parseDate(d.lastTest), parseDate(d.testExpiry));
+        setVal('vManufacturer', d.manufacturer);
+        setVal('vModel', d.model);
+        setVal('vYear', d.year);
+        setVal('vColor', d.color);
+        setVal('vPlate', formatPlate(plate));
+        setVal('vChassis', d.chassis);
+        setupCopyButton(d.chassis);
+        setVal('vTireFront', d.tireFront);
+        setVal('vTireRear', d.tireRear);
+        setVal('vOwners', d.owners);
 
-      document.getElementById('hero').classList.add('show');
-      document.getElementById('tabs').classList.add('show');
-      document.getElementById('cardGeneral').style.display = '';
+        renderTest(parseDate(d.lastTest), parseDate(d.testExpiry));
 
-      addToHistory({
-        plate: plate,
-        manufacturer: d.manufacturer,
-        name: cleanText((d.manufacturer || '') + ' ' + (d.model || '')),
-        year: d.year ? String(d.year) : '',
-        time: new Date().toLocaleTimeString('he-IL', { hour: '2-digit', minute: '2-digit' })
+        document.getElementById('hero').classList.add('show');
+        document.getElementById('tabs').classList.add('show');
+        document.getElementById('cardGeneral').style.display = '';
+
+        addToHistory({
+          plate: plate,
+          manufacturer: d.manufacturer,
+          name: cleanText((d.manufacturer || '') + ' ' + (d.model || '')),
+          year: d.year ? String(d.year) : '',
+          time: new Date().toLocaleTimeString('he-IL', { hour: '2-digit', minute: '2-digit' })
+        });
+
+        renderTech(d);
+        showDetail();
       });
 
-      renderTech(d);
-      showDetail();
     } catch (e) {
       loader.style.display = 'none';
       err.textContent = 'שגיאה בחיבור לשרת';
