@@ -1,5 +1,225 @@
 [
   {
+    "make": "אקספנג סין",
+    "model": "G6 STAND RANGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 0,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (אקספנג G6 Stand Range 258 כ\"ס)"
+  },
+  {
+    "make": "אקספנג סין",
+    "model": "G6 STANDARD RANGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 0,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (אקספנג G6 Standard Range 258 כ\"ס)"
+  },
+  {
+    "make": "אקספנג",
+    "model": "G6 STAND RANGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 0,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (אקספנג G6 Stand Range 258 כ\"ס)"
+  },
+  {
+    "make": "XPENG",
+    "model": "G6 STAND RANGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 0,
+    "seconds": 6.6,
+    "source": "נתון יצרן (XPENG G6 Stand Range 258hp)"
+  },
+  {
+    "make": "אקספנג סין",
+    "model": "G6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 0,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (אקספנג G6 Standard Range 258)"
+  },
+  {
+    "make": "אקספנג סין",
+    "model": "G6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 6.2,
+    "source": "רישוי רכב / נתון יצרן (אקספנג G6 Long Range 286)"
+  },
+  {
+    "make": "אקספנג סין",
+    "model": "G6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 476,
+    "cc": 0,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (אקספנג G6 Performance AWD 476)"
+  },
+  {
+    "make": "אקספנג",
+    "model": "G6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 0,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (אקספנג G6 Standard Range 258)"
+  },
+  {
+    "make": "XPENG",
+    "model": "G6",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 0,
+    "seconds": 6.6,
+    "source": "נתון יצרן (XPENG G6 258)"
+  },
+  {
+    "make": "אקספנג סין",
+    "model": "G9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 0,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (אקספנג G9 RWD 313)"
+  },
+  {
+    "make": "אקספנג סין",
+    "model": "G9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 551,
+    "cc": 0,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (אקספנג G9 Performance AWD 551)"
+  },
+  {
+    "make": "אקספנג",
+    "model": "G9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 0,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (אקספנג G9 RWD 313)"
+  },
+  {
+    "make": "XPENG",
+    "model": "G9",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 0,
+    "seconds": 6.4,
+    "source": "נתון יצרן (XPENG G9 313)"
+  },
+  {
+    "make": "אקספנג סין",
+    "model": "P7I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 276,
+    "cc": 0,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (אקספנג P7i Long Range 276)"
+  },
+  {
+    "make": "אקספנג סין",
+    "model": "P7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 276,
+    "cc": 0,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (אקספנג P7i Long Range 276)"
+  },
+  {
+    "make": "אקספנג סין",
+    "model": "P7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 266,
+    "cc": 0,
+    "seconds": 6.7,
+    "source": "רישוי רכב / נתון יצרן (אקספנג P7 RWD 266)"
+  },
+  {
+    "make": "אקספנג",
+    "model": "P7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 276,
+    "cc": 0,
+    "seconds": 6.4,
+    "source": "רישוי רכב / נתון יצרן (אקספנג P7i 276)"
+  },
+  {
+    "make": "XPENG",
+    "model": "P7",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 276,
+    "cc": 0,
+    "seconds": 6.4,
+    "source": "נתון יצרן (XPENG P7i 276)"
+  },
+  {
+    "make": "XPENG",
+    "model": "P7I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 276,
+    "cc": 0,
+    "seconds": 6.4,
+    "source": "נתון יצרן (XPENG P7i 276)"
+  },
+  {
+    "make": "אקספנג סין",
+    "model": "P7+",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 0,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (אקספנג P7+ 245)"
+  },
+  {
+    "make": "אקספנג סין",
+    "model": "P7+",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 0,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (אקספנג P7+ 313)"
+  },
+  {
+    "make": "אקספנג סין",
+    "model": "G3",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 0,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (אקספנג G3 197)"
+  },
+  {
     "make": "ב מ וו גרמניה",
     "model": "330E",
     "yearStart": null,
