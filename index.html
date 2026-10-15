@@ -478,7 +478,6 @@
   function findBrand(manufacturer, model) {
     const raw = ((manufacturer || '') + ' ' + (model || '')).toLowerCase();
 
-    // מותאם בדיוק מדויק לשמות קבצי ה-jpg שהעלת לתיקיית logos
     const rules = [
       [["cupra", "קופרה"], "cupra", "#8c6a3d", "Cupra"],
       [["audi", "אאודי", "אודי"], "audi", "#444", "Audi"],
@@ -1011,7 +1010,6 @@
     const e = d.equipment || {};
     const s = d.safety || {};
 
-    // 0 = "אין", null = "אין נתון"
     const u = (n, unit) => {
       if (n === null || n === undefined) return null;
       if (n === 0) return 'אין';
@@ -1269,8 +1267,51 @@
     }
   });
 
+  // ---------- טיפול מדויק במחיקה ובמיקום הסמן (Cursor) לפי בחירת המשתמש ----------
+  const plateInput = document.getElementById('plateInput');
+
+  plateInput.addEventListener('keydown', e => {
+    if (e.key === 'Backspace') {
+      const pos = plateInput.selectionStart;
+      const val = plateInput.value;
+
+      if (pos > 0 && val[pos - 1] === '-') {
+        e.preventDefault();
+        plateInput.setSelectionRange(pos - 1, pos - 1);
+        
+        const newPos = plateInput.selectionStart;
+        const raw = plateInput.value.replace(/\D/g, '');
+        const rawArr = raw.split('');
+        
+        let digitIdx = 0;
+        for (let i = 0; i < newPos; i++) {
+          if (val[i] !== '-') digitIdx++;
+        }
+        
+        if (digitIdx > 0) {
+          rawArr.splice(digitIdx - 1, 1);
+          const updatedRaw = rawArr.join('');
+          plateInput.value = formatPlate(updatedRaw);
+          const targetPos = Math.max(0, newPos - 1);
+          plateInput.setSelectionRange(targetPos, targetPos);
+        }
+      }
+    }
+  });
+
+  plateInput.addEventListener('input', e => {
+    const cursorPosition = plateInput.selectionStart;
+    const raw = plateInput.value.replace(/\D/g, '');
+    const formatted = formatPlate(raw);
+    
+    plateInput.value = formatted;
+    
+    try {
+      plateInput.setSelectionRange(cursorPosition, cursorPosition);
+    } catch (err) {}
+  });
+
   document.getElementById('searchBtn').addEventListener('click', searchCar);
-  document.getElementById('plateInput').addEventListener('input', e => { e.target.value = formatPlate(e.target.value); });
   document.getElementById('plateInput').addEventListener('keydown', e => { if (e.key === 'Enter') searchCar(); });
   document.getElementById('histClear').addEventListener('click', clearHistory);
   document.getElementById('stOwn').addEventListener('click', toggleOwnPanel);
