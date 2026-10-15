@@ -280,7 +280,7 @@ app.get('/', (req, res) => {
     res.status(200).send('Car API is running successfully!');
 });
 
-// Endpoint סריקה רוחבית לבדיקת כל המאגרים של המדינה
+// Endpoint סריקה רוחבית לסקרנות
 app.get('/api/scan-all', async (req, res) => {
     try {
         const packageSearchUrl = "https://data.gov.il/api/3/action/package_search?q=רכב&rows=50";
@@ -317,6 +317,45 @@ app.get('/api/scan-all', async (req, res) => {
 
         res.json({ success: true, results: scanResults });
     } catch (error) {
+        res.status(500).json({ success: false, error: error.message });
+    }
+});
+
+// Endpoint דיבוג חדש לבדיקת נתונים גולמיים של רכב ספציפי (למשל 12934003)
+app.get('/api/debug/car/:plate', async (req, res) => {
+    const rawPlate = req.params.plate;
+    const cleanPlate = rawPlate.replace(/\D/g, "");
+    const numericPlate = Number(cleanPlate);
+
+    console.log(`🔍 [DEBUG] מתחיל בדיקה מקיפה לרכב מספר: ${numericPlate}`);
+
+    try {
+        const regUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${CAR_REGISTRY_ID}&filters=${encodeURIComponent(JSON.stringify({ mispar_rechev: numericPlate }))}`;
+        const regRes = await fetch(regUrl);
+        const regData = await regRes.json();
+        const carRecord = regData?.result?.records?.[0] || null;
+
+        const histUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${HISTORY_ID}&filters=${encodeURIComponent(JSON.stringify({ mispar_rechev: numericPlate }))}`;
+        const histRes = await fetch(histUrl);
+        const histData = await histRes.json();
+        const histRecord = histData?.result?.records?.[0] || null;
+
+        const disUrl = `https://data.gov.il/api/3/action/datastore_search?resource_id=${DISABLED_ID}&filters=${encodeURIComponent(JSON.stringify({ "MISPAR RECHEV": cleanPlate }))}`;
+        const disRes = await fetch(disUrl);
+        const disData = await disRes.json();
+        const disRecord = disData?.result?.records?.[0] || null;
+
+        res.json({
+            success: true,
+            queriedPlate: numericPlate,
+            foundInRegistry: !!carRecord,
+            rawRegistryData: carRecord,
+            rawHistoryData: histRecord,
+            disabledBadgeData: disRecord || "אין תו נכה במאגר או שלא נמצא התאמה"
+        });
+
+    } catch (error) {
+        console.error("❌ שגיאה בבדיקת הדיבוג:", error.message);
         res.status(500).json({ success: false, error: error.message });
     }
 });
