@@ -280,7 +280,7 @@ app.get('/', (req, res) => {
     res.status(200).send('Car API is running successfully!');
 });
 
-// Endpoint סריקה רוחבית לסקרנות
+// Endpoint סריקה רוחבית לבדיקת כל המאגרים של המדינה
 app.get('/api/scan-all', async (req, res) => {
     try {
         const packageSearchUrl = "https://data.gov.il/api/3/action/package_search?q=רכב&rows=50";
