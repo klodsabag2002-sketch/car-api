@@ -293,9 +293,9 @@ const HE_MAKE_ALIASES = {
     "וולבו סין": "Volvo",
     "וולוו סין": "Volvo",
     "וולבו ארהב": "Volvo",
-    "וולוו ארהב": "Volvo",
+    "וולבו ארהב": "Volvo",
     "וולבו ארה\"ב": "Volvo",
-    "וולוו ארה\"ב": "Volvo",
+    "וולבו ארה\"ב": "Volvo",
     "Volvo": "Volvo",
     "וואי": "WEY",
     "וואי סין": "WEY",
@@ -614,7 +614,7 @@ const HE_MAKE_ALIASES = {
     "קרייזלר מקסיקו": "Chrysler",
     "קריזלר מקסיקו": "Chrysler",
     "קרייזלר קנדה": "Chrysler",
-    "קריזלר קנדה": "Chrysler",
+    "קרייזלר קנדה": "Chrysler",
     "Chrysler": "Chrysler",
     "CHRYSLER": "Chrysler",
     "רולס רויס": "Rolls-Royce",
@@ -956,7 +956,6 @@ app.get('/api/car/:plate', async (req, res) => {
         const hasDisabledBadge = Boolean(disabledResult?.hasBadge);
 
         // ---------- עזרים לשדות שאומתו מהמאגר ----------
-        // מחזיר ערך מהשורה של הדגם, ואם אין, מרישוי הרכב. ריק = null
         const fv = (key) => {
             const a = row ? row[key] : undefined;
             const b = car[key];
@@ -969,15 +968,14 @@ app.get('/api/car/:plate', async (req, res) => {
             const n = Number(v);
             return Number.isNaN(n) ? null : n;
         };
-        // 1 = true, 0 = false, ריק = null (לא ידוע)
         const fflag = (key) => {
             const n = fnum(key);
             return n === null ? null : n === 1;
         };
 
         const technical = {
-            drivetrain: fv("hanaa_nm"),              // למשל "4X2"
-            totalWeight: fnum("mishkal_kolel"),      // ק"ג
+            drivetrain: fv("hanaa_nm"),
+            totalWeight: fnum("mishkal_kolel"),
             towWithBrakes: fnum("kosher_grira_im_blamim"),
             towWithoutBrakes: fnum("kosher_grira_bli_blamim"),
             doors: fnum("mispar_dlatot"),
@@ -1072,7 +1070,6 @@ app.post('/api/report', async (req, res) => {
         const { plate, category, notes, carInfo } = req.body;
         console.log(`[REPORT] דיווח חדש על רכב ${plate}: ${category}`);
 
-        // שימוש בפורמט Form URL-Encoded לעקיפת חסימות Cloudflare משרתים
         const params = new URLSearchParams();
         params.append("access_key", "57cbc2ae-17ad-4c60-b73a-6558c56e8f01");
         params.append("subject", `דיווח מהאפליקציה: רכב ${plate} [${category}]`);
