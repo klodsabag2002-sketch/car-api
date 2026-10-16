@@ -1,3 +1,4 @@
+// server.js - Car API Server Production
 const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
@@ -19,7 +20,7 @@ try {
 }
 
 // ---------- טעינת מאגר HEV / MHEV ----------
-let getCombinedHEVPower = (m, mod, hp, cc) => hp;
+let getCombinedHEVPower = (m, mod, hp, cc, fuel) => hp;
 let hasHevData = false;
 try {
     const hevModule = require('./hevData');
@@ -349,26 +350,27 @@ app.get('/api/car/:plate', async (req, res) => {
         const year = car.shnat_yitzur || "לא ידוע";
         const hp = toNumber(row?.koah_sus) ?? toNumber(car.koah_sus);
         const engineCc = toNumber(row?.nefah_manoa) ?? toNumber(car.nefah_manoa);
+        const fuelType = toText(row?.sug_delek_nm) || toText(car.sug_delek_nm) || "";
 
-        // ---------- חישוב הספק משולב (HEV / PHEV) ----------
+        // ---------- חישוב הספק משולב (HEV / PHEV) עם הגנה מפני דריסה שגויה ----------
         let combinedHp = hp;
         let isPhev = false;
         let isHev = false;
 
-        const carDesc = `${manufacturer} ${car.degem_nm || ''} ${trim || ''} ${model}`;
+        const carDesc = `${manufacturer} ${car.degem_nm || ''} ${trim || ''} ${model} ${fuelType}`;
 
         try {
             if (hasPhevData) {
                 const phevVal = getCombinedPHEVPower(carDesc, model, hp);
-                if (phevVal && phevVal !== hp) {
+                if (phevVal && phevVal > hp) {
                     combinedHp = phevVal;
                     isPhev = true;
                 }
             }
 
             if (!isPhev && hasHevData) {
-                const hevVal = getCombinedHEVPower(carDesc, model, hp, engineCc);
-                if (hevVal && hevVal !== hp) {
+                const hevVal = getCombinedHEVPower(carDesc, model, hp, engineCc, fuelType);
+                if (hevVal && hevVal > hp) {
                     combinedHp = hevVal;
                     isHev = true;
                 }
@@ -378,7 +380,7 @@ app.get('/api/car/:plate', async (req, res) => {
         }
 
         const isHybridOrPhev = isPhev || isHev;
-        // ---------------------------------------------------
+        // --------------------------------------------------------------------------
 
         const testExpiry = car.tokef_dt || null;
         const bodyType = resolveBodyType(car, row);
