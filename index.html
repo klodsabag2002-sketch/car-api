@@ -8,7 +8,6 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Segoe UI', Arial, Helvetica, sans-serif; background: #030712; color: #f8fafc; direction: rtl; min-height: 100vh; overflow-x: hidden; }
   
-  /* מעטפת טלפון עם אפקט זוהר עתידני */
   .phone { 
     max-width: 390px; 
     margin: 0 auto; 
@@ -19,10 +18,8 @@
     border-left: 1px solid rgba(56, 189, 248, 0.2); 
     border-right: 1px solid rgba(56, 189, 248, 0.2);
     position: relative;
-    overflow: hidden;
   }
 
-  /* סרגל עליון סייבר */
   .topbar { 
     background: rgba(3, 7, 18, 0.85); 
     backdrop-filter: blur(16px); 
@@ -43,7 +40,6 @@
   .topbar .i:hover { background: rgba(56,189,248,0.25); box-shadow: 0 0 12px rgba(56,189,248,0.5); }
   .topbar .i.hidden { visibility: hidden; }
 
-  /* חיפוש סייבר */
   .search-box { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); padding: 20px 16px; border-bottom: 1px solid rgba(56,189,248,0.15); }
   .plate { display: flex; align-items: center; background: #fbbf24; border: 2px solid #38bdf8; border-radius: 16px; height: 64px; overflow: hidden; direction: ltr; box-shadow: 0 0 25px rgba(56, 189, 248, 0.3), inset 0 2px 5px rgba(255,255,255,0.4); }
   .plate .strip { background: #1e3a8a; color: #fff; width: 52px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; border-right: 1px solid rgba(0,0,0,0.3); }
@@ -62,7 +58,6 @@
   .km-line { display: none; align-items: center; justify-content: center; gap: 8px; color: #4ade80; font-size: 13px; background: rgba(34, 197, 94, 0.1); border-bottom: 1px solid rgba(34, 197, 94, 0.2); padding: 10px 12px; font-weight: 800; text-shadow: 0 0 8px rgba(74,222,128,0.4); }
   .km-line .km-ic { border: 2px solid #4ade80; border-radius: 6px; padding: 0 4px; font-size: 11px; box-shadow: 0 0 6px rgba(74,222,128,0.4); }
 
-  /* היסטוריה עתידנית */
   .history { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(14px); margin: 16px 14px 0; border-radius: 18px; border: 1px solid rgba(56,189,248,0.2); display: none; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
   .history.show { display: block; }
   .history-head { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; background: rgba(3, 7, 18, 0.5); border-bottom: 1px solid rgba(56,189,248,0.15); }
@@ -91,7 +86,7 @@
   .detail { display: none; }
   .detail.show { display: block; }
 
-  /* טאבים ניאון */
+  /* טאבים בסדר המדויק: כללי, מפרט טכני, בטיחות, סביבה, צייד רכבים */
   .tabs { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(14px); display: none; justify-content: space-around; align-items: stretch; border-bottom: 1px solid rgba(56,189,248,0.2); margin-top: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
   .tabs.show { display: flex; }
   .tab { flex: 1; text-align: center; padding: 14px 0 10px; color: #94a3b8; font-size: 13px; cursor: pointer; border-bottom: 3px solid transparent; font-weight: 800; transition: all 0.3s; }
@@ -101,7 +96,6 @@
   .hero { display: none; }
   .hero.show { display: block; }
 
-  /* הולוגרמת 360 מעלות לסמל הרכב */
   .logo-3d-scene {
     perspective: 1000px;
     width: 140px;
@@ -179,7 +173,6 @@
   .car-name { text-align: center; font-size: 26px; color: #f8fafc; font-weight: 900; margin-top: 4px; letter-spacing: -0.5px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
   .car-trim { text-align: center; font-size: 16px; color: #38bdf8; font-weight: 900; margin-top: 2px; text-shadow: 0 0 10px rgba(56,189,248,0.4); }
 
-  /* קוביות סטטוס ניאון */
   .status-row { display: flex; justify-content: space-around; padding: 20px 14px 10px; gap: 10px; }
   .st { text-align: center; flex: 1; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(12px); padding: 16px 8px; border-radius: 18px; border: 1px solid rgba(56,189,248,0.2); box-shadow: 0 8px 25px rgba(0,0,0,0.4); transition: transform 0.2s, box-shadow 0.2s; }
   .st.clickable { cursor: pointer; }
@@ -200,7 +193,6 @@
   .own-panel { display: none; margin: 14px 14px 0; }
   .own-panel.show { display: block; }
 
-  /* כרטיס מפרט עתידני */
   .spec-card { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(12px); border-radius: 20px; margin: 16px 14px 0; padding: 18px 10px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; border: 1px solid rgba(56,189,248,0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
   .spec { text-align: center; background: rgba(3, 7, 18, 0.5); padding: 12px 2px; border-radius: 14px; border: 1px solid rgba(56,189,248,0.1); transition: all 0.2s; }
   .spec:hover { border-color: rgba(56,189,248,0.4); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(56,189,248,0.2); }
@@ -223,7 +215,6 @@
     font-weight: 600;
   }
 
-  /* רשימת פרטים סייבר */
   .list-card { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(12px); border-radius: 20px; margin: 16px 14px 0; overflow: hidden; border: 1px solid rgba(56,189,248,0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
   .lrow { display: flex; align-items: center; padding: 14px 18px; border-bottom: 1px solid rgba(255,255,255,0.04); transition: background 0.15s; }
   .lrow:hover { background: rgba(56, 189, 248, 0.04); }
@@ -237,7 +228,6 @@
   .copy-btn:hover { background: #38bdf8; color: #030712; box-shadow: 0 0 15px rgba(56,189,248,0.6); }
   .copy-btn.show { display: inline-block; }
 
-  /* טסט קארד ניאון */
   .test-card { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(12px); border-radius: 20px; margin: 16px 14px 0; padding: 18px; border: 1px solid rgba(56,189,248,0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
   .test-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 8px; border-bottom: 1px solid rgba(255,255,255,0.04); }
   .test-row:last-child { border-bottom: none; }
@@ -247,7 +237,6 @@
   .test-countdown { text-align: center; font-size: 13px; font-weight: 900; color: #4ade80; margin-top: 12px; background: rgba(34, 197, 94, 0.12); padding: 12px; border-radius: 12px; border: 1px solid rgba(34, 197, 94, 0.3); text-shadow: 0 0 8px rgba(74,222,128,0.4); }
   .test-countdown.bad { color: #f87171; background: rgba(239, 68, 68, 0.12); border-color: rgba(239, 68, 68, 0.3); text-shadow: 0 0 8px rgba(248,113,113,0.4); }
 
-  /* טבלאות בעלות והיסטוריה סייבר */
   .own-table { width: 100%; border-collapse: collapse; background: rgba(15, 23, 42, 0.85); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); font-size: 13px; border: 1px solid rgba(56,189,248,0.2); }
   .own-table th { background: linear-gradient(135deg, #0284c7, #0369a1); color: #fff; padding: 14px 10px; font-weight: 900; text-align: center; }
   .own-table td { padding: 12px 10px; text-align: center; color: #f8fafc; border-bottom: 1px solid rgba(255,255,255,0.04); font-weight: 700; }
@@ -260,7 +249,100 @@
   .own-extra .v { font-weight: 900; color: #38bdf8; direction: ltr; text-shadow: 0 0 8px rgba(56,189,248,0.4); }
   .own-msg { background: rgba(15, 23, 42, 0.7); border-radius: 16px; padding: 18px; font-size: 13px; color: #94a3b8; text-align: center; margin-top: 8px; border: 1px solid rgba(56,189,248,0.2); font-weight: 700; }
 
-  /* כפתור דיווח ניאון */
+  /* עיצוב ייחודי למסך "צייד רכבים" */
+  .hunter-container {
+    padding: 16px 14px 30px;
+    animation: fadeIn 0.3s ease;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hunter-banner {
+    background: linear-gradient(135deg, rgba(2,132,199,0.25), rgba(15,23,42,0.9));
+    border: 1px solid rgba(56,189,248,0.4);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6), inset 0 0 15px rgba(56,189,248,0.1);
+    margin-bottom: 16px;
+  }
+  .hunter-banner h2 {
+    font-size: 20px;
+    font-weight: 900;
+    color: #38bdf8;
+    margin-bottom: 6px;
+    text-shadow: 0 0 10px rgba(56,189,248,0.5);
+  }
+  .hunter-banner p {
+    font-size: 13px;
+    color: #cbd5e1;
+    line-height: 1.5;
+    font-weight: 700;
+  }
+  .hunter-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .hunter-stat-box {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(56,189,248,0.2);
+    border-radius: 16px;
+    padding: 14px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  }
+  .hunter-stat-box .num {
+    font-size: 22px;
+    font-weight: 900;
+    color: #38bdf8;
+    text-shadow: 0 0 8px rgba(56,189,248,0.4);
+  }
+  .hunter-stat-box .lbl {
+    font-size: 11px;
+    color: #94a3b8;
+    margin-top: 4px;
+    font-weight: 800;
+  }
+  .hunter-section-title {
+    font-size: 15px;
+    font-weight: 900;
+    color: #f8fafc;
+    margin: 20px 4px 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-shadow: 0 0 8px rgba(255,255,255,0.2);
+  }
+  .hunter-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(15, 23, 42, 0.85);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    font-size: 13px;
+    border: 1px solid rgba(56,189,248,0.2);
+  }
+  .hunter-table th {
+    background: linear-gradient(135deg, #0284c7, #0369a1);
+    color: #fff;
+    padding: 12px 8px;
+    font-weight: 900;
+    text-align: center;
+  }
+  .hunter-table td {
+    padding: 12px 8px;
+    text-align: center;
+    color: #f8fafc;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    font-weight: 700;
+  }
+  .hunter-table tr:nth-child(even) td { background: rgba(3, 7, 18, 0.4); }
+  .hunter-table tr.my-row td { background: rgba(56, 189, 248, 0.15); color: #38bdf8; font-weight: 900; }
+
   .report-btn-wrap { text-align: center; margin: 28px 14px 16px; }
   .report-btn {
     display: inline-flex;
@@ -280,7 +362,6 @@
   }
   .report-btn:hover { background: rgba(56, 189, 248, 0.15); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(56,189,248,0.3); }
 
-  /* מודל דיווח */
   .modal-overlay {
     display: none;
     position: fixed;
@@ -339,139 +420,71 @@
   .report-status.success { display: block; background: rgba(34, 197, 94, 0.15); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.4); text-shadow: 0 0 8px rgba(74,222,128,0.4); }
   .report-status.error { display: block; background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.4); text-shadow: 0 0 8px rgba(248,113,113,0.4); }
 
-  /* --- מסך אנימציית קיר מתפורר (Wall Shatter) שנע ממשמאל לימין --- */
-  #wallShatterOverlay {
+  #cyberTransitionOverlay {
     position: fixed;
     inset: 0;
-    z-index: 99999;
+    background: radial-gradient(circle, rgba(15,23,42,0.95) 0%, rgba(3,7,18,0.98) 100%);
+    backdrop-filter: blur(20px);
+    z-index: 9999;
     display: none;
-    pointer-events: none;
-    overflow: hidden;
-  }
-  #wallShatterOverlay.show {
-    display: block;
-    pointer-events: auto;
-  }
-
-  .wall-curtain {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at center, #0f172a 0%, #030712 100%);
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.4s ease;
   }
-  #wallShatterOverlay.active .wall-curtain {
-    opacity: 1;
-  }
-
-  /* רשת לבנים שמכסה את המסך */
-  .shatter-bricks-grid {
-    position: absolute;
-    inset: 0;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    gap: 4px;
-    padding: 8px;
-    z-index: 5;
-    pointer-events: none;
-  }
-
-  .shatter-brick-item {
-    background: #0f172a;
-    border: 2px solid #38bdf8;
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4), inset 0 0 10px rgba(56, 189, 248, 0.2);
-    opacity: 1;
-    transform: translate(0, 0) scale(1) rotate(0deg);
-    /* השהייה מדורגת (delay) שמתקדמת משמאל לימין עפ"י מיקום הלבנה */
-    transition: transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) calc(var(--col-idx) * 0.08s), 
-                opacity 0.9s ease calc(var(--col-idx) * 0.08s);
-  }
-
-  /* כאשר האנימציה מופעלת - הלבנים עפות הצידה (מימינה וקדימה) */
-  #wallShatterOverlay.active .shatter-brick-item {
-    transform: translate(calc(var(--fly-x) * 120vw), calc(var(--fly-y) * 80vh)) scale(0.1) rotate(calc(var(--rot) * 360deg));
-    opacity: 0;
-    filter: blur(8px);
-  }
-
-  /* סמל החברה הענק במרכז שנחשף מתוך הרס הקיר */
-  .giant-brand-center {
-    position: relative;
-    z-index: 10;
+  #cyberTransitionOverlay.show {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transform: scale(0.2) rotate(-15deg);
-    opacity: 0;
-    transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
-  }
-  #wallShatterOverlay.active .giant-brand-center {
-    transform: scale(1) rotate(0deg);
     opacity: 1;
   }
-
-  .giant-ring-box {
-    width: 210px;
-    height: 210px;
+  .transit-holo-ring {
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
-    background: radial-gradient(circle, #1e293b 0%, #030712 100%);
-    border: 4px solid #38bdf8;
-    box-shadow: 0 0 100px rgba(56, 189, 248, 0.9), inset 0 0 50px rgba(56, 189, 248, 0.6);
+    border: 3px solid rgba(56,189,248,0.3);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 24px;
     position: relative;
+    box-shadow: 0 0 40px rgba(56,189,248,0.4), inset 0 0 20px rgba(56,189,248,0.2);
+    animation: holoPulse 1.5s ease-in-out infinite alternate;
   }
-  
-  .giant-ring-box::before {
-    content: '';
-    position: absolute;
-    inset: -12px;
-    border-radius: 50%;
-    border: 2px dashed #38bdf8;
-    animation: ringRotate 8s linear infinite;
+  @keyframes holoPulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 20px rgba(56,189,248,0.3); }
+    100% { transform: scale(1.05); box-shadow: 0 0 50px rgba(56,189,248,0.7); }
   }
-
-  @keyframes ringRotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-
-  .giant-img {
-    width: 100%;
-    height: 100%;
+  .transit-logo {
+    width: 85px;
+    height: 85px;
     object-fit: contain;
-    filter: drop-shadow(0 0 20px rgba(255,255,255,0.9));
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.8));
   }
-  .giant-badge-txt {
-    font-size: 85px;
+  .transit-badge {
+    font-size: 50px;
     font-weight: 900;
     color: #fff;
-    text-shadow: 0 0 25px rgba(255,255,255,0.9);
+    text-shadow: 0 0 15px rgba(255,255,255,0.8);
   }
-
-  .shatter-title {
-    margin-top: 28px;
-    font-size: 28px;
+  .transit-title {
+    margin-top: 24px;
+    font-size: 22px;
     font-weight: 900;
     color: #f8fafc;
-    letter-spacing: 2px;
-    text-shadow: 0 0 20px rgba(56, 189, 248, 0.9);
+    letter-spacing: 1px;
+    text-shadow: 0 0 12px rgba(56,189,248,0.6);
   }
-  .shatter-sub {
-    margin-top: 6px;
-    font-size: 14px;
+  .transit-sub {
+    margin-top: 8px;
+    font-size: 13px;
     color: #38bdf8;
     font-weight: 800;
-    letter-spacing: 4px;
-    text-shadow: 0 0 10px rgba(56,189,248,0.5);
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(56,189,248,0.4);
+    animation: blinkText 1s infinite alternate;
+  }
+  @keyframes blinkText {
+    0% { opacity: 0.4; }
+    100% { opacity: 1; }
   }
 </style>
 </head>
@@ -512,12 +525,13 @@
       <span id="kmText"></span>
     </div>
 
-    <!-- 4 הטאבים -->
+    <!-- סדר הטאבים המדויק לפי בקשתך -->
     <div id="tabs" class="tabs">
       <div class="tab active" data-tab="general"><span class="ic">🚗</span>כללי</div>
       <div class="tab" data-tab="tech"><span class="ic">⚙️</span>מפרט טכני</div>
       <div class="tab" data-tab="safety"><span class="ic">🛡️</span>בטיחות</div>
       <div class="tab" data-tab="env"><span class="ic">🌿</span>סביבה</div>
+      <div class="tab" data-tab="hunter"><span class="ic">🎯</span>צייד רכבים</div>
     </div>
 
     <div id="cardGeneral">
@@ -594,7 +608,7 @@
           <div class="lrow"><span class="li">📅</span><span class="ll">שנת ייצור</span><span class="sp"></span><span class="lv" id="vYear"></span></div>
           <div class="lrow"><span class="li">🎨</span><span class="ll">צבע</span><span class="sp"></span><span class="lv" id="vColor"></span></div>
           <div class="lrow"><span class="li">🔢</span><span class="ll">מספר רכב</span><span class="sp"></span><span class="lv" id="vPlate"></span></div>
-          <div class="lrow"><span class="li">🔩</span><span class="ll">מספר שלדה</span><span class="sp"></span><span class="lv" id="vChassis"></span><button id="copyChassis" class="copy-btn">העתק</button></div>
+          <div class="lrow"><span class="li">🔩</span><span class="ll">מספר שלדה</span><span class="sp"></span><span class="lv" id="vChassis"></span><button id="copyChassis" class="copy-btn">העתק קישור</button></div>
           <div class="lrow"><span class="li">🛞</span><span class="ll">מידות צמיג קדמי</span><span class="sp"></span><span class="lv" id="vTireFront"></span></div>
           <div class="lrow"><span class="li">🛞</span><span class="ll">מידות צמיג אחורי</span><span class="sp"></span><span class="lv" id="vTireRear"></span></div>
           <div class="lrow"><span class="li">🔁</span><span class="ll">מספר בעלים</span><span class="sp"></span><span class="lv" id="vOwners"></span></div>
@@ -619,24 +633,51 @@
     <div id="cardTech" style="display:none;"></div>
     <div id="cardSafety" style="display:none; padding: 40px; text-align: center; color: #94a3b8; font-weight: 800;">נתוני בטיחות בקרוב...</div>
     <div id="cardEnv" style="display:none; padding: 40px; text-align: center; color: #94a3b8; font-weight: 800;">נתוני סביבה בקרוב...</div>
+    
+    <!-- מסך משחק "צייד רכבים" מחובר לשרת -->
+    <div id="cardHunter" class="hunter-container" style="display:none;">
+      <div class="hunter-banner">
+        <h2>🎯 מגרש ציידי הרכבים</h2>
+        <p>ברוך הבא למשחק האוטומטי! כל רכב חדש שאתה מחפש ובודק באפליקציה נאסף אוטומטית לאוסף שלך ומתעדכן בטבלת המובילים הכללית.</p>
+      </div>
+
+      <div class="hunter-stats-grid">
+        <div class="hunter-stat-box">
+          <div class="num" id="hunterMyName">-</div>
+          <div class="lbl">הכינוי שלך</div>
+        </div>
+        <div class="hunter-stat-box">
+          <div class="num" id="hunterScore">0</div>
+          <div class="lbl">רכבים באוסף</div>
+        </div>
+      </div>
+
+      <div class="hunter-section-title">🏆 טבלת הציידים העולמית</div>
+      <table class="hunter-table">
+        <thead>
+          <tr>
+            <th>מיקום</th>
+            <th>כינוי צייד</th>
+            <th>רכבים באוסף</th>
+          </tr>
+        </thead>
+        <tbody id="hunterLeaderboardBody">
+          <!-- מתעדכן אוטומטית מהשרת -->
+        </tbody>
+      </table>
+    </div>
   </div>
 
 </div>
 
-<!-- מסך אנימציית קיר מתפורר (Wall Shatter) שנע משמאל לימין -->
-<div id="wallShatterOverlay">
-  <div class="wall-curtain">
-    <div class="shatter-bricks-grid" id="shatterGrid"></div>
-
-    <div class="giant-brand-center">
-      <div class="giant-ring-box" id="giantRing">
-        <img id="shatterLogoImg" class="giant-img" style="display:none;" alt="">
-        <div id="shatterBadge" class="giant-badge-txt" style="display:none;"></div>
-      </div>
-      <div class="shatter-title" id="shatterTitle">טוען נתונים...</div>
-      <div class="shatter-sub">WALL SHATTER WAVE ACTIVE</div>
-    </div>
+<!-- מסך מעבר סייבר הולוגרפי -->
+<div id="cyberTransitionOverlay">
+  <div class="transit-holo-ring" id="transitHoloRing">
+    <img id="transitLogo" class="transit-logo" style="display:none;" alt="">
+    <div id="transitBadge" class="transit-badge" style="display:none;"></div>
   </div>
+  <div class="transit-title" id="transitTitle">טוען פרוטוקול רכב...</div>
+  <div class="transit-sub">SYNCHRONIZING CYBERNETIC LINK</div>
 </div>
 
 <div id="reportModal" class="modal-overlay">
@@ -670,37 +711,105 @@
   const API_BASE = "https://car-api-huth.onrender.com";
   const HIST_KEY = "carSearchHistory";
   const HIST_MAX = 10;
+  const HUNTER_COLLECTION_KEY = "hunterCarCollection";
+  const HUNTER_NICK_KEY = "hunterUserNickname";
 
   let currentPlate = "";
   let currentCarData = null;
   let inDetail = false;
 
-  // יצירת לבני הקיר בצורה מדורגת משמאל לימין (column index)
-  (function initShatterGrid() {
-    const grid = document.getElementById('shatterGrid');
-    if (!grid) return;
-    const cols = 6;
-    const rows = 6;
-    for (let r = 0; r < rows; r++) {
-      for (let c = 0; c < cols; c++) {
-        const brick = document.createElement('div');
-        brick.className = 'shatter-brick-item';
-        
-        // אינדקס העמודה לקביעת השהיית האנימציה (מתחיל משמאל c=0 ונע לימין c=5)
-        brick.style.setProperty('--col-idx', c);
-        
-        // כיוון תעופה לימין (X חיובי) עם סטייה קלה למעלה/למטה
-        const flyX = (1.2 + Math.random() * 0.8).toFixed(2);
-        const flyY = ((Math.random() - 0.5) * 1.5).toFixed(2);
-        const rot = (Math.random() - 0.5).toFixed(2);
-
-        brick.style.setProperty('--fly-x', flyX);
-        brick.style.setProperty('--fly-y', flyY);
-        brick.style.setProperty('--rot', rot);
-        grid.appendChild(brick);
-      }
+  // ---------- ניהול כינוי ואוסף צייד מול השרת ----------
+  function getMyNickname() {
+    let nick = localStorage.getItem(HUNTER_NICK_KEY);
+    if (!nick) {
+      const adjs = ["Turbo", "Cyber", "Nitro", "Apex", "Shadow", "Ghost", "Stellar", "Vortex"];
+      const nouns = ["Hunter", "Driver", "Racer", "Pilot", "Drifter", "Viper", "Falcon", "Nomad"];
+      nick = adjs[Math.floor(Math.random() * adjs.length)] + "_" + nouns[Math.floor(Math.random() * nouns.length)] + Math.floor(10 + Math.random() * 89);
+      localStorage.setItem(HUNTER_NICK_KEY, nick);
     }
-  })();
+    return nick;
+  }
+
+  function getHunterCollection() {
+    try {
+      const col = JSON.parse(localStorage.getItem(HUNTER_COLLECTION_KEY));
+      return Array.isArray(col) ? col : [];
+    } catch (e) { return []; }
+  }
+
+  async function addCarToHunterCollection(plate, carData) {
+    if (!plate) return;
+    let col = getHunterCollection();
+    if (!col.some(x => x.plate === plate)) {
+      col.push({
+        plate: plate,
+        name: cleanText((carData.manufacturer || '') + ' ' + (carData.model || '')),
+        time: Date.now()
+      });
+      localStorage.setItem(HUNTER_COLLECTION_KEY, JSON.stringify(col));
+    }
+    
+    // סנכרון אוטומטי מול השרת ב-Render
+    const myNick = getMyNickname();
+    try {
+      await fetch(API_BASE + '/api/hunter/update', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nickname: myNick, count: col.length })
+      });
+    } catch (e) {
+      console.error("שגיאה בסנכרון השרת:", e);
+    }
+
+    updateHunterUI();
+  }
+
+  async function updateHunterUI() {
+    const col = getHunterCollection();
+    const myNick = getMyNickname();
+    
+    document.getElementById('hunterMyName').textContent = myNick;
+    document.getElementById('hunterScore').textContent = col.length;
+
+    const tbody = document.getElementById('hunterLeaderboardBody');
+    tbody.textContent = '<tr><td colspan="3" style="color:#94a3b8;">טוען נתונים מהשרת...</td></tr>';
+
+    try {
+      const res = await fetch(API_BASE + '/api/hunter/leaderboard');
+      const data = await res.json();
+      
+      tbody.textContent = '';
+      if (data.success && Array.isArray(data.leaderboard)) {
+        if (data.leaderboard.length === 0) {
+          tbody.innerHTML = '<tr><td colspan="3" style="color:#94a3b8;">אין עדיין ציידים בטבלה. התחל לחפש רכבים!</td></tr>';
+          return;
+        }
+
+        data.leaderboard.forEach((h, index) => {
+          const tr = document.createElement('tr');
+          const isMe = h.name === myNick;
+          if (isMe) tr.className = 'my-row';
+
+          const rankTd = document.createElement('td');
+          const medals = ['🥇', '🥈', '🥉'];
+          rankTd.textContent = index < 3 ? medals[index] : (index + 1);
+
+          const nameTd = document.createElement('td');
+          nameTd.textContent = h.name + (isMe ? " (אתה)" : "");
+
+          const countTd = document.createElement('td');
+          countTd.textContent = h.count;
+
+          tr.appendChild(rankTd);
+          tr.appendChild(nameTd);
+          tr.appendChild(countTd);
+          tbody.appendChild(tr);
+        });
+      }
+    } catch (e) {
+      tbody.innerHTML = '<tr><td colspan="3" style="color:#f87171;">שגיאה בחיבור לשרת</td></tr>';
+    }
+  }
 
   function formatPlate(v) {
     const d = String(v || '').replace(/\D/g, '').slice(0, 8);
@@ -1240,7 +1349,6 @@
     }
   }
 
-  // ---------- לשונית "מפרט טכני" ----------
   function renderTech(d) {
     const box = document.getElementById('cardTech');
     box.textContent = '';
@@ -1329,59 +1437,53 @@
     box.appendChild(note);
   }
 
-  // הפעלת אפקט הקיר המתפורר משמאל לימין
-  function triggerWallShatter(brand, manufacturer, onComplete) {
-    const overlay = document.getElementById('wallShatterOverlay');
-    const ring = document.getElementById('giantRing');
-    const img = document.getElementById('shatterLogoImg');
-    const badge = document.getElementById('shatterBadge');
-    const title = document.getElementById('shatterTitle');
+  function triggerCyberTransition(brand, manufacturer, model, onComplete) {
+    const overlay = document.getElementById('cyberTransitionOverlay');
+    const ring = document.getElementById('transitHoloRing');
+    const transitLogo = document.getElementById('transitLogo');
+    const transitBadge = document.getElementById('transitBadge');
+    const transitTitle = document.getElementById('transitTitle');
 
     const brandName = brand ? brand.en : (manufacturer || 'רכב יוקרה');
-    title.textContent = brandName;
+    transitTitle.textContent = `מתחבר למערכות ${brandName}...`;
 
     if (brand && brand.color) {
       ring.style.borderColor = brand.color;
-      ring.style.boxShadow = `0 0 100px ${brand.color}, inset 0 0 50px ${brand.color}`;
-      badge.style.background = brand.color;
+      ring.style.boxShadow = `0 0 50px ${brand.color}, inset 0 0 25px ${brand.color}`;
+      transitBadge.style.background = brand.color;
     } else {
       ring.style.borderColor = '#38bdf8';
-      ring.style.boxShadow = '0 0 100px rgba(56,189,248,0.9), inset 0 0 50px rgba(56,189,248,0.6)';
-      badge.style.background = '#0284c7';
+      ring.style.boxShadow = '0 0 40px rgba(56,189,248,0.4), inset 0 0 20px rgba(56,189,248,0.2)';
+      transitBadge.style.background = '#0284c7';
     }
 
     const logoSrc = getLogoSrc(brand);
     const key = (manufacturer || '').trim();
-    badge.textContent = key ? key.charAt(0) : '?';
+    transitBadge.textContent = key ? key.charAt(0) : '?';
 
     if (logoSrc) {
-      img.src = logoSrc;
-      img.style.display = 'block';
-      badge.style.display = 'none';
-      img.onerror = function() {
+      transitLogo.src = logoSrc;
+      transitLogo.style.display = 'block';
+      transitBadge.style.display = 'none';
+      transitLogo.onerror = function() {
         this.style.display = 'none';
-        badge.style.display = 'flex';
+        transitBadge.style.display = 'flex';
       };
     } else {
-      img.style.display = 'none';
-      badge.style.display = 'flex';
+      transitLogo.style.display = 'none';
+      transitBadge.style.display = 'flex';
     }
 
-    overlay.className = 'show';
-    
-    // הפעלת שבירת הקיר
-    setTimeout(() => {
-      overlay.classList.add('active');
-    }, 40);
+    overlay.classList.add('show');
 
-    // סיום האנימציה ומעבר לנתונים
     setTimeout(() => {
-      if (typeof onComplete === 'function') onComplete();
-
+      overlay.style.opacity = '0';
       setTimeout(() => {
-        overlay.className = '';
-      }, 500);
-    }, 1400);
+        overlay.classList.remove('show');
+        overlay.style.opacity = '1';
+        if (typeof onComplete === 'function') onComplete();
+      }, 400);
+    }, 1200);
   }
 
   async function searchCar() {
@@ -1425,10 +1527,12 @@
       currentPlate = plate;
       currentCarData = d;
 
+      // איסוף אוטומטי למשחק צייד הרכבים
+      addCarToHunterCollection(plate, d);
+
       const brand = findBrand(d.manufacturer, d.model);
 
-      // הפעלת אפקט הקיר המתפורר משמאל לימין
-      triggerWallShatter(brand, d.manufacturer, async () => {
+      triggerCyberTransition(brand, d.manufacturer, d.model, async () => {
         await showBrand(d.manufacturer, brand);
 
         if (d.kmSinceTest != null) {
@@ -1493,7 +1597,7 @@
     }
   }
 
-  // מעבר בין לשוניות (טאבים)
+  // מעבר בין לשוניות (טאבים) בסדר המעודכן
   document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', () => {
       document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -1503,10 +1607,14 @@
       document.getElementById('cardTech').style.display = name === 'tech' ? '' : 'none';
       document.getElementById('cardSafety').style.display = name === 'safety' ? '' : 'none';
       document.getElementById('cardEnv').style.display = name === 'env' ? '' : 'none';
+      document.getElementById('cardHunter').style.display = name === 'hunter' ? '' : 'none';
+
+      if (name === 'hunter') {
+        updateHunterUI();
+      }
     });
   });
 
-  // מנגנון דיווח
   const reportModal = document.getElementById('reportModal');
   const openReportBtn = document.getElementById('openReportBtn');
   const closeReportBtn = document.getElementById('closeReportBtn');
@@ -1577,7 +1685,6 @@
   document.getElementById('ownBtn').addEventListener('click', toggleOwnPanel);
   document.getElementById('backBtn').addEventListener('click', showHome);
 
-  // מנגנון סיבוב 360 מעלות לסמל הרכב בגרירה
   (function initLogo360() {
     const spinner = document.getElementById('logoSpinner');
     if (!spinner) return;
@@ -1634,6 +1741,7 @@
   })();
 
   renderHistory();
+  updateHunterUI();
 </script>
 </body>
 </html>
