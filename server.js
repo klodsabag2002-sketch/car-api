@@ -17,7 +17,6 @@ const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";
 // ---------- מנוע טבלת צייד הרכבים (עם שמירה אוטומטית לקובץ בשרת) ----------
 const LEADERBOARD_FILE = path.join(__dirname, 'leaderboard.json');
 
-// טעינת הנתונים מהקובץ הפיזי בעליית השרת (אם קיים)
 let hunterLeaderboard = {};
 try {
     if (fs.existsSync(LEADERBOARD_FILE)) {
@@ -30,7 +29,6 @@ try {
     hunterLeaderboard = {};
 }
 
-// פונקציית עזר לשמירת הנתונים לקובץ הפיזי אוטומטית
 function saveLeaderboardToFile() {
     try {
         fs.writeFileSync(LEADERBOARD_FILE, JSON.stringify(hunterLeaderboard, null, 2), 'utf8');
@@ -39,7 +37,6 @@ function saveLeaderboardToFile() {
     }
 }
 
-// שליפת טבלת המובילים לכל המשתמשים
 app.get('/api/hunter/leaderboard', (req, res) => {
     const sorted = Object.entries(hunterLeaderboard)
         .map(([name, count]) => ({ name, count }))
@@ -48,15 +45,12 @@ app.get('/api/hunter/leaderboard', (req, res) => {
     res.json({ success: true, leaderboard: sorted });
 });
 
-// עדכון או הוספת רכב לצייד בשרת ושמירה לקובץ
 app.post('/api/hunter/update', (req, res) => {
     const { nickname, count } = req.body;
     if (!nickname) {
         return res.status(400).json({ success: false, message: "Missing nickname" });
     }
     hunterLeaderboard[nickname] = Number(count) || 0;
-    
-    // שמירה אוטומטית לקובץ הפיזי בשרת
     saveLeaderboardToFile();
 
     res.json({ 
@@ -96,7 +90,6 @@ ACCEL_FILES.forEach(fileName => {
     }
 });
 
-// שמות יצרנים בעברית מהרישוי -> שם באנגלית כמו בקובץ התאוצה
 const HE_MAKE_ALIASES = {
     "אבארט": "Abarth", "קופרה": "Cupra", "אאודי": "Audi", "אודי": "Audi",
     "אופל": "Opel", "אינפיניטי": "Infiniti", "ניסאן": "Nissan", "איווייס": "Aiways",
@@ -191,12 +184,6 @@ const ORIGIN_LABELS = {
 function labelOwnership(raw) {
     const t = toText(raw);
     if (t === null) return "פרטי";
-    return ORIGIN_LABELS[t] || t;
-}
-
-function labelRegistryOwnership(raw) {
-    const t = toText(raw);
-    if (t === null) return null;
     return ORIGIN_LABELS[t] || t;
 }
 
@@ -335,6 +322,49 @@ app.get('/api/car/:plate', async (req, res) => {
         const modelTexts = [car.kinuy_mishari, car.degem_nm, model].filter(Boolean);
         const acceleration = lookupAccel(makeTexts, modelTexts, year, hp, engineCc);
 
+        const fv = (key) => {
+            const a = row ? row[key] : undefined;
+            const b = car[key];
+            const v = (a !== undefined && a !== null && String(a).trim() !== "") ? a : b;
+            return (v === undefined || v === null || String(v).trim() === "") ? null : v;
+        };
+        const fnum = (key) => {
+            const v = fv(key);
+            if (v === null) return null;
+            const n = Number(v);
+            return Number.isNaN(n) ? null : n;
+        };
+        const fflag = (key) => {
+            const n = fnum(key);
+            return n === null ? null : n === 1;
+        };
+
+        const technical = {
+            drivetrain: fv("hanaa_nm"),
+            totalWeight: fnum("mishkal_kolel"),
+            towWithBrakes: fnum("kosher_grira_im_blamim"),
+            towWithoutBrakes: fnum("kosher_grira_bli_blamim"),
+            doors: fnum("mispar_dlatot"),
+            seats: fnum("mispar_moshavim"),
+            windows: fnum("mispar_halonot_hashmal"),
+            airbags: fnum("mispar_kariot_avir"),
+            safetyLevel: fnum("ramat_eivzur_betihuty")
+        };
+
+        const equipment = {
+            ac: fflag("mazgan_ind"),
+            abs: fflag("abs_ind"),
+            sunroof: fflag("halon_bagg_ind"),
+            alloyWheels: fflag("galgaley_sagsoget_kala_ind"),
+            powerSteering: fflag("hege_koah_ind")
+        };
+
+        const safety = {
+            laneDeparture: fflag("bakarat_stiya_menativ_ind") ?? fflag("bakarat_stiya_activ_s"),
+            pedestrianDetection: fflag("zihuy_holchey_regel_ind") ?? fflag("blimat_hirum_lifnei_holhei_regel_ofanaim"),
+            rearCamera: fflag("matzlemat_reverse_ind") ?? fflag("matzlemet_reverse_ind")
+        };
+
         res.json({
             success: true,
             data: {
@@ -359,7 +389,10 @@ app.get('/api/car/:plate', async (req, res) => {
                 disabled: Boolean(disabledResult?.hasBadge),
                 bodyType,
                 merkav: bodyType,
-                kmSinceTest: history?.kmSinceTest ?? null
+                kmSinceTest: history?.kmSinceTest ?? null,
+                technical,
+                equipment,
+                safety
             }
         });
     } catch (error) {
