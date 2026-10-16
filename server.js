@@ -13,8 +13,7 @@ const MODELS_ID = "142afde2-6228-49f9-8a29-9b6c3a0cbe40";
 const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";
-// מזהה מאגר מחירוני רכב חדש ויבואנים משרד התחבורה (gov.il)
-const IMPORTER_PRICE_ID = "02146bc4-f58c-44eb-bd67-27b47b4e9e04";
+const IMPORTER_PRICE_ID = "39f455bf-6db0-4926-859d-017f34eacbcb";
 
 // ---------- מנוע טבלת צייד הרכבים (ענן - Firebase) ----------
 const FIREBASE_DB_URL = "https://carhunterleaderboard-default-rtdb.europe-west1.firebasedatabase.app";
@@ -25,7 +24,6 @@ async function getCloudLeaderboard() {
         const data = await response.json();
         return data || {};
     } catch (e) {
-        console.error('[HUNTER ERROR] שגיאה בקריאת טבלת המובילים מהענן:', e.message);
         return {};
     }
 }
@@ -37,9 +35,7 @@ async function saveCloudLeaderboard(leaderboardData) {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(leaderboardData)
         });
-    } catch (e) {
-        console.error('[HUNTER ERROR] שגיאה בשמירת טבלת המובילים לענן:', e.message);
-    }
+    } catch (e) {}
 }
 
 app.get('/api/hunter/leaderboard', async (req, res) => {
@@ -47,15 +43,12 @@ app.get('/api/hunter/leaderboard', async (req, res) => {
     const sorted = Object.entries(hunterLeaderboard)
         .map(([name, count]) => ({ name, count }))
         .sort((a, b) => b.count - a.count);
-    
     res.json({ success: true, leaderboard: sorted });
 });
 
 app.post('/api/hunter/update', async (req, res) => {
     const { nickname, count } = req.body;
-    if (!nickname) {
-        return res.status(400).json({ success: false, message: "Missing nickname" });
-    }
+    if (!nickname) return res.status(400).json({ success: false, message: "Missing nickname" });
     
     let hunterLeaderboard = await getCloudLeaderboard();
     hunterLeaderboard[nickname] = Number(count) || 0;
@@ -69,7 +62,6 @@ app.post('/api/hunter/update', async (req, res) => {
     });
 });
 
-// ---------- טעינת קבצי תאוצה 0-100 (קבצים 1 עד 30) ----------
 let accelTable = [];
 const ACCEL_FILES = [
     "acceleration.json", "acceleration2.json", "acceleration3.json", "acceleration4.json",
@@ -88,14 +80,9 @@ ACCEL_FILES.forEach(fileName => {
         if (fs.existsSync(filePath)) {
             const raw = fs.readFileSync(filePath, "utf8");
             const data = JSON.parse(raw);
-            if (Array.isArray(data)) {
-                accelTable = accelTable.concat(data);
-                console.log(`[DATA OK] נטען בהצלחה: ${fileName} (${data.length} רשומות)`);
-            }
+            if (Array.isArray(data)) accelTable = accelTable.concat(data);
         }
-    } catch (e) {
-        console.error(`[DATA ERROR] שגיאה בטעינת ${fileName}:`, e.message);
-    }
+    } catch (e) {}
 });
 
 const HE_MAKE_ALIASES = {
@@ -179,230 +166,9 @@ function toNumber(value) {
 }
 
 const ORIGIN_LABELS = {
-    "": "פרטי",
-    "החכר": "החכרה (ליסינג)",
-    "השכרה": "השכרה",
-    "יבוא אישי": "יבוא אישי",
-    "יבוא אישי-משומש": "יבוא אישי משומש",
-    "מדינת ישראל": "רכב ממשלתי",
-    "ביס לנהיגה\"": "בית ספר לנהיגה",
-    "משומש מיבואן": "משומש מיבואן"
-};
-
-function labelOwnership(raw) {
-    const t = toText(raw);
-    if (t === null) return "פרטי";
-    return ORIGIN_LABELS[t] || t;
-}
-
-function testStatus(expiry) {
-    if (!expiry) return null;
-    const d = new Date(expiry);
-    if (isNaN(d)) return null;
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    return d >= today;
-}
-
-const BODY_TYPE_MAP = {
-    "MPV": "מיניוואן", "SUV": "פנאי / שטח", "HATCHBACK": "האצ'בק", "SEDAN": "סדאן",
-    "ESTATE": "סטיישן", "STATION": "סטיישן", "COUPE": "קופה", "CABRIO": "קבריולה (גג פתוח)",
-    "CABRIOLET": "קבריולה (גג פבדיוק! בוא נפתור את זה בצורה הכי נקייה ופשוטה, בלי קבצים צדדיים ובלי סיבוכים בשרת. 
-
-השרת שלך כבר פונה אל מאגרי הנתונים של משרד התחבורה דרך ה-API של `data.gov.il` (למשל עבור פרטי הרכב, ההיסטוריה והטסט). אנחנו פשוט נוסיף לשרת שאילתת API ישירה למאגר המחירון הרשמי של משרד התחבורה (שנמצא ב-`data.gov.il` תחת המזהה של מחירון הרכב).
-
-הנה קוד השרת המעודכן והסופי (`server.js`) ששולף את מחיר היבואן ושם היבואן **בזמן אמת דרך האינטרנט** לכל רכב שהמשתמש מחפש:
-
-```javascript
-const express = require('express');
-const cors = require('cors');
-const fs = require('fs');
-const path = require('path');
-const app = express();
-const PORT = process.env.PORT || 3000;
-
-app.use(cors());
-app.use(express.json());
-
-const CAR_REGISTRY_ID = "053cea08-09bc-40ec-8f7a-156f0677aff3";
-const MODELS_ID = "142afde2-6228-49f9-8a29-9b6c3a0cbe40";
-const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";
-const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";
-const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";
-// מזהה מאגר מחירון רכב חדש ומחיר יבואן רשמי משרד התחבורה (gov.il)
-const IMPORTER_PRICE_ID = "39f455bf-6db0-4926-859d-017f34eacbcb";
-
-// ---------- מנוע טבלת צייד הרכבים (ענן - Firebase) ----------
-const FIREBASE_DB_URL = "[https://carhunterleaderboard-default-rtdb.europe-west1.firebasedatabase.app](https://carhunterleaderboard-default-rtdb.europe-west1.firebasedatabase.app)";
-
-async function getCloudLeaderboard() {
-    try {
-        const response = await fetch(`${FIREBASE_DB_URL}/leaderboard.json`);
-        const data = await response.json();
-        return data || {};
-    } catch (e) {
-        console.error('[HUNTER ERROR] שגיאה בקריאת טבלת המובילים מהענן:', e.message);
-        return {};
-    }
-}
-
-async function saveCloudLeaderboard(leaderboardData) {
-    try {
-        await fetch(`${FIREBASE_DB_URL}/leaderboard.json`, {
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(leaderboardData)
-        });
-    } catch (e) {
-        console.error('[HUNTER ERROR] שגיאה בשמירת טבלת המובילים לענן:', e.message);
-    }
-}
-
-app.get('/api/hunter/leaderboard', async (req, res) => {
-    const hunterLeaderboard = await getCloudLeaderboard();
-    const sorted = Object.entries(hunterLeaderboard)
-        .map(([name, count]) => ({ name, count }))
-        .sort((a, b) => b.count - a.count);
-    
-    res.json({ success: true, leaderboard: sorted });
-});
-
-app.post('/api/hunter/update', async (req, res) => {
-    const { nickname, count } = req.body;
-    if (!nickname) {
-        return res.status(400).json({ success: false, message: "Missing nickname" });
-    }
-    
-    let hunterLeaderboard = await getCloudLeaderboard();
-    hunterLeaderboard[nickname] = Number(count) || 0;
-    await saveCloudLeaderboard(hunterLeaderboard);
-
-    res.json({ 
-        success: true, 
-        leaderboard: Object.entries(hunterLeaderboard)
-            .map(([name, count]) => ({ name, count }))
-            .sort((a, b) => b.count - a.count) 
-    });
-});
-
-// ---------- טעינת קבצי תאוצה 0-100 (קבצים 1 עד 30) ----------
-let accelTable = [];
-const ACCEL_FILES = [
-    "acceleration.json", "acceleration2.json", "acceleration3.json", "acceleration4.json",
-    "acceleration5.json", "acceleration6.json", "acceleration7.json", "acceleration8.json",
-    "acceleration9.json", "acceleration10.json", "acceleration11.json", "acceleration12.json",
-    "acceleration13.json", "acceleration14.json", "acceleration15.json", "acceleration16.json",
-    "acceleration17.json", "acceleration18.json", "acceleration19.json", "acceleration20.json",
-    "acceleration21.json", "acceleration22.json", "acceleration23.json", "acceleration24.json",
-    "acceleration25.json", "acceleration26.json", "acceleration27.json", "acceleration28.json",
-    "acceleration29.json", "acceleration30.json"
-];
-
-ACCEL_FILES.forEach(fileName => {
-    try {
-        const filePath = path.join(__dirname, fileName);
-        if (fs.existsSync(filePath)) {
-            const raw = fs.readFileSync(filePath, "utf8");
-            const data = JSON.parse(raw);
-            if (Array.isArray(data)) {
-                accelTable = accelTable.concat(data);
-                console.log(`[DATA OK] נטען בהצלחה: ${fileName} (${data.length} רשומות)`);
-            }
-        }
-    } catch (e) {
-        console.error(`[DATA ERROR] שגיאה בטעינת ${fileName}:`, e.message);
-    }
-});
-
-const HE_MAKE_ALIASES = {
-    "אבארט": "Abarth", "קופרה": "Cupra", "אאודי": "Audi", "אודי": "Audi",
-    "אופל": "Opel", "אינפיניטי": "Infiniti", "ניסאן": "Nissan", "איווייס": "Aiways",
-    "אורה": "ORA", "אוואטר": "AVATR", "אומודה": "OMODA", "איסוזו": "Isuzu",
-    "אל אי וי סי": "LEVC", "אלפא רומיאו": "Alfa Romeo", "מ.ג": "MG", "אם ג'י": "MG",
-    "אסטון מרטין": "Aston Martin", "אקספנג": "XPENG", "ב.מ.וו": "BMW", "בי ווי די": "BYD",
-    "ביואיק": "Buick", "בנטלי": "Bentley", "ג'אקו": "JAECOO", "גאקו": "JAECOO",
-    "ג'י.איי.סי": "GAC", "ג'י.אם.סי": "GMC", "ג'יפ": "Jeep", "יונדאי": "Hyundai",
-    "ג'נסיס": "Genesis", "ג'ילי": "Geely", "דאצ'יה": "Dacia", "דודג'": "Dodge",
-    "דונגפנג": "Dongfeng", "די אס": "DS", "דייהטסו": "Daihatsu", "דיפאל": "Deepal",
-    "הונצי": "Hongqi", "הונדה": "Honda", "וויה": "Voyah", "וולבו": "Volvo",
-    "וואי": "WEY", "זיקר": "Zeekr", "טויוטה": "Toyota", "טסלה": "Tesla",
-    "יגואר": "Jaguar", "יודו": "Yudo", "לינק אנד קו": "Lynk & Co", "ליפמוטור": "Leapmotor",
-    "למבורגיני": "Lamborghini", "לנד רובר": "Land Rover", "לקסוס": "Lexus",
-    "מאזדה": "Mazda", "מיני": "Mini", "מזארטי": "Maserati", "מרצדס": "Mercedes-Benz",
-    "מקלארן": "McLaren", "מיצובישי": "Mitsubishi", "מקסוס": "Maxus", "ניאו": "NIO",
-    "סאאב": "Saab", "סיאט": "Seat", "סובארו": "Subaru", "סוזוקי": "Suzuki",
-    "סמארט": "Smart", "סיטרואן": "Citroen", "סקודה": "Skoda", "סקייוול": "Skywell",
-    "פולסטאר": "Polestar", "סרס": "Seres", "פוטון": "Foton", "פולקסווגן": "Volkswagen",
-    "פורד": "Ford", "פורשה": "Porsche", "פורתינג": "Forthing", "פיאט": "Fiat",
-    "פיג'ו": "Peugeot", "פרארי": "Ferrari", "צ'רי": "Chery", "קאדילאק": "Cadillac",
-    "קיה": "Kia", "קיי גי מוביליט": "KGM", "קרייזלר": "Chrysler", "רולס רוייס": "Rolls-Royce",
-    "שברולט": "Chevrolet", "רנו": "Renault"
-};
-
-function norm(s) {
-    return String(s || "").toLowerCase().replace(/[^a-z0-9א-ת]/g, "");
-}
-
-function lookupAccel(makeTexts, modelTexts, year, hp, cc) {
-    const makes = makeTexts.map(norm).filter(Boolean);
-    const models = modelTexts.map(norm).filter(Boolean);
-    const y = Number(year);
-
-    for (const r of accelTable) {
-        const rMake = norm(r.make);
-        const rModel = norm(r.model);
-        if (!makes.some(m => m.includes(rMake))) continue;
-        if (!models.some(m => m.includes(rModel))) continue;
-        if (!Number.isNaN(y) && r.yearStart != null) {
-            if (y < r.yearStart) continue;
-            if (r.yearEnd != null && y > r.yearEnd) continue;
-        }
-        if (hp != null && r.hp != null && Math.abs(r.hp - hp) > 2) continue;
-        if (cc != null && r.cc != null && Math.abs(r.cc - cc) > 30) continue;
-        return { seconds: r.seconds, source: r.source || "נתון יצרן" };
-    }
-    return null;
-}
-
-app.use((req, res, next) => {
-    if (req.url !== '/') {
-        console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
-    }
-    next();
-});
-
-async function searchDatastore(resourceId, filters, limit = 100, q = "") {
-    const f = filters ? `&filters=${encodeURIComponent(JSON.stringify(filters))}` : "";
-    const qq = q ? `&q=${encodeURIComponent(q)}` : "";
-    const url = `[https://data.gov.il/api/3/action/datastore_search?resource_id=$](https://data.gov.il/api/3/action/datastore_search?resource_id=$){resourceId}${f}${qq}&limit=${limit}`;
-    const response = await fetch(url);
-    const data = await response.json();
-    return data?.success ? (data.result?.records || []) : [];
-}
-
-function toText(value) {
-    if (value == null) return null;
-    const s = String(value).trim();
-    if (s === "" || /^dnf$/i.test(s)) return null;
-    return s;
-}
-
-function toNumber(value) {
-    const s = toText(value);
-    if (s === null) return null;
-    const n = Number(s.replace(/,/g, ""));
-    return Number.isNaN(n) ? null : n;
-}
-
-const ORIGIN_LABELS = {
-    "": "פרטי",
-    "החכר": "החכרה (ליסינג)",
-    "השכרה": "השכרה",
-    "יבוא אישי": "יבוא אישי",
-    "יבוא אישי-משומש": "יבוא אישי משומש",
-    "מדינת ישראל": "רכב ממשלתי",
-    "ביס לנהיגה\"": "בית ספר לנהיגה",
-    "משומש מיבואן": "משומש מיבואן"
+    "": "פרטי", "החכר": "החכרה (ליסינג)", "השכרה": "השכרה",
+    "יבוא אישי": "יבוא אישי", "יבוא אישי-משומש": "יבוא אישי משומש",
+    "מדינת ישראל": "רכב ממשלתי", "ביס לנהיגה\"": "בית ספר לנהיגה", "משומש מיבואן": "משומש מיבואן"
 };
 
 function labelOwnership(raw) {
@@ -447,15 +213,11 @@ async function checkDisabled(plate) {
         }
         if (records && records.length > 0) {
             const match = records[0];
-            return {
-                hasBadge: true,
-                badgeType: match["SUG TAV"] || match["SUG_TAV"] || null,
-                issueDate: match["TAARICH HAFAKAT TAG"] || match["TAARICH_HAFAKAT_TAG"] || null
-            };
+            return { hasBadge: true, badgeType: match["SUG TAV"] || match["SUG_TAV"] || null };
         }
-        return { hasBadge: false, badgeType: null, issueDate: null };
+        return { hasBadge: false, badgeType: null };
     } catch (e) {
-        return { hasBadge: false, badgeType: null, issueDate: null };
+        return { hasBadge: false, badgeType: null };
     }
 }
 
@@ -476,18 +238,26 @@ async function fetchOwnershipRows(plate) {
         .sort((a, b) => String(a.date).localeCompare(String(b.date)));
 }
 
-// פונקציה לשליפת מחיר יבואן ושם היבואן בזמן אמת ממאגר gov.il
+// פונקציית שליפת מחיר יבואן עם דיבוג מלא ללוגים
 async function fetchImporterPriceApi(car, row) {
     try {
         const tozeretCd = toNumber(car.tozeret_cd) ?? (row ? toNumber(row.tozeret_cd) : null);
         const degemCd = toNumber(car.degem_cd) ?? (row ? toNumber(row.degem_cd) : null);
         const year = toNumber(car.shnat_yitzur);
 
-        if (tozeretCd == null || degemCd == null) return { importerPrice: null, importerName: null };
+        console.log(`[DEBUG IMPORTER] Searching for tozeret_cd: ${tozeretCd}, degem_cd: ${degemCd}, year: ${year}`);
 
-        const records = await searchDatastore(IMPORTER_PRICE_ID, { tozeret_cd: tozeretCd, degem_cd: degemCd }, 10);
+        if (tozeretCd == null || degemCd == null) {
+            console.log('[DEBUG IMPORTER] Missing codes!');
+            return { importerPrice: null, importerName: null };
+        }
+
+        const records = await searchDatastore(IMPORTER_PRICE_ID, { tozeret_cd: tozeretCd, degem_cd: degemCd }, 20);
+        console.log(`[DEBUG IMPORTER] Found records from gov.il:`, records.length);
+
         if (records && records.length > 0) {
             const match = records.find(r => !year || Number(r.shnat_yitzur) === year) || records[0];
+            console.log(`[DEBUG IMPORTER] Matched record:`, match);
             return {
                 importerPrice: toNumber(match.mehir) || null,
                 importerName: toText(match.shem_yevuan) || null
@@ -550,7 +320,6 @@ app.get('/api/car/:plate', async (req, res) => {
             checkDisabled(plate)
         ]);
 
-        // שליפת מחיר יבואן ושם היבואן בזמן אמת
         const importerData = await fetchImporterPriceApi(car, row);
         const history = buildHistory(historyRaw);
 
@@ -602,10 +371,8 @@ app.get('/api/car/:plate', async (req, res) => {
         };
 
         const equipment = {
-            ac: fflag("mazgan_ind"),
-            abs: fflag("abs_ind"),
-            sunroof: fflag("halon_bagg_ind"),
-            alloyWheels: fflag("galgaley_sagsoget_kala_ind"),
+            ac: fflag("mazgan_ind"), abs: fflag("abs_ind"),
+            sunroof: fflag("halon_bagg_ind"), alloyWheels: fflag("galgaley_sagsoget_kala_ind"),
             powerSteering: fflag("hege_koah_ind")
         };
 
@@ -618,18 +385,13 @@ app.get('/api/car/:plate', async (req, res) => {
         res.json({
             success: true,
             data: {
-                plate,
-                manufacturer,
-                model,
-                trim,
-                year,
+                plate, manufacturer, model, trim, year,
                 color: car.zeva_rechev || car.tzeva_rechev || "לא ידוע",
                 chassis: toText(car.misgeret),
                 tireFront: toText(car.zmig_kidmi),
                 tireRear: toText(car.zmig_ahori),
                 lastTest: toText(car.mivchan_acharon_dt),
-                engineCc,
-                horsepower: hp,
+                engineCc, horsepower: hp,
                 acceleration0to100: acceleration ? acceleration.seconds : null,
                 accelerationSource: acceleration ? acceleration.source : null,
                 importerPrice: importerData.importerPrice,
@@ -639,12 +401,9 @@ app.get('/api/car/:plate', async (req, res) => {
                 ownership: ownershipList.length ? ownershipList[ownershipList.length - 1].type : labelOwnership(car.baalut),
                 owners: ownershipList.length || null,
                 disabled: Boolean(disabledResult?.hasBadge),
-                bodyType,
-                merkav: bodyType,
+                bodyType, merkav: bodyType,
                 kmSinceTest: history?.kmSinceTest ?? null,
-                technical,
-                equipment,
-                safety
+                technical, equipment, safety
             }
         });
     } catch (error) {
