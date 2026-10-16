@@ -1,5 +1,195 @@
 [
   {
+    "make": "סיאט ספרד CUPRA",
+    "model": "FORMENTOR VZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 7.0,
+    "source": "נתון יצרן (קופרה פורמנטור VZ פלאג-אין 150 כ\"ס בנזין / 245 משולב - 7.0 שניות)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "FORMEN BP/BB",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.9,
+    "source": "נתון יצרן (קופרה פורמנטור 1.5 TSI 150 כ\"ס - 8.9 שניות)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1984,
+    "seconds": 5.7,
+    "source": "נתון יצרן (קופרה לאון 300 כ\"ס האצ'בק)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "LEON VZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1984,
+    "seconds": 5.7,
+    "source": "נתון יצרן (קופרה לאון VZ 300 כ\"ס)"
+  },
+  {
+    "make": "קופרה ספרד CUPRA",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1984,
+    "seconds": 5.7,
+    "source": "נתון יצרן (קופרה לאון 300 כ\"ס האצ'בק)"
+  },
+  {
+    "make": "קופרה ספרד CUPRA",
+    "model": "LEON VZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1984,
+    "seconds": 5.7,
+    "source": "נתון יצרן (קופרה לאון VZ 300 כ\"ס)"
+  },
+  {
+    "make": "Cupra",
+    "model": "Leon",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1984,
+    "seconds": 5.7,
+    "source": "נתון יצרן (5.7 שניות)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "FORMENTOR VZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 1984,
+    "seconds": 4.9,
+    "source": "נתון יצרן (קופרה פורמנטור VZ 310 כ\"ס)"
+  },
+  {
+    "make": "קופרה ספרד CUPRA",
+    "model": "FORMENTOR VZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 1984,
+    "seconds": 4.9,
+    "source": "נתון יצרן (קופרה פורמנטור VZ 310 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "FORMENTOR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 1984,
+    "seconds": 4.9,
+    "source": "נתון יצרן (קופרה פורמנטור VZ 310 כ\"ס)"
+  },
+  {
+    "make": "קופרה ספרד CUPRA",
+    "model": "FORMENTOR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 1984,
+    "seconds": 4.9,
+    "source": "נתון יצרן (קופרה פורמנטור VZ 310 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "FORMENTOR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.9,
+    "source": "נתון יצרן (קופרה פורמנטור 1.5 TSI/eTSI 150 כ\"ס)"
+  },
+  {
+    "make": "קופרה ספרד CUPRA",
+    "model": "FORMENTOR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.9,
+    "source": "נתון יצרן (קופרה פורמנטור 1.5 TSI/eTSI 150 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "FORMENTOR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 7.8,
+    "source": "נתון יצרן (קופרה פורמנטור פלאג-אין 204 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "LEON VZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 6.7,
+    "source": "נתון יצרן (קופרה לאון VZ פלאג-אין 245 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 7.5,
+    "source": "נתון יצרן (קופרה לאון פלאג-אין 204 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.7,
+    "source": "נתון יצרן (קופרה לאון 1.5 eTSI 150 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 7.2,
+    "source": "נתון יצרן (קופרה לאון 2.0 TSI 190 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1984,
+    "seconds": 6.4,
+    "source": "נתון יצרן (קופרה לאון 2.0 TSI 245 כ\"ס)"
+  },
+  {
     "make": "אודי גרמניה",
     "model": "A6",
     "yearStart": null,
@@ -1832,7 +2022,7 @@
   {
     "make": "Cupra",
     "model": "Formentor",
-    "yearStart": null,
+    "yearStart":,
     "yearEnd": null,
     "hp": 204,
     "cc": 1395,
@@ -1850,4 +2040,3 @@
     "source": "מדידה של AMS (e-Hybrid VZ 272)"
   }
 ]
-
