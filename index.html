@@ -653,6 +653,7 @@
 
     <div id="cardGeneral">
       <div id="hero" class="hero">
+        <!-- סמל הרכב המסתובב (מוצג אוטומטית לכל החברות מהתיקייה או כאות חלופית) -->
         <div class="logo-3d-scene">
           <div class="brand-logo-container" id="logoSpinner" title="גרור כדי לסובב 360 מעלות">
             <img id="brandLogo" class="brand-logo" alt="סמל יצרן">
@@ -664,7 +665,7 @@
         <div class="car-name"><span id="heroName"></span></div>
         <div class="car-trim" id="heroTrim"></div>
 
-        <!-- כרטיס מחיר יבואן מעודכן עם סמל ותוספות -->
+        <!-- כרטיס מחיר יבואן כולל ההבהרה על תוספות מיוחדות -->
         <div id="importerPriceCard" class="importer-price-card">
           <div class="importer-price-main">
             <div class="importer-icon">₪</div>
@@ -765,7 +766,7 @@
     <div id="cardSafety" style="display:none; padding: 40px; text-align: center; color: #94a3b8; font-weight: 800;">נתוני בטיחות בקרוב...</div>
     <div id="cardEnv" style="display:none; padding: 40px; text-align: center; color: #94a3b8; font-weight: 800;">נתוני סביבה בקרוב...</div>
     
-    <!-- מסך משחק "צייד רכבים" - טופ 3 + השורה שלך -->
+    <!-- מסך משחק "צייד רכבים" -->
     <div id="cardHunter" class="hunter-container" style="display:none;">
       <div class="hunter-banner">
         <h2>🎯 מגרש ציידי הרכבים</h2>
@@ -798,9 +799,7 @@
             <th>רכבים באוסף</th>
           </tr>
         </thead>
-        <tbody id="hunterLeaderboardBody">
-          <!-- מתעדכן אוטומטית לפי טופ 3 והשורה שלך -->
-        </tbody>
+        <tbody id="hunterLeaderboardBody"></tbody>
       </table>
     </div>
   </div>
@@ -972,7 +971,6 @@
 
     tbody.textContent = '';
 
-    // הצגת 3 הראשונים בלבד בראש הטבלה
     const top3 = leaderboardData.slice(0, 3);
     top3.forEach((h, index) => {
       const tr = document.createElement('tr');
@@ -995,10 +993,8 @@
       tbody.appendChild(tr);
     });
 
-    // מציאת המיקום הנוכחי של המשתמש בטבלה המלאה (1-indexed)
     const myIndex = leaderboardData.findIndex(x => x.name === myNick);
 
-    // אם המשתמש מחוץ לטופ 3, נציג שורה מיוחדת שמציינת את המיקום שלו
     if (myIndex >= 3) {
       const sepTr = document.createElement('tr');
       sepTr.className = 'separator-row';
