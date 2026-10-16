@@ -1,6 +1,76 @@
 [
   {
     "make": "ניסאן יפן",
+    "model": "X-TRAIL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1749,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אקס-טרייל 1.7 dCi טורבו-דיזל 150 כ\"ס)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "X-TRAIL TEKNA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1749,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אקס-טרייל טקנה 1.7 dCi 150)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "אקס טרייל",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1749,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אקס טרייל 1.7 דיזל 150)"
+  },
+  {
+    "make": "Nissan",
+    "model": "X-TRAIL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1749,
+    "seconds": 10.7,
+    "source": "נתון יצרן (Nissan X-Trail 1.7 dCi 150hp)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "X-TRAIL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1749,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אקס-טרייל 1.7 dCi 4x4 150)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "X-TRAIL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 213,
+    "cc": 1497,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אקס-טרייל e-Power e-4ORCE הנעה כפולה 213 כ\"ס)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "X-TRAIL HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 213,
+    "cc": 1497,
+    "seconds": 7.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אקס-טרייל e-Power e-4ORCE 213)"
+  },
+  {
+    "make": "ניסאן יפן",
     "model": "X-TRAIL HYBRID",
     "yearStart": null,
     "yearEnd": null,
@@ -58,6 +128,26 @@
     "cc": 1497,
     "seconds": 8.0,
     "source": "נתון יצרן (Nissan X-Trail e-Power 156hp)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "X-TRAIL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1497,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אקס-טרייל e-Power היברידי 204)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "X-TRAIL",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 163,
+    "cc": 1497,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (ניסאן אקס-טרייל 1.5 VC-Turbo מיקרו-היברידי 163)"
   },
   {
     "make": "ניסאן אנגליה",
@@ -908,16 +998,6 @@
     "cc": 1995,
     "seconds": 10.0,
     "source": "רישוי רכב / נתון יצרן (ניסאן אקס-טרייל 2.0 dCi דיזל 177)"
-  },
-  {
-    "make": "ניסאן יפן",
-    "model": "X-TRAIL",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 1497,
-    "seconds": 8.0,
-    "source": "רישוי רכב / נתון יצרן (ניסאן אקס-טרייל e-Power היברידי 204)"
   },
   {
     "make": "ניסאן",
