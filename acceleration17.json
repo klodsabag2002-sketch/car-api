@@ -1,6 +1,26 @@
 [
   {
     "make": "מרצדס בנץ גרמן",
+    "model": "C180",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1497,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C180 1.497T 156 כ\"ס)"
+  },
+  {
+    "make": "מרצדס",
+    "model": "C180",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1497,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C180 156 כ\"ס)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
     "model": "C200 D",
     "yearStart": null,
     "yearEnd": null,
