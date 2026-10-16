@@ -61,7 +61,7 @@ app.post('/api/hunter/update', (req, res) => {
     });
 });
 
-// ---------- תאוצה 0-100 מקבצים ידניים (קבצים 1 עד 30) ----------
+// ---------- טעינת קבצי תאוצה 0-100 (קבצים 1 עד 30) ----------
 let accelTable = [];
 const ACCEL_FILES = [
     "acceleration.json", "acceleration2.json", "acceleration3.json", "acceleration4.json",
@@ -313,13 +313,13 @@ app.get('/api/car/:plate', async (req, res) => {
         const testExpiry = car.tokef_dt || null;
         const bodyType = resolveBodyType(car, row);
 
-        const makeTexts = [manufacturer, car.tozeret_nm, car.kinuy_mishari].filter(Boolean);
+        const makeTexts = [manufacturer, car.tozeret_nm, car.kinuy_mishari, car.sug_degem].filter(Boolean);
         for (const [he, en] of Object.entries(HE_MAKE_ALIASES)) {
             if (String(manufacturer).includes(he) || String(car.tozeret_nm || "").includes(he)) {
                 makeTexts.push(en);
             }
         }
-        const modelTexts = [car.kinuy_mishari, car.degem_nm, model].filter(Boolean);
+        const modelTexts = [car.kinuy_mishari, car.degem_nm, car.ramat_gimur, model].filter(Boolean);
         const acceleration = lookupAccel(makeTexts, modelTexts, year, hp, engineCc);
 
         const fv = (key) => {
