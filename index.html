@@ -86,7 +86,7 @@
   .detail { display: none; }
   .detail.show { display: block; }
 
-  /* טאבים ניאון עם צייד רכבים בצד שמאל */
+  /* טאבים בסדר המדויק: כללי, מפרט טכני, בטיחות, סביבה, צייד רכבים */
   .tabs { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(14px); display: none; justify-content: space-around; align-items: stretch; border-bottom: 1px solid rgba(56,189,248,0.2); margin-top: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
   .tabs.show { display: flex; }
   .tab { flex: 1; text-align: center; padding: 14px 0 10px; color: #94a3b8; font-size: 13px; cursor: pointer; border-bottom: 3px solid transparent; font-weight: 800; transition: all 0.3s; }
@@ -96,7 +96,6 @@
   .hero { display: none; }
   .hero.show { display: block; }
 
-  /* הולוגרמת 360 מעלות פסיכית לסמל הרכב */
   .logo-3d-scene {
     perspective: 1000px;
     width: 140px;
@@ -526,12 +525,12 @@
       <span id="kmText"></span>
     </div>
 
-    <!-- 4 הטאבים (צייד רכבים מועבר הכי שמאלה) -->
+    <!-- סדר הטאבים המדויק לפי בקשתך -->
     <div id="tabs" class="tabs">
-      <div class="tab" data-tab="env"><span class="ic">🌿</span>סביבה</div>
-      <div class="tab" data-tab="safety"><span class="ic">🛡️</span>בטיחות</div>
-      <div class="tab" data-tab="tech"><span class="ic">⚙️</span>מפרט טכני</div>
       <div class="tab active" data-tab="general"><span class="ic">🚗</span>כללי</div>
+      <div class="tab" data-tab="tech"><span class="ic">⚙️</span>מפרט טכני</div>
+      <div class="tab" data-tab="safety"><span class="ic">🛡️</span>בטיחות</div>
+      <div class="tab" data-tab="env"><span class="ic">🌿</span>סביבה</div>
       <div class="tab" data-tab="hunter"><span class="ic">🎯</span>צייד רכבים</div>
     </div>
 
@@ -635,11 +634,11 @@
     <div id="cardSafety" style="display:none; padding: 40px; text-align: center; color: #94a3b8; font-weight: 800;">נתוני בטיחות בקרוב...</div>
     <div id="cardEnv" style="display:none; padding: 40px; text-align: center; color: #94a3b8; font-weight: 800;">נתוני סביבה בקרוב...</div>
     
-    <!-- מסך משחק "צייד רכבים" אוטומטי -->
+    <!-- מסך משחק "צייד רכבים" מחובר לשרת -->
     <div id="cardHunter" class="hunter-container" style="display:none;">
       <div class="hunter-banner">
         <h2>🎯 מגרש ציידי הרכבים</h2>
-        <p>ברוך הבא למשחק האוטומטי! כל רכב חדש שאתה מחפש ובודק באפליקציה נאסף אוטומטית לאוסף שלך וצובר לך נקודות ניסיון.</p>
+        <p>ברוך הבא למשחק האוטומטי! כל רכב חדש שאתה מחפש ובודק באפליקציה נאסף אוטומטית לאוסף שלך ומתעדכן בטבלת המובילים הכללית.</p>
       </div>
 
       <div class="hunter-stats-grid">
@@ -653,7 +652,7 @@
         </div>
       </div>
 
-      <div class="hunter-section-title">🏆 טבלת הציידים המובילים</div>
+      <div class="hunter-section-title">🏆 טבלת הציידים העולמית</div>
       <table class="hunter-table">
         <thead>
           <tr>
@@ -663,7 +662,7 @@
           </tr>
         </thead>
         <tbody id="hunterLeaderboardBody">
-          <!-- מתעדכן אוטומטית -->
+          <!-- מתעדכן אוטומטית מהשרת -->
         </tbody>
       </table>
     </div>
@@ -719,7 +718,7 @@
   let currentCarData = null;
   let inDetail = false;
 
-  // ---------- ניהול כינוי משתמש ואוסף צייד אוטומטי ----------
+  // ---------- ניהול כינוי ואוסף צייד מול השרת ----------
   function getMyNickname() {
     let nick = localStorage.getItem(HUNTER_NICK_KEY);
     if (!nick) {
@@ -738,10 +737,9 @@
     } catch (e) { return []; }
   }
 
-  function addCarToHunterCollection(plate, carData) {
+  async function addCarToHunterCollection(plate, carData) {
     if (!plate) return;
     let col = getHunterCollection();
-    // בדיקה האם הרכב כבר קיים באוסף
     if (!col.some(x => x.plate === plate)) {
       col.push({
         plate: plate,
@@ -750,55 +748,67 @@
       });
       localStorage.setItem(HUNTER_COLLECTION_KEY, JSON.stringify(col));
     }
+    
+    // סנכרון אוטומטי מול השרת ב-Render
+    const myNick = getMyNickname();
+    try {
+      await fetch(API_BASE + '/api/hunter/update', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nickname: myNick, count: col.length })
+      });
+    } catch (e) {
+      console.error("שגיאה בסנכרון השרת:", e);
+    }
+
     updateHunterUI();
   }
 
-  function updateHunterUI() {
+  async function updateHunterUI() {
     const col = getHunterCollection();
     const myNick = getMyNickname();
     
     document.getElementById('hunterMyName').textContent = myNick;
     document.getElementById('hunterScore').textContent = col.length;
 
-    // טבלת מובילים דינמית המשלבת את המשתמש יחד עם ציידים וירטואליים נוספים לתחרות
     const tbody = document.getElementById('hunterLeaderboardBody');
-    tbody.textContent = '';
+    tbody.textContent = '<tr><td colspan="3" style="color:#94a3b8;">טוען נתונים מהשרת...</td></tr>';
 
-    const virtualHunters = [
-      { name: "Speed_Demon99", count: 14 },
-      { name: "Apex_Drifter42", count: 9 },
-      { name: "Turbo_Ghost77", count: 6 },
-      { name: "RoadKing_88", count: 3 }
-    ];
+    try {
+      const res = await fetch(API_BASE + '/api/hunter/leaderboard');
+      const data = await res.json();
+      
+      tbody.textContent = '';
+      if (data.success && Array.isArray(data.leaderboard)) {
+        if (data.leaderboard.length === 0) {
+          tbody.innerHTML = '<tr><td colspan="3" style="color:#94a3b8;">אין עדיין ציידים בטבלה. התחל לחפש רכבים!</td></tr>';
+          return;
+        }
 
-    // הוספת המשתמש הנוכחי לרשימה
-    let leaderboard = [
-      { name: myNick + " (אתה)", count: col.length, isMe: true },
-      ...virtualHunters
-    ];
+        data.leaderboard.forEach((h, index) => {
+          const tr = document.createElement('tr');
+          const isMe = h.name === myNick;
+          if (isMe) tr.className = 'my-row';
 
-    // מיון לפי כמות רכבים מהגבוה לנמוך
-    leaderboard.sort((a, b) => b.count - a.count);
+          const rankTd = document.createElement('td');
+          const medals = ['🥇', '🥈', '🥉'];
+          rankTd.textContent = index < 3 ? medals[index] : (index + 1);
 
-    leaderboard.forEach((h, index) => {
-      const tr = document.createElement('tr');
-      if (h.isMe) tr.className = 'my-row';
+          const nameTd = document.createElement('td');
+          nameTd.textContent = h.name + (isMe ? " (אתה)" : "");
 
-      const rankTd = document.createElement('td');
-      const medals = ['🥇', '🥈', '🥉'];
-      rankTd.textContent = index < 3 ? medals[index] : (index + 1);
+          const countTd = document.createElement('td');
+          countTd.textContent = h.count;
 
-      const nameTd = document.createElement('td');
-      nameTd.textContent = h.name;
-
-      const countTd = document.createElement('td');
-      countTd.textContent = h.count;
-
-      tr.appendChild(rankTd);
-      tr.appendChild(nameTd);
-      tr.appendChild(countTd);
-      tbody.appendChild(tr);
-    });
+          tr.appendChild(rankTd);
+          tr.appendChild(nameTd);
+          tr.appendChild(countTd);
+          tbody.appendChild(tr);
+        });
+      }
+    } catch (e) {
+      tbody.innerHTML = '<tr><td colspan="3" style="color:#f87171;">שגיאה בחיבור לשרת</td></tr>';
+    }
   }
 
   function formatPlate(v) {
@@ -1587,7 +1597,7 @@
     }
   }
 
-  // מעבר בין לשוניות (טאבים) כולל צייד רכבים
+  // מעבר בין לשוניות (טאבים) בסדר המעודכן
   document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', () => {
       document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
