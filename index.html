@@ -40,6 +40,7 @@
   .topbar .i:hover { background: rgba(56,189,248,0.25); box-shadow: 0 0 12px rgba(56,189,248,0.5); }
   .topbar .i.hidden { visibility: hidden; }
 
+  /* תפריט צד (3 קווים) */
   .menu-dropdown {
     position: absolute;
     top: 64px;
@@ -515,7 +516,6 @@
     height: 14px;
     position: relative;
     margin-bottom: 3px;
-    direction: rtl;
   }
   .indicator-arrow {
     position: absolute;
@@ -526,7 +526,7 @@
     border-top: 8px solid #38bdf8;
     filter: drop-shadow(0 0 4px #38bdf8);
     transform: translateX(50%);
-    transition: right 0.4s ease;
+    transition: left 0.4s ease;
   }
 
   .colored-scale {
@@ -549,6 +549,11 @@
     border-left: 1px solid rgba(0,0,0,0.2);
   }
   .scale-seg:last-child { border-left: none; }
+  .scale-seg.active-val {
+    box-shadow: inset 0 0 8px #fff, 0 0 10px #fff;
+    transform: scale(1.03);
+    z-index: 2;
+  }
 
   .score-badge-wrap {
     display: flex;
@@ -1122,7 +1127,7 @@
     <div class="modal-title">✨ עריכת כינוי לרכב</div>
     <div class="modal-sub">תן כינוי מטורף שיופיע על כרטיס הביקור</div>
 
-    <div class="modal-field-lbl">כינוי חדש:</div>
+    <div class="modal-field-lbl">כינוי חדש (למשל: המפלצת שלי, הבייבי):</div>
     <input type="text" id="customCardNickInput" class="modal-input" placeholder="המפלצת שלי" maxlength="24" value="המפלצת שלי">
 
     <div class="modal-actions">
@@ -1273,7 +1278,7 @@
     } else {
       isShowingCombinedHp = false;
       setVal('sHp', baseHp, 'כ"ס');
-      spHpLbl.textContent = d.isHybridOrPhev ? 'כ"ס (בנזין)' : 'כוח סוס';
+      spHpLbl.textContent = (d.isHybridOrPhev || d.isPhev) ? 'כ"ס (בנזין)' : 'כוח סוס';
       specHpCard.classList.remove('phev-highlight');
       phevBtn.classList.remove('active');
       phevBtnText.textContent = '⚡ לחץ כאן לחשיפת ההספק המשולב (מנוע + חשמל)';
@@ -1623,7 +1628,7 @@
       [["skoda", "סקודה"], "skoda", "#3c8c3c", "Skoda"],
       [["skywell", "סקייוול"], "skywell", "#1c4f9c", "Skywell"],
       [["seres", "סרס"], "seres", "#222", "Seres"],
-      [`foton`, "פוטון"], "foton", "#1c4f9c", "Foton"],
+      [["foton", "פוטון"], "foton", "#1c4f9c", "Foton"],
       [["ford", "פורד"], "ford", "#1c4f9c", "Ford"],
       [["volkswagen", "פולקסווגן", "פולקסוואגן", "vw"], "volkswagen", "#1c4f8f", "Volkswagen"],
       [["porsche", "פורשה"], "porsche", "#8b1c1c", "Porsche"],
@@ -1735,7 +1740,7 @@
     const d = currentCarData;
     const activeHp = isShowingCombinedHp ? (d.combinedHorsepower || d.horsepower) : d.horsepower;
     const perf = calculatePerformanceMetrics(d, activeHp);
-    const shareText = `🔥 כרטיס רכב סייבר פרימיום "${currentCarNickname}"!\n🚗 דגם: ${cleanText((d.manufacturer || '') + ' ' + (d.model || ''))} (${d.year || ''})\n⚡ כוח סוס: ${activeHp || 'לא ידוע'}${isShowingCombinedHp ? ' (משולב מערכת)' : ''}\n🚀 מהירות מרבית: ${perf.topSpeed ? perf.topSpeed + ' קמ"ש' : 'לא ידוע'}\n⏱️ תאוצה 0-100: ${d.acceleration0to100 ? d.acceleration0to100 + ' שניות' : 'לא ידוע'}\n🔢 מספר רכב: ${formatPlate(currentPlate)}\n\nנבדק באפליקציית סייבר פרימיום ⚡`;
+    const shareText = `🔥 כרטיס רכב סייבר פרימיום "${currentCarNickname}"!\n🚗 דגם: ${cleanText((d.manufacturer || '') + ' ' + (d.model || ''))} (${d.year || ''})\n⚡ כוח סוס: ${activeHp || 'לא ידוע'}${isShowingCombinedHp ? ' (משולב)' : ''}\n🚀 מהירות מרבית: ${perf.topSpeed ? perf.topSpeed + ' קמ"ש' : 'לא ידוע'}\n⏱️ תאוצה 0-100: ${d.acceleration0to100 ? d.acceleration0to100 + ' שניות' : 'לא ידוע'}\n🔢 מספר רכב: ${formatPlate(currentPlate)}\n\nנבדק באפליקציית סייבר פרימיום ⚡`;
 
     if (navigator.share) {
       navigator.share({ title: 'כרטיס רכב סייבר פרימיום', text: shareText }).catch(() => {});
@@ -2182,8 +2187,8 @@
       const arrow = card.querySelector('#safetyArrow');
       if (arrow && safeLevel !== null) {
         const segWidth = 100 / 9;
-        const targetPercent = safeLevel * segWidth + (segWidth / 2);
-        arrow.style.right = `calc(${targetPercent}% - 6px)`;
+        const targetPercent = (8 - safeLevel) * segWidth + (segWidth / 2);
+        arrow.style.left = targetPercent + '%';
       } else if (arrow) {
         arrow.style.display = 'none';
       }
@@ -2257,8 +2262,8 @@
       const arrow = card.querySelector('#pollutionArrow');
       if (arrow && pGroup !== null) {
         const segWidth = 100 / 15;
-        const targetPercent = (pGroup - 1) * segWidth + (segWidth / 2);
-        arrow.style.right = `calc(${targetPercent}% - 6px)`;
+        const targetPercent = (15 - pGroup) * segWidth + (segWidth / 2);
+        arrow.style.left = targetPercent + '%';
       }
     }, 50);
 
@@ -2620,7 +2625,8 @@
 
         setVal('sHp', d.horsepower, 'כ"ס');
         
-        document.getElementById('spHpLbl').textContent = d.isHybridOrPhev ? 'כ"ס (בנזין)' : 'כוח סוס';
+        const isHybridCar = Boolean(d.isHybridOrPhev || d.isPhev);
+        document.getElementById('spHpLbl').textContent = isHybridCar ? 'כ"ס (בנזין)' : 'כוח סוס';
         document.getElementById('specHpCard').classList.remove('phev-highlight');
 
         setVal('sAccel', d.acceleration0to100, 'שניות');
@@ -2628,10 +2634,11 @@
         setVal('sPowerWeight', perf.powerWeight, 'ק"ג/כ"ס');
 
         const phevBtn = document.getElementById('phevRevealBtn');
-        if (d.isHybridOrPhev && d.combinedHorsepower && d.combinedHorsepower !== d.horsepower) {
+        if (isHybridCar && d.combinedHorsepower && d.combinedHorsepower !== d.horsepower) {
           phevBtn.style.display = 'block';
           phevBtn.classList.remove('active');
-          document.getElementById('phevTagLabel').textContent = d.isPhev ? 'PHEV' : 'HEV';
+          const tagLabel = document.getElementById('phevTagLabel');
+          if (tagLabel) tagLabel.textContent = d.isPhev ? 'PHEV' : 'HEV';
           document.getElementById('phevBtnText').textContent = '⚡ לחץ כאן לחשיפת ההספק המשולב (מנוע + חשמל)';
         } else {
           phevBtn.style.display = 'none';
@@ -2830,7 +2837,7 @@
 
     window.addEventListener('touchmove', e => {
       if (isDragging && e.touches.length === 1) {
-        moveDrag(e.touches.length === 1 ? e.touches[0].clientX : 0, e.touches[0].clientY);
+        moveDrag(e.touches[0].clientX, e.touches[0].clientY);
       }
     }, { passive: true });
 
