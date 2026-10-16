@@ -14,8 +14,30 @@ const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";
 
-// ---------- מנוע טבלת צייד הרכבים (בזיכרון השרת) ----------
-let hunterLeaderboard = {}; // מבנה: { nickname: count }
+// ---------- מנוע טבלת צייד הרכבים (עם שמירה אוטומטית לקובץ בשרת) ----------
+const LEADERBOARD_FILE = path.join(__dirname, 'leaderboard.json');
+
+// טעינת הנתונים מהקובץ הפיזי בעליית השרת (אם קיים)
+let hunterLeaderboard = {};
+try {
+    if (fs.existsSync(LEADERBOARD_FILE)) {
+        const fileData = fs.readFileSync(LEADERBOARD_FILE, 'utf8');
+        hunterLeaderboard = JSON.parse(fileData);
+        console.log('[HUNTER] טבלת המובילים נטענה בהצלחה מהקובץ הפיזי.');
+    }
+} catch (e) {
+    console.error('[HUNTER ERROR] שגיאה בטעינת קובץ טבלת המובילים:', e.message);
+    hunterLeaderboard = {};
+}
+
+// פונקציית עזר לשמירת הנתונים לקובץ הפיזי אוטומטית
+function saveLeaderboardToFile() {
+    try {
+        fs.writeFileSync(LEADERBOARD_FILE, JSON.stringify(hunterLeaderboard, null, 2), 'utf8');
+    } catch (e) {
+        console.error('[HUNTER ERROR] שגיאה בשמירת טבלת המובילים לקובץ:', e.message);
+    }
+}
 
 // שליפת טבלת המובילים לכל המשתמשים
 app.get('/api/hunter/leaderboard', (req, res) => {
@@ -26,13 +48,17 @@ app.get('/api/hunter/leaderboard', (req, res) => {
     res.json({ success: true, leaderboard: sorted });
 });
 
-// עדכון או הוספת רכב לצייד בשרת
+// עדכון או הוספת רכב לצייד בשרת ושמירה לקובץ
 app.post('/api/hunter/update', (req, res) => {
     const { nickname, count } = req.body;
     if (!nickname) {
         return res.status(400).json({ success: false, message: "Missing nickname" });
     }
     hunterLeaderboard[nickname] = Number(count) || 0;
+    
+    // שמירה אוטומטית לקובץ הפיזי בשרת
+    saveLeaderboardToFile();
+
     res.json({ 
         success: true, 
         leaderboard: Object.entries(hunterLeaderboard)
