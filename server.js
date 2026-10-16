@@ -1,4 +1,4 @@
-const express = require('express');
+Const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
@@ -14,30 +14,34 @@ const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";
 
-// ---------- מנוע טבלת צייד הרכבים (עם שמירה אוטומטית לקובץ בשרת) ----------
-const LEADERBOARD_FILE = path.join(__dirname, 'leaderboard.json');
+// ---------- מנוע טבלת צייד הרכבים (ענן - Firebase) ----------
+const FIREBASE_DB_URL = "https://carhunterleaderboard-default-rtdb.europe-west1.firebasedatabase.app";
 
-let hunterLeaderboard = {};
-try {
-    if (fs.existsSync(LEADERBOARD_FILE)) {
-        const fileData = fs.readFileSync(LEADERBOARD_FILE, 'utf8');
-        hunterLeaderboard = JSON.parse(fileData);
-        console.log('[HUNTER] טבלת המובילים נטענה בהצלחה מהקובץ הפיזי.');
-    }
-} catch (e) {
-    console.error('[HUNTER ERROR] שגיאה בטעינת קובץ טבלת המובילים:', e.message);
-    hunterLeaderboard = {};
-}
-
-function saveLeaderboardToFile() {
+async function getCloudLeaderboard() {
     try {
-        fs.writeFileSync(LEADERBOARD_FILE, JSON.stringify(hunterLeaderboard, null, 2), 'utf8');
+        const response = await fetch(`${FIREBASE_DB_URL}/leaderboard.json`);
+        const data = await response.json();
+        return data || {};
     } catch (e) {
-        console.error('[HUNTER ERROR] שגיאה בשמירת טבלת המובילים לקובץ:', e.message);
+        console.error('[HUNTER ERROR] שגיאה בקריאת טבלת המובילים מהענן:', e.message);
+        return {};
     }
 }
 
-app.get('/api/hunter/leaderboard', (req, res) => {
+async function saveCloudLeaderboard(leaderboardData) {
+    try {
+        await fetch(`${FIREBASE_DB_URL}/leaderboard.json`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(leaderboardData)
+        });
+    } catch (e) {
+        console.error('[HUNTER ERROR] שגיאה בשמירת טבלת המובילים לענן:', e.message);
+    }
+}
+
+app.get('/api/hunter/leaderboard', async (req, res) => {
+    const hunterLeaderboard = await getCloudLeaderboard();
     const sorted = Object.entries(hunterLeaderboard)
         .map(([name, count]) => ({ name, count }))
         .sort((a, b) => b.count - a.count);
@@ -45,13 +49,15 @@ app.get('/api/hunter/leaderboard', (req, res) => {
     res.json({ success: true, leaderboard: sorted });
 });
 
-app.post('/api/hunter/update', (req, res) => {
+app.post('/api/hunter/update', async (req, res) => {
     const { nickname, count } = req.body;
     if (!nickname) {
         return res.status(400).json({ success: false, message: "Missing nickname" });
     }
+    
+    let hunterLeaderboard = await getCloudLeaderboard();
     hunterLeaderboard[nickname] = Number(count) || 0;
-    saveLeaderboardToFile();
+    await saveCloudLeaderboard(hunterLeaderboard);
 
     res.json({ 
         success: true, 
