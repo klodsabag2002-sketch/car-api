@@ -8,7 +8,6 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Segoe UI', Arial, Helvetica, sans-serif; background: #030712; color: #f8fafc; direction: rtl; min-height: 100vh; overflow-x: hidden; }
   
-  /* מעטפת טלפון עם אפקט זוהר עתידני */
   .phone { 
     max-width: 390px; 
     margin: 0 auto; 
@@ -21,7 +20,6 @@
     position: relative;
   }
 
-  /* סרגל עליון סייבר */
   .topbar { 
     background: rgba(3, 7, 18, 0.85); 
     backdrop-filter: blur(16px); 
@@ -42,7 +40,6 @@
   .topbar .i:hover { background: rgba(56,189,248,0.25); box-shadow: 0 0 12px rgba(56,189,248,0.5); }
   .topbar .i.hidden { visibility: hidden; }
 
-  /* חיפוש סייבר */
   .search-box { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); padding: 20px 16px; border-bottom: 1px solid rgba(56,189,248,0.15); }
   .plate { display: flex; align-items: center; background: #fbbf24; border: 2px solid #38bdf8; border-radius: 16px; height: 64px; overflow: hidden; direction: ltr; box-shadow: 0 0 25px rgba(56, 189, 248, 0.3), inset 0 2px 5px rgba(255,255,255,0.4); }
   .plate .strip { background: #1e3a8a; color: #fff; width: 52px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; border-right: 1px solid rgba(0,0,0,0.3); }
@@ -61,7 +58,6 @@
   .km-line { display: none; align-items: center; justify-content: center; gap: 8px; color: #4ade80; font-size: 13px; background: rgba(34, 197, 94, 0.1); border-bottom: 1px solid rgba(34, 197, 94, 0.2); padding: 10px 12px; font-weight: 800; text-shadow: 0 0 8px rgba(74,222,128,0.4); }
   .km-line .km-ic { border: 2px solid #4ade80; border-radius: 6px; padding: 0 4px; font-size: 11px; box-shadow: 0 0 6px rgba(74,222,128,0.4); }
 
-  /* היסטוריה עתידנית */
   .history { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(14px); margin: 16px 14px 0; border-radius: 18px; border: 1px solid rgba(56,189,248,0.2); display: none; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
   .history.show { display: block; }
   .history-head { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; background: rgba(3, 7, 18, 0.5); border-bottom: 1px solid rgba(56,189,248,0.15); }
@@ -90,7 +86,7 @@
   .detail { display: none; }
   .detail.show { display: block; }
 
-  /* טאבים ניאון */
+  /* טאבים ניאון עם צייד רכבים בצד שמאל */
   .tabs { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(14px); display: none; justify-content: space-around; align-items: stretch; border-bottom: 1px solid rgba(56,189,248,0.2); margin-top: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
   .tabs.show { display: flex; }
   .tab { flex: 1; text-align: center; padding: 14px 0 10px; color: #94a3b8; font-size: 13px; cursor: pointer; border-bottom: 3px solid transparent; font-weight: 800; transition: all 0.3s; }
@@ -114,7 +110,6 @@
     position: relative;
   }
   
-  /* טבעת הולוגרמה מסתובבת ברקע */
   .logo-3d-scene::before {
     content: '';
     position: absolute;
@@ -179,7 +174,6 @@
   .car-name { text-align: center; font-size: 26px; color: #f8fafc; font-weight: 900; margin-top: 4px; letter-spacing: -0.5px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
   .car-trim { text-align: center; font-size: 16px; color: #38bdf8; font-weight: 900; margin-top: 2px; text-shadow: 0 0 10px rgba(56,189,248,0.4); }
 
-  /* קוביות סטטוס ניאון */
   .status-row { display: flex; justify-content: space-around; padding: 20px 14px 10px; gap: 10px; }
   .st { text-align: center; flex: 1; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(12px); padding: 16px 8px; border-radius: 18px; border: 1px solid rgba(56,189,248,0.2); box-shadow: 0 8px 25px rgba(0,0,0,0.4); transition: transform 0.2s, box-shadow 0.2s; }
   .st.clickable { cursor: pointer; }
@@ -200,7 +194,6 @@
   .own-panel { display: none; margin: 14px 14px 0; }
   .own-panel.show { display: block; }
 
-  /* כרטיס מפרט עתידני */
   .spec-card { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(12px); border-radius: 20px; margin: 16px 14px 0; padding: 18px 10px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; border: 1px solid rgba(56,189,248,0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
   .spec { text-align: center; background: rgba(3, 7, 18, 0.5); padding: 12px 2px; border-radius: 14px; border: 1px solid rgba(56,189,248,0.1); transition: all 0.2s; }
   .spec:hover { border-color: rgba(56,189,248,0.4); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(56,189,248,0.2); }
@@ -223,7 +216,6 @@
     font-weight: 600;
   }
 
-  /* רשימת פרטים סייבר */
   .list-card { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(12px); border-radius: 20px; margin: 16px 14px 0; overflow: hidden; border: 1px solid rgba(56,189,248,0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
   .lrow { display: flex; align-items: center; padding: 14px 18px; border-bottom: 1px solid rgba(255,255,255,0.04); transition: background 0.15s; }
   .lrow:hover { background: rgba(56, 189, 248, 0.04); }
@@ -237,7 +229,6 @@
   .copy-btn:hover { background: #38bdf8; color: #030712; box-shadow: 0 0 15px rgba(56,189,248,0.6); }
   .copy-btn.show { display: inline-block; }
 
-  /* טסט קארד ניאון */
   .test-card { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(12px); border-radius: 20px; margin: 16px 14px 0; padding: 18px; border: 1px solid rgba(56,189,248,0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
   .test-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 8px; border-bottom: 1px solid rgba(255,255,255,0.04); }
   .test-row:last-child { border-bottom: none; }
@@ -247,7 +238,6 @@
   .test-countdown { text-align: center; font-size: 13px; font-weight: 900; color: #4ade80; margin-top: 12px; background: rgba(34, 197, 94, 0.12); padding: 12px; border-radius: 12px; border: 1px solid rgba(34, 197, 94, 0.3); text-shadow: 0 0 8px rgba(74,222,128,0.4); }
   .test-countdown.bad { color: #f87171; background: rgba(239, 68, 68, 0.12); border-color: rgba(239, 68, 68, 0.3); text-shadow: 0 0 8px rgba(248,113,113,0.4); }
 
-  /* טבלאות בעלות והיסטוריה סייבר */
   .own-table { width: 100%; border-collapse: collapse; background: rgba(15, 23, 42, 0.85); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); font-size: 13px; border: 1px solid rgba(56,189,248,0.2); }
   .own-table th { background: linear-gradient(135deg, #0284c7, #0369a1); color: #fff; padding: 14px 10px; font-weight: 900; text-align: center; }
   .own-table td { padding: 12px 10px; text-align: center; color: #f8fafc; border-bottom: 1px solid rgba(255,255,255,0.04); font-weight: 700; }
@@ -260,7 +250,100 @@
   .own-extra .v { font-weight: 900; color: #38bdf8; direction: ltr; text-shadow: 0 0 8px rgba(56,189,248,0.4); }
   .own-msg { background: rgba(15, 23, 42, 0.7); border-radius: 16px; padding: 18px; font-size: 13px; color: #94a3b8; text-align: center; margin-top: 8px; border: 1px solid rgba(56,189,248,0.2); font-weight: 700; }
 
-  /* כפתור דיווח ניאון */
+  /* עיצוב ייחודי למסך "צייד רכבים" */
+  .hunter-container {
+    padding: 16px 14px 30px;
+    animation: fadeIn 0.3s ease;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hunter-banner {
+    background: linear-gradient(135deg, rgba(2,132,199,0.25), rgba(15,23,42,0.9));
+    border: 1px solid rgba(56,189,248,0.4);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6), inset 0 0 15px rgba(56,189,248,0.1);
+    margin-bottom: 16px;
+  }
+  .hunter-banner h2 {
+    font-size: 20px;
+    font-weight: 900;
+    color: #38bdf8;
+    margin-bottom: 6px;
+    text-shadow: 0 0 10px rgba(56,189,248,0.5);
+  }
+  .hunter-banner p {
+    font-size: 13px;
+    color: #cbd5e1;
+    line-height: 1.5;
+    font-weight: 700;
+  }
+  .hunter-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .hunter-stat-box {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(56,189,248,0.2);
+    border-radius: 16px;
+    padding: 14px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  }
+  .hunter-stat-box .num {
+    font-size: 22px;
+    font-weight: 900;
+    color: #38bdf8;
+    text-shadow: 0 0 8px rgba(56,189,248,0.4);
+  }
+  .hunter-stat-box .lbl {
+    font-size: 11px;
+    color: #94a3b8;
+    margin-top: 4px;
+    font-weight: 800;
+  }
+  .hunter-section-title {
+    font-size: 15px;
+    font-weight: 900;
+    color: #f8fafc;
+    margin: 20px 4px 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-shadow: 0 0 8px rgba(255,255,255,0.2);
+  }
+  .hunter-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(15, 23, 42, 0.85);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    font-size: 13px;
+    border: 1px solid rgba(56,189,248,0.2);
+  }
+  .hunter-table th {
+    background: linear-gradient(135deg, #0284c7, #0369a1);
+    color: #fff;
+    padding: 12px 8px;
+    font-weight: 900;
+    text-align: center;
+  }
+  .hunter-table td {
+    padding: 12px 8px;
+    text-align: center;
+    color: #f8fafc;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    font-weight: 700;
+  }
+  .hunter-table tr:nth-child(even) td { background: rgba(3, 7, 18, 0.4); }
+  .hunter-table tr.my-row td { background: rgba(56, 189, 248, 0.15); color: #38bdf8; font-weight: 900; }
+
   .report-btn-wrap { text-align: center; margin: 28px 14px 16px; }
   .report-btn {
     display: inline-flex;
@@ -280,7 +363,6 @@
   }
   .report-btn:hover { background: rgba(56, 189, 248, 0.15); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(56,189,248,0.3); }
 
-  /* מודל דיווח פסיכי */
   .modal-overlay {
     display: none;
     position: fixed;
@@ -339,7 +421,6 @@
   .report-status.success { display: block; background: rgba(34, 197, 94, 0.15); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.4); text-shadow: 0 0 8px rgba(74,222,128,0.4); }
   .report-status.error { display: block; background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.4); text-shadow: 0 0 8px rgba(248,113,113,0.4); }
 
-  /* --- מסך מעבר סייבר הולוגרפי ייחודי לחברה --- */
   #cyberTransitionOverlay {
     position: fixed;
     inset: 0;
@@ -445,12 +526,13 @@
       <span id="kmText"></span>
     </div>
 
-    <!-- 4 הטאבים -->
+    <!-- 4 הטאבים (צייד רכבים מועבר הכי שמאלה) -->
     <div id="tabs" class="tabs">
-      <div class="tab active" data-tab="general"><span class="ic">🚗</span>כללי</div>
-      <div class="tab" data-tab="tech"><span class="ic">⚙️</span>מפרט טכני</div>
-      <div class="tab" data-tab="safety"><span class="ic">🛡️</span>בטיחות</div>
       <div class="tab" data-tab="env"><span class="ic">🌿</span>סביבה</div>
+      <div class="tab" data-tab="safety"><span class="ic">🛡️</span>בטיחות</div>
+      <div class="tab" data-tab="tech"><span class="ic">⚙️</span>מפרט טכני</div>
+      <div class="tab active" data-tab="general"><span class="ic">🚗</span>כללי</div>
+      <div class="tab" data-tab="hunter"><span class="ic">🎯</span>צייד רכבים</div>
     </div>
 
     <div id="cardGeneral">
@@ -527,7 +609,7 @@
           <div class="lrow"><span class="li">📅</span><span class="ll">שנת ייצור</span><span class="sp"></span><span class="lv" id="vYear"></span></div>
           <div class="lrow"><span class="li">🎨</span><span class="ll">צבע</span><span class="sp"></span><span class="lv" id="vColor"></span></div>
           <div class="lrow"><span class="li">🔢</span><span class="ll">מספר רכב</span><span class="sp"></span><span class="lv" id="vPlate"></span></div>
-          <div class="lrow"><span class="li">🔩</span><span class="ll">מספר שלדה</span><span class="sp"></span><span class="lv" id="vChassis"></span><button id="copyChassis" class="copy-btn">העתק</button></div>
+          <div class="lrow"><span class="li">🔩</span><span class="ll">מספר שלדה</span><span class="sp"></span><span class="lv" id="vChassis"></span><button id="copyChassis" class="copy-btn">העתק קישור</button></div>
           <div class="lrow"><span class="li">🛞</span><span class="ll">מידות צמיג קדמי</span><span class="sp"></span><span class="lv" id="vTireFront"></span></div>
           <div class="lrow"><span class="li">🛞</span><span class="ll">מידות צמיג אחורי</span><span class="sp"></span><span class="lv" id="vTireRear"></span></div>
           <div class="lrow"><span class="li">🔁</span><span class="ll">מספר בעלים</span><span class="sp"></span><span class="lv" id="vOwners"></span></div>
@@ -552,6 +634,39 @@
     <div id="cardTech" style="display:none;"></div>
     <div id="cardSafety" style="display:none; padding: 40px; text-align: center; color: #94a3b8; font-weight: 800;">נתוני בטיחות בקרוב...</div>
     <div id="cardEnv" style="display:none; padding: 40px; text-align: center; color: #94a3b8; font-weight: 800;">נתוני סביבה בקרוב...</div>
+    
+    <!-- מסך משחק "צייד רכבים" אוטומטי -->
+    <div id="cardHunter" class="hunter-container" style="display:none;">
+      <div class="hunter-banner">
+        <h2>🎯 מגרש ציידי הרכבים</h2>
+        <p>ברוך הבא למשחק האוטומטי! כל רכב חדש שאתה מחפש ובודק באפליקציה נאסף אוטומטית לאוסף שלך וצובר לך נקודות ניסיון.</p>
+      </div>
+
+      <div class="hunter-stats-grid">
+        <div class="hunter-stat-box">
+          <div class="num" id="hunterMyName">-</div>
+          <div class="lbl">הכינוי שלך</div>
+        </div>
+        <div class="hunter-stat-box">
+          <div class="num" id="hunterScore">0</div>
+          <div class="lbl">רכבים באוסף</div>
+        </div>
+      </div>
+
+      <div class="hunter-section-title">🏆 טבלת הציידים המובילים</div>
+      <table class="hunter-table">
+        <thead>
+          <tr>
+            <th>מיקום</th>
+            <th>כינוי צייד</th>
+            <th>רכבים באוסף</th>
+          </tr>
+        </thead>
+        <tbody id="hunterLeaderboardBody">
+          <!-- מתעדכן אוטומטית -->
+        </tbody>
+      </table>
+    </div>
   </div>
 
 </div>
@@ -597,10 +712,94 @@
   const API_BASE = "https://car-api-huth.onrender.com";
   const HIST_KEY = "carSearchHistory";
   const HIST_MAX = 10;
+  const HUNTER_COLLECTION_KEY = "hunterCarCollection";
+  const HUNTER_NICK_KEY = "hunterUserNickname";
 
   let currentPlate = "";
   let currentCarData = null;
   let inDetail = false;
+
+  // ---------- ניהול כינוי משתמש ואוסף צייד אוטומטי ----------
+  function getMyNickname() {
+    let nick = localStorage.getItem(HUNTER_NICK_KEY);
+    if (!nick) {
+      const adjs = ["Turbo", "Cyber", "Nitro", "Apex", "Shadow", "Ghost", "Stellar", "Vortex"];
+      const nouns = ["Hunter", "Driver", "Racer", "Pilot", "Drifter", "Viper", "Falcon", "Nomad"];
+      nick = adjs[Math.floor(Math.random() * adjs.length)] + "_" + nouns[Math.floor(Math.random() * nouns.length)] + Math.floor(10 + Math.random() * 89);
+      localStorage.setItem(HUNTER_NICK_KEY, nick);
+    }
+    return nick;
+  }
+
+  function getHunterCollection() {
+    try {
+      const col = JSON.parse(localStorage.getItem(HUNTER_COLLECTION_KEY));
+      return Array.isArray(col) ? col : [];
+    } catch (e) { return []; }
+  }
+
+  function addCarToHunterCollection(plate, carData) {
+    if (!plate) return;
+    let col = getHunterCollection();
+    // בדיקה האם הרכב כבר קיים באוסף
+    if (!col.some(x => x.plate === plate)) {
+      col.push({
+        plate: plate,
+        name: cleanText((carData.manufacturer || '') + ' ' + (carData.model || '')),
+        time: Date.now()
+      });
+      localStorage.setItem(HUNTER_COLLECTION_KEY, JSON.stringify(col));
+    }
+    updateHunterUI();
+  }
+
+  function updateHunterUI() {
+    const col = getHunterCollection();
+    const myNick = getMyNickname();
+    
+    document.getElementById('hunterMyName').textContent = myNick;
+    document.getElementById('hunterScore').textContent = col.length;
+
+    // טבלת מובילים דינמית המשלבת את המשתמש יחד עם ציידים וירטואליים נוספים לתחרות
+    const tbody = document.getElementById('hunterLeaderboardBody');
+    tbody.textContent = '';
+
+    const virtualHunters = [
+      { name: "Speed_Demon99", count: 14 },
+      { name: "Apex_Drifter42", count: 9 },
+      { name: "Turbo_Ghost77", count: 6 },
+      { name: "RoadKing_88", count: 3 }
+    ];
+
+    // הוספת המשתמש הנוכחי לרשימה
+    let leaderboard = [
+      { name: myNick + " (אתה)", count: col.length, isMe: true },
+      ...virtualHunters
+    ];
+
+    // מיון לפי כמות רכבים מהגבוה לנמוך
+    leaderboard.sort((a, b) => b.count - a.count);
+
+    leaderboard.forEach((h, index) => {
+      const tr = document.createElement('tr');
+      if (h.isMe) tr.className = 'my-row';
+
+      const rankTd = document.createElement('td');
+      const medals = ['🥇', '🥈', '🥉'];
+      rankTd.textContent = index < 3 ? medals[index] : (index + 1);
+
+      const nameTd = document.createElement('td');
+      nameTd.textContent = h.name;
+
+      const countTd = document.createElement('td');
+      countTd.textContent = h.count;
+
+      tr.appendChild(rankTd);
+      tr.appendChild(nameTd);
+      tr.appendChild(countTd);
+      tbody.appendChild(tr);
+    });
+  }
 
   function formatPlate(v) {
     const d = String(v || '').replace(/\D/g, '').slice(0, 8);
@@ -1140,7 +1339,6 @@
     }
   }
 
-  // ---------- לשונית "מפרט טכני" ----------
   function renderTech(d) {
     const box = document.getElementById('cardTech');
     box.textContent = '';
@@ -1229,7 +1427,6 @@
     box.appendChild(note);
   }
 
-  // הפעלת מסך המעבר ההולוגרפי הייחודי לפי מותג הרכב
   function triggerCyberTransition(brand, manufacturer, model, onComplete) {
     const overlay = document.getElementById('cyberTransitionOverlay');
     const ring = document.getElementById('transitHoloRing');
@@ -1320,9 +1517,11 @@
       currentPlate = plate;
       currentCarData = d;
 
+      // איסוף אוטומטי למשחק צייד הרכבים
+      addCarToHunterCollection(plate, d);
+
       const brand = findBrand(d.manufacturer, d.model);
 
-      // הפעלת מסך המעבר ההולוגרפי המותאם אישית לחברה לפני הצגת הנתונים
       triggerCyberTransition(brand, d.manufacturer, d.model, async () => {
         await showBrand(d.manufacturer, brand);
 
@@ -1388,7 +1587,7 @@
     }
   }
 
-  // מעבר בין לשוניות (טאבים)
+  // מעבר בין לשוניות (טאבים) כולל צייד רכבים
   document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', () => {
       document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -1398,10 +1597,14 @@
       document.getElementById('cardTech').style.display = name === 'tech' ? '' : 'none';
       document.getElementById('cardSafety').style.display = name === 'safety' ? '' : 'none';
       document.getElementById('cardEnv').style.display = name === 'env' ? '' : 'none';
+      document.getElementById('cardHunter').style.display = name === 'hunter' ? '' : 'none';
+
+      if (name === 'hunter') {
+        updateHunterUI();
+      }
     });
   });
 
-  // מנגנון דיווח
   const reportModal = document.getElementById('reportModal');
   const openReportBtn = document.getElementById('openReportBtn');
   const closeReportBtn = document.getElementById('closeReportBtn');
@@ -1472,7 +1675,6 @@
   document.getElementById('ownBtn').addEventListener('click', toggleOwnPanel);
   document.getElementById('backBtn').addEventListener('click', showHome);
 
-  // מנגנון סיבוב 360 מעלות לסמל הרכב בגרירה
   (function initLogo360() {
     const spinner = document.getElementById('logoSpinner');
     if (!spinner) return;
@@ -1529,6 +1731,7 @@
   })();
 
   renderHistory();
+  updateHunterUI();
 </script>
 </body>
 </html>
