@@ -1,4 +1,18 @@
-// 1. הגדרת המאגר
+// phevData.js - מאגר רכבי פלאג-אין הייבריד (PHEV) בישראל
+
+const HE_TO_EN_MAP = {
+  "קופרה": "cupra", "סיאט": "seat", "סקודה": "skoda", "פולקסווגן": "volkswagen",
+  "פולקסוואגן": "volkswagen", "אאודי": "audi", "אודי": "audi", "טויוטה": "toyota",
+  "לקסוס": "lexus", "יונדאי": "hyundai", "קיה": "kia", "במוו": "bmw", "ב.מ.וו": "bmw",
+  "מרצדס": "mercedes", "וולוו": "volvo", "וולבו": "volvo", "פיג'ו": "peugeot",
+  "פיגו": "peugeot", "סיטרואן": "citroen", "אופל": "opel", "ג'יפ": "jeep", "גיפ": "jeep",
+  "אם ג'י": "mg", "מ.ג": "mg", "מיצובישי": "mitsubishi", "רנו": "renault",
+  "פורד": "ford", "פורשה": "porsche", "בי וי די": "byd", "בי ווי די": "byd",
+  "פורמנטור": "formentor", "לאון": "leon", "אוקטביה": "octavia", "סופרב": "superb",
+  "גולף": "golf", "טיגואן": "tiguan", "ראב": "rav4", "ראב4": "rav4", "פריוס": "prius",
+  "ספורטאז": "sportage", "סורנטו": "sorento", "נירו": "niro", "טוסון": "tucson"
+};
+
 const PHEV_DATABASE = {
   // קבוצת צ'רי / ג'אקו / אומודה / ג'טור
   "jaecoo_5": 204,
@@ -77,14 +91,15 @@ const PHEV_DATABASE = {
   "lynk_09_emp": 519,
 
   // קבוצת VAG (קופרה, סקודה, פולקסווגן, אאודי, פורשה, בנטלי, למבורגיני)
-  "cupra_formentor_phev": 272,
-  "cupra_formentor_phev_204": 204,
-  "cupra_leon_phev": 245,
-  "cupra_leon_phev_204": 204,
+  "cupra_formentor_vz": 245,
+  "cupra_formentor_phev": 204,
+  "cupra_formentor_245": 245,
+  "cupra_leon_vz": 245,
+  "cupra_leon_phev": 204,
   "cupra_terramar_phev": 272,
   "cupra_terramar_phev_204": 204,
-  "skoda_octavia_iv": 204,
   "skoda_octavia_rs_iv": 245,
+  "skoda_octavia_iv": 204,
   "skoda_superb_iv": 218,
   "skoda_superb_phev_2025": 204,
   "skoda_kodiaq_phev": 204,
@@ -146,14 +161,11 @@ const PHEV_DATABASE = {
   "hyundai_tucson_phev_2026": 283,
   "hyundai_santa_fe_phev": 265,
   "hyundai_ioniq_phev": 141,
-  "hyundai_ioniq_phev_old": 141,
   "hyundai_sonata_phev": 202,
 
   // טויוטה / לקסוס / סוזוקי / הונדה
   "toyota_rav4_phev": 306,
   "toyota_prius_phev": 223,
-  "toyota_prius_phev_old": 122,
-  "toyota_prius_prime_2017": 122,
   "toyota_c-hr_phev": 223,
   "suzuki_across": 306,
   "lexus_nx_450h": 309,
@@ -288,27 +300,59 @@ const PHEV_DATABASE = {
   "mitsubishi_eclipse_cross_phev": 188
 };
 
-// 2. פונקציית החיפוש החכמה + Fallback
-function getCombinedPHEVPower(manufacturer, model, listedHp) {
-  const fullText = `${manufacturer || ''} ${model || ''}`.toLowerCase().replace(/[^a-z0-9]/g, '');
+function getCombinedPHEVPower(carDesc, model, listedHp, engineCc) {
+  if (!listedHp) return listedHp;
 
-  for (const [key, combinedHp] of Object.entries(PHEV_DATABASE)) {
-    const cleanKey = key.replace(/_/g, '');
-    if (fullText.includes(cleanKey)) {
-      return combinedHp;
+  const rawText = `${carDesc || ''} ${model || ''}`.toLowerCase();
+  const cc = Number(engineCc) || 0;
+
+  // 1. זיהוי ודאי עבור דגמי קבוצת VAG פלאג-אין עם מנוע 1.4 (1395 סמ"ק)
+  if (cc === 1395) {
+    if (rawText.includes('formentor') || rawText.includes('פורמנטור') || rawText.includes('leon') || rawText.includes('לאון')) {
+      if (rawText.includes('vz')) {
+        return 245; // גרסת VZ e-HYBRID
+      }
+      return 204; // גרסת e-HYBRID רגילה
+    }
+    if (rawText.includes('octavia') || rawText.includes('אוקטביה')) {
+      return rawText.includes('rs') ? 245 : 204;
+    }
+    if (rawText.includes('golf') || rawText.includes('גולף')) {
+      return 245; // Golf GTE
     }
   }
 
-  // Fallback: אם משרד התחבורה מחזיר הספק נמוך של מנוע בנזין בלבד עבור PHEV
-  const isPHEV = fullText.includes('phev') || fullText.includes('dmi') || fullText.includes('plugin') || fullText.includes('hybrid');
+  // 2. תרגום מעברית לאנגלית עבור יתר הדגמים
+  let normalized = rawText;
+  for (const [he, en] of Object.entries(HE_TO_EN_MAP)) {
+    if (normalized.includes(he)) {
+      normalized += ` ${en}`;
+    }
+  }
+
+  const cleanText = normalized.replace(/[^a-z0-9]/g, '');
+
+  // 3. התאמה מול המאגר
+  for (const [key, combinedHp] of Object.entries(PHEV_DATABASE)) {
+    const cleanKey = key.replace(/_/g, '');
+    if (cleanText.includes(cleanKey)) {
+      if (combinedHp > listedHp) {
+        return combinedHp;
+      }
+      return listedHp;
+    }
+  }
+
+  // 4. רשת ביטחון לרכבי פלאג-אין שמופיעים מפורשות ברישוי
+  const isPHEV = cleanText.includes('phev') || cleanText.includes('dmi') || cleanText.includes('plugin') || cleanText.includes('ehybrid');
   if (isPHEV && listedHp && listedHp < 170) {
-    return Math.round(listedHp * 1.6);
+    const estimated = Math.round(listedHp * 1.6);
+    if (estimated > listedHp) return estimated;
   }
 
   return listedHp;
 }
 
-// 3. ייצוא תואם Node.js (CommonJS)
 module.exports = {
   PHEV_DATABASE,
   getCombinedPHEVPower
