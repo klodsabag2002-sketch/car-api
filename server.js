@@ -5,6 +5,20 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// ---------- תוספת: טעינת מאגר PHEV ----------
+let getCombinedPHEVPower = (m, mod, hp) => hp;
+let hasPhevData = false;
+try {
+    const phevModule = require('./phevData');
+    if (phevModule && phevModule.getCombinedPHEVPower) {
+        getCombinedPHEVPower = phevModule.getCombinedPHEVPower;
+        hasPhevData = true;
+    }
+} catch (e) {
+    console.log('[PHEV DATA] phevData.js לא נטען, ממשיך כרגיל.');
+}
+// ------------------------------------------
+
 app.use(cors());
 app.use(express.json());
 
@@ -328,6 +342,14 @@ app.get('/api/car/:plate', async (req, res) => {
         const trim = toText(row?.ramat_gimur) || toText(car.ramat_gimur) || null;
         const year = car.shnat_yitzur || "לא ידוע";
         const hp = toNumber(row?.koah_sus) ?? toNumber(car.koah_sus);
+
+        // ---------- תוספת: חישוב הספק משולב מבלי לדרוס את ה-hp הרגיל ----------
+        const combinedHp = hasPhevData
+            ? getCombinedPHEVPower(`${manufacturer} ${car.degem_nm || ''} ${trim || ''}`, model, hp)
+            : hp;
+        const isPhev = Boolean(combinedHp && combinedHp !== hp);
+        // -------------------------------------------------------------------
+
         const engineCc = toNumber(row?.nefah_manoa) ?? toNumber(car.nefah_manoa);
         const testExpiry = car.tokef_dt || null;
         const bodyType = resolveBodyType(car, row);
@@ -391,7 +413,10 @@ app.get('/api/car/:plate', async (req, res) => {
                 tireFront: toText(car.zmig_kidmi),
                 tireRear: toText(car.zmig_ahori),
                 lastTest: toText(car.mivchan_acharon_dt),
-                engineCc, horsepower: hp,
+                engineCc, 
+                horsepower: hp,
+                combinedHorsepower: isPhev ? combinedHp : null, // תוספת: הספק משולב בלבד אם קיים
+                isPhev,                                         // תוספת: דגל שמציין אם הרכב הוא פלאג-אין
                 acceleration0to100: acceleration ? acceleration.seconds : null,
                 accelerationSource: acceleration ? acceleration.source : null,
                 importerPrice: importerData.importerPrice,
