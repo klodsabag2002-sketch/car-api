@@ -51,6 +51,26 @@
   },
   {
     "make": "פורד גרמניה",
+    "model": "FIESTA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1596,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (פורד פיאסטה 1.6 105 כ\"ס)"
+  },
+  {
+    "make": "פורד",
+    "model": "פיאסטה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1596,
+    "seconds": 11.2,
+    "source": "רישוי רכב / נתון יצרן (פורד פיאסטה 105 כ\"ס)"
+  },
+  {
+    "make": "פורד גרמניה",
     "model": "FOCUS",
     "yearStart": null,
     "yearEnd": null,
