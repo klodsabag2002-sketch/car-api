@@ -1609,6 +1609,32 @@
     "seconds": 6.5,
     "source": "רישוי רכב / נתון יצרן (דור 2 - 40 TFSI 207)"
   },
+
+  /* =========================================================================
+     CUPRA & SEAT CUPRA - כל הדגמים והווריאציות לפי נתוני משרד התחבורה
+     ========================================================================= */
+
+  /* --- CUPRA LEON (כולל סיאט ספרד CUPRA LEON) --- */
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1984,
+    "seconds": 5.7,
+    "source": "נתון יצרן (קופרה לאון VZ 300)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "LEON VZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1984,
+    "seconds": 5.7,
+    "source": "נתון יצרן (קופרה לאון VZ 300)"
+  },
   {
     "make": "Cupra",
     "model": "Leon",
@@ -1618,6 +1644,36 @@
     "cc": 1984,
     "seconds": 5.7,
     "source": "נתון יצרן (5.7 שניות)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "LEON VZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 6.7,
+    "source": "נתון יצרן (קופרה לאון VZ e-HYBRID פלאג-אין 245 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 7.5,
+    "source": "נתון יצרן (קופרה לאון e-HYBRID פלאג-אין 204 כ\"ס)"
+  },
+  {
+    "make": "Cupra",
+    "model": "Leon",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1395,
+    "seconds": 6.7,
+    "source": "נתון יצרן (e-HYBRID VZ 245)"
   },
   {
     "make": "Cupra",
@@ -1630,6 +1686,26 @@
     "source": "נתון יצרן (6.7 שניות)"
   },
   {
+    "make": "סיאט ספרד CUPRA",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1984,
+    "seconds": 6.4,
+    "source": "נתון יצרן (קופרה לאון 2.0 TSI 245 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 7.2,
+    "source": "נתון יצרן (קופרה לאון 2.0 TSI 190)"
+  },
+  {
     "make": "Cupra",
     "model": "Leon",
     "yearStart": null,
@@ -1638,6 +1714,26 @@
     "cc": 1984,
     "seconds": 7.2,
     "source": "נתון יצרן (7.2 שניות)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.7,
+    "source": "נתון יצרן (קופרה לאון 1.5 eTSI)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "LEON",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 0,
+    "seconds": 8.7,
+    "source": "cupraofficial.co.il (eTSI 1.5)"
   },
   {
     "make": "Cupra",
@@ -1650,104 +1746,146 @@
     "source": "cupraofficial.co.il (eTSI 1.5)"
   },
   {
-    "make": "Cupra",
-    "model": "Ateca",
+    "make": "סיאט ספרד CUPRA",
+    "model": "LEON SPORTSTOURER",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 300,
+    "hp": 310,
     "cc": 1984,
     "seconds": 4.9,
-    "source": "נתון יצרן CUPRA (cupra.com), אומת ב-AMS"
+    "source": "נתון יצרן (קופרה לאון סטיישן 4Drive 310)"
+  },
+
+  /* --- CUPRA FORMENTOR (כל צורות הרישום: סיאט ספרד, FORMENTOR VZ, FORMEN BP/BB) --- */
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "FORMENTOR VZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 7.0,
+    "source": "נתון יצרן (פורמנטור VZ e-HYBRID פלאג-אין 245 כ\"ס)"
   },
   {
-    "make": "Cupra",
-    "model": "Terramar",
+    "make": "סיאט ספרד CUPRA",
+    "model": "FORMENTOR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 7.8,
+    "source": "נתון יצרן (פורמנטור e-HYBRID פלאג-אין 204 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "FORMEN BP/BB",
     "yearStart": null,
     "yearEnd": null,
     "hp": 150,
     "cc": 1498,
-    "seconds": 9.3,
-    "source": "נתון יצרן CUPRA (cupra.com), Terramar 1.5 eTSI"
+    "seconds": 8.9,
+    "source": "נתון יצרן (פורמנטור 1.5 TSI / eTSI 150)"
   },
   {
-    "make": "Cupra",
-    "model": "Terramar",
+    "make": "סיאט ספרד CUPRA",
+    "model": "FORMENTOR",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 204,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 8.9,
+    "source": "נתון יצרן (פורמנטור 1.5 TSI / eTSI 150)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "FORMENTOR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 0,
+    "seconds": 8.9,
+    "source": "נתון יצרן (פורמנטור 1.5 eTSI)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "FORMENTOR VZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 1984,
+    "seconds": 4.9,
+    "source": "נתון יצרן (פורמנטור VZ 310 כ\"ס 4Drive)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "FORMENTOR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 310,
+    "cc": 1984,
+    "seconds": 4.9,
+    "source": "נתון יצרן (פורמנטור VZ 310 כ\"ס 4Drive)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "FORMENTOR VZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 333,
+    "cc": 1984,
+    "seconds": 4.8,
+    "source": "נתון יצרן (פורמנטור VZ 333 מתיחת פנים)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "FORMENTOR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 333,
+    "cc": 1984,
+    "seconds": 4.8,
+    "source": "נתון יצרן (פורמנטור VZ 333 מתיחת פנים)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "FORMENTOR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1984,
+    "seconds": 6.8,
+    "source": "נתון יצרן (פורמנטור 2.0 TSI 245)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "FORMENTOR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
     "cc": 1984,
     "seconds": 7.1,
-    "source": "נתון יצרן CUPRA (cupra.com), Terramar 2.0 TSI 4DRIVE"
+    "source": "נתון יצרן (פורמנטור 2.0 TSI 190 4Drive)"
   },
   {
-    "make": "Cupra",
-    "model": "Terramar",
+    "make": "סיאט ספרד CUPRA",
+    "model": "FORMENTOR VZ5",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 265,
-    "cc": 1984,
-    "seconds": 5.9,
-    "source": "נתון יצרן CUPRA (cupra.com), Terramar VZ 2.0 TSI"
+    "hp": 390,
+    "cc": 2480,
+    "seconds": 4.2,
+    "source": "נתון יצרן (פורמנטור VZ5 2.5 טורבו 390)"
   },
   {
-    "make": "Cupra",
-    "model": "Tavascan",
+    "make": "סיאט ספרד CUPRA",
+    "model": "FORMENTOR",
     "yearStart": null,
     "yearEnd": null,
-    "hp": 286,
-    "cc": 0,
-    "seconds": 6.8,
-    "source": "נתון יצרן CUPRA (cupra.com), Tavascan Endurance 286 כ\"ס"
-  },
-  {
-    "make": "Cupra",
-    "model": "Tavascan",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 340,
-    "cc": 0,
-    "seconds": 5.5,
-    "source": "נתון יצרן CUPRA (cupra.com), Tavascan VZ 340 כ\"ס"
-  },
-  {
-    "make": "סיאט גרמניה",
-    "model": "BORN",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (סוללת 58 קוט\"ש)"
-  },
-  {
-    "make": "סיאט גרמניה",
-    "model": "BORN PREMIUM",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 7.3,
-    "source": "רישוי רכב / נתון יצרן (סוללת 58 קוט\"ש)"
-  },
-  {
-    "make": "Cupra",
-    "model": "Born",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 204,
-    "cc": 0,
-    "seconds": 7.3,
-    "source": "נתון יצרן (סוללת 58 קוט\"ש)"
-  },
-  {
-    "make": "Cupra",
-    "model": "Born",
-    "yearStart": null,
-    "yearEnd": null,
-    "hp": 231,
-    "cc": 0,
-    "seconds": 6.6,
-    "source": "נתון יצרן (גרסת e-Boost, סוללת 58 קוט\"ש)"
+    "hp": 272,
+    "cc": 1498,
+    "seconds": 6.5,
+    "source": "נתון יצרן (פורמנטור VZ e-HYBRID 272 מתיחת פנים)"
   },
   {
     "make": "Cupra",
@@ -1848,5 +1986,233 @@
     "cc": 1498,
     "seconds": 6.5,
     "source": "מדידה של AMS (e-Hybrid VZ 272)"
+  },
+
+  /* --- CUPRA ATECA --- */
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "ATECA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1984,
+    "seconds": 4.9,
+    "source": "נתון יצרן CUPRA (קופרה אטקה 300 4Drive)"
+  },
+  {
+    "make": "Cupra",
+    "model": "Ateca",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 300,
+    "cc": 1984,
+    "seconds": 4.9,
+    "source": "נתון יצרן CUPRA (cupra.com), אומת ב-AMS"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "ATECA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 7.1,
+    "source": "נתון יצרן CUPRA (קופרה אטקה 2.0 TSI 190)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "ATECA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.3,
+    "source": "נתון יצרן CUPRA (קופרה אטקה 1.5 TSI 150)"
+  },
+
+  /* --- CUPRA TERRAMAR --- */
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "TERRAMAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.3,
+    "source": "נתון יצרן (טראמר 1.5 eTSI 150)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "TERRAMAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1984,
+    "seconds": 7.1,
+    "source": "נתון יצרן (טראמר 2.0 TSI 4DRIVE 204)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "TERRAMAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 1984,
+    "seconds": 5.9,
+    "source": "נתון יצרן (טראמר VZ 2.0 TSI 265)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "TERRAMAR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 272,
+    "cc": 1498,
+    "seconds": 7.3,
+    "source": "נתון יצרן (טראמר VZ e-HYBRID 272)"
+  },
+  {
+    "make": "Cupra",
+    "model": "Terramar",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1498,
+    "seconds": 9.3,
+    "source": "נתון יצרן CUPRA (cupra.com), Terramar 1.5 eTSI"
+  },
+  {
+    "make": "Cupra",
+    "model": "Terramar",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1984,
+    "seconds": 7.1,
+    "source": "נתון יצרן CUPRA (cupra.com), Terramar 2.0 TSI 4DRIVE"
+  },
+  {
+    "make": "Cupra",
+    "model": "Terramar",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 1984,
+    "seconds": 5.9,
+    "source": "נתון יצרן CUPRA (cupra.com), Terramar VZ 2.0 TSI"
+  },
+
+  /* --- CUPRA BORN (חשמלית) --- */
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "BORN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "נתון יצרן (סוללת 58 קוט\"ש)"
+  },
+  {
+    "make": "סיאט גרמניה",
+    "model": "BORN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (סוללת 58 קוט\"ש)"
+  },
+  {
+    "make": "סיאט גרמניה",
+    "model": "BORN PREMIUM",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (סוללת 58 קוט\"ש)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "BORN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 0,
+    "seconds": 6.6,
+    "source": "נתון יצרן (e-Boost 231 כ\"ס)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "BORN VZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 326,
+    "cc": 0,
+    "seconds": 5.7,
+    "source": "נתון יצרן (בורן VZ חשמלית 326 כ\"ס)"
+  },
+  {
+    "make": "Cupra",
+    "model": "Born",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 0,
+    "seconds": 7.3,
+    "source": "נתון יצרן (סוללת 58 קוט\"ש)"
+  },
+  {
+    "make": "Cupra",
+    "model": "Born",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 231,
+    "cc": 0,
+    "seconds": 6.6,
+    "source": "נתון יצרן (גרסת e-Boost, סוללת 58 קוט\"ש)"
+  },
+
+  /* --- CUPRA TAVASCAN (חשמלית) --- */
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "TAVASCAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 6.8,
+    "source": "נתון יצרן (טוואסקאן Endurance 286)"
+  },
+  {
+    "make": "סיאט ספרד CUPRA",
+    "model": "TAVASCAN VZ",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.5,
+    "source": "נתון יצרן (טוואסקאן VZ 340 כ\"ס)"
+  },
+  {
+    "make": "Cupra",
+    "model": "Tavascan",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 0,
+    "seconds": 6.8,
+    "source": "נתון יצרן CUPRA (cupra.com), Tavascan Endurance 286 כ\"ס"
+  },
+  {
+    "make": "Cupra",
+    "model": "Tavascan",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 0,
+    "seconds": 5.5,
+    "source": "נתון יצרן CUPRA (cupra.com), Tavascan VZ 340 כ\"ס"
   }
 ]
