@@ -13,8 +13,42 @@ const MODELS_ID = "142afde2-6228-49f9-8a29-9b6c3a0cbe40";
 const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";
-// מזהה מאגר מחירון רכב חדש ומחיר יבואן משרד התחבורה (gov.il)
-const IMPORTER_PRICE_ID = "02146bc4-f58c-44eb-bd67-27b47b4e9e04";
+
+// ---------- טעינת קובץ מחירון יבואן מקומי (CSV) ----------
+let importerPriceTable = [];
+try {
+    const csvFilePath = path.join(__dirname, '39f455bf-6db0-4926-859d-017f34eacbcb.csv');
+    if (fs.existsSync(csvFilePath)) {
+        const rawCsv = fs.readFileSync(csvFilePath, "utf8");
+        const lines = rawCsv.split(/\r?\n/);
+        if (lines.length > 1) {
+            const headers = lines[0].split('|').map(h => h.replace(/"/g, '').trim());
+            for (let i = 1; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (!line) continue;
+                // פיצול פשוט לפי עמודות מופרדות ב-|
+                const cols = line.split('|').map(c => c.replace(/^"|"$/g, '').replace(/""/g, '"').trim());
+                if (cols.length >= headers.length) {
+                    importerPriceTable.push({
+                        semel_yevuan: cols[0],
+                        shem_yevuan: cols[1],
+                        sug_degem: cols[2],
+                        tozeret_cd: Number(cols[3]),
+                        tozeret_nm: cols[4],
+                        degem_cd: Number(cols[5]),
+                        degem_nm: cols[6],
+                        shnat_yitzur: Number(cols[7]),
+                        mehir: Number(cols[8]),
+                        kinuy_mishari: cols[9]
+                    });
+                }
+            }
+            console.log(`[IMPORTER DATA OK] נטענו בהצלחה ${importerPriceTable.length} מחירי יבואן מקומיים`);
+        }
+    }
+} catch (e) {
+    console.error('[IMPORTER DATA ERROR] שגיאה בטעינת קובץ המחירון:', e.message);
+}
 
 // ---------- מנוע טבלת צייד הרכבים (ענן - Firebase) ----------
 const FIREBASE_DB_URL = "https://carhunterleaderboard-default-rtdb.europe-west1.firebasedatabase.app";
@@ -185,7 +219,7 @@ const ORIGIN_LABELS = {
     "יבוא אישי": "יבוא אישי",
     "יבוא אישי-משומש": "יבוא אישי משומש",
     "מדינת ישראל": "רכב ממשלתי",
-    "ביס لנהיגה\"": "בית ספר לנהיגה",
+    "ביס לנהיגה\"": "בית ספר לנהיגה",
     "משומש מיבואן": "משומש מיבואן"
 };
 
@@ -260,32 +294,33 @@ async function fetchOwnershipRows(plate) {
         .sort((a, b) => String(a.date).localeCompare(String(b.date)));
 }
 
-async function fetchImporterPrice(car, row) {
+// פונקציית שליפת מחיר יבואן מהטבלה המקומית שהטענו מה-CSV
+function fetchImporterPriceLocal(car, row) {
     try {
-        const attempts = [];
-        const year = car.shnat_yitzur ? Number(car.shnat_yitzur) : null;
-        
-        if (car.tozeret_cd != null && car.degem_cd != null) {
-            attempts.push({ tozeret_cd: Number(car.tozeret_cd), degem_cd: Number(car.degem_cd) });
-        }
-        if (row && row.tozeret_cd != null && row.degem_cd != null) {
-            attempts.push({ tozeret_cd: Number(row.tozeret_cd), degem_cd: Number(row.degem_cd) });
-        }
+        const tozeretCd = toNumber(car.tozeret_cd) ?? (row ? toNumber(row.tozeret_cd) : null);
+        const degemCd = toNumber(car.degem_cd) ?? (row ? toNumber(row.degem_cd) : null);
+        const year = toNumber(car.shnat_yitzur);
 
-        for (const filters of attempts) {
-            const rows = await searchDatastore(IMPORTER_PRICE_ID, filters, 5);
-            if (rows && rows.length > 0) {
-                // נחפש התאמה לפי שנה אם קיימת במאגר, או ניקח את הרשומה הראשונה
-                const matched = rows.find(r => !year || Number(r.shnat_yitzur) === year) || rows[0];
-                const price = toNumber(matched.mechirim || matched.price || matched.machir);
-                const importerName = toText(matched.shm_yevanim || matched.importer_name || matched.shem_yevanim);
-                if (price) {
-                    return { importerPrice: price, importerName: importerName || "צ'מפיון מוטורס בע\"מ" };
-                }
-            }
+        if (tozeretCd == null || degemCd == null) return { importerPrice: null, importerName: null };
+
+        // חיפוש בטבלה המקומית
+        const match = importerPriceTable.find(item => 
+            item.tozeret_cd === tozeretCd && 
+            item.degem_cd === degemCd && 
+            (!year || item.shnat_yitzur === year)
+        ) || importerPriceTable.find(item => 
+            item.tozeret_cd === tozeretCd && 
+            item.degem_cd === degemCd
+        );
+
+        if (match) {
+            return {
+                importerPrice: match.mehir || null,
+                importerName: match.shem_yevuan || null
+            };
         }
     } catch (e) {
-        console.error('[IMPORTER PRICE ERROR]', e.message);
+        console.error('[IMPORTER LOCAL ERROR]', e.message);
     }
     return { importerPrice: null, importerName: null };
 }
@@ -341,8 +376,8 @@ app.get('/api/car/:plate', async (req, res) => {
             checkDisabled(plate)
         ]);
 
-        // שליפת מחיר יבואן במקביל
-        const importerData = await fetchImporterPrice(car, row);
+        // שליפת מחיר יבואן מהטבלה המקומית
+        const importerData = fetchImporterPriceLocal(car, row);
         const history = buildHistory(historyRaw);
 
         const manufacturer = car.tozeret_nm || "לא ידוע";
