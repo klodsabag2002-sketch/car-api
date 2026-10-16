@@ -5,19 +5,31 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// ---------- תוספת: טעינת מאגר PHEV ----------
+// ---------- טעינת מאגר PHEV ----------
 let getCombinedPHEVPower = (m, mod, hp) => hp;
 let hasPhevData = false;
 try {
     const phevModule = require('./phevData');
-    if (phevModule && phevModule.getCombinedPHEVPower) {
+    if (phevModule && typeof phevModule.getCombinedPHEVPower === 'function') {
         getCombinedPHEVPower = phevModule.getCombinedPHEVPower;
         hasPhevData = true;
     }
 } catch (e) {
-    console.log('[PHEV DATA] phevData.js לא נטען, ממשיך כרגיל.');
+    console.log('[PHEV DATA] לא נטען:', e.message);
 }
-// ------------------------------------------
+
+// ---------- טעינת מאגר HEV / MHEV ----------
+let getCombinedHEVPower = (m, mod, hp, cc) => hp;
+let hasHevData = false;
+try {
+    const hevModule = require('./hevData');
+    if (hevModule && typeof hevModule.getCombinedHEVPower === 'function') {
+        getCombinedHEVPower = hevModule.getCombinedHEVPower;
+        hasHevData = true;
+    }
+} catch (e) {
+    console.log('[HEV DATA] לא נטען:', e.message);
+}
 
 app.use(cors());
 app.use(express.json());
@@ -29,7 +41,7 @@ const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";
 const IMPORTER_PRICE_ID = "39f455bf-6db0-4926-859d-017f34eacbcb";
 
-// ---------- מנוע טבלת צייד הרכבים (ענן - Firebase) ----------
+// ---------- מנוע טבלת צייד הרכבים (Firebase) ----------
 const FIREBASE_DB_URL = "https://carhunterleaderboard-default-rtdb.europe-west1.firebasedatabase.app";
 
 async function getCloudLeaderboard() {
@@ -252,26 +264,20 @@ async function fetchOwnershipRows(plate) {
         .sort((a, b) => String(a.date).localeCompare(String(b.date)));
 }
 
-// פונקציית שליפת מחיר יבואן עם דיבוג מלא ללוגים
 async function fetchImporterPriceApi(car, row) {
     try {
         const tozeretCd = toNumber(car.tozeret_cd) ?? (row ? toNumber(row.tozeret_cd) : null);
         const degemCd = toNumber(car.degem_cd) ?? (row ? toNumber(row.degem_cd) : null);
         const year = toNumber(car.shnat_yitzur);
 
-        console.log(`[DEBUG IMPORTER] Searching for tozeret_cd: ${tozeretCd}, degem_cd: ${degemCd}, year: ${year}`);
-
         if (tozeretCd == null || degemCd == null) {
-            console.log('[DEBUG IMPORTER] Missing codes!');
             return { importerPrice: null, importerName: null };
         }
 
         const records = await searchDatastore(IMPORTER_PRICE_ID, { tozeret_cd: tozeretCd, degem_cd: degemCd }, 20);
-        console.log(`[DEBUG IMPORTER] Found records from gov.il:`, records.length);
 
         if (records && records.length > 0) {
             const match = records.find(r => !year || Number(r.shnat_yitzur) === year) || records[0];
-            console.log(`[DEBUG IMPORTER] Matched record:`, match);
             return {
                 importerPrice: toNumber(match.mehir) || null,
                 importerName: toText(match.shem_yevuan) || null
@@ -342,15 +348,38 @@ app.get('/api/car/:plate', async (req, res) => {
         const trim = toText(row?.ramat_gimur) || toText(car.ramat_gimur) || null;
         const year = car.shnat_yitzur || "לא ידוע";
         const hp = toNumber(row?.koah_sus) ?? toNumber(car.koah_sus);
-
-        // ---------- תוספת: חישוב הספק משולב מבלי לדרוס את ה-hp הרגיל ----------
-        const combinedHp = hasPhevData
-            ? getCombinedPHEVPower(`${manufacturer} ${car.degem_nm || ''} ${trim || ''}`, model, hp)
-            : hp;
-        const isPhev = Boolean(combinedHp && combinedHp !== hp);
-        // -------------------------------------------------------------------
-
         const engineCc = toNumber(row?.nefah_manoa) ?? toNumber(car.nefah_manoa);
+
+        // ---------- חישוב הספק משולב (HEV / PHEV) ----------
+        let combinedHp = hp;
+        let isPhev = false;
+        let isHev = false;
+
+        const carDesc = `${manufacturer} ${car.degem_nm || ''} ${trim || ''} ${model}`;
+
+        try {
+            if (hasPhevData) {
+                const phevVal = getCombinedPHEVPower(carDesc, model, hp);
+                if (phevVal && phevVal !== hp) {
+                    combinedHp = phevVal;
+                    isPhev = true;
+                }
+            }
+
+            if (!isPhev && hasHevData) {
+                const hevVal = getCombinedHEVPower(carDesc, model, hp, engineCc);
+                if (hevVal && hevVal !== hp) {
+                    combinedHp = hevVal;
+                    isHev = true;
+                }
+            }
+        } catch (calcErr) {
+            console.error('[HYBRID CALC ERROR]', calcErr);
+        }
+
+        const isHybridOrPhev = isPhev || isHev;
+        // ---------------------------------------------------
+
         const testExpiry = car.tokef_dt || null;
         const bodyType = resolveBodyType(car, row);
 
@@ -415,8 +444,9 @@ app.get('/api/car/:plate', async (req, res) => {
                 lastTest: toText(car.mivchan_acharon_dt),
                 engineCc, 
                 horsepower: hp,
-                combinedHorsepower: isPhev ? combinedHp : null, // תוספת: הספק משולב בלבד אם קיים
-                isPhev,                                         // תוספת: דגל שמציין אם הרכב הוא פלאג-אין
+                combinedHorsepower: isHybridOrPhev ? combinedHp : null, 
+                isPhev: Boolean(isPhev),
+                isHybridOrPhev: Boolean(isHybridOrPhev),
                 acceleration0to100: acceleration ? acceleration.seconds : null,
                 accelerationSource: acceleration ? acceleration.source : null,
                 importerPrice: importerData.importerPrice,
@@ -428,10 +458,13 @@ app.get('/api/car/:plate', async (req, res) => {
                 disabled: Boolean(disabledResult?.hasBadge),
                 bodyType, merkav: bodyType,
                 kmSinceTest: history?.kmSinceTest ?? null,
+                pollutionGroup: fnum("kvutzat_zihum"),
+                greenScore: fnum("madad_yarok"),
                 technical, equipment, safety
             }
         });
     } catch (error) {
+        console.error('[CAR API ERROR]', error);
         res.status(500).json({ success: false, error: "שגיאה בשליפה" });
     }
 });
