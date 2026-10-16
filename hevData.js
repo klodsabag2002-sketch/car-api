@@ -18,8 +18,7 @@ const HE_TO_EN_MAP = {
   "נירו": "niro", "ספורטאז": "sportage", "סורנטו": "sorento", "סטוניק": "stonic",
   "ג'אז": "jazz", "סיוויק": "civic", "סוויפט": "swift", "ויטארה": "vitara",
   "קפצ'ור": "captur", "אוסטרל": "austral", "ארקנה": "arkana", "דאסטר": "duster",
-  "קשקאי": "qashqai", "אוקטביה": "octavia", "גולף": "golf", "לאון": "leon",
-  "פורמנטור": "formentor"
+  "קשקאי": "qashqai"
 };
 
 const HEV_DATABASE = {
@@ -76,7 +75,7 @@ const HEV_DATABASE = {
   "suzuki_s_cross": 129,
   "suzuki_ignis": 83,
 
-  // --- רנו & ניסאן & דאצ'יה ---
+  // --- רנו, ניסאן ודאצ'יה ---
   "renault_clio": 145,
   "renault_captur": 145,
   "renault_austral": 200,
@@ -85,59 +84,54 @@ const HEV_DATABASE = {
   "dacia_jogger": 140,
   "nissan_qashqai": 190,
   "nissan_xtrail": 213,
-  "nissan_x_trail": 213,
-
-  // --- קבוצת VAG ---
-  "skoda_octavia": 150,
-  "volkswagen_golf": 150,
-  "seat_leon": 150,
-  "cupra_formentor": 150,
-  "cupra_leon": 150,
-
-  // --- סטלנטיס ---
-  "peugeot_208": 136,
-  "peugeot_2008": 136,
-  "peugeot_3008": 136,
-  "citroen_c3": 136,
-  "opel_mokka": 136,
-  "jeep_avenger": 136
+  "nissan_x_trail": 213
 };
 
-// סידור המפתחות מהארוך לקצר כדי ש-"corolla_cross" יתפוס לפני "corolla"
 const SORTED_HEV_KEYS = Object.keys(HEV_DATABASE).sort((a, b) => b.length - a.length);
-
 const HYBRID_KEYWORDS = ['hybrid', 'hev', 'mhev', 'היברידי', 'היברידית', 'משולב', 'epower', 'e-power', 'etsi'];
 
-function getCombinedHEVPower(manufacturer, model, listedHp, engineCc) {
-  const rawInput = `${manufacturer || ''} ${model || ''}`.toLowerCase();
+function getCombinedHEVPower(manufacturer, model, listedHp, engineCc, fuelType) {
+  if (!listedHp) return listedHp;
 
-  // 1. תרגום מילים בעברית לאנגלית כדי להתאים למאגר
-  let normalized = rawInput;
+  const fullText = `${manufacturer || ''} ${model || ''} ${fuelType || ''}`.toLowerCase();
+  const cc = Number(engineCc) || 0;
+
+  // 1. הגנה: מנועי 2.0 ומעלה ורכבים ספורטיביים לעולם אינם מורדים בהספק
+  if (cc >= 1800 && listedHp >= 190) {
+    return listedHp;
+  }
+
+  // 2. תרגום מעברית לאנגלית
+  let normalized = fullText;
   for (const [he, en] of Object.entries(HE_TO_EN_MAP)) {
     if (normalized.includes(he)) {
       normalized += ` ${en}`;
     }
   }
 
-  // ניקוי תווים
   const cleanStr = normalized.replace(/[^a-z0-9]/g, '');
 
-  // 2. חיפוש התאמה במאגר
+  // 3. חיפוש במאגר
   for (const key of SORTED_HEV_KEYS) {
-    const keyWithoutUnderscore = key.replace(/_/g, '');
+    const keyClean = key.replace(/_/g, '');
     const keyParts = key.split('_');
 
-    // אם כל חלקי המפתח קיימים בטקסט הנקי
     const matchParts = keyParts.every(part => cleanStr.includes(part));
-    if (matchParts || cleanStr.includes(keyWithoutUnderscore)) {
-      return HEV_DATABASE[key];
+    if (matchParts || cleanStr.includes(keyClean)) {
+      const targetHp = HEV_DATABASE[key];
+      // תיקון מבוצע רק אם הוא באמת מוסיף כוח סוס (חשמל)
+      if (targetHp > listedHp) {
+        return targetHp;
+      }
+      return listedHp;
     }
   }
 
-  // 3. רשת ביטחון לרכבים היברידיים שלא נמצאו במאגר המדויק
-  const isHybrid = HYBRID_KEYWORDS.some(kw => rawInput.includes(kw));
-  if (isHybrid && listedHp && listedHp >= 70 && listedHp <= 135) {
-    return Math.round(listedHp * 1.35);
+  // 4. רשת ביטחון דינמית לרכבים היברידיים מוצהרים
+  const isDeclaredHybrid = HYBRID_KEYWORDS.some(kw => fullText.includes(kw));
+  if (isDeclaredHybrid && listedHp >= 70 && listedHp <= 135) {
+    const estimated = Math.round(listedHp * 1.35);
+    if (estimated > listedHp) return estimated;
   }
 
   return listedHp;
