@@ -1,5 +1,5 @@
-// 1. הגדרת המאגר עם const באות קטנה + ייצוא (export)
-export const PHEV_DATABASE = {
+// 1. הגדרת המאגר
+const PHEV_DATABASE = {
   // קבוצת צ'רי / ג'אקו / אומודה / ג'טור
   "jaecoo_5": 204,
   "jaecoo_7": 347,
@@ -288,8 +288,8 @@ export const PHEV_DATABASE = {
   "mitsubishi_eclipse_cross_phev": 188
 };
 
-// 2. פונקציית החיפוש החכמה + Fallback (רשת ביטחון לדגמים עתידיים)
-export function getCombinedPHEVPower(manufacturer, model, listedHp) {
+// 2. פונקציית החיפוש החכמה + Fallback
+function getCombinedPHEVPower(manufacturer, model, listedHp) {
   const fullText = `${manufacturer || ''} ${model || ''}`.toLowerCase().replace(/[^a-z0-9]/g, '');
 
   for (const [key, combinedHp] of Object.entries(PHEV_DATABASE)) {
@@ -307,3 +307,9 @@ export function getCombinedPHEVPower(manufacturer, model, listedHp) {
 
   return listedHp;
 }
+
+// 3. ייצוא תואם Node.js (CommonJS)
+module.exports = {
+  PHEV_DATABASE,
+  getCombinedPHEVPower
+};
