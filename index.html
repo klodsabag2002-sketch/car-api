@@ -40,7 +40,6 @@
   .topbar .i:hover { background: rgba(56,189,248,0.25); box-shadow: 0 0 12px rgba(56,189,248,0.5); }
   .topbar .i.hidden { visibility: hidden; }
 
-  /* תפריט צד (3 קווים) */
   .menu-dropdown {
     position: absolute;
     top: 64px;
@@ -90,6 +89,7 @@
   .msg.err { color: #f87171; background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 12px; margin-top: 10px; font-weight: 700; }
 
   .km-line { display: none; align-items: center; justify-content: center; gap: 8px; color: #4ade80; font-size: 13px; background: rgba(34, 197, 94, 0.1); border-bottom: 1px solid rgba(34, 197, 94, 0.2); padding: 10px 12px; font-weight: 800; text-shadow: 0 0 8px rgba(74,222,128,0.4); }
+  .km-line.show { display: flex; }
   .km-line .km-ic { border: 2px solid #4ade80; border-radius: 6px; padding: 0 4px; font-size: 11px; box-shadow: 0 0 6px rgba(74,222,128,0.4); }
 
   .importer-price-card {
@@ -225,7 +225,6 @@
   .car-name { text-align: center; font-size: 26px; color: #f8fafc; font-weight: 900; margin-top: 4px; letter-spacing: -0.5px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
   .car-trim { text-align: center; font-size: 16px; color: #38bdf8; font-weight: 900; margin-top: 2px; text-shadow: 0 0 10px rgba(56,189,248,0.4); }
 
-  /* כרטיס סטורי / סייבר */
   .cyber-story-card-container {
     margin: 20px 14px;
     padding: 24px 20px;
@@ -409,7 +408,6 @@
   .own-panel { display: none; margin: 14px 14px 0; }
   .own-panel.show { display: block; }
 
-  /* גריד מפרט ביצועים ראשי - 5 קוביות */
   .spec-card { 
     background: rgba(15, 23, 42, 0.7); 
     backdrop-filter: blur(12px); 
@@ -431,7 +429,6 @@
   .spec.phev-highlight { border-color: #38bdf8; box-shadow: 0 0 15px rgba(56, 189, 248, 0.5); }
   .spec.phev-highlight .sp-val { color: #38bdf8; text-shadow: 0 0 12px rgba(56, 189, 248, 0.9); }
 
-  /* כפתור אינטראקטיבי לחשיפת הספק משולב (HEV / PHEV) */
   .phev-reveal-btn {
     display: none;
     margin: 12px 14px 0;
@@ -478,7 +475,6 @@
     color: #38bdf8;
   }
 
-  /* באנר תגית הרגשה ספורטיבית */
   .power-feel-badge {
     margin: 12px 14px 0;
     padding: 12px 16px;
@@ -493,7 +489,6 @@
   .power-feel-lbl { font-size: 12px; font-weight: 800; color: #94a3b8; }
   .power-feel-val { font-size: 13px; font-weight: 900; color: #38bdf8; text-shadow: 0 0 10px rgba(56,189,248,0.5); }
 
-  /* כרטיסי דירוג גרפי (סביבה ובטיחות) */
   .scale-card {
     background: rgba(15, 23, 42, 0.75);
     backdrop-filter: blur(14px);
@@ -520,6 +515,7 @@
     height: 14px;
     position: relative;
     margin-bottom: 3px;
+    direction: rtl;
   }
   .indicator-arrow {
     position: absolute;
@@ -530,7 +526,7 @@
     border-top: 8px solid #38bdf8;
     filter: drop-shadow(0 0 4px #38bdf8);
     transform: translateX(50%);
-    transition: left 0.4s ease;
+    transition: right 0.4s ease;
   }
 
   .colored-scale {
@@ -656,7 +652,6 @@
   .own-extra .v { font-weight: 900; color: #38bdf8; direction: ltr; text-shadow: 0 0 8px rgba(56,189,248,0.4); }
   .own-msg { background: rgba(15, 23, 42, 0.7); border-radius: 16px; padding: 18px; font-size: 13px; color: #94a3b8; text-align: center; margin-top: 8px; border: 1px solid rgba(56,189,248,0.2); font-weight: 700; }
 
-  /* צייד רכבים */
   .hunter-container { padding: 16px 14px 30px; animation: fadeIn 0.3s ease; }
   @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
   .hunter-banner { background: linear-gradient(135deg, rgba(2,132,199,0.25), rgba(15,23,42,0.9)); border: 1px solid rgba(56,189,248,0.4); border-radius: 20px; padding: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.6), inset 0 0 15px rgba(56,189,248,0.1); margin-bottom: 16px; }
@@ -683,7 +678,6 @@
   .hunter-table tr.my-row td { background: rgba(56, 189, 248, 0.15); color: #38bdf8; font-weight: 900; }
   .hunter-table tr.separator-row td { background: rgba(15, 23, 42, 0.95); color: #64748b; font-size: 11px; letter-spacing: 2px; padding: 6px; border-top: 1px dashed rgba(56,189,248,0.3); border-bottom: 1px dashed rgba(56,189,248,0.3); }
 
-  /* טאב השוואת רכב */
   .compare-container { padding: 16px 14px 30px; animation: fadeIn 0.3s ease; }
   .compare-banner { background: linear-gradient(135deg, rgba(56,189,248,0.25), rgba(15,23,42,0.9)); border: 1px solid rgba(56,189,248,0.4); border-radius: 20px; padding: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.6); margin-bottom: 16px; }
   .compare-banner h2 { font-size: 20px; font-weight: 900; color: #38bdf8; margin-bottom: 6px; text-shadow: 0 0 10px rgba(56,189,248,0.5); }
@@ -935,7 +929,7 @@
 
         <!-- כפתור אינטראקטיבי לחשיפת הספק משולב (HEV / PHEV) -->
         <div id="phevRevealBtn" class="phev-reveal-btn">
-          <span class="phev-tag" id="phevTagLabel">HEV/PHEV</span>
+          <span class="phev-tag" id="phevTagLabel">HEV</span>
           <span id="phevBtnText">⚡ לחץ כאן לחשיפת ההספק המשולב (מנוע + חשמל)</span>
         </div>
 
@@ -1128,7 +1122,7 @@
     <div class="modal-title">✨ עריכת כינוי לרכב</div>
     <div class="modal-sub">תן כינוי מטורף שיופיע על כרטיס הביקור</div>
 
-    <div class="modal-field-lbl">כינוי חדש (למשל: המפלצת שלי, הבייבי):</div>
+    <div class="modal-field-lbl">כינוי חדש:</div>
     <input type="text" id="customCardNickInput" class="modal-input" placeholder="המפלצת שלי" maxlength="24" value="המפלצת שלי">
 
     <div class="modal-actions">
@@ -1880,6 +1874,7 @@
 
   function setVal(id, value, suffix) {
     const el = document.getElementById(id);
+    if (!el) return;
     const cleaned = typeof value === 'string' ? cleanText(value) : value;
     const empty = cleaned === null || cleaned === undefined || cleaned === '' || cleaned === 'לא ידוע';
     if (empty) { el.textContent = 'אין נתון'; el.classList.add('na'); }
@@ -1888,12 +1883,15 @@
 
   function setStatusBlock(id, subText, cls) {
     const el = document.getElementById(id);
+    if (!el) return;
     el.className = 'st ' + (cls || 'neutral') + (id === 'stOwn' ? ' clickable' : '');
-    el.querySelector('.st-sub').textContent = subText || '';
+    const sub = el.querySelector('.st-sub');
+    if (sub) sub.textContent = subText || '';
   }
 
   function setupCopyButton(value) {
     const btn = document.getElementById('copyChassis');
+    if (!btn) return;
     btn.classList.remove('show');
     if (value) {
       btn.classList.add('show');
@@ -1958,6 +1956,7 @@
     setVal('vNextTest', nextTest ? fmtDate(nextTest) : null);
 
     const cd = document.getElementById('vCountdown');
+    if (!cd) return;
     cd.classList.remove('bad');
     if (!nextTest) { cd.textContent = ''; return; }
 
@@ -2070,17 +2069,21 @@
 
   function closeOwnPanel() {
     const p = document.getElementById('ownPanel');
+    if (!p) return;
     p.classList.remove('show');
     p.textContent = '';
-    document.getElementById('ownBtn').textContent = 'הצג הסטוריית בעלות';
+    const btn = document.getElementById('ownBtn');
+    if (btn) btn.textContent = 'הצג הסטוריית בעלות';
   }
 
   async function toggleOwnPanel() {
     const panel = document.getElementById('ownPanel');
+    if (!panel) return;
     if (panel.classList.contains('show')) { closeOwnPanel(); return; }
     if (!currentPlate) return;
 
-    document.getElementById('ownBtn').textContent = 'הסתר הסטוריית בעלות';
+    const btn = document.getElementById('ownBtn');
+    if (btn) btn.textContent = 'הסתר הסטוריית בעלות';
     panel.classList.add('show');
     panel.textContent = '';
 
@@ -2144,7 +2147,6 @@
     }
   }
 
-  // רינדור סרגל רמת אבזור בטיחותי (0-8)
   function renderSafetyScaleCard(level) {
     const card = document.createElement('div');
     card.className = 'scale-card';
@@ -2180,8 +2182,8 @@
       const arrow = card.querySelector('#safetyArrow');
       if (arrow && safeLevel !== null) {
         const segWidth = 100 / 9;
-        const targetPercent = (8 - safeLevel) * segWidth + (segWidth / 2);
-        arrow.style.left = targetPercent + '%';
+        const targetPercent = safeLevel * segWidth + (segWidth / 2);
+        arrow.style.right = `calc(${targetPercent}% - 6px)`;
       } else if (arrow) {
         arrow.style.display = 'none';
       }
@@ -2190,7 +2192,6 @@
     return card;
   }
 
-  // רינדור סרגל קבוצת זיהום אוויר (1-15) + פליטות
   function renderPollutionScaleCard(group, greenScore) {
     const card = document.createElement('div');
     card.className = 'scale-card';
@@ -2256,8 +2257,8 @@
       const arrow = card.querySelector('#pollutionArrow');
       if (arrow && pGroup !== null) {
         const segWidth = 100 / 15;
-        const targetPercent = (15 - pGroup) * segWidth + (segWidth / 2);
-        arrow.style.left = targetPercent + '%';
+        const targetPercent = (pGroup - 1) * segWidth + (segWidth / 2);
+        arrow.style.right = `calc(${targetPercent}% - 6px)`;
       }
     }, 50);
 
@@ -2266,6 +2267,7 @@
 
   function renderTech(d) {
     const box = document.getElementById('cardTech');
+    if (!box) return;
     box.textContent = '';
     box.style.cssText = 'padding: 4px 0 20px;';
 
@@ -2360,6 +2362,7 @@
 
   function renderEnv(d) {
     const box = document.getElementById('cardEnv');
+    if (!box) return;
     box.textContent = '';
     box.style.cssText = 'padding: 4px 0 20px;';
 
@@ -2523,7 +2526,9 @@
     const err = document.getElementById('errorMsg');
 
     err.style.display = 'none';
-    document.getElementById('kmLine').classList.remove('show');
+    const kmLineEl = document.getElementById('kmLine');
+    if (kmLineEl) kmLineEl.classList.remove('show');
+    
     document.getElementById('importerPriceCard').classList.remove('show');
     document.getElementById('ownBtnWrap').classList.remove('show');
     document.getElementById('cardGeneral').style.display = 'none';
@@ -2568,10 +2573,10 @@
       triggerCyberTransition(brand, d.manufacturer, d.model, async () => {
         await showBrand(d.manufacturer, brand);
 
-        if (d.kmSinceTest != null) {
+        if (d.kmSinceTest != null && kmLineEl) {
           document.getElementById('kmText').textContent =
             d.kmSinceTest.toLocaleString('he-IL') + ' ק"מ - קילומטראז\' מעודכן מהטסט האחרון';
-          kmLine.classList.add('show');
+          kmLineEl.classList.add('show');
         }
 
         const priceCard = document.getElementById('importerPriceCard');
@@ -2615,7 +2620,6 @@
 
         setVal('sHp', d.horsepower, 'כ"ס');
         
-        // התאמת התגית והכיתוב לפי סוג ההנעה (HEV / PHEV)
         document.getElementById('spHpLbl').textContent = d.isHybridOrPhev ? 'כ"ס (בנזין)' : 'כוח סוס';
         document.getElementById('specHpCard').classList.remove('phev-highlight');
 
