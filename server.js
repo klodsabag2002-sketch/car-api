@@ -13,6 +13,8 @@ const MODELS_ID = "142afde2-6228-49f9-8a29-9b6c3a0cbe40";
 const HISTORY_ID = "56063a99-8a3e-4ff4-912e-5966c0279bad";
 const OWNERSHIP_ID = "bb2355dc-9ec7-4f06-9c3f-3344672171da";
 const DISABLED_ID = "c8b9f9c8-4612-4068-934f-d4acd2e3c06e";
+// מזהה מאגר מחירון רכב חדש ומחיר יבואן משרד התחבורה (gov.il)
+const IMPORTER_PRICE_ID = "02146bc4-f58c-44eb-bd67-27b47b4e9e04";
 
 // ---------- מנוע טבלת צייד הרכבים (ענן - Firebase) ----------
 const FIREBASE_DB_URL = "https://carhunterleaderboard-default-rtdb.europe-west1.firebasedatabase.app";
@@ -183,7 +185,7 @@ const ORIGIN_LABELS = {
     "יבוא אישי": "יבוא אישי",
     "יבוא אישי-משומש": "יבוא אישי משומש",
     "מדינת ישראל": "רכב ממשלתי",
-    "ביס לנהיגה\"": "בית ספר לנהיגה",
+    "ביס لנהיגה\"": "בית ספר לנהיגה",
     "משומש מיבואן": "משומש מיבואן"
 };
 
@@ -258,6 +260,36 @@ async function fetchOwnershipRows(plate) {
         .sort((a, b) => String(a.date).localeCompare(String(b.date)));
 }
 
+async function fetchImporterPrice(car, row) {
+    try {
+        const attempts = [];
+        const year = car.shnat_yitzur ? Number(car.shnat_yitzur) : null;
+        
+        if (car.tozeret_cd != null && car.degem_cd != null) {
+            attempts.push({ tozeret_cd: Number(car.tozeret_cd), degem_cd: Number(car.degem_cd) });
+        }
+        if (row && row.tozeret_cd != null && row.degem_cd != null) {
+            attempts.push({ tozeret_cd: Number(row.tozeret_cd), degem_cd: Number(row.degem_cd) });
+        }
+
+        for (const filters of attempts) {
+            const rows = await searchDatastore(IMPORTER_PRICE_ID, filters, 5);
+            if (rows && rows.length > 0) {
+                // נחפש התאמה לפי שנה אם קיימת במאגר, או ניקח את הרשומה הראשונה
+                const matched = rows.find(r => !year || Number(r.shnat_yitzur) === year) || rows[0];
+                const price = toNumber(matched.mechirim || matched.price || matched.machir);
+                const importerName = toText(matched.shm_yevanim || matched.importer_name || matched.shem_yevanim);
+                if (price) {
+                    return { importerPrice: price, importerName: importerName || "צ'מפיון מוטורס בע\"מ" };
+                }
+            }
+        }
+    } catch (e) {
+        console.error('[IMPORTER PRICE ERROR]', e.message);
+    }
+    return { importerPrice: null, importerName: null };
+}
+
 function buildHistory(h) {
     if (!h) return null;
     const changes = [];
@@ -308,6 +340,9 @@ app.get('/api/car/:plate', async (req, res) => {
             fetchOwnershipRows(plate),
             checkDisabled(plate)
         ]);
+
+        // שליפת מחיר יבואן במקביל
+        const importerData = await fetchImporterPrice(car, row);
         const history = buildHistory(historyRaw);
 
         const manufacturer = car.tozeret_nm || "לא ידוע";
@@ -388,6 +423,8 @@ app.get('/api/car/:plate', async (req, res) => {
                 horsepower: hp,
                 acceleration0to100: acceleration ? acceleration.seconds : null,
                 accelerationSource: acceleration ? acceleration.source : null,
+                importerPrice: importerData.importerPrice,
+                importerName: importerData.importerName,
                 testExpiry,
                 testValid: testStatus(testExpiry),
                 ownership: ownershipList.length ? ownershipList[ownershipList.length - 1].type : labelOwnership(car.baalut),
