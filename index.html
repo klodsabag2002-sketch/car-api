@@ -409,24 +409,24 @@
   .own-panel { display: none; margin: 14px 14px 0; }
   .own-panel.show { display: block; }
 
-  /* גריד מפרט ביצועים ראשי - 4 קוביות עוצמתיות */
+  /* גריד מפרט ביצועים ראשי - 5 קוביות מאוזנות ומעוצבות כולל נפח מנוע */
   .spec-card { 
     background: rgba(15, 23, 42, 0.7); 
     backdrop-filter: blur(12px); 
     border-radius: 20px; 
     margin: 16px 14px 0; 
-    padding: 16px 10px; 
+    padding: 16px 8px; 
     display: grid; 
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 8px; 
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 6px; 
     border: 1px solid rgba(56,189,248,0.2); 
     box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
   }
-  .spec { text-align: center; background: rgba(3, 7, 18, 0.5); padding: 12px 4px; border-radius: 14px; border: 1px solid rgba(56,189,248,0.1); transition: all 0.2s; }
+  .spec { text-align: center; background: rgba(3, 7, 18, 0.5); padding: 12px 2px; border-radius: 14px; border: 1px solid rgba(56,189,248,0.1); transition: all 0.2s; }
   .spec:hover { border-color: rgba(56,189,248,0.4); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(56,189,248,0.2); }
-  .spec .sp-ic { font-size: 22px; height: 28px; display: flex; align-items: center; justify-content: center; }
-  .spec .sp-lbl { font-size: 10px; color: #94a3b8; margin-top: 4px; font-weight: 800; }
-  .spec .sp-val { font-size: 12px; font-weight: 900; color: #38bdf8; margin-top: 4px; direction: ltr; text-shadow: 0 0 8px rgba(56,189,248,0.4); }
+  .spec .sp-ic { font-size: 20px; height: 26px; display: flex; align-items: center; justify-content: center; }
+  .spec .sp-lbl { font-size: 9.5px; color: #94a3b8; margin-top: 4px; font-weight: 800; white-space: nowrap; }
+  .spec .sp-val { font-size: 11.5px; font-weight: 900; color: #38bdf8; margin-top: 4px; direction: ltr; text-shadow: 0 0 8px rgba(56,189,248,0.4); }
   .spec .sp-val.na { color: #64748b; font-weight: normal; direction: rtl; font-size: 11px; text-shadow: none; }
 
   /* באנר תגית הרגשה ספורטיבית */
@@ -444,17 +444,18 @@
   .power-feel-lbl { font-size: 12px; font-weight: 800; color: #94a3b8; }
   .power-feel-val { font-size: 13px; font-weight: 900; color: #38bdf8; text-shadow: 0 0 10px rgba(56,189,248,0.5); }
 
+  /* דיסקליימר מעודכן: מסביר שהנתונים מבוססים על מודל הערכה פיזיקלי */
   .accel-disclaimer {
     margin: 10px 14px 0;
-    font-size: 10.5px;
+    font-size: 11px;
     color: #94a3b8;
-    line-height: 1.4;
+    line-height: 1.45;
     text-align: center;
-    background: rgba(15, 23, 42, 0.5);
+    background: rgba(15, 23, 42, 0.6);
     padding: 10px 14px;
-    border-radius: 12px;
+    border-radius: 14px;
     border-right: 3px solid #38bdf8;
-    border: 1px solid rgba(56,189,248,0.15);
+    border: 1px solid rgba(56,189,248,0.2);
     font-weight: 600;
   }
 
@@ -740,7 +741,7 @@
         </div>
         <div id="ownPanel" class="own-panel"></div>
 
-        <!-- גריד ביצועים מעוצב 4 עמודות -->
+        <!-- גריד ביצועים ומפרט - 5 קוביות כולל נפח מנוע -->
         <div class="spec-card">
           <div class="spec">
             <div class="sp-ic">⚡</div>
@@ -762,6 +763,11 @@
             <div class="sp-lbl">הספק-משקל</div>
             <div class="sp-val" id="sPowerWeight">אין נתון</div>
           </div>
+          <div class="spec">
+            <div class="sp-ic">⚙️</div>
+            <div class="sp-lbl">נפח מנוע</div>
+            <div class="sp-val" id="sEngine">אין נתון</div>
+          </div>
         </div>
 
         <!-- תגית הרגשה ספורטיבית של הרכב -->
@@ -770,8 +776,9 @@
           <span class="power-feel-val" id="powerFeelText">-</span>
         </div>
 
+        <!-- דיסקליימר מקצועי ומעודכן -->
         <div class="accel-disclaimer">
-          ℹ️ נתוני התאוצה והמהירות המרבית מחושבים לפי מאגרים חיצוניים ומאפייני יצרן ומשמשים להערכה בלבד.
+          ℹ️ נתוני התאוצה (0-100), המהירות המרבית ויחס ההספק-משקל מחושבים לפי מאפייני היצרן ומודל הערכה פיזיקלי מתקדם, ומשמשים לאינדיקציה והערכה בלבד.
         </div>
 
         <div class="list-card">
@@ -779,7 +786,6 @@
           <div class="lrow"><span class="li">🚙</span><span class="ll">דגם</span><span class="sp"></span><span class="lv" id="vModel"></span></div>
           <div class="lrow"><span class="li">🏁</span><span class="ll">רמת גימור</span><span class="sp"></span><span class="lv" id="vTrim"></span></div>
           <div class="lrow"><span class="li">🚗</span><span class="ll">סוג מרכב</span><span class="sp"></span><span class="lv" id="vBody"></span></div>
-          <div class="lrow"><span class="li">⚙️</span><span class="ll">נפח מנוע</span><span class="sp"></span><span class="lv" id="vEngine"></span></div>
           <div class="lrow"><span class="li">📅</span><span class="ll">שנת ייצור</span><span class="sp"></span><span class="lv" id="vYear"></span></div>
           <div class="lrow"><span class="li">🎨</span><span class="ll">צבע</span><span class="sp"></span><span class="lv" id="vColor"></span></div>
           <div class="lrow"><span class="li">🔢</span><span class="ll">מספר רכב</span><span class="sp"></span><span class="lv" id="vPlate"></span></div>
@@ -2244,13 +2250,24 @@
 
         setStatusBlock('stDisabled', d.disabled ? 'יש' : 'אין', d.disabled ? 'ok' : 'neutral');
 
-        // הצגת ביצועים בקובייה הראשית
+        // הצגת ביצועים בקוביית 5 העמודות המרכזית
         setVal('sHp', d.horsepower, 'כ"ס');
         setVal('sAccel', d.acceleration0to100, 'שניות');
         setVal('sTopSpeed', perf.topSpeed, 'קמ"ש');
         setVal('sPowerWeight', perf.powerWeight, 'ק"ג/כ"ס');
 
-        // הצגת תגית הרגשה
+        // טיפול חכם בנפח מנוע (כולל הצגה יפה לרכב חשמלי)
+        const fuel = (d.fuelType || d.sug_delek_nm || '').toLowerCase();
+        const isElectric = fuel === 'חשמל' || (fuel.includes('חשמל') && !fuel.includes('בנזין') && !fuel.includes('דיזל'));
+        if (isElectric || d.engineCc === 0) {
+          const sEng = document.getElementById('sEngine');
+          sEng.textContent = 'חשמלי ⚡';
+          sEng.classList.remove('na');
+        } else {
+          setVal('sEngine', d.engineCc, 'סמ"ק');
+        }
+
+        // הצגת תגית הרגשה ספורטיבית
         if (perf.feelText) {
           const feelBadge = document.getElementById('powerFeelBadge');
           const feelTextEl = document.getElementById('powerFeelText');
@@ -2263,7 +2280,6 @@
         setVal('vModel', d.model);
         setVal('vTrim', d.trim);
         setVal('vBody', d.bodyType || d.merkav);
-        setVal('vEngine', d.engineCc, 'סמ"ק');
         setVal('vYear', d.year);
         setVal('vColor', d.color);
         setVal('vPlate', formatPlate(plate));
