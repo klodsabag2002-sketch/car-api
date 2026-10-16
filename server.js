@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // ---------- טעינת מאגר PHEV ----------
-let getCombinedPHEVPower = (m, mod, hp) => hp;
+let getCombinedPHEVPower = (m, mod, hp, cc) => hp;
 let hasPhevData = false;
 try {
     const phevModule = require('./phevData');
@@ -352,7 +352,7 @@ app.get('/api/car/:plate', async (req, res) => {
         const engineCc = toNumber(row?.nefah_manoa) ?? toNumber(car.nefah_manoa);
         const fuelType = toText(row?.sug_delek_nm) || toText(car.sug_delek_nm) || "";
 
-        // ---------- חישוב הספק משולב (HEV / PHEV) עם הגנה מפני דריסה שגויה ----------
+        // ---------- חישוב הספק משולב (HEV / PHEV) ----------
         let combinedHp = hp;
         let isPhev = false;
         let isHev = false;
@@ -361,7 +361,7 @@ app.get('/api/car/:plate', async (req, res) => {
 
         try {
             if (hasPhevData) {
-                const phevVal = getCombinedPHEVPower(carDesc, model, hp);
+                const phevVal = getCombinedPHEVPower(carDesc, model, hp, engineCc);
                 if (phevVal && phevVal > hp) {
                     combinedHp = phevVal;
                     isPhev = true;
@@ -380,7 +380,7 @@ app.get('/api/car/:plate', async (req, res) => {
         }
 
         const isHybridOrPhev = isPhev || isHev;
-        // --------------------------------------------------------------------------
+        // ----------------------------------------------------
 
         const testExpiry = car.tokef_dt || null;
         const bodyType = resolveBodyType(car, row);
