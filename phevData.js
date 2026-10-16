@@ -1,4 +1,5 @@
-const PHEV_DATABASE = {
+// 1. הגדרת המאגר עם const באות קטנה + ייצוא (export)
+export const PHEV_DATABASE = {
   // קבוצת צ'רי / ג'אקו / אומודה / ג'טור
   "jaecoo_5": 204,
   "jaecoo_7": 347,
@@ -286,3 +287,23 @@ const PHEV_DATABASE = {
   "mitsubishi_outlander_phev_2024": 252,
   "mitsubishi_eclipse_cross_phev": 188
 };
+
+// 2. פונקציית החיפוש החכמה + Fallback (רשת ביטחון לדגמים עתידיים)
+export function getCombinedPHEVPower(manufacturer, model, listedHp) {
+  const fullText = `${manufacturer || ''} ${model || ''}`.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+  for (const [key, combinedHp] of Object.entries(PHEV_DATABASE)) {
+    const cleanKey = key.replace(/_/g, '');
+    if (fullText.includes(cleanKey)) {
+      return combinedHp;
+    }
+  }
+
+  // Fallback: אם משרד התחבורה מחזיר הספק נמוך של מנוע בנזין בלבד עבור PHEV
+  const isPHEV = fullText.includes('phev') || fullText.includes('dmi') || fullText.includes('plugin') || fullText.includes('hybrid');
+  if (isPHEV && listedHp && listedHp < 170) {
+    return Math.round(listedHp * 1.6);
+  }
+
+  return listedHp;
+}
