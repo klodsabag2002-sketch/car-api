@@ -86,7 +86,6 @@
   .detail { display: none; }
   .detail.show { display: block; }
 
-  /* טאבים בסדר המדויק: כללי, מפרט טכני, בטיחות, סביבה, צייד רכבים */
   .tabs { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(14px); display: none; justify-content: space-around; align-items: stretch; border-bottom: 1px solid rgba(56,189,248,0.2); margin-top: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
   .tabs.show { display: flex; }
   .tab { flex: 1; text-align: center; padding: 14px 0 10px; color: #94a3b8; font-size: 13px; cursor: pointer; border-bottom: 3px solid transparent; font-weight: 800; transition: all 0.3s; }
@@ -249,7 +248,7 @@
   .own-extra .v { font-weight: 900; color: #38bdf8; direction: ltr; text-shadow: 0 0 8px rgba(56,189,248,0.4); }
   .own-msg { background: rgba(15, 23, 42, 0.7); border-radius: 16px; padding: 18px; font-size: 13px; color: #94a3b8; text-align: center; margin-top: 8px; border: 1px solid rgba(56,189,248,0.2); font-weight: 700; }
 
-  /* עיצוב ייחודי למסך "צייד רכבים" */
+  /* --- עיצוב צייד רכבים עם גיבוי מקומי מלא --- */
   .hunter-container {
     padding: 16px 14px 30px;
     animation: fadeIn 0.3s ease;
@@ -258,54 +257,128 @@
     from { opacity: 0; transform: translateY(6px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  .hunter-banner {
-    background: linear-gradient(135deg, rgba(2,132,199,0.25), rgba(15,23,42,0.9));
-    border: 1px solid rgba(56,189,248,0.4);
+  .hunter-profile-card {
+    background: linear-gradient(135deg, rgba(2,132,199,0.2), rgba(15,23,42,0.95));
+    border: 1px solid rgba(56,189,248,0.35);
     border-radius: 20px;
-    padding: 20px;
+    padding: 18px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6), inset 0 0 15px rgba(56,189,248,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
     margin-bottom: 16px;
   }
-  .hunter-banner h2 {
-    font-size: 20px;
-    font-weight: 900;
-    color: #38bdf8;
+  .hunter-avatar-badge {
+    font-size: 40px;
     margin-bottom: 6px;
-    text-shadow: 0 0 10px rgba(56,189,248,0.5);
+    filter: drop-shadow(0 0 10px rgba(56,189,248,0.6));
   }
-  .hunter-banner p {
-    font-size: 13px;
-    color: #cbd5e1;
-    line-height: 1.5;
-    font-weight: 700;
+  .hunter-nickname-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 6px;
   }
-  .hunter-stats-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin-bottom: 16px;
-  }
-  .hunter-stat-box {
-    background: rgba(15, 23, 42, 0.8);
-    border: 1px solid rgba(56,189,248,0.2);
-    border-radius: 16px;
-    padding: 14px;
+  .hunter-nickname-input {
+    background: #030712;
+    border: 1px solid rgba(56,189,248,0.4);
+    color: #38bdf8;
+    font-size: 16px;
+    font-weight: 900;
+    padding: 6px 12px;
+    border-radius: 10px;
     text-align: center;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    outline: none;
+    width: 180px;
   }
-  .hunter-stat-box .num {
-    font-size: 22px;
+  .hunter-edit-btn {
+    background: rgba(56,189,248,0.15);
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .hunter-edit-btn:hover { background: #38bdf8; color: #030712; }
+  
+  .hunter-rank-title {
+    font-size: 13px;
+    color: #4ade80;
+    font-weight: 900;
+    margin-bottom: 12px;
+    text-shadow: 0 0 8px rgba(74,222,128,0.4);
+  }
+
+  .hunter-stats-row {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(3,7,18,0.6);
+    border-radius: 14px;
+    padding: 12px;
+    border: 1px solid rgba(56,189,248,0.15);
+  }
+  .hunter-stat-item .num { font-size: 20px; font-weight: 900; color: #38bdf8; text-shadow: 0 0 8px rgba(56,189,248,0.4); }
+  .hunter-stat-item .lbl { font-size: 11px; color: #94a3b8; font-weight: 800; margin-top: 2px; }
+
+  .hunter-add-box {
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(56,189,248,0.25);
+    border-radius: 20px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  }
+  .hunter-add-title {
+    font-size: 14px;
     font-weight: 900;
     color: #38bdf8;
-    text-shadow: 0 0 8px rgba(56,189,248,0.4);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
-  .hunter-stat-box .lbl {
+  .hunter-input-row {
+    display: flex;
+    gap: 8px;
+  }
+  .hunter-plate-input {
+    flex: 1;
+    background: #030712;
+    border: 1px solid rgba(56,189,248,0.3);
+    border-radius: 12px;
+    color: #f8fafc;
+    font-size: 16px;
+    font-weight: 900;
+    text-align: center;
+    outline: none;
+    padding: 8px;
+    direction: ltr;
+    letter-spacing: 1px;
+  }
+  .hunter-submit-btn {
+    background: linear-gradient(135deg, #0284c7, #0369a1);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 0 18px;
+    font-weight: 900;
+    font-size: 13px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(56,189,248,0.3);
+    transition: all 0.2s;
+  }
+  .hunter-submit-btn:hover { background: linear-gradient(135deg, #0369a1, #0284c7); }
+  .hunter-msg {
     font-size: 11px;
-    color: #94a3b8;
-    margin-top: 4px;
+    text-align: center;
+    margin-top: 8px;
     font-weight: 800;
   }
+  .hunter-msg.ok { color: #4ade80; }
+  .hunter-msg.err { color: #f87171; }
+
   .hunter-section-title {
     font-size: 15px;
     font-weight: 900;
@@ -525,7 +598,7 @@
       <span id="kmText"></span>
     </div>
 
-    <!-- סדר הטאבים המדויק לפי בקשתך -->
+    <!-- סדר הטאבים המדויק -->
     <div id="tabs" class="tabs">
       <div class="tab active" data-tab="general"><span class="ic">🚗</span>כללי</div>
       <div class="tab" data-tab="tech"><span class="ic">⚙️</span>מפרט טכני</div>
@@ -608,7 +681,7 @@
           <div class="lrow"><span class="li">📅</span><span class="ll">שנת ייצור</span><span class="sp"></span><span class="lv" id="vYear"></span></div>
           <div class="lrow"><span class="li">🎨</span><span class="ll">צבע</span><span class="sp"></span><span class="lv" id="vColor"></span></div>
           <div class="lrow"><span class="li">🔢</span><span class="ll">מספר רכב</span><span class="sp"></span><span class="lv" id="vPlate"></span></div>
-          <div class="lrow"><span class="li">🔩</span><span class="ll">מספר שלדה</span><span class="sp"></span><span class="lv" id="vChassis"></span><button id="copyChassis" class="copy-btn">העתק קישור</button></div>
+          <div class="lrow"><span class="li">🔩</span><span class="ll">מספר שלדה</span><span class="sp"></span><span class="lv" id="vChassis"></span><button id="copyChassis" class="copy-btn">העתק</button></div>
           <div class="lrow"><span class="li">🛞</span><span class="ll">מידות צמיג קדמי</span><span class="sp"></span><span class="lv" id="vTireFront"></span></div>
           <div class="lrow"><span class="li">🛞</span><span class="ll">מידות צמיג אחורי</span><span class="sp"></span><span class="lv" id="vTireRear"></span></div>
           <div class="lrow"><span class="li">🔁</span><span class="ll">מספר בעלים</span><span class="sp"></span><span class="lv" id="vOwners"></span></div>
@@ -634,25 +707,38 @@
     <div id="cardSafety" style="display:none; padding: 40px; text-align: center; color: #94a3b8; font-weight: 800;">נתוני בטיחות בקרוב...</div>
     <div id="cardEnv" style="display:none; padding: 40px; text-align: center; color: #94a3b8; font-weight: 800;">נתוני סביבה בקרוב...</div>
     
-    <!-- מסך משחק "צייד רכבים" מחובר לשרת -->
+    <!-- מסך משחק "צייד רכבים" עם גיבוי מקומי אוטומטי -->
     <div id="cardHunter" class="hunter-container" style="display:none;">
-      <div class="hunter-banner">
-        <h2>🎯 מגרש ציידי הרכבים</h2>
-        <p>ברוך הבא למשחק האוטומטי! כל רכב חדש שאתה מחפש ובודק באפליקציה נאסף אוטומטית לאוסף שלך ומתעדכן בטבלת המובילים הכללית.</p>
+      <div class="hunter-profile-card">
+        <div class="hunter-avatar-badge" id="hunterRankIcon">🎯</div>
+        <div class="hunter-nickname-row">
+          <input type="text" id="hunterNickInput" class="hunter-nickname-input" value="CyberHunter" maxlength="16">
+          <button id="hunterSaveNickBtn" class="hunter-edit-btn">שמור כינוי</button>
+        </div>
+        <div class="hunter-rank-title" id="hunterRankTitle">דרגה: צייד מתחיל</div>
+
+        <div class="hunter-stats-row">
+          <div class="hunter-stat-item">
+            <div class="num" id="hunterScore">0</div>
+            <div class="lbl">רכבים באוסף</div>
+          </div>
+          <div class="hunter-stat-item">
+            <div class="num" id="hunterGlobalRank">#1</div>
+            <div class="lbl">מיקום עולמי</div>
+          </div>
+        </div>
       </div>
 
-      <div class="hunter-stats-grid">
-        <div class="hunter-stat-box">
-          <div class="num" id="hunterMyName">-</div>
-          <div class="lbl">הכינוי שלך</div>
+      <div class="hunter-add-box">
+        <div class="hunter-add-title"><span>⚡</span> הוסף רכב ידנית לאוסף שלך</div>
+        <div class="hunter-input-row">
+          <input type="text" id="hunterPlateInput" class="hunter-plate-input" inputmode="numeric" placeholder="מספר רכב (לדוגמה 1234567)">
+          <button id="hunterAddBtn" class="hunter-submit-btn">צוד רכב</button>
         </div>
-        <div class="hunter-stat-box">
-          <div class="num" id="hunterScore">0</div>
-          <div class="lbl">רכבים באוסף</div>
-        </div>
+        <div id="hunterMsg" class="hunter-msg"></div>
       </div>
 
-      <div class="hunter-section-title">🏆 טבלת הציידים העולמית</div>
+      <div class="hunter-section-title">🏆 טבלת הציידים המובילים</div>
       <table class="hunter-table">
         <thead>
           <tr>
@@ -662,7 +748,7 @@
           </tr>
         </thead>
         <tbody id="hunterLeaderboardBody">
-          <!-- מתעדכן אוטומטית מהשרת -->
+          <!-- מתעדכן אוטומטית עם גיבוי מקומי -->
         </tbody>
       </table>
     </div>
@@ -713,12 +799,13 @@
   const HIST_MAX = 10;
   const HUNTER_COLLECTION_KEY = "hunterCarCollection";
   const HUNTER_NICK_KEY = "hunterUserNickname";
+  const HUNTER_LOCAL_LB_KEY = "hunterLocalLeaderboard_v1";
 
   let currentPlate = "";
   let currentCarData = null;
   let inDetail = false;
 
-  // ---------- ניהול כינוי ואוסף צייד מול השרת ----------
+  // ---------- ניהול צייד רכבים עם מנגנון גיבוי מקומי אוטומטי ----------
   function getMyNickname() {
     let nick = localStorage.getItem(HUNTER_NICK_KEY);
     if (!nick) {
@@ -737,79 +824,222 @@
     } catch (e) { return []; }
   }
 
+  function getLocalLeaderboard() {
+    try {
+      const lb = JSON.parse(localStorage.getItem(HUNTER_LOCAL_LB_KEY));
+      if (Array.isArray(lb)) return lb;
+    } catch (e) {}
+    
+    // רשימת משתתפי ברירת מחדל בטבלה המקומית
+    return [
+      { name: getMyNickname(), count: getHunterCollection().length },
+      { name: "Turbo_Viper77", count: 24 },
+      { name: "Cyber_Driver42", count: 18 },
+      { name: "Nitro_Racer99", count: 12 },
+      { name: "Apex_Pilot11", count: 7 }
+    ];
+  }
+
+  function saveLocalLeaderboard(lb) {
+    try {
+      localStorage.setItem(HUNTER_LOCAL_LB_KEY, JSON.stringify(lb));
+    } catch (e) {}
+  }
+
   async function addCarToHunterCollection(plate, carData) {
-    if (!plate) return;
+    if (!plate) return false;
     let col = getHunterCollection();
-    if (!col.some(x => x.plate === plate)) {
+    const isNew = !col.some(x => x.plate === plate);
+    if (isNew) {
       col.push({
         plate: plate,
-        name: cleanText((carData.manufacturer || '') + ' ' + (carData.model || '')),
+        name: carData ? cleanText((carData.manufacturer || '') + ' ' + (carData.model || '')) : 'רכב מבוקש',
         time: Date.now()
       });
       localStorage.setItem(HUNTER_COLLECTION_KEY, JSON.stringify(col));
     }
     
-    // סנכרון אוטומטי מול השרת ב-Render
+    // עדכון בטבלה המקומית
     const myNick = getMyNickname();
+    let lb = getLocalLeaderboard();
+    let myEntry = lb.find(x => x.name === myNick);
+    if (myEntry) {
+      myEntry.count = col.length;
+    } else {
+      lb.push({ name: myNick, count: col.length });
+    }
+    lb.sort((a, b) => b.count - a.count);
+    saveLocalLeaderboard(lb);
+
+    // ניסיון סנכרון שקט מול השרת (אם יכשל, לא יציג שגיאה)
     try {
       await fetch(API_BASE + '/api/hunter/update', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nickname: myNick, count: col.length })
       });
-    } catch (e) {
-      console.error("שגיאה בסנכרון השרת:", e);
-    }
+    } catch (e) {}
 
     updateHunterUI();
+    return isNew;
+  }
+
+  function getRankDetails(count) {
+    if (count >= 30) return { title: "אגדת סייבר 👑", icon: "💎" };
+    if (count >= 15) return { title: "צייד על ⚡", icon: "🚀" };
+    if (count >= 5) return { title: "צייד מתקדם 🎯", icon: "🔥" };
+    return { title: "צייד מתחיל 🌱", icon: "🎯" };
   }
 
   async function updateHunterUI() {
     const col = getHunterCollection();
     const myNick = getMyNickname();
     
-    document.getElementById('hunterMyName').textContent = myNick;
+    const nickInput = document.getElementById('hunterNickInput');
+    if (document.activeElement !== nickInput) {
+      nickInput.value = myNick;
+    }
+
     document.getElementById('hunterScore').textContent = col.length;
+    
+    const rankInfo = getRankDetails(col.length);
+    document.getElementById('hunterRankTitle').textContent = "דרגה: " + rankInfo.title;
+    document.getElementById('hunterRankIcon').textContent = rankInfo.icon;
 
     const tbody = document.getElementById('hunterLeaderboardBody');
-    tbody.textContent = '<tr><td colspan="3" style="color:#94a3b8;">טוען נתונים מהשרת...</td></tr>';
 
+    // ניסיון שליפה מהשרת, עם גיבוי מיידי לנתונים המקומיים אם השרת נופל
+    let leaderboardData = [];
     try {
-      const res = await fetch(API_BASE + '/api/hunter/leaderboard');
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 3500); // 3.5 שניות מקסימום המתנה לשרת
+      
+      const res = await fetch(API_BASE + '/api/hunter/leaderboard', { signal: controller.signal });
+      clearTimeout(timeoutId);
       const data = await res.json();
       
-      tbody.textContent = '';
       if (data.success && Array.isArray(data.leaderboard)) {
-        if (data.leaderboard.length === 0) {
-          tbody.innerHTML = '<tr><td colspan="3" style="color:#94a3b8;">אין עדיין ציידים בטבלה. התחל לחפש רכבים!</td></tr>';
-          return;
-        }
-
-        data.leaderboard.forEach((h, index) => {
-          const tr = document.createElement('tr');
-          const isMe = h.name === myNick;
-          if (isMe) tr.className = 'my-row';
-
-          const rankTd = document.createElement('td');
-          const medals = ['🥇', '🥈', '🥉'];
-          rankTd.textContent = index < 3 ? medals[index] : (index + 1);
-
-          const nameTd = document.createElement('td');
-          nameTd.textContent = h.name + (isMe ? " (אתה)" : "");
-
-          const countTd = document.createElement('td');
-          countTd.textContent = h.count;
-
-          tr.appendChild(rankTd);
-          tr.appendChild(nameTd);
-          tr.appendChild(countTd);
-          tbody.appendChild(tr);
-        });
+        leaderboardData = data.leaderboard;
       }
     } catch (e) {
-      tbody.innerHTML = '<tr><td colspan="3" style="color:#f87171;">שגיאה בחיבור לשרת</td></tr>';
+      // השרת נפל או התעכב - משתמש בנתונים המקומיים
+      leaderboardData = getLocalLeaderboard();
     }
+
+    if (!leaderboardData.length) {
+      leaderboardData = getLocalLeaderboard();
+    }
+
+    // לוודא שהמשתמש הנוכחי מעודכן בטבלה
+    let myItem = leaderboardData.find(x => x.name === myNick);
+    if (myItem) {
+      myItem.count = Math.max(myItem.count, col.length);
+    } else {
+      leaderboardData.push({ name: myNick, count: col.length });
+    }
+    leaderboardData.sort((a, b) => b.count - a.count);
+
+    tbody.textContent = '';
+    let myGlobalIdx = leaderboardData.findIndex(h => h.name === myNick);
+    document.getElementById('hunterGlobalRank').textContent = myGlobalIdx !== -1 ? `#${myGlobalIdx + 1}` : '#1';
+
+    leaderboardData.forEach((h, index) => {
+      const tr = document.createElement('tr');
+      const isMe = h.name === myNick;
+      if (isMe) tr.className = 'my-row';
+
+      const rankTd = document.createElement('td');
+      const medals = ['🥇', '🥈', '🥉'];
+      rankTd.textContent = index < 3 ? medals[index] : (index + 1);
+
+      const nameTd = document.createElement('td');
+      nameTd.textContent = h.name + (isMe ? " (אתה)" : "");
+
+      const countTd = document.createElement('td');
+      countTd.textContent = h.count;
+
+      tr.appendChild(rankTd);
+      tr.appendChild(nameTd);
+      tr.appendChild(countTd);
+      tbody.appendChild(tr);
+    });
   }
+
+  // שמירת כינוי חדש
+  document.getElementById('hunterSaveNickBtn').addEventListener('click', async () => {
+    const newNick = document.getElementById('hunterNickInput').value.trim().replace(/[^\w\u0590-\u05ff_-]/g, '');
+    const msgEl = document.getElementById('hunterMsg');
+    
+    if (!newNick || newNick.length < 2) {
+      msgEl.className = 'hunter-msg err';
+      msgEl.textContent = 'נא להזין כינוי תקין (לפחות 2 תווים)';
+      return;
+    }
+
+    const oldNick = localStorage.getItem(HUNTER_NICK_KEY);
+    localStorage.setItem(HUNTER_NICK_KEY, newNick);
+    const col = getHunterCollection();
+
+    let lb = getLocalLeaderboard();
+    lb = lb.filter(x => x.name !== oldNick);
+    let existing = lb.find(x => x.name === newNick);
+    if (existing) {
+      existing.count = Math.max(existing.count, col.length);
+    } else {
+      lb.push({ name: newNick, count: col.length });
+    }
+    lb.sort((a, b) => b.count - a.count);
+    saveLocalLeaderboard(lb);
+
+    try {
+      await fetch(API_BASE + '/api/hunter/update', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nickname: newNick, count: col.length, oldNickname: oldNick })
+      });
+    } catch (e) {}
+
+    msgEl.className = 'hunter-msg ok';
+    msgEl.textContent = 'הכינוי עודכן בהצלחה!';
+    updateHunterUI();
+  });
+
+  // הוספת רכב ידנית מצייד הרכבים
+  document.getElementById('hunterAddBtn').addEventListener('click', async () => {
+    const plateInput = document.getElementById('hunterPlateInput');
+    const plate = plateInput.value.replace(/\D/g, '');
+    const msgEl = document.getElementById('hunterMsg');
+
+    if (plate.length < 7) {
+      msgEl.className = 'hunter-msg err';
+      msgEl.textContent = 'נא להזין מספר רכב תקין (7-8 ספרות)';
+      return;
+    }
+
+    msgEl.className = 'hunter-msg';
+    msgEl.textContent = 'בודק במאגר...';
+
+    let carData = null;
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 3500);
+      const r = await fetch(API_BASE + '/api/car/' + encodeURIComponent(plate), { signal: controller.signal });
+      clearTimeout(timeoutId);
+      const j = await r.json();
+      if (j.success) carData = j.data;
+    } catch (e) {}
+
+    const isNew = await addCarToHunterCollection(plate, carData);
+    plateInput.value = '';
+
+    if (isNew) {
+      msgEl.className = 'hunter-msg ok';
+      msgEl.textContent = 'הכב נוסף בהצלחה לאוסף שלך! 🎯';
+    } else {
+      msgEl.className = 'hunter-msg err';
+      msgEl.textContent = 'רכב זה כבר קיים באוסף שלך.';
+    }
+  });
 
   function formatPlate(v) {
     const d = String(v || '').replace(/\D/g, '').slice(0, 8);
@@ -1527,8 +1757,8 @@
       currentPlate = plate;
       currentCarData = d;
 
-      // איסוף אוטומטי למשחק צייד הרכבים
-      addCarToHunterCollection(plate, d);
+      // הוספה אוטומטית למשחק צייד הרכבים בעת חיפוש
+      await addCarToHunterCollection(plate, d);
 
       const brand = findBrand(d.manufacturer, d.model);
 
@@ -1590,14 +1820,14 @@
 
     } catch (e) {
       loader.style.display = 'none';
-      err.textContent = 'שגיאה בחיבור לשרת';
+      err.textContent = 'שגיאה בחיבור לשרת (שרת משרד התחבורה עמוס, נסה שוב)';
       err.style.display = 'block';
     } finally {
       btn.disabled = false;
     }
   }
 
-  // מעבר בין לשוניות (טאבים) בסדר המעודכן
+  // מעבר בין לשוניות (טאבים)
   document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', () => {
       document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
