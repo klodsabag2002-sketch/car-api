@@ -117,7 +117,7 @@
   .history-head .h-title { font-size: 14px; font-weight: 900; color: #38bdf8; letter-spacing: 0.5px; }
   .history-head .h-clear { background: none; border: none; color: #f87171; font-size: 13px; cursor: pointer; font-weight: 800; transition: text-shadow 0.2s; }
   .history-head .h-clear:hover { text-shadow: 0 0 8px rgba(248,113,113,0.6); }
-  .h-row { display: flex; align-items: center; padding: 12px 18px; border-bottom: 1px solid rgba(255,255,255,0.04); cursor: pointer; transition: all 0.2s; }
+  .h-row { display: flex; align-items: center; padding: 12px 18px; border-bottom: 1px solid rgba(255,255,204,0.04); cursor: pointer; transition: all 0.2s; }
   .h-row:last-child { border-bottom: none; }
   .h-row:hover { background: rgba(56, 189, 248, 0.05); }
   .h-icon { width: 46px; height: 46px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; margin-left: 14px; overflow: hidden; border: 2px solid #38bdf8; box-shadow: 0 0 12px rgba(56,189,248,0.4); }
@@ -422,12 +422,61 @@
     border: 1px solid rgba(56,189,248,0.2); 
     box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
   }
-  .spec { text-align: center; background: rgba(3, 7, 18, 0.5); padding: 12px 2px; border-radius: 14px; border: 1px solid rgba(56,189,248,0.1); transition: all 0.2s; }
+  .spec { text-align: center; background: rgba(3, 7, 18, 0.5); padding: 12px 2px; border-radius: 14px; border: 1px solid rgba(56,189,248,0.1); transition: all 0.2s; position: relative; }
   .spec:hover { border-color: rgba(56,189,248,0.4); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(56,189,248,0.2); }
   .spec .sp-ic { font-size: 20px; height: 26px; display: flex; align-items: center; justify-content: center; }
   .spec .sp-lbl { font-size: 9.5px; color: #94a3b8; margin-top: 4px; font-weight: 800; white-space: nowrap; }
-  .spec .sp-val { font-size: 11.5px; font-weight: 900; color: #38bdf8; margin-top: 4px; direction: ltr; text-shadow: 0 0 8px rgba(56,189,248,0.4); }
+  .spec .sp-val { font-size: 11.5px; font-weight: 900; color: #38bdf8; margin-top: 4px; direction: ltr; text-shadow: 0 0 8px rgba(56,189,248,0.4); transition: all 0.3s ease; }
   .spec .sp-val.na { color: #64748b; font-weight: normal; direction: rtl; font-size: 11px; text-shadow: none; }
+  .spec.phev-highlight { border-color: #38bdf8; box-shadow: 0 0 15px rgba(56, 189, 248, 0.5); }
+  .spec.phev-highlight .sp-val { color: #38bdf8; text-shadow: 0 0 12px rgba(56, 189, 248, 0.9); }
+
+  /* כפתור אינטראקטיבי לחשיפת הספק משולב (PHEV) */
+  .phev-reveal-btn {
+    display: none;
+    margin: 12px 14px 0;
+    padding: 12px 16px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.15) 0%, rgba(15, 23, 42, 0.9) 100%);
+    border: 1.5px dashed #38bdf8;
+    color: #38bdf8;
+    font-size: 12.5px;
+    font-weight: 900;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
+    transition: all 0.25s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    position: relative;
+    overflow: hidden;
+  }
+  .phev-reveal-btn:hover {
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.25) 0%, rgba(15, 23, 42, 0.95) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.5);
+    border-color: #7dd3fc;
+  }
+  .phev-reveal-btn.active {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    border-style: solid;
+    border-color: #38bdf8;
+    color: #fff;
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.7);
+  }
+  .phev-reveal-btn .phev-tag {
+    display: inline-block;
+    background: rgba(56, 189, 248, 0.2);
+    border: 1px solid #38bdf8;
+    border-radius: 8px;
+    padding: 2px 6px;
+    font-size: 10px;
+    margin-left: 6px;
+  }
+  .phev-reveal-btn.active .phev-tag {
+    background: #0f172a;
+    color: #38bdf8;
+  }
 
   /* באנר תגית הרגשה ספורטיבית */
   .power-feel-badge {
@@ -743,9 +792,9 @@
 
         <!-- גריד ביצועים ומפרט - 5 קוביות כולל נפח מנוע -->
         <div class="spec-card">
-          <div class="spec">
+          <div class="spec" id="specHpCard">
             <div class="sp-ic">⚡</div>
-            <div class="sp-lbl">כוח סוס</div>
+            <div class="sp-lbl" id="spHpLbl">כוח סוס</div>
             <div class="sp-val" id="sHp">אין נתון</div>
           </div>
           <div class="spec">
@@ -770,13 +819,19 @@
           </div>
         </div>
 
+        <!-- כפתור אינטראקטיבי לחשיפת הספק משולב (PHEV) -->
+        <div id="phevRevealBtn" class="phev-reveal-btn">
+          <span class="phev-tag">PHEV</span>
+          <span id="phevBtnText">⚡ לחץ כאן לחשיפת ההספק המשולב (מנוע + חשמל)</span>
+        </div>
+
         <!-- תגית הרגשה ספורטיבית של הרכב -->
         <div id="powerFeelBadge" class="power-feel-badge" style="display:none;">
           <span class="power-feel-lbl">תחושת נהיגה והרגשה:</span>
           <span class="power-feel-val" id="powerFeelText">-</span>
         </div>
 
-        <!-- דיסקליימר מעודכן: מסביר שהנתונים מבוססים על מודל הערכה פיזיקלי -->
+        <!-- דיסקליימר מעודכן -->
         <div class="accel-disclaimer">
           ℹ️ נתוני התאוצה (0-100), המהירות המרבית ויחס ההספק-משקל מחושבים לפי מאפייני היצרן ומודל הערכה פיזיקלי מתקדם, ומשמשים לאינדיקציה והערכה בלבד.
         </div>
@@ -1008,10 +1063,10 @@
   let currentCarData = null;
   let inDetail = false;
   let currentCarNickname = "המפלצת שלי";
+  let isShowingCombinedHp = false;
 
-  // פונקציית חישוב מתקדמת ומדויקת למהירות מרבית ויחס הספק-משקל
-  function calculatePerformanceMetrics(d) {
-    const hp = Number(d.horsepower) || 0;
+  function calculatePerformanceMetrics(d, hpOverride) {
+    const hp = Number(hpOverride !== undefined ? hpOverride : d.horsepower) || 0;
     const weight = Number(d.curbWeight) || Number(d.mishkal_atsmi) || Number(d.technical?.totalWeight) || Number(d.totalWeight) || 0;
     const body = (d.bodyType || d.merkav || '').toLowerCase();
     const fuel = (d.fuelType || d.sug_delek_nm || '').toLowerCase();
@@ -1022,7 +1077,6 @@
       return { topSpeed: null, powerWeight: null, feelText: null, feelColor: '#94a3b8' };
     }
 
-    // 1. יחס הספק-משקל והרגשת נהיגה
     let powerWeight = null;
     let feelText = null;
     let feelColor = '#38bdf8';
@@ -1046,24 +1100,21 @@
       }
     }
 
-    // 2. חישוב מהירות מרבית מדויק (כולל זיהוי אבסולוטי של חשמליות, פורשה, טויוטה וגרמניות)
     let topSpeed = 0;
-    
-    // זיהוי ודאי של רכב חשמלי: לפי שם דלק, או נפח מנוע 0 עם כוח סוס
     const isElectric = fuel.includes('חשמל') || fuel.includes('electric') || (engineCc === 0 && hp > 0);
 
     if (isElectric) {
       if (man.includes('porsche') || hp >= 450) {
-        topSpeed = 260; // פורשה טייקאן ורכבי על חשמליים
+        topSpeed = 260;
       } else if (man.includes('tesla') || hp >= 280) {
-        topSpeed = 200; // טסלה ודגמי ביצועים
+        topSpeed = 200;
       } else if (hp >= 200) {
-        topSpeed = 200; // אקספנג G6, זיקר, איוניק 5, BYD Seal RWD
+        topSpeed = 200;
       } else {
-        topSpeed = 160; // חשמליות סטנדרטיות (BYD Atto 3, ג'ילי, אורה)
+        topSpeed = 160;
       }
     } else if (man.includes('volvo') || (man.includes('toyota') && (fuel.includes('חשמל') || fuel.includes('היבריד')))) {
-      topSpeed = 180; // וולוו וטויוטה היברידית נעולות ב-180
+      topSpeed = 180;
     } else {
       let aeroFactor = 1.0;
       if (body.includes('שטח') || body.includes('suv') || body.includes('ג\'יפ')) aeroFactor = 0.94;
@@ -1072,14 +1123,74 @@
       topSpeed = Math.round(37.5 * Math.cbrt(hp) * aeroFactor);
 
       if (hp >= 280 && topSpeed > 250) {
-        topSpeed = 250; // חסימה אלקטרונית גרמנית סטנדרטית
+        topSpeed = 250;
       }
     }
 
     return { topSpeed, powerWeight, feelText, feelColor };
   }
 
-  // פתיחה וסגירה של תפריט 3 קווים
+  // עדכון ממשק של ההספק (רגיל מול משולב) בלחיצה
+  function applyHorsepowerDisplay(useCombined) {
+    if (!currentCarData) return;
+    const d = currentCarData;
+    const phevBtn = document.getElementById('phevRevealBtn');
+    const phevBtnText = document.getElementById('phevBtnText');
+    const specHpCard = document.getElementById('specHpCard');
+    const spHpLbl = document.getElementById('spHpLbl');
+
+    const baseHp = Number(d.horsepower) || 0;
+    const combHp = Number(d.combinedHorsepower) || baseHp;
+
+    if (useCombined) {
+      isShowingCombinedHp = true;
+      setVal('sHp', combHp, 'כ"ס');
+      spHpLbl.textContent = 'כ"ס משולב';
+      specHpCard.classList.add('phev-highlight');
+      phevBtn.classList.add('active');
+      phevBtnText.textContent = `⚡ מוצג הספק משולב: ${combHp} כ"ס (+${combHp - baseHp} כ"ס חשמל) - לחץ לחזרה`;
+
+      const perf = calculatePerformanceMetrics(d, combHp);
+      setVal('sPowerWeight', perf.powerWeight, 'ק"ג/כ"ס');
+      setVal('sTopSpeed', perf.topSpeed, 'קמ"ש');
+
+      if (perf.feelText) {
+        const feelBadge = document.getElementById('powerFeelBadge');
+        const feelTextEl = document.getElementById('powerFeelText');
+        feelTextEl.textContent = perf.feelText;
+        feelTextEl.style.color = perf.feelColor;
+        feelBadge.style.display = 'flex';
+      }
+
+      updateCyberCard(d, currentPlate, perf, combHp);
+    } else {
+      isShowingCombinedHp = false;
+      setVal('sHp', baseHp, 'כ"ס');
+      spHpLbl.textContent = 'כוח סוס (בנזין)';
+      specHpCard.classList.remove('phev-highlight');
+      phevBtn.classList.remove('active');
+      phevBtnText.textContent = '⚡ לחץ כאן לחשיפת ההספק המשולב (מנוע + חשמל)';
+
+      const perf = calculatePerformanceMetrics(d, baseHp);
+      setVal('sPowerWeight', perf.powerWeight, 'ק"ג/כ"ס');
+      setVal('sTopSpeed', perf.topSpeed, 'קמ"ש');
+
+      if (perf.feelText) {
+        const feelBadge = document.getElementById('powerFeelBadge');
+        const feelTextEl = document.getElementById('powerFeelText');
+        feelTextEl.textContent = perf.feelText;
+        feelTextEl.style.color = perf.feelColor;
+        feelBadge.style.display = 'flex';
+      }
+
+      updateCyberCard(d, currentPlate, perf, baseHp);
+    }
+  }
+
+  document.getElementById('phevRevealBtn').addEventListener('click', () => {
+    applyHorsepowerDisplay(!isShowingCombinedHp);
+  });
+
   const menuToggleBtn = document.getElementById('menuToggleBtn');
   const sideMenuDropdown = document.getElementById('sideMenuDropdown');
 
@@ -1465,13 +1576,14 @@
     }
   }
 
-  function updateCyberCard(d, plate, perf) {
+  function updateCyberCard(d, plate, perf, activeHp) {
     const brand = findBrand(d.manufacturer, d.model);
     const logoSrc = getLogoSrc(brand);
+    const displayHp = activeHp !== undefined ? activeHp : d.horsepower;
 
     document.getElementById('cardNickDisplay').textContent = `"${currentCarNickname}"`;
     document.getElementById('cardModelSub').textContent = cleanText((d.manufacturer || '') + ' ' + (d.model || ''));
-    document.getElementById('cardHpVal').textContent = d.horsepower ? d.horsepower + ' כ"ס' : 'אין נתון';
+    document.getElementById('cardHpVal').textContent = displayHp ? displayHp + ' כ"ס' : 'אין נתון';
     document.getElementById('cardAccelVal').textContent = d.acceleration0to100 ? d.acceleration0to100 + ' ש' : 'אין נתון';
     document.getElementById('cardTopSpeedVal').textContent = perf.topSpeed ? perf.topSpeed + ' קמ"ש' : 'אין נתון';
     document.getElementById('cardPlateNum').textContent = formatPlate(plate);
@@ -1503,8 +1615,9 @@
     if (val) {
       currentCarNickname = val;
       if (currentCarData && currentPlate) {
-        const perf = calculatePerformanceMetrics(currentCarData);
-        updateCyberCard(currentCarData, currentPlate, perf);
+        const activeHp = isShowingCombinedHp ? (currentCarData.combinedHorsepower || currentCarData.horsepower) : currentCarData.horsepower;
+        const perf = calculatePerformanceMetrics(currentCarData, activeHp);
+        updateCyberCard(currentCarData, currentPlate, perf, activeHp);
       }
     }
     nickModal.classList.remove('show');
@@ -1513,8 +1626,9 @@
   document.getElementById('shareCyberCardBtn').addEventListener('click', () => {
     if (!currentCarData) return;
     const d = currentCarData;
-    const perf = calculatePerformanceMetrics(d);
-    const shareText = `🔥 כרטיס רכב סייבר פרימיום "${currentCarNickname}"!\n🚗 דגם: ${cleanText((d.manufacturer || '') + ' ' + (d.model || ''))} (${d.year || ''})\n⚡ כוח סוס: ${d.horsepower || 'לא ידוע'}\n🚀 מהירות מרבית: ${perf.topSpeed ? perf.topSpeed + ' קמ"ש' : 'לא ידוע'}\n⏱️ תאוצה 0-100: ${d.acceleration0to100 ? d.acceleration0to100 + ' שניות' : 'לא ידוע'}\n🔢 מספר רכב: ${formatPlate(currentPlate)}\n\nנבדק באפליקציית סייבר פרימיום ⚡`;
+    const activeHp = isShowingCombinedHp ? (d.combinedHorsepower || d.horsepower) : d.horsepower;
+    const perf = calculatePerformanceMetrics(d, activeHp);
+    const shareText = `🔥 כרטיס רכב סייבר פרימיום "${currentCarNickname}"!\n🚗 דגם: ${cleanText((d.manufacturer || '') + ' ' + (d.model || ''))} (${d.year || ''})\n⚡ כוח סוס: ${activeHp || 'לא ידוע'}${isShowingCombinedHp ? ' (משולב PHEV)' : ''}\n🚀 מהירות מרבית: ${perf.topSpeed ? perf.topSpeed + ' קמ"ש' : 'לא ידוע'}\n⏱️ תאוצה 0-100: ${d.acceleration0to100 ? d.acceleration0to100 + ' שניות' : 'לא ידוע'}\n🔢 מספר רכב: ${formatPlate(currentPlate)}\n\nנבדק באפליקציית סייבר פרימיום ⚡`;
 
     if (navigator.share) {
       navigator.share({ title: 'כרטיס רכב סייבר פרימיום', text: shareText }).catch(() => {});
@@ -1642,9 +1756,11 @@
     document.getElementById('detailView').classList.remove('show');
     document.getElementById('backBtn').classList.add('hidden');
     document.getElementById('errorMsg').style.display = 'none';
+    document.getElementById('phevRevealBtn').style.display = 'none';
     closeOwnPanel();
     currentPlate = '';
     currentCarData = null;
+    isShowingCombinedHp = false;
     renderHistory();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -2092,13 +2208,16 @@
       const d2 = j.data;
       const d1 = currentCarData;
 
+      const hp1ToUse = isShowingCombinedHp && d1.combinedHorsepower ? d1.combinedHorsepower : d1.horsepower;
+      const hp2ToUse = d2.combinedHorsepower || d2.horsepower;
+
       document.getElementById('cmpCar1Title').textContent = cleanText((d1.manufacturer || '') + ' ' + (d1.model || ''));
-      document.getElementById('cmpHp1').textContent = d1.horsepower ? d1.horsepower + ' כ"ס' : 'אין נתון';
+      document.getElementById('cmpHp1').textContent = hp1ToUse ? hp1ToUse + ' כ"ס' : 'אין נתון';
       document.getElementById('cmpAccel1').textContent = d1.acceleration0to100 ? d1.acceleration0to100 + ' ש' : 'אין נתון';
       document.getElementById('cmpYear1').textContent = d1.year || 'אין נתון';
 
       document.getElementById('cmpCar2Title').textContent = cleanText((d2.manufacturer || '') + ' ' + (d2.model || ''));
-      document.getElementById('cmpHp2').textContent = d2.horsepower ? d2.horsepower + ' כ"ס' : 'אין נתון';
+      document.getElementById('cmpHp2').textContent = hp2ToUse ? hp2ToUse + ' כ"ס' : 'אין נתון';
       document.getElementById('cmpAccel2').textContent = d2.acceleration0to100 ? d2.acceleration0to100 + ' ש' : 'אין נתון';
       document.getElementById('cmpYear2').textContent = d2.year || 'אין נתון';
 
@@ -2171,10 +2290,12 @@
     document.getElementById('tabs').classList.remove('show');
     document.getElementById('hero').classList.remove('show');
     document.getElementById('powerFeelBadge').style.display = 'none';
+    document.getElementById('phevRevealBtn').style.display = 'none';
     setupCopyButton(null);
     closeOwnPanel();
     currentPlate = '';
     currentCarData = null;
+    isShowingCombinedHp = false;
 
     if (plate.length < 7) {
       err.textContent = 'נא להזין מספר רכב תקין';
@@ -2239,7 +2360,6 @@
         document.getElementById('heroName').textContent = cleanText((d.manufacturer || '') + ' ' + (d.model || ''));
         document.getElementById('heroTrim').textContent = cleanText(d.trim || '');
 
-        // חישוב ביצועי מהירות ויחס הספק-משקל
         const perf = calculatePerformanceMetrics(d);
 
         updateCyberCard(d, plate, perf);
@@ -2253,13 +2373,25 @@
 
         setStatusBlock('stDisabled', d.disabled ? 'יש' : 'אין', d.disabled ? 'ok' : 'neutral');
 
-        // הצגת ביצועים בקוביית 5 העמודות המרכזית
+        // הצגת ביצועים התחלתיים (לפי נתוני משרד התחבורה)
         setVal('sHp', d.horsepower, 'כ"ס');
+        document.getElementById('spHpLbl').textContent = d.isPhev ? 'כ"ס (בנזין)' : 'כוח סוס';
+        document.getElementById('specHpCard').classList.remove('phev-highlight');
+
         setVal('sAccel', d.acceleration0to100, 'שניות');
         setVal('sTopSpeed', perf.topSpeed, 'קמ"ש');
         setVal('sPowerWeight', perf.powerWeight, 'ק"ג/כ"ס');
 
-        // טיפול חכם בנפח מנוע (כולל הצגה יפה לרכב חשמלי)
+        // בדיקה והצגה של כפתור ה-PHEV
+        const phevBtn = document.getElementById('phevRevealBtn');
+        if (d.isPhev && d.combinedHorsepower && d.combinedHorsepower !== d.horsepower) {
+          phevBtn.style.display = 'block';
+          phevBtn.classList.remove('active');
+          document.getElementById('phevBtnText').textContent = '⚡ לחץ כאן לחשיפת ההספק המשולב (מנוע + חשמל)';
+        } else {
+          phevBtn.style.display = 'none';
+        }
+
         const fuel = (d.fuelType || d.sug_delek_nm || '').toLowerCase();
         const isElectric = fuel.includes('חשמל') || fuel.includes('electric') || (Number(d.engineCc) === 0 && Number(d.horsepower) > 0);
         if (isElectric || d.engineCc === 0) {
@@ -2270,7 +2402,6 @@
           setVal('sEngine', d.engineCc, 'סמ"ק');
         }
 
-        // הצגת תגית הרגשה ספורטיבית
         if (perf.feelText) {
           const feelBadge = document.getElementById('powerFeelBadge');
           const feelTextEl = document.getElementById('powerFeelText');
@@ -2308,7 +2439,6 @@
         renderTech(d);
         renderEnv(d);
 
-        // מוודאים שרק טאב כללי דלוק
         document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
         const generalTabBtn = document.querySelector('.tab[data-tab="general"]');
         if (generalTabBtn) generalTabBtn.classList.add('active');
