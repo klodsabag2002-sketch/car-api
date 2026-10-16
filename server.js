@@ -5,7 +5,7 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// ---------- תוספת: טעינת מאגר PHEV ----------
+// ---------- טעינת מאגר PHEV ----------
 let getCombinedPHEVPower = (m, mod, hp) => hp;
 let hasPhevData = false;
 try {
@@ -17,7 +17,20 @@ try {
 } catch (e) {
     console.log('[PHEV DATA] phevData.js לא נטען, ממשיך כרגיל.');
 }
-// ------------------------------------------
+
+// ---------- תוספת: טעינת מאגר HEV / MHEV ----------
+let getCombinedHEVPower = (m, mod, hp, cc) => hp;
+let hasHevData = false;
+try {
+    const hevModule = require('./hevData');
+    if (hevModule && hevModule.getCombinedHEVPower) {
+        getCombinedHEVPower = hevModule.getCombinedHEVPower;
+        hasHevData = true;
+    }
+} catch (e) {
+    console.log('[HEV DATA] hevData.js לא נטען, ממשיך כרגיל.');
+}
+// --------------------------------------------------
 
 app.use(cors());
 app.use(express.json());
@@ -252,26 +265,20 @@ async function fetchOwnershipRows(plate) {
         .sort((a, b) => String(a.date).localeCompare(String(b.date)));
 }
 
-// פונקציית שליפת מחיר יבואן עם דיבוג מלא ללוגים
 async function fetchImporterPriceApi(car, row) {
     try {
         const tozeretCd = toNumber(car.tozeret_cd) ?? (row ? toNumber(row.tozeret_cd) : null);
         const degemCd = toNumber(car.degem_cd) ?? (row ? toNumber(row.degem_cd) : null);
         const year = toNumber(car.shnat_yitzur);
 
-        console.log(`[DEBUG IMPORTER] Searching for tozeret_cd: ${tozeretCd}, degem_cd: ${degemCd}, year: ${year}`);
-
         if (tozeretCd == null || degemCd == null) {
-            console.log('[DEBUG IMPORTER] Missing codes!');
             return { importerPrice: null, importerName: null };
         }
 
         const records = await searchDatastore(IMPORTER_PRICE_ID, { tozeret_cd: tozeretCd, degem_cd: degemCd }, 20);
-        console.log(`[DEBUG IMPORTER] Found records from gov.il:`, records.length);
 
         if (records && records.length > 0) {
             const match = records.find(r => !year || Number(r.shnat_yitzur) === year) || records[0];
-            console.log(`[DEBUG IMPORTER] Matched record:`, match);
             return {
                 importerPrice: toNumber(match.mehir) || null,
                 importerName: toText(match.shem_yevuan) || null
@@ -342,15 +349,31 @@ app.get('/api/car/:plate', async (req, res) => {
         const trim = toText(row?.ramat_gimur) || toText(car.ramat_gimur) || null;
         const year = car.shnat_yitzur || "לא ידוע";
         const hp = toNumber(row?.koah_sus) ?? toNumber(car.koah_sus);
-
-        // ---------- תוספת: חישוב הספק משולב מבלי לדרוס את ה-hp הרגיל ----------
-        const combinedHp = hasPhevData
-            ? getCombinedPHEVPower(`${manufacturer} ${car.degem_nm || ''} ${trim || ''}`, model, hp)
-            : hp;
-        const isPhev = Boolean(combinedHp && combinedHp !== hp);
-        // -------------------------------------------------------------------
-
         const engineCc = toNumber(row?.nefah_manoa) ?? toNumber(car.nefah_manoa);
+
+        // ---------- בדיקה ושילוב נתוני PHEV או HEV/MHEV ----------
+        let combinedHp = hp;
+        let isPhev = false;
+
+        const carDesc = `${manufacturer} ${car.degem_nm || ''} ${trim || ''} ${model}`;
+
+        if (hasPhevData) {
+            const phevVal = getCombinedPHEVPower(carDesc, model, hp);
+            if (phevVal && phevVal !== hp) {
+                combinedHp = phevVal;
+                isPhev = true;
+            }
+        }
+
+        if (!isPhev && hasHevData) {
+            const hevVal = getCombinedHEVPower(carDesc, model, hp, engineCc);
+            if (hevVal && hevVal !== hp) {
+                combinedHp = hevVal;
+                isPhev = true; // משתמש באותו מנגנון כפתור חשיפה גם ל-HEV!
+            }
+        }
+        // -------------------------------------------------------------
+
         const testExpiry = car.tokef_dt || null;
         const bodyType = resolveBodyType(car, row);
 
@@ -415,8 +438,8 @@ app.get('/api/car/:plate', async (req, res) => {
                 lastTest: toText(car.mivchan_acharon_dt),
                 engineCc, 
                 horsepower: hp,
-                combinedHorsepower: isPhev ? combinedHp : null, // תוספת: הספק משולב בלבד אם קיים
-                isPhev,                                         // תוספת: דגל שמציין אם הרכב הוא פלאג-אין
+                combinedHorsepower: isPhev ? combinedHp : null, 
+                isPhev,                                         
                 acceleration0to100: acceleration ? acceleration.seconds : null,
                 accelerationSource: acceleration ? acceleration.source : null,
                 importerPrice: importerData.importerPrice,
