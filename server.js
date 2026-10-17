@@ -485,6 +485,63 @@ app.get('/api/history/:plate', async (req, res) => {
     }
 });
 
+// ---------- חיפוש לפי מספר שלדה / מידע חלקי (נוסף) ----------
+function mapCandidate(r) {
+    return {
+        plate: String(r.mispar_rechev ?? ''),
+        manufacturer: toText(r.tozeret_nm) || '',
+        model: toText(r.kinuy_mishari) || toText(r.degem_nm) || '',
+        year: r.shnat_yitzur ?? null
+    };
+}
+
+app.get('/api/search/chassis/:chassis', async (req, res) => {
+    const chassis = String(req.params.chassis || '').replace(/[^A-Za-z0-9]/g, '').toUpperCase();
+    if (chassis.length < 5) {
+        return res.status(400).json({ success: false, results: [], message: 'מספר שלדה קצר מדי' });
+    }
+    try {
+        const records = await searchDatastore(CAR_REGISTRY_ID, { misgeret: chassis }, 50);
+        res.json({ success: true, results: records.map(mapCandidate) });
+    } catch (e) {
+        console.error('[CHASSIS SEARCH ERROR]', e);
+        res.status(500).json({ success: false, results: [], message: 'שגיאה בחיפוש' });
+    }
+});
+
+app.get('/api/search/partial', async (req, res) => {
+    // מקבלים רק ספרות ו-X. אחרי ההמרה מכילה התבנית רק ספרות וקו תחתון, לכן בטוחה להכנסה ל-SQL
+    const raw = String(req.query.pattern || '').replace(/[^0-9Xx]/g, '').toUpperCase();
+    if (!/^[0-9X]{7,8}$/.test(raw)) {
+        return res.status(400).json({ success: false, results: [], message: 'תבנית לא תקינה' });
+    }
+    const like = raw.replace(/X/g, '_');
+    const manufacturer = String(req.query.manufacturer || '').trim().toLowerCase();
+    const yearFrom = Number(req.query.yearFrom) || null;
+    const yearTo = Number(req.query.yearTo) || null;
+
+    const sql = `SELECT * FROM "${CAR_REGISTRY_ID}" WHERE CAST(mispar_rechev AS TEXT) LIKE '${like}' LIMIT 200`;
+    try {
+        const url = `https://data.gov.il/api/3/action/datastore_search_sql?sql=${encodeURIComponent(sql)}`;
+        const r = await fetch(url);
+        const j = await r.json();
+        if (!j?.success) throw new Error('datastore_search_sql failed');
+
+        const rows = (j.result?.records || []).filter(row => {
+            if (manufacturer && !String(row.tozeret_nm || '').toLowerCase().includes(manufacturer)) return false;
+            const y = Number(row.shnat_yitzur);
+            if (yearFrom && (Number.isNaN(y) || y < yearFrom)) return false;
+            if (yearTo && (Number.isNaN(y) || y > yearTo)) return false;
+            return true;
+        });
+
+        res.json({ success: true, results: rows.slice(0, 50).map(mapCandidate) });
+    } catch (e) {
+        console.error('[PARTIAL SEARCH ERROR]', e);
+        res.status(500).json({ success: false, results: [], message: 'שגיאה בחיפוש' });
+    }
+});
+
 app.listen(PORT, () => {
     console.log(`השרת רץ בפורט ${PORT}`);
 });
