@@ -222,11 +222,11 @@
   .own-extra .v { font-weight: 900; color: #38bdf8; direction: ltr; }
   .own-msg { background: rgba(15,23,42,.7); border-radius: 16px; padding: 18px; font-size: 13px; color: #94a3b8; text-align: center; margin-top: 8px; border: 1px solid rgba(56,189,248,.18); font-weight: 700; }
 
-  .spec-card { background: rgba(15,23,42,.7); border-radius: 18px; margin: 16px 14px 0; padding: 16px 8px; display: grid; grid-template-columns: repeat(5,1fr); gap: 6px; border: 1px solid rgba(56,189,248,.18); }
+  .spec-card { background: rgba(15,23,42,.7); border-radius: 18px; margin: 16px 14px 0; padding: 14px 6px; display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 4px; border: 1px solid rgba(56,189,248,.18); }
   .spec { text-align: center; background: rgba(3,7,18,.5); padding: 12px 2px; border-radius: 12px; border: 1px solid rgba(56,189,248,.1); }
   .spec .sp-ic { font-size: 18px; height: 24px; display: flex; align-items: center; justify-content: center; }
-  .spec .sp-lbl { font-size: 9.5px; color: #94a3b8; margin-top: 4px; font-weight: 800; white-space: nowrap; }
-  .spec .sp-val { font-size: 11.5px; font-weight: 900; color: #38bdf8; margin-top: 4px; direction: ltr; }
+  .spec .sp-lbl { font-size: 9px; color: #94a3b8; margin-top: 4px; font-weight: 800; white-space: normal; line-height: 1.25; min-height: 22px; }
+  .spec .sp-val { font-size: 10.5px; font-weight: 900; color: #38bdf8; margin-top: 4px; direction: ltr; line-height: 1.3; overflow-wrap: anywhere; }
   .spec .sp-val.na { color: #64748b; font-weight: normal; direction: rtl; font-size: 11px; }
   .spec.phev-highlight { border-color: #38bdf8; }
   .phev-reveal-btn { display: none; margin: 12px 14px 0; padding: 12px 16px; border-radius: 14px; background: rgba(56,189,248,.08); border: 1px dashed #38bdf8; color: #38bdf8; font-size: 12.5px; font-weight: 900; text-align: center; cursor: pointer; }
@@ -235,6 +235,7 @@
   .power-feel-badge { margin: 12px 14px 0; padding: 12px 16px; border-radius: 14px; background: rgba(15,23,42,.8); border: 1px solid rgba(56,189,248,.25); display: flex; align-items: center; justify-content: space-between; }
   .power-feel-lbl { font-size: 12px; font-weight: 800; color: #94a3b8; }
   .power-feel-val { font-size: 13px; font-weight: 900; color: #38bdf8; }
+  .legal-notice { margin: 10px 14px 0; font-size: 11px; color: #94a3b8; line-height: 1.7; text-align: justify; background: rgba(15,23,42,.6); padding: 12px 14px; border-radius: 12px; border: 1px solid rgba(248,113,113,.25); font-weight: 600; }
   .accel-disclaimer { margin: 10px 14px 0; font-size: 11px; color: #94a3b8; line-height: 1.5; text-align: center; background: rgba(15,23,42,.6); padding: 10px 14px; border-radius: 12px; border: 1px solid rgba(56,189,248,.15); font-weight: 600; }
   .list-card { background: rgba(15,23,42,.7); border-radius: 18px; margin: 16px 14px 0; overflow: hidden; border: 1px solid rgba(56,189,248,.18); }
   .lrow { display: flex; align-items: center; padding: 14px 18px; border-bottom: 1px solid rgba(255,255,255,.04); }
@@ -544,12 +545,14 @@
           <div class="spec"><div class="sp-ic">🚀</div><div class="sp-lbl">מהירות מרבית</div><div class="sp-val" id="sTopSpeed">אין נתון</div></div>
           <div class="spec"><div class="sp-ic">⚖️</div><div class="sp-lbl">הספק-משקל</div><div class="sp-val" id="sPowerWeight">אין נתון</div></div>
           <div class="spec"><div class="sp-ic">⚙️</div><div class="sp-lbl">נפח מנוע</div><div class="sp-val" id="sEngine">אין נתון</div></div>
+          <div class="spec"><div class="sp-ic">⛽</div><div class="sp-lbl">צריכה משוערת</div><div class="sp-val" id="sFuel">אין נתון</div></div>
         </div>
 
         <div id="phevRevealBtn" class="phev-reveal-btn"><span class="phev-tag" id="phevTagLabel">HEV</span><span id="phevBtnText">לחשיפת ההספק המשולב (מנוע + חשמל)</span></div>
         <div id="powerFeelBadge" class="power-feel-badge" style="display:none;"><span class="power-feel-lbl">תחושת נהיגה:</span><span class="power-feel-val" id="powerFeelText">-</span></div>
 
         <div class="accel-disclaimer">נתוני התאוצה, המהירות המרבית ויחס ההספק-משקל מחושבים לפי מאפייני היצרן ומודל הערכה פיזיקלי, ומשמשים לאינדיקציה בלבד.</div>
+        <div class="legal-notice" id="legalNoticeMain"></div>
 
         <div class="list-card">
           <div class="lrow"><span class="li">🏭</span><span class="ll">יצרן</span><span class="sp"></span><span class="lv" id="vManufacturer"></span></div>
@@ -654,7 +657,7 @@
       </div>
       <div id="compareResultCard" class="compare-result-card">
         <div style="font-size:15px;font-weight:900;color:#38bdf8;text-align:center;margin-bottom:10px;">תוצאת השוואה</div>
-        <div class="info-note" style="margin:0 0 10px;">אל תסתמך על המידע הזה בלבד: הנתונים מגיעים ממאגרים ועשויים להיות לא מדויקים, וצריכת הדלק היא הערכה לפי מבחן מעבדה.</div>
+        <div class="legal-notice" id="cmpLegalNote" style="margin:0 0 10px;"></div>
         <div class="compare-grid">
           <div class="compare-col">
             <div class="compare-col-title" id="cmpCar1Title">רכב נוכחי</div>
@@ -1773,9 +1776,17 @@
   function addDisclaimerNote(box) {
     const n = document.createElement('div');
     n.className = 'info-note';
-    n.textContent = 'אל תסתמך על המידע הזה בלבד: הנתונים מגיעים ממאגרים ועשויים להיות לא מדויקים, והפליטות וצריכת הדלק הם לפי דגם ומבחן מעבדה ולא לפי נהיגה אמיתית.';
+    n.textContent = LEGAL_NOTICE_TEXT;
     box.appendChild(n);
   }
+
+  const LEGAL_NOTICE_TEXT = 'הודעה משפטית: כל הנתונים המוצגים באפליקציה מגיעים ממאגרים ומקורות שונים, ביניהם מאגרי משרד התחבורה, נתוני יצרנים, ומידע מחושב או מוערך. המידע מוצג כפי שהוא, ללא הצהרה או התחייבות לדיוקו, לשלמותו או לעדכניותו. אין להסתמך עליו באופן מדויק או מחייב, ובמיוחד לא לצורך קנייה, מכירה, ביטוח, הערכת שווי, מימון, בחירת רכב או כל החלטה אחרת. יש לאמת כל נתון מול מקור רשמי לפני קבלת החלטה. צריכת הדלק, הפליטות, התאוצה, המהירות המרבית וההספק המשולב הם הערכות בלבד, ועשויים להיות שונים מהנתונים בפועל. ייתכנו פערים, שגיאות, נתונים חסרים או עדכונים מאוחרים. השימוש באפליקציה הוא על אחריות המשתמש בלבד, והמפעילים והמפתחים אינם אחראים לכל נזק, הפסד או החלטה שנעשתה על בסיס המידע המוצג.';
+  (function setLegalNotices() {
+    const m = document.getElementById('legalNoticeMain');
+    if (m) m.textContent = LEGAL_NOTICE_TEXT;
+    const c = document.getElementById('cmpLegalNote');
+    if (c) c.textContent = LEGAL_NOTICE_TEXT;
+  })();
 
   function fuelSummary(f) {
     if (!f) return 'אין נתון';
@@ -1919,6 +1930,8 @@
         const isElectric = fuel.includes('חשמל') || fuel.includes('electric') || (Number(d.engineCc) === 0 && Number(d.horsepower) > 0);
         if (isElectric || d.engineCc === 0) { $('sEngine').textContent = 'חשמלי'; $('sEngine').classList.remove('na'); }
         else setVal('sEngine', d.engineCc, 'סמ"ק');
+        $('sFuel').textContent = isElectric ? 'חשמלי' : fuelSummary(d.fuel).replace(' (בנזין)', '').replace(' (דיזל)', '');
+        $('sFuel').classList.toggle('na', !isElectric && fuelSummary(d.fuel) === 'אין נתון');
 
         if (perf.feelText) {
           $('powerFeelText').textContent = perf.feelText;
