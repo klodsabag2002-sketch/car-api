@@ -654,18 +654,21 @@
       </div>
       <div id="compareResultCard" class="compare-result-card">
         <div style="font-size:15px;font-weight:900;color:#38bdf8;text-align:center;margin-bottom:10px;">תוצאת השוואה</div>
+        <div class="info-note" style="margin:0 0 10px;">אל תסתמך על המידע הזה בלבד: הנתונים מגיעים ממאגרים ועשויים להיות לא מדויקים, וצריכת הדלק היא הערכה לפי מבחן מעבדה.</div>
         <div class="compare-grid">
           <div class="compare-col">
             <div class="compare-col-title" id="cmpCar1Title">רכב נוכחי</div>
             <div class="compare-metric">הספק (כ"ס)</div><div class="compare-val" id="cmpHp1">-</div>
             <div class="compare-metric">תאוצה 0-100</div><div class="compare-val" id="cmpAccel1">-</div>
             <div class="compare-metric">שנתון</div><div class="compare-val" id="cmpYear1">-</div>
+            <div class="compare-metric">צריכה משוערת</div><div class="compare-val" id="cmpFuel1">-</div>
           </div>
           <div class="compare-col">
             <div class="compare-col-title" id="cmpCar2Title">רכב משווה</div>
             <div class="compare-metric">הספק (כ"ס)</div><div class="compare-val" id="cmpHp2">-</div>
             <div class="compare-metric">תאוצה 0-100</div><div class="compare-val" id="cmpAccel2">-</div>
             <div class="compare-metric">שנתון</div><div class="compare-val" id="cmpYear2">-</div>
+            <div class="compare-metric">צריכה משוערת</div><div class="compare-val" id="cmpFuel2">-</div>
           </div>
         </div>
       </div>
@@ -1730,6 +1733,7 @@
     note.className = 'info-note';
     note.textContent = 'הנתונים ממאגרי משרד התחבורה ויצרן הרכב.';
     box.appendChild(note);
+    addDisclaimerNote(box);
   }
 
   function renderEnv(d) {
@@ -1745,6 +1749,43 @@
       ['CO2 (גרם/ק"מ)', em.co2Wltp], ['NOx (מ"ג/ק"מ)', em.noxWltp],
       ['HC (מ"ג/ק"מ)', em.hcWltp], ['חלקיקים PM (מ"ג/ק"מ)', em.pmWltp]
     ]);
+    const f = d.fuel || {};
+    if (f.isElectric) {
+      buildInfoCard(box, 'צריכת דלק משוערת', [['סוג הנעה', 'חשמלי - אין צריכת דלק']]);
+    } else if (f.type === 'petrol' || f.type === 'diesel') {
+      const lbl = f.type === 'petrol' ? 'בנזין' : 'דיזל';
+      buildInfoCard(box, 'צריכת דלק משוערת', [
+        ['סוג דלק', lbl],
+        ['ק"מ לליטר (משוער)', f.kmPerLiter],
+        ['הערה', f.isHybridOrPhev ? 'היברידי: התוצאה משוקללת ותלויה בנסיעה על חשמל' : f.note]
+      ]);
+    } else {
+      buildInfoCard(box, 'צריכת דלק משוערת', [
+        ['סוג דלק', 'לא ידוע במאגר'],
+        ['ק"מ לליטר - אם בנזין', f.kmPerLiterPetrol],
+        ['ק"מ לליטר - אם דיזל', f.kmPerLiterDiesel],
+        ['הערה', f.isHybridOrPhev ? 'היברידי: התוצאה משוקללת ותלויה בנסיעה על חשמל' : f.note]
+      ]);
+    }
+    addDisclaimerNote(box);
+  }
+
+  function addDisclaimerNote(box) {
+    const n = document.createElement('div');
+    n.className = 'info-note';
+    n.textContent = 'אל תסתמך על המידע הזה בלבד: הנתונים מגיעים ממאגרים ועשויים להיות לא מדויקים, והפליטות וצריכת הדלק הם לפי דגם ומבחן מעבדה ולא לפי נהיגה אמיתית.';
+    box.appendChild(n);
+  }
+
+  function fuelSummary(f) {
+    if (!f) return 'אין נתון';
+    if (f.isElectric) return 'חשמלי';
+    if (f.type === 'petrol' && f.kmPerLiterPetrol) return f.kmPerLiterPetrol + ' ק"מ/ל׳ (בנזין)';
+    if (f.type === 'diesel' && f.kmPerLiterDiesel) return f.kmPerLiterDiesel + ' ק"מ/ל׳ (דיזל)';
+    if (f.kmPerLiterPetrol || f.kmPerLiterDiesel) {
+      return 'בנזין: ' + (f.kmPerLiterPetrol ?? 'אין נתון') + ' / דיזל: ' + (f.kmPerLiterDiesel ?? 'אין נתון');
+    }
+    return 'אין נתון';
   }
 
   /* ================= השוואה רגילה ================= */
@@ -1764,6 +1805,8 @@
       $('cmpHp2').textContent = hp2 ? hp2 + ' כ"ס' : 'אין נתון';
       $('cmpAccel2').textContent = d2.acceleration0to100 ? d2.acceleration0to100 + ' שנ׳' : 'אין נתון';
       $('cmpYear2').textContent = d2.year || 'אין נתון';
+      $('cmpFuel1').textContent = fuelSummary(d1.fuel);
+      $('cmpFuel2').textContent = fuelSummary(d2.fuel);
       $('compareResultCard').classList.add('show');
     } catch (err) { alert(err.message || 'שגיאה בביצוע ההשוואה'); }
   });
