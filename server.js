@@ -332,6 +332,24 @@ app.get('/', (req, res) => {
     res.status(200).send('Car API is running successfully!');
 });
 
+// נתיב זמני לבדיקה: מחזיר את שמות השדות של רשומת הרכב במאגר (לא לשימוש בדף)
+app.get('/api/debug/fields/:plate', async (req, res) => {
+    const plate = req.params.plate.replace(/\D/g, "");
+    try {
+        const car = await fetchCarRecord(plate);
+        if (!car) return res.status(404).json({ success: false, message: 'לא נמצא' });
+        const keys = Object.keys(car).sort();
+        const nonEmpty = {};
+        for (const k of keys) {
+            if (car[k] !== null && car[k] !== '' && car[k] !== undefined) nonEmpty[k] = car[k];
+        }
+        res.json({ success: true, totalFields: keys.length, allFieldNames: keys, nonEmptyValues: nonEmpty });
+    } catch (e) {
+        console.error('[DEBUG FIELDS ERROR]', e);
+        res.status(500).json({ success: false, message: 'שגיאה' });
+    }
+});
+
 app.get('/api/car/:plate', async (req, res) => {
     const plate = req.params.plate.replace(/\D/g, "");
     try {
