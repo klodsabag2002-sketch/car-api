@@ -869,7 +869,7 @@
         <input type="text" id="partialInput" placeholder="הקלד מספר חלקי" maxlength="12">
         <button id="partialSearchBtn">חפש</button>
       </div>
-      <div class="partial-hint">החלף ספרות שאינך יודע ב-X. אפשר עד 3 ספרות חסרות (X)</div>
+      <div class="partial-hint">החלף ספרות שאינך יודע ב-X. אפשר עד 2 ספרות חסרות (X)</div>
       <button id="advToggleBtn" class="adv-toggle">הצג סינון מתקדם ▾</button>
       <div id="advFilters" class="adv-box">
         <input type="text" id="advManufacturer" placeholder="יצרן (למשל CUPRA)">
@@ -2952,7 +2952,7 @@
     const pattern = document.getElementById('partialInput').value.replace(/[^0-9X]/gi, '').toUpperCase();
     if (pattern.length < 7) { showSearchError('נא להזין לפחות 7 ספרות (החלף חסרות ב-X)'); return; }
     const xCount = (pattern.match(/X/g) || []).length;
-    if (xCount > 3) { showSearchError('המערכת מזהה עד 3 ספרות חסרות (X) בלבד'); return; }
+    if (xCount > 2) { showSearchError('המערכת מזהה עד 2 ספרות חסרות (X) בלבד'); return; }
     let url = SEARCH_ENDPOINT_PARTIAL + '?pattern=' + encodeURIComponent(pattern);
     const man = document.getElementById('advManufacturer').value.trim();
     const yf = document.getElementById('advYearFrom').value.replace(/\D/g, '');
@@ -2960,7 +2960,7 @@
     if (man) url += '&manufacturer=' + encodeURIComponent(man);
     if (yf) url += '&yearFrom=' + yf;
     if (yt) url += '&yearTo=' + yt;
-    const msg = xCount === 3 ? 'מחפש, זה עשוי לקחת זמן...' : null;
+    const msg = xCount === 2 ? 'מחפש, זה עשוי לקחת זמן...' : null;
     runCandidateSearch(url, document.getElementById('partialSearchBtn'), msg);
   }
 
