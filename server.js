@@ -509,25 +509,51 @@ app.get('/api/search/chassis/:chassis', async (req, res) => {
     }
 });
 
+// מייצר את כל המספרים שמתאימים לתבנית, למשל 129XX003 -> 100 אפשרויות
+function expandPattern(pattern) {
+    let out = [''];
+    for (const ch of pattern) {
+        const options = ch === 'X' ? '0123456789'.split('') : [ch];
+        const next = [];
+        for (const prefix of out) {
+            for (const d of options) next.push(prefix + d);
+        }
+        out = next;
+    }
+    return out.filter(n => n[0] !== '0');
+}
+
 app.get('/api/search/partial', async (req, res) => {
-    // מקבלים רק ספרות ו-X. אחרי ההמרה מכילה התבנית רק ספרות וקו תחתון, לכן בטוחה להכנסה ל-SQL
     const raw = String(req.query.pattern || '').replace(/[^0-9Xx]/g, '').toUpperCase();
     if (!/^[0-9X]{7,8}$/.test(raw)) {
         return res.status(400).json({ success: false, results: [], message: 'תבנית לא תקינה' });
     }
-    const like = raw.replace(/X/g, '_');
+    const xCount = (raw.match(/X/g) || []).length;
+    if (xCount > 2) {
+        return res.status(400).json({ success: false, results: [], message: 'אפשר עד 2 ספרות חסרות' });
+    }
+
     const manufacturer = String(req.query.manufacturer || '').trim().toLowerCase();
     const yearFrom = Number(req.query.yearFrom) || null;
     const yearTo = Number(req.query.yearTo) || null;
 
-    const sql = `SELECT * FROM "${CAR_REGISTRY_ID}" WHERE CAST(mispar_rechev AS TEXT) LIKE '${like}' LIMIT 200`;
     try {
-        const url = `https://data.gov.il/api/3/action/datastore_search_sql?sql=${encodeURIComponent(sql)}`;
-        const r = await fetch(url);
-        const j = await r.json();
-        if (!j?.success) throw new Error('datastore_search_sql failed');
+        // בודקים כל מספר אפשרי בעזרת חיפוש מדויק שכבר עובד בשרת
+        const candidates = expandPattern(raw);
+        const found = [];
+        const CHUNK = 20;
+        for (let i = 0; i < candidates.length; i += CHUNK) {
+            const batch = candidates.slice(i, i + CHUNK);
+            const results = await Promise.all(
+                batch.map(n => searchDatastore(CAR_REGISTRY_ID, { mispar_rechev: Number(n) }, 1).catch(() => []))
+            );
+            for (const recs of results) {
+                const rec = recs[0];
+                if (rec && String(rec.mispar_rechev).length === raw.length) found.push(rec);
+            }
+        }
 
-        const rows = (j.result?.records || []).filter(row => {
+        const rows = found.filter(row => {
             if (manufacturer && !String(row.tozeret_nm || '').toLowerCase().includes(manufacturer)) return false;
             const y = Number(row.shnat_yitzur);
             if (yearFrom && (Number.isNaN(y) || y < yearFrom)) return false;
