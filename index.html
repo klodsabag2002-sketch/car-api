@@ -821,6 +821,7 @@
   .cand-plate { color:#fbbf24; font-weight:900; direction:ltr; white-space:nowrap; }
   .cand-info { font-size:13px; color:#94a3b8; }
   .cand-hint { color:#38bdf8; font-size:13px; font-weight:700; text-align:center; padding:4px 0 2px; }
+  .partial-hint { color:#94a3b8; font-size:12px; font-weight:700; text-align:center; margin-top:10px; line-height:1.6; }
   .cand-empty { color:#94a3b8; text-align:center; font-size:14px; padding:12px; }
 </style>
 </head>
@@ -866,6 +867,7 @@
         <input type="text" id="partialInput" placeholder="הקלד מספר חלקי" maxlength="12">
         <button id="partialSearchBtn">חפש</button>
       </div>
+      <div class="partial-hint">החלף ספרות שאינך יודע ב-X. אפשר עד 3 ספרות חסרות (X)</div>
       <button id="advToggleBtn" class="adv-toggle">הצג סינון מתקדם ▾</button>
       <div id="advFilters" class="adv-box">
         <input type="text" id="advManufacturer" placeholder="יצרן (למשל CUPRA)">
@@ -2912,15 +2914,20 @@
     }
   }
 
-  async function runCandidateSearch(url, btn) {
+  async function runCandidateSearch(url, btn, loadingMsg) {
     const loader = document.getElementById('loader');
+    loader.textContent = loadingMsg || 'מחפש במאגר משרד התחבורה...';
     document.getElementById('errorMsg').style.display = 'none';
     document.getElementById('candidatesList').textContent = '';
     loader.style.display = 'block';
     btn.disabled = true;
     try {
       const r = await fetch(API_BASE + url);
-      if (!r.ok) throw new Error('HTTP ' + r.status);
+      if (!r.ok) {
+        const errJson = await r.json().catch(() => ({}));
+        showSearchError(errJson.message || 'שגיאה בחיפוש. נסה שוב מאוחר יותר');
+        return;
+      }
       const j = await r.json();
       const list = Array.isArray(j.results) ? j.results : (Array.isArray(j.data) ? j.data : []);
       renderCandidates(list);
@@ -2941,6 +2948,8 @@
   function doPartialSearch() {
     const pattern = document.getElementById('partialInput').value.replace(/[^0-9X]/gi, '').toUpperCase();
     if (pattern.length < 7) { showSearchError('נא להזין לפחות 7 ספרות (החלף חסרות ב-X)'); return; }
+    const xCount = (pattern.match(/X/g) || []).length;
+    if (xCount > 3) { showSearchError('המערכת מזהה עד 3 ספרות חסרות (X) בלבד'); return; }
     let url = SEARCH_ENDPOINT_PARTIAL + '?pattern=' + encodeURIComponent(pattern);
     const man = document.getElementById('advManufacturer').value.trim();
     const yf = document.getElementById('advYearFrom').value.replace(/\D/g, '');
@@ -2948,7 +2957,8 @@
     if (man) url += '&manufacturer=' + encodeURIComponent(man);
     if (yf) url += '&yearFrom=' + yf;
     if (yt) url += '&yearTo=' + yt;
-    runCandidateSearch(url, document.getElementById('partialSearchBtn'));
+    const msg = xCount === 3 ? 'מחפש, זה עשוי לקחת זמן...' : null;
+    runCandidateSearch(url, document.getElementById('partialSearchBtn'), msg);
   }
 
   document.querySelectorAll('.mode-tab').forEach(t => {
