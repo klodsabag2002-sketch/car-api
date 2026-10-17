@@ -2925,6 +2925,14 @@
   }
 
   function doChassisSearch() {
+    // אם הוזן מספר שנראה כמו מספר רכב (7-8 ספרות), עוברים ללשונית הנכונה ומחפשים
+    const digitsOnly = document.getElementById('chassisInput').value.replace(/[\s-]/g, '');
+    if (/^\d{7,8}$/.test(digitsOnly)) {
+      setSearchMode('plate');
+      document.getElementById('plateInput').value = digitsOnly;
+      searchCar();
+      return;
+    }
     const v = document.getElementById('chassisInput').value.replace(/[^A-Za-z0-9]/g, '').toUpperCase();
     if (v.length < 5) { showSearchError('נא להזין מספר שלדה תקין'); return; }
     runCandidateSearch(SEARCH_ENDPOINT_CHASSIS + encodeURIComponent(v), document.getElementById('chassisSearchBtn'));
@@ -2935,7 +2943,7 @@
   });
   document.getElementById('chassisSearchBtn').addEventListener('click', doChassisSearch);
   document.getElementById('chassisInput').addEventListener('keydown', e => { if (e.key === 'Enter') doChassisSearch(); });
-  setSearchMode('chassis');
+  setSearchMode('plate');
 
   document.getElementById('searchBtn').addEventListener('click', searchCar);
   document.getElementById('plateInput').addEventListener('input', e => { e.target.value = formatPlate(e.target.value); });
