@@ -2257,8 +2257,14 @@
     const card = document.createElement('div');
     card.className = 'scale-card';
 
-    const pGroup = (group !== null && group !== undefined && !isNaN(group)) ? Math.min(15, Math.max(1, Number(group))) : 15;
-    const gScore = greenScore || (pGroup <= 2 ? 0 : Math.round(100 + pGroup * 11.2));
+    // בלי נתון אמיתי מהמאגר לא מציגים קבוצה או מדד מחושבים
+    if (group === null || group === undefined || isNaN(group)) {
+      card.innerHTML = `<div class="scale-header">קבוצת זיהום: <span style="color:#64748b;font-weight:normal;">אין נתון</span></div>`;
+      return card;
+    }
+
+    const pGroup = Math.min(15, Math.max(1, Number(group)));
+    const gScore = (greenScore !== null && greenScore !== undefined && greenScore !== '') ? greenScore : 'אין נתון';
 
     const colors = [
       "#065f46", "#047857", "#059669", "#10b981", "#34d399",
@@ -2286,32 +2292,6 @@
           <span class="score-num" style="color:${colors[pGroup-1]};">${gScore}</span>
         </div>
       </div>
-      <table class="emission-table">
-        <thead>
-          <tr>
-            <th>סוג פליטה</th>
-            <th>כמות ממוצעת</th>
-            <th>יחידת מידה</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>פחמן חד חמצני (CO)</td>
-            <td>${(pGroup * 23.7).toFixed(1)}</td>
-            <td>מ"ג/ק"מ</td>
-          </tr>
-          <tr>
-            <td>פחמן דו חמצני (CO2)</td>
-            <td>${Math.round(95 + pGroup * 5.2)}</td>
-            <td>גרם/ק"מ</td>
-          </tr>
-          <tr>
-            <td>תחמוצות חנקן (NOx)</td>
-            <td>${(pGroup * 2.3).toFixed(1)}</td>
-            <td>מ"ג/ק"מ</td>
-          </tr>
-        </tbody>
-      </table>
     `;
 
     setTimeout(() => {
@@ -2409,7 +2389,15 @@
       ['שמירת נתיב', s.laneDeparture],
       ['זיהוי הולכי רגל', s.pedestrianDetection],
       ['מצלמת רברס', s.rearCamera],
-      ['רמת אבזור בטיחותי', t.safetyLevel]
+      ['רמת אבזור בטיחותי', t.safetyLevel],
+      ['בקרת שטח מת', s.blindSpot],
+      ['בקרת שיוט אדפטיבית', s.adaptiveCruise],
+      ['זיהוי תמרורי תנועה', s.signRecognition],
+      ['בלימה אוטומטית קדימה', s.autoBrakeForward],
+      ['בלימה אוטומטית לאחור', s.autoBrakeReverse],
+      ['אורות גבוהים אוטומטיים', s.autoHighBeam],
+      ['זיהוי עייפות הנהג', s.driverDrowsiness],
+      ['חיישני לחץ צמיגים', s.tirePressure]
     ]);
 
     const note = document.createElement('div');
@@ -2424,8 +2412,8 @@
     box.textContent = '';
     box.style.cssText = 'padding: 4px 0 20px;';
 
-    const pGroup = d.pollutionGroup || d.kvutzat_zihum || (d.engineCc > 2500 ? 15 : (d.engineCc > 1800 ? 11 : 7));
-    const greenScore = d.greenScore || d.madad_yarok || null;
+    const pGroup = d.pollutionGroup ?? null;
+    const greenScore = d.greenScore ?? null;
     box.appendChild(renderPollutionScaleCard(pGroup, greenScore));
 
     const e = d.equipment || {};
@@ -2472,6 +2460,17 @@
       box.appendChild(c);
     };
 
+    const em = d.emissions || {};
+    card('חיישנים וסביבה', [
+      ['מצלמת רוורס', s.rearCamera],
+      ['חיישני חניה מלפנים', s.parkingSensorsFront]
+    ]);
+    card('פליטות לפי תקן WLTP (לפי דגם)', [
+      ['CO2 (גרם/ק"מ)', em.co2Wltp],
+      ['NOx (מ"ג/ק"מ)', em.noxWltp],
+      ['HC (מ"ג/ק"מ)', em.hcWltp],
+      ['חלקיקים PM (מ"ג/ק"מ)', em.pmWltp]
+    ]);
   }
 
   document.getElementById('compareActionBtn').addEventListener('click', async () => {
