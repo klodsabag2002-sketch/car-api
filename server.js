@@ -326,6 +326,38 @@ app.get('/', (req, res) => {
     res.status(200).send('Car API is running successfully!');
 });
 
+// ---------- חדש: נקודת קצה לחיפוש לפי מספר שלדה (VIN) ----------
+app.get('/api/search/vin/:vin', async (req, res) => {
+    const vinQuery = req.params.vin.trim().toUpperCase();
+    try {
+        const records = await searchDatastore(CAR_REGISTRY_ID, { misgeret: vinQuery }, 1);
+        if (records && records.length > 0) {
+            res.json({ success: true, plate: records[0].mispar_rechev });
+        } else {
+            res.json({ success: false, message: "לא נמצא רכב עם מספר שלדה זה" });
+        }
+    } catch (e) {
+        res.status(500).json({ success: false, error: "שגיאה בחיפוש שלדה" });
+    }
+});
+
+// ---------- חדש: נקודת קצה לחיפוש חלקי (דגם / יצרן) ----------
+app.get('/api/search/partial', async (req, res) => {
+    const q = req.query.q || "";
+    try {
+        const records = await searchDatastore(CAR_REGISTRY_ID, null, 15, q);
+        const formatted = records.map(car => ({
+            plate: car.mispar_rechev,
+            manufacturer: car.tozeret_nm || "לא ידוע",
+            model: car.kinuy_mishari || car.degem_nm || "לא ידוע",
+            year: car.shnat_yitzur || ""
+        }));
+        res.json({ success: true, results: formatted });
+    } catch (e) {
+        res.status(500).json({ success: false, error: "שגיאה בחיפוש חלקי" });
+    }
+});
+
 app.get('/api/car/:plate', async (req, res) => {
     const plate = req.params.plate.replace(/\D/g, "");
     try {
