@@ -248,8 +248,30 @@ async function checkDisabled(plate) {
     }
 }
 
-async function fetchCarRecord(plate) {
-    const records = await searchDatastore(CAR_REGISTRY_ID, { mispar_rechev: Number(plate) }, 1);
+// מעודכן: תומך בחיפוש לפי מספר שלדה (VIN) או חיפוש חלקי
+async function fetchCarRecord(query) {
+    const cleanQuery = String(query).trim();
+    
+    // אם זו שלדה (אורך 10 תווים ומעלה או מכילה אותיות באנגלית)
+    if (cleanQuery.length >= 10 || /[a-zA-Z]/.test(cleanQuery)) {
+        const records = await searchDatastore(CAR_REGISTRY_ID, { misgeret: cleanQuery.toUpperCase() }, 1);
+        if (records && records.length > 0) return records[0];
+        
+        const partialRecords = await searchDatastore(CAR_REGISTRY_ID, null, 1, cleanQuery.toUpperCase());
+        if (partialRecords && partialRecords.length > 0) {
+            const found = partialRecords.find(r => String(r.misgeret || '').toUpperCase().includes(cleanQuery.toUpperCase()));
+            if (found) return found;
+        }
+    }
+
+    // חיפוש רגיל לפי לוח רישוי
+    const cleanPlate = cleanQuery.replace(/\D/g, "");
+    if (!cleanPlate) return null;
+
+    let records = await searchDatastore(CAR_REGISTRY_ID, { mispar_rechev: Number(cleanPlate) }, 1);
+    if (!records || records.length === 0) {
+        records = await searchDatastore(CAR_REGISTRY_ID, { mispar_rechev: cleanPlate }, 1);
+    }
     return records[0] || null;
 }
 
@@ -327,12 +349,14 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/car/:plate', async (req, res) => {
-    const plate = req.params.plate.replace(/\D/g, "");
+    const rawQuery = req.params.plate;
     try {
-        const car = await fetchCarRecord(plate);
+        const car = await fetchCarRecord(rawQuery);
         if (!car) {
-            return res.json({ success: false, message: "המספר אינו קיים במאגר משרד התחבורה" });
+            return res.json({ success: false, message: "הנתון אינו קיים במאגר משרד התחבורה" });
         }
+
+        const plate = String(car.mispar_rechev || rawQuery).replace(/\D/g, "");
 
         const [row, historyRaw, ownershipList, disabledResult] = await Promise.all([
             findModelRow(car),
@@ -467,7 +491,7 @@ app.get('/api/car/:plate', async (req, res) => {
         });
     } catch (error) {
         console.error('[CAR API ERROR]', error);
-        res.status(500).json({ success: false, error: "שגיאה בשליפה" });
+        res.status(500).json({ success.false, error: "שגיאה בשליפה" });
     }
 });
 
