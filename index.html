@@ -2409,10 +2409,7 @@
       ['שמירת נתיב', s.laneDeparture],
       ['זיהוי הולכי רגל', s.pedestrianDetection],
       ['מצלמת רברס', s.rearCamera],
-      ['רמת אבזור בטיחותי', t.safetyLevel],
-      ['בקרת שטח מת', s.blindSpot || true],
-      ['בקרת שיוט אדפטיבית', s.adaptiveCruise || true],
-      ['זיהוי תמרורי תנועה', s.signRecognition || true]
+      ['רמת אבזור בטיחותי', t.safetyLevel]
     ]);
 
     const note = document.createElement('div');
@@ -2475,24 +2472,6 @@
       box.appendChild(c);
     };
 
-    card('סביבה וחיישני חניה', [
-      ['מצלמת רוורס', s.rearCamera],
-      ['חיישני חניה מקוריים', e.parkingSensors || true],
-      ['מערכת חניה אוטומטית', e.autoPark || false],
-      ['מצלמות 360 מעלות', e.camera360 || false]
-    ]);
-
-    card('עזרי נהיגה סביבתיים', [
-      ['בקרת שטח מת', s.blindSpot || true],
-      ['התרעת תנועה חוצה מאחור', s.crossTraffic || true],
-      ['בקרת שיוט אדפטיבית', s.adaptiveCruise || true],
-      ['זיהוי תמרורי תנועה', s.signRecognition || true]
-    ]);
-
-    const note = document.createElement('div');
-    note.textContent = 'סקירת סביבה, מדדי זיהום וחיישנים מתקדמים המותקנים ברכב.';
-    note.style.cssText = 'font-size:11px;color:#64748b;text-align:center;margin:18px 14px 0;line-height:1.4;font-weight:700;';
-    box.appendChild(note);
   }
 
   document.getElementById('compareActionBtn').addEventListener('click', async () => {
