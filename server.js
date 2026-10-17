@@ -323,7 +323,10 @@ async function findModelRow(car) {
     for (const filters of attempts) {
         const rows = await searchDatastore(MODELS_ID, filters, 100);
         if (rows.length === 0) continue;
-        return rows.find(r => toNumber(r.koah_sus) != null) || rows[0];
+        // עדיפות לרשומה שיש בה גם הספק וגם נתוני פליטות WLTP, ואחריה רשומה עם הספק בלבד
+        return rows.find(r => toNumber(r.koah_sus) != null && toNumber(r.CO2_WLTP) != null)
+            || rows.find(r => toNumber(r.koah_sus) != null)
+            || rows[0];
     }
     return null;
 }
@@ -452,11 +455,16 @@ app.get('/api/car/:plate', async (req, res) => {
         };
 
         // פליטות לפי תקן WLTP (לפי דגם)
+        // במאגר הדגם חלק מהרכבים מופיעים בשדות kamut_* (גרם/ק"מ) במקום שדות *_WLTP
+        const fnumGramsToMg = (key) => {
+            const n = fnum(key);
+            return n === null ? null : Math.round(n * 1000 * 10) / 10;
+        };
         const emissions = {
-            co2Wltp: fnum("CO2_WLTP"),
-            noxWltp: fnum("NOX_WLTP"),
-            hcWltp: fnum("HC_WLTP"),
-            pmWltp: fnum("PM_WLTP")
+            co2Wltp: fnum("CO2_WLTP") ?? fnum("kamut_CO2"),
+            noxWltp: fnum("NOX_WLTP") ?? fnumGramsToMg("kamut_NOX"),
+            hcWltp: fnum("HC_WLTP") ?? fnumGramsToMg("kamut_HC"),
+            pmWltp: fnum("PM_WLTP") ?? fnumGramsToMg("kamut_PM10")
         };
 
         // צריכת דלק משוערת מתוך CO2 לפי WLTP: ק"מ לליטר = תכולת CO2 לליטר דלק ÷ CO2 לק"מ
