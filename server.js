@@ -529,8 +529,8 @@ app.get('/api/search/partial', async (req, res) => {
         return res.status(400).json({ success: false, results: [], message: 'תבנית לא תקינה' });
     }
     const xCount = (raw.match(/X/g) || []).length;
-    if (xCount > 2) {
-        return res.status(400).json({ success: false, results: [], message: 'אפשר עד 2 ספרות חסרות' });
+    if (xCount > 3) {
+        return res.status(400).json({ success: false, results: [], message: 'המערכת מזהה עד 3 ספרות חסרות (X) בלבד' });
     }
 
     const manufacturer = String(req.query.manufacturer || '').trim().toLowerCase();
