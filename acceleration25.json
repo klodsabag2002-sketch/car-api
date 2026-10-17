@@ -1,5 +1,95 @@
 [
   {
+    "make": "פולקסווגן מקסי",
+    "model": "JETTA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1395,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ג'טה 1.4 TSI 125 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "גטה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1395,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ג'טה 125 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן",
+    "model": "ג'טה",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1395,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ג'טה 125 כ\"ס)"
+  },
+  {
+    "make": "Volkswagen",
+    "model": "JETTA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 125,
+    "cc": 1395,
+    "seconds": 9.6,
+    "source": "נתון יצרן (VW Jetta 1.4 TSI 125hp)"
+  },
+  {
+    "make": "פולקסווגן מקסי",
+    "model": "JETTA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 150,
+    "cc": 1395,
+    "seconds": 8.6,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ג'טה 1.4 TSI 150 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן מקסי",
+    "model": "JETTA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 105,
+    "cc": 1197,
+    "seconds": 10.7,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן ג'טה 1.2 TSI 105 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "TIGUAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 1984,
+    "seconds": 7.4,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טיגואן 2.0 TSI 4Motion 190 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "TIGUAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 220,
+    "cc": 1984,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טיגואן 2.0 TSI 220 כ\"ס)"
+  },
+  {
+    "make": "פולקסווגן גרמן",
+    "model": "TIGUAN",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1395,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (פולקסווגן טיגואן eHybrid פלאג-אין PHEV 245 כ\"ס)"
+  },
+  {
     "make": "פורד ספרד",
     "model": "FOCUS",
     "yearStart": null,
