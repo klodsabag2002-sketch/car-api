@@ -184,10 +184,6 @@
   {"make": "Cupra", "model": "Formentor", "yearStart": null, "yearEnd": null, "hp": 245, "cc": 1395, "seconds": 7.0, "source": "נתון יצרן SEAT (e-Hybrid 245)"},
   {"make": "Cupra", "model": "Formentor", "yearStart": null, "yearEnd": null, "hp": 204, "cc": 1395, "seconds": 7.8, "source": "נתון יצרן SEAT (e-Hybrid 204)"},
   {"make": "Cupra", "model": "Formentor", "yearStart": null, "yearEnd": null, "hp": 272, "cc": 1498, "seconds": 6.5, "source": "מדידה של AMS (e-Hybrid VZ 272)"},
-  {"make": "Cupra", "model": "Formentor VZ", "yearStart": null, "yearEnd": null, "hp": 150, "cc": 1395, "seconds": 7.0, "source": "צילום מסך - אפליקציית פרטי רכב (צ'מפיון מוטורס), עודכן לפי מאגר"},
-  {"make": "Cupra", "model": "Formentor BP/BB", "yearStart": null, "yearEnd": null, "hp": 150, "cc": 1498, "seconds": 8.9, "source": "צילום מסך - אפליקציית פרטי רכב (צ'מפיון מוטורס), עודכן לפי מאגר"}
-  {"make": "CUPRA", "model": "FORMEN VZ", "yearStart": null, "yearEnd": null, "hp": 150, "cc": 1395, "seconds": 7.0, "source": "צילום מסך - אפליקציית פרטי רכב (צ'מפיון מוטורס), עודכן לפי מאגר"},
-  {"make": "CUPRA", "model": "FORMEN BP/BB", "yearStart": null, "yearEnd": null, "hp": 150, "cc": 1498, "seconds": 8.9, "source": "צילום מסך - אפליקציית פרטי רכב (צ'מפיון מוטורס), עודכן לפי מאגר"}
   {"make": "סיאט ספרד", "model": "FORMENTOR VZ", "yearStart": null, "yearEnd": null, "hp": 150, "cc": 1395, "seconds": 7.0, "source": "צילום מסך - אפליקציית פרטי רכב (צ'מפיון מוטורס), עודכן לפי מאגר"},
   {"make": "סיאט ספרד", "model": "FORMEN BP/BB", "yearStart": null, "yearEnd": null, "hp": 150, "cc": 1498, "seconds": 8.9, "source": "צילום מסך - אפליקציית פרטי רכב (צ'מפיון מוטורס), עודכן לפי מאגר"}
 ]
