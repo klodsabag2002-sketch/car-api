@@ -459,6 +459,29 @@ app.get('/api/car/:plate', async (req, res) => {
             pmWltp: fnum("PM_WLTP")
         };
 
+        // צריכת דלק משוערת מתוך CO2 לפי WLTP: ק"מ לליטר = תכולת CO2 לליטר דלק ÷ CO2 לק"מ
+        // בנזין: כ-2310 גרם CO2 לליטר, דיזל: כ-2680 גרם CO2 לליטר (ערכים סטנדרטיים)
+        const FUEL_CO2_PER_LITER = { petrol: 2310, diesel: 2680 };
+        const isElectricFuel = /חשמל/.test(fuelType);
+        let fuelKind = null;
+        if (/דיזל|סולר/.test(fuelType)) fuelKind = 'diesel';
+        else if (/בנזין/.test(fuelType)) fuelKind = 'petrol';
+        const kmPerLiterFor = (perL) => (!isElectricFuel && emissions.co2Wltp > 0)
+            ? Math.round((perL / emissions.co2Wltp) * 10) / 10
+            : null;
+        const kmPerLiterPetrol = kmPerLiterFor(FUEL_CO2_PER_LITER.petrol);
+        const kmPerLiterDiesel = kmPerLiterFor(FUEL_CO2_PER_LITER.diesel);
+        const fuel = {
+            type: fuelKind,
+            kmPerLiter: fuelKind === 'petrol' ? kmPerLiterPetrol : fuelKind === 'diesel' ? kmPerLiterDiesel : null,
+            kmPerLiterPetrol,
+            kmPerLiterDiesel,
+            isHybridOrPhev: Boolean(isHybridOrPhev),
+            isPhev: Boolean(isPhev),
+            isElectric: isElectricFuel,
+            note: 'הערכה לפי מבחן מעבדה WLTP ולא לפי נהיגה אמיתית'
+        };
+
         res.json({
             success: true,
             data: {
@@ -486,7 +509,7 @@ app.get('/api/car/:plate', async (req, res) => {
                 kmSinceTest: history?.kmSinceTest ?? null,
                 pollutionGroup: fnum("kvutzat_zihum"),
                 greenScore: fnum("madad_yarok"),
-                technical, equipment, safety, emissions
+                technical, equipment, safety, emissions, fuel
             }
         });
     } catch (error) {
