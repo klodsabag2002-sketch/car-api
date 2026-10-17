@@ -174,7 +174,13 @@ async function searchDatastore(resourceId, filters, limit = 100, q = "") {
     const qq = q ? `&q=${encodeURIComponent(q)}` : "";
     const url = `https://data.gov.il/api/3/action/datastore_search?resource_id=${resourceId}${f}${qq}&limit=${limit}`;
     const response = await fetch(url);
-    const data = await response.json();
+    const text = await response.text();
+    let data;
+    try {
+        data = JSON.parse(text);
+    } catch (e) {
+        throw new Error('DATASTORE_UNAVAILABLE');
+    }
     return data?.success ? (data.result?.records || []) : [];
 }
 
@@ -467,7 +473,10 @@ app.get('/api/car/:plate', async (req, res) => {
         });
     } catch (error) {
         console.error('[CAR API ERROR]', error);
-        res.status(500).json({ success: false, error: "שגיאה בשליפה" });
+        if (error.message === 'DATASTORE_UNAVAILABLE') {
+            return res.status(503).json({ success: false, message: 'שירות משרד התחבורה לא זמין כרגע, נסה שוב בעוד דקה' });
+        }
+        res.status(500).json({ success: false, error: "שגיאה בשליפה", message: 'שגיאה בשליפת הנתונים, נסה שוב' });
     }
 });
 
@@ -529,8 +538,8 @@ app.get('/api/search/partial', async (req, res) => {
         return res.status(400).json({ success: false, results: [], message: 'תבנית לא תקינה' });
     }
     const xCount = (raw.match(/X/g) || []).length;
-    if (xCount > 3) {
-        return res.status(400).json({ success: false, results: [], message: 'המערכת מזהה עד 3 ספרות חסרות (X) בלבד' });
+    if (xCount > 2) {
+        return res.status(400).json({ success: false, results: [], message: 'המערכת מזהה עד 2 ספרות חסרות (X) בלבד' });
     }
 
     const manufacturer = String(req.query.manufacturer || '').trim().toLowerCase();
@@ -541,11 +550,11 @@ app.get('/api/search/partial', async (req, res) => {
         // בודקים כל מספר אפשרי בעזרת חיפוש מדויק שכבר עובד בשרת
         const candidates = expandPattern(raw);
         const found = [];
-        const CHUNK = 20;
+        const CHUNK = 5;
         for (let i = 0; i < candidates.length; i += CHUNK) {
             const batch = candidates.slice(i, i + CHUNK);
             const results = await Promise.all(
-                batch.map(n => searchDatastore(CAR_REGISTRY_ID, { mispar_rechev: Number(n) }, 1).catch(() => []))
+                batch.map(n => searchDatastore(CAR_REGISTRY_ID, { mispar_rechev: Number(n) }, 1))
             );
             for (const recs of results) {
                 const rec = recs[0];
@@ -564,7 +573,10 @@ app.get('/api/search/partial', async (req, res) => {
         res.json({ success: true, results: rows.slice(0, 50).map(mapCandidate) });
     } catch (e) {
         console.error('[PARTIAL SEARCH ERROR]', e);
-        res.status(500).json({ success: false, results: [], message: 'שגיאה בחיפוש' });
+        const msg = e.message === 'DATASTORE_UNAVAILABLE'
+            ? 'שירות משרד התחבורה לא זמין כרגע, נסה שוב בעוד דקה'
+            : 'שגיאה בחיפוש';
+        res.status(500).json({ success: false, results: [], message: msg });
     }
 });
 
