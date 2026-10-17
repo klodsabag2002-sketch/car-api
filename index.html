@@ -851,7 +851,6 @@
   <div class="search-box">
     <div class="mode-tabs">
       <div class="mode-tab" data-mode="plate">חיפוש לפי מספר רכב</div>
-      <div class="mode-tab" data-mode="partial">חיפוש לפי מידע חלקי</div>
       <div class="mode-tab" data-mode="chassis">חיפוש לפי מספר שלדה</div>
     </div>
 
@@ -860,21 +859,6 @@
         <div class="strip"><span class="flag">✡</span><span class="il">IL</span><span class="he">ישראל</span></div>
         <input type="text" id="chassisInput" placeholder="הקלד מספר שלדה" maxlength="25">
         <button id="chassisSearchBtn">חפש</button>
-      </div>
-    </div>
-
-    <div id="panelPartial" class="mode-panel">
-      <div class="plate">
-        <div class="strip"><span class="flag">✡</span><span class="il">IL</span><span class="he">ישראל</span></div>
-        <input type="text" id="partialInput" placeholder="הקלד מספר חלקי" maxlength="12">
-        <button id="partialSearchBtn">חפש</button>
-      </div>
-      <div class="partial-hint">החלף ספרות שאינך יודע ב-X. אפשר עד 2 ספרות חסרות (X)</div>
-      <button id="advToggleBtn" class="adv-toggle">הצג סינון מתקדם ▾</button>
-      <div id="advFilters" class="adv-box">
-        <input type="text" id="advManufacturer" placeholder="יצרן (למשל CUPRA)">
-        <input type="text" id="advYearFrom" inputmode="numeric" placeholder="משנת">
-        <input type="text" id="advYearTo" inputmode="numeric" placeholder="עד שנת">
       </div>
     </div>
 
@@ -2864,12 +2848,10 @@
 
   // ===== מצבי חיפוש: מספר רכב / מידע חלקי / מספר שלדה (נוסף) =====
   const SEARCH_ENDPOINT_CHASSIS = '/api/search/chassis/';
-  const SEARCH_ENDPOINT_PARTIAL = '/api/search/partial';
 
   function setSearchMode(mode) {
     document.querySelectorAll('.mode-tab').forEach(t => t.classList.toggle('active', t.dataset.mode === mode));
     document.getElementById('panelChassis').classList.toggle('show', mode === 'chassis');
-    document.getElementById('panelPartial').classList.toggle('show', mode === 'partial');
     document.querySelector('.search-box > .plate').classList.toggle('mode-off', mode !== 'plate');
     document.getElementById('candidatesList').textContent = '';
     document.getElementById('errorMsg').style.display = 'none';
@@ -2948,33 +2930,11 @@
     runCandidateSearch(SEARCH_ENDPOINT_CHASSIS + encodeURIComponent(v), document.getElementById('chassisSearchBtn'));
   }
 
-  function doPartialSearch() {
-    const pattern = document.getElementById('partialInput').value.replace(/[^0-9X]/gi, '').toUpperCase();
-    if (pattern.length < 7) { showSearchError('נא להזין לפחות 7 ספרות (החלף חסרות ב-X)'); return; }
-    const xCount = (pattern.match(/X/g) || []).length;
-    if (xCount > 2) { showSearchError('המערכת מזהה עד 2 ספרות חסרות (X) בלבד'); return; }
-    let url = SEARCH_ENDPOINT_PARTIAL + '?pattern=' + encodeURIComponent(pattern);
-    const man = document.getElementById('advManufacturer').value.trim();
-    const yf = document.getElementById('advYearFrom').value.replace(/\D/g, '');
-    const yt = document.getElementById('advYearTo').value.replace(/\D/g, '');
-    if (man) url += '&manufacturer=' + encodeURIComponent(man);
-    if (yf) url += '&yearFrom=' + yf;
-    if (yt) url += '&yearTo=' + yt;
-    const msg = xCount === 2 ? 'מחפש, זה עשוי לקחת זמן...' : null;
-    runCandidateSearch(url, document.getElementById('partialSearchBtn'), msg);
-  }
-
   document.querySelectorAll('.mode-tab').forEach(t => {
     t.addEventListener('click', () => setSearchMode(t.dataset.mode));
   });
   document.getElementById('chassisSearchBtn').addEventListener('click', doChassisSearch);
   document.getElementById('chassisInput').addEventListener('keydown', e => { if (e.key === 'Enter') doChassisSearch(); });
-  document.getElementById('partialSearchBtn').addEventListener('click', doPartialSearch);
-  document.getElementById('partialInput').addEventListener('keydown', e => { if (e.key === 'Enter') doPartialSearch(); });
-  document.getElementById('advToggleBtn').addEventListener('click', () => {
-    const open = document.getElementById('advFilters').classList.toggle('show');
-    document.getElementById('advToggleBtn').textContent = open ? 'הסתר סינון מתקדם ▴' : 'הצג סינון מתקדם ▾';
-  });
   setSearchMode('chassis');
 
   document.getElementById('searchBtn').addEventListener('click', searchCar);
