@@ -518,68 +518,6 @@ app.get('/api/search/chassis/:chassis', async (req, res) => {
     }
 });
 
-// מייצר את כל המספרים שמתאימים לתבנית, למשל 129XX003 -> 100 אפשרויות
-function expandPattern(pattern) {
-    let out = [''];
-    for (const ch of pattern) {
-        const options = ch === 'X' ? '0123456789'.split('') : [ch];
-        const next = [];
-        for (const prefix of out) {
-            for (const d of options) next.push(prefix + d);
-        }
-        out = next;
-    }
-    return out.filter(n => n[0] !== '0');
-}
-
-app.get('/api/search/partial', async (req, res) => {
-    const raw = String(req.query.pattern || '').replace(/[^0-9Xx]/g, '').toUpperCase();
-    if (!/^[0-9X]{7,8}$/.test(raw)) {
-        return res.status(400).json({ success: false, results: [], message: 'תבנית לא תקינה' });
-    }
-    const xCount = (raw.match(/X/g) || []).length;
-    if (xCount > 2) {
-        return res.status(400).json({ success: false, results: [], message: 'המערכת מזהה עד 2 ספרות חסרות (X) בלבד' });
-    }
-
-    const manufacturer = String(req.query.manufacturer || '').trim().toLowerCase();
-    const yearFrom = Number(req.query.yearFrom) || null;
-    const yearTo = Number(req.query.yearTo) || null;
-
-    try {
-        // בודקים כל מספר אפשרי בעזרת חיפוש מדויק שכבר עובד בשרת
-        const candidates = expandPattern(raw);
-        const found = [];
-        const CHUNK = 5;
-        for (let i = 0; i < candidates.length; i += CHUNK) {
-            const batch = candidates.slice(i, i + CHUNK);
-            const results = await Promise.all(
-                batch.map(n => searchDatastore(CAR_REGISTRY_ID, { mispar_rechev: Number(n) }, 1))
-            );
-            for (const recs of results) {
-                const rec = recs[0];
-                if (rec && String(rec.mispar_rechev).length === raw.length) found.push(rec);
-            }
-        }
-
-        const rows = found.filter(row => {
-            if (manufacturer && !String(row.tozeret_nm || '').toLowerCase().includes(manufacturer)) return false;
-            const y = Number(row.shnat_yitzur);
-            if (yearFrom && (Number.isNaN(y) || y < yearFrom)) return false;
-            if (yearTo && (Number.isNaN(y) || y > yearTo)) return false;
-            return true;
-        });
-
-        res.json({ success: true, results: rows.slice(0, 50).map(mapCandidate) });
-    } catch (e) {
-        console.error('[PARTIAL SEARCH ERROR]', e);
-        const msg = e.message === 'DATASTORE_UNAVAILABLE'
-            ? 'שירות משרד התחבורה לא זמין כרגע, נסה שוב בעוד דקה'
-            : 'שגיאה בחיפוש';
-        res.status(500).json({ success: false, results: [], message: msg });
-    }
-});
-
 app.listen(PORT, () => {
     console.log(`השרת רץ בפורט ${PORT}`);
 });
