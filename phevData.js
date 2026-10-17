@@ -306,8 +306,10 @@ function getCombinedPHEVPower(carDesc, model, listedHp, engineCc) {
   const rawText = `${carDesc || ''} ${model || ''}`.toLowerCase();
   const cc = Number(engineCc) || 0;
 
-  // 1. זיהוי ודאי עבור דגמי קבוצת VAG פלאג-אין עם מנוע 1.4 (1395 סמ"ק)
-  if (cc === 1395) {
+  // 1. זיהוי עבור דגמי קבוצת VAG פלאג-אין עם מנוע 1.4 (1395 סמ"ק).
+  // חשוב: מנוע 1.4 קיים גם ברכב רגיל (בלי היברידי), לכן מזהים פלאג-אין רק אם יש סימן מפורש בשם/בתיאור.
+  const hasPhevMarker = /phev|e-?hybrid|gte|hybrid|plugin|היברי|פלאג/.test(rawText);
+  if (cc === 1395 && hasPhevMarker) {
     if (rawText.includes('formentor') || rawText.includes('פורמנטור') || rawText.includes('leon') || rawText.includes('לאון')) {
       if (rawText.includes('vz')) {
         return 245; // גרסת VZ e-HYBRID
