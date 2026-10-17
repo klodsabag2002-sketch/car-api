@@ -820,6 +820,7 @@
   .cand-row { display:flex; justify-content:space-between; align-items:center; gap:10px; background:rgba(15,23,42,0.8); border:1px solid rgba(56,189,248,0.2); border-radius:12px; padding:12px 14px; margin-top:8px; cursor:pointer; color:#e2e8f0; }
   .cand-plate { color:#fbbf24; font-weight:900; direction:ltr; white-space:nowrap; }
   .cand-info { font-size:13px; color:#94a3b8; }
+  .cand-hint { color:#38bdf8; font-size:13px; font-weight:700; text-align:center; padding:4px 0 2px; }
   .cand-empty { color:#94a3b8; text-align:center; font-size:14px; padding:12px; }
 </style>
 </head>
@@ -1920,6 +1921,8 @@
     if (hh) hh.style.display = 'none';
     document.getElementById('detailView').classList.add('show');
     document.getElementById('backBtn').classList.remove('hidden');
+    document.getElementById('menuToggleBtn').style.display = 'none';
+    document.getElementById('sideMenuDropdown').classList.remove('show');
     renderHistory();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -1930,6 +1933,7 @@
     if (hh) hh.style.display = '';
     document.getElementById('detailView').classList.remove('show');
     document.getElementById('backBtn').classList.add('hidden');
+    document.getElementById('menuToggleBtn').style.display = '';
     document.getElementById('errorMsg').style.display = 'none';
     document.getElementById('phevRevealBtn').style.display = 'none';
     closeOwnPanel();
@@ -2882,6 +2886,10 @@
       box.appendChild(e);
       return;
     }
+    const hint = document.createElement('div');
+    hint.className = 'cand-hint';
+    hint.textContent = 'לחץ על הרכב כדי לראות את הפרטים המלאים';
+    box.appendChild(hint);
     for (const c of list) {
       const digits = String(c.plate || '').replace(/\D/g, '');
       if (!digits) continue;
