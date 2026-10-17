@@ -1,5 +1,125 @@
 [
   {
+    "make": "טויוטה צרפת",
+    "model": "YARIS HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 73,
+    "cc": 1497,
+    "seconds": 11.8,
+    "source": "רישוי רכב / נתון יצרן (טויוטה יאריס היברידית דור 3 1.5 73/100 כ\"ס)"
+  },
+  {
+    "make": "טויוטה צרפת",
+    "model": "YARIS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 73,
+    "cc": 1497,
+    "seconds": 11.8,
+    "source": "רישוי רכב / נתון יצרן (טויוטה יאריס היברידית 1.5 73 כ\"ס)"
+  },
+  {
+    "make": "טויוטה",
+    "model": "יאריס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 73,
+    "cc": 1497,
+    "seconds": 11.8,
+    "source": "רישוי רכב / נתון יצרן (טויוטה יאריס היברידית 73 כ\"ס)"
+  },
+  {
+    "make": "Toyota",
+    "model": "YARIS HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 73,
+    "cc": 1497,
+    "seconds": 11.8,
+    "source": "נתון יצרן (Toyota Yaris Hybrid 1.5 73hp)"
+  },
+  {
+    "make": "טויוטה צרפת",
+    "model": "YARIS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 99,
+    "cc": 1329,
+    "seconds": 12.6,
+    "source": "רישוי רכב / נתון יצרן (טויוטה יאריס 1.33 בנזין 99 כ\"ס)"
+  },
+  {
+    "make": "טויוטה צרפת",
+    "model": "YARIS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 111,
+    "cc": 1496,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (טויוטה יאריס 1.5 בנזין 111 כ\"ס)"
+  },
+  {
+    "make": "טויוטה צרפת",
+    "model": "YARIS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 69,
+    "cc": 998,
+    "seconds": 15.3,
+    "source": "רישוי רכב / נתון יצרן (טויוטה יאריס 1.0 בנזין 69 כ\"ס)"
+  },
+  {
+    "make": "טויוטה טורקיה",
+    "model": "COROLLA SPACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 98,
+    "cc": 1798,
+    "seconds": 11.1,
+    "source": "רישוי רכב / נתון יצרן (טויוטה קורולה ספייס סטיישן היברידית 98 כ\"ס)"
+  },
+  {
+    "make": "טויוטה אנגליה",
+    "model": "COROLLA SPACE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 98,
+    "cc": 1798,
+    "seconds": 11.1,
+    "source": "רישוי רכב / נתון יצרן (טויוטה קורולה ספייס סטיישן 1.8 היברידי 98 כ\"ס)"
+  },
+  {
+    "make": "טויוטה יפן",
+    "model": "PRIUS PLUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 99,
+    "cc": 1798,
+    "seconds": 11.3,
+    "source": "רישוי רכב / נתון יצרן (טויוטה פריוס פלוס 7 מקומות היברידי 99 כ\"ס)"
+  },
+  {
+    "make": "טויוטה",
+    "model": "פריוס פלוס",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 99,
+    "cc": 1798,
+    "seconds": 11.3,
+    "source": "רישוי רכב / נתון יצרן (טויוטה פריוס פלוס 99 כ\"ס)"
+  },
+  {
+    "make": "טויוטה יפן",
+    "model": "PRIUS HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 98,
+    "cc": 1798,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (טויוטה פריוס דור 4 1.8 היברידי 98 כ\"ס)"
+  },
+  {
     "make": "טויוטה טורקיה",
     "model": "AURIS",
     "yearStart": null,
