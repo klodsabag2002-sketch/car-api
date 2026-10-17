@@ -797,6 +797,30 @@
   .transit-title { margin-top: 24px; font-size: 22px; font-weight: 900; color: #f8fafc; letter-spacing: 1px; text-shadow: 0 0 12px rgba(56,189,248,0.6); }
   .transit-sub { margin-top: 8px; font-size: 13px; color: #38bdf8; font-weight: 800; letter-spacing: 2px; text-shadow: 0 0 8px rgba(56,189,248,0.4); animation: blinkText 1s infinite alternate; }
   @keyframes blinkText { 0% { opacity: 0.4; } 100% { opacity: 1; } }
+  /* ===== מצבי חיפוש (נוסף) ===== */
+  .home-hero { text-align:center; padding:22px 16px 4px; }
+  .hero-pill { display:inline-block; border:1px solid rgba(56,189,248,0.3); border-radius:999px; padding:6px 16px; color:#94a3b8; font-size:12px; font-weight:700; }
+  .hero-h1 { color:#e0f2fe; font-size:26px; font-weight:900; margin:14px 0 8px; text-shadow:0 0 12px rgba(56,189,248,0.4); }
+  .hero-sub { color:#94a3b8; font-size:13px; line-height:1.7; margin:0; }
+  .mode-tabs { display:flex; border-bottom:1px solid rgba(56,189,248,0.2); margin-bottom:14px; }
+  .mode-tab { flex:1; text-align:center; padding:10px 4px; font-size:12px; font-weight:800; color:#94a3b8; cursor:pointer; border-bottom:3px solid transparent; }
+  .mode-tab.active { color:#38bdf8; border-bottom-color:#38bdf8; }
+  .mode-off { display:none !important; }
+  .mode-panel { display:none; }
+  .mode-panel.show { display:block; }
+  .mode-input { width:100%; box-sizing:border-box; height:56px; background:rgba(15,23,42,0.9); border:2px solid #38bdf8; border-radius:14px; color:#fff; font-size:17px; text-align:center; padding:0 14px; outline:none; direction:ltr; }
+  .mode-btn { width:100%; margin-top:12px; height:52px; border:none; border-radius:14px; background:linear-gradient(90deg,#0284c7,#2563eb); color:#fff; font-size:16px; font-weight:900; cursor:pointer; }
+  .mode-btn:disabled { opacity:0.6; }
+  .adv-toggle { margin-top:12px; width:100%; height:44px; border-radius:12px; border:1px solid rgba(56,189,248,0.3); background:rgba(15,23,42,0.8); color:#e2e8f0; font-weight:800; cursor:pointer; }
+  .adv-box { display:none; margin-top:10px; gap:8px; grid-template-columns:1fr 1fr; }
+  .adv-box.show { display:grid; }
+  .adv-box input { box-sizing:border-box; height:42px; background:rgba(15,23,42,0.9); border:1px solid rgba(56,189,248,0.3); border-radius:10px; color:#fff; text-align:center; padding:0 8px; outline:none; }
+  .adv-box input:first-child { grid-column:1 / -1; }
+  .candidates { padding:0 16px 8px; }
+  .cand-row { display:flex; justify-content:space-between; align-items:center; gap:10px; background:rgba(15,23,42,0.8); border:1px solid rgba(56,189,248,0.2); border-radius:12px; padding:12px 14px; margin-top:8px; cursor:pointer; color:#e2e8f0; }
+  .cand-plate { color:#fbbf24; font-weight:900; direction:ltr; white-space:nowrap; }
+  .cand-info { font-size:13px; color:#94a3b8; }
+  .cand-empty { color:#94a3b8; text-align:center; font-size:14px; padding:12px; }
 </style>
 </head>
 <body>
@@ -814,7 +838,41 @@
     </div>
   </div>
 
+  <div id="homeHero" class="home-hero">
+    <span class="hero-pill">מידע רכב מקיף</span>
+    <h1 class="hero-h1">מחפשים מידע על רכב?</h1>
+    <p class="hero-sub">קבלו את כל המידע שאתם צריכים על כל רכב בישראל במקום אחד – היסטוריה, רישוי, אבזור, בטיחות ומידע טכני.</p>
+  </div>
+
   <div class="search-box">
+    <div class="mode-tabs">
+      <div class="mode-tab" data-mode="plate">חיפוש לפי מספר רכב</div>
+      <div class="mode-tab" data-mode="partial">חיפוש לפי מידע חלקי</div>
+      <div class="mode-tab" data-mode="chassis">חיפוש לפי מספר שלדה</div>
+    </div>
+
+    <div id="panelChassis" class="mode-panel">
+      <div class="plate">
+        <div class="strip"><span class="flag">✡</span><span class="il">IL</span><span class="he">ישראל</span></div>
+        <input type="text" id="chassisInput" placeholder="הקלד מספר שלדה" maxlength="25">
+        <button id="chassisSearchBtn">חפש</button>
+      </div>
+    </div>
+
+    <div id="panelPartial" class="mode-panel">
+      <div class="plate">
+        <div class="strip"><span class="flag">✡</span><span class="il">IL</span><span class="he">ישראל</span></div>
+        <input type="text" id="partialInput" placeholder="הקלד מספר חלקי" maxlength="12">
+        <button id="partialSearchBtn">חפש</button>
+      </div>
+      <button id="advToggleBtn" class="adv-toggle">הצג סינון מתקדם ▾</button>
+      <div id="advFilters" class="adv-box">
+        <input type="text" id="advManufacturer" placeholder="יצרן (למשל CUPRA)">
+        <input type="text" id="advYearFrom" inputmode="numeric" placeholder="משנת">
+        <input type="text" id="advYearTo" inputmode="numeric" placeholder="עד שנת">
+      </div>
+    </div>
+
     <div class="plate">
       <div class="strip">
         <span class="flag">✡</span>
@@ -826,6 +884,7 @@
     </div>
     <div id="loader" class="msg">מחפש במאגר משרד התחבורה...</div>
     <div id="errorMsg" class="msg err"></div>
+    <div id="candidatesList" class="candidates"></div>
   </div>
 
   <div id="history" class="history">
@@ -1857,6 +1916,8 @@
 
   function showDetail() {
     inDetail = true;
+    const hh = document.getElementById('homeHero');
+    if (hh) hh.style.display = 'none';
     document.getElementById('detailView').classList.add('show');
     document.getElementById('backBtn').classList.remove('hidden');
     renderHistory();
@@ -1865,6 +1926,8 @@
 
   function showHome() {
     inDetail = false;
+    const hh = document.getElementById('homeHero');
+    if (hh) hh.style.display = '';
     document.getElementById('detailView').classList.remove('show');
     document.getElementById('backBtn').classList.add('hidden');
     document.getElementById('errorMsg').style.display = 'none';
@@ -2789,6 +2852,109 @@
       submitReportBtn.textContent = 'נסה שוב';
     }
   });
+
+  // ===== מצבי חיפוש: מספר רכב / מידע חלקי / מספר שלדה (נוסף) =====
+  const SEARCH_ENDPOINT_CHASSIS = '/api/search/chassis/';
+  const SEARCH_ENDPOINT_PARTIAL = '/api/search/partial';
+
+  function setSearchMode(mode) {
+    document.querySelectorAll('.mode-tab').forEach(t => t.classList.toggle('active', t.dataset.mode === mode));
+    document.getElementById('panelChassis').classList.toggle('show', mode === 'chassis');
+    document.getElementById('panelPartial').classList.toggle('show', mode === 'partial');
+    document.querySelector('.search-box > .plate').classList.toggle('mode-off', mode !== 'plate');
+    document.getElementById('candidatesList').textContent = '';
+    document.getElementById('errorMsg').style.display = 'none';
+  }
+
+  function showSearchError(msg) {
+    const err = document.getElementById('errorMsg');
+    err.textContent = msg;
+    err.style.display = 'block';
+  }
+
+  function renderCandidates(list) {
+    const box = document.getElementById('candidatesList');
+    box.textContent = '';
+    if (!list.length) {
+      const e = document.createElement('div');
+      e.className = 'cand-empty';
+      e.textContent = 'לא נמצאו רכבים תואמים';
+      box.appendChild(e);
+      return;
+    }
+    for (const c of list) {
+      const digits = String(c.plate || '').replace(/\D/g, '');
+      if (!digits) continue;
+      const row = document.createElement('div');
+      row.className = 'cand-row';
+      const info = document.createElement('div');
+      info.className = 'cand-info';
+      info.textContent = [c.manufacturer, c.model, c.year].filter(Boolean).join(' · ');
+      const plateEl = document.createElement('div');
+      plateEl.className = 'cand-plate';
+      plateEl.textContent = formatPlate(digits);
+      row.appendChild(info);
+      row.appendChild(plateEl);
+      row.addEventListener('click', () => {
+        setSearchMode('plate');
+        document.getElementById('plateInput').value = formatPlate(digits);
+        searchCar();
+      });
+      box.appendChild(row);
+    }
+  }
+
+  async function runCandidateSearch(url, btn) {
+    const loader = document.getElementById('loader');
+    document.getElementById('errorMsg').style.display = 'none';
+    document.getElementById('candidatesList').textContent = '';
+    loader.style.display = 'block';
+    btn.disabled = true;
+    try {
+      const r = await fetch(API_BASE + url);
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      const j = await r.json();
+      const list = Array.isArray(j.results) ? j.results : (Array.isArray(j.data) ? j.data : []);
+      renderCandidates(list);
+    } catch (e) {
+      showSearchError('שגיאה בחיפוש. נסה שוב מאוחר יותר');
+    } finally {
+      loader.style.display = 'none';
+      btn.disabled = false;
+    }
+  }
+
+  function doChassisSearch() {
+    const v = document.getElementById('chassisInput').value.replace(/[^A-Za-z0-9]/g, '').toUpperCase();
+    if (v.length < 5) { showSearchError('נא להזין מספר שלדה תקין'); return; }
+    runCandidateSearch(SEARCH_ENDPOINT_CHASSIS + encodeURIComponent(v), document.getElementById('chassisSearchBtn'));
+  }
+
+  function doPartialSearch() {
+    const pattern = document.getElementById('partialInput').value.replace(/[^0-9X]/gi, '').toUpperCase();
+    if (pattern.length < 7) { showSearchError('נא להזין לפחות 7 ספרות (החלף חסרות ב-X)'); return; }
+    let url = SEARCH_ENDPOINT_PARTIAL + '?pattern=' + encodeURIComponent(pattern);
+    const man = document.getElementById('advManufacturer').value.trim();
+    const yf = document.getElementById('advYearFrom').value.replace(/\D/g, '');
+    const yt = document.getElementById('advYearTo').value.replace(/\D/g, '');
+    if (man) url += '&manufacturer=' + encodeURIComponent(man);
+    if (yf) url += '&yearFrom=' + yf;
+    if (yt) url += '&yearTo=' + yt;
+    runCandidateSearch(url, document.getElementById('partialSearchBtn'));
+  }
+
+  document.querySelectorAll('.mode-tab').forEach(t => {
+    t.addEventListener('click', () => setSearchMode(t.dataset.mode));
+  });
+  document.getElementById('chassisSearchBtn').addEventListener('click', doChassisSearch);
+  document.getElementById('chassisInput').addEventListener('keydown', e => { if (e.key === 'Enter') doChassisSearch(); });
+  document.getElementById('partialSearchBtn').addEventListener('click', doPartialSearch);
+  document.getElementById('partialInput').addEventListener('keydown', e => { if (e.key === 'Enter') doPartialSearch(); });
+  document.getElementById('advToggleBtn').addEventListener('click', () => {
+    const open = document.getElementById('advFilters').classList.toggle('show');
+    document.getElementById('advToggleBtn').textContent = open ? 'הסתר סינון מתקדם ▴' : 'הצג סינון מתקדם ▾';
+  });
+  setSearchMode('chassis');
 
   document.getElementById('searchBtn').addEventListener('click', searchCar);
   document.getElementById('plateInput').addEventListener('input', e => { e.target.value = formatPlate(e.target.value); });
