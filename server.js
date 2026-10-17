@@ -332,24 +332,6 @@ app.get('/', (req, res) => {
     res.status(200).send('Car API is running successfully!');
 });
 
-// נתיב זמני לבדיקה: מחזיר את שמות השדות של רשומת הרכב במאגר (לא לשימוש בדף)
-app.get('/api/debug/fields/:plate', async (req, res) => {
-    const plate = req.params.plate.replace(/\D/g, "");
-    try {
-        const car = await fetchCarRecord(plate);
-        if (!car) return res.status(404).json({ success: false, message: 'לא נמצא' });
-        const keys = Object.keys(car).sort();
-        const nonEmpty = {};
-        for (const k of keys) {
-            if (car[k] !== null && car[k] !== '' && car[k] !== undefined) nonEmpty[k] = car[k];
-        }
-        res.json({ success: true, totalFields: keys.length, allFieldNames: keys, nonEmptyValues: nonEmpty });
-    } catch (e) {
-        console.error('[DEBUG FIELDS ERROR]', e);
-        res.status(500).json({ success: false, message: 'שגיאה' });
-    }
-});
-
 app.get('/api/car/:plate', async (req, res) => {
     const plate = req.params.plate.replace(/\D/g, "");
     try {
@@ -453,10 +435,28 @@ app.get('/api/car/:plate', async (req, res) => {
             powerSteering: fflag("hege_koah_ind")
         };
 
+        // שדות עזרי נהיגה נמצאים ברשומת הדגם (MODELS_ID) ולכן fv/fflag קוראים משם
         const safety = {
             laneDeparture: fflag("bakarat_stiya_menativ_ind") ?? fflag("bakarat_stiya_activ_s"),
             pedestrianDetection: fflag("zihuy_holchey_regel_ind") ?? fflag("blimat_hirum_lifnei_holhei_regel_ofanaim"),
-            rearCamera: fflag("matzlemat_reverse_ind") ?? fflag("matzlemet_reverse_ind")
+            rearCamera: fflag("matzlemat_reverse_ind") ?? fflag("matzlemet_reverse_ind"),
+            blindSpot: fflag("zihuy_beshetah_nistar_ind"),
+            adaptiveCruise: fflag("bakarat_shyut_adaptivit_ind"),
+            signRecognition: fflag("zihuy_tamrurey_tnua_ind"),
+            parkingSensorsFront: fflag("nitur_merhak_milfanim_ind"),
+            autoBrakeForward: fflag("teura_automatit_benesiya_kadima_ind"),
+            autoBrakeReverse: fflag("blima_otomatit_nesia_leahor_ind"),
+            autoHighBeam: fflag("shlita_automatit_beorot_gvohim_ind"),
+            driverDrowsiness: fflag("zihuy_matzav_hitkarvut_mesukenet_ind"),
+            tirePressure: fflag("hayshaney_lahatz_avir_batzmigim_ind")
+        };
+
+        // פליטות לפי תקן WLTP (לפי דגם)
+        const emissions = {
+            co2Wltp: fnum("CO2_WLTP"),
+            noxWltp: fnum("NOX_WLTP"),
+            hcWltp: fnum("HC_WLTP"),
+            pmWltp: fnum("PM_WLTP")
         };
 
         res.json({
@@ -486,7 +486,7 @@ app.get('/api/car/:plate', async (req, res) => {
                 kmSinceTest: history?.kmSinceTest ?? null,
                 pollutionGroup: fnum("kvutzat_zihum"),
                 greenScore: fnum("madad_yarok"),
-                technical, equipment, safety
+                technical, equipment, safety, emissions
             }
         });
     } catch (error) {
