@@ -1,5 +1,95 @@
 [
   {
+    "make": "טויוטה ארהב\"",
+    "model": "GRND HIGHLANDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 2487,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (טויוטה גרנד היילנדר 2.5 היברידי 265 כ\"ס)"
+  },
+  {
+    "make": "טויוטה ארהב",
+    "model": "GRND HIGHLANDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 2487,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (טויוטה גרנד היילנדר 2.5 היברידי 265 כ\"ס)"
+  },
+  {
+    "make": "טויוטה ארהב\"",
+    "model": "GRAND HIGHLANDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 2487,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (טויוטה גרנד היילנדר 2.5 היברידי 265 כ\"ס)"
+  },
+  {
+    "make": "טויוטה ארהב\"",
+    "model": "GRND HIGHLANDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 2393,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (טויוטה גרנד היילנדר 2.4 טורבו 265 כ\"ס)"
+  },
+  {
+    "make": "טויוטה ארהב\"",
+    "model": "GRAND HIGHLANDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 2393,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (טויוטה גרנד היילנדר 2.4 טורבו 265 כ\"ס)"
+  },
+  {
+    "make": "טויוטה ארהב\"",
+    "model": "GRND HIGHLANDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 362,
+    "cc": 2393,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (טויוטה גרנד היילנדר Hybrid MAX 362 כ\"ס)"
+  },
+  {
+    "make": "טויוטה ארהב\"",
+    "model": "GRAND HIGHLANDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 362,
+    "cc": 2393,
+    "seconds": 6.3,
+    "source": "רישוי רכב / נתון יצרן (טויוטה גרנד היילנדר Hybrid MAX 362 כ\"ס)"
+  },
+  {
+    "make": "טויוטה",
+    "model": "גרנד היילנדר",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 2487,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (טויוטה גרנד היילנדר 265 כ\"ס)"
+  },
+  {
+    "make": "Toyota",
+    "model": "GRAND HIGHLANDER",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 265,
+    "cc": 2487,
+    "seconds": 7.7,
+    "source": "נתון יצרן (Toyota Grand Highlander Hybrid 265hp)"
+  },
+  {
     "make": "טויוטה צרפת",
     "model": "YARIS HYBRID",
     "yearStart": null,
