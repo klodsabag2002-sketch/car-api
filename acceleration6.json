@@ -1,5 +1,65 @@
 [
   {
+    "make": "ביואיק ארהב\"",
+    "model": "LUCERNE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 3791,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לוצרן CXL 3.8 V6 197 כ\"ס)"
+  },
+  {
+    "make": "\"ביואיק ארהב",
+    "model": "LUCERNE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 3791,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לוצרן 3.8 V6 197 כ\"ס)"
+  },
+  {
+    "make": "ביואיק ארה\"ב",
+    "model": "LUCERNE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 3791,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לוצרן 3.8 V6 197 כ\"ס)"
+  },
+  {
+    "make": "ביואיק",
+    "model": "LUCERNE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 3791,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לוצרן 197 כ\"ס)"
+  },
+  {
+    "make": "ביואיק",
+    "model": "לוצרן",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 3791,
+    "seconds": 9.6,
+    "source": "רישוי רכב / נתון יצרן (ביואיק לוצרן 197 כ\"ס)"
+  },
+  {
+    "make": "Buick",
+    "model": "LUCERNE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 197,
+    "cc": 3791,
+    "seconds": 9.6,
+    "source": "נתון יצרן (Buick Lucerne CXL 3.8 V6 197hp)"
+  },
+  {
     "make": "ג'אקו סין",
     "model": "JAECOO 5 HEV",
     "yearStart": null,
@@ -357,7 +417,7 @@
     "hp": 804,
     "cc": 0,
     "seconds": 3.5,
-    "source": "נתון יצרן (GMC Hummer EV SUV 804)"
+    "source": "רישוי רכב / נתון יצרן (GMC Hummer EV SUV 804)"
   },
   {
     "make": "GMC",
