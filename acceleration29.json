@@ -1,5 +1,45 @@
 [
   {
+    "make": "קיה סלובקיה",
+    "model": "SPORTAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1598,
+    "seconds": 11.4,
+    "source": "רישוי רכב / נתון יצרן (קיה ספורטאז' דור 5 1.6 CRDi דיזל MHEV 136 כ\"ס)"
+  },
+  {
+    "make": "קיה",
+    "model": "ספורטאז",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1598,
+    "seconds": 11.4,
+    "source": "רישוי רכב / נתון יצרן (קיה ספורטאז' 1.6 דיזל 136 כ\"ס)"
+  },
+  {
+    "make": "קיה",
+    "model": "ספורטז",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1598,
+    "seconds": 11.4,
+    "source": "רישוי רכב / נתון יצרן (קיה ספורטאז' 1.6 דיזל 136 כ\"ס)"
+  },
+  {
+    "make": "Kia",
+    "model": "SPORTAGE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1598,
+    "seconds": 11.4,
+    "source": "נתון יצרן (Kia Sportage 1.6 CRDi MHEV 136hp)"
+  },
+  {
     "make": "קיה ד. קוריאה",
     "model": "RI0",
     "yearStart": null,
