@@ -464,7 +464,14 @@ app.get('/api/car/:plate', async (req, res) => {
             co2Wltp: fnum("CO2_WLTP") ?? fnum("kamut_CO2"),
             noxWltp: fnum("NOX_WLTP") ?? fnumGramsToMg("kamut_NOX"),
             hcWltp: fnum("HC_WLTP") ?? fnumGramsToMg("kamut_HC"),
-            pmWltp: fnum("PM_WLTP") ?? fnumGramsToMg("kamut_PM10")
+            pmWltp: fnum("PM_WLTP") ?? fnumGramsToMg("kamut_PM10"),
+            // עירוני ובין-עירוני בנפרד (שדות kamut_*_city / kamut_*_hway), נמדדו לפי תקן מבחן ישן ולא WLTP
+            co2City: fnum("kamut_CO2_city"),
+            co2Highway: fnum("kamut_CO2_hway"),
+            source: fnum("CO2_WLTP") !== null ? "WLTP"
+                : fnum("kamut_CO2") !== null ? "kamut"
+                : (fnum("kamut_CO2_city") !== null || fnum("kamut_CO2_hway") !== null) ? "kamut_city_highway"
+                : null
         };
 
         // צריכת דלק משוערת מתוך CO2 לפי WLTP: ק"מ לליטר = תכולת CO2 לליטר דלק ÷ CO2 לק"מ
@@ -479,8 +486,14 @@ app.get('/api/car/:plate', async (req, res) => {
             : null;
         const kmPerLiterPetrol = kmPerLiterFor(FUEL_CO2_PER_LITER.petrol);
         const kmPerLiterDiesel = kmPerLiterFor(FUEL_CO2_PER_LITER.diesel);
+        const perLiterForKind = fuelKind === 'diesel' ? FUEL_CO2_PER_LITER.diesel : fuelKind === 'petrol' ? FUEL_CO2_PER_LITER.petrol : null;
+        const kmPerLiterOf = (co2) => (perLiterForKind && !isElectricFuel && co2 > 0)
+            ? Math.round((perLiterForKind / co2) * 10) / 10
+            : null;
         const fuel = {
             type: fuelKind,
+            kmPerLiterCity: kmPerLiterOf(emissions.co2City),
+            kmPerLiterHighway: kmPerLiterOf(emissions.co2Highway),
             kmPerLiter: fuelKind === 'petrol' ? kmPerLiterPetrol : fuelKind === 'diesel' ? kmPerLiterDiesel : null,
             kmPerLiterPetrol,
             kmPerLiterDiesel,
