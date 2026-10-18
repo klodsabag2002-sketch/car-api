@@ -1748,10 +1748,16 @@
     buildInfoCard(box, 'חיישנים וסביבה', [
       ['מצלמת רוורס', s.rearCamera], ['חיישני חניה מלפנים', s.parkingSensorsFront]
     ]);
-    buildInfoCard(box, 'פליטות לפי תקן WLTP (לפי דגם)', [
+    buildInfoCard(box, em.source === 'WLTP' || em.source == null ? 'פליטות לפי תקן WLTP (לפי דגם)' : 'פליטות לפי מאגר (לפי דגם)', [
       ['CO2 (גרם/ק"מ)', em.co2Wltp], ['NOx (מ"ג/ק"מ)', em.noxWltp],
       ['HC (מ"ג/ק"מ)', em.hcWltp], ['חלקיקים PM (מ"ג/ק"מ)', em.pmWltp]
     ]);
+    if (em.co2City != null || em.co2Highway != null) {
+      buildInfoCard(box, 'פליטות עירוני ובין-עירוני (לפי דגם)', [
+        ['CO2 עירוני (גרם/ק"מ)', em.co2City], ['CO2 בין-עירוני (גרם/ק"מ)', em.co2Highway],
+        ['תקן מבחן', 'נמדד לפי תקן מבחן ישן, לא לפי WLTP']
+      ]);
+    }
     const f = d.fuel || {};
     if (f.isElectric) {
       buildInfoCard(box, 'צריכת דלק משוערת', [['סוג הנעה', 'חשמלי - אין צריכת דלק']]);
@@ -1760,6 +1766,8 @@
       buildInfoCard(box, 'צריכת דלק משוערת', [
         ['סוג דלק', lbl],
         ['ק"מ לליטר (משוער)', f.kmPerLiter],
+        ['ק"מ לליטר - עירוני', f.kmPerLiterCity],
+        ['ק"מ לליטר - בין-עירוני', f.kmPerLiterHighway],
         ['הערה', f.isHybridOrPhev ? 'היברידי: התוצאה משוקללת ותלויה בנסיעה על חשמל' : f.note]
       ]);
     } else {
@@ -1767,6 +1775,8 @@
         ['סוג דלק', 'לא ידוע במאגר'],
         ['ק"מ לליטר - אם בנזין', f.kmPerLiterPetrol],
         ['ק"מ לליטר - אם דיזל', f.kmPerLiterDiesel],
+        ['ק"מ לליטר - עירוני', f.kmPerLiterCity],
+        ['ק"מ לליטר - בין-עירוני', f.kmPerLiterHighway],
         ['הערה', f.isHybridOrPhev ? 'היברידי: התוצאה משוקללת ותלויה בנסיעה על חשמל' : f.note]
       ]);
     }
@@ -1796,6 +1806,16 @@
     if (f.kmPerLiterPetrol || f.kmPerLiterDiesel) {
       return 'בנזין: ' + (f.kmPerLiterPetrol ?? 'אין נתון') + ' / דיזל: ' + (f.kmPerLiterDiesel ?? 'אין נתון');
     }
+    if (f.kmPerLiterCity || f.kmPerLiterHighway) {
+      return 'עירוני: ' + (f.kmPerLiterCity ?? 'אין נתון') + ' / בין-עירוני: ' + (f.kmPerLiterHighway ?? 'אין נתון');
+    }
+    return 'אין נתון';
+  }
+
+  function fuelTileText(f) {
+    if (!f || f.isElectric) return 'אין נתון';
+    if (f.kmPerLiter) return f.kmPerLiter + ' ק"מ/ל׳';
+    if (f.kmPerLiterCity || f.kmPerLiterHighway) return (f.kmPerLiterCity ?? '-') + ' / ' + (f.kmPerLiterHighway ?? '-');
     return 'אין נתון';
   }
 
@@ -1930,8 +1950,8 @@
         const isElectric = fuel.includes('חשמל') || fuel.includes('electric') || (Number(d.engineCc) === 0 && Number(d.horsepower) > 0);
         if (isElectric || d.engineCc === 0) { $('sEngine').textContent = 'חשמלי'; $('sEngine').classList.remove('na'); }
         else setVal('sEngine', d.engineCc, 'סמ"ק');
-        $('sFuel').textContent = isElectric ? 'חשמלי' : fuelSummary(d.fuel).replace(' (בנזין)', '').replace(' (דיזל)', '');
-        $('sFuel').classList.toggle('na', !isElectric && fuelSummary(d.fuel) === 'אין נתון');
+        $('sFuel').textContent = isElectric ? 'חשמלי' : fuelTileText(d.fuel);
+        $('sFuel').classList.toggle('na', !isElectric && fuelTileText(d.fuel) === 'אין נתון');
 
         if (perf.feelText) {
           $('powerFeelText').textContent = perf.feelText;
