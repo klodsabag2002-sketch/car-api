@@ -2254,15 +2254,18 @@
     let worker = null;
     try {
       if (typeof Tesseract === 'undefined') throw new Error('ספריית הסריקה לא נטענה. בדוק חיבור לאינטרנט ונסה שוב');
+      loader.textContent = 'מכין את התמונה...';
       const canvas = await shrinkImage(file, 1200);
+      loader.textContent = 'טוען מנוע סריקה (הפעם הראשונה לוקחת כמה שניות)...';
       worker = await withTimeout(Tesseract.createWorker('eng', 1, {
-        langPath: 'https://cdn.jsdelivr.net/npm/@tesseract.js-data/eng/4.0.0_best_int',
         logger: m => {
           if (m.status === 'recognizing text') loader.textContent = 'סורק את הלוחית... ' + Math.round((m.progress || 0) * 100) + '%';
+          else if (m.status) loader.textContent = 'סורק: ' + m.status + '...';
         }
-      }), 60000, 'טעינת מנוע הסריקה נתקעה. בדוק חיבור לאינטרנט');
+      }), 90000, 'טעינת מנוע הסריקה נכשלה או לקחה יותר מדי זמן. בדוק חיבור לאינטרנט ונסה שוב');
       await worker.setParameters({ tessedit_char_whitelist: '0123456789', tessedit_pageseg_mode: '7' });
-      const { data } = await withTimeout(worker.recognize(canvas), 60000, 'הסריקה לקחה יותר מדי זמן. נסה תמונה מקרוב');
+      loader.textContent = 'קורא את הלוחית...';
+      const { data } = await withTimeout(worker.recognize(canvas), 90000, 'הסריקה לקחה יותר מדי זמן. נסה תמונה מקרוב');
       const digits = String((data && data.text) || '').replace(/\D/g, '');
       const found = (digits.match(/\d{8}/) || digits.match(/\d{7}/) || digits.match(/\d{6}/) || [])[0];
       if (!found) throw new Error('לא זוהה מספר לוחית בתמונה. נסה תמונה ברורה, מקרוב ובאור טוב');
