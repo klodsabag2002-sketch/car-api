@@ -600,16 +600,31 @@ function pickBikeFields(rec) {
     return out;
 }
 
-// בדיקה בלבד: שמות שדות ומספר רשומות
+// בדיקה בלבד: מחזיר את סיבת הכשל (אם יש) ושמות שדות
 app.get('/api/bike/inspect', async (req, res) => {
     try {
-        const r = await fetch(`https://data.gov.il/api/3/action/datastore_search?resource_id=${BIKE_REGISTRY_ID}&limit=1`);
-        const j = await r.json();
-        if (!j.success) return res.json({ success: false, message: 'המשאב לא נמצא' });
+        const url = `https://data.gov.il/api/3/action/datastore_search?resource_id=${BIKE_REGISTRY_ID}&limit=1`;
+        const r = await fetch(url);
+        const text = await r.text();
+        let j;
+        try {
+            j = JSON.parse(text);
+        } catch (e) {
+            return res.json({
+                success: false,
+                stage: 'parse',
+                httpStatus: r.status,
+                contentType: r.headers.get('content-type'),
+                preview: text.slice(0, 200)
+            });
+        }
+        if (!j.success) {
+            return res.json({ success: false, stage: 'datastore', error: j.error || null, httpStatus: r.status });
+        }
         const sample = j.result.records[0] || {};
         res.json({ success: true, total: j.result.total, fields: Object.keys(sample) });
     } catch (e) {
-        res.status(500).json({ success: false, message: 'שגיאה' });
+        res.json({ success: false, stage: 'network', error: e.message });
     }
 });
 
