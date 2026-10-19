@@ -581,7 +581,7 @@ app.get('/api/search/chassis/:chassis', async (req, res) => {
 });
 
 // ---------- אופנועים (מאגר דו-גלגלי) ----------
-const BIKE_REGISTRY_ID = "bf9df4a2-d530-4f68-a634-aa340c7c8395";
+const BIKE_REGISTRY_ID = "bf9df4e2-d90d-4c0a-a400-19e15af8e95f";
 
 // שדות שנראים כמו פרטי בעלים: לא יוחזרו לעולם
 const BIKE_PRIVATE_KEY = /ת\.?ז|זהות|שם|כתובת|טלפון|owner|name|id|address|phone|ישוב|רחוב/i;
