@@ -663,6 +663,22 @@ app.get('/api/bike/inspect', async (req, res) => {
     }
 });
 
+// בדיקה בלבד: מחפש במאגר data.gov.il מאגרים הקשורים לדו-גלגלי ומחזיר את שמותיהם ומזהי המשאבים
+app.get('/api/bike/datasets', async (req, res) => {
+    try {
+        const r = await fetch('https://data.gov.il/api/3/action/package_search?q=' + encodeURIComponent('אופנוע') + '&rows=20');
+        const j = await r.json();
+        const pkgs = (j && j.result && j.result.results) || [];
+        const out = pkgs.map(p => ({
+            title: p.title,
+            resources: (p.resources || []).map(x => ({ id: x.id, name: x.name, format: x.format }))
+        }));
+        res.json({ success: true, count: out.length, datasets: out });
+    } catch (e) {
+        res.status(500).json({ success: false, message: e.message });
+    }
+});
+
 // חיפוש אופנוע לפי מספר לוחית (מסנן מדויק על mispar_rechev)
 app.get('/api/bike/:plate', async (req, res) => {
     const plate = req.params.plate.replace(/\D/g, '');
