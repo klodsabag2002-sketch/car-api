@@ -76,16 +76,16 @@ app.get('/api/hunter/leaderboard', async (req, res) => {
 app.post('/api/hunter/update', async (req, res) => {
     const { nickname, count } = req.body;
     if (!nickname) return res.status(400).json({ success: false, message: "Missing nickname" });
-    
+
     let hunterLeaderboard = await getCloudLeaderboard();
     hunterLeaderboard[nickname] = Number(count) || 0;
     await saveCloudLeaderboard(hunterLeaderboard);
 
-    res.json({ 
-        success: true, 
+    res.json({
+        success: true,
         leaderboard: Object.entries(hunterLeaderboard)
             .map(([name, count]) => ({ name, count }))
-            .sort((a, b) => b.count - a.count) 
+            .sort((a, b) => b.count - a.count)
     });
 });
 
@@ -512,9 +512,9 @@ app.get('/api/car/:plate', async (req, res) => {
                 tireFront: toText(car.zmig_kidmi),
                 tireRear: toText(car.zmig_ahori),
                 lastTest: toText(car.mivchan_acharon_dt),
-                engineCc, 
+                engineCc,
                 horsepower: hp,
-                combinedHorsepower: isHybridOrPhev ? combinedHp : null, 
+                combinedHorsepower: isHybridOrPhev ? combinedHp : null,
                 isPhev: Boolean(isPhev),
                 isHybridOrPhev: Boolean(isHybridOrPhev),
                 acceleration0to100: acceleration ? acceleration.seconds : null,
@@ -556,7 +556,7 @@ app.get('/api/history/:plate', async (req, res) => {
     }
 });
 
-// ---------- חיפוש לפי מספר שלדה / מידע חלקי (נוסף) ----------
+// ---------- חיפוש לפי מספר שלדה / מידע חלקי ----------
 function mapCandidate(r) {
     return {
         plate: String(r.mispar_rechev ?? ''),
@@ -577,6 +577,57 @@ app.get('/api/search/chassis/:chassis', async (req, res) => {
     } catch (e) {
         console.error('[CHASSIS SEARCH ERROR]', e);
         res.status(500).json({ success: false, results: [], message: 'שגיאה בחיפוש' });
+    }
+});
+
+// ---------- אופנועים (מאגר דו-גלגלי) ----------
+const BIKE_REGISTRY_ID = "bf9df4a2-d530-4f68-a634-aa340c7c8395";
+
+// שדות שנראים כמו פרטי בעלים: לא יוחזרו לעולם
+const BIKE_PRIVATE_KEY = /ת\.?ז|זהות|שם|כתובת|טלפון|owner|name|id|address|phone|ישוב|רחוב/i;
+// שדות שנראים כמו פרטי רכב: יוחזרו
+const BIKE_PUBLIC_KEY = /יצרן|דגם|טוז|degem|tozeret|make|model|shnat|year|צבע|color|הספק|koah|נפח|nefah|cc|דלק|fuel|סוג|sug|merkav|ramat|גימור|manufact/i;
+
+function pickBikeFields(rec) {
+    const out = {};
+    for (const [k, v] of Object.entries(rec)) {
+        if (k === '_id') continue;
+        if (BIKE_PRIVATE_KEY.test(k)) continue;
+        if (!BIKE_PUBLIC_KEY.test(k)) continue;
+        if (v === null || v === '') continue;
+        out[k] = v;
+    }
+    return out;
+}
+
+// בדיקה בלבד: שמות שדות ומספר רשומות
+app.get('/api/bike/inspect', async (req, res) => {
+    try {
+        const r = await fetch(`https://data.gov.il/api/3/action/datastore_search?resource_id=${BIKE_REGISTRY_ID}&limit=1`);
+        const j = await r.json();
+        if (!j.success) return res.json({ success: false, message: 'המשאב לא נמצא' });
+        const sample = j.result.records[0] || {};
+        res.json({ success: true, total: j.result.total, fields: Object.keys(sample) });
+    } catch (e) {
+        res.status(500).json({ success: false, message: 'שגיאה' });
+    }
+});
+
+// חיפוש אופנוע לפי לוחית
+app.get('/api/bike/:plate', async (req, res) => {
+    const plate = req.params.plate.replace(/\D/g, '');
+    if (plate.length < 5) return res.json({ success: false, message: 'מספר לא תקין' });
+    try {
+        const r = await fetch(`https://data.gov.il/api/3/action/datastore_search?resource_id=${BIKE_REGISTRY_ID}&q=${encodeURIComponent(plate)}&limit=20`);
+        const j = await r.json();
+        const records = j?.success ? j.result.records : [];
+        const match = records.find(rec =>
+            Object.values(rec).some(v => String(v).replace(/\D/g, '') === plate)
+        );
+        if (!match) return res.json({ success: false, message: 'לא נמצא אופנוע במספר זה' });
+        res.json({ success: true, data: { plate, ...pickBikeFields(match) } });
+    } catch (e) {
+        res.status(500).json({ success: false, message: 'שגיאה בשליפה' });
     }
 });
 
