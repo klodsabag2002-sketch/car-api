@@ -1873,6 +1873,15 @@
     return j.data;
   }
 
+  async function fetchHeavyByPlate(plate) {
+    try {
+      const r = await fetch(API_BASE + '/api/heavy/' + encodeURIComponent(plate));
+      const j = await r.json();
+      if (j && j.success && j.data) return j.data;
+    } catch (e) {}
+    return null;
+  }
+
   async function fetchBikeByPlate(plate) {
     try {
       const r = await fetch(API_BASE + '/api/bike/' + encodeURIComponent(plate));
@@ -1882,11 +1891,11 @@
     return null;
   }
 
-  function showBikeResult(plate, b) {
+  function showBikeResult(plate, b, kind = 'bike') {
     const box = $('bikeResult');
     const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     const txt = v => (v === null || v === undefined) ? '' : cleanText(String(v)) || '';
-    const make = txt(b.tozeret_nm) || 'אופנוע';
+    const make = txt(b.tozeret_nm) || (kind === 'heavy' ? 'רכב כבד' : 'אופנוע');
     const model = txt(b.degem_nm);
     const kv = [
       ['יצרן', make], ['דגם', txt(b.degem_nm)], ['שנת ייצור', txt(b.shnat_yitzur)],
@@ -1915,7 +1924,7 @@
               <div class="pc-brand">
                 <div class="pc-logo" style="position:relative;">${logoHtml}</div>
                 <div>
-                  <div class="pc-label">MOTORCYCLE PROFILE</div>
+                  <div class="pc-label">${kind === 'heavy' ? 'HEAVY VEHICLE PROFILE' : 'MOTORCYCLE PROFILE'}</div>
                   <span class="pc-tier">${esc(tier)}</span>
                 </div>
               </div>
@@ -1974,14 +1983,16 @@
         d = await fetchCarByPlate(plate);
       } catch (carErr) {
         // לא נמצא ברכבים פרטיים - בודקים במאגר האופנועים
-        const b = await fetchBikeByPlate(plate);
+        let kind = 'bike';
+        let b = await fetchBikeByPlate(plate);
+        if (!b) { kind = 'heavy'; b = await fetchHeavyByPlate(plate); }
         if (!b) throw carErr;
         loader.style.display = 'none';
         currentPlate = plate;
         $('cardGeneral').style.display = 'none';
         $('tabs').classList.remove('show');
         $('hero').classList.remove('show');
-        showBikeResult(plate, b);
+        showBikeResult(plate, b, kind);
         addToHistory({
           plate, manufacturer: b.tozeret_nm || '',
           name: cleanText((b.tozeret_nm || '') + ' ' + (b.degem_nm || '')),
