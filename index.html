@@ -480,19 +480,6 @@
   </div>
 
   <div class="search-box">
-    <div class="mode-tabs">
-      <div class="mode-tab" data-mode="plate">חיפוש לפי מספר רכב</div>
-      <div class="mode-tab" data-mode="chassis">חיפוש לפי מספר שלדה</div>
-    </div>
-
-    <div id="panelChassis" class="mode-panel">
-      <div class="plate">
-        <div class="strip"><span class="flag">✡</span><span class="il">IL</span><span class="he">ישראל</span></div>
-        <input type="text" id="chassisInput" placeholder="הקלד מספר שלדה" maxlength="25" autocomplete="off">
-        <button id="chassisSearchBtn">חפש</button>
-      </div>
-    </div>
-
     <div class="plate">
       <div class="strip"><span class="flag">✡</span><span class="il">IL</span><span class="he">ישראל</span></div>
       <input type="text" id="plateInput" inputmode="numeric" placeholder="הקלד מספר רכב" autocomplete="off">
@@ -2182,8 +2169,6 @@
 
   /* ================= חיפוש לפי מספר שלדה ================= */
   function setSearchMode(mode) {
-    document.querySelectorAll('.mode-tab').forEach(t => t.classList.toggle('active', t.dataset.mode === mode));
-    $('panelChassis').classList.toggle('show', mode === 'chassis');
     document.querySelector('.search-box > .plate').classList.toggle('mode-off', mode !== 'plate');
     $('camLabel').classList.toggle('mode-off', mode !== 'plate');
     $('candidatesList').textContent = '';
@@ -2230,93 +2215,70 @@
     }
   }
 
-  async function doChassisSearch() {
-    const raw = $('chassisInput').value.trim();
-    const digitsOnly = raw.replace(/[\s-]/g, '');
-    if (/^\d{7,8}$/.test(digitsOnly)) {
-      setSearchMode('plate');
-      $('plateInput').value = formatPlate(digitsOnly);
-      searchCar();
-      return;
-    }
-    const v = raw.replace(/[^A-Za-z0-9]/g, '').toUpperCase();
-    if (v.length < 5) { showSearchError('נא להזין מספר שלדה תקין (לפחות 5 תווים)'); return; }
-
-    const btn = $('chassisSearchBtn'), loader = $('loader');
-    $('errorMsg').style.display = 'none';
-    $('candidatesList').textContent = '';
-    loader.textContent = 'מחפש לפי מספר שלדה...';
-    loader.style.display = 'block';
-    btn.disabled = true;
-    try {
-      let r, j;
-      try {
-        r = await fetch(API_BASE + '/api/search/chassis/' + encodeURIComponent(v));
-        j = await r.json().catch(() => ({}));
-      } catch (e) {
-        showSearchError('שגיאה בחיבור לשרת. נסה שוב מאוחר יותר');
-        return;
-      }
-      if (!r.ok || j.success === false) {
-        showSearchError(j.message || 'לא נמצא רכב עם מספר שלדה זה');
-        return;
-      }
-      let list = [];
-      if (Array.isArray(j.results)) list = j.results;
-      else if (Array.isArray(j.data)) list = j.data;
-      else if (j.data && typeof j.data === 'object') list = [j.data];
-      list = list.map(normalizeCar).filter(c => c.plate.length >= 7);
-
-      if (!list.length) { renderCandidates([]); return; }
-      if (list.length === 1) {
-        setSearchMode('plate');
-        $('plateInput').value = formatPlate(list[0].plate);
-        loader.style.display = 'none';
-        btn.disabled = false;
-        await searchCar();
-        return;
-      }
-      renderCandidates(list);
-    } finally {
-      loader.style.display = 'none';
-      btn.disabled = false;
-    }
-  }
-
-  document.querySelectorAll('.mode-tab').forEach(t => t.addEventListener('click', () => setSearchMode(t.dataset.mode)));
-  $('chassisSearchBtn').addEventListener('click', doChassisSearch);
-  $('chassisInput').addEventListener('keydown', e => { if (e.key === 'Enter') doChassisSearch(); });
   setSearchMode('plate');
 
   $('searchBtn').addEventListener('click', searchCar);
 
   /* ================= סריקת לוחית במצלמה (Tesseract) ================= */
+  function withTimeout(p, ms, msg) {
+    return Promise.race([p, new Promise((_, rej) => setTimeout(() => rej(new Error(msg)), ms))]);
+  }
+  async function shrinkImage(file, maxW) {
+    const url = URL.createObjectURL(file);
+    try {
+      const img = await new Promise((res, rej) => {
+        const i = new Image();
+        i.onload = () => res(i);
+        i.onerror = () => rej(new Error('לא ניתן לקרוא את התמונה'));
+        i.src = url;
+      });
+      const scale = Math.min(1, maxW / img.naturalWidth);
+      const c = document.createElement('canvas');
+      c.width = Math.round(img.naturalWidth * scale);
+      c.height = Math.round(img.naturalHeight * scale);
+      c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+      return c;
+    } finally {
+      URL.revokeObjectURL(url);
+    }
+  }
   $('camInput').addEventListener('change', async e => {
     const file = e.target.files && e.target.files[0];
     e.target.value = '';
     if (!file) return;
     const lbl = $('camLabel'), loader = $('loader');
-    if (typeof Tesseract === 'undefined') { showSearchError('ספריית הסריקה לא נטענה. בדוק חיבור לאינטרנט'); return; }
     lbl.classList.add('busy');
     $('errorMsg').style.display = 'none';
     loader.textContent = 'סורק את הלוחית...';
     loader.style.display = 'block';
+    let worker = null;
     try {
-      const { data } = await Tesseract.recognize(file, 'eng');
-      const text = (data && data.text) || '';
-      const found = (text.match(/\d{8}/) || text.match(/\d{7}/) || text.match(/\d{6}/) || [])[0];
-      if (!found) { showSearchError('לא זוהה מספר לוחית בתמונה. נסה תמונה ברורה יותר'); return; }
+      if (typeof Tesseract === 'undefined') throw new Error('ספריית הסריקה לא נטענה. בדוק חיבור לאינטרנט ונסה שוב');
+      const canvas = await shrinkImage(file, 1200);
+      worker = await withTimeout(Tesseract.createWorker('eng', 1, {
+        langPath: 'https://cdn.jsdelivr.net/npm/@tesseract.js-data/eng/4.0.0_best_int',
+        logger: m => {
+          if (m.status === 'recognizing text') loader.textContent = 'סורק את הלוחית... ' + Math.round((m.progress || 0) * 100) + '%';
+        }
+      }), 60000, 'טעינת מנוע הסריקה נתקעה. בדוק חיבור לאינטרנט');
+      await worker.setParameters({ tessedit_char_whitelist: '0123456789', tessedit_pageseg_mode: '7' });
+      const { data } = await withTimeout(worker.recognize(canvas), 60000, 'הסריקה לקחה יותר מדי זמן. נסה תמונה מקרוב');
+      const digits = String((data && data.text) || '').replace(/\D/g, '');
+      const found = (digits.match(/\d{8}/) || digits.match(/\d{7}/) || digits.match(/\d{6}/) || [])[0];
+      if (!found) throw new Error('לא זוהה מספר לוחית בתמונה. נסה תמונה ברורה, מקרוב ובאור טוב');
       setSearchMode('plate');
       $('plateInput').value = formatPlate(found);
       loader.style.display = 'none';
       await searchCar();
     } catch (err) {
-      showSearchError('שגיאה בסריקת התמונה. נסה שוב');
-    } finally {
       loader.style.display = 'none';
+      showSearchError(err.message || 'שגיאה בסריקת התמונה. נסה שוב');
+    } finally {
+      if (worker) await worker.terminate().catch(() => {});
       lbl.classList.remove('busy');
     }
   });
+
   $('plateInput').addEventListener('input', e => { e.target.value = formatPlate(e.target.value); });
   $('plateInput').addEventListener('keydown', e => { if (e.key === 'Enter') searchCar(); });
   $('histClear').addEventListener('click', clearHistory);
