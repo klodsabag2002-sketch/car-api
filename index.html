@@ -1878,29 +1878,59 @@
 
   function showBikeResult(plate, b) {
     const box = $('bikeResult');
-    box.textContent = '';
-    const h = document.createElement('h4');
-    h.textContent = '🏍️ אופנוע';
-    box.appendChild(h);
-    const rows = [
-      ['יצרן', b.tozeret_nm], ['דגם', b.degem_nm], ['שנת ייצור', b.shnat_yitzur],
-      ['הספק', b.hespek], ['נפח מנוע', b.nefach_manoa], ['סוג דלק', b.sug_delek_nm],
-      ['מספר רכב', formatPlate(plate)], ['בעלות', b.baalut]
-    ];
-    for (const [k, v] of rows) {
-      const cv = (v === null || v === undefined) ? '' : cleanText(String(v));
-      const row = document.createElement('div');
-      row.className = 'info-row';
-      const l = document.createElement('span');
-      l.className = 'l';
-      l.textContent = k;
-      const val = document.createElement('span');
-      val.className = cv ? 'v' : 'v na';
-      val.textContent = cv || 'אין נתון';
-      row.appendChild(l);
-      row.appendChild(val);
-      box.appendChild(row);
-    }
+    const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    const txt = v => (v === null || v === undefined) ? '' : cleanText(String(v)) || '';
+    const make = txt(b.tozeret_nm) || 'אופנוע';
+    const model = [txt(b.degem_nm), txt(b.shnat_yitzur)].filter(Boolean).join(' · ');
+    const hpNum = parseFloat(String(b.hespek || '').replace(/[^\d.]/g, '')) || 0;
+    const ccNum = parseFloat(String(b.nefach_manoa || '').replace(/[^\d.]/g, '')) || 0;
+    const tier = txt(b.baalut) || 'רגיל';
+    const brand = findBrand(b.tozeret_nm, b.degem_nm);
+    const logoSrc = getLogoSrc(brand);
+    const logoHtml = logoSrc
+      ? `<img src="${esc(logoSrc)}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:6px;" onerror="this.style.display='none';this.nextElementSibling.style.display='inline';"><span class="pc-logo-txt" style="display:none;">${esc(make.charAt(0))}</span>`
+      : `<span class="pc-logo-txt">${esc(make.charAt(0))}</span>`;
+    const hpVal = hpNum ? `${hpNum} כ"ס` : 'אין נתון';
+    const ccVal = ccNum ? `${ccNum} סמ"ק` : 'אין נתון';
+    const hpW = Math.min(hpNum / 300 * 100, 100).toFixed(1);
+    const ccW = Math.min(ccNum / 1800 * 100, 100).toFixed(1);
+
+    box.innerHTML = `
+      <div class="pc-wrap">
+        <div class="pc play" data-r="rare">
+          <div class="pc-body">
+            <div class="pc-sheen"></div>
+            <div class="pc-head">
+              <div class="pc-brand">
+                <div class="pc-logo" style="position:relative;">${logoHtml}</div>
+                <div>
+                  <div class="pc-label">MOTORCYCLE PROFILE</div>
+                  <span class="pc-tier">${esc(tier)}</span>
+                </div>
+              </div>
+              <div class="pc-hp"><b>${hpNum || '-'}</b><small>HP</small></div>
+            </div>
+            <div class="pc-name">${esc(make)}</div>
+            <div class="pc-model">${esc(model || '-')}</div>
+            <div class="pc-divider"></div>
+            <div class="pc-stats">
+              <div class="pc-row">
+                <div class="pc-row-head"><span class="l">הספק</span><span class="v">${esc(hpVal)}</span></div>
+                <div class="pc-bar"><i class="pc-fill" style="--w:${hpW}%"></i></div>
+              </div>
+              <div class="pc-row">
+                <div class="pc-row-head"><span class="l">נפח מנוע</span><span class="v">${esc(ccVal)}</span></div>
+                <div class="pc-bar"><i class="pc-fill" style="--w:${ccW}%"></i></div>
+              </div>
+            </div>
+            <div class="pc-foot">
+              <div class="pc-plate"><span class="ps">✡IL</span><span class="pn">${esc(formatPlate(plate))}</span></div>
+              <span class="pc-serial">MOTO</span>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    box.className = 'pc-section';
     box.style.display = 'block';
   }
 
