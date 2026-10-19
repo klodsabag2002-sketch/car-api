@@ -1,3 +1,6 @@
+על פי התמונה של פרטי הרכב עבור הלוחית 6484711, מדובר בדגם ב מ וו גרמניה 316I (נפח 1598 סמ"ק, 136 כ"ס). נתון התאוצה של יצרן עבור דגם BMW 316i (סדרה 3 F30) עם 136 כ"ס מ-0 ל-100 קמ"ש הוא 8.9 שניות.
+כמו כן, הוספתי לקובץ ה-JSON עוד מספר דגמי BMW נפוצים שהיו חסרים ברשימה (כגון סדרה 1, סדרה 2, סדרה 3 דגמי 318i / 320i / 330i, סדרה 5, ודגמי X1 / X3 / X5 נוספים).
+להלן רשימת ה-JSON המלאה והמעודכנת:
 [
   {
     "make": "אקספנג סין",
@@ -221,6 +224,116 @@
   },
   {
     "make": "ב מ וו גרמניה",
+    "model": "316I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1598,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (BMW 316i 136 כ\"ס)"
+  },
+  {
+    "make": "ב מ וו",
+    "model": "316I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1598,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (BMW 316i 136)"
+  },
+  {
+    "make": "BMW",
+    "model": "316I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1598,
+    "seconds": 8.9,
+    "source": "נתון יצרן (BMW 316i 136)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "318I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1998,
+    "seconds": 8.4,
+    "source": "רישוי רכב / נתון יצרן (BMW 318i 156)"
+  },
+  {
+    "make": "BMW",
+    "model": "318I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 156,
+    "cc": 1998,
+    "seconds": 8.4,
+    "source": "נתון יצרן (BMW 318i 156)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "320I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1998,
+    "seconds": 7.1,
+    "source": "רישוי רכב / נתון יצרן (BMW 320i 184)"
+  },
+  {
+    "make": "BMW",
+    "model": "320I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1998,
+    "seconds": 7.1,
+    "source": "נתון יצרן (BMW 320i 184)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "330I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 1998,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (BMW 330i 258)"
+  },
+  {
+    "make": "BMW",
+    "model": "330I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 258,
+    "cc": 1998,
+    "seconds": 5.8,
+    "source": "נתון יצרן (BMW 330i 258)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M340I XDRIVE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 374,
+    "cc": 2998,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (BMW M340i xDrive 374)"
+  },
+  {
+    "make": "BMW",
+    "model": "M340I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 374,
+    "cc": 2998,
+    "seconds": 4.4,
+    "source": "נתון יצרן (BMW M340i 374)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
     "model": "330E",
     "yearStart": null,
     "yearEnd": null,
@@ -258,6 +371,96 @@
     "cc": 1998,
     "seconds": 5.8,
     "source": "נתון יצרן (BMW 330e Plug-in Hybrid)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "118I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1499,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (BMW 118i 136)"
+  },
+  {
+    "make": "BMW",
+    "model": "118I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 1499,
+    "seconds": 8.9,
+    "source": "נתון יצרן (BMW 118i 136)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M135I XDRIVE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 306,
+    "cc": 1998,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (BMW M135i xDrive 306)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "220I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1998,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (BMW 220i 184)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M240I XDRIVE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 374,
+    "cc": 2998,
+    "seconds": 4.3,
+    "source": "רישוי רכב / נתון יצרן (BMW M240i xDrive 374)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "520I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1998,
+    "seconds": 7.8,
+    "source": "רישוי רכב / נתון יצרן (BMW 520i 184)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "530E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1998,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (BMW 530e 292)"
+  },
+  {
+    "make": "BMW",
+    "model": "530E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1998,
+    "seconds": 5.9,
+    "source": "נתון יצרן (BMW 530e)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "540I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 333,
+    "cc": 2998,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (BMW 540i 333)"
   },
   {
     "make": "ב מ וו גרמניה",
@@ -731,6 +934,16 @@
   },
   {
     "make": "ב מ וו גרמניה",
+    "model": "X1 SDRIVE20I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 192,
+    "cc": 1998,
+    "seconds": 7.6,
+    "source": "רישוי רכב / נתון יצרן (BMW X1 sDrive20i 192)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
     "model": "X1",
     "yearStart": null,
     "yearEnd": null,
@@ -878,6 +1091,16 @@
     "cc": 1998,
     "seconds": 8.3,
     "source": "רישוי רכב / נתון יצרן (BMW X3 xDrive20i 184)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X3 XDRIVE30E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 292,
+    "cc": 1998,
+    "seconds": 6.1,
+    "source": "רישוי רכב / נתון יצרן (BMW X3 xDrive30e 292)"
   },
   {
     "make": "ב מ וו ארהב\"",
@@ -1068,6 +1291,16 @@
     "cc": 2998,
     "seconds": 5.6,
     "source": "רישוי רכב / נתון יצרן (BMW X5 xDrive45e פלאג-אין 286/394)"
+  },
+  {
+    "make": "ב מ וו ארהב\"",
+    "model": "X5 XDRIVE50E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 313,
+    "cc": 2998,
+    "seconds": 4.8,
+    "source": "רישוי רכב / נתון יצרן (BMW X5 xDrive50e פלאג-אין 489)"
   },
   {
     "make": "ב מ וו ארהב\"",
@@ -1740,3 +1973,4 @@
     "source": "נתון יצרן (BMW iX3 286)"
   }
 ]
+
