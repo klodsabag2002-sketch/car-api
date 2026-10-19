@@ -335,6 +335,24 @@ app.get('/', (req, res) => {
     res.status(200).send('Car API is running successfully!');
 });
 
+// בדיקה בלבד: מחזיר שמות שדות (בלי ערכים) של רשומת רכב ורשומת דגם
+// חייב להיות לפני /api/car/:plate
+app.get('/api/car/inspect', async (req, res) => {
+    try {
+        const [carRows, modelRows] = await Promise.all([
+            searchDatastore(CAR_REGISTRY_ID, null, 1),
+            searchDatastore(MODELS_ID, null, 1)
+        ]);
+        res.json({
+            success: true,
+            carFields: Object.keys(carRows[0] || {}),
+            modelFields: Object.keys(modelRows[0] || {})
+        });
+    } catch (e) {
+        res.status(500).json({ success: false, message: e.message });
+    }
+});
+
 app.get('/api/car/:plate', async (req, res) => {
     const plate = req.params.plate.replace(/\D/g, "");
     try {
