@@ -734,6 +734,37 @@ app.get('/api/heavy/inspect', async (req, res) => {
     }
 });
 
+// שדות מותרים לכלי רכב כבד. לא כוללים מספר שלדה, מספר מנוע ופרטי בעלים
+const HEAVY_ALLOWED_FIELDS = [
+    "mispar_rechev", "tozeret_nm", "tozeret_eretz_nm", "degem_nm", "shnat_yitzur",
+    "sug_delek_nm", "nefach_manoa", "mishkal_kolel", "hanaa_nm", "grira_nm",
+    "zmig_kidmi", "zmig_ahori", "moed_aliya_lakvish", "kvutzat_sug_rechev"
+];
+
+app.get('/api/heavy/:plate', async (req, res) => {
+    const plate = req.params.plate.replace(/\D/g, '');
+    if (plate.length < 5) return res.json({ success: false, message: 'מספר לא תקין' });
+    try {
+        const filters = encodeURIComponent(JSON.stringify({ mispar_rechev: Number(plate) }));
+        const url = `https://data.gov.il/api/3/action/datastore_search?resource_id=${HEAVY_REGISTRY_ID}&filters=${filters}&limit=1`;
+        const r = await fetch(url);
+        const j = await r.json();
+        const rec = j?.success ? j.result.records[0] : null;
+        if (!rec) return res.json({ success: false, message: 'לא נמצא רכב כבד במספר זה' });
+        const out = {};
+        for (const key of HEAVY_ALLOWED_FIELDS) {
+            const v = rec[key];
+            if (v === null || v === undefined) continue;
+            const s = String(v).trim();
+            if (s === "" || /^dnf$/i.test(s)) continue;
+            out[key] = s;
+        }
+        res.json({ success: true, data: out });
+    } catch (e) {
+        res.status(500).json({ success: false, message: 'שגיאה בשליפה' });
+    }
+});
+
 app.listen(PORT, () => {
     console.log(`השרת רץ בפורט ${PORT}`);
 });
