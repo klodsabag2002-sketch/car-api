@@ -438,6 +438,10 @@ app.get('/api/car/:plate', async (req, res) => {
             return n === null ? null : n === 1;
         };
 
+        // תיבת הילוכים: שדה automatic_ind במאגר הדגם (1 = אוטומטי). לאופנועים אין שדה כזה
+        const isAutomatic = fflag("automatic_ind");
+        const transmission = isAutomatic === null ? null : (isAutomatic ? "אוטומטי" : "ידני");
+
         const technical = {
             drivetrain: fv("hanaa_nm"),
             totalWeight: fnum("mishkal_kolel"),
@@ -524,7 +528,7 @@ app.get('/api/car/:plate', async (req, res) => {
         res.json({
             success: true,
             data: {
-                plate, manufacturer, model, trim, year,
+                plate, manufacturer, model, trim, year, transmission,
                 color: car.zeva_rechev || car.tzeva_rechev || "לא ידוע",
                 chassis: toText(car.misgeret),
                 tireFront: toText(car.zmig_kidmi),
