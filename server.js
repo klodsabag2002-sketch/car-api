@@ -709,6 +709,31 @@ app.get('/api/bike/:plate', async (req, res) => {
     }
 });
 
+// ---------- כלי רכב כבדים (מעל 3.5 טון) - בדיקת שדות בלבד ----------
+// מזהה המשאב נלקח מרשימת המאגרים; לפני חיפוש לפי לוחית צריך לראות את השדות (בלי ערכים)
+const HEAVY_REGISTRY_ID = "cd3acc5c-03c3-4c89-9c54-d40f93c0d790";
+
+app.get('/api/heavy/inspect', async (req, res) => {
+    try {
+        const url = `https://data.gov.il/api/3/action/datastore_search?resource_id=${HEAVY_REGISTRY_ID}&limit=1`;
+        const r = await fetch(url);
+        const text = await r.text();
+        let j;
+        try {
+            j = JSON.parse(text);
+        } catch (e) {
+            return res.json({ success: false, stage: 'parse', httpStatus: r.status, preview: text.slice(0, 200) });
+        }
+        if (!j.success) {
+            return res.json({ success: false, stage: 'datastore', error: j.error || null, httpStatus: r.status });
+        }
+        const sample = (j.result && j.result.records && j.result.records[0]) || {};
+        res.json({ success: true, total: j.result.total, fields: Object.keys(sample) });
+    } catch (e) {
+        res.json({ success: false, stage: 'network', error: e.message });
+    }
+});
+
 app.listen(PORT, () => {
     console.log(`השרת רץ בפורט ${PORT}`);
 });
