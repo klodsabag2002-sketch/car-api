@@ -665,14 +665,27 @@ app.get('/api/bike/inspect', async (req, res) => {
 
 // בדיקה בלבד: מחפש במאגר data.gov.il מאגרים הקשורים לדו-גלגלי ומחזיר את שמותיהם ומזהי המשאבים
 app.get('/api/bike/datasets', async (req, res) => {
+    const terms = ['אופנוע', 'דו גלגלי', 'דגמי רכב', 'כלי רכב', 'רישוי רכב', 'מנוע הילוכים'];
     try {
-        const r = await fetch('https://data.gov.il/api/3/action/package_search?q=' + encodeURIComponent('אופנוע') + '&rows=20');
-        const j = await r.json();
-        const pkgs = (j && j.result && j.result.results) || [];
-        const out = pkgs.map(p => ({
-            title: p.title,
-            resources: (p.resources || []).map(x => ({ id: x.id, name: x.name, format: x.format }))
+        const results = await Promise.all(terms.map(async t => {
+            try {
+                const r = await fetch('https://data.gov.il/api/3/action/package_search?q=' + encodeURIComponent(t) + '&rows=20');
+                const j = await r.json();
+                return (j && j.result && j.result.results) || [];
+            } catch (e) { return []; }
         }));
+        const seen = new Map();
+        for (const list of results) {
+            for (const p of list) {
+                if (!seen.has(p.id)) {
+                    seen.set(p.id, {
+                        title: p.title,
+                        resources: (p.resources || []).map(x => ({ id: x.id, name: x.name, format: x.format }))
+                    });
+                }
+            }
+        }
+        const out = [...seen.values()];
         res.json({ success: true, count: out.length, datasets: out });
     } catch (e) {
         res.status(500).json({ success: false, message: e.message });
