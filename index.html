@@ -315,6 +315,11 @@
   .cam-btn { display: block; text-align: center; margin: 12px 14px 0; background: rgba(56,189,248,.08); border: 1.5px dashed #38bdf8; color: #38bdf8; border-radius: 14px; padding: 12px; font-size: 13px; font-weight: 900; cursor: pointer; }
   .cam-btn.busy { opacity: .6; pointer-events: none; }
   .cam-btn input { display: none; }
+  .bike-kv { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 9px 0; border-bottom: 1px dashed rgba(255,255,255,.08); font-size: 13px; position: relative; z-index: 2; }
+  .bike-kv:last-child { border-bottom: none; }
+  .bike-kv .k { color: #94a3b8; font-weight: 800; white-space: nowrap; }
+  .bike-kv .v { font-weight: 900; color: #f8fafc; text-align: left; overflow-wrap: anywhere; }
+  .bike-kv .v.na { color: #64748b; font-weight: normal; }
   .report-btn-wrap { text-align: center; margin: 28px 14px 16px; }
   .report-btn { display: inline-flex; align-items: center; gap: 10px; background: rgba(15,23,42,.7); border: 1.5px dashed #38bdf8; color: #38bdf8; border-radius: 14px; padding: 14px 24px; font-size: 13px; font-weight: 900; cursor: pointer; }
 
@@ -1881,7 +1886,12 @@
     const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     const txt = v => (v === null || v === undefined) ? '' : cleanText(String(v)) || '';
     const make = txt(b.tozeret_nm) || 'אופנוע';
-    const model = [txt(b.degem_nm), txt(b.shnat_yitzur)].filter(Boolean).join(' · ');
+    const model = txt(b.degem_nm);
+    const kv = [
+      ['יצרן', make], ['דגם', txt(b.degem_nm)], ['שנת ייצור', txt(b.shnat_yitzur)],
+      ['סוג דלק', txt(b.sug_delek_nm)], ['מספר רכב', formatPlate(plate)], ['בעלות', txt(b.baalut)]
+    ];
+    const kvHtml = kv.map(([k, v]) => `<div class="bike-kv"><span class="k">${esc(k)}</span><span class="v${v ? '' : ' na'}">${esc(v || 'אין נתון')}</span></div>`).join('');
     const hpNum = parseFloat(String(b.hespek || '').replace(/[^\d.]/g, '')) || 0;
     const ccNum = parseFloat(String(b.nefach_manoa || '').replace(/[^\d.]/g, '')) || 0;
     const tier = txt(b.baalut) || 'רגיל';
@@ -1923,6 +1933,7 @@
                 <div class="pc-bar"><i class="pc-fill" style="--w:${ccW}%"></i></div>
               </div>
             </div>
+            <div style="position:relative;z-index:2;margin-top:12px;">${kvHtml}</div>
             <div class="pc-foot">
               <div class="pc-plate"><span class="ps">✡IL</span><span class="pn">${esc(formatPlate(plate))}</span></div>
               <span class="pc-serial">MOTO</span>
