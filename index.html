@@ -572,6 +572,7 @@
           <div class="lrow"><span class="li">🚙</span><span class="ll">דגם</span><span class="sp"></span><span class="lv" id="vModel"></span></div>
           <div class="lrow"><span class="li">🏁</span><span class="ll">רמת גימור</span><span class="sp"></span><span class="lv" id="vTrim"></span></div>
           <div class="lrow"><span class="li">🚗</span><span class="ll">סוג מרכב</span><span class="sp"></span><span class="lv" id="vBody"></span></div>
+          <div class="lrow"><span class="li">⚙️</span><span class="ll">תיבת הילוכים</span><span class="sp"></span><span class="lv" id="vGear"></span></div>
           <div class="lrow"><span class="li">📅</span><span class="ll">שנת ייצור</span><span class="sp"></span><span class="lv" id="vYear"></span></div>
           <div class="lrow"><span class="li">🎨</span><span class="ll">צבע</span><span class="sp"></span><span class="lv" id="vColor"></span></div>
           <div class="lrow"><span class="li">🔢</span><span class="ll">מספר רכב</span><span class="sp"></span><span class="lv" id="vPlate"></span></div>
@@ -2052,6 +2053,7 @@
         setVal('vModel', d.model);
         setVal('vTrim', d.trim);
         setVal('vBody', d.bodyType || d.merkav);
+        setVal('vGear', d.transmission);
         setVal('vYear', d.year);
         setVal('vColor', d.color);
         setVal('vPlate', formatPlate(plate));
