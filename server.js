@@ -583,19 +583,32 @@ app.get('/api/search/chassis/:chassis', async (req, res) => {
 // ---------- אופנועים (מאגר דו-גלגלי) ----------
 const BIKE_REGISTRY_ID = "bf9df4e2-d90d-4c0a-a400-19e15af8e95f";
 
-// שדות שנראים כמו פרטי בעלים: לא יוחזרו לעולם
-const BIKE_PRIVATE_KEY = /ת\.?ז|זהות|שם|כתובת|טלפון|owner|name|id|address|phone|ישוב|רחוב/i;
-// שדות שנראים כמו פרטי רכב: יוחזרו
-const BIKE_PUBLIC_KEY = /יצרן|דגם|טוז|degem|tozeret|make|model|shnat|year|צבע|color|הספק|koah|נפח|nefah|cc|דלק|fuel|סוג|sug|merkav|ramat|גימור|manufact/i;
+// רשימה מפורשת של שדות שמותר להחזיר. שמות בעלים ותעודות זהות לא נכללים בכלל
+const BIKE_ALLOWED_FIELDS = [
+    "mispar_rechev",
+    "tozeret_nm",
+    "tozeret_eretz_nm",
+    "degem_nm",
+    "shnat_yitzur",
+    "sug_delek_nm",
+    "nefach_manoa",
+    "hespek",
+    "mishkal_kolel",
+    "mispar_mekomot",
+    "misgeret",
+    "moed_aliya_lakvish",
+    "baalut",
+    "mkoriut_nm"
+];
 
 function pickBikeFields(rec) {
     const out = {};
-    for (const [k, v] of Object.entries(rec)) {
-        if (k === '_id') continue;
-        if (BIKE_PRIVATE_KEY.test(k)) continue;
-        if (!BIKE_PUBLIC_KEY.test(k)) continue;
-        if (v === null || v === '') continue;
-        out[k] = v;
+    for (const key of BIKE_ALLOWED_FIELDS) {
+        const v = rec[key];
+        if (v === null || v === undefined) continue;
+        const s = String(v).trim();
+        if (s === "" || /^dnf$/i.test(s)) continue;
+        out[key] = s;
     }
     return out;
 }
@@ -628,19 +641,18 @@ app.get('/api/bike/inspect', async (req, res) => {
     }
 });
 
-// חיפוש אופנוע לפי לוחית
+// חיפוש אופנוע לפי מספר לוחית (מסנן מדויק על mispar_rechev)
 app.get('/api/bike/:plate', async (req, res) => {
     const plate = req.params.plate.replace(/\D/g, '');
     if (plate.length < 5) return res.json({ success: false, message: 'מספר לא תקין' });
     try {
-        const r = await fetch(`https://data.gov.il/api/3/action/datastore_search?resource_id=${BIKE_REGISTRY_ID}&q=${encodeURIComponent(plate)}&limit=20`);
+        const filters = encodeURIComponent(JSON.stringify({ mispar_rechev: Number(plate) }));
+        const url = `https://data.gov.il/api/3/action/datastore_search?resource_id=${BIKE_REGISTRY_ID}&filters=${filters}&limit=1`;
+        const r = await fetch(url);
         const j = await r.json();
-        const records = j?.success ? j.result.records : [];
-        const match = records.find(rec =>
-            Object.values(rec).some(v => String(v).replace(/\D/g, '') === plate)
-        );
-        if (!match) return res.json({ success: false, message: 'לא נמצא אופנוע במספר זה' });
-        res.json({ success: true, data: { plate, ...pickBikeFields(match) } });
+        const rec = j?.success ? j.result.records[0] : null;
+        if (!rec) return res.json({ success: false, message: 'לא נמצא אופנוע במספר זה' });
+        res.json({ success: true, data: pickBikeFields(rec) });
     } catch (e) {
         res.status(500).json({ success: false, message: 'שגיאה בשליפה' });
     }
