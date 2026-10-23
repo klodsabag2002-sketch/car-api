@@ -32,7 +32,7 @@
   .topbar .t { font-size: 18px; flex: 1; text-align: center; font-weight: 900; letter-spacing: 1px; color: #38bdf8; }
   .topbar .i { font-size: 18px; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 50%; background: rgba(56,189,248,.08); border: 1px solid rgba(56,189,248,.25); color: #38bdf8; transition: all .25s; }
   .topbar .i:hover { background: rgba(56,189,248,.2); }
-  .topbar .i.hidden { visibility: hidden; }
+  .topbar .i.hidden { display: none; }
   .topbar .lang-btn { font-size: 12px; font-weight: 900; letter-spacing: .5px; }
 
   .menu-dropdown {
@@ -481,10 +481,10 @@
 <div class="phone">
 
   <div class="topbar">
+    <span class="i hidden" id="backBtn">→</span>
     <span class="i" id="favBtn">♡</span>
     <span class="t" id="topTitle" data-i18n="appTitle">פרטי רכב</span>
     <span class="i" id="menuToggleBtn">☰</span>
-    <span class="i hidden" id="backBtn">←</span>
     <span class="i lang-btn" id="langBtn" title="Language / שפה">EN</span>
     <div id="sideMenuDropdown" class="menu-dropdown">
       <div class="menu-item duel-item" data-menutab="duel" data-i18n="menuDuel">⚔️ קרב 1-1</div>
@@ -893,7 +893,7 @@
     errPlateLen: ['נא להזין מספר רכב תקין (6 עד 8 ספרות)', 'Please enter a valid plate number (6 to 8 digits)'],
     recent: ['חיפושים אחרונים', 'Recent searches'],
     clearAll: ['נקה הכל', 'Clear all'],
-    backHint: ['לחיפוש רכב אחר, לחץ על החץ ← למעלה', 'To search for another vehicle, tap the ← arrow above'],
+    backHint: ['לחיפוש רכב אחר, לחץ על החץ → למעלה', 'To search for another vehicle, tap the ← arrow above'],
     kmSince: ['ק"מ מעודכן מהטסט האחרון', 'km since last test (updated)'],
     importer: ['יבואן', 'Importer'],
     unknown: ['לא ידוע', 'Unknown'],
@@ -1207,7 +1207,8 @@
       [["infiniti", "אינפיניטי"], "infiniti", "#555", "Infiniti"],
       [["aiways", "איוויס"], "aiways", "#1c4f9c", "Aiways"],
       [["ora", "אורה"], "ora", "#e67e22", "ORA"],
-      [["mg", "מ.ג", "מגי", "אם ג'י", "אם.ג'י"], "mg", "#c00", "MG"],
+      [[/(^|[^a-z])mg([^a-z]|$)/i, "מ.ג", "מגי", "אם ג'י", "אם.ג'י"], "mg", "#c00", "MG"],
+      [["alpine", "אלפין", "אלפיין"], "alpine", "#0055a5", "Alpine"],
       [["alfa romeo", "אלפא רומיאו", "אלפא"], "alfa romeo", "#900", "Alfa Romeo"],
       [["levc", "אל אי וי סי"], "levc", "#222", "LEVC"],
       [["isuzu", "איסוזו"], "isuzu", "#c0392b", "Isuzu"],
@@ -1392,6 +1393,7 @@
     });
     $('legalNoticeMain').textContent = t('legal');
     $('cmpLegalNote').textContent = t('legal');
+    $('backBtn').textContent = isEn ? '←' : '→';
     $('langBtn').textContent = isEn ? 'עב' : 'EN';
     $('langBtn').title = isEn ? 'עברית' : 'English';
     $('dtTabResults').textContent = t('dResults');
@@ -1432,6 +1434,9 @@
     else if (st.plate && (st.view === 'detail' || st.view === 'card' || st.view === 'hunter')) {
       $('plateInput').value = formatPlate(st.plate);
       searchCar();
+      if (st.view !== 'detail') setTimeout(() => showSection(st.view), 1600);
+    } else if (st.view === 'hunter' || st.view === 'card') {
+      showSection(st.view);
     }
   }
 
@@ -2864,6 +2869,7 @@
   });
 
   /* ================= אתחול ================= */
+  window.addEventListener('pagehide', () => store.set(RESTORE_KEY, JSON.stringify(currentViewState())));
   applyStaticI18n();
   renderHistory();
   updateHunterUI();
