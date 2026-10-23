@@ -1228,7 +1228,7 @@
       [["chrysler", "קרייזלר"], "chrysler", "#1c4f9c", "Chrysler"],
       [["deepal", "דיפאל"], "deepal", "#333", "Deepal"],
       [["daihatsu", "דיהטסו"], "daihatsu", "#cc0000", "Daihatsu"],
-      [["ds", "די אס"], "ds", "#111", "DS"],
+      [[/(^|[^\w])ds([^\w]|$)/i, "די אס", "ds automobiles"], "ds", "#111", "DS"],
       [["dongfeng", "דונגפנג"], "dongfeng", "#1c4f9c", "Dongfeng"],
       [["dodge", "דודג"], "dodge", "#cc0000", "Dodge"],
       [["honda", "הונדה"], "honda", "#cc0000", "Honda"],
@@ -1286,7 +1286,7 @@
       [["מאן", "man "], "man", "#1c3d6b", "MAN"]
     ];
     for (const [keys, slug, color, en] of rules) {
-      if (keys.some(k => raw.includes(k))) return { slug, color, en };
+      if (keys.some(k => k instanceof RegExp ? k.test(raw) : raw.includes(k))) return { slug, color, en };
     }
     return null;
   }
