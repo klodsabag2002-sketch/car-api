@@ -61,7 +61,8 @@ const HEV_DATABASE = {
 
   // --- הונדה ---
   "honda_jazz": 122,
-  "honda_civic": 184,
+  // סיוויק היברידית היא רק דור 11 החדש (מנוע 2.0 ליטר e:HEV)
+  "honda_civic_ehev": 184,
   "honda_hrv": 131,
   "honda_hr_v": 131,
   "honda_crv": 184,
@@ -88,7 +89,7 @@ const HEV_DATABASE = {
 };
 
 const SORTED_HEV_KEYS = Object.keys(HEV_DATABASE).sort((a, b) => b.length - a.length);
-const HYBRID_KEYWORDS = ['hybrid', 'hev', 'mhev', 'היברידי', 'היברידית', 'משולב', 'epower', 'e-power', 'etsi'];
+const HYBRID_KEYWORDS = ['hybrid', 'hev', 'mhev', 'היברידי', 'היברידית', 'משולב', 'epower', 'e-power', 'etsi', 'e:hev', 'ehev'];
 
 function getCombinedHEVPower(manufacturer, model, listedHp, engineCc, fuelType) {
   if (!listedHp) return listedHp;
@@ -96,8 +97,8 @@ function getCombinedHEVPower(manufacturer, model, listedHp, engineCc, fuelType) 
   const fullText = `${manufacturer || ''} ${model || ''} ${fuelType || ''}`.toLowerCase();
   const cc = Number(engineCc) || 0;
 
-  // 1. הגנה: מנועי 2.0 ומעלה ורכבים ספורטיביים לעולם אינם מורדים בהספק
-  if (cc >= 1800 && listedHp >= 190) {
+  // 1. הגנה: מנועי 1.8 ומעלה בנזין רגיל (כולל 1798/1799 סמ"ק של הונדה ומשפחתיות בנזין)
+  if (cc >= 1750 && listedHp >= 135 && !HYBRID_KEYWORDS.some(kw => fullText.includes(kw))) {
     return listedHp;
   }
 
@@ -118,6 +119,11 @@ function getCombinedHEVPower(manufacturer, model, listedHp, engineCc, fuelType) 
 
     const matchParts = keyParts.every(part => cleanStr.includes(part));
     if (matchParts || cleanStr.includes(keyClean)) {
+      // בדיקה נוספת לסיוויק: רק דגם 2.0 ליטר הוא היברידי
+      if (key.includes('civic') && cc < 1900 && !HYBRID_KEYWORDS.some(kw => fullText.includes(kw))) {
+        return listedHp;
+      }
+
       const targetHp = HEV_DATABASE[key];
       // תיקון מבוצע רק אם הוא באמת מוסיף כוח סוס (חשמל)
       if (targetHp > listedHp) {
@@ -127,7 +133,7 @@ function getCombinedHEVPower(manufacturer, model, listedHp, engineCc, fuelType) 
     }
   }
 
-  // 4. רשת ביטחון דינמית לרכבים היברידיים מוצהרים
+  // 4. רשת ביטחון דינמית לרכבים היברידיים מוצהרים בלבד
   const isDeclaredHybrid = HYBRID_KEYWORDS.some(kw => fullText.includes(kw));
   if (isDeclaredHybrid && listedHp >= 70 && listedHp <= 135) {
     const estimated = Math.round(listedHp * 1.35);
