@@ -9,7 +9,7 @@
     var l = 'he';
     try { l = window.localStorage.getItem('appLang') === 'en' ? 'en' : 'he'; } catch (e) {}
     document.documentElement.lang = l;
-    document.documentElement.dir = l === 'en' ? 'rtl' : 'ltr';
+    document.documentElement.dir = l === 'en' ? 'ltr' : 'rtl';
   })();
 </script>
 <style>
@@ -26,14 +26,13 @@
   /* ---------- Topbar ---------- */
   .topbar {
     background: rgba(3,7,18,.9); backdrop-filter: blur(16px); height: 58px; display: flex; align-items: center;
-    justify-content: space-between; gap: 8px; padding: 0 16px; border-bottom: 1px solid rgba(56,189,248,.18);
+    justify-content: space-between; gap: 10px; padding: 0 16px; border-bottom: 1px solid rgba(56,189,248,.18);
     position: sticky; top: 0; z-index: 100;
   }
-  .topbar .nav-group { display: flex; align-items: center; gap: 8px; }
-  .topbar .t { font-size: 18px; flex: 1; text-align: center; font-weight: 900; letter-spacing: 1px; color: #38bdf8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .topbar .i { font-size: 18px; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 50%; background: rgba(56,189,248,.08); border: 1px solid rgba(56,189,248,.25); color: #38bdf8; transition: all .25s; flex-shrink: 0; }
+  .topbar .t { font-size: 18px; flex: 1; text-align: center; font-weight: 900; letter-spacing: 1px; color: #38bdf8; }
+  .topbar .i { font-size: 18px; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 50%; background: rgba(56,189,248,.08); border: 1px solid rgba(56,189,248,.25); color: #38bdf8; transition: all .25s; }
   .topbar .i:hover { background: rgba(56,189,248,.2); }
-  .topbar .i.hidden { display: none !important; }
+  .topbar .i.hidden { visibility: hidden; }
   .topbar .lang-btn { font-size: 12px; font-weight: 900; letter-spacing: .5px; }
 
   .menu-dropdown {
@@ -56,6 +55,13 @@
   .hero-sub { color: #94a3b8; font-size: 13px; line-height: 1.7; }
 
   .search-box { background: rgba(15,23,42,.6); padding: 20px 16px; border-bottom: 1px solid rgba(56,189,248,.12); }
+  .mode-tabs { display: flex; border-bottom: 1px solid rgba(56,189,248,.18); margin-bottom: 14px; }
+  .mode-tab { flex: 1; text-align: center; padding: 10px 4px; font-size: 12px; font-weight: 800; color: #94a3b8; cursor: pointer; border-bottom: 2px solid transparent; }
+  .mode-tab.active { color: #38bdf8; border-bottom-color: #38bdf8; }
+  .mode-off { display: none !important; }
+  .mode-panel { display: none; }
+  .mode-panel.show { display: block; }
+
   .plate { display: flex; align-items: center; background: #fbbf24; border: 2px solid #38bdf8; border-radius: 16px; height: 64px; overflow: hidden; direction: ltr; box-shadow: 0 0 22px rgba(56,189,248,.25); }
   .plate .strip { background: #1e3a8a; color: #fff; width: 52px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; }
   .plate .strip .flag { font-size: 12px; }
@@ -68,6 +74,13 @@
 
   .msg { text-align: center; color: #94a3b8; font-size: 13px; padding: 8px; display: none; }
   .msg.err { color: #f87171; background: rgba(239,68,68,.12); border: 1px solid rgba(239,68,68,.28); border-radius: 12px; margin-top: 10px; font-weight: 700; }
+  .candidates { padding: 0 16px 8px; }
+  .cand-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; background: rgba(15,23,42,.8); border: 1px solid rgba(56,189,248,.18); border-radius: 12px; padding: 12px 14px; margin-top: 8px; cursor: pointer; color: #e2e8f0; }
+  .cand-row:hover { border-color: #38bdf8; }
+  .cand-plate { color: #fbbf24; font-weight: 900; direction: ltr; white-space: nowrap; }
+  .cand-info { font-size: 13px; color: #94a3b8; }
+  .cand-hint { color: #38bdf8; font-size: 13px; font-weight: 700; text-align: center; padding: 4px 0 2px; }
+  .cand-empty { color: #94a3b8; text-align: center; font-size: 14px; padding: 12px; }
 
   .history { background: rgba(15,23,42,.7); margin: 16px 14px 0; border-radius: 18px; border: 1px solid rgba(56,189,248,.18); display: none; overflow: hidden; }
   .history.show { display: block; }
@@ -113,6 +126,85 @@
   .car-name { text-align: center; font-size: 26px; font-weight: 900; margin-top: 4px; }
   .car-trim { text-align: center; font-size: 16px; color: #38bdf8; font-weight: 900; margin-top: 2px; }
 
+  .empty-card { margin: 30px 14px; padding: 30px 20px; text-align: center; border-radius: 20px; background: rgba(15,23,42,.7); border: 1px dashed rgba(56,189,248,.35); color: #94a3b8; font-weight: 700; font-size: 14px; line-height: 1.8; }
+  .empty-card .big { font-size: 40px; margin-bottom: 8px; }
+  .empty-card button { margin-top: 16px; background: linear-gradient(135deg,#0284c7,#0369a1); color: #fff; border: none; border-radius: 14px; padding: 12px 24px; font-size: 13px; font-weight: 900; cursor: pointer; }
+
+  /* =========================================================
+     כרטיס רכב — עיצוב מקצועי
+     ========================================================= */
+  .pc-section { padding: 22px 16px 10px; }
+  .pc-wrap { perspective: 1100px; max-width: 340px; margin: 0 auto; }
+  .pc {
+    --accent: #38bdf8; --accent2: #0ea5e9; --tier-glow: rgba(56,189,248,.18);
+    position: relative; border-radius: 22px; padding: 1.5px;
+    background: linear-gradient(150deg, rgba(56,189,248,.55), rgba(15,23,42,.2) 45%, rgba(56,189,248,.35));
+    transform: rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));
+    transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease;
+    transform-style: preserve-3d; cursor: pointer;
+    box-shadow: 0 18px 40px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.02), 0 0 28px var(--tier-glow);
+    animation: pcIn .7s cubic-bezier(.2,.8,.2,1) both;
+  }
+  @keyframes pcIn { from { opacity: 0; transform: translateY(18px) scale(.98); } to { opacity: 1; transform: none; } }
+  .pc[data-r="rare"] { --accent: #38bdf8; --accent2: #0284c7; --tier-glow: rgba(56,189,248,.22); }
+  .pc[data-r="epic"] { --accent: #a78bfa; --accent2: #7c3aed; --tier-glow: rgba(167,139,250,.22); }
+  .pc[data-r="legendary"] { --accent: #facc15; --accent2: #ca8a04; --tier-glow: rgba(250,204,21,.22); }
+  .pc[data-r="common"] { --accent: #94a3b8; --accent2: #475569; --tier-glow: rgba(148,163,184,.12); }
+  .pc-body {
+    position: relative; overflow: hidden; border-radius: 20.5px;
+    background: linear-gradient(180deg,#0b1224 0%,#070c18 100%);
+    padding: 18px 18px 16px;
+  }
+  .pc-body::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(56,189,248,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(56,189,248,.035) 1px, transparent 1px); background-size: 22px 22px; pointer-events: none; }
+  .pc-sheen { position: absolute; top: -30%; left: -60%; width: 45%; height: 160%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.07), transparent); transform: rotate(18deg); animation: pcSheen 5.5s ease-in-out infinite; pointer-events: none; z-index: 3; }
+  @keyframes pcSheen { 0%, 35% { left: -60%; } 100% { left: 130%; } }
+
+  .pc-head { display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 2; }
+  .pc-brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
+  .pc-logo { width: 44px; height: 44px; border-radius: 50%; background: #fff; border: 1.5px solid var(--accent); display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; box-shadow: 0 0 14px var(--tier-glow); }
+  .pc-logo img { width: 78%; height: 78%; object-fit: contain; }
+  .pc-logo .pc-logo-txt { font-size: 18px; font-weight: 900; color: #0f172a; }
+  .pc-label { font-size: 9.5px; letter-spacing: 2px; color: #64748b; font-weight: 800; }
+  .pc-tier { display: inline-block; margin-top: 3px; font-size: 10.5px; font-weight: 900; color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 999px; padding: 2px 10px; }
+  .pc-hp { text-align: left; direction: ltr; }
+  .pc-hp b { display: block; font-size: 24px; font-weight: 900; color: #f8fafc; line-height: 1; font-variant-numeric: tabular-nums; }
+  .pc-hp small { font-size: 10px; color: #64748b; font-weight: 800; letter-spacing: 1px; }
+
+  .pc-name { position: relative; z-index: 2; margin-top: 18px; font-size: 22px; font-weight: 900; color: #f8fafc; line-height: 1.2; word-break: break-word; }
+  .pc-model { position: relative; z-index: 2; font-size: 12.5px; color: var(--accent); font-weight: 800; margin-top: 4px; }
+  .pc-divider { position: relative; z-index: 2; height: 1px; margin: 16px 0 14px; background: linear-gradient(90deg, transparent, rgba(56,189,248,.35), transparent); }
+
+  .pc-stats { position: relative; z-index: 2; display: flex; flex-direction: column; gap: 12px; }
+  .pc-row { opacity: 0; }
+  .pc.play .pc-row { animation: rowReveal .55s cubic-bezier(.2,.8,.2,1) forwards; }
+  .pc.play .pc-row:nth-child(1) { animation-delay: .15s; }
+  .pc.play .pc-row:nth-child(2) { animation-delay: .27s; }
+  .pc.play .pc-row:nth-child(3) { animation-delay: .39s; }
+  .pc.play .pc-row:nth-child(4) { animation-delay: .51s; }
+  @keyframes rowReveal { from { opacity: 0; transform: translateX(10px); } to { opacity: 1; transform: none; } }
+  .pc-row-head { display: flex; justify-content: space-between; align-items: baseline; font-size: 11.5px; font-weight: 700; }
+  .pc-row-head .l { color: #94a3b8; }
+  .pc-row-head .v { color: #f8fafc; font-weight: 900; direction: ltr; font-variant-numeric: tabular-nums; }
+  .pc-bar { height: 5px; border-radius: 4px; background: rgba(148,163,184,.12); margin-top: 6px; overflow: hidden; }
+  .pc-fill { display: block; height: 100%; width: 0; border-radius: 4px; background: linear-gradient(90deg, var(--accent2), var(--accent)); box-shadow: 0 0 8px var(--tier-glow); }
+  .pc.play .pc-row:nth-child(1) .pc-fill { animation: fillBar 1.1s cubic-bezier(.2,.8,.2,1) .35s forwards; }
+  .pc.play .pc-row:nth-child(2) .pc-fill { animation: fillBar 1.1s cubic-bezier(.2,.8,.2,1) .47s forwards; }
+  .pc.play .pc-row:nth-child(3) .pc-fill { animation: fillBar 1.1s cubic-bezier(.2,.8,.2,1) .59s forwards; }
+  .pc.play .pc-row:nth-child(4) .pc-fill { animation: fillBar 1.1s cubic-bezier(.2,.8,.2,1) .71s forwards; }
+  @keyframes fillBar { to { width: var(--w, 0%); } }
+
+  .pc-foot { position: relative; z-index: 2; display: flex; justify-content: space-between; align-items: center; margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.06); }
+  .pc-plate { display: inline-flex; direction: ltr; height: 26px; background: #fbbf24; border: 1.5px solid #0f172a; border-radius: 5px; overflow: hidden; }
+  .pc-plate .ps { background: #1e3a8a; color: #fff; width: 18px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 6px; font-weight: 900; }
+  .pc-plate .pn { font-size: 12.5px; font-weight: 900; color: #0f172a; padding: 0 8px; display: flex; align-items: center; }
+  .pc-serial { font-size: 9.5px; letter-spacing: 2px; color: #475569; font-weight: 800; direction: ltr; }
+
+  .pc-actions { display: flex; gap: 10px; margin: 16px 16px 8px; }
+  .btn-main { flex: 1; background: linear-gradient(135deg,#0284c7,#0369a1); border: none; color: #fff; border-radius: 14px; padding: 13px; font-size: 13px; font-weight: 900; cursor: pointer; transition: transform .2s; }
+  .btn-main:hover { transform: translateY(-1px); }
+  .btn-ghost { flex: 1; background: rgba(56,189,248,.08); border: 1px solid rgba(56,189,248,.35); color: #38bdf8; border-radius: 14px; padding: 13px; font-size: 13px; font-weight: 900; cursor: pointer; }
+  .pc-hint { text-align: center; font-size: 11px; color: #475569; font-weight: 700; margin-top: 8px; }
+
   /* ---------- Status / info ---------- */
   .status-row { display: flex; justify-content: space-around; padding: 20px 14px 10px; gap: 10px; }
   .st { text-align: center; flex: 1; background: rgba(15,23,42,.7); padding: 16px 8px; border-radius: 16px; border: 1px solid rgba(56,189,248,.18); transition: transform .2s; }
@@ -128,6 +220,16 @@
   .own-btn:hover { background: #38bdf8; color: #030712; }
   .own-panel { display: none; margin: 14px 14px 0; }
   .own-panel.show { display: block; }
+  .own-table { width: 100%; border-collapse: collapse; background: rgba(15,23,42,.85); border-radius: 16px; overflow: hidden; font-size: 13px; border: 1px solid rgba(56,189,248,.18); }
+  .own-table th { background: linear-gradient(135deg,#0284c7,#0369a1); color: #fff; padding: 14px 10px; font-weight: 900; text-align: center; }
+  .own-table td { padding: 12px 10px; text-align: center; font-weight: 700; border-bottom: 1px solid rgba(255,255,255,.04); }
+  .own-table tr:nth-child(even) td { background: rgba(3,7,18,.4); }
+  .own-extra { background: rgba(15,23,42,.7); border-radius: 16px; padding: 16px 18px; margin-top: 12px; font-size: 13px; border: 1px solid rgba(56,189,248,.18); }
+  .own-extra .kv { padding: 8px 0; border-bottom: 1px dashed rgba(255,255,255,.08); display: flex; justify-content: space-between; }
+  .own-extra .kv:last-child { border-bottom: none; }
+  .own-extra .k { color: #94a3b8; font-weight: 800; }
+  .own-extra .v { font-weight: 900; color: #38bdf8; direction: ltr; }
+  .own-msg { background: rgba(15,23,42,.7); border-radius: 16px; padding: 18px; font-size: 13px; color: #94a3b8; text-align: center; margin-top: 8px; border: 1px solid rgba(56,189,248,.18); font-weight: 700; }
 
   .spec-card { background: rgba(15,23,42,.7); border-radius: 18px; margin: 16px 14px 0; padding: 14px 6px; display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 4px; border: 1px solid rgba(56,189,248,.18); }
   .spec { text-align: center; background: rgba(3,7,18,.5); padding: 12px 2px; border-radius: 12px; border: 1px solid rgba(56,189,248,.1); }
@@ -135,7 +237,15 @@
   .spec .sp-lbl { font-size: 9px; color: #94a3b8; margin-top: 4px; font-weight: 800; white-space: normal; line-height: 1.25; min-height: 22px; }
   .spec .sp-val { font-size: 10.5px; font-weight: 900; color: #38bdf8; margin-top: 4px; direction: ltr; line-height: 1.3; overflow-wrap: anywhere; }
   .spec .sp-val.na { color: #64748b; font-weight: normal; direction: rtl; font-size: 11px; }
-
+  .spec.phev-highlight { border-color: #38bdf8; }
+  .phev-reveal-btn { display: none; margin: 12px 14px 0; padding: 12px 16px; border-radius: 14px; background: rgba(56,189,248,.08); border: 1px dashed #38bdf8; color: #38bdf8; font-size: 12.5px; font-weight: 900; text-align: center; cursor: pointer; }
+  .phev-reveal-btn.active { background: #0284c7; border-style: solid; color: #fff; }
+  .phev-reveal-btn .phev-tag { display: inline-block; background: rgba(56,189,248,.18); border: 1px solid #38bdf8; border-radius: 8px; padding: 2px 6px; font-size: 10px; margin-left: 6px; }
+  .power-feel-badge { margin: 12px 14px 0; padding: 12px 16px; border-radius: 14px; background: rgba(15,23,42,.8); border: 1px solid rgba(56,189,248,.25); display: flex; align-items: center; justify-content: space-between; }
+  .power-feel-lbl { font-size: 12px; font-weight: 800; color: #94a3b8; }
+  .power-feel-val { font-size: 13px; font-weight: 900; color: #38bdf8; }
+  .legal-notice { margin: 10px 14px 0; font-size: 11px; color: #94a3b8; line-height: 1.7; text-align: justify; background: rgba(15,23,42,.6); padding: 12px 14px; border-radius: 12px; border: 1px solid rgba(248,113,113,.25); font-weight: 600; }
+  .accel-disclaimer { margin: 10px 14px 0; font-size: 11px; color: #94a3b8; line-height: 1.5; text-align: center; background: rgba(15,23,42,.6); padding: 10px 14px; border-radius: 12px; border: 1px solid rgba(56,189,248,.15); font-weight: 600; }
   .list-card { background: rgba(15,23,42,.7); border-radius: 18px; margin: 16px 14px 0; overflow: hidden; border: 1px solid rgba(56,189,248,.18); }
   .lrow { display: flex; align-items: center; padding: 14px 18px; border-bottom: 1px solid rgba(255,255,255,.04); }
   .lrow:last-child { border-bottom: none; }
@@ -143,34 +253,239 @@
   .lrow .ll { color: #94a3b8; font-size: 13px; font-weight: 800; }
   .lrow .sp { flex: 1; }
   .lrow .lv { color: #f8fafc; font-size: 13px; font-weight: 900; margin-right: 6px; direction: ltr; }
-
+  .lrow .lv.na { color: #64748b; font-weight: normal; direction: rtl; }
+  .copy-btn { display: none; background: rgba(56,189,248,.1); border: 1px solid #38bdf8; color: #38bdf8; border-radius: 10px; padding: 5px 12px; font-size: 11px; cursor: pointer; margin-right: 6px; font-weight: 900; }
+  .copy-btn.show { display: inline-block; }
   .test-card { background: rgba(15,23,42,.7); border-radius: 18px; margin: 16px 14px 0; padding: 18px; border: 1px solid rgba(56,189,248,.18); }
   .test-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 8px; border-bottom: 1px solid rgba(255,255,255,.04); }
   .test-row:last-child { border-bottom: none; }
   .test-row .tl { color: #94a3b8; font-size: 13px; font-weight: 800; }
   .test-row .tv { font-size: 14px; font-weight: 900; direction: ltr; }
+  .test-row .tv.na { color: #64748b; font-weight: normal; direction: rtl; }
+  .test-countdown { text-align: center; font-size: 13px; font-weight: 900; color: #4ade80; margin-top: 12px; background: rgba(34,197,94,.1); padding: 12px; border-radius: 12px; border: 1px solid rgba(34,197,94,.25); }
+  .test-countdown.bad { color: #f87171; background: rgba(239,68,68,.1); border-color: rgba(239,68,68,.25); }
+  .scale-card { background: rgba(15,23,42,.75); border-radius: 18px; margin: 14px 14px 0; padding: 18px 16px; border: 1px solid rgba(56,189,248,.2); }
+  .scale-header { text-align: center; font-size: 16px; font-weight: 900; margin-bottom: 6px; }
+  .scale-header span { color: #38bdf8; }
+  .indicator-arrow-wrap { height: 14px; position: relative; margin-bottom: 3px; }
+  .indicator-arrow { position: absolute; width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 8px solid #38bdf8; transform: translateX(-50%); transition: left .4s ease; }
+  .colored-scale { display: flex; border-radius: 10px; overflow: hidden; height: 26px; border: 1px solid rgba(255,255,255,.1); }
+  .scale-seg { flex: 1; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 900; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,.6); border-left: 1px solid rgba(0,0,0,.2); }
+  .scale-seg:last-child { border-left: none; }
+  .score-badge-wrap { display: flex; justify-content: center; margin-top: 14px; }
+  .score-badge { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #38bdf8; border-radius: 18px; padding: 6px 16px; background: rgba(56,189,248,.08); }
+  .score-badge .score-num { font-size: 15px; font-weight: 900; color: #38bdf8; }
+  .score-badge .score-txt { font-size: 12px; font-weight: 800; }
+  .info-card { background: rgba(15,23,42,.7); border-radius: 18px; margin: 14px 14px 0; padding: 8px 16px; border: 1px solid rgba(56,189,248,.18); }
+  .info-card h4 { font-weight: 900; color: #38bdf8; padding: 12px 0 8px; font-size: 14px; border-bottom: 1px solid rgba(56,189,248,.18); }
+  .info-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.04); font-size: 13px; }
+  .info-row:last-child { border-bottom: none; }
+  .info-row .l { color: #94a3b8; font-weight: 800; }
+  .info-row .v { font-weight: 900; color: #f8fafc; }
+  .info-row .v.na { color: #64748b; font-weight: normal; }
+  .info-row .v.yes { color: #4ade80; }
+  .info-row .v.no { color: #f87171; }
+  .info-note { font-size: 11px; color: #64748b; text-align: center; margin: 18px 14px 0; font-weight: 700; }
 
-  /* ---------- English adjustments ---------- */
+  /* ---------- Compare / hunter ---------- */
+  .compare-container, .hunter-container { padding: 16px 14px 30px; }
+  .compare-banner, .hunter-banner { background: linear-gradient(135deg,rgba(56,189,248,.16),rgba(15,23,42,.9)); border: 1px solid rgba(56,189,248,.3); border-radius: 18px; padding: 20px; text-align: center; margin-bottom: 16px; }
+  .compare-banner h2, .hunter-banner h2 { font-size: 19px; font-weight: 900; color: #38bdf8; margin-bottom: 6px; }
+  .compare-banner p { font-size: 12px; color: #94a3b8; font-weight: 800; }
+  .hunter-banner p { font-size: 12px; color: #4ade80; line-height: 1.5; font-weight: 800; margin-bottom: 14px; }
+  .compare-inputs { display: flex; gap: 8px; margin-bottom: 16px; }
+  .compare-input, .nick-input { background: #030712; border: 1px solid rgba(56,189,248,.35); color: #38bdf8; font-size: 16px; font-weight: 900; padding: 12px; border-radius: 12px; text-align: center; outline: none; }
+  .compare-btn, .nick-save-btn { background: linear-gradient(135deg,#0284c7,#0369a1); color: #fff; border: none; border-radius: 12px; padding: 0 20px; font-weight: 900; font-size: 14px; cursor: pointer; }
+  .nick-edit-box { display: flex; gap: 8px; justify-content: center; align-items: center; margin-top: 10px; }
+  .nick-input { font-size: 15px; padding: 8px 12px; width: 170px; }
+  .nick-save-btn { padding: 9px 16px; font-size: 13px; }
+  .nick-msg { font-size: 11px; margin-top: 6px; font-weight: 800; display: none; }
+  .nick-msg.ok { color: #4ade80; display: block; }
+  .nick-msg.err { color: #f87171; display: block; }
+  .compare-result-card { background: rgba(15,23,42,.85); border: 1px solid rgba(56,189,248,.25); border-radius: 18px; padding: 18px; display: none; }
+  .compare-result-card.show { display: block; }
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .compare-col { background: rgba(3,7,18,.6); border: 1px solid rgba(56,189,248,.15); border-radius: 14px; padding: 12px; text-align: center; }
+  .compare-col-title { font-size: 14px; font-weight: 900; color: #38bdf8; margin-bottom: 10px; border-bottom: 1px solid rgba(56,189,248,.15); padding-bottom: 6px; }
+  .compare-metric { font-size: 12px; color: #94a3b8; font-weight: 800; margin-top: 8px; }
+  .compare-val { font-size: 14px; font-weight: 900; direction: ltr; margin-top: 2px; }
+  .hunter-stats-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; margin-bottom: 16px; }
+  .hunter-stat-box { background: rgba(15,23,42,.8); border: 1px solid rgba(56,189,248,.18); border-radius: 14px; padding: 14px; text-align: center; }
+  .hunter-stat-box .num { font-size: 20px; font-weight: 900; color: #38bdf8; }
+  .hunter-stat-box .lbl { font-size: 11px; color: #94a3b8; margin-top: 4px; font-weight: 800; }
+  .hunter-section-title { font-size: 15px; font-weight: 900; margin: 20px 4px 10px; }
+  .hunter-table { width: 100%; border-collapse: collapse; background: rgba(15,23,42,.85); border-radius: 14px; overflow: hidden; font-size: 13px; border: 1px solid rgba(56,189,248,.18); }
+  .hunter-table th { background: linear-gradient(135deg,#0284c7,#0369a1); color: #fff; padding: 12px 8px; font-weight: 900; text-align: center; }
+  .hunter-table td { padding: 12px 8px; text-align: center; font-weight: 700; border-bottom: 1px solid rgba(255,255,255,.04); }
+  .hunter-table tr:nth-child(even) td { background: rgba(3,7,18,.4); }
+  .hunter-table tr.my-row td { background: rgba(56,189,248,.12); color: #38bdf8; font-weight: 900; }
+  .hunter-table tr.separator-row td { background: rgba(15,23,42,.95); color: #64748b; font-size: 11px; letter-spacing: 2px; padding: 6px; }
+
+  .bike-kv { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 9px 0; border-bottom: 1px dashed rgba(255,255,255,.08); font-size: 13px; position: relative; z-index: 2; }
+  .bike-kv:last-child { border-bottom: none; }
+  .bike-kv .k { color: #94a3b8; font-weight: 800; white-space: nowrap; }
+  .bike-kv .v { font-weight: 900; color: #f8fafc; text-align: left; overflow-wrap: anywhere; }
+  .bike-kv .v.na { color: #64748b; font-weight: normal; }
+  .report-btn-wrap { text-align: center; margin: 28px 14px 16px; }
+  .report-btn { display: inline-flex; align-items: center; gap: 10px; background: rgba(15,23,42,.7); border: 1.5px dashed #38bdf8; color: #38bdf8; border-radius: 14px; padding: 14px 24px; font-size: 13px; font-weight: 900; cursor: pointer; }
+
+  /* =========================================================
+     ⚔️ קרב 1-1
+     ========================================================= */
+  .duel { display: none; padding: 14px 14px 40px; }
+  .duel.show { display: block; }
+  .duel-hero { text-align: center; padding: 6px 0 0; }
+  .duel-title { font-size: 22px; font-weight: 900; color: #e0f2fe; }
+  .duel-sub { font-size: 12px; color: #94a3b8; font-weight: 700; margin-top: 4px; }
+
+  .arena { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+  .arena.clash { animation: clashShake .5s ease; }
+  @keyframes clashShake { 0%,100% { transform: translate(0,0); } 25% { transform: translate(-3px,1px); } 50% { transform: translate(3px,-1px); } 75% { transform: translate(-2px,0); } }
+
+  .dcard { position: relative; border-radius: 18px; padding: 12px 10px 14px; overflow: hidden; background: linear-gradient(170deg,rgba(15,23,42,.95),rgba(3,7,18,.98)); border: 1px solid var(--cc); box-shadow: 0 0 20px var(--cg); }
+  .dcard.left { --cc: rgba(56,189,248,.6); --cg: rgba(56,189,248,.12); animation: slideInL .6s cubic-bezier(.2,.8,.2,1) both; }
+  .dcard.right { --cc: rgba(239,68,68,.6); --cg: rgba(239,68,68,.12); animation: slideInR .6s cubic-bezier(.2,.8,.2,1) both; }
+  @keyframes slideInL { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: none; } }
+  @keyframes slideInR { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: none; } }
+  .dc-head { display: flex; align-items: center; gap: 8px; position: relative; z-index: 1; }
+  .dc-logo { width: 34px; height: 34px; border-radius: 50%; background: #fff; border: 1.5px solid var(--cc); display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; }
+  .dc-logo img { width: 80%; height: 80%; object-fit: contain; }
+  .dc-logo .dc-badge { font-size: 15px; font-weight: 900; color: #0f172a; }
+  .dc-name { font-size: 12.5px; font-weight: 900; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+  .dc-year { display: inline-block; margin-top: 2px; font-size: 10px; font-weight: 900; color: var(--cc); border: 1px solid var(--cc); border-radius: 10px; padding: 1px 7px; }
+  .dc-car-wrap { position: relative; height: 110px; display: flex; align-items: center; justify-content: center; margin-top: 4px; }
+  .dc-floor { position: absolute; bottom: 4px; width: 90%; height: 12px; border-radius: 50%; background: radial-gradient(ellipse,var(--cg),transparent 70%); }
+  .dc-car { position: relative; font-size: 56px; line-height: 1; animation: carFloat 3.4s ease-in-out infinite; }
+  .dcard.right .dc-car { transform: scaleX(-1); }
+  @keyframes carFloat { 0%,100% { translate: 0 0; } 50% { translate: 0 -4px; } }
+  .dc-plate { position: relative; z-index: 1; display: flex; direction: ltr; align-items: stretch; height: 34px; background: #fbbf24; border: 2px solid #0f172a; border-radius: 8px; overflow: hidden; margin-top: 6px; }
+  .dc-plate .pl-strip { background: #1e3a8a; color: #fff; width: 26px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 8px; font-weight: 900; flex-shrink: 0; }
+  .dc-plate input { flex: 1; min-width: 0; border: none; background: transparent; outline: none; text-align: center; font-size: 15px; font-weight: 900; letter-spacing: 1px; color: #0f172a; }
+  .dc-plate input::placeholder { color: #92400e; font-size: 11px; letter-spacing: 0; opacity: .8; }
+  .vs { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 5; font-size: 22px; font-weight: 900; color: #e2e8f0; background: #0f172a; border: 1px solid rgba(56,189,248,.4); border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; }
+
+  .fight-btn { margin-top: 16px; width: 100%; height: 56px; border: none; border-radius: 16px; cursor: pointer; background: linear-gradient(90deg,#0c4a6e,#0284c7); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: transform .15s, opacity .2s; }
+  .fight-btn:active { transform: scale(.98); }
+  .fight-btn:disabled { background: #334155; cursor: not-allowed; opacity: .8; }
+  .fight-btn .fb-main { font-size: 17px; font-weight: 900; }
+  .fight-btn .fb-sub { font-size: 11px; font-weight: 700; opacity: .85; margin-top: 2px; }
+  .duel-msg { text-align: center; color: #fca5a5; font-size: 13px; font-weight: 800; margin-top: 10px; min-height: 18px; }
+
+  .scan { display: none; margin-top: 14px; padding: 14px 16px; border-radius: 14px; background: rgba(15,23,42,.8); border: 1px solid rgba(56,189,248,.2); }
+  .scan.show { display: block; }
+  .scan-txt { font-size: 12.5px; font-weight: 800; color: #94a3b8; display: flex; justify-content: space-between; }
+  .scan-track { height: 4px; border-radius: 4px; background: rgba(148,163,184,.15); margin-top: 10px; overflow: hidden; }
+  .scan-fill { height: 100%; width: 0; background: linear-gradient(90deg,#0284c7,#38bdf8); transition: width .5s ease; }
+
+  .duel-panel { margin-top: 12px; display: none; }
+  .duel-panel.show { display: block; }
+  .dtabs { display: flex; gap: 6px; background: rgba(15,23,42,.8); border: 1px solid rgba(56,189,248,.18); border-radius: 14px; padding: 4px; }
+  .dtab { flex: 1; text-align: center; padding: 10px 4px; border-radius: 10px; font-size: 12px; font-weight: 900; color: #94a3b8; cursor: pointer; transition: all .25s; }
+  .dtab.active { background: rgba(56,189,248,.14); color: #38bdf8; }
+
+  .tally { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; padding: 14px 18px; border-radius: 16px; background: rgba(15,23,42,.85); border: 1px solid rgba(56,189,248,.18); }
+  .tally .side { text-align: center; min-width: 70px; }
+  .tally .side .n { font-size: 30px; font-weight: 900; font-variant-numeric: tabular-nums; line-height: 1; transition: transform .3s; }
+  .tally .side .n.bump { transform: scale(1.18); }
+  .tally .side .nm { font-size: 11px; font-weight: 800; color: #94a3b8; margin-top: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 110px; }
+  .tally .side.a .n { color: #38bdf8; }
+  .tally .side.b .n { color: #ef4444; }
+  .tally .mid { font-size: 12px; font-weight: 900; color: #64748b; letter-spacing: 1px; }
+
+  .score-list { margin-top: 12px; background: rgba(15,23,42,.85); border: 1px solid rgba(56,189,248,.18); border-radius: 18px; padding: 4px 14px; }
+  .srow { display: grid; grid-template-columns: 62px 1fr 62px; align-items: center; gap: 8px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.05); opacity: 0; transform: translateY(6px); transition: opacity .45s ease, transform .45s ease; }
+  .srow:last-child { border-bottom: none; }
+  .srow.show { opacity: 1; transform: none; }
+  .sv { font-size: 13px; font-weight: 900; direction: ltr; font-variant-numeric: tabular-nums; }
+  .sv.l { color: #38bdf8; text-align: left; }
+  .sv.r { color: #ef4444; text-align: right; }
+  .sv.na { color: #64748b; font-weight: normal; direction: rtl; font-size: 11px; }
+  .sv.lead { text-shadow: 0 0 10px currentColor; }
+  .smid { text-align: center; }
+  .slab { font-size: 11px; font-weight: 800; color: #94a3b8; margin-bottom: 6px; }
+  .sbar { display: flex; height: 6px; border-radius: 6px; overflow: hidden; background: #1e293b; direction: ltr; }
+  .sbar .bl { display: block; height: 100%; width: 0; background: #38bdf8; transition: width .9s cubic-bezier(.2,.8,.2,1); }
+  .sbar .br { display: block; height: 100%; flex: 1; background: #ef4444; }
+  .srow.row-flash { background: rgba(56,189,248,.04); border-radius: 10px; }
+
+  .verdict { margin-top: 14px; border-radius: 18px; padding: 20px 16px; text-align: center; background: rgba(15,23,42,.9); border: 1px solid rgba(56,189,248,.25); opacity: 0; transform: translateY(8px); transition: opacity .6s ease, transform .6s ease; display: none; }
+  .verdict.show { display: block; }
+  .verdict.in { opacity: 1; transform: none; }
+  .verdict .v-lbl { font-size: 11px; font-weight: 900; letter-spacing: 1.5px; color: #64748b; }
+  .verdict .v-name { font-size: 20px; font-weight: 900; margin-top: 6px; color: #f8fafc; }
+  .verdict .v-sub { font-size: 12px; color: #94a3b8; font-weight: 700; margin-top: 6px; }
+  .verdict.a { border-color: rgba(56,189,248,.5); }
+  .verdict.a .v-name { color: #38bdf8; }
+  .verdict.b { border-color: rgba(239,68,68,.5); }
+  .verdict.b .v-name { color: #f87171; }
+  .verdict .share-btn { margin-top: 14px; background: transparent; border: 1px solid rgba(56,189,248,.5); color: #38bdf8; border-radius: 12px; padding: 9px 18px; font-size: 12.5px; font-weight: 900; cursor: pointer; }
+
+  .dtable { margin-top: 12px; background: rgba(15,23,42,.85); border: 1px solid rgba(56,189,248,.18); border-radius: 18px; overflow: hidden; }
+  .dhead { display: grid; grid-template-columns: 1fr 1fr; background: rgba(15,23,42,.9); border-bottom: 1px solid rgba(56,189,248,.15); }
+  .dhead > div { display: flex; align-items: center; gap: 8px; padding: 12px; font-size: 12.5px; font-weight: 900; }
+  .dhead > div:last-child { justify-content: flex-end; }
+  .dhead .logo-s { width: 26px; height: 26px; border-radius: 50%; background: #fff; display: inline-flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
+  .dhead .logo-s img { width: 80%; height: 80%; object-fit: contain; }
+  .drow { display: grid; grid-template-columns: 1fr 96px 1fr; align-items: center; padding: 11px 6px; border-top: 1px solid rgba(255,255,255,.05); }
+  .dv { font-size: 13.5px; font-weight: 900; direction: ltr; padding: 0 8px; font-variant-numeric: tabular-nums; }
+  .dv.l { color: #38bdf8; text-align: center; }
+  .dv.r { color: #ef4444; text-align: center; }
+  .dv.win { color: #f8fafc; background: rgba(255,255,255,.04); border-radius: 8px; padding: 6px 8px; }
+  .dv.na { color: #64748b; font-weight: normal; direction: rtl; font-size: 11px; }
+  .dlab { text-align: center; }
+  .dlab .ico { font-size: 16px; display: block; }
+  .dlab .txt { font-size: 10.5px; font-weight: 800; color: #94a3b8; margin-top: 2px; }
+
+  /* ---------- Overlays ---------- */
+  #cyberTransitionOverlay { position: fixed; inset: 0; background: radial-gradient(circle,rgba(15,23,42,.96) 0%,rgba(3,7,18,.99) 100%); z-index: 9999; display: none; flex-direction: column; align-items: center; justify-content: center; opacity: 0; transition: opacity .4s ease; }
+  #cyberTransitionOverlay.show { display: flex; opacity: 1; }
+  .transit-holo-ring { width: 130px; height: 130px; border-radius: 50%; border: 2px solid rgba(56,189,248,.35); display: flex; align-items: center; justify-content: center; animation: holoPulse 1.5s ease-in-out infinite alternate; }
+  @keyframes holoPulse { 0% { transform: scale(.96); } 100% { transform: scale(1.04); } }
+  .transit-logo { width: 80px; height: 80px; object-fit: contain; }
+  .transit-badge { font-size: 46px; font-weight: 900; color: #fff; }
+  .transit-title { margin-top: 24px; font-size: 20px; font-weight: 900; color: #e0f2fe; }
+  .transit-sub { margin-top: 8px; font-size: 11px; color: #38bdf8; font-weight: 800; letter-spacing: 2px; animation: blinkText 1s infinite alternate; }
+  @keyframes blinkText { 0% { opacity: .4; } 100% { opacity: 1; } }
+
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(3,7,18,.85); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+  .modal-overlay.show { display: flex; }
+  .modal-card { background: #0f172a; width: 100%; max-width: 360px; border-radius: 20px; padding: 24px; border: 1px solid rgba(56,189,248,.25); direction: rtl; text-align: right; }
+  .modal-title { font-size: 18px; font-weight: 900; color: #38bdf8; margin-bottom: 6px; }
+  .modal-sub { font-size: 12px; color: #94a3b8; margin-bottom: 18px; font-weight: 700; }
+  .modal-field-lbl { font-size: 12px; font-weight: 900; color: #e2e8f0; margin: 14px 0 6px; }
+  .modal-select, .modal-textarea, .modal-input { width: 100%; padding: 11px; border: 1px solid rgba(56,189,248,.25); border-radius: 12px; font-family: inherit; font-size: 13px; outline: none; background: #030712; color: #f8fafc; font-weight: 700; }
+  .modal-textarea { height: 85px; resize: none; margin-top: 4px; }
+  .modal-actions { display: flex; gap: 10px; margin-top: 20px; }
+  .modal-submit { flex: 1; background: linear-gradient(135deg,#0284c7,#0369a1); color: #fff; border: none; padding: 12px; border-radius: 12px; font-weight: 900; font-size: 14px; cursor: pointer; }
+  .modal-close { background: #1e293b; color: #94a3b8; border: none; padding: 12px 18px; border-radius: 12px; font-size: 13px; cursor: pointer; font-weight: 900; }
+  .report-status { display: none; font-size: 12px; text-align: center; padding: 10px; border-radius: 12px; margin-top: 14px; font-weight: 900; }
+  .report-status.success { display: block; background: rgba(34,197,94,.12); color: #4ade80; border: 1px solid rgba(34,197,94,.35); }
+  .report-status.error { display: block; background: rgba(239,68,68,.12); color: #f87171; border: 1px solid rgba(239,68,68,.35); }
+
+  /* ---------- English (LTR) layout adjustments ---------- */
   html[dir="ltr"] body { direction: ltr; }
+  html[dir="ltr"] .menu-dropdown { left: auto; right: 12px; }
+  html[dir="ltr"] .menu-item { text-align: left; }
   html[dir="ltr"] .h-icon { margin-left: 0; margin-right: 14px; }
   html[dir="ltr"] .h-info { text-align: left; }
+  html[dir="ltr"] .h-meta { margin-right: 0; margin-left: 8px; align-items: flex-start; }
   html[dir="ltr"] .lrow .li { margin-left: 0; margin-right: 12px; }
   html[dir="ltr"] .lrow .lv { margin-right: 0; margin-left: 6px; }
+  html[dir="ltr"] .copy-btn { margin-right: 0; margin-left: 6px; }
+  html[dir="ltr"] .bike-kv .v { text-align: right; }
+  html[dir="ltr"] .modal-card { direction: ltr; text-align: left; }
+  html[dir="ltr"] .legal-notice { text-align: left; }
 </style>
 </head>
 <body>
 <div class="phone">
 
   <div class="topbar">
-    <div class="nav-group">
-      <span class="i hidden" id="backBtn" title="חזרה">←</span>
-      <span class="i" id="favBtn">♡</span>
-    </div>
+    <span class="i" id="favBtn">♡</span>
     <span class="t" id="topTitle" data-i18n="appTitle">פרטי רכב</span>
-    <div class="nav-group">
-      <span class="i" id="menuToggleBtn">☰</span>
-      <span class="i lang-btn" id="langBtn" title="Language / שפה">EN</span>
-    </div>
+    <span class="i" id="menuToggleBtn">☰</span>
+    <span class="i hidden" id="backBtn">←</span>
+    <span class="i lang-btn" id="langBtn" title="Language / שפה">EN</span>
     <div id="sideMenuDropdown" class="menu-dropdown">
       <div class="menu-item duel-item" data-menutab="duel" data-i18n="menuDuel">⚔️ קרב 1-1</div>
       <div class="menu-item" data-menutab="card" data-i18n="menuCard">⚡ כרטיס רכב</div>
@@ -193,6 +508,7 @@
     </div>
     <div id="loader" class="msg" data-i18n="loading">מחפש במאגר משרד התחבורה...</div>
     <div id="errorMsg" class="msg err"></div>
+    <div id="candidatesList" class="candidates"></div>
   </div>
 
   <div id="history" class="history">
@@ -203,10 +519,12 @@
     <div id="historyList"></div>
   </div>
 
-  <!-- Detail view -->
+  <!-- Detail / sections -->
   <div id="detailView" class="detail">
     <div id="detailHint" class="detail-hint" data-i18n="backHint">לחיפוש רכב אחר, לחץ על החץ ← למעלה</div>
     <div id="kmLine" class="msg" style="display:none;color:#4ade80;background:rgba(34,197,94,.08);padding:10px 12px;font-weight:800;"><span id="kmText"></span></div>
+
+    <div id="bikeResult" class="info-card" style="display:none;"></div>
 
     <div id="tabs" class="tabs">
       <div class="tab active" data-tab="general"><span class="ic">🚗</span><span data-i18n="tabGeneral">כללי</span></div>
@@ -215,6 +533,7 @@
       <div class="tab" data-tab="compare"><span class="ic">⚖️</span><span data-i18n="tabCompare">השוואה</span></div>
     </div>
 
+    <!-- General -->
     <div id="cardGeneral">
       <div id="hero" class="hero">
         <div class="logo-3d-scene">
@@ -247,6 +566,12 @@
           <div class="spec"><div class="sp-ic">⛽</div><div class="sp-lbl" data-i18n="fuelCons">צריכה משוערת</div><div class="sp-val" id="sFuel">אין נתון</div></div>
         </div>
 
+        <div id="phevRevealBtn" class="phev-reveal-btn"><span class="phev-tag" id="phevTagLabel">HEV</span><span id="phevBtnText" data-i18n="phevBtn">לחשיפת ההספק המשולב (מנוע + חשמל)</span></div>
+        <div id="powerFeelBadge" class="power-feel-badge" style="display:none;"><span class="power-feel-lbl" data-i18n="drivingFeel">תחושת נהיגה:</span><span class="power-feel-val" id="powerFeelText">-</span></div>
+
+        <div class="accel-disclaimer" data-i18n="accelDisclaimer">נתוני התאוצה, המהירות המרבית ויחס ההספק-משקל מחושבים לפי מאפייני היצרן ומודל הערכה פיזיקלי, ומשמשים לאינדיקציה בלבד.</div>
+        <div class="legal-notice" id="legalNoticeMain"></div>
+
         <div class="list-card">
           <div class="lrow"><span class="li">🏭</span><span class="ll" data-i18n="fManufacturer">יצרן</span><span class="sp"></span><span class="lv" id="vManufacturer"></span></div>
           <div class="lrow"><span class="li">🚙</span><span class="ll" data-i18n="fModel">דגם</span><span class="sp"></span><span class="lv" id="vModel"></span></div>
@@ -256,13 +581,224 @@
           <div class="lrow"><span class="li">📅</span><span class="ll" data-i18n="fYear">שנת ייצור</span><span class="sp"></span><span class="lv" id="vYear"></span></div>
           <div class="lrow"><span class="li">🎨</span><span class="ll" data-i18n="fColor">צבע</span><span class="sp"></span><span class="lv" id="vColor"></span></div>
           <div class="lrow"><span class="li">🔢</span><span class="ll" data-i18n="fPlate">מספר רכב</span><span class="sp"></span><span class="lv" id="vPlate"></span></div>
-          <div class="lrow"><span class="li">🔩</span><span class="ll" data-i18n="fChassis">מספר שלדה</span><span class="sp"></span><span class="lv" id="vChassis"></span></div>
+          <div class="lrow"><span class="li">🔩</span><span class="ll" data-i18n="fChassis">מספר שלדה</span><span class="sp"></span><span class="lv" id="vChassis"></span><button id="copyChassis" class="copy-btn" data-i18n="copy">העתק</button></div>
+          <div class="lrow"><span class="li">🛞</span><span class="ll" data-i18n="fTireF">מידות צמיג קדמי</span><span class="sp"></span><span class="lv" id="vTireFront"></span></div>
+          <div class="lrow"><span class="li">🛞</span><span class="ll" data-i18n="fTireR">מידות צמיג אחורי</span><span class="sp"></span><span class="lv" id="vTireRear"></span></div>
           <div class="lrow"><span class="li">🔁</span><span class="ll" data-i18n="fOwners">מספר בעלים</span><span class="sp"></span><span class="lv" id="vOwners"></span></div>
         </div>
 
         <div class="test-card">
           <div class="test-row"><span class="tl" data-i18n="lastTest">טסט אחרון</span><span class="tv" id="vLastTest"></span></div>
           <div class="test-row"><span class="tl" data-i18n="nextTest">טסט הבא (תוקף)</span><span class="tv" id="vNextTest"></span></div>
+          <div class="test-countdown" id="vCountdown"></div>
+        </div>
+
+        <div class="report-btn-wrap">
+          <button class="report-btn" id="openReportBtn" data-i18n="reportBtn">✏️ חסרים פרטים ברכב? לדיווח</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car card section -->
+    <div id="cardCardTab" style="display:none;">
+      <div id="cardContent">
+        <div class="pc-section">
+          <div class="pc-wrap">
+            <div class="pc" id="pcCard" data-r="common">
+              <div class="pc-body">
+                <div class="pc-sheen"></div>
+                <div class="pc-head">
+                  <div class="pc-brand">
+                    <div class="pc-logo">
+                      <img id="pcLogoImg" alt="" style="display:none;">
+                      <span class="pc-logo-txt" id="pcLogoTxt">B</span>
+                    </div>
+                    <div>
+                      <div class="pc-label">VEHICLE PROFILE</div>
+                      <span class="pc-tier" id="pcTier">רגיל</span>
+                    </div>
+                  </div>
+                  <div class="pc-hp"><b id="pcHpBig">-</b><small>HP</small></div>
+                </div>
+                <div class="pc-name" id="pcNick">המפלצת שלי</div>
+                <div class="pc-model" id="pcModel">-</div>
+                <div class="pc-divider"></div>
+                <div class="pc-stats">
+                  <div class="pc-row">
+                    <div class="pc-row-head"><span class="l" data-i18n="rowPower">הספק</span><span class="v" id="pcHpVal">-</span></div>
+                    <div class="pc-bar"><i class="pc-fill" id="pcBarHp"></i></div>
+                  </div>
+                  <div class="pc-row">
+                    <div class="pc-row-head"><span class="l" data-i18n="rowAccel">תאוצה 0-100</span><span class="v" id="pcAccelVal">-</span></div>
+                    <div class="pc-bar"><i class="pc-fill" id="pcBarAccel"></i></div>
+                  </div>
+                  <div class="pc-row">
+                    <div class="pc-row-head"><span class="l" data-i18n="rowTop">מהירות מרבית</span><span class="v" id="pcTopVal">-</span></div>
+                    <div class="pc-bar"><i class="pc-fill" id="pcBarTop"></i></div>
+                  </div>
+                  <div class="pc-row">
+                    <div class="pc-row-head"><span class="l" data-i18n="rowPw">הספק-משקל</span><span class="v" id="pcPwVal">-</span></div>
+                    <div class="pc-bar"><i class="pc-fill" id="pcBarPw"></i></div>
+                  </div>
+                </div>
+                <div class="pc-foot">
+                  <div class="pc-plate"><span class="ps">✡IL</span><span class="pn" id="pcPlate">-</span></div>
+                  <span class="pc-serial" id="pcSerial">CARD ----</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pc-actions">
+          <button id="shareCyberCardBtn" class="btn-main" data-i18n="shareCard">שתף כרטיס</button>
+          <button id="editNickBtn" class="btn-ghost" data-i18n="editNick">שנה כינוי</button>
+        </div>
+        <div class="pc-hint" data-i18n="cardHint">הטה את הכרטיס עם העכבר או האצבע</div>
+      </div>
+      <div id="cardEmpty" class="empty-card" style="display:none;">
+        <div class="big">🃏</div>
+        <div data-i18n="cardEmpty">עדיין אין רכב בכרטיס. חפש רכב לפי לוחית או שלדה, והכרטיס שלו ייווצר כאן.</div>
+        <button id="cardEmptyBtn" data-i18n="cardEmptyBtn">לחיפוש רכב</button>
+      </div>
+    </div>
+
+    <div id="cardTech" style="display:none;"></div>
+    <div id="cardEnv" style="display:none;"></div>
+
+    <div id="cardCompare" class="compare-container" style="display:none;">
+      <div class="compare-banner">
+        <h2 data-i18n="compareTitle">השוואת רכבים</h2>
+        <p data-i18n="compareSub">השוו נתונים, ביצועים והספקים בין שני רכבים</p>
+      </div>
+      <div class="compare-inputs">
+        <input type="text" id="comparePlate2" class="compare-input" inputmode="numeric" data-i18n-ph="plate2Ph" placeholder="מספר רכב שני">
+        <button id="compareActionBtn" class="compare-btn" data-i18n="compareBtn">השווה</button>
+      </div>
+      <div id="compareResultCard" class="compare-result-card">
+        <div style="font-size:15px;font-weight:900;color:#38bdf8;text-align:center;margin-bottom:10px;" data-i18n="compareResult">תוצאת השוואה</div>
+        <div class="legal-notice" id="cmpLegalNote" style="margin:0 0 10px;"></div>
+        <div class="compare-grid">
+          <div class="compare-col">
+            <div class="compare-col-title" id="cmpCar1Title" data-i18n="carCurrent">רכב נוכחי</div>
+            <div class="compare-metric" data-i18n="rowPower">הספק</div><div class="compare-val" id="cmpHp1">-</div>
+            <div class="compare-metric" data-i18n="rowAccel">תאוצה 0-100</div><div class="compare-val" id="cmpAccel1">-</div>
+            <div class="compare-metric" data-i18n="fYear">שנתון</div><div class="compare-val" id="cmpYear1">-</div>
+            <div class="compare-metric" data-i18n="fuelCons">צריכה משוערת</div><div class="compare-val" id="cmpFuel1">-</div>
+          </div>
+          <div class="compare-col">
+            <div class="compare-col-title" id="cmpCar2Title" data-i18n="carCompared">רכב משווה</div>
+            <div class="compare-metric" data-i18n="rowPower">הספק</div><div class="compare-val" id="cmpHp2">-</div>
+            <div class="compare-metric" data-i18n="rowAccel">תאוצה 0-100</div><div class="compare-val" id="cmpAccel2">-</div>
+            <div class="compare-metric" data-i18n="fYear">שנתון</div><div class="compare-val" id="cmpYear2">-</div>
+            <div class="compare-metric" data-i18n="fuelCons">צריכה משוערת</div><div class="compare-val" id="cmpFuel2">-</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="cardHunter" class="hunter-container" style="display:none;">
+      <div class="hunter-banner">
+        <h2 data-i18n="hunterTitle">צייד רכבים</h2>
+        <p data-i18n="hunterSub">כל רכב שתחפש באפליקציה נוסף אוטומטית לאוסף שלך</p>
+        <div class="nick-edit-box">
+          <input type="text" id="hunterNickInput" class="nick-input" data-i18n-ph="hunterNickPh" placeholder="כינוי חדש" maxlength="16">
+          <button id="hunterSaveNickBtn" class="nick-save-btn" data-i18n="saveNick">שמור כינוי</button>
+        </div>
+        <div id="nickMsg" class="nick-msg"></div>
+      </div>
+      <div class="hunter-stats-grid">
+        <div class="hunter-stat-box"><div class="num" id="hunterMyName">-</div><div class="lbl" data-i18n="statMy">הכינוי שלך</div></div>
+        <div class="hunter-stat-box"><div class="num" id="hunterScore">0</div><div class="lbl" data-i18n="statCount">רכבים באוסף</div></div>
+      </div>
+      <div class="hunter-section-title" data-i18n="leaderTitle">טבלת מובילים</div>
+      <table class="hunter-table">
+        <thead><tr><th data-i18n="colRank">מיקום</th><th data-i18n="colName">כינוי</th><th data-i18n="colCars">רכבים</th></tr></thead>
+        <tbody id="hunterLeaderboardBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Duel view -->
+  <div id="duelView" class="duel">
+    <div class="duel-hero">
+      <div class="duel-title" data-i18n="duelTitle">קרב רכבים 1-1</div>
+      <div class="duel-sub" data-i18n="duelSub">הזן שתי לוחיות ותראה מי מנצח מדד אחרי מדד</div>
+    </div>
+
+    <div class="arena" id="duelArena">
+      <div class="dcard left" id="dcA">
+        <div class="dc-head">
+          <div class="dc-logo"><img id="dcAImg" alt="" style="display:none;"><span class="dc-badge" id="dcABadge">A</span></div>
+          <div style="min-width:0;flex:1;">
+            <div class="dc-name" id="dcAName" data-i18n="carA">רכב א׳</div>
+            <span class="dc-year" id="dcAYear">—</span>
+          </div>
+        </div>
+        <div class="dc-car-wrap">
+          <div class="dc-floor"></div>
+          <div class="dc-car" id="dcACar">🚗</div>
+        </div>
+        <div class="dc-plate"><span class="pl-strip">✡<br>IL</span><input id="duelPlateA" inputmode="numeric" data-i18n-ph="plateNum" placeholder="מספר רכב" autocomplete="off"></div>
+      </div>
+
+      <div class="vs">VS</div>
+
+      <div class="dcard right" id="dcB">
+        <div class="dc-head">
+          <div class="dc-logo"><img id="dcBImg" alt="" style="display:none;"><span class="dc-badge" id="dcBBadge">B</span></div>
+          <div style="min-width:0;flex:1;">
+            <div class="dc-name" id="dcBName" data-i18n="carB">רכב ב׳</div>
+            <span class="dc-year" id="dcBYear">—</span>
+          </div>
+        </div>
+        <div class="dc-car-wrap">
+          <div class="dc-floor"></div>
+          <div class="dc-car" id="dcBCar">🚗</div>
+        </div>
+        <div class="dc-plate"><span class="pl-strip">✡<br>IL</span><input id="duelPlateB" inputmode="numeric" data-i18n-ph="plateNum" placeholder="מספר רכב" autocomplete="off"></div>
+      </div>
+    </div>
+
+    <button id="duelFightBtn" class="fight-btn">
+      <span class="fb-main" data-i18n="fightStart">התחל השוואה</span>
+      <span class="fb-sub" data-i18n="fightSub">מי מנצח?</span>
+    </button>
+    <div id="duelMsg" class="duel-msg"></div>
+
+    <div class="scan" id="scanBox">
+      <div class="scan-txt"><span id="scanLbl" data-i18n="scanLoading">טוען נתונים ממשרד התחבורה</span><span id="scanPct">0%</span></div>
+      <div class="scan-track"><div class="scan-fill" id="scanFill"></div></div>
+    </div>
+
+    <div class="duel-panel" id="duelPanel">
+      <div class="tally">
+        <div class="side a"><div class="n" id="tallyA">0</div><div class="nm" id="tallyNameA">-</div></div>
+        <div class="mid">VS</div>
+        <div class="side b"><div class="n" id="tallyB">0</div><div class="nm" id="tallyNameB">-</div></div>
+      </div>
+
+      <div class="dtabs" style="margin-top:12px;">
+        <div class="dtab active" data-dt="results" id="dtTabResults" data-i18n="dResults">תוצאות</div>
+        <div class="dtab" data-dt="detail" id="dtTabDetail" data-i18n="dDetail">טבלה מפורטת</div>
+      </div>
+
+      <div id="dtResults">
+        <div class="score-list" id="scoreList"></div>
+        <div class="verdict" id="verdict">
+          <div class="v-lbl" id="vLbl" data-i18n="finalResult">תוצאה סופית</div>
+          <div class="v-name" id="vName">-</div>
+          <div class="v-sub" id="vSub">-</div>
+          <button class="share-btn" id="duelShareBtn" data-i18n="shareResult">שתף את התוצאה</button>
+        </div>
+      </div>
+
+      <div id="dtDetail" style="display:none;">
+        <div class="dtable">
+          <div class="dhead">
+            <div><span class="logo-s" id="dhLogoA"><img alt="" style="display:none;"></span><span id="dhNameA">-</span></div>
+            <div><span id="dhNameB">-</span><span class="logo-s" id="dhLogoB"><img alt="" style="display:none;"></span></div>
+          </div>
+          <div id="detailRows"></div>
         </div>
       </div>
     </div>
@@ -270,13 +806,66 @@
 
 </div>
 
+<!-- Overlays -->
+<div id="cyberTransitionOverlay">
+  <div class="transit-holo-ring" id="transitHoloRing">
+    <img id="transitLogo" class="transit-logo" style="display:none;" alt="">
+    <div id="transitBadge" class="transit-badge" style="display:none;"></div>
+  </div>
+  <div class="transit-title" id="transitTitle">טוען נתוני רכב...</div>
+  <div class="transit-sub">LOADING VEHICLE DATA</div>
+</div>
+
+<div id="nickModal" class="modal-overlay">
+  <div class="modal-card">
+    <div class="modal-title" data-i18n="cardNickTitle">כינוי לכרטיס</div>
+    <div class="modal-sub" data-i18n="cardNickSub">הכינוי יופיע על כרטיס הרכב</div>
+    <div class="modal-field-lbl" data-i18n="newNick">כינוי חדש:</div>
+    <input type="text" id="customCardNickInput" class="modal-input" data-i18n-ph="defaultNick" placeholder="המפלצת שלי" maxlength="24" value="המפלצת שלי">
+    <div class="modal-actions">
+      <button id="saveCustomNickBtn" class="modal-submit" data-i18n="save">שמור</button>
+      <button id="closeNickModalBtn" class="modal-close" data-i18n="cancel">ביטול</button>
+    </div>
+  </div>
+</div>
+
+<div id="reportModal" class="modal-overlay">
+  <div class="modal-card">
+    <div class="modal-title" data-i18n="reportTitle">דיווח על פרט חסר או שגוי</div>
+    <div class="modal-sub" id="reportCarHeader">מספר רכב: -</div>
+    <div class="modal-field-lbl" data-i18n="reportWhat">מה חסר או דורש תיקון?</div>
+    <select id="reportCategory" class="modal-select">
+      <option value="תאוצה 0-100" data-i18n="catAccel">תאוצה 0-100 קמ"ש</option>
+      <option value="סוג מרכב" data-i18n="catBody">סוג מרכב</option>
+      <option value="רמת גימור" data-i18n="catTrim">רמת גימור</option>
+      <option value="כוח סוס / נפח" data-i18n="catPower">כוח סוס / נפח מנוע</option>
+      <option value="תג נכה" data-i18n="catDisabled">זכאות לתו נכה</option>
+      <option value="אחר" data-i18n="catOther">פרט אחר</option>
+    </select>
+    <div class="modal-field-lbl" data-i18n="reportMore">פרטים נוספים:</div>
+    <textarea id="reportText" class="modal-textarea" data-i18n-ph="reportDescPh" placeholder="פרט את הבעיה..."></textarea>
+    <div id="reportStatus" class="report-status"></div>
+    <div class="modal-actions">
+      <button id="submitReportBtn" class="modal-submit" data-i18n="reportSend">שלח דיווח</button>
+      <button id="closeReportBtn" class="modal-close" data-i18n="cancel">ביטול</button>
+    </div>
+  </div>
+</div>
+
 <script>
   const API_BASE = "https://car-api-huth.onrender.com";
   const HIST_KEY = "carSearchHistory";
   const HIST_MAX = 10;
+  const HUNTER_COLLECTION_KEY = "hunterCarCollection";
+  const HUNTER_NICK_KEY = "hunterUserNickname";
+  const HUNTER_LOCAL_LB_KEY = "hunterLocalLeaderboard_v2";
   const LANG_KEY = "appLang";
+  const RESTORE_KEY = "appRestoreState";
+
+  const wait = ms => new Promise(r => setTimeout(r, ms));
   const $ = id => document.getElementById(id);
 
+  /* ================= אחסון בטוח ================= */
   const memStore = {};
   const store = {
     get(key) {
@@ -289,27 +878,33 @@
     }
   };
 
+  /* ================= שפה ותרגומים ================= */
+  // כל מחרוזת: [עברית, English]
   const STR = {
     appTitle: ['פרטי רכב', 'Vehicle Details'],
     heroPill: ['מידע רכב מקיף', 'Complete vehicle info'],
     heroH1: ['מחפשים מידע על רכב?', 'Looking for vehicle info?'],
-    heroSub: ['קבלו את כל המידע שאתם צריכים על כל רכב בישראל במקום אחד – היסטוריה, רישוי, אבזור, בטיחות ומידע טכני.', 'Get all vehicle info in one place.'],
+    heroSub: ['קבלו את כל המידע שאתם צריכים על כל רכב בישראל במקום אחד – היסטוריה, רישוי, אבזור, בטיחות ומידע טכני.', 'Get all the information you need about any vehicle in Israel in one place – history, registration, equipment, safety and technical data.'],
     plateCountry: ['ישראל', 'Israel'],
     plateHint: ['הקלד מספר רכב', 'Enter plate number'],
+    plateNum: ['מספר רכב', 'Plate number'],
     searchBtn: ['חפש', 'Search'],
-    loading: ['מחפש במאגר משרד התחבורה...', 'Searching database...'],
-    errPlateLen: ['נא להזין מספר רכב תקין (6 עד 8 ספרות)', 'Enter a valid plate number'],
+    loading: ['מחפש במאגר משרד התחבורה...', 'Searching the Ministry of Transport database...'],
+    errPlateLen: ['נא להזין מספר רכב תקין (6 עד 8 ספרות)', 'Please enter a valid plate number (6 to 8 digits)'],
     recent: ['חיפושים אחרונים', 'Recent searches'],
     clearAll: ['נקה הכל', 'Clear all'],
-    backHint: ['לחיפוש רכב אחר, לחץ על החץ ← למעלה', 'To search again, tap ← above'],
-    menuDuel: ['⚔️ קרב 1-1', '⚔️ Duel 1-1'],
-    menuCard: ['⚡ כרטיס רכב', '⚡ Vehicle Card'],
-    menuHunter: ['🎯 צייד רכבים', '🎯 Car Hunter'],
+    backHint: ['לחיפוש רכב אחר, לחץ על החץ ← למעלה', 'To search for another vehicle, tap the ← arrow above'],
+    kmSince: ['ק"מ מעודכן מהטסט האחרון', 'km since last test (updated)'],
+    importer: ['יבואן', 'Importer'],
+    unknown: ['לא ידוע', 'Unknown'],
+    menuDuel: ['⚔️ קרב 1-1', '⚔️ 1-on-1 duel'],
+    menuCard: ['⚡ כרטיס רכב', '⚡ Vehicle card'],
+    menuHunter: ['🎯 צייד רכבים', '🎯 Car hunter'],
     tabGeneral: ['כללי', 'General'],
-    tabTech: ['מפרט ובטיחות', 'Specs & Safety'],
+    tabTech: ['מפרט ובטיחות', 'Specs & safety'],
     tabEnv: ['סביבה', 'Environment'],
     tabCompare: ['השוואה', 'Compare'],
-    spinHint: ['גרור את הלוגו לסיבוב', 'Drag to spin logo'],
+    spinHint: ['גרור את הלוגו לסיבוב', 'Drag the logo to spin it'],
     logoDrag: ['גרור כדי לסובב', 'Drag to rotate'],
     brandAlt: ['סמל יצרן', 'Brand logo'],
     stDisabled: ['תג נכה', 'Disabled permit'],
@@ -317,16 +912,33 @@
     stTest: ['טסט', 'Inspection'],
     yesHave: ['יש', 'Yes'],
     noHave: ['אין', 'No'],
+    yes: ['כן', 'Yes'],
+    no: ['לא', 'No'],
+    none: ['אין', 'None'],
     noData: ['אין נתון', 'No data'],
     valid: ['בתוקף', 'Valid'],
     expired: ['פג תוקף', 'Expired'],
-    ownShow: ['הצג היסטוריית בעלות', 'Show ownership'],
+    ownShow: ['הצג היסטוריית בעלות', 'Show ownership history'],
+    ownHide: ['הסתר היסטוריית בעלות', 'Hide ownership history'],
     hp: ['כוח סוס', 'Horsepower'],
+    hpPetrol: ['כ"ס (בנזין)', 'HP (petrol)'],
+    hpCombined: ['כ"ס משולב', 'Combined HP'],
     accel: ['0-100 קמ"ש', '0-100 km/h'],
     topSpeed: ['מהירות מרבית', 'Top speed'],
     powerWeight: ['הספק-משקל', 'Power-to-weight'],
     engineCc: ['נפח מנוע', 'Engine size'],
     fuelCons: ['צריכה משוערת', 'Est. fuel use'],
+    electric: ['חשמלי', 'Electric'],
+    accelDisclaimer: ['נתוני התאוצה, המהירות המרבית ויחס ההספק-משקל מחושבים לפי מאפייני היצרן ומודל הערכה פיזיקלי, ומשמשים לאינדיקציה בלבד.', 'Acceleration, top speed and power-to-weight are calculated from manufacturer data and a physics-based estimate. They are for indication only.'],
+    phevBtn: ['לחשיפת ההספק המשולב (מנוע + חשמל)', 'Reveal combined power (engine + electric)'],
+    phevShowing: ['מוצג הספק משולב: {hp} כ"ס (+{ext} חשמל) - לחץ לחזרה', 'Showing combined power: {hp} hp (+{ext} electric) – tap to go back'],
+    drivingFeel: ['תחושת נהיגה:', 'Driving feel:'],
+    feelBeast: ['מפלצת ביצועים', 'Performance beast'],
+    feelSporty: ['ספורטיבי ואגרסיבי', 'Sporty & aggressive'],
+    feelFun: ['זריז ומהנה', 'Nimble & fun'],
+    feelFamily: ['משפחתי ורגוע', 'Family & relaxed'],
+    legal: ['הודעה משפטית: הנתונים באפליקציה מגיעים ממאגרים ומקורות שונים, ועשויים להיות לא מדויקים או לא עדכניים. המידע מוצג כפי שהוא, ואין להסתמך עליו באופן מדויק או מחייב, במיוחד לצורך קנייה, מכירה, ביטוח או כל החלטה אחרת. יש לאמת כל נתון מול מקור רשמי. הערכות צריכת הדלק, הפליטות, התאוצה והמהירות הן הערכות בלבד. השימוש באפליקציה הוא על אחריות המשתמש, והמפעילים והמפתחים אינם אחראים להחלטות שנעשו על בסיס המידע.',
+      'Legal notice: The data in this app comes from various databases and sources and may be inaccurate or out of date. It is provided as-is and must not be relied on as exact or binding, especially for buying, selling, insurance or any other decision. Verify every figure against an official source. Fuel consumption, emissions, acceleration and speed are estimates only. Use of the app is at your own responsibility; its operators and developers are not liable for decisions made based on this information.'],
     fManufacturer: ['יצרן', 'Manufacturer'],
     fModel: ['דגם', 'Model'],
     fTrim: ['רמת גימור', 'Trim'],
@@ -336,55 +948,255 @@
     fColor: ['צבע', 'Colour'],
     fPlate: ['מספר רכב', 'Plate number'],
     fChassis: ['מספר שלדה', 'Chassis number'],
+    fTireF: ['מידות צמיג קדמי', 'Front tyre size'],
+    fTireR: ['מידות צמיג אחורי', 'Rear tyre size'],
     fOwners: ['מספר בעלים', 'Number of owners'],
+    copy: ['העתק', 'Copy'],
+    copied: ['הועתק', 'Copied'],
     lastTest: ['טסט אחרון', 'Last inspection'],
-    nextTest: ['טסט הבא (תוקף)', 'Next inspection'],
+    nextTest: ['טסט הבא (תוקף)', 'Next inspection (valid until)'],
+    testIn: ['טסט הבא בעוד ', 'Next inspection in '],
+    testExpired: ['הטסט פג תוקף לפני ', 'Inspection expired '],
+    ago: ['', ' ago'],
+    lessThanDay: ['פחות מיום', 'less than a day'],
+    oneDay: ['יום אחד', '1 day'],
+    nDays: ['{n} ימים', '{n} days'],
+    and: [' ו-', ' and '],
+    oneYear: ['שנה', '1 year'],
+    twoYears: ['שנתיים', '2 years'],
+    nYears: ['{n} שנים', '{n} years'],
+    oneMonth: ['חודש', '1 month'],
+    nMonths: ['{n} חודשים', '{n} months'],
+    reportBtn: ['✏️ חסרים פרטים ברכב? לדיווח', '✏️ Missing details? Report them'],
+    defaultNick: ['המפלצת שלי', 'My beast'],
+    cardEmpty: ['עדיין אין רכב בכרטיס. חפש רכב לפי לוחית או שלדה, והכרטיס שלו ייווצר כאן.', 'No vehicle on your card yet. Search for a vehicle by plate or chassis and its card will appear here.'],
+    cardEmptyBtn: ['לחיפוש רכב', 'Search for a vehicle'],
+    cardHint: ['הטה את הכרטיס עם העכבר או האצבע', 'Tilt the card with your mouse or finger'],
+    shareCard: ['שתף כרטיס', 'Share card'],
+    editNick: ['שנה כינוי', 'Edit nickname'],
+    cardTitle: ['כרטיס רכב', 'Vehicle card'],
+    cardCopied: ['הכרטיס הועתק ללוח', 'Card copied to clipboard'],
+    rarLegendary: ['דגם על', 'Supercar'],
+    rarEpic: ['ביצועים גבוהים', 'High performance'],
+    rarRare: ['ספורטיבי', 'Sporty'],
+    rarCommon: ['סטנדרטי', 'Standard'],
+    tierStd: ['רגיל', 'Standard'],
+    rowPower: ['הספק', 'Power'],
+    rowAccel: ['תאוצה 0-100', '0-100 time'],
+    rowTop: ['מהירות מרבית', 'Top speed'],
+    rowPw: ['הספק-משקל', 'Power-to-weight'],
+    cardLineAccel: ['תאוצה 0-100', '0-100'],
+    cardLinePlate: ['מספר רכב', 'Plate'],
+    hunterTitle: ['צייד רכבים', 'Car Hunter'],
+    hunterSub: ['כל רכב שתחפש באפליקציה נוסף אוטומטית לאוסף שלך', 'Every vehicle you search for is automatically added to your collection'],
+    hunterNickPh: ['כינוי חדש', 'New nickname'],
+    saveNick: ['שמור כינוי', 'Save nickname'],
+    nickSaved: ['הכינוי עודכן', 'Nickname updated'],
+    nickInvalid: ['נא להזין כינוי תקין (2 תווים לפחות)', 'Please enter a valid nickname (at least 2 characters)'],
+    statMy: ['הכינוי שלך', 'Your nickname'],
+    statCount: ['רכבים באוסף', 'Vehicles collected'],
+    leaderTitle: ['טבלת מובילים', 'Leaderboard'],
+    colRank: ['מיקום', 'Rank'],
+    colName: ['כינוי', 'Nickname'],
+    colCars: ['רכבים', 'Vehicles'],
+    you: ['(אתה)', '(you)'],
+    compareTitle: ['השוואת רכבים', 'Compare vehicles'],
+    compareSub: ['השוו נתונים, ביצועים והספקים בין שני רכבים', 'Compare data, performance and power between two vehicles'],
+    plate2Ph: ['מספר רכב שני', 'Second plate number'],
+    compareBtn: ['השווה', 'Compare'],
+    compareResult: ['תוצאת השוואה', 'Comparison result'],
+    carCurrent: ['רכב נוכחי', 'Current vehicle'],
+    carCompared: ['רכב משווה', 'Compared vehicle'],
+    compareNeed: ['נא לוודא שרכב נוכחי טעון ולהזין מספר רכב תקין', 'Make sure a vehicle is loaded and enter a valid second plate number'],
+    compareFail: ['שגיאה בביצוע ההשוואה', 'Comparison failed'],
+    loadingBrand: ['טוען נתוני {brand}...', 'Loading {brand} data...'],
+    theVehicle: ['הרכב', 'the vehicle'],
+    safetyLevel: ['רמת אבזור בטיחותי', 'Safety equipment level'],
+    safetyScore: ['ניקוד בטיחותי:', 'Safety score:'],
+    pollGroup: ['קבוצת זיהום', 'Pollution group'],
+    greenIndex: ['מדד ירוק:', 'Green index:'],
+    grpDrive: ['הנעה וגרירה', 'Drivetrain & towing'],
+    grpBody: ['מבנה ואבזור', 'Body & equipment'],
+    grpSafety: ['בטיחות הרכב', 'Vehicle safety'],
+    grpSensors: ['חיישנים וסביבה', 'Sensors & environment'],
+    grpEmissions: ['פליטות לפי תקן WLTP (לפי דגם)', 'Emissions – WLTP standard (per model)'],
+    grpFuel: ['צריכת דלק משוערת', 'Estimated fuel use'],
+    drive: ['הנעה', 'Drive'],
+    weight: ['משקל כולל', 'Total weight'],
+    towB: ['כושר גרירה עם בלמים', 'Towing capacity with brakes'],
+    towNB: ['כושר גרירה בלי בלמים', 'Towing capacity without brakes'],
+    doors: ['מספר דלתות', 'Doors'],
+    seats: ['מספר מושבים', 'Seats'],
+    windows: ['חלונות חשמליים', 'Power windows'],
+    airbags: ['כריות אוויר', 'Airbags'],
+    ac: ['מזגן', 'Air conditioning'],
+    abs: ['ABS', 'ABS'],
+    sunroof: ['גג שמש', 'Sunroof'],
+    alloy: ['גלגלי סגסוגת', 'Alloy wheels'],
+    pwrSteer: ['הגה בכוח', 'Power steering'],
+    lane: ['שמירת נתיב', 'Lane keeping'],
+    pedestrian: ['זיהוי הולכי רגל', 'Pedestrian detection'],
+    rearCam: ['מצלמת רברס', 'Reverse camera'],
+    blindSpot: ['בקרת שטח מת', 'Blind-spot monitoring'],
+    adaptive: ['בקרת שיוט אדפטיבית', 'Adaptive cruise control'],
+    signs: ['זיהוי תמרורי תנועה', 'Traffic-sign recognition'],
+    brakeFwd: ['בלימה אוטומטית קדימה', 'Automatic emergency braking'],
+    brakeRev: ['בלימה אוטומטית לאחור', 'Automatic braking in reverse'],
+    highBeam: ['אורות גבוהים אוטומטיים', 'Automatic high beams'],
+    drowsy: ['זיהוי עייפות הנהג', 'Driver drowsiness alert'],
+    tirePress: ['חיישני לחץ צמיגים', 'Tyre-pressure sensors'],
+    parkFront: ['חיישני חניה מלפנים', 'Front parking sensors'],
+    co2: ['CO2 (גרם/ק"מ)', 'CO2 (g/km)'],
+    nox: ['NOx (מ"ג/ק"מ)', 'NOx (mg/km)'],
+    hcEm: ['HC (מ"ג/ק"מ)', 'HC (mg/km)'],
+    pm: ['חלקיקים PM (מ"ג/ק"מ)', 'PM particles (mg/km)'],
+    fuelType: ['סוג דלק', 'Fuel type'],
+    kmPerL: ['ק"מ לליטר (משוער)', 'km per litre (est.)'],
+    note: ['הערה', 'Note'],
+    elecNoFuel: ['חשמלי - אין צריכת דלק', 'Electric – no fuel use'],
+    propType: ['סוג הנעה', 'Drivetrain type'],
+    petrol: ['בנזין', 'Petrol'],
+    diesel: ['דיזל', 'Diesel'],
+    unknownDb: ['לא ידוע במאגר', 'Unknown in database'],
+    kmPetrol: ['ק"מ לליטר - אם בנזין', 'km/L – if petrol'],
+    kmDiesel: ['ק"מ לליטר - אם דיזל', 'km/L – if diesel'],
+    hybridNote: ['היברידי: התוצאה משוקללת ותלויה בנסיעה על חשמל', 'Hybrid: the result is weighted and depends on electric driving'],
+    techFooter: ['הנתונים ממאגרי משרד התחבורה ויצרן הרכב.', 'Data from the Ministry of Transport and the manufacturer.'],
+    ownCol1: ['בעלות', 'Ownership'],
+    ownCol2: ['מתאריך', 'Since'],
+    ownCol3: ['זמן בעלות', 'Time owned'],
+    ownNone: ['אין מעברי בעלות במאגר לרכב זה. המאגר כולל רק רכבים פרטיים שנרשמו מ-2017 ואילך.', 'No ownership transfers on record for this vehicle. The database covers private vehicles registered from 2017 onward.'],
+    ownLoading: ['טוען היסטוריה...', 'Loading history...'],
+    ownNotFound: ['לא נמצאה היסטוריה לרכב זה', 'No history found for this vehicle'],
+    ownError: ['שגיאה בטעינת ההיסטוריה', 'Error loading history'],
+    firstReg: ['תאריך רישום ראשון', 'First registration date'],
+    kmAtTest: ['ק"מ בטסט האחרון', 'km at last inspection'],
+    changes: ['שינויים שנרשמו', 'Recorded changes'],
+    invalidDate: ['לא תקין', 'Invalid'],
+    connErr: ['שגיאה בחיבור לשרת. בדוק את החיבור לאינטרנט ונסה שוב', 'Connection error. Check your internet connection and try again'],
+    plateNotFound: ['מספר הרכב אינו קיים במאגר משרד התחבורה', 'This plate number was not found in the Ministry of Transport database'],
+    genericErr: ['אירעה שגיאה, נסה שוב', 'Something went wrong. Please try again'],
+    motorcycle: ['אופנוע', 'Motorcycle'],
+    heavyVehicle: ['רכב כבד', 'Heavy vehicle'],
     uHp: ['כ"ס', 'hp'],
     uCc: ['סמ"ק', 'cc'],
+    uKg: ['ק"ג', 'kg'],
     uKmh: ['קמ"ש', 'km/h'],
-    uSec: ['שניות', 's'],
+    uSec: ['שניות', 'seconds'],
+    uSecShort: ['שנ׳', 's'],
     uKgHp: ['ק"ג/כ"ס', 'kg/hp'],
-    uKmL: ['ק"מ/ל׳', 'km/L']
+    uKmL: ['ק"מ/ל׳', 'km/L'],
+    uKm: ['ק"מ', 'km'],
+    duelTitle: ['קרב רכבים 1-1', 'Vehicle Duel 1-1'],
+    duelSub: ['הזן שתי לוחיות ותראה מי מנצח מדד אחרי מדד', 'Enter two plates and see who wins, metric by metric'],
+    carA: ['רכב א׳', 'Car A'],
+    carB: ['רכב ב׳', 'Car B'],
+    fightStart: ['התחל השוואה', 'Start comparison'],
+    fightSub: ['מי מנצח?', 'Who wins?'],
+    fightBusy: ['בתהליך השוואה', 'Comparing...'],
+    fightBusySub: ['אוסף נתונים ממשרד התחבורה', 'Collecting data from the Ministry of Transport'],
+    scanLoading: ['טוען נתונים ממשרד התחבורה', 'Loading data from the Ministry of Transport'],
+    scanFirst: ['מאתר את הרכב הראשון', 'Locating the first vehicle'],
+    scanSecond: ['מאתר את הרכב השני', 'Locating the second vehicle'],
+    scanCalc: ['מחשב נתונים', 'Calculating'],
+    scanReady: ['מוכן', 'Ready'],
+    duelNeed2: ['נא להזין שתי לוחיות תקינות', 'Please enter two valid plate numbers'],
+    duelSame: ['בחר שני רכבים שונים', 'Please choose two different vehicles'],
+    duelErr: ['שגיאה בחיפוש הרכבים', 'Error searching for vehicles'],
+    dResults: ['תוצאות', 'Results'],
+    dDetail: ['טבלה מפורטת', 'Detailed table'],
+    finalResult: ['תוצאה סופית', 'Final result'],
+    winner: ['המנצח', 'Winner'],
+    draw: ['תיקו', 'Draw'],
+    wonMetrics: ['ניצח {w} מדדים מול {l} מתוך {n}', 'Won {w} metrics vs {l}, out of {n}'],
+    shareResult: ['שתף את התוצאה', 'Share result'],
+    resultCopied: ['התוצאה הועתקה ללוח', 'Result copied to clipboard'],
+    duelShareTitle: ['קרב רכבים 1-1', 'Vehicle Duel 1-1'],
+    duelVs: ['מול', 'vs'],
+    scoreWord: ['תוצאה', 'Score'],
+    vehicleDefault: ['רכב', 'Vehicle'],
+    mAccel: ['0-100 קמ"ש', '0-100 km/h'],
+    mHp: ['כוח סוס', 'Horsepower'],
+    mTop: ['מהירות מרבית', 'Top speed'],
+    mEngine: ['נפח מנוע', 'Engine size'],
+    mWeight: ['משקל כולל', 'Total weight'],
+    cardNickTitle: ['כינוי לכרטיס', 'Card nickname'],
+    cardNickSub: ['הכינוי יופיע על כרטיס הרכב', 'The nickname will appear on the vehicle card'],
+    newNick: ['כינוי חדש:', 'New nickname:'],
+    save: ['שמור', 'Save'],
+    cancel: ['ביטול', 'Cancel'],
+    reportTitle: ['דיווח על פרט חסר או שגוי', 'Report a missing or incorrect detail'],
+    reportWhat: ['מה חסר או דורש תיקון?', 'What is missing or needs fixing?'],
+    reportMore: ['פרטים נוספים:', 'Additional details:'],
+    reportDescPh: ['פרט את הבעיה...', 'Describe the problem...'],
+    reportSend: ['שלח דיווח', 'Send report'],
+    reportSending: ['שולח...', 'Sending...'],
+    reportOk: ['הדיווח נשלח בהצלחה', 'Report sent successfully'],
+    reportFail: ['אירעה שגיאה בשליחה. נסה שוב', 'Sending failed. Please try again'],
+    retry: ['נסה שוב', 'Try again'],
+    plateLbl: ['מספר רכב', 'Plate'],
+    vehicleLbl: ['רכב', 'Vehicle'],
+    catAccel: ['תאוצה 0-100 קמ"ש', '0-100 km/h acceleration'],
+    catBody: ['סוג מרכב', 'Body type'],
+    catTrim: ['רמת גימור', 'Trim level'],
+    catPower: ['כוח סוס / נפח מנוע', 'Horsepower / engine size'],
+    catDisabled: ['זכאות לתו נכה', 'Disabled permit eligibility'],
+    catOther: ['פרט אחר', 'Other'],
+    noExtraNotes: ['ללא הערות נוספות', 'No additional notes'],
+    carNameFallback: ['רכב שנבדק', 'Checked vehicle'],
+    saveErrNick: ['שגיאה', 'Error']
   };
-
   const lang = store.get(LANG_KEY) === 'en' ? 'en' : 'he';
   const isEn = lang === 'en';
-  function t(k) { return STR[k] ? STR[k][isEn ? 1 : 0] : k; }
+  const LOCALE = isEn ? 'en-US' : 'he-IL';
+  function t(key, vars) {
+    const e = STR[key];
+    let s = e ? e[isEn ? 1 : 0] : key;
+    if (vars) Object.keys(vars).forEach(k => { s = s.split('{' + k + '}').join(vars[k]); });
+    return s;
+  }
 
   let currentPlate = "";
   let currentCarData = null;
   let inDetail = false;
+  let currentCarNickname = t('defaultNick');
+  let isShowingCombinedHp = false;
 
-  function cleanText(v) { return v ? String(v).trim().replace(/[.\s,;:]+$/g, '') : ''; }
+  /* ================= עזרים ================= */
+  function cleanText(v) {
+    if (v === null || v === undefined) return v;
+    return String(v).trim().replace(/[.\s,;:]+$/g, '');
+  }
   function formatPlate(v) {
     const d = String(v || '').replace(/\D/g, '').slice(0, 8);
     if (d.length === 8) return d.slice(0, 3) + '-' + d.slice(3, 5) + '-' + d.slice(5);
     if (d.length === 7) return d.slice(0, 2) + '-' + d.slice(2, 5) + '-' + d.slice(5);
     return d;
   }
-
+  function formatDashDate(v) {
+    const m = String(v || '').match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if (!m) return v || t('noData');
+    return parseInt(m[3], 10) + '-' + parseInt(m[2], 10) + '-' + m[1];
+  }
   function setVal(id, value, suffix) {
     const el = $(id);
     if (!el) return;
-    const cleaned = cleanText(value);
-    if (!cleaned || cleaned === 'לא ידוע') { el.textContent = t('noData'); el.classList.add('na'); }
+    const cleaned = typeof value === 'string' ? cleanText(value) : value;
+    const empty = cleaned === null || cleaned === undefined || cleaned === '' || cleaned === 'לא ידוע';
+    if (empty) { el.textContent = t('noData'); el.classList.add('na'); }
     else { el.textContent = suffix ? cleaned + ' ' + suffix : cleaned; el.classList.remove('na'); }
   }
+  function setStatusBlock(id, subText, cls) {
+    const el = $(id);
+    if (!el) return;
+    el.className = 'st ' + (cls || 'neutral') + (id === 'stOwn' ? ' clickable' : '');
+    const sub = el.querySelector('.st-sub');
+    if (sub) sub.textContent = subText || '';
+  }
 
-  /* ================= מותגים (עם הגנה מפני התנגשויות) ================= */
+  /* ================= מותגים ================= */
   function findBrand(manufacturer, model) {
     const raw = ((manufacturer || '') + ' ' + (model || '')).toLowerCase();
-
-    // 1. הגנה מוקדמת למרצדס: מונעת זיהוי שגוי כ-MG בגלל הצירוף AMG
-    if (raw.includes("מרצדס") || raw.includes("mercedes") || raw.includes("דיימלר") || raw.includes("amg")) {
-      return { slug: "mercedes", color: "#555a60", en: "Mercedes-Benz" };
-    }
-
-    // 2. הגנה מוקדמת לפורשה: מונעת זיהוי שגוי כ-DS בגלל המילה Speedster
-    if (raw.includes("פורשה") || raw.includes("porsche")) {
-      return { slug: "porsche", color: "#8b1c1c", en: "Porsche" };
-    }
-
     const rules = [
       [["cupra", "קופרה"], "cupra", "#8c6a3d", "Cupra"],
       [["audi", "אאודי", "אודי"], "audi", "#444", "Audi"],
@@ -395,42 +1207,89 @@
       [["infiniti", "אינפיניטי"], "infiniti", "#555", "Infiniti"],
       [["aiways", "איוויס"], "aiways", "#1c4f9c", "Aiways"],
       [["ora", "אורה"], "ora", "#e67e22", "ORA"],
-      // MG מוגדרת כמילה בלבד למניעת התנגשות עם שמות דגמים
-      [[/(^|[^\w])mg([^\w]|$)/i, "מ.ג", "מגי", "אם ג'י", "אם.ג'י"], "mg", "#c00", "MG"],
+      [["mg", "מ.ג", "מגי", "אם ג'י", "אם.ג'י"], "mg", "#c00", "MG"],
       [["alfa romeo", "אלפא רומיאו", "אלפא"], "alfa romeo", "#900", "Alfa Romeo"],
+      [["levc", "אל אי וי סי"], "levc", "#222", "LEVC"],
+      [["isuzu", "איסוזו"], "isuzu", "#c0392b", "Isuzu"],
       [["bmw", "במוו", "ב.מ.וו", "ב מ וו"], "bmw", "#1c69d4", "BMW"],
+      [["xpeng", "אקספנג"], "xpeng", "#111", "Xpeng"],
+      [["aston martin", "אסטון מרטין"], "aston martin", "#111", "Aston Martin"],
+      [["gmc", "ג'י אמ סי"], "gmc", "#c00", "GMC"],
+      [["jac", "ג'ק"], "jac", "#1c4f9c", "JAC"],
+      [["jaecoo", "גאקו"], "jaecoo", "#222", "Jaecoo"],
+      [["bentley", "בנטלי"], "bentley", "#2c3e50", "Bentley"],
+      [["buick", "ביואיק"], "buick", "#1c4f9c", "Buick"],
       [["byd", "בי וי די", "בי ווי די", "ב.י.די"], "byd", "#c0392b", "BYD"],
+      [["dacia", "דאציה"], "dacia", "#1c3d6b", "Dacia"],
+      [["geely", "ג'י לי", "גילי"], "geely", "#1c4f9c", "Geely"],
+      [["geometry", "גיאון"], "geometry", "#1c4f9c", "Geometry"],
+      [["genesis", "ג'נסיס"], "genesis", "#111", "Genesis"],
+      [["jeep", "ג'יפ", "גיפ"], "jeep", "#556b2f", "Jeep"],
+      [["chrysler", "קרייזלר"], "chrysler", "#1c4f9c", "Chrysler"],
+      [["deepal", "דיפאל"], "deepal", "#333", "Deepal"],
+      [["daihatsu", "דיהטסו"], "daihatsu", "#cc0000", "Daihatsu"],
       [[/(^|[^\w])ds([^\w]|$)/i, "די אס", "ds automobiles"], "ds", "#111", "DS"],
+      [["dongfeng", "דונגפנג"], "dongfeng", "#1c4f9c", "Dongfeng"],
+      [["dodge", "דודג"], "dodge", "#cc0000", "Dodge"],
       [["honda", "הונדה"], "honda", "#cc0000", "Honda"],
+      [["voyah", "וויה"], "voyah", "#222", "Voyah"],
+      [["faw", "אף אי דאבל יו"], "faw", "#1c4f9c", "FAW"],
+      [["hongqi", "הונצי"], "hongqi", "#c0392b", "Hongqi"],
+      [["zeekr", "זיקר"], "zeekr", "#111", "Zeekr"],
+      [["wey", "ואיי"], "wey", "#222", "WEY"],
       [["volvo", "וולוו", "וולבו"], "volvo", "#1c3d6b", "Volvo"],
       [["toyota", "טויוטה"], "toyota", "#cc0000", "Toyota"],
+      [["yudo", "יודו"], "yudo", "#1c4f9c", "Yudo"],
+      [["jaguar", "יגואר"], "jaguar", "#01653b", "Jaguar"],
       [["tesla", "טסלה"], "tesla", "#c0392b", "Tesla"],
       [["hyundai", "יונדאי", "הונדאי"], "hyundai", "#1d3a6e", "Hyundai"],
+      [["land rover", "לנד רובר"], "land rover", "#01653b", "Land Rover"],
+      [["lamborghini", "למבורגיני"], "lamborghini", "#d4ac0d", "Lamborghini"],
+      [["leapmotor", "ליפמוטור"], "leapmotor", "#1c4f9c", "Leapmotor"],
+      [["lynk", "לינק אנד קו"], "linkco", "#111", "Lynk & Co"],
       [["mazda", "מאזדה", "מזדה"], "mazda", "#a02020", "Mazda"],
+      [["lexus", "לקסוס"], "lexus", "#333", "Lexus"],
+      [["maserati", "מזארטי"], "maserati", "#1c3d6b", "Maserati"],
+      [["mini", "מיני קופר", "מיני"], "mini copper", "#111", "MINI"],
+      [["mercedes", "מרצדס"], "mercedes", "#555a60", "Mercedes-Benz"],
+      [["mclaren", "מקלארן"], "mclaren", "#ff8000", "McLaren"],
       [["mitsubishi", "מיצובישי", "מיציבושי"], "mitsubishi", "#c0392b", "Mitsubishi"],
+      [["maxus", "מקסוס"], "maxus", "#1c4f9c", "Maxus"],
+      [["nio", "ניאו"], "nio", "#111", "NIO"],
+      [["saab", "סאב"], "saab", "#0047ab", "Saab"],
+      [["ssangyong", "סאנגיונג"], "ssangyong", "#333", "SsangYong"],
       [["nissan", "ניסאן"], "nissan", "#b30c20", "Nissan"],
       [["seat", "סיאט"], "seat", "#c8a24a", "Seat"],
       [["subaru", "סובארו"], "subaru", "#1c4f9c", "Subaru"],
       [["suzuki", "סוזוקי"], "suzuki", "#1c4f9c", "Suzuki"],
+      [["smart", "סמארט"], "smart", "#111", "Smart"],
+      [["citroen", "סיטרואן"], "citroen", "#c0392b", "Citroen"],
+      [["polestar", "פולאסטר"], "polestar", "#111", "Polestar"],
       [["skoda", "סקודה"], "skoda", "#3c8c3c", "Skoda"],
+      [["skywell", "סקייוול"], "skywell", "#1c4f9c", "Skywell"],
+      [["seres", "סרס"], "seres", "#222", "Seres"],
+      [["foton", "פוטון"], "foton", "#1c4f9c", "Foton"],
       [["ford", "פורד"], "ford", "#1c4f9c", "Ford"],
       [["volkswagen", "פולקסווגן", "פולקסוואגן", "vw"], "volkswagen", "#1c4f8f", "Volkswagen"],
+      [["porsche", "פורשה"], "porsche", "#8b1c1c", "Porsche"],
+      [["forthing", "פורתינג"], "forthing", "#333", "Forthing"],
       [["fiat", "פיאט"], "fiat", "#900", "Fiat"],
       [["peugeot", "פיג'ו", "פיגו"], "peugeot", "#1c2d4f", "Peugeot"],
       [["ferrari", "פרארי"], "ferrari", "#cc0000", "Ferrari"],
+      [["chery", "צריי", "צ'רי"], "chery", "#1c4f9c", "Chery"],
+      [["cadillac", "קאדילק"], "cadillac", "#1c3d6b", "Cadillac"],
       [["kia", "קיה"], "kia", "#b10c1c", "Kia"],
+      [["kg mobility", "קי ג'י מוביליט"], "kgm", "#333", "KG Mobility"],
+      [["rolls royce", "רולס רוייס"], "rolls royce", "#111", "Rolls-Royce"],
       [["chevrolet", "שברולט"], "chevrolet", "#c8a000", "Chevrolet"],
-      [["renault", "רנו"], "renault", "#e8c200", "Renault"]
+      [["renault", "רנו"], "renault", "#e8c200", "Renault"],
+      [["מאן", "man "], "man", "#1c3d6b", "MAN"]
     ];
-
     for (const [keys, slug, color, en] of rules) {
-      if (keys.some(k => k instanceof RegExp ? k.test(raw) : raw.includes(k))) {
-        return { slug, color, en };
-      }
+      if (keys.some(k => k instanceof RegExp ? k.test(raw) : raw.includes(k))) return { slug, color, en };
     }
     return null;
   }
-
   function getLogoSrc(brand) { return brand ? `logos/${brand.slug}.jpg` : null; }
 
   async function showBrand(manufacturer, brand) {
@@ -443,102 +1302,1572 @@
     if (logoSrc) {
       logo.src = logoSrc; logo.style.display = 'block'; badge.style.display = 'none';
       logo.onerror = () => { logo.style.display = 'none'; badge.style.display = 'flex'; };
+    } else { logo.style.display = 'none'; badge.style.display = 'flex'; }
+  }
+
+  /* ================= ביצועים ================= */
+  // feelText מכיל כאן מפתח תרגום (ראו STR)
+  function calculatePerformanceMetrics(d, hpOverride) {
+    const hp = Number(hpOverride !== undefined ? hpOverride : d.horsepower) || 0;
+    const weight = Number(d.curbWeight) || Number(d.mishkal_atsmi) || Number(d.technical?.totalWeight) || Number(d.totalWeight) || 0;
+    const body = (d.bodyType || d.merkav || '').toLowerCase();
+    const fuel = (d.fuelType || d.sug_delek_nm || '').toLowerCase();
+    const man = (d.manufacturer || '').toLowerCase();
+    const engineCc = Number(d.engineCc);
+
+    if (!hp || hp <= 0) return { topSpeed: null, powerWeight: null, feelText: null, feelColor: '#94a3b8' };
+
+    let powerWeight = null, feelText = null, feelColor = '#38bdf8';
+    if (weight > 0) {
+      const ratio = (weight / hp).toFixed(1);
+      powerWeight = ratio;
+      if (ratio < 5.0) { feelText = "feelBeast"; feelColor = "#f43f5e"; }
+      else if (ratio <= 7.5) { feelText = "feelSporty"; feelColor = "#f59e0b"; }
+      else if (ratio <= 10.0) { feelText = "feelFun"; feelColor = "#4ade80"; }
+      else { feelText = "feelFamily"; feelColor = "#94a3b8"; }
+    }
+
+    let topSpeed = 0;
+    const isElectric = fuel.includes('חשמל') || fuel.includes('electric') || (engineCc === 0 && hp > 0);
+    if (isElectric) {
+      if (man.includes('porsche') || hp >= 450) topSpeed = 260;
+      else if (man.includes('tesla') || hp >= 280) topSpeed = 200;
+      else if (hp >= 200) topSpeed = 200;
+      else topSpeed = 160;
+    } else if (man.includes('volvo') || (man.includes('toyota') && (fuel.includes('חשמל') || fuel.includes('היבריד')))) {
+      topSpeed = 180;
     } else {
-      logo.style.display = 'none'; badge.style.display = 'flex';
+      let aeroFactor = 1.0;
+      if (body.includes('שטח') || body.includes('suv') || body.includes("ג'יפ")) aeroFactor = 0.94;
+      else if (body.includes('ספורט') || body.includes('קופה')) aeroFactor = 1.03;
+      topSpeed = Math.round(37.5 * Math.cbrt(hp) * aeroFactor);
+      if (hp >= 280 && topSpeed > 250) topSpeed = 250;
+    }
+    return { topSpeed, powerWeight, feelText, feelColor };
+  }
+
+  function applyHorsepowerDisplay(useCombined) {
+    if (!currentCarData) return;
+    const d = currentCarData;
+    const baseHp = Number(d.horsepower) || 0;
+    const combHp = Number(d.combinedHorsepower) || baseHp;
+    const hp = useCombined ? combHp : baseHp;
+    isShowingCombinedHp = useCombined;
+    setVal('sHp', hp, t('uHp'));
+    $('spHpLbl').textContent = useCombined ? t('hpCombined') : ((d.isHybridOrPhev || d.isPhev) ? t('hpPetrol') : t('hp'));
+    $('specHpCard').classList.toggle('phev-highlight', useCombined);
+    $('phevRevealBtn').classList.toggle('active', useCombined);
+    $('phevBtnText').textContent = useCombined
+      ? t('phevShowing', { hp: combHp, ext: combHp - baseHp })
+      : t('phevBtn');
+    const perf = calculatePerformanceMetrics(d, hp);
+    setVal('sPowerWeight', perf.powerWeight, t('uKgHp'));
+    setVal('sTopSpeed', perf.topSpeed, t('uKmh'));
+    if (perf.feelText) {
+      $('powerFeelText').textContent = t(perf.feelText);
+      $('powerFeelText').style.color = perf.feelColor;
+      $('powerFeelBadge').style.display = 'flex';
+    }
+    updateCyberCard(d, currentPlate, perf, hp);
+  }
+  $('phevRevealBtn').addEventListener('click', () => applyHorsepowerDisplay(!isShowingCombinedHp));
+
+  /* ================= שפה ================= */
+  function applyStaticI18n() {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const k = el.dataset.i18n;
+      if (STR[k]) el.textContent = t(k);
+    });
+    document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+      const k = el.dataset.i18nPh;
+      if (STR[k]) el.placeholder = t(k);
+    });
+    document.querySelectorAll('[data-i18n-title]').forEach(el => {
+      const k = el.dataset.i18nTitle;
+      if (STR[k]) el.title = t(k);
+    });
+    document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+      const k = el.dataset.i18nAlt;
+      if (STR[k]) el.alt = t(k);
+    });
+    $('legalNoticeMain').textContent = t('legal');
+    $('cmpLegalNote').textContent = t('legal');
+    $('langBtn').textContent = isEn ? 'עב' : 'EN';
+    $('langBtn').title = isEn ? 'עברית' : 'English';
+    $('dtTabResults').textContent = t('dResults');
+    $('dtTabDetail').textContent = t('dDetail');
+    $('reportCarHeader').textContent = t('plateLbl') + ': -';
+    document.title = isEn ? 'Vehicle Details - Cyber Premium' : 'פרטי רכב - סייבר פרימיום';
+  }
+
+  // החלפת שפה: שומרים את מצב המסך הנוכחי ומטעינים מחדש כדי שכל הנתונים יוצגו בשפה החדשה
+  function currentViewState() {
+    let view = 'home';
+    if (isDuelOpen()) view = 'duel';
+    else if (inDetail && currentPlate) view = 'detail';
+    else if ($('cardHunter').style.display !== 'none' && inDetail) view = 'hunter';
+    else if ($('cardCardTab').style.display !== 'none' && inDetail) view = 'card';
+    return {
+      view,
+      plate: currentPlate,
+      duelA: $('duelPlateA').value,
+      duelB: $('duelPlateB').value,
+      plate2: $('comparePlate2').value
+    };
+  }
+  function toggleLang() {
+    store.set(RESTORE_KEY, JSON.stringify(currentViewState()));
+    store.set(LANG_KEY, isEn ? 'he' : 'en');
+    window.location.reload();
+  }
+  function restoreState() {
+    let st = null;
+    try { st = JSON.parse(store.get(RESTORE_KEY)); } catch (e) {}
+    store.set(RESTORE_KEY, '');
+    if (!st) return;
+    if (st.duelA) $('duelPlateA').value = st.duelA;
+    if (st.duelB) $('duelPlateB').value = st.duelB;
+    if (st.plate2) $('comparePlate2').value = st.plate2;
+    if (st.view === 'duel') showDuel();
+    else if (st.plate && (st.view === 'detail' || st.view === 'card' || st.view === 'hunter')) {
+      $('plateInput').value = formatPlate(st.plate);
+      searchCar();
     }
   }
 
-  function showDetail() {
+  /* ================= תפריט וניווט ================= */
+  const menuToggleBtn = $('menuToggleBtn');
+  const sideMenuDropdown = $('sideMenuDropdown');
+  menuToggleBtn.addEventListener('click', e => { e.stopPropagation(); sideMenuDropdown.classList.toggle('show'); });
+  window.addEventListener('click', () => sideMenuDropdown.classList.remove('show'));
+  $('langBtn').addEventListener('click', toggleLang);
+
+  document.querySelectorAll('.menu-item').forEach(item => {
+    item.addEventListener('click', e => {
+      e.stopPropagation();
+      sideMenuDropdown.classList.remove('show');
+      const tab = item.dataset.menutab;
+      if (tab === 'duel') showDuel();
+      else showSection(tab);
+    });
+  });
+
+  function hideAllMainViews() {
     inDetail = true;
     $('homeHero').style.display = 'none';
     document.querySelector('.search-box').style.display = 'none';
     $('history').classList.remove('show');
+    $('duelView').classList.remove('show');
     $('detailView').classList.add('show');
     $('backBtn').classList.remove('hidden');
+  }
+
+  function showSection(name) {
+    hideAllMainViews();
+    $('detailHint').style.display = 'none';
+    $('tabs').classList.remove('show');
+    $('cardGeneral').style.display = 'none';
+    ['cardTech', 'cardEnv', 'cardCompare', 'cardCardTab', 'cardHunter'].forEach(id => $(id).style.display = 'none');
+    if (name === 'card') {
+      $('cardCardTab').style.display = '';
+      const has = !!currentCarData;
+      $('cardContent').style.display = has ? '' : 'none';
+      $('cardEmpty').style.display = has ? 'none' : '';
+      if (has) replayCardAnimations();
+    } else if (name === 'hunter') {
+      $('cardHunter').style.display = '';
+      updateHunterUI();
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  $('cardEmptyBtn').addEventListener('click', showHome);
+
+  function showDetail() {
+    hideAllMainViews();
+    $('detailHint').style.display = '';
+    $('cardCardTab').style.display = 'none';
+    $('cardHunter').style.display = 'none';
+    sideMenuDropdown.classList.remove('show');
+    renderHistory();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function showDuel() {
+    inDetail = false;
+    $('homeHero').style.display = 'none';
+    $('detailView').classList.remove('show');
+    document.querySelector('.search-box').style.display = 'none';
+    $('history').classList.remove('show');
+    $('duelView').classList.add('show');
+    $('backBtn').classList.remove('hidden');
+    sideMenuDropdown.classList.remove('show');
+    if (currentPlate && !$('duelPlateA').value) $('duelPlateA').value = formatPlate(currentPlate);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function isDuelOpen() { return $('duelView').classList.contains('show'); }
 
   function showHome() {
     inDetail = false;
     $('homeHero').style.display = '';
     $('detailView').classList.remove('show');
+    $('duelView').classList.remove('show');
     $('backBtn').classList.add('hidden');
     document.querySelector('.search-box').style.display = '';
     $('errorMsg').style.display = 'none';
+    $('phevRevealBtn').style.display = 'none';
+    closeOwnPanel();
     renderHistory();
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  $('backBtn').addEventListener('click', showHome);
+
+  /* ================= צייד רכבים ================= */
+  function getMyNickname() {
+    let nick = store.get(HUNTER_NICK_KEY);
+    if (!nick) {
+      const adjs = ["Turbo","Cyber","Nitro","Apex","Shadow","Ghost","Stellar","Vortex"];
+      const nouns = ["Hunter","Driver","Racer","Pilot","Drifter","Viper","Falcon","Nomad"];
+      nick = adjs[Math.floor(Math.random() * adjs.length)] + "_" + nouns[Math.floor(Math.random() * nouns.length)] + Math.floor(10 + Math.random() * 89);
+      store.set(HUNTER_NICK_KEY, nick);
+    }
+    return nick;
+  }
+  function getHunterCollection() {
+    try { const col = JSON.parse(store.get(HUNTER_COLLECTION_KEY)); return Array.isArray(col) ? col : []; }
+    catch (e) { return []; }
+  }
+  function getLocalLeaderboard() {
+    try { const lb = JSON.parse(store.get(HUNTER_LOCAL_LB_KEY)); if (Array.isArray(lb)) return lb; } catch (e) {}
+    return [
+      { name: getMyNickname(), count: getHunterCollection().length },
+      { name: "Turbo_Viper77", count: 24 },
+      { name: "Cyber_Driver42", count: 18 },
+      { name: "Nitro_Racer99", count: 12 },
+      { name: "Apex_Pilot11", count: 7 }
+    ];
+  }
+  function saveLocalLeaderboard(lb) { store.set(HUNTER_LOCAL_LB_KEY, JSON.stringify(lb)); }
+
+  function addCarToHunterCollection(plate, carData) {
+    if (!plate) return;
+    let col = getHunterCollection();
+    if (!col.some(x => x.plate === plate)) {
+      col.push({ plate, name: carData ? cleanText((carData.manufacturer || '') + ' ' + (carData.model || '')) : t('carNameFallback'), time: Date.now() });
+      store.set(HUNTER_COLLECTION_KEY, JSON.stringify(col));
+    }
+    const myNick = getMyNickname();
+    let lb = getLocalLeaderboard();
+    const myEntry = lb.find(x => x.name === myNick);
+    if (myEntry) myEntry.count = col.length; else lb.push({ name: myNick, count: col.length });
+    lb.sort((a, b) => b.count - a.count);
+    saveLocalLeaderboard(lb);
+    try {
+      fetch(API_BASE + '/api/hunter/update', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nickname: myNick, count: col.length })
+      }).catch(() => {});
+    } catch (e) {}
+  }
+
+  async function updateHunterUI() {
+    const col = getHunterCollection();
+    const myNick = getMyNickname();
+    $('hunterMyName').textContent = myNick;
+    $('hunterScore').textContent = col.length;
+    const nickInput = $('hunterNickInput');
+    if (document.activeElement !== nickInput) nickInput.value = myNick;
+
+    const tbody = $('hunterLeaderboardBody');
+    let leaderboardData = [];
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 2500);
+      const res = await fetch(API_BASE + '/api/hunter/leaderboard', { signal: controller.signal });
+      clearTimeout(timeoutId);
+      const data = await res.json();
+      if (data.success && Array.isArray(data.leaderboard)) leaderboardData = data.leaderboard;
+    } catch (e) { leaderboardData = getLocalLeaderboard(); }
+    if (!leaderboardData.length) leaderboardData = getLocalLeaderboard();
+
+    const myItem = leaderboardData.find(x => x.name === myNick);
+    if (myItem) myItem.count = Math.max(myItem.count, col.length);
+    else leaderboardData.push({ name: myNick, count: col.length });
+    leaderboardData.sort((a, b) => b.count - a.count);
+
+    const medals = ['🥇', '🥈', '🥉'];
+    tbody.textContent = '';
+    leaderboardData.slice(0, 3).forEach((h, index) => {
+      const tr = document.createElement('tr');
+      const isMe = h.name === myNick;
+      if (isMe) tr.className = 'my-row';
+      [medals[index], h.name + (isMe ? " " + t('you') : ""), h.count].forEach(txt => {
+        const td = document.createElement('td'); td.textContent = txt; tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    });
+
+    const myIndex = leaderboardData.findIndex(x => x.name === myNick);
+    if (myIndex >= 3) {
+      const sepTr = document.createElement('tr');
+      sepTr.className = 'separator-row';
+      const sepTd = document.createElement('td');
+      sepTd.colSpan = 3; sepTd.textContent = '· · · · · · · · · · · · · · ·';
+      sepTr.appendChild(sepTd); tbody.appendChild(sepTr);
+      const myTr = document.createElement('tr');
+      myTr.className = 'my-row';
+      ['#' + (myIndex + 1), leaderboardData[myIndex].name + " " + t('you'), leaderboardData[myIndex].count].forEach(txt => {
+        const td = document.createElement('td'); td.textContent = txt; myTr.appendChild(td);
+      });
+      tbody.appendChild(myTr);
+    }
+  }
+
+  $('hunterSaveNickBtn').addEventListener('click', async () => {
+    const newNick = $('hunterNickInput').value.trim().replace(/[^\w֐-׿_-]/g, '');
+    const msgEl = $('nickMsg');
+    if (!newNick || newNick.length < 2) {
+      msgEl.className = 'nick-msg err';
+      msgEl.textContent = t('nickInvalid');
+      return;
+    }
+    const oldNick = store.get(HUNTER_NICK_KEY);
+    store.set(HUNTER_NICK_KEY, newNick);
+    const col = getHunterCollection();
+    let lb = getLocalLeaderboard().filter(x => x.name !== oldNick);
+    const existing = lb.find(x => x.name === newNick);
+    if (existing) existing.count = Math.max(existing.count, col.length);
+    else lb.push({ name: newNick, count: col.length });
+    lb.sort((a, b) => b.count - a.count);
+    saveLocalLeaderboard(lb);
+    msgEl.className = 'nick-msg ok';
+    msgEl.textContent = t('nickSaved');
+    try {
+      await fetch(API_BASE + '/api/hunter/update', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nickname: newNick, count: col.length, oldNickname: oldNick })
+      });
+    } catch (e) {}
+    updateHunterUI();
+    setTimeout(() => { msgEl.style.display = 'none'; }, 2500);
+  });
+
+  /* ================= כרטיס הרכב ================= */
+  function getRarity(hp) {
+    if (hp >= 400) return { key: 'legendary', label: 'rarLegendary' };
+    if (hp >= 250) return { key: 'epic', label: 'rarEpic' };
+    if (hp >= 150) return { key: 'rare', label: 'rarRare' };
+    return { key: 'common', label: 'rarCommon' };
+  }
+  function clampPct(n) { return Math.max(0, Math.min(100, n)); }
+
+  function setBar(id, pct) {
+    const el = $(id);
+    if (el) el.style.setProperty('--w', clampPct(pct) + '%');
+  }
+
+  function replayCardAnimations() {
+    const card = $('pcCard');
+    card.classList.remove('play');
+    void card.offsetWidth;
+    card.classList.add('play');
+  }
+
+  function countUp(el, target) {
+    if (!el) return;
+    if (!target) { el.textContent = '—'; return; }
+    const start = performance.now();
+    const dur = 900;
+    (function step(now) {
+      const p = Math.min(1, (now - start) / dur);
+      el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+      if (p < 1) requestAnimationFrame(step);
+    })(start);
+  }
+
+  function updateCyberCard(d, plate, perf, activeHp) {
+    const brand = findBrand(d.manufacturer, d.model);
+    const logoSrc = getLogoSrc(brand);
+    const hpNum = Number(activeHp !== undefined ? activeHp : d.horsepower) || 0;
+    const accel = Number(d.acceleration0to100) || 0;
+    const topSpeed = perf && perf.topSpeed ? perf.topSpeed : 0;
+    const pw = perf && perf.powerWeight ? Number(perf.powerWeight) : 0;
+    const rarity = getRarity(hpNum);
+
+    const card = $('pcCard');
+    card.dataset.r = rarity.key;
+    $('pcTier').textContent = t(rarity.label);
+    $('pcNick').textContent = currentCarNickname;
+    $('pcModel').textContent = cleanText((d.manufacturer || '') + ' ' + (d.model || '')) || '-';
+    countUp($('pcHpBig'), hpNum);
+    $('pcHpVal').textContent = hpNum ? hpNum + ' ' + t('uHp') : t('noData');
+    $('pcAccelVal').textContent = accel ? accel + ' ' + t('uSecShort') : t('noData');
+    $('pcTopVal').textContent = topSpeed ? topSpeed + ' ' + t('uKmh') : t('noData');
+    $('pcPwVal').textContent = pw ? pw.toFixed(1) + ' ' + t('uKgHp') : t('noData');
+    setBar('pcBarHp', hpNum ? (hpNum / 6) : 0);
+    setBar('pcBarAccel', accel > 0 ? ((14 - accel) / 12) * 100 : 0);
+    setBar('pcBarTop', topSpeed ? ((topSpeed - 120) / 160) * 100 : 0);
+    setBar('pcBarPw', pw ? ((20 - pw) / 15) * 100 : 0);
+    $('pcPlate').textContent = formatPlate(plate);
+    $('pcSerial').textContent = 'CARD ' + String(plate || '').slice(-4).padStart(4, '0');
+
+    const img = $('pcLogoImg'), txt = $('pcLogoTxt');
+    txt.textContent = (d.manufacturer || '').trim().charAt(0) || '?';
+    if (logoSrc) {
+      img.src = logoSrc; img.style.display = 'block'; txt.style.display = 'none';
+      img.onerror = () => { img.style.display = 'none'; txt.style.display = 'block'; };
+    } else { img.style.display = 'none'; txt.style.display = 'block'; }
+
+    replayCardAnimations();
+  }
+
+  (function initCardTilt() {
+    const card = $('pcCard');
+    const wrap = card.parentElement;
+    function setTilt(x0, y0) {
+      const r = card.getBoundingClientRect();
+      const x = Math.max(0, Math.min(1, (x0 - r.left) / r.width));
+      const y = Math.max(0, Math.min(1, (y0 - r.top) / r.height));
+      card.style.setProperty('--ry', ((x - 0.5) * 12).toFixed(2) + 'deg');
+      card.style.setProperty('--rx', ((0.5 - y) * 10).toFixed(2) + 'deg');
+    }
+    function reset() { card.style.setProperty('--ry', '0deg'); card.style.setProperty('--rx', '0deg'); }
+    wrap.addEventListener('pointermove', e => setTilt(e.clientX, e.clientY));
+    ['pointerleave', 'pointerup', 'pointercancel'].forEach(ev => wrap.addEventListener(ev, reset));
+  })();
+
+  const nickModal = $('nickModal');
+  $('editNickBtn').addEventListener('click', () => { $('customCardNickInput').value = currentCarNickname; nickModal.classList.add('show'); });
+  $('closeNickModalBtn').addEventListener('click', () => nickModal.classList.remove('show'));
+  nickModal.addEventListener('click', e => { if (e.target === nickModal) nickModal.classList.remove('show'); });
+  $('saveCustomNickBtn').addEventListener('click', () => {
+    const val = $('customCardNickInput').value.trim();
+    if (val) {
+      currentCarNickname = val;
+      if (currentCarData && currentPlate) {
+        const hp = isShowingCombinedHp ? (currentCarData.combinedHorsepower || currentCarData.horsepower) : currentCarData.horsepower;
+        updateCyberCard(currentCarData, currentPlate, calculatePerformanceMetrics(currentCarData, hp), hp);
+      }
+    }
+    nickModal.classList.remove('show');
+  });
+
+  $('shareCyberCardBtn').addEventListener('click', () => {
+    if (!currentCarData) return;
+    const d = currentCarData;
+    const hp = isShowingCombinedHp ? (d.combinedHorsepower || d.horsepower) : d.horsepower;
+    const perf = calculatePerformanceMetrics(d, hp);
+    const txt = `${t('cardTitle')} "${currentCarNickname}"\n${cleanText((d.manufacturer || '') + ' ' + (d.model || ''))} (${d.year || ''})\n${t('hp')}: ${hp || t('unknown')} ${t('uHp')}\n${t('topSpeed')}: ${perf.topSpeed ? perf.topSpeed + ' ' + t('uKmh') : t('unknown')}\n${t('cardLineAccel')}: ${d.acceleration0to100 ? d.acceleration0to100 + ' ' + t('uSec') : t('unknown')}\n${t('cardLinePlate')}: ${formatPlate(currentPlate)}`;
+    if (navigator.share) navigator.share({ title: t('cardTitle'), text: txt }).catch(() => {});
+    else { navigator.clipboard.writeText(txt).catch(() => {}); alert(t('cardCopied')); }
+  });
+
+  /* ================= היסטוריה ================= */
+  function loadHistory() {
+    try { const l = JSON.parse(store.get(HIST_KEY)); return Array.isArray(l) ? l : []; }
+    catch (e) { return []; }
+  }
+  function saveHistory(list) { store.set(HIST_KEY, JSON.stringify(list)); }
+  function addToHistory(entry) {
+    const list = loadHistory().filter(x => x.plate !== entry.plate);
+    list.unshift(entry);
+    saveHistory(list.slice(0, HIST_MAX));
+  }
+  function removeFromHistory(plate) { saveHistory(loadHistory().filter(x => x.plate !== plate)); renderHistory(); }
+  function clearHistory() { saveHistory([]); renderHistory(); }
+  function nowTime() { return new Date().toLocaleTimeString(LOCALE, { hour: '2-digit', minute: '2-digit' }); }
+
+  function makePlateEl(number) {
+    const wrap = document.createElement('span');
+    wrap.className = 'h-plate';
+    wrap.innerHTML = `<span class="h-plate-strip"><span>✡</span>IL</span><span class="h-plate-num">${formatPlate(number)}</span>`;
+    return wrap;
+  }
+
+  function renderHistory() {
+    const box = $('history'), listEl = $('historyList'), list = loadHistory();
+    listEl.textContent = '';
+    box.classList.toggle('show', list.length > 0 && !inDetail && !isDuelOpen());
+    for (const item of list) {
+      const row = document.createElement('div');
+      row.className = 'h-row';
+      const icon = document.createElement('div');
+      icon.className = 'h-icon';
+      const logoSrc = getLogoSrc(findBrand(item.manufacturer, item.name));
+      if (logoSrc) {
+        const img = document.createElement('img');
+        img.src = logoSrc;
+        img.onerror = () => { img.remove(); icon.textContent = '🚗'; };
+        icon.appendChild(img);
+      } else icon.textContent = '🚗';
+      row.appendChild(icon);
+
+      const info = document.createElement('div');
+      info.className = 'h-info';
+      const name = document.createElement('div');
+      name.className = 'h-name';
+      name.textContent = item.name || t('vehicleLbl');
+      info.appendChild(name);
+      const sub = document.createElement('div');
+      sub.className = 'h-sub';
+      sub.appendChild(makePlateEl(item.plate));
+      if (item.year) { const y = document.createElement('span'); y.textContent = item.year; sub.appendChild(y); }
+      info.appendChild(sub);
+      row.appendChild(info);
+
+      const meta = document.createElement('div');
+      meta.className = 'h-meta';
+      const del = document.createElement('button');
+      del.className = 'h-del';
+      del.textContent = '×';
+      del.addEventListener('click', e => { e.stopPropagation(); removeFromHistory(item.plate); });
+      meta.appendChild(del);
+      const time = document.createElement('div');
+      time.className = 'h-time';
+      time.textContent = item.time || '';
+      meta.appendChild(time);
+      row.appendChild(meta);
+
+      row.addEventListener('click', () => { $('plateInput').value = formatPlate(item.plate); searchCar(); });
+      listEl.appendChild(row);
+    }
+  }
+
+  /* ================= מידע מפורט ================= */
+  function parseDate(v) {
+    if (!v) return null;
+    const d = new Date(v);
+    if (isNaN(d)) return null;
+    return { y: d.getFullYear(), mo: d.getMonth() + 1, d: d.getDate() };
+  }
+  function fmtDate(p) {
+    if (!p) return t('noData');
+    return String(p.d).padStart(2, '0') + '/' + String(p.mo).padStart(2, '0') + '/' + p.y;
+  }
+  const daysInMonth = (y, mo) => new Date(y, mo, 0).getDate();
+  function calendarDiff(from, to) {
+    let y = to.y - from.y, m = to.mo - from.mo, d = to.d - from.d;
+    if (d < 0) {
+      m--;
+      const prevMo = to.mo - 1 === 0 ? 12 : to.mo - 1;
+      const prevY = to.mo - 1 === 0 ? to.y - 1 : to.y;
+      d += daysInMonth(prevY, prevMo);
+    }
+    if (m < 0) { y--; m += 12; }
+    return { months: y * 12 + m, days: d };
+  }
+  function yearsText(y) {
+    if (!y) return '';
+    if (y === 1) return t('oneYear');
+    if (y === 2) return t('twoYears');
+    return t('nYears', { n: y });
+  }
+  function monthsText(m) {
+    if (!m) return '';
+    if (m === 1) return t('oneMonth');
+    return t('nMonths', { n: m });
+  }
+  // משך זמן בטקסט (שנים, חודשים וימים) בשפה הנוכחית
+  function durationText(months, days) {
+    const parts = [];
+    if (months > 0) {
+      const yPart = yearsText(Math.floor(months / 12));
+      const mPart = monthsText(months % 12);
+      if (yPart && mPart) parts.push(yPart + t('and') + mPart);
+      else if (yPart || mPart) parts.push(yPart || mPart);
+    }
+    if (days > 0) parts.push(days === 1 ? t('oneDay') : t('nDays', { n: days }));
+    return parts.join(t('and'));
+  }
+
+  function renderTest(lastTest, nextTest) {
+    setVal('vLastTest', lastTest ? fmtDate(lastTest) : null);
+    setVal('vNextTest', nextTest ? fmtDate(nextTest) : null);
+    const cd = $('vCountdown');
+    cd.classList.remove('bad');
+    if (!nextTest) { cd.textContent = ''; return; }
+    const now = new Date();
+    const today = { y: now.getFullYear(), mo: now.getMonth() + 1, d: now.getDate() };
+    const isFuture = nextTest.y > today.y ||
+      (nextTest.y === today.y && (nextTest.mo > today.mo || (nextTest.mo === today.mo && nextTest.d >= today.d)));
+    if (isFuture) {
+      const f = calendarDiff(today, nextTest);
+      cd.textContent = t('testIn') + (durationText(f.months, f.days) || t('lessThanDay'));
+    } else {
+      const b = calendarDiff(nextTest, today);
+      cd.classList.add('bad');
+      cd.textContent = t('testExpired') + (durationText(b.months, b.days) || t('lessThanDay')) + t('ago');
+    }
+  }
+
+  function parseOwnDate(v) {
+    if (!v) return null;
+    const s = String(v).trim();
+    const m = s.match(/^(\d{4})(\d{2})$/) || s.match(/^(\d{4})-(\d{2})/);
+    if (!m) return null;
+    const y = parseInt(m[1], 10), mo = parseInt(m[2], 10);
+    if (mo < 1 || mo > 12 || y < 1950 || y > new Date().getFullYear()) return null;
+    return { y, mo };
+  }
+  function durationHe(months) {
+    if (months <= 0) return '—';
+    return durationText(months, 0);
+  }
+  function buildOwnRows(list) {
+    const now = new Date();
+    const today = { y: now.getFullYear(), mo: now.getMonth() + 1 };
+    const items = list.map(o => ({ type: o.type, p: parseOwnDate(o.date) }));
+    items.sort((a, b) => {
+      if (!a.p) return 1;
+      if (!b.p) return -1;
+      return a.p.y !== b.p.y ? a.p.y - b.p.y : a.p.mo - b.p.mo;
+    });
+    return items.map((it, i) => {
+      const next = items[i + 1];
+      let duration = '—';
+      if (it.p) {
+        const end = next ? next.p : today;
+        duration = durationHe((end.y - it.p.y) * 12 + (end.mo - it.p.mo));
+      }
+      return { type: it.type, date: it.p ? String(it.p.mo).padStart(2, '0') + '/' + it.p.y : t('invalidDate'), duration };
+    }).reverse();
+  }
+  function buildOwnTable(rows) {
+    const table = document.createElement('table');
+    table.className = 'own-table';
+    const thead = document.createElement('thead');
+    const hr = document.createElement('tr');
+    [t('ownCol1'), t('ownCol2'), t('ownCol3')].forEach(txt => { const th = document.createElement('th'); th.textContent = txt; hr.appendChild(th); });
+    thead.appendChild(hr); table.appendChild(thead);
+    const tbody = document.createElement('tbody');
+    rows.forEach(r => {
+      const tr = document.createElement('tr');
+      [r.type, r.date, r.duration].forEach(v => { const td = document.createElement('td'); td.textContent = v; tr.appendChild(td); });
+      tbody.appendChild(tr);
+    });
+    table.appendChild(tbody);
+    return table;
+  }
+
+  function closeOwnPanel() {
+    const p = $('ownPanel');
+    p.classList.remove('show');
+    p.textContent = '';
+    $('ownBtn').textContent = t('ownShow');
+  }
+
+  async function toggleOwnPanel() {
+    const panel = $('ownPanel');
+    if (panel.classList.contains('show')) { closeOwnPanel(); return; }
+    if (!currentPlate) return;
+    $('ownBtn').textContent = t('ownHide');
+    panel.classList.add('show');
+    panel.textContent = '';
+    const msg = text => { const m = document.createElement('div'); m.className = 'own-msg'; m.textContent = text; panel.appendChild(m); };
+    msg(t('ownLoading'));
+    try {
+      const r = await fetch(API_BASE + '/api/history/' + encodeURIComponent(currentPlate));
+      const j = await r.json();
+      panel.textContent = '';
+      if (!j.success) { msg(j.message || t('ownNotFound')); return; }
+      const h = j.history || {};
+      const list = j.ownershipList || [];
+      if (list.length) panel.appendChild(buildOwnTable(buildOwnRows(list)));
+      else msg(t('ownNone'));
+
+      const extra = document.createElement('div');
+      extra.className = 'own-extra';
+      [
+        [t('firstReg'), h.firstRegistration ? formatDashDate(h.firstRegistration) : null],
+        [t('kmAtTest'), h.kmSinceTest != null ? h.kmSinceTest.toLocaleString(LOCALE) + ' ' + t('uKm') : null]
+      ].forEach(([k, v]) => {
+        const line = document.createElement('div');
+        line.className = 'kv';
+        line.innerHTML = `<span class="k"></span><span class="v"></span>`;
+        line.querySelector('.k').textContent = k + ': ';
+        line.querySelector('.v').textContent = v || t('noData');
+        extra.appendChild(line);
+      });
+      panel.appendChild(extra);
+      if (h.changes && h.changes.length) {
+        const c = document.createElement('div');
+        c.className = 'own-extra';
+        c.textContent = t('changes') + ': ' + h.changes.join(' · ');
+        panel.appendChild(c);
+      }
+    } catch (e) {
+      panel.textContent = '';
+      msg(t('ownError'));
+    }
+  }
+
+  function renderSafetyScaleCard(level) {
+    const card = document.createElement('div');
+    card.className = 'scale-card';
+    const safeLevel = (level !== null && level !== undefined && !isNaN(level)) ? Math.min(8, Math.max(0, Number(level))) : null;
+    card.innerHTML = `
+      <div class="scale-header">${t('safetyLevel')}: <span>${safeLevel !== null ? safeLevel : t('noData')}</span></div>
+      <div class="indicator-arrow-wrap"><div class="indicator-arrow" id="safetyArrow"></div></div>
+      <div class="colored-scale">
+        ${['#dc2626','#ea580c','#f59e0b','#10b981','#06b6d4','#0284c7','#2563eb','#1d4ed8','#1e3a8a'].map((c, i) => `<div class="scale-seg" style="background:${c};">${i}</div>`).join('')}
+      </div>
+      <div class="score-badge-wrap"><div class="score-badge">
+        <span class="score-txt">${t('safetyScore')}</span>
+        <span class="score-num">${safeLevel !== null ? safeLevel.toFixed(1) : t('noData')}</span>
+      </div></div>`;
+    setTimeout(() => {
+      const arrow = card.querySelector('#safetyArrow');
+      if (!arrow) return;
+      if (safeLevel !== null) { const seg = 100 / 9; arrow.style.left = ((8 - safeLevel) * seg + seg / 2) + '%'; }
+      else arrow.style.display = 'none';
+    }, 50);
+    return card;
+  }
+
+  function renderPollutionScaleCard(group, greenScore) {
+    const card = document.createElement('div');
+    card.className = 'scale-card';
+    if (group === null || group === undefined || isNaN(group)) {
+      card.innerHTML = `<div class="scale-header">${t('pollGroup')}: <span style="color:#64748b;font-weight:normal;">${t('noData')}</span></div>`;
+      return card;
+    }
+    const pGroup = Math.min(15, Math.max(1, Number(group)));
+    const gScore = (greenScore !== null && greenScore !== undefined && greenScore !== '') ? greenScore : t('noData');
+    const colors = ["#065f46","#047857","#059669","#10b981","#34d399","#84cc16","#a3e635","#eab308","#f59e0b","#f97316","#ea580c","#dc2626","#b91c1c","#991b1b","#7f1d1d"];
+    card.innerHTML = `
+      <div class="scale-header">${t('pollGroup')}: <span style="color:${colors[pGroup-1]};">${pGroup}</span></div>
+      <div class="indicator-arrow-wrap"><div class="indicator-arrow" id="pollutionArrow" style="border-top-color:${colors[pGroup-1]};"></div></div>
+      <div class="colored-scale">${colors.map((c, i) => `<div class="scale-seg" style="background:${c};font-size:9px;">${i+1}</div>`).join('')}</div>
+      <div class="score-badge-wrap"><div class="score-badge" style="border-color:${colors[pGroup-1]};">
+        <span class="score-txt">${t('greenIndex')}</span>
+        <span class="score-num" style="color:${colors[pGroup-1]};">${gScore}</span>
+      </div></div>`;
+    setTimeout(() => {
+      const arrow = card.querySelector('#pollutionArrow');
+      if (arrow) { const seg = 100 / 15; arrow.style.left = ((15 - pGroup) * seg + seg / 2) + '%'; }
+    }, 50);
+    return card;
+  }
+
+  function buildInfoCard(box, title, rows) {
+    const c = document.createElement('div');
+    c.className = 'info-card';
+    const h = document.createElement('h4');
+    h.textContent = title;
+    c.appendChild(h);
+    rows.forEach(([label, value]) => {
+      const r = document.createElement('div');
+      r.className = 'info-row';
+      const l = document.createElement('span');
+      l.className = 'l';
+      l.textContent = label;
+      const v = document.createElement('span');
+      v.className = 'v';
+      if (value === null || value === undefined || value === '') { v.textContent = t('noData'); v.classList.add('na'); }
+      else if (typeof value === 'boolean') { v.textContent = value ? t('yes') : t('no'); v.classList.add(value ? 'yes' : 'no'); }
+      else v.textContent = String(value);
+      r.appendChild(l); r.appendChild(v);
+      c.appendChild(r);
+    });
+    box.appendChild(c);
+  }
+
+  function renderTech(d) {
+    const box = $('cardTech');
+    box.textContent = '';
+    box.style.cssText = 'padding:4px 0 20px;';
+    const tc = d.technical || {}, e = d.equipment || {}, s = d.safety || {};
+    const safetyLevel = tc.safetyLevel != null ? tc.safetyLevel : (d.safetyLevel != null ? d.safetyLevel : null);
+    box.appendChild(renderSafetyScaleCard(safetyLevel));
+    const u = (n, unit) => {
+      if (n === null || n === undefined) return null;
+      if (n === 0) return t('none');
+      return unit ? n + ' ' + unit : String(n);
+    };
+    buildInfoCard(box, t('grpDrive'), [
+      [t('drive'), tc.drivetrain],
+      [t('weight'), u(tc.totalWeight, t('uKg'))],
+      [t('towB'), u(tc.towWithBrakes, t('uKg'))],
+      [t('towNB'), u(tc.towWithoutBrakes, t('uKg'))]
+    ]);
+    buildInfoCard(box, t('grpBody'), [
+      [t('doors'), tc.doors], [t('seats'), tc.seats],
+      [t('windows'), u(tc.windows)], [t('airbags'), u(tc.airbags)],
+      [t('ac'), e.ac], [t('abs'), e.abs], [t('sunroof'), e.sunroof],
+      [t('alloy'), e.alloyWheels], [t('pwrSteer'), e.powerSteering]
+    ]);
+    buildInfoCard(box, t('grpSafety'), [
+      [t('lane'), s.laneDeparture], [t('pedestrian'), s.pedestrianDetection],
+      [t('rearCam'), s.rearCamera], [t('blindSpot'), s.blindSpot],
+      [t('adaptive'), s.adaptiveCruise], [t('signs'), s.signRecognition],
+      [t('brakeFwd'), s.autoBrakeForward], [t('brakeRev'), s.autoBrakeReverse],
+      [t('highBeam'), s.autoHighBeam], [t('drowsy'), s.driverDrowsiness],
+      [t('tirePress'), s.tirePressure]
+    ]);
+    const note = document.createElement('div');
+    note.className = 'info-note';
+    note.textContent = t('techFooter');
+    box.appendChild(note);
+    addDisclaimerNote(box);
+  }
+
+  function renderEnv(d) {
+    const box = $('cardEnv');
+    box.textContent = '';
+    box.style.cssText = 'padding:4px 0 20px;';
+    box.appendChild(renderPollutionScaleCard(d.pollutionGroup ?? null, d.greenScore ?? null));
+    const s = d.safety || {}, em = d.emissions || {};
+    buildInfoCard(box, t('grpSensors'), [
+      [t('rearCam'), s.rearCamera], [t('parkFront'), s.parkingSensorsFront]
+    ]);
+    buildInfoCard(box, t('grpEmissions'), [
+      [t('co2'), em.co2Wltp], [t('nox'), em.noxWltp],
+      [t('hcEm'), em.hcWltp], [t('pm'), em.pmWltp]
+    ]);
+    const f = d.fuel || {};
+    if (f.isElectric) {
+      buildInfoCard(box, t('grpFuel'), [[t('propType'), t('elecNoFuel')]]);
+    } else if (f.type === 'petrol' || f.type === 'diesel') {
+      const lbl = f.type === 'petrol' ? t('petrol') : t('diesel');
+      buildInfoCard(box, t('grpFuel'), [
+        [t('fuelType'), lbl],
+        [t('kmPerL'), f.kmPerLiter],
+        [t('note'), f.isHybridOrPhev ? t('hybridNote') : f.note]
+      ]);
+    } else {
+      buildInfoCard(box, t('grpFuel'), [
+        [t('fuelType'), t('unknownDb')],
+        [t('kmPetrol'), f.kmPerLiterPetrol],
+        [t('kmDiesel'), f.kmPerLiterDiesel],
+        [t('note'), f.isHybridOrPhev ? t('hybridNote') : f.note]
+      ]);
+    }
+    addDisclaimerNote(box);
+  }
+
+  function addDisclaimerNote(box) {
+    const n = document.createElement('div');
+    n.className = 'info-note';
+    n.textContent = t('legal');
+    box.appendChild(n);
+  }
+
+  // short=true: בלי הסוגריים (לשדה הקצר בכרטיס המפרט)
+  function fuelSummary(f, short) {
+    if (!f) return t('noData');
+    const par = (txt) => short ? '' : ' (' + txt + ')';
+    if (f.isElectric) return t('electric');
+    if (f.type === 'petrol' && f.kmPerLiterPetrol) return f.kmPerLiterPetrol + ' ' + t('uKmL') + par(t('petrol'));
+    if (f.type === 'diesel' && f.kmPerLiterDiesel) return f.kmPerLiterDiesel + ' ' + t('uKmL') + par(t('diesel'));
+    if (f.kmPerLiterPetrol || f.kmPerLiterDiesel) {
+      return t('petrol') + ': ' + (f.kmPerLiterPetrol ?? t('noData')) + ' / ' + t('diesel') + ': ' + (f.kmPerLiterDiesel ?? t('noData'));
+    }
+    return t('noData');
+  }
+
+  /* ================= השוואה רגילה ================= */
+  $('compareActionBtn').addEventListener('click', async () => {
+    const plate2 = $('comparePlate2').value.replace(/\D/g, '');
+    if (plate2.length < 7 || !currentCarData) { alert(t('compareNeed')); return; }
+    try {
+      const d2 = await fetchCarByPlate(plate2);
+      const d1 = currentCarData;
+      const hp1 = isShowingCombinedHp && d1.combinedHorsepower ? d1.combinedHorsepower : d1.horsepower;
+      const hp2 = d2.combinedHorsepower || d2.horsepower;
+      $('cmpCar1Title').textContent = cleanText((d1.manufacturer || '') + ' ' + (d1.model || ''));
+      $('cmpHp1').textContent = hp1 ? hp1 + ' ' + t('uHp') : t('noData');
+      $('cmpAccel1').textContent = d1.acceleration0to100 ? d1.acceleration0to100 + ' ' + t('uSecShort') : t('noData');
+      $('cmpYear1').textContent = d1.year || t('noData');
+      $('cmpCar2Title').textContent = cleanText((d2.manufacturer || '') + ' ' + (d2.model || ''));
+      $('cmpHp2').textContent = hp2 ? hp2 + ' ' + t('uHp') : t('noData');
+      $('cmpAccel2').textContent = d2.acceleration0to100 ? d2.acceleration0to100 + ' ' + t('uSecShort') : t('noData');
+      $('cmpYear2').textContent = d2.year || t('noData');
+      $('cmpFuel1').textContent = fuelSummary(d1.fuel, true);
+      $('cmpFuel2').textContent = fuelSummary(d2.fuel, true);
+      $('compareResultCard').classList.add('show');
+    } catch (err) { alert(err.message || t('compareFail')); }
+  });
+
+  /* ================= מעבר וחיפוש לוחית ================= */
+  function triggerTransition(brand, manufacturer, onComplete) {
+    const overlay = $('cyberTransitionOverlay'), ring = $('transitHoloRing');
+    const transitLogo = $('transitLogo'), transitBadge = $('transitBadge');
+    const brandName = brand ? brand.en : (manufacturer || t('theVehicle'));
+    $('transitTitle').textContent = t('loadingBrand', { brand: brandName });
+    const color = brand && brand.color ? brand.color : '#0284c7';
+    ring.style.borderColor = color;
+    transitBadge.style.background = color;
+    transitBadge.textContent = (manufacturer || '?').trim().charAt(0) || '?';
+    const logoSrc = getLogoSrc(brand);
+    if (logoSrc) {
+      transitLogo.src = logoSrc; transitLogo.style.display = 'block'; transitBadge.style.display = 'none';
+      transitLogo.onerror = () => { transitLogo.style.display = 'none'; transitBadge.style.display = 'flex'; };
+    } else { transitLogo.style.display = 'none'; transitBadge.style.display = 'flex'; }
+    overlay.classList.add('show');
+    setTimeout(() => {
+      overlay.style.opacity = '0';
+      setTimeout(() => { overlay.classList.remove('show'); overlay.style.opacity = '1'; if (onComplete) onComplete(); }, 400);
+    }, 1000);
+  }
+
+  async function fetchCarByPlate(plate) {
+    let r, j;
+    try {
+      r = await fetch(API_BASE + '/api/car/' + encodeURIComponent(plate));
+      j = await r.json();
+    } catch (e) {
+      throw new Error(t('connErr'));
+    }
+    if (!j || !j.success || !j.data) {
+      throw new Error(j && j.message ? j.message : t('plateNotFound'));
+    }
+    return j.data;
+  }
+
+  async function fetchHeavyByPlate(plate) {
+    try {
+      const r = await fetch(API_BASE + '/api/heavy/' + encodeURIComponent(plate));
+      const j = await r.json();
+      if (j && j.success && j.data) return j.data;
+    } catch (e) {}
+    return null;
+  }
+
+  async function fetchBikeByPlate(plate) {
+    try {
+      const r = await fetch(API_BASE + '/api/bike/' + encodeURIComponent(plate));
+      const j = await r.json();
+      if (j && j.success && j.data) return j.data;
+    } catch (e) {}
+    return null;
+  }
+
+  function showBikeResult(plate, b, kind = 'bike') {
+    const box = $('bikeResult');
+    const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    const txt = v => (v === null || v === undefined) ? '' : cleanText(String(v)) || '';
+    const make = txt(b.tozeret_nm) || (kind === 'heavy' ? t('heavyVehicle') : t('motorcycle'));
+    const model = txt(b.degem_nm);
+    const kv = [
+      [t('fManufacturer'), make], [t('fModel'), txt(b.degem_nm)], [t('fYear'), txt(b.shnat_yitzur)],
+      [t('fuelType'), txt(b.sug_delek_nm)], [t('plateLbl'), formatPlate(plate)], [t('ownCol1'), txt(b.baalut)]
+    ];
+    const kvHtml = kv.map(([k, v]) => `<div class="bike-kv"><span class="k">${esc(k)}</span><span class="v${v ? '' : ' na'}">${esc(v || t('noData'))}</span></div>`).join('');
+    const hpNum = parseFloat(String(b.hespek || '').replace(/[^\d.]/g, '')) || 0;
+    const ccNum = parseFloat(String(b.nefach_manoa || '').replace(/[^\d.]/g, '')) || 0;
+    const tier = txt(b.baalut) || t('tierStd');
+    const brand = findBrand(b.tozeret_nm, b.degem_nm);
+    const logoSrc = getLogoSrc(brand);
+    const logoHtml = logoSrc
+      ? `<img src="${esc(logoSrc)}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:6px;" onerror="this.style.display='none';this.nextElementSibling.style.display='inline';"><span class="pc-logo-txt" style="display:none;">${esc(make.charAt(0))}</span>`
+      : `<span class="pc-logo-txt">${esc(make.charAt(0))}</span>`;
+    const hpVal = hpNum ? `${hpNum} ${t('uHp')}` : t('noData');
+    const ccVal = ccNum ? `${ccNum} ${t('uCc')}` : t('noData');
+    const hpW = Math.min(hpNum / 300 * 100, 100).toFixed(1);
+    const ccW = Math.min(ccNum / 1800 * 100, 100).toFixed(1);
+
+    box.innerHTML = `
+      <div class="pc-wrap">
+        <div class="pc play" data-r="rare">
+          <div class="pc-body">
+            <div class="pc-sheen"></div>
+            <div class="pc-head">
+              <div class="pc-brand">
+                <div class="pc-logo" style="position:relative;">${logoHtml}</div>
+                <div>
+                  <div class="pc-label">${kind === 'heavy' ? 'HEAVY VEHICLE PROFILE' : 'MOTORCYCLE PROFILE'}</div>
+                  <span class="pc-tier">${esc(tier)}</span>
+                </div>
+              </div>
+              <div class="pc-hp"><b>${hpNum || '-'}</b><small>HP</small></div>
+            </div>
+            <div class="pc-name">${esc(make)}</div>
+            <div class="pc-model">${esc(model || '-')}</div>
+            <div class="pc-divider"></div>
+            <div class="pc-stats">
+              <div class="pc-row">
+                <div class="pc-row-head"><span class="l">${t('rowPower')}</span><span class="v">${esc(hpVal)}</span></div>
+                <div class="pc-bar"><i class="pc-fill" style="--w:${hpW}%"></i></div>
+              </div>
+              <div class="pc-row">
+                <div class="pc-row-head"><span class="l">${t('engineCc')}</span><span class="v">${esc(ccVal)}</span></div>
+                <div class="pc-bar"><i class="pc-fill" style="--w:${ccW}%"></i></div>
+              </div>
+            </div>
+            <div style="position:relative;z-index:2;margin-top:12px;">${kvHtml}</div>
+            <div class="pc-foot">
+              <div class="pc-plate"><span class="ps">✡IL</span><span class="pn">${esc(formatPlate(plate))}</span></div>
+              <span class="pc-serial">MOTO</span>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    box.className = 'pc-section';
+    box.style.display = 'block';
   }
 
   async function searchCar() {
     const plate = $('plateInput').value.replace(/\D/g, '');
     const btn = $('searchBtn'), loader = $('loader'), err = $('errorMsg');
     err.style.display = 'none';
-    $('hero').classList.remove('show');
+    $('bikeResult').style.display = 'none';
+    $('kmLine').style.display = 'none';
+    $('importerPriceCard').style.display = 'none';
+    $('ownBtnWrap').classList.remove('show');
+    $('cardGeneral').style.display = 'none';
     $('tabs').classList.remove('show');
+    $('hero').classList.remove('show');
+    $('powerFeelBadge').style.display = 'none';
+    $('phevRevealBtn').style.display = 'none';
+    setupCopyButton(null);
+    closeOwnPanel();
+    currentPlate = ''; currentCarData = null; isShowingCombinedHp = false;
 
-    if (plate.length < 6) {
-      err.textContent = t('errPlateLen');
-      err.style.display = 'block';
-      return;
-    }
+    if (plate.length < 6) { err.textContent = t('errPlateLen'); err.style.display = 'block'; return; }
 
+    loader.textContent = t('loading');
     loader.style.display = 'block';
     btn.disabled = true;
-
     try {
-      const r = await fetch(API_BASE + '/api/car/' + encodeURIComponent(plate));
-      const j = await r.json();
+      let d;
+      try {
+        d = await fetchCarByPlate(plate);
+      } catch (carErr) {
+        // לא נמצא ברכבים פרטיים - בודקים במאגר האופנועים ואז במאגר הרכבים הכבדים
+        let kind = 'bike';
+        let b = await fetchBikeByPlate(plate);
+        if (!b) { kind = 'heavy'; b = await fetchHeavyByPlate(plate); }
+        if (!b) throw carErr;
+        loader.style.display = 'none';
+        currentPlate = plate;
+        $('cardGeneral').style.display = 'none';
+        $('tabs').classList.remove('show');
+        $('hero').classList.remove('show');
+        showBikeResult(plate, b, kind);
+        addToHistory({
+          plate, manufacturer: b.tozeret_nm || '',
+          name: cleanText((b.tozeret_nm || '') + ' ' + (b.degem_nm || '')),
+          year: b.shnat_yitzur ? String(b.shnat_yitzur) : '',
+          time: nowTime()
+        });
+        showDetail();
+        return;
+      }
       loader.style.display = 'none';
-
-      if (!j || !j.success || !j.data) throw new Error(j?.message || 'רכב לא נמצא');
-
-      const d = j.data;
       currentPlate = plate;
       currentCarData = d;
-
+      addCarToHunterCollection(plate, d);
       const brand = findBrand(d.manufacturer, d.model);
-      await showBrand(d.manufacturer, brand);
 
-      $('heroName').textContent = cleanText((d.manufacturer || '') + ' ' + (d.model || ''));
-      $('heroTrim').textContent = cleanText(d.trim || '');
+      triggerTransition(brand, d.manufacturer, async () => {
+        await showBrand(d.manufacturer, brand);
+        if (d.kmSinceTest != null) {
+          $('kmText').textContent = d.kmSinceTest.toLocaleString(LOCALE) + ' ' + t('kmSince');
+          $('kmLine').style.display = 'flex';
+        }
+        if (d.importerPrice) {
+          $('importerPriceCard').textContent = `${t('importer')}: ${d.importerName || t('unknown')} · ₪ ${Number(d.importerPrice).toLocaleString(LOCALE)}`;
+          $('importerPriceCard').style.display = 'block';
+        }
+        $('heroName').textContent = cleanText((d.manufacturer || '') + ' ' + (d.model || ''));
+        $('heroTrim').textContent = cleanText(d.trim || '');
 
-      setVal('sHp', d.horsepower, t('uHp'));
-      setVal('sAccel', d.acceleration0to100, t('uSec'));
-      setVal('sEngine', d.engineCc, t('uCc'));
+        const perf = calculatePerformanceMetrics(d);
+        updateCyberCard(d, plate, perf);
 
-      setVal('vManufacturer', d.manufacturer);
-      setVal('vModel', d.model);
-      setVal('vTrim', d.trim);
-      setVal('vBody', d.bodyType || d.merkav);
-      setVal('vGear', d.transmission);
-      setVal('vYear', d.year);
-      setVal('vColor', d.color);
-      setVal('vPlate', formatPlate(plate));
-      setVal('vChassis', d.chassis);
-      setVal('vOwners', d.owners);
+        if (d.testValid === null || d.testValid === undefined) setStatusBlock('stTest', t('noData'), 'neutral');
+        else if (d.testValid) setStatusBlock('stTest', t('valid'), 'ok');
+        else setStatusBlock('stTest', t('expired'), 'bad');
+        setStatusBlock('stOwn', d.ownership || t('noData'), 'info');
+        if (Number(d.owners) > 0) $('ownBtnWrap').classList.add('show');
+        setStatusBlock('stDisabled', d.disabled ? t('yesHave') : t('noHave'), d.disabled ? 'ok' : 'neutral');
 
-      $('hero').classList.add('show');
-      $('tabs').classList.add('show');
-      showDetail();
+        setVal('sHp', d.horsepower, t('uHp'));
+        const isHybridCar = Boolean(d.isHybridOrPhev || d.isPhev);
+        $('spHpLbl').textContent = isHybridCar ? t('hpPetrol') : t('hp');
+        $('specHpCard').classList.remove('phev-highlight');
+        setVal('sAccel', d.acceleration0to100, t('uSec'));
+        setVal('sTopSpeed', perf.topSpeed, t('uKmh'));
+        setVal('sPowerWeight', perf.powerWeight, t('uKgHp'));
+
+        const phevBtn = $('phevRevealBtn');
+        if (isHybridCar && d.combinedHorsepower && d.combinedHorsepower !== d.horsepower) {
+          phevBtn.style.display = 'block';
+          phevBtn.classList.remove('active');
+          $('phevTagLabel').textContent = d.isPhev ? 'PHEV' : 'HEV';
+          $('phevBtnText').textContent = t('phevBtn');
+        }
+
+        const fuel = (d.fuelType || d.sug_delek_nm || '').toLowerCase();
+        const isElectric = fuel.includes('חשמל') || fuel.includes('electric') || (Number(d.engineCc) === 0 && Number(d.horsepower) > 0);
+        if (isElectric || d.engineCc === 0) { $('sEngine').textContent = t('electric'); $('sEngine').classList.remove('na'); }
+        else setVal('sEngine', d.engineCc, t('uCc'));
+        $('sFuel').textContent = isElectric ? t('electric') : fuelSummary(d.fuel, true);
+        $('sFuel').classList.toggle('na', !isElectric && fuelSummary(d.fuel) === t('noData'));
+
+        if (perf.feelText) {
+          $('powerFeelText').textContent = t(perf.feelText);
+          $('powerFeelText').style.color = perf.feelColor;
+          $('powerFeelBadge').style.display = 'flex';
+        }
+
+        setVal('vManufacturer', d.manufacturer);
+        setVal('vModel', d.model);
+        setVal('vTrim', d.trim);
+        setVal('vBody', d.bodyType || d.merkav);
+        setVal('vGear', d.transmission);
+        setVal('vYear', d.year);
+        setVal('vColor', d.color);
+        setVal('vPlate', formatPlate(plate));
+        setVal('vChassis', d.chassis);
+        setupCopyButton(d.chassis);
+        setVal('vTireFront', d.tireFront);
+        setVal('vTireRear', d.tireRear);
+        setVal('vOwners', d.owners);
+        renderTest(parseDate(d.lastTest), parseDate(d.testExpiry));
+
+        $('hero').classList.add('show');
+        $('tabs').classList.add('show');
+        addToHistory({
+          plate, manufacturer: d.manufacturer,
+          name: cleanText((d.manufacturer || '') + ' ' + (d.model || '')),
+          year: d.year ? String(d.year) : '',
+          time: nowTime()
+        });
+        renderTech(d);
+        renderEnv(d);
+
+        document.querySelectorAll('.tab').forEach(tb => tb.classList.remove('active'));
+        document.querySelector('.tab[data-tab="general"]').classList.add('active');
+        $('cardGeneral').style.display = '';
+        ['cardCardTab', 'cardTech', 'cardEnv', 'cardCompare', 'cardHunter'].forEach(id => $(id).style.display = 'none');
+        showDetail();
+      });
     } catch (e) {
       loader.style.display = 'none';
-      err.textContent = e.message;
+      err.textContent = e.message || t('genericErr');
       err.style.display = 'block';
     } finally {
       btn.disabled = false;
     }
   }
 
-  function renderHistory() {
-    const box = $('history'), listEl = $('historyList');
-    listEl.textContent = '';
-    box.classList.remove('show');
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(tb => tb.classList.remove('active'));
+      tab.classList.add('active');
+      const name = tab.dataset.tab;
+      $('cardGeneral').style.display = name === 'general' ? '' : 'none';
+      $('cardCardTab').style.display = 'none';
+      $('cardTech').style.display = name === 'tech' ? '' : 'none';
+      $('cardEnv').style.display = name === 'env' ? '' : 'none';
+      $('cardCompare').style.display = name === 'compare' ? '' : 'none';
+      $('cardHunter').style.display = 'none';
+    });
+  });
+
+  function setupCopyButton(value) {
+    const btn = $('copyChassis');
+    btn.classList.remove('show');
+    if (value) {
+      btn.classList.add('show');
+      btn.textContent = t('copy');
+      btn.onclick = () => {
+        navigator.clipboard.writeText(value).catch(() => {});
+        btn.textContent = t('copied');
+        setTimeout(() => { btn.textContent = t('copy'); }, 1500);
+      };
+    }
   }
 
+  /* ================= דיווח ================= */
+  const reportModal = $('reportModal');
+  const reportStatus = $('reportStatus');
+  const submitReportBtn = $('submitReportBtn');
+
+  $('openReportBtn').addEventListener('click', () => {
+    if (!currentPlate) return;
+    const name = currentCarData ? (currentCarData.manufacturer + ' ' + currentCarData.model + ' (' + currentCarData.year + ')') : '';
+    $('reportCarHeader').textContent = t('plateLbl') + ': ' + formatPlate(currentPlate) + ' ' + name;
+    $('reportText').value = '';
+    reportStatus.className = 'report-status';
+    reportStatus.textContent = '';
+    submitReportBtn.disabled = false;
+    submitReportBtn.textContent = t('reportSend');
+    reportModal.classList.add('show');
+  });
+  $('closeReportBtn').addEventListener('click', () => reportModal.classList.remove('show'));
+  reportModal.addEventListener('click', e => { if (e.target === reportModal) reportModal.classList.remove('show'); });
+
+  submitReportBtn.addEventListener('click', async () => {
+    const category = $('reportCategory').value;
+    const userNotes = $('reportText').value.trim();
+    submitReportBtn.disabled = true;
+    submitReportBtn.textContent = t('reportSending');
+    reportStatus.className = 'report-status';
+    reportStatus.textContent = '';
+    const formData = new FormData();
+    formData.append("access_key", "57cbc2ae-17ad-4c60-b73a-6558c56e8f01");
+    formData.append("subject", `דיווח מהאפליקציה על רכב ${formatPlate(currentPlate)} [${category}]`);
+    formData.append("from_name", "מערכת בדיקת רכב");
+    formData.append("מספר רכב", formatPlate(currentPlate));
+    formData.append("פרטי רכב", currentCarData ? `${currentCarData.manufacturer} ${currentCarData.model} (${currentCarData.year})` : 'לא ידוע');
+    formData.append("נושא הדיווח", category);
+    formData.append("שפת ממשק", isEn ? 'English' : 'עברית');
+    formData.append("הערות", userNotes || STR.noExtraNotes[0]);
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", { method: "POST", body: formData });
+      const result = await response.json();
+      if (result.success) {
+        reportStatus.className = 'report-status success';
+        reportStatus.textContent = t('reportOk');
+        setTimeout(() => reportModal.classList.remove('show'), 1800);
+      } else throw new Error(result.message || 'error');
+    } catch (err) {
+      reportStatus.className = 'report-status error';
+      reportStatus.textContent = t('reportFail');
+      submitReportBtn.disabled = false;
+      submitReportBtn.textContent = t('retry');
+    }
+  });
+
+  /* ================= חיפוש לפי מספר שלדה ================= */
+  function setSearchMode(mode) {
+    document.querySelector('.search-box > .plate').classList.toggle('mode-off', mode !== 'plate');
+    $('candidatesList').textContent = '';
+    $('errorMsg').style.display = 'none';
+  }
+  function showSearchError(msg) { const err = $('errorMsg'); err.textContent = msg; err.style.display = 'block'; }
+
+  function normalizeCar(c) {
+    const plate = String(c.plate || c.licensePlate || c.mispar_rechev || c.platenumber || '').replace(/\D/g, '');
+    return { ...c, plate };
+  }
+
+  function renderCandidates(list) {
+    const box = $('candidatesList');
+    box.textContent = '';
+    if (!list.length) {
+      const e = document.createElement('div');
+      e.className = 'cand-empty';
+      e.textContent = t('noData');
+      box.appendChild(e);
+      return;
+    }
+    const hint = document.createElement('div');
+    hint.className = 'cand-hint';
+    hint.textContent = isEn ? 'Several vehicles found. Choose one to view details' : 'נמצאו כמה רכבים. בחר רכב לצפייה בפרטים';
+    box.appendChild(hint);
+    for (const c of list) {
+      if (!c.plate) continue;
+      const row = document.createElement('div');
+      row.className = 'cand-row';
+      const info = document.createElement('div');
+      info.className = 'cand-info';
+      info.textContent = [c.manufacturer, c.model, c.year].filter(Boolean).join(' · ');
+      const plateEl = document.createElement('div');
+      plateEl.className = 'cand-plate';
+      plateEl.textContent = formatPlate(c.plate);
+      row.appendChild(info); row.appendChild(plateEl);
+      row.addEventListener('click', () => {
+        setSearchMode('plate');
+        $('plateInput').value = formatPlate(c.plate);
+        searchCar();
+      });
+      box.appendChild(row);
+    }
+  }
+
+  setSearchMode('plate');
+
   $('searchBtn').addEventListener('click', searchCar);
+
   $('plateInput').addEventListener('input', e => { e.target.value = formatPlate(e.target.value); });
   $('plateInput').addEventListener('keydown', e => { if (e.key === 'Enter') searchCar(); });
-  $('backBtn').addEventListener('click', showHome);
+  $('histClear').addEventListener('click', clearHistory);
+  $('stOwn').addEventListener('click', toggleOwnPanel);
+  $('ownBtn').addEventListener('click', toggleOwnPanel);
+
+  /* ================= סיבוב לוגו ================= */
+  (function initLogo360() {
+    const spinner = $('logoSpinner');
+    let isDragging = false, startX = 0, startY = 0, currentRotY = 0, currentRotX = 0;
+    function startDrag(x, y) {
+      isDragging = true;
+      startX = x - (currentRotY / 1.6);
+      startY = y + (currentRotX / 1.2);
+      spinner.classList.add('dragging');
+    }
+    function moveDrag(x, y) {
+      if (!isDragging) return;
+      currentRotY = (x - startX) * 1.6;
+      currentRotX = Math.max(-65, Math.min(65, -(y - startY) * 1.2));
+      spinner.style.transform = `rotateY(${currentRotY}deg) rotateX(${currentRotX}deg)`;
+    }
+    function endDrag() {
+      if (!isDragging) return;
+      isDragging = false;
+      spinner.classList.remove('dragging');
+      currentRotY = 0; currentRotX = 0;
+      spinner.style.transform = 'rotateY(0deg) rotateX(0deg)';
+    }
+    spinner.addEventListener('touchstart', e => { if (e.touches.length === 1) startDrag(e.touches[0].clientX, e.touches[0].clientY); }, { passive: true });
+    window.addEventListener('touchmove', e => { if (isDragging && e.touches.length === 1) moveDrag(e.touches[0].clientX, e.touches[0].clientY); }, { passive: true });
+    window.addEventListener('touchend', endDrag);
+    window.addEventListener('touchcancel', endDrag);
+    spinner.addEventListener('mousedown', e => startDrag(e.clientX, e.clientY));
+    window.addEventListener('mousemove', e => moveDrag(e.clientX, e.clientY));
+    window.addEventListener('mouseup', endDrag);
+  })();
+
+  /* =========================================================
+     ⚔️ קרב 1-1 (ללא מדד מומנט)
+     ========================================================= */
+  const DUEL_METRICS = [
+    { key: 'accel',    label: 'mAccel',  unit: 'uSecShort', dec: 1, lower: true, icon: '⏱' },
+    { key: 'hp',       label: 'mHp',     unit: 'uHp',       icon: '⚡' },
+    { key: 'topSpeed', label: 'mTop',    unit: 'uKmh',      icon: '🏁' },
+    { key: 'engineCc', label: 'mEngine', unit: 'uCc',       icon: '⚙' },
+    { key: 'weight',   label: 'mWeight', unit: 'uKg',       lower: true, icon: '⚖' }
+  ];
+
+  function duelStats(d, plate) {
+    const perf = calculatePerformanceMetrics(d);
+    const body = (d.bodyType || d.merkav || '').toLowerCase();
+    return {
+      raw: d,
+      plate,
+      name: cleanText((d.manufacturer || '') + ' ' + (d.model || '')) || t('vehicleDefault'),
+      year: d.year ? String(d.year) : '',
+      brand: findBrand(d.manufacturer, d.model),
+      emoji: /שטח|suv/.test(body) ? '🚙' : /ספורט|קופה|coupe/.test(body) ? '🏎️' : '🚗',
+      accel: Number(d.acceleration0to100) || 0,
+      hp: Number(d.horsepower) || 0,
+      topSpeed: perf.topSpeed || 0,
+      engineCc: Number(d.engineCc) || 0,
+      weight: Number(d.curbWeight) || Number(d.mishkal_atsmi) || Number(d.technical?.totalWeight) || Number(d.totalWeight) || 0
+    };
+  }
+
+  function duelCompare(A, B) {
+    const rows = DUEL_METRICS.map(m => {
+      const a = A[m.key], b = B[m.key];
+      const valid = a > 0 && b > 0;
+      let winner = null;
+      if (valid) {
+        if (a === b) winner = 'tie';
+        else winner = (m.lower ? a < b : a > b) ? 'a' : 'b';
+      }
+      const sa = m.lower ? (a ? 1 / a : 0) : a;
+      const sb = m.lower ? (b ? 1 / b : 0) : b;
+      const pct = valid && (sa + sb) > 0 ? (sa / (sa + sb)) * 100 : 50;
+      return { ...m, a, b, valid, winner, pct };
+    });
+    let wa = 0, wb = 0, validCount = 0;
+    rows.forEach(r => {
+      if (r.valid) validCount++;
+      if (r.winner === 'a') wa++;
+      else if (r.winner === 'b') wb++;
+    });
+    const overall = wa > wb ? 'a' : wb > wa ? 'b' : 'tie';
+    return { rows, wa, wb, validCount, overall };
+  }
+
+  function fmtDuelVal(v, unitKey, dec) {
+    if (!v || v <= 0) return null;
+    const n = dec ? v.toFixed(dec) : Math.round(v).toLocaleString(LOCALE);
+    return n + ' ' + t(unitKey);
+  }
+
+  function paintDuelCard(side, S) {
+    const card = $('dc' + side);
+    $('dc' + side + 'Name').textContent = S.name;
+    $('dc' + side + 'Year').textContent = S.year || '—';
+    $('dc' + side + 'Car').textContent = S.emoji;
+    const img = $('dc' + side + 'Img'), badge = $('dc' + side + 'Badge');
+    const src = getLogoSrc(S.brand);
+    badge.textContent = (S.raw.manufacturer || '?').trim().charAt(0) || '?';
+    if (src) {
+      img.src = src; img.style.display = 'block'; badge.style.display = 'none';
+      img.onerror = () => { img.style.display = 'none'; badge.style.display = 'block'; };
+    } else { img.style.display = 'none'; badge.style.display = 'block'; }
+    $('duelPlate' + side).value = formatPlate(S.plate);
+  }
+
+  function setDuelHeaderLogo(id, S) {
+    const img = $(id).querySelector('img');
+    const src = getLogoSrc(S.brand);
+    if (src) { img.src = src; img.style.display = 'block'; } else img.style.display = 'none';
+  }
+
+  function setScan(pct, label) {
+    $('scanFill').style.width = pct + '%';
+    $('scanPct').textContent = pct + '%';
+    if (label) $('scanLbl').textContent = label;
+  }
+
+  function bumpTally(id) {
+    const el = $(id);
+    el.classList.remove('bump');
+    void el.offsetWidth;
+    el.classList.add('bump');
+  }
+
+  async function revealDuel(A, B, cmp) {
+    const list = $('scoreList');
+    list.textContent = '';
+    $('verdict').classList.remove('show', 'in', 'a', 'b');
+    $('tallyA').textContent = '0';
+    $('tallyB').textContent = '0';
+    $('tallyNameA').textContent = A.name;
+    $('tallyNameB').textContent = B.name;
+    $('duelPanel').classList.add('show');
+
+    const rowEls = cmp.rows.map(r => {
+      const row = document.createElement('div');
+      row.className = 'srow';
+      const aTxt = fmtDuelVal(r.a, r.unit, r.dec), bTxt = fmtDuelVal(r.b, r.unit, r.dec);
+      row.innerHTML = `
+        <div class="sv l ${aTxt ? '' : 'na'}">${aTxt || t('noData')}</div>
+        <div class="smid">
+          <div class="slab">${r.icon} ${t(r.label)}</div>
+          <div class="sbar"><i class="bl"></i><i class="br"></i></div>
+        </div>
+        <div class="sv r ${bTxt ? '' : 'na'}">${bTxt || t('noData')}</div>`;
+      list.appendChild(row);
+      return row;
+    });
+
+    let ta = 0, tb = 0;
+    for (let i = 0; i < cmp.rows.length; i++) {
+      const r = cmp.rows[i];
+      const row = rowEls[i];
+      await wait(i === 0 ? 300 : 650);
+      row.classList.add('show');
+      const bl = row.querySelector('.bl');
+      setTimeout(() => { bl.style.width = (r.valid ? r.pct.toFixed(1) : 50) + '%'; }, 80);
+
+      if (r.winner === 'a') { ta++; $('tallyA').textContent = ta; bumpTally('tallyA'); }
+      else if (r.winner === 'b') { tb++; $('tallyB').textContent = tb; bumpTally('tallyB'); }
+
+      if (r.winner === 'a') row.querySelector('.sv.l').classList.add('lead');
+      if (r.winner === 'b') row.querySelector('.sv.r').classList.add('lead');
+      row.classList.add('row-flash');
+      setTimeout(() => row.classList.remove('row-flash'), 500);
+    }
+
+    await wait(700);
+    const vEl = $('verdict');
+    if (cmp.overall === 'tie') {
+      $('vLbl').textContent = t('finalResult');
+      $('vName').textContent = t('draw');
+      $('vSub').textContent = `${cmp.wa} – ${cmp.wb} · ${A.name} ${t('duelVs')} ${B.name}`;
+    } else {
+      const W = cmp.overall === 'a' ? A : B;
+      const wins = cmp.overall === 'a' ? cmp.wa : cmp.wb;
+      const lose = cmp.overall === 'a' ? cmp.wb : cmp.wa;
+      $('vLbl').textContent = t('winner');
+      $('vName').textContent = W.name;
+      $('vSub').textContent = t('wonMetrics', { w: wins, l: lose, n: cmp.validCount });
+      vEl.classList.add(cmp.overall);
+    }
+    vEl.classList.add('show');
+    void vEl.offsetWidth;
+    vEl.classList.add('in');
+    $('duelShareBtn').onclick = () => shareDuel(A, B, cmp);
+  }
+
+  function renderDuelDetail(A, B, cmp) {
+    setDuelHeaderLogo('dhLogoA', A);
+    setDuelHeaderLogo('dhLogoB', B);
+    $('dhNameA').textContent = A.name;
+    $('dhNameB').textContent = B.name;
+    const det = $('detailRows');
+    det.textContent = '';
+    cmp.rows.forEach(r => {
+      const row = document.createElement('div');
+      row.className = 'drow';
+      const aTxt = fmtDuelVal(r.a, r.unit, r.dec), bTxt = fmtDuelVal(r.b, r.unit, r.dec);
+      row.innerHTML = `
+        <div class="dv l ${r.winner === 'a' ? 'win' : ''} ${aTxt ? '' : 'na'}">${aTxt || t('noData')}</div>
+        <div class="dlab"><span class="ico">${r.icon}</span><span class="txt">${t(r.label)}</span></div>
+        <div class="dv r ${r.winner === 'b' ? 'win' : ''} ${bTxt ? '' : 'na'}">${bTxt || t('noData')}</div>`;
+      det.appendChild(row);
+    });
+  }
+
+  function setDuelTab(name) {
+    document.querySelectorAll('.dtab').forEach(tb => tb.classList.toggle('active', tb.dataset.dt === name));
+    $('dtResults').style.display = name === 'results' ? '' : 'none';
+    $('dtDetail').style.display = name === 'detail' ? '' : 'none';
+  }
+  document.querySelectorAll('.dtab').forEach(tb => tb.addEventListener('click', () => setDuelTab(tb.dataset.dt)));
+
+  function shareDuel(A, B, cmp) {
+    const winTxt = cmp.overall === 'tie' ? t('draw') : (cmp.overall === 'a' ? A.name : B.name);
+    const txt = `${t('duelShareTitle')}\n${A.name} ${t('duelVs')} ${B.name}\n${t('scoreWord')}: ${cmp.wa} – ${cmp.wb}\n${t('winner')}: ${winTxt}`;
+    if (navigator.share) navigator.share({ title: t('duelShareTitle'), text: txt }).catch(() => {});
+    else { navigator.clipboard.writeText(txt).catch(() => {}); alert(t('resultCopied')); }
+  }
+
+  function showDuelMsg(text) { $('duelMsg').textContent = text || ''; }
+
+  async function duelFight() {
+    const pa = $('duelPlateA').value.replace(/\D/g, '');
+    const pb = $('duelPlateB').value.replace(/\D/g, '');
+    if (pa.length < 7 || pb.length < 7) { showDuelMsg(t('duelNeed2')); return; }
+    if (pa === pb) { showDuelMsg(t('duelSame')); return; }
+
+    showDuelMsg('');
+    $('duelPanel').classList.remove('show');
+    const arena = $('duelArena');
+    arena.classList.remove('clash'); void arena.offsetWidth; arena.classList.add('clash');
+
+    const btn = $('duelFightBtn');
+    btn.disabled = true;
+    btn.querySelector('.fb-main').textContent = t('fightBusy');
+    btn.querySelector('.fb-sub').textContent = t('fightBusySub');
+    $('scanBox').classList.add('show');
+    setScan(10, t('scanFirst'));
+
+    try {
+      const [da, db] = await Promise.all([
+        fetchCarByPlate(pa).then(d => { setScan(55, t('scanSecond')); return d; }),
+        fetchCarByPlate(pb).then(d => { setScan(85, t('scanCalc')); return d; })
+      ]);
+      const A = duelStats(da, pa), B = duelStats(db, pb);
+      setScan(100, t('scanReady'));
+      await wait(400);
+      $('scanBox').classList.remove('show');
+      paintDuelCard('A', A);
+      paintDuelCard('B', B);
+      const cmp = duelCompare(A, B);
+      renderDuelDetail(A, B, cmp);
+      setDuelTab('results');
+      await revealDuel(A, B, cmp);
+    } catch (e) {
+      $('scanBox').classList.remove('show');
+      showDuelMsg(e.message || t('duelErr'));
+    } finally {
+      btn.disabled = false;
+      btn.querySelector('.fb-main').textContent = t('fightStart');
+      btn.querySelector('.fb-sub').textContent = t('fightSub');
+    }
+  }
+
+  $('duelFightBtn').addEventListener('click', duelFight);
+  ['duelPlateA', 'duelPlateB'].forEach(id => {
+    const el = $(id);
+    el.addEventListener('input', e => { e.target.value = formatPlate(e.target.value); });
+    el.addEventListener('keydown', e => { if (e.key === 'Enter') duelFight(); });
+  });
+
+  /* ================= אתחול ================= */
+  applyStaticI18n();
+  renderHistory();
+  updateHunterUI();
+  restoreState();
 </script>
 </body>
 </html>
