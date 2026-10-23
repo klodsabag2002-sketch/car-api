@@ -1425,7 +1425,7 @@
   function restoreState() {
     let st = null;
     try { st = JSON.parse(store.get(RESTORE_KEY)); } catch (e) {}
-    store.set(RESTORE_KEY, '');
+    // לא מוחקים את המצב השמור: הוא מתעדכן בכל יציאה מהדף, ולכן נשאר גם אם הטעינה מחדש נכשלה
     if (!st) return;
     if (st.duelA) $('duelPlateA').value = st.duelA;
     if (st.duelB) $('duelPlateB').value = st.duelB;
@@ -1433,8 +1433,9 @@
     if (st.view === 'duel') showDuel();
     else if (st.plate && (st.view === 'detail' || st.view === 'card' || st.view === 'hunter')) {
       $('plateInput').value = formatPlate(st.plate);
-      searchCar();
-      if (st.view !== 'detail') setTimeout(() => showSection(st.view), 1600);
+      Promise.resolve(searchCar()).then(() => {
+        if (st.view !== 'detail') showSection(st.view);
+      });
     } else if (st.view === 'hunter' || st.view === 'card') {
       showSection(st.view);
     }
@@ -2869,7 +2870,12 @@
   });
 
   /* ================= אתחול ================= */
-  window.addEventListener('pagehide', () => store.set(RESTORE_KEY, JSON.stringify(currentViewState())));
+  function saveViewState() {
+    try { store.set(RESTORE_KEY, JSON.stringify(currentViewState())); } catch (e) {}
+  }
+  // בטלפון, מעבר לאפליקציה אחרת לא תמיד מפעיל pagehide, לכן שומרים גם כשהדף מוסתר
+  window.addEventListener('pagehide', saveViewState);
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') saveViewState(); });
   applyStaticI18n();
   renderHistory();
   updateHunterUI();
