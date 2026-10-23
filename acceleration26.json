@@ -1,6 +1,106 @@
 [
   {
     "make": "פורשה גרמניה",
+    "model": "911 SPEEDSTER",
+    "yearStart": 2019,
+    "yearEnd": 2020,
+    "hp": 503,
+    "cc": 3996,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 ספידסטר 4.0 אטמוספרי 503/510 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "SPEEDSTER",
+    "yearStart": 2019,
+    "yearEnd": 2020,
+    "hp": 503,
+    "cc": 3996,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 ספידסטר 503 כ\"ס)"
+  },
+  {
+    "make": "פורשה",
+    "model": "ספידסטר",
+    "yearStart": 2019,
+    "yearEnd": 2020,
+    "hp": 503,
+    "cc": 3996,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 ספידסטר 503 כ\"ס)"
+  },
+  {
+    "make": "Porsche",
+    "model": "911 SPEEDSTER",
+    "yearStart": 2019,
+    "yearEnd": 2020,
+    "hp": 503,
+    "cc": 3996,
+    "seconds": 3.8,
+    "source": "נתון יצרן (Porsche 911 Speedster 4.0L 503hp)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "911 DAKAR",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 480,
+    "cc": 2981,
+    "seconds": 3.4,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 דקאר שטח 480 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "911 S/T",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 525,
+    "cc": 3996,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 S/T מהדורה מוגבלת 525 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "911 SPORT CLASSIC",
+    "yearStart": 2022,
+    "yearEnd": 2023,
+    "hp": 550,
+    "cc": 3745,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 ספורט קלאסיק ידני 550 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "718 SPYDER RS",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 500,
+    "cc": 3996,
+    "seconds": 3.4,
+    "source": "רישוי רכב / נתון יצרן (פורשה 718 ספיידר RS 500 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "718 SPYDER",
+    "yearStart": 2019,
+    "yearEnd": 2023,
+    "hp": 420,
+    "cc": 3995,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (פורשה 718 ספיידר 420 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "918 SPYDER",
+    "yearStart": 2013,
+    "yearEnd": 2015,
+    "hp": 887,
+    "cc": 4593,
+    "seconds": 2.6,
+    "source": "רישוי רכב / נתון יצרן (פורשה 918 ספיידר היברידית 887 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
     "model": "718 BOXSTER",
     "yearStart": null,
     "yearEnd": null,
