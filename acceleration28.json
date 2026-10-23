@@ -266,7 +266,7 @@
     "yearEnd": null,
     "hp": 147,
     "cc": 1498,
-    "seconds": 9.9,
+    "seconds": 9.7,
     "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 7 פרו קומפורט 1.5 טורבו 147 כ\"ס)"
   },
   {
@@ -276,8 +276,8 @@
     "yearEnd": null,
     "hp": 147,
     "cc": 1498,
-    "seconds": 9.9,
-    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 7 פרו קומפורט 147 כ\"ס)"
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 7 פרו 147 כ\"ס)"
   },
   {
     "make": "Chery",
@@ -286,8 +286,8 @@
     "yearEnd": null,
     "hp": 147,
     "cc": 1498,
-    "seconds": 9.9,
-    "source": "נתון יצרן (Chery Tiggo 7 Pro Comfort 1.5T)"
+    "seconds": 9.7,
+    "source": "נתון יצרן (Chery Tiggo 7 Pro Comfort 1.5T 147 כ\"ס)"
   },
   {
     "make": "צ'רי",
