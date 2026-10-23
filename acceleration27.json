@@ -1,5 +1,135 @@
 [
   {
+    "make": "פרארי",
+    "model": "PORTOFINO",
+    "yearStart": 2018,
+    "yearEnd": 2023,
+    "hp": 600,
+    "cc": 3855,
+    "seconds": 3.5,
+    "source": "רישוי רכב (267-77-702) / נתון יצרן (פרארי פורטופינו 600 כ\"ס)"
+  },
+  {
+    "make": "פרארי איטליה",
+    "model": "PORTOFINO",
+    "yearStart": 2018,
+    "yearEnd": 2023,
+    "hp": 600,
+    "cc": 3855,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (פרארי איטליה פורטופינו 600 כ\"ס)"
+  },
+  {
+    "make": "פרארי איטליה",
+    "model": "PORTOFINO M",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "hp": 620,
+    "cc": 3855,
+    "seconds": 3.45,
+    "source": "רישוי רכב / נתון יצרן (פרארי איטליה פורטופינו M 620 כ\"ס)"
+  },
+  {
+    "make": "פרארי איטליה",
+    "model": "פורטופינו",
+    "yearStart": 2018,
+    "yearEnd": null,
+    "hp": 600,
+    "cc": 3855,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (פרארי פורטופינו 600 כ\"ס)"
+  },
+  {
+    "make": "פרארי",
+    "model": "12CILINDRI",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 830,
+    "cc": 6496,
+    "seconds": 2.9,
+    "source": "רישוי רכב / נתון יצרן (פרארי 12 צ'ילינדרי 6.5 V12 אטמוספרי 830 כ\"ס)"
+  },
+  {
+    "make": "Ferrari",
+    "model": "12CILINDRI",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 830,
+    "cc": 6496,
+    "seconds": 2.9,
+    "source": "נתון יצרן (Ferrari 12Cilindri 830hp)"
+  },
+  {
+    "make": "פרארי",
+    "model": "DAYTONA SP3",
+    "yearStart": 2022,
+    "yearEnd": null,
+    "hp": 840,
+    "cc": 6496,
+    "seconds": 2.85,
+    "source": "רישוי רכב / נתון יצרן (פרארי דייטונה SP3 סדרה מוגבלת 840 כ\"ס)"
+  },
+  {
+    "make": "פרארי",
+    "model": "LAFERRARI",
+    "yearStart": 2013,
+    "yearEnd": 2018,
+    "hp": 963,
+    "cc": 6262,
+    "seconds": 2.6,
+    "source": "רישוי רכב / נתון יצרן (לה-פרארי היפרקאר היברידית 963 כ\"ס משולב)"
+  },
+  {
+    "make": "פרארי",
+    "model": "F430",
+    "yearStart": 2004,
+    "yearEnd": 2009,
+    "hp": 490,
+    "cc": 4308,
+    "seconds": 4.0,
+    "source": "רישוי רכב / נתון יצרן (פרארי F430 4.3 V8 490 כ\"ס)"
+  },
+  {
+    "make": "פרארי",
+    "model": "F430 SCUDERIA",
+    "yearStart": 2007,
+    "yearEnd": 2009,
+    "hp": 510,
+    "cc": 4308,
+    "seconds": 3.6,
+    "source": "רישוי רכב / נתון יצרן (פרארי 430 סקודריה 510 כ\"ס)"
+  },
+  {
+    "make": "פרארי",
+    "model": "360 MODENA",
+    "yearStart": 1999,
+    "yearEnd": 2005,
+    "hp": 400,
+    "cc": 3586,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (פרארי 360 מודנה 400 כ\"ס)"
+  },
+  {
+    "make": "פרארי",
+    "model": "360 SPIDER",
+    "yearStart": 2000,
+    "yearEnd": 2005,
+    "hp": 400,
+    "cc": 3586,
+    "seconds": 4.6,
+    "source": "רישוי רכב / נתון יצרן (פרארי 360 ספיידר 400 כ\"ס)"
+  },
+  {
+    "make": "פרארי",
+    "model": "599 GTB FIORANO",
+    "yearStart": 2006,
+    "yearEnd": 2012,
+    "hp": 620,
+    "cc": 5999,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (פרארי 599 GTB פיוראנו 6.0 V12 620 כ\"ס)"
+  },
+  {
     "make": "פיג'ו צרפת",
     "model": "3008",
     "yearStart": null,
