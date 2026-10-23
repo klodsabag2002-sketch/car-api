@@ -1071,13 +1071,33 @@
   },
   {
     "make": "רנו צרפת",
+    "model": "CLIO",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 220,
+    "cc": 1618,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (רנו צרפת CLIO RS 220 כ\"ס - לוחית רישוי 20800501)"
+  },
+  {
+    "make": "רנו צרפת",
     "model": "CLIO RS",
     "yearStart": null,
     "yearEnd": null,
     "hp": 220,
     "cc": 1618,
     "seconds": 6.6,
-    "source": "רישוי רכב / נתון יצרן (רנו צרפת CLIO RS טרופי 1.6 טורבו 220 כ\"ס - לוחית רישוי 20800501)"
+    "source": "רישוי רכב / נתון יצרן (רנו צרפת CLIO RS 220 כ\"ס - לוחית רישוי 20800501)"
+  },
+  {
+    "make": "רנו",
+    "model": "CLIO RS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 220,
+    "cc": 1618,
+    "seconds": 6.6,
+    "source": "רישוי רכב / נתון יצרן (רנו CLIO RS 220 כ\"ס)"
   },
   {
     "make": "רנו ד.קוריאה",
