@@ -98,7 +98,7 @@ const ACCEL_FILES = [
     "acceleration17.json", "acceleration18.json", "acceleration19.json", "acceleration20.json",
     "acceleration21.json", "acceleration22.json", "acceleration23.json", "acceleration24.json",
     "acceleration25.json", "acceleration26.json", "acceleration27.json", "acceleration28.json",
-    "acceleration29.json", "acceleration30.json"
+    "acceleration29.json", "acceleration30.json", "acceleration31.json"
 ];
 
 ACCEL_FILES.forEach(fileName => {
@@ -323,7 +323,6 @@ async function findModelRow(car) {
     for (const filters of attempts) {
         const rows = await searchDatastore(MODELS_ID, filters, 100);
         if (rows.length === 0) continue;
-        // עדיפות לרשומה שיש בה גם הספק וגם נתוני פליטות WLTP, ואחריה רשומה עם הספק בלבד
         return rows.find(r => toNumber(r.koah_sus) != null && toNumber(r.CO2_WLTP) != null)
             || rows.find(r => toNumber(r.koah_sus) != null)
             || rows[0];
@@ -335,8 +334,6 @@ app.get('/', (req, res) => {
     res.status(200).send('Car API is running successfully!');
 });
 
-// בדיקה בלבד: מחזיר שמות שדות (בלי ערכים) של רשומת רכב ורשומת דגם
-// חייב להיות לפני /api/car/:plate
 app.get('/api/car/inspect', async (req, res) => {
     try {
         const [carRows, modelRows] = await Promise.all([
@@ -379,7 +376,6 @@ app.get('/api/car/:plate', async (req, res) => {
         const engineCc = toNumber(row?.nefah_manoa) ?? toNumber(car.nefah_manoa);
         const fuelType = toText(row?.sug_delek_nm) || toText(car.sug_delek_nm) || "";
 
-        // ---------- חישוב הספק משולב (HEV / PHEV) ----------
         let combinedHp = hp;
         let isPhev = false;
         let isHev = false;
@@ -407,7 +403,6 @@ app.get('/api/car/:plate', async (req, res) => {
         }
 
         const isHybridOrPhev = isPhev || isHev;
-        // ----------------------------------------------------
 
         const testExpiry = car.tokef_dt || null;
         const bodyType = resolveBodyType(car, row);
@@ -438,7 +433,6 @@ app.get('/api/car/:plate', async (req, res) => {
             return n === null ? null : n === 1;
         };
 
-        // תיבת הילוכים: שדה automatic_ind במאגר הדגם (1 = אוטומטי). לאופנועים אין שדה כזה
         const isAutomatic = fflag("automatic_ind");
         const transmission = isAutomatic === null ? null : (isAutomatic ? "אוטומטי" : "ידני");
 
@@ -460,7 +454,6 @@ app.get('/api/car/:plate', async (req, res) => {
             powerSteering: fflag("hege_koah_ind")
         };
 
-        // שדות עזרי נהיגה נמצאים ברשומת הדגם (MODELS_ID) ולכן fv/fflag קוראים משם
         const safety = {
             laneDeparture: fflag("bakarat_stiya_menativ_ind") ?? fflag("bakarat_stiya_activ_s"),
             pedestrianDetection: fflag("zihuy_holchey_regel_ind") ?? fflag("blimat_hirum_lifnei_holhei_regel_ofanaim"),
@@ -476,8 +469,6 @@ app.get('/api/car/:plate', async (req, res) => {
             tirePressure: fflag("hayshaney_lahatz_avir_batzmigim_ind")
         };
 
-        // פליטות לפי תקן WLTP (לפי דגם)
-        // במאגר הדגם חלק מהרכבים מופיעים בשדות kamut_* (גרם/ק"מ) במקום שדות *_WLTP
         const fnumGramsToMg = (key) => {
             const n = fnum(key);
             return n === null ? null : Math.round(n * 1000 * 10) / 10;
@@ -487,7 +478,6 @@ app.get('/api/car/:plate', async (req, res) => {
             noxWltp: fnum("NOX_WLTP") ?? fnumGramsToMg("kamut_NOX"),
             hcWltp: fnum("HC_WLTP") ?? fnumGramsToMg("kamut_HC"),
             pmWltp: fnum("PM_WLTP") ?? fnumGramsToMg("kamut_PM10"),
-            // עירוני ובין-עירוני בנפרד (שדות kamut_*_city / kamut_*_hway), נמדדו לפי תקן מבחן ישן ולא WLTP
             co2City: fnum("kamut_CO2_city"),
             co2Highway: fnum("kamut_CO2_hway"),
             source: fnum("CO2_WLTP") !== null ? "WLTP"
@@ -496,8 +486,6 @@ app.get('/api/car/:plate', async (req, res) => {
                 : null
         };
 
-        // צריכת דלק משוערת מתוך CO2 לפי WLTP: ק"מ לליטר = תכולת CO2 לליטר דלק ÷ CO2 לק"מ
-        // בנזין: כ-2310 גרם CO2 לליטר, דיזל: כ-2680 גרם CO2 לליטר (ערכים סטנדרטיים)
         const FUEL_CO2_PER_LITER = { petrol: 2310, diesel: 2680 };
         const isElectricFuel = /חשמל/.test(fuelType);
         let fuelKind = null;
@@ -578,7 +566,6 @@ app.get('/api/history/:plate', async (req, res) => {
     }
 });
 
-// ---------- חיפוש לפי מספר שלדה / מידע חלקי ----------
 function mapCandidate(r) {
     return {
         plate: String(r.mispar_rechev ?? ''),
@@ -602,25 +589,13 @@ app.get('/api/search/chassis/:chassis', async (req, res) => {
     }
 });
 
-// ---------- אופנועים (מאגר דו-גלגלי) ----------
 const BIKE_REGISTRY_ID = "bf9df4e2-d90d-4c0a-a400-19e15af8e95f";
 
-// רשימה מפורשת של שדות שמותר להחזיר. שמות בעלים ותעודות זהות לא נכללים בכלל
 const BIKE_ALLOWED_FIELDS = [
-    "mispar_rechev",
-    "tozeret_nm",
-    "tozeret_eretz_nm",
-    "degem_nm",
-    "shnat_yitzur",
-    "sug_delek_nm",
-    "nefach_manoa",
-    "hespek",
-    "mishkal_kolel",
-    "mispar_mekomot",
-    "misgeret",
-    "moed_aliya_lakvish",
-    "baalut",
-    "mkoriut_nm"
+    "mispar_rechev", "tozeret_nm", "tozeret_eretz_nm", "degem_nm",
+    "shnat_yitzur", "sug_delek_nm", "nefach_manoa", "hespek",
+    "mishkal_kolel", "mispar_mekomot", "misgeret", "moed_aliya_lakvish",
+    "baalut", "mkoriut_nm"
 ];
 
 function pickBikeFields(rec) {
@@ -635,7 +610,6 @@ function pickBikeFields(rec) {
     return out;
 }
 
-// בדיקה בלבד: מחזיר את סיבת הכשל (אם יש) ושמות שדות
 app.get('/api/bike/inspect', async (req, res) => {
     try {
         const url = `https://data.gov.il/api/3/action/datastore_search?resource_id=${BIKE_REGISTRY_ID}&limit=1`;
@@ -663,7 +637,6 @@ app.get('/api/bike/inspect', async (req, res) => {
     }
 });
 
-// בדיקה בלבד: מחפש במאגר data.gov.il מאגרים הקשורים לדו-גלגלי ומחזיר את שמותיהם ומזהי המשאבים
 app.get('/api/bike/datasets', async (req, res) => {
     const terms = ['אופנוע', 'דו גלגלי', 'דגמי רכב', 'כלי רכב', 'רישוי רכב', 'מנוע הילוכים'];
     try {
@@ -692,7 +665,6 @@ app.get('/api/bike/datasets', async (req, res) => {
     }
 });
 
-// חיפוש אופנוע לפי מספר לוחית (מסנן מדויק על mispar_rechev)
 app.get('/api/bike/:plate', async (req, res) => {
     const plate = req.params.plate.replace(/\D/g, '');
     if (plate.length < 5) return res.json({ success: false, message: 'מספר לא תקין' });
@@ -709,8 +681,6 @@ app.get('/api/bike/:plate', async (req, res) => {
     }
 });
 
-// ---------- כלי רכב כבדים (מעל 3.5 טון) - בדיקת שדות בלבד ----------
-// מזהה המשאב נלקח מרשימת המאגרים; לפני חיפוש לפי לוחית צריך לראות את השדות (בלי ערכים)
 const HEAVY_REGISTRY_ID = "cd3acc5c-03c3-4c89-9c54-d40f93c0d790";
 
 app.get('/api/heavy/inspect', async (req, res) => {
@@ -734,7 +704,6 @@ app.get('/api/heavy/inspect', async (req, res) => {
     }
 });
 
-// שדות מותרים לכלי רכב כבד. לא כוללים מספר שלדה, מספר מנוע ופרטי בעלים
 const HEAVY_ALLOWED_FIELDS = [
     "mispar_rechev", "tozeret_nm", "tozeret_eretz_nm", "degem_nm", "shnat_yitzur",
     "sug_delek_nm", "nefach_manoa", "mishkal_kolel", "hanaa_nm", "grira_nm",
