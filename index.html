@@ -158,6 +158,8 @@
   .pc[data-r="epic"] { --accent: #a78bfa; --accent2: #7c3aed; --tier-glow: rgba(167,139,250,.22); }
   .pc[data-r="legendary"] { --accent: #facc15; --accent2: #ca8a04; --tier-glow: rgba(250,204,21,.22); }
   .pc[data-r="common"] { --accent: #94a3b8; --accent2: #475569; --tier-glow: rgba(148,163,184,.12); }
+  /* קלף יבוא אישי: צבע כתום כדי להבדיל מכרטיס רכב פרטי */
+  .pc.pi { --accent: #f59e0b; --accent2: #b45309; --tier-glow: rgba(245,158,11,.22); }
   .pc-body {
     position: relative; overflow: hidden; border-radius: 20.5px;
     background: linear-gradient(180deg,#0b1224 0%,#070c18 100%);
@@ -2341,6 +2343,80 @@
     box.style.display = 'block';
   }
 
+  async function fetchPersonalImportByPlate(plate) {
+    try {
+      const r = await fetch(API_BASE + '/api/personal-import/' + encodeURIComponent(plate));
+      const j = await r.json();
+      if (j && j.success && j.data) return j.data;
+    } catch (e) {}
+    return null;
+  }
+
+  function showPersonalImportResult(plate, p) {
+    const box = $('bikeResult');
+    const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    const txt = v => (v === null || v === undefined) ? '' : cleanText(String(v)) || '';
+    const L = isEn
+      ? { mf: 'Manufacturer', md: 'Model', yr: 'Year', fu: 'Fuel', pl: 'Plate', it: 'Import type', fr: 'First on road', lt: 'Last test', lv: 'License valid until', cc: 'Engine', wt: 'Total weight', na: 'No data', kg: 'kg' }
+      : { mf: 'יצרן', md: 'דגם', yr: 'שנה', fu: 'דלק', pl: 'מספר רכב', it: 'סוג יבוא', fr: 'עלייה לכביש', lt: 'טסט אחרון', lv: 'תוקף רישוי', cc: 'נפח מנוע', wt: 'משקל כולל', na: 'אין נתון', kg: 'ק"ג' };
+    const make = txt(p.manufacturer) || '-';
+    const model = txt(p.model);
+    const cc = Number(p.engineCc) || 0;
+    const weight = Number(p.totalWeight) || 0;
+    const ccW = Math.min(cc / 6000 * 100, 100).toFixed(1);
+    const wW = Math.min(weight / 3000 * 100, 100).toFixed(1);
+    const tier = txt(p.importType) || L.it;
+    const kv = [
+      [L.mf, make], [L.md, model], [L.yr, txt(p.year)], [L.fu, txt(p.fuel)], [L.pl, formatPlate(plate)],
+      [L.it, txt(p.importType)], [L.fr, txt(p.firstOnRoad)], [L.lt, txt(p.lastTest)], [L.lv, txt(p.licenseValidUntil)]
+    ];
+    const kvHtml = kv.map(([k, v]) => `<div class="bike-kv"><span class="k">${esc(k)}</span><span class="v${v ? '' : ' na'}">${esc(v || L.na)}</span></div>`).join('');
+    const brand = findBrand(p.manufacturer, p.model);
+    const logoSrc = getLogoSrc(brand);
+    const logoHtml = logoSrc
+      ? `<img src="${esc(logoSrc)}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:6px;" onerror="this.style.display='none';this.nextElementSibling.style.display='inline';"><span class="pc-logo-txt" style="display:none;">${esc(make.charAt(0))}</span>`
+      : `<span class="pc-logo-txt">${esc(make.charAt(0))}</span>`;
+
+    box.innerHTML = `
+      <div class="pc-wrap">
+        <div class="pc play pi" data-r="rare">
+          <div class="pc-body">
+            <div class="pc-sheen"></div>
+            <div class="pc-head">
+              <div class="pc-brand">
+                <div class="pc-logo" style="position:relative;">${logoHtml}</div>
+                <div>
+                  <div class="pc-label">PERSONAL IMPORT PROFILE</div>
+                  <span class="pc-tier">${esc(tier)}</span>
+                </div>
+              </div>
+              <div class="pc-hp"><b>${cc || '-'}</b><small>CC</small></div>
+            </div>
+            <div class="pc-name">${esc(make)}</div>
+            <div class="pc-model">${esc(model || '-')}</div>
+            <div class="pc-divider"></div>
+            <div class="pc-stats">
+              <div class="pc-row">
+                <div class="pc-row-head"><span class="l">${esc(L.cc)}</span><span class="v">${cc ? esc(cc + ' ' + t('uCc')) : esc(L.na)}</span></div>
+                <div class="pc-bar"><i class="pc-fill" style="--w:${ccW}%"></i></div>
+              </div>
+              <div class="pc-row">
+                <div class="pc-row-head"><span class="l">${esc(L.wt)}</span><span class="v">${weight ? esc(weight + ' ' + L.kg) : esc(L.na)}</span></div>
+                <div class="pc-bar"><i class="pc-fill" style="--w:${wW}%"></i></div>
+              </div>
+            </div>
+            <div style="position:relative;z-index:2;margin-top:12px;">${kvHtml}</div>
+            <div class="pc-foot">
+              <div class="pc-plate"><span class="ps">✡IL</span><span class="pn">${esc(formatPlate(plate))}</span></div>
+              <span class="pc-serial">IMPORT</span>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    box.className = 'pc-section';
+    box.style.display = 'block';
+  }
+
   async function searchCar() {
     const plate = $('plateInput').value.replace(/\D/g, '');
     const btn = $('searchBtn'), loader = $('loader'), err = $('errorMsg');
@@ -2364,6 +2440,21 @@
     loader.style.display = 'block';
     btn.disabled = true;
     try {
+      // קודם בודקים אם הרכב ביבוא אישי: אם כן, מציגים קלף יבוא אישי מיוחד
+      const pi = await fetchPersonalImportByPlate(plate);
+      if (pi) {
+        loader.style.display = 'none';
+        currentPlate = plate;
+        showPersonalImportResult(plate, pi);
+        addToHistory({
+          plate, manufacturer: pi.manufacturer || '',
+          name: cleanText((pi.manufacturer || '') + ' ' + (pi.model || '')),
+          year: pi.year ? String(pi.year) : '',
+          time: nowTime()
+        });
+        showDetail();
+        return;
+      }
       let d;
       try {
         if (cachedCar && cachedCar.plate === plate) { d = cachedCar.d; cachedCar = null; }
