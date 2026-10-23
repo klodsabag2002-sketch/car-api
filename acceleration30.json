@@ -1,5 +1,125 @@
 [
   {
+    "make": "\"שברולט ארהב",
+    "model": "CORVETTE",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 670,
+    "cc": 5463,
+    "seconds": 2.7,
+    "source": "רישוי רכב / נתון יצרן (שברולט קורבט C8 Z06 2LT 5.5 V8 670 כ\"ס)"
+  },
+  {
+    "make": "שברולט ארהב\"",
+    "model": "CORVETTE",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 670,
+    "cc": 5463,
+    "seconds": 2.7,
+    "source": "רישוי רכב / נתון יצרן (שברולט קורבט C8 Z06 5.5 V8 670 כ\"ס)"
+  },
+  {
+    "make": "שברולט ארה\"ב",
+    "model": "CORVETTE",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 670,
+    "cc": 5463,
+    "seconds": 2.7,
+    "source": "רישוי רכב / נתון יצרן (שברולט קורבט C8 Z06 670 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "CORVETTE C8 Z06",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 670,
+    "cc": 5463,
+    "seconds": 2.7,
+    "source": "רישוי רכב / נתון יצרן (שברולט קורבט C8 Z06 670 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "קורבט Z06",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 670,
+    "cc": 5463,
+    "seconds": 2.7,
+    "source": "רישוי רכב / נתון יצרן (שברולט קורבט Z06 670 כ\"ס)"
+  },
+  {
+    "make": "שברולט",
+    "model": "קורבט",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 670,
+    "cc": 5463,
+    "seconds": 2.7,
+    "source": "רישוי רכב / נתון יצרן (שברולט קורבט 670 כ\"ס)"
+  },
+  {
+    "make": "Chevrolet",
+    "model": "CORVETTE",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 670,
+    "cc": 5463,
+    "seconds": 2.7,
+    "source": "נתון יצרן (Chevrolet Corvette C8 Z06 5.5L 670hp)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "CORVETTE E-RAY",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 655,
+    "cc": 6162,
+    "seconds": 2.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט קורבט E-Ray היברידית AWD 655 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "CORVETTE",
+    "yearStart": 2014,
+    "yearEnd": 2019,
+    "hp": 460,
+    "cc": 6162,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (שברולט קורבט C7 סטינגריי 6.2 V8 460 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "CORVETTE Z06",
+    "yearStart": 2015,
+    "yearEnd": 2019,
+    "hp": 650,
+    "cc": 6162,
+    "seconds": 3.0,
+    "source": "רישוי רכב / נתון יצרן (שברולט קורבט C7 Z06 סופרצ'ארג'ר 650 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "CAMARO ZL1",
+    "yearStart": 2017,
+    "yearEnd": 2024,
+    "hp": 650,
+    "cc": 6162,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט קמארו ZL1 סופרצ'ארג'ר 6.2 V8 650 כ\"ס)"
+  },
+  {
+    "make": "\"שברולט ארהב",
+    "model": "MALIBU",
+    "yearStart": 2016,
+    "yearEnd": 2022,
+    "hp": 250,
+    "cc": 1998,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (שברולט מאליבו 2.0 טורבו 250 כ\"ס)"
+  },
+  {
     "make": "שברולט ד.קוריאה",
     "model": "CRUZE 1.6 LS",
     "yearStart": null,
