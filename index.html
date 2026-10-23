@@ -861,6 +861,7 @@
   const HUNTER_LOCAL_LB_KEY = "hunterLocalLeaderboard_v2";
   const LANG_KEY = "appLang";
   const RESTORE_KEY = "appRestoreState";
+  const LAST_CAR_KEY = "appLastCar";
 
   const wait = ms => new Promise(r => setTimeout(r, ms));
   const $ = id => document.getElementById(id);
@@ -1158,6 +1159,7 @@
 
   let currentPlate = "";
   let currentCarData = null;
+  let cachedCar = null; // רכב שנשמר לפני טעינה מחדש: נטען מהמטמון במקום מהשרת
   let inDetail = false;
   let currentCarNickname = t('defaultNick');
   let isShowingCombinedHp = false;
@@ -1433,6 +1435,7 @@
     if (st.view === 'duel') showDuel();
     else if (st.plate && (st.view === 'detail' || st.view === 'card' || st.view === 'hunter')) {
       $('plateInput').value = formatPlate(st.plate);
+      try { cachedCar = JSON.parse(store.get(LAST_CAR_KEY)); } catch (e) { cachedCar = null; }
       Promise.resolve(searchCar()).then(() => {
         if (st.view !== 'detail') showSection(st.view);
       });
@@ -2338,7 +2341,8 @@
     try {
       let d;
       try {
-        d = await fetchCarByPlate(plate);
+        if (cachedCar && cachedCar.plate === plate) { d = cachedCar.d; cachedCar = null; }
+        else d = await fetchCarByPlate(plate);
       } catch (carErr) {
         // לא נמצא ברכבים פרטיים - בודקים במאגר האופנועים ואז במאגר הרכבים הכבדים
         let kind = 'bike';
@@ -2363,6 +2367,7 @@
       loader.style.display = 'none';
       currentPlate = plate;
       currentCarData = d;
+      try { store.set(LAST_CAR_KEY, JSON.stringify({ plate, d })); } catch (e) {}
       addCarToHunterCollection(plate, d);
       const brand = findBrand(d.manufacturer, d.model);
 
