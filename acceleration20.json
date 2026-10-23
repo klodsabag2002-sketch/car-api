@@ -1,6 +1,86 @@
 [
   {
     "make": "ניסאן יפן",
+    "model": "GT-R",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 550,
+    "cc": 3799,
+    "seconds": 2.8,
+    "source": "רישוי רכב / נתון יצרן (ניסאן GT-R בלאק אדישן 3.8 V6 טווין-טורבו 550 כ\"ס)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "GTR",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 550,
+    "cc": 3799,
+    "seconds": 2.8,
+    "source": "רישוי רכב / נתון יצרן (ניסאן GTR 550 כ\"ס)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "GT-R BLACK EDITION",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 550,
+    "cc": 3799,
+    "seconds": 2.8,
+    "source": "רישוי רכב / נתון יצרן (ניסאן GT-R Black Edition 550 כ\"ס)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "GT-R LACK EDITION",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 550,
+    "cc": 3799,
+    "seconds": 2.8,
+    "source": "רישוי רכב / נתון יצרן (ניסאן GT-R Lack Edition 550 כ\"ס)"
+  },
+  {
+    "make": "ניסאן",
+    "model": "Gtr",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 550,
+    "cc": 3799,
+    "seconds": 2.8,
+    "source": "רישוי רכב / נתון יצרן (ניסאן GT-R 550 כ\"ס)"
+  },
+  {
+    "make": "Nissan",
+    "model": "GT-R",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 550,
+    "cc": 3799,
+    "seconds": 2.8,
+    "source": "נתון יצרן (Nissan GT-R Black Edition 550hp)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "GT-R",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 485,
+    "cc": 3799,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (ניסאן GT-R דור ראשון 3.8 V6 485 כ\"ס)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "GT-R",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 3799,
+    "seconds": 3.0,
+    "source": "רישוי רכב / נתון יצרן (ניסאן GT-R 3.8 V6 530 כ\"ס)"
+  },
+  {
+    "make": "ניסאן יפן",
     "model": "X-TRAIL",
     "yearStart": null,
     "yearEnd": null,
@@ -1590,6 +1670,16 @@
     "source": "רישוי רכב / נתון יצרן (ניסאן פאת'פיינדר 3.5 V6 בנזין 260)"
   },
   {
+    "make": "\"ניסאן ארהב",
+    "model": "PATHFINDER HYBRID",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 250,
+    "cc": 2488,
+    "seconds": 8.2,
+    "source": "רישוי רכב / נתון יצרן (ניסאן פאת'פיינדר היברידי 2.5 250)"
+  },
+  {
     "make": "ניסאן",
     "model": "פאתפיינדר",
     "yearStart": null,
@@ -1738,6 +1828,16 @@
     "cc": 2997,
     "seconds": 4.5,
     "source": "נתון יצרן (Nissan Z 3.0T)"
+  },
+  {
+    "make": "ניסאן יפן",
+    "model": "TERRA",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 190,
+    "cc": 2488,
+    "seconds": 10.5,
+    "source": "רישוי רכב / נתון יצרן (ניסאן טרה SUV שטח 190)"
   },
   {
     "make": "ניסאן יפן",
