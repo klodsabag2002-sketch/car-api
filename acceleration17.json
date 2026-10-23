@@ -1,6 +1,96 @@
 [
   {
     "make": "מרצדס בנץ גרמן",
+    "model": "AMG GTS",
+    "yearStart": 2015,
+    "yearEnd": 2020,
+    "hp": 510,
+    "cc": 3982,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (מרצדס AMG GT S קופה 4.0 V8 510 כ\"ס)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "AMG GT S",
+    "yearStart": 2015,
+    "yearEnd": 2020,
+    "hp": 510,
+    "cc": 3982,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (מרצדס AMG GT S 4.0 V8 510 כ\"ס)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "AMG GT C",
+    "yearStart": 2017,
+    "yearEnd": 2021,
+    "hp": 557,
+    "cc": 3982,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (מרצדס AMG GT C 4.0 V8 557 כ\"ס)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "AMG GT R",
+    "yearStart": 2017,
+    "yearEnd": 2021,
+    "hp": 585,
+    "cc": 3982,
+    "seconds": 3.6,
+    "source": "רישוי רכב / נתון יצרן (מרצדס AMG GT R 4.0 V8 585 כ\"ס)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "AMG GT BLACK SERIES",
+    "yearStart": 2020,
+    "yearEnd": 2021,
+    "hp": 730,
+    "cc": 3982,
+    "seconds": 3.2,
+    "source": "רישוי רכב / נתון יצרן (מרצדס AMG GT Black Series 730 כ\"ס)"
+  },
+  {
+    "make": "מרצדס",
+    "model": "AMG GT S",
+    "yearStart": 2015,
+    "yearEnd": 2020,
+    "hp": 510,
+    "cc": 3982,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (מרצדס AMG GT S 510 כ\"ס)"
+  },
+  {
+    "make": "מרצדס",
+    "model": "AMG GTS",
+    "yearStart": 2015,
+    "yearEnd": 2020,
+    "hp": 510,
+    "cc": 3982,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (מרצדס AMG GTS 510 כ\"ס)"
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "AMG GT S",
+    "yearStart": 2015,
+    "yearEnd": 2020,
+    "hp": 510,
+    "cc": 3982,
+    "seconds": 3.8,
+    "source": "נתון יצרן (Mercedes-Benz AMG GT S 510hp)"
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "AMG GTS",
+    "yearStart": 2015,
+    "yearEnd": 2020,
+    "hp": 510,
+    "cc": 3982,
+    "seconds": 3.8,
+    "source": "נתון יצרן (Mercedes-Benz AMG GT S 510hp)"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
     "model": "C180",
     "yearStart": null,
     "yearEnd": null,
