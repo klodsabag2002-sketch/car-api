@@ -734,6 +734,43 @@ app.get('/api/heavy/:plate', async (req, res) => {
     }
 });
 
+// ---------- מאגר כלי רכב ביבוא אישי (data.gov.il) ----------
+const PERSONAL_IMPORT_ID = "03adc637-b6fe-402b-9937-7c3d3afc9140";
+
+app.get('/api/personal-import/:plate', async (req, res) => {
+    const plate = req.params.plate.replace(/\D/g, '');
+    if (plate.length < 5) return res.json({ success: false, message: 'מספר לא תקין' });
+    try {
+        const records = await searchDatastore(PERSONAL_IMPORT_ID, { mispar_rechev: Number(plate) }, 1);
+        const r = records[0];
+        if (!r) return res.json({ success: false, message: 'הרכב לא נמצא במאגר יבוא אישי' });
+        res.json({
+            success: true,
+            data: {
+                plate,
+                manufacturer: toText(r.tozeret_nm),
+                manufacturerCountry: toText(r.tozeret_eretz_nm),
+                model: toText(r.degem_nm),
+                engineModel: toText(r.degem_manoa),
+                year: toNumber(r.shnat_yitzur),
+                engineCc: toNumber(r.nefach_manoa),
+                totalWeight: toNumber(r.mishkal_kolel),
+                fuel: toText(r.sug_delek_nm),
+                vehicleType: toText(r.sug_rechev_nm),
+                importType: toText(r.sug_yevu),
+                firstOnRoad: toText(r.moed_aliya_lakvish),
+                lastTest: toText(r.mivchan_acharon_dt),
+                licenseValidUntil: toText(r.tokef_dt)
+            }
+        });
+    } catch (e) {
+        if (e.message === 'DATASTORE_UNAVAILABLE') {
+            return res.status(503).json({ success: false, message: 'שירות משרד התחבורה לא זמין כרגע, נסה שוב בעוד דקה' });
+        }
+        res.status(500).json({ success: false, message: 'שגיאה בשליפה' });
+    }
+});
+
 app.listen(PORT, () => {
     console.log(`השרת רץ בפורט ${PORT}`);
 });
