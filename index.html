@@ -10,10 +10,18 @@
     try { l = window.localStorage.getItem('appLang') === 'en' ? 'en' : 'he'; } catch (e) {}
     document.documentElement.lang = l;
     document.documentElement.dir = l === 'en' ? 'ltr' : 'rtl';
+    // אם הדף נטען מחדש על רכב, מסתירים את דף הבית מההתחלה כדי שלא יתחלף הבזק שלו
+    try {
+      var st = JSON.parse(window.sessionStorage.getItem('appRestoreState'));
+      if (st && st.plate && (st.view === 'detail' || st.view === 'card' || st.view === 'hunter')) {
+        document.documentElement.classList.add('restoring');
+      }
+    } catch (e) {}
   })();
 </script>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
+  .restoring #homeHero, .restoring .search-box, .restoring #history { display: none !important; }
   body { font-family: 'Segoe UI', Arial, Helvetica, sans-serif; background: #030712; color: #f8fafc; direction: rtl; min-height: 100vh; overflow-x: hidden; }
 
   .phone {
@@ -867,6 +875,17 @@
   const $ = id => document.getElementById(id);
 
   /* ================= אחסון בטוח ================= */
+  // sessionStorage: נשמר רק לאורך חיי הלשונית (גם בהחלקה למעלה), ונמחק בסגירת האפליקציה
+  const sessionStore = {
+    get(key) {
+      try { const v = window.sessionStorage.getItem(key); if (v !== null) return v; } catch (e) {}
+      return memStore[key] !== undefined ? memStore[key] : null;
+    },
+    set(key, value) {
+      memStore[key] = value;
+      try { window.sessionStorage.setItem(key, value); } catch (e) {}
+    }
+  };
   const memStore = {};
   const store = {
     get(key) {
@@ -1160,6 +1179,7 @@
   let currentPlate = "";
   let currentCarData = null;
   let cachedCar = null; // רכב שנשמר לפני טעינה מחדש: נטען מהמטמון במקום מהשרת
+  let skipTransitionOnce = false; // בטעינה מחדש לא מציגים שוב את אנימציית הטעינה
   let inDetail = false;
   let currentCarNickname = t('defaultNick');
   let isShowingCombinedHp = false;
@@ -1420,25 +1440,29 @@
     };
   }
   function toggleLang() {
-    store.set(RESTORE_KEY, JSON.stringify(currentViewState()));
+    sessionStore.set(RESTORE_KEY, JSON.stringify(currentViewState()));
     store.set(LANG_KEY, isEn ? 'he' : 'en');
     window.location.reload();
   }
   function restoreState() {
     let st = null;
-    try { st = JSON.parse(store.get(RESTORE_KEY)); } catch (e) {}
-    // לא מוחקים את המצב השמור: הוא מתעדכן בכל יציאה מהדף, ולכן נשאר גם אם הטעינה מחדש נכשלה
-    if (!st) return;
+    try { st = JSON.parse(sessionStore.get(RESTORE_KEY)); } catch (e) {}
+    // המצב נשמר רק בהחלפת שפה. מוחקים אותו מיד, כדי שרענון או יציאה מהאפליקציה יפתחו דף בית
+    if (!st) { document.documentElement.classList.remove('restoring'); return; }
     if (st.duelA) $('duelPlateA').value = st.duelA;
     if (st.duelB) $('duelPlateB').value = st.duelB;
     if (st.plate2) $('comparePlate2').value = st.plate2;
-    if (st.view === 'duel') showDuel();
+    if (st.view === 'duel') { document.documentElement.classList.remove('restoring'); showDuel(); }
     else if (st.plate && (st.view === 'detail' || st.view === 'card' || st.view === 'hunter')) {
       $('plateInput').value = formatPlate(st.plate);
-      try { cachedCar = JSON.parse(store.get(LAST_CAR_KEY)); } catch (e) { cachedCar = null; }
+      try { cachedCar = JSON.parse(sessionStore.get(LAST_CAR_KEY)); } catch (e) { cachedCar = null; }
+      const fromCache = !!(cachedCar && cachedCar.plate === st.plate);
+      skipTransitionOnce = fromCache;
       Promise.resolve(searchCar()).then(() => {
+        skipTransitionOnce = false;
+        document.documentElement.classList.remove('restoring');
         if (st.view !== 'detail') showSection(st.view);
-      });
+      }, () => { document.documentElement.classList.remove('restoring'); });
     } else if (st.view === 'hunter' || st.view === 'card') {
       showSection(st.view);
     }
@@ -2200,6 +2224,7 @@
 
   /* ================= מעבר וחיפוש לוחית ================= */
   function triggerTransition(brand, manufacturer, onComplete) {
+    if (skipTransitionOnce) { skipTransitionOnce = false; onComplete(); return; }
     const overlay = $('cyberTransitionOverlay'), ring = $('transitHoloRing');
     const transitLogo = $('transitLogo'), transitBadge = $('transitBadge');
     const brandName = brand ? brand.en : (manufacturer || t('theVehicle'));
@@ -2367,7 +2392,7 @@
       loader.style.display = 'none';
       currentPlate = plate;
       currentCarData = d;
-      try { store.set(LAST_CAR_KEY, JSON.stringify({ plate, d })); } catch (e) {}
+      sessionStore.set(LAST_CAR_KEY, JSON.stringify({ plate, d }));
       addCarToHunterCollection(plate, d);
       const brand = findBrand(d.manufacturer, d.model);
 
@@ -2875,10 +2900,11 @@
   });
 
   /* ================= אתחול ================= */
+  // שמירת המסך הנוכחי ב-sessionStorage: הוא נשמר בהחלקה למעלה (טעינה מחדש של אותה לשונית),
+  // ונמחק כשסוגרים את האפליקציה לגמרי, ולכן הפתיחה הבאה תהיה בדף הבית
   function saveViewState() {
-    try { store.set(RESTORE_KEY, JSON.stringify(currentViewState())); } catch (e) {}
+    try { sessionStore.set(RESTORE_KEY, JSON.stringify(currentViewState())); } catch (e) {}
   }
-  // בטלפון, מעבר לאפליקציה אחרת לא תמיד מפעיל pagehide, לכן שומרים גם כשהדף מוסתר
   window.addEventListener('pagehide', saveViewState);
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') saveViewState(); });
   applyStaticI18n();
