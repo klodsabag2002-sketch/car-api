@@ -1,5 +1,125 @@
 [
   {
+    "make": "ב מ וו גרמניה",
+    "model": "M4",
+    "yearStart": 2016,
+    "yearEnd": 2020,
+    "hp": 450,
+    "cc": 2979,
+    "seconds": 4.0,
+    "source": "רישוי רכב / נתון יצרן (BMW M4 F82 קומפטישן 3.0T 450 כ\"ס)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M4 COMPETITION",
+    "yearStart": 2016,
+    "yearEnd": 2020,
+    "hp": 450,
+    "cc": 2979,
+    "seconds": 4.0,
+    "source": "רישוי רכב / נתון יצרן (BMW M4 Competition F82 450 כ\"ס)"
+  },
+  {
+    "make": "ב מ וו",
+    "model": "M4",
+    "yearStart": 2016,
+    "yearEnd": 2020,
+    "hp": 450,
+    "cc": 2979,
+    "seconds": 4.0,
+    "source": "רישוי רכב / נתון יצרן (BMW M4 450 כ\"ס)"
+  },
+  {
+    "make": "ב.מ.וו",
+    "model": "M4",
+    "yearStart": 2016,
+    "yearEnd": 2020,
+    "hp": 450,
+    "cc": 2979,
+    "seconds": 4.0,
+    "source": "רישוי רכב / נתון יצרן (ב.מ.וו M4 450 כ\"ס)"
+  },
+  {
+    "make": "BMW",
+    "model": "M4",
+    "yearStart": 2016,
+    "yearEnd": 2020,
+    "hp": 450,
+    "cc": 2979,
+    "seconds": 4.0,
+    "source": "נתון יצרן (BMW M4 F82 Competition 450hp)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M4 CS",
+    "yearStart": 2017,
+    "yearEnd": 2020,
+    "hp": 460,
+    "cc": 2979,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (BMW M4 CS F82 460 כ\"ס)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M4 CSL",
+    "yearStart": 2022,
+    "yearEnd": 2023,
+    "hp": 550,
+    "cc": 2993,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (BMW M4 CSL G82 550 כ\"ס)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "420I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 184,
+    "cc": 1998,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (BMW 420i קופה / גראן קופה 184 כ\"ס)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "430I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 245,
+    "cc": 1998,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (BMW 430i 245 כ\"ס)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M440I XDRIVE",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 374,
+    "cc": 2998,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (BMW M440i xDrive 374 כ\"ס)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "740I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 340,
+    "cc": 2998,
+    "seconds": 5.5,
+    "source": "רישוי רכב / נתון יצרן (BMW 740i סדאן פאר 340 כ\"ס)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "745E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 286,
+    "cc": 2998,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (BMW 745e פלאג-אין 286/394 כ\"ס)"
+  },
+  {
     "make": "אקספנג סין",
     "model": "G6 STAND RANGE",
     "yearStart": null,
@@ -318,6 +438,16 @@
     "cc": 2998,
     "seconds": 4.4,
     "source": "רישוי רכב / נתון יצרן (BMW M340i xDrive 374)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M340I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 382,
+    "cc": 2998,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (BMW M340i 382 כ\"ס)"
   },
   {
     "make": "BMW",
