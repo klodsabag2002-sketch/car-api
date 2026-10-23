@@ -1,6 +1,146 @@
 [
   {
     "make": "פורשה גרמניה",
+    "model": "CARRERA S",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "hp": 450,
+    "cc": 2981,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 קאררה S דור 992 3.0T 450 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "CARRERA",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "hp": 385,
+    "cc": 2981,
+    "seconds": 4.2,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 קאררה 3.0T 385 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "CARRERA 4S",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "hp": 450,
+    "cc": 2981,
+    "seconds": 3.6,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 קאררה 4S AWD 450 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "CARRERA 4",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "hp": 385,
+    "cc": 2981,
+    "seconds": 4.2,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 קאררה 4 AWD 385 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "CARRERA GTS",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "hp": 480,
+    "cc": 2981,
+    "seconds": 3.4,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 קאררה GTS 480 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "CARRERA 4 GTS",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "hp": 480,
+    "cc": 2981,
+    "seconds": 3.3,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 קאררה 4 GTS 480 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "CARRERA T",
+    "yearStart": 2022,
+    "yearEnd": null,
+    "hp": 385,
+    "cc": 2981,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 קאררה T קלה 385 כ\"ס)"
+  },
+  {
+    "make": "פורשה",
+    "model": "CARRERA S",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "hp": 450,
+    "cc": 2981,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (פורשה קאררה S 450 כ\"ס)"
+  },
+  {
+    "make": "פורשה",
+    "model": "קאררה S",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "hp": 450,
+    "cc": 2981,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (פורשה קאררה S 450 כ\"ס)"
+  },
+  {
+    "make": "Porsche",
+    "model": "CARRERA S",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "hp": 450,
+    "cc": 2981,
+    "seconds": 3.7,
+    "source": "נתון יצרן (Porsche 911 Carrera S 450hp)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "TARGA 4S",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "hp": 450,
+    "cc": 2981,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 טארגה 4S 450 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "TARGA 4 GTS",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "hp": 480,
+    "cc": 2981,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 טארגה 4 GTS 480 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "GT3 RS",
+    "yearStart": 2022,
+    "yearEnd": null,
+    "hp": 525,
+    "cc": 3996,
+    "seconds": 3.2,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 GT3 RS 525 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "GT2 RS",
+    "yearStart": 2017,
+    "yearEnd": 2019,
+    "hp": 700,
+    "cc": 3800,
+    "seconds": 2.8,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 GT2 RS 700 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
     "model": "911 SPEEDSTER",
     "yearStart": 2019,
     "yearEnd": 2020,
