@@ -1,6 +1,106 @@
 [
   {
     "make": "ב מ וו גרמניה",
+    "model": "M4 COMPETXDRIVE",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 2993,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (BMW M4 Competition xDrive LCI 530 כ\"ס)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M4 COMPETITION XDRIVE",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 2993,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (BMW M4 Competition xDrive 530 כ\"ס)"
+  },
+  {
+    "make": "ב מ וו",
+    "model": "M4 COMPETXDRIVE",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 2993,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (BMW M4 Competition xDrive 530 כ\"ס)"
+  },
+  {
+    "make": "ב.מ.וו",
+    "model": "M4 COMPETXDRIVE",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 2993,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (ב.מ.וו M4 קומפטישן xDrive 530 כ\"ס)"
+  },
+  {
+    "make": "BMW",
+    "model": "M4 COMPETXDRIVE",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 2993,
+    "seconds": 3.5,
+    "source": "נתון יצרן (BMW M4 Competition xDrive 530hp)"
+  },
+  {
+    "make": "BMW",
+    "model": "M4 COMPETITION XDRIVE",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 2993,
+    "seconds": 3.5,
+    "source": "נתון יצרן (BMW M4 Competition xDrive 530hp)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M3 COMPETXDRIVE",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 530,
+    "cc": 2993,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (BMW M3 Competition xDrive LCI 530 כ\"ס)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "M3 CS",
+    "yearStart": 2023,
+    "yearEnd": 2024,
+    "hp": 550,
+    "cc": 2993,
+    "seconds": 3.4,
+    "source": "רישוי רכב / נתון יצרן (BMW M3 CS G80 550 כ\"ס)"
+  },
+  {
+    "make": "אסטון מרטין",
+    "model": "VALHALLA",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 950,
+    "cc": 3982,
+    "seconds": 2.5,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ולהאלה היפרקאר היברידית 950 כ\"ס)"
+  },
+  {
+    "make": "אקספנג סין",
+    "model": "X9",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 496,
+    "cc": 0,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (אקספנג X9 מיניוואן יוקרה חשמלי AWD 496 כ\"ס)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
     "model": "328I CAB",
     "yearStart": 1995,
     "yearEnd": 2000,
