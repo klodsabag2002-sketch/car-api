@@ -1,6 +1,166 @@
 [
   {
     "make": "ב מ וו גרמניה",
+    "model": "328I CAB",
+    "yearStart": 1995,
+    "yearEnd": 2000,
+    "hp": 193,
+    "cc": 2793,
+    "seconds": 7.7,
+    "source": "רישוי רכב / נתון יצרן (BMW 328i קבריולה E36 2.8 193 כ\"ס)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "328I",
+    "yearStart": 1995,
+    "yearEnd": 2000,
+    "hp": 193,
+    "cc": 2793,
+    "seconds": 7.3,
+    "source": "רישוי רכב / נתון יצרן (BMW 328i 2.8 193 כ\"ס)"
+  },
+  {
+    "make": "ב מ וו",
+    "model": "328i",
+    "yearStart": 1995,
+    "yearEnd": 2000,
+    "hp": 193,
+    "cc": 2793,
+    "seconds": 7.5,
+    "source": "רישוי רכב / נתון יצרן (BMW 328i 193 כ\"ס)"
+  },
+  {
+    "make": "BMW",
+    "model": "328I CAB",
+    "yearStart": 1995,
+    "yearEnd": 2000,
+    "hp": 193,
+    "cc": 2793,
+    "seconds": 7.7,
+    "source": "נתון יצרן (BMW 328i Cabriolet E36 193hp)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "328I",
+    "yearStart": 2012,
+    "yearEnd": 2015,
+    "hp": 245,
+    "cc": 1997,
+    "seconds": 5.9,
+    "source": "רישוי רכב / נתון יצרן (BMW 328i F30 2.0 טורבו 245 כ\"ס)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
+    "model": "325I",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 218,
+    "cc": 2996,
+    "seconds": 6.9,
+    "source": "רישוי רכב / נתון יצרן (BMW 325i 218 כ\"ס)"
+  },
+  {
+    "make": "אסטון מרטין",
+    "model": "VANTAGE",
+    "yearStart": 2018,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 3982,
+    "seconds": 3.6,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין ואנטאג' 4.0 V8 טווין-טורבו 510 כ\"ס)"
+  },
+  {
+    "make": "אסטון מרטין",
+    "model": "DB11",
+    "yearStart": 2016,
+    "yearEnd": 2023,
+    "hp": 510,
+    "cc": 3982,
+    "seconds": 4.0,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB11 4.0 V8 510 כ\"ס)"
+  },
+  {
+    "make": "אסטון מרטין",
+    "model": "DB11",
+    "yearStart": 2016,
+    "yearEnd": 2023,
+    "hp": 608,
+    "cc": 5204,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB11 5.2 V12 608 כ\"ס)"
+  },
+  {
+    "make": "אסטון מרטין",
+    "model": "DB12",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 680,
+    "cc": 3982,
+    "seconds": 3.6,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DB12 סופר-טורר 680 כ\"ס)"
+  },
+  {
+    "make": "אסטון מרטין",
+    "model": "DBS SUPERLEGGERA",
+    "yearStart": 2018,
+    "yearEnd": null,
+    "hp": 725,
+    "cc": 5204,
+    "seconds": 3.4,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DBS סופרלג'רה 5.2 V12 725 כ\"ס)"
+  },
+  {
+    "make": "אסטון מרטין",
+    "model": "DBX",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "hp": 550,
+    "cc": 3982,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DBX SUV 4.0 V8 550 כ\"ס)"
+  },
+  {
+    "make": "אסטון מרטין",
+    "model": "DBX707",
+    "yearStart": 2022,
+    "yearEnd": null,
+    "hp": 707,
+    "cc": 3982,
+    "seconds": 3.3,
+    "source": "רישוי רכב / נתון יצרן (אסטון מרטין DBX 707 ביצועים 707 כ\"ס)"
+  },
+  {
+    "make": "Aston Martin",
+    "model": "VANTAGE",
+    "yearStart": 2018,
+    "yearEnd": null,
+    "hp": 510,
+    "cc": 3982,
+    "seconds": 3.6,
+    "source": "נתון יצרן (Aston Martin Vantage 4.0 V8 510hp)"
+  },
+  {
+    "make": "Aston Martin",
+    "model": "DB12",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 680,
+    "cc": 3982,
+    "seconds": 3.6,
+    "source": "נתון יצרן (Aston Martin DB12 680hp)"
+  },
+  {
+    "make": "Aston Martin",
+    "model": "DBX",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "hp": 550,
+    "cc": 3982,
+    "seconds": 4.5,
+    "source": "נתון יצרן (Aston Martin DBX 550hp)"
+  },
+  {
+    "make": "ב מ וו גרמניה",
     "model": "M4",
     "yearStart": 2016,
     "yearEnd": 2020,
