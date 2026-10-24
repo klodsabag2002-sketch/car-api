@@ -2408,5 +2408,15 @@
     "cc": 1498,
     "seconds": 8.0,
     "source": "רישוי רכב / נתון יצרן (מ.ג סין MG3 LUXURY 33340704)"
-  }
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "MG3 LUXURY",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1498,
+    "seconds": 8.0,
+    "source": "רישוי רכב / נתון יצרן (מ.ג סין MG3 LUXURY 33340704)"
+  },
 ]
