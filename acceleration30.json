@@ -1,5 +1,125 @@
 [
   {
+    "make": "רנו טורקיה",
+    "model": "MEGANE",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "hp": 116,
+    "cc": 1461,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (רנו מגאן גרנד קופה 1.5 Blue dCi דיזל 116 כ\"ס)"
+  },
+  {
+    "make": "רנו טורקיה",
+    "model": "MEGANE GRAND COUPE",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "hp": 116,
+    "cc": 1461,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (רנו מגאן גרנד קופה 1.5 דיזל 116 כ\"ס)"
+  },
+  {
+    "make": "רנו",
+    "model": "MEGANE",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "hp": 116,
+    "cc": 1461,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (רנו מגאן 1.5 דיזל 116 כ\"ס)"
+  },
+  {
+    "make": "רנו",
+    "model": "מגאן",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "hp": 116,
+    "cc": 1461,
+    "seconds": 10.8,
+    "source": "רישוי רכב / נתון יצרן (רנו מגאן 1.5 דיזל 116 כ\"ס)"
+  },
+  {
+    "make": "Renault",
+    "model": "MEGANE",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "hp": 116,
+    "cc": 1461,
+    "seconds": 10.8,
+    "source": "נתון יצרן (Renault Megane Grand Coupe 1.5 Blue dCi 116hp)"
+  },
+  {
+    "make": "רנו צרפת",
+    "model": "MEGANE R.S.",
+    "yearStart": 2018,
+    "yearEnd": 2023,
+    "hp": 300,
+    "cc": 1798,
+    "seconds": 5.7,
+    "source": "רישוי רכב / נתון יצרן (רנו מגאן RS טרופי 1.8 טורבו 300 כ\"ס)"
+  },
+  {
+    "make": "רנו צרפת",
+    "model": "MEGANE RS",
+    "yearStart": 2018,
+    "yearEnd": 2023,
+    "hp": 280,
+    "cc": 1798,
+    "seconds": 5.8,
+    "source": "רישוי רכב / נתון יצרן (רנו מגאן RS 1.8 טורבו 280 כ\"ס)"
+  },
+  {
+    "make": "רנו טורקיה",
+    "model": "CLIO",
+    "yearStart": 2019,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 999,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (רנו קליאו דור 5 1.0 TCe טורבו 100 כ\"ס)"
+  },
+  {
+    "make": "רנו טורקיה",
+    "model": "CLIO",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "hp": 90,
+    "cc": 999,
+    "seconds": 12.2,
+    "source": "רישוי רכב / נתון יצרן (רנו קליאו דור 5 1.0 TCe טורבו 90 כ\"ס)"
+  },
+  {
+    "make": "רנו טורקיה",
+    "model": "CLIO E-TECH",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "hp": 140,
+    "cc": 1598,
+    "seconds": 9.9,
+    "source": "רישוי רכב / נתון יצרן (רנו קליאו E-Tech היברידית 140 כ\"ס)"
+  },
+  {
+    "make": "רנו ספרד",
+    "model": "RAFALE",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 200,
+    "cc": 1199,
+    "seconds": 8.9,
+    "source": "רישוי רכב / נתון יצרן (רנו רפאל קופה-SUV היברידי 200 כ\"ס)"
+  },
+  {
+    "make": "רנו צרפת",
+    "model": "ESPACE",
+    "yearStart": 2015,
+    "yearEnd": 2023,
+    "hp": 200,
+    "cc": 1598,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (רנו אספאס 1.6 TCe טורבו 200 כ\"ס)"
+  },
+  {
     "make": "\"שברולט ארהב",
     "model": "CORVETTE",
     "yearStart": 2023,
