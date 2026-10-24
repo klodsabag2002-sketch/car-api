@@ -4,6 +4,116 @@
     "model": "PORTOFINO",
     "yearStart": 2018,
     "yearEnd": 2023,
+    "hp": 591,
+    "cc": 3855,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (פרארי פורטופינו 3.9 V8 טווין-טורבו 591 כ\"ס)"
+  },
+  {
+    "make": "פרארי איטליה",
+    "model": "PORTOFINO",
+    "yearStart": 2018,
+    "yearEnd": 2023,
+    "hp": 591,
+    "cc": 3855,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (פרארי איטליה פורטופינו 591 כ\"ס)"
+  },
+  {
+    "make": "פרארי",
+    "model": "פורטופינו",
+    "yearStart": 2018,
+    "yearEnd": 2023,
+    "hp": 591,
+    "cc": 3855,
+    "seconds": 3.5,
+    "source": "רישוי רכב / נתון יצרן (פרארי פורטופינו 591 כ\"ס)"
+  },
+  {
+    "make": "Ferrari",
+    "model": "PORTOFINO",
+    "yearStart": 2018,
+    "yearEnd": 2023,
+    "hp": 591,
+    "cc": 3855,
+    "seconds": 3.5,
+    "source": "נתון יצרן (Ferrari Portofino 591hp)"
+  },
+  {
+    "make": "פרארי",
+    "model": "F80",
+    "yearStart": 2025,
+    "yearEnd": null,
+    "hp": 1200,
+    "cc": 2992,
+    "seconds": 2.15,
+    "source": "רישוי רכב / נתון יצרן (פרארי F80 היפרקאר היברידית 1200 כ\"ס)"
+  },
+  {
+    "make": "פרארי",
+    "model": "ENZO",
+    "yearStart": 2002,
+    "yearEnd": 2004,
+    "hp": 660,
+    "cc": 5998,
+    "seconds": 3.3,
+    "source": "רישוי רכב / נתון יצרן (פרארי אנזו 6.0 V12 660 כ\"ס)"
+  },
+  {
+    "make": "פרארי",
+    "model": "F50",
+    "yearStart": 1995,
+    "yearEnd": 1997,
+    "hp": 520,
+    "cc": 4698,
+    "seconds": 3.8,
+    "source": "רישוי רכב / נתון יצרן (פרארי F50 4.7 V12 520 כ\"ס)"
+  },
+  {
+    "make": "פרארי",
+    "model": "F40",
+    "yearStart": 1987,
+    "yearEnd": 1992,
+    "hp": 478,
+    "cc": 2936,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (פרארי F40 2.9 V8 טווין-טורבו 478 כ\"ס)"
+  },
+  {
+    "make": "פרארי",
+    "model": "599 GTO",
+    "yearStart": 2010,
+    "yearEnd": 2011,
+    "hp": 670,
+    "cc": 5999,
+    "seconds": 3.35,
+    "source": "רישוי רכב / נתון יצרן (פרארי 599 GTO 6.0 V12 670 כ\"ס)"
+  },
+  {
+    "make": "פרארי",
+    "model": "458 SPECIALE A",
+    "yearStart": 2014,
+    "yearEnd": 2015,
+    "hp": 605,
+    "cc": 4497,
+    "seconds": 3.0,
+    "source": "רישוי רכב / נתון יצרן (פרארי 458 ספציאלה אפרטה קבריולה 605 כ\"ס)"
+  },
+  {
+    "make": "פרארי",
+    "model": "SCUDERIA SPIDER 16M",
+    "yearStart": 2008,
+    "yearEnd": 2009,
+    "hp": 510,
+    "cc": 4308,
+    "seconds": 3.7,
+    "source": "רישוי רכב / נתון יצרן (פרארי סקודריה ספיידר 16M 510 כ\"ס)"
+  },
+  {
+    "make": "פרארי",
+    "model": "PORTOFINO",
+    "yearStart": 2018,
+    "yearEnd": 2023,
     "hp": 600,
     "cc": 3855,
     "seconds": 3.5,
