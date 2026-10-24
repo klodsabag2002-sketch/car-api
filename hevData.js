@@ -85,7 +85,10 @@ const HEV_DATABASE = {
   "dacia_jogger": 140,
   "nissan_qashqai": 190,
   "nissan_xtrail": 213,
-  "nissan_x_trail": 213
+  "nissan_x_trail": 213,
+
+  // --- MG ---
+  "mg_3_luxury": 192
 };
 
 const SORTED_HEV_KEYS = Object.keys(HEV_DATABASE).sort((a, b) => b.length - a.length);
