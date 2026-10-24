@@ -1,6 +1,76 @@
 [
   {
     "make": "מ.ג סין",
+    "model": "ZS",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1498,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (MG ZS Hybrid+ מנוע בנזין 102 כ\"ס / 194 כ\"ס משולב)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "ZS HYBRID+",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1498,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (MG ZS Hybrid+ 102 כ\"ס בנזין)"
+  },
+  {
+    "make": "MG",
+    "model": "ZS",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 102,
+    "cc": 1498,
+    "seconds": 8.7,
+    "source": "נתון יצרן (MG ZS Hybrid+ 102hp petrol)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "MG7",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 261,
+    "cc": 1998,
+    "seconds": 6.5,
+    "source": "רישוי רכב / נתון יצרן (MG 7 סדאן ספורט 2.0T 261 כ\"ס)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "MG7",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 188,
+    "cc": 1496,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (MG 7 סדאן ספורט 1.5T 188 כ\"ס)"
+  },
+  {
+    "make": "MG",
+    "model": "MG7",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 261,
+    "cc": 1998,
+    "seconds": 6.5,
+    "source": "נתון יצרן (MG 7 2.0T 261hp)"
+  },
+  {
+    "make": "מ.ג סין",
+    "model": "MG GT",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "hp": 173,
+    "cc": 1490,
+    "seconds": 8.5,
+    "source": "רישוי רכב / נתון יצרן (MG GT פאסטבק 1.5T 173 כ\"ס)"
+  },
+  {
+    "make": "מ.ג סין",
     "model": "MG350",
     "yearStart": null,
     "yearEnd": null,
