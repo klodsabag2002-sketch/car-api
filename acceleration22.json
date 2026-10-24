@@ -1,5 +1,125 @@
 [
   {
+    "make": "סיטרואן ספרד",
+    "model": "C4 CACTUS",
+    "yearStart": 2014,
+    "yearEnd": 2020,
+    "hp": 110,
+    "cc": 1199,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C4 קקטוס 1.2 טורבו PureTech 110 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "C4 CACTUS",
+    "yearStart": 2014,
+    "yearEnd": 2018,
+    "hp": 82,
+    "cc": 1199,
+    "seconds": 12.9,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C4 קקטוס 1.2 אטמוספרי ידני 82 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "C4 CACTUS",
+    "yearStart": 2018,
+    "yearEnd": 2020,
+    "hp": 130,
+    "cc": 1199,
+    "seconds": 8.7,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C4 קקטוס מתוח פנים 1.2 טורבו 130 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "C4 CACTUS",
+    "yearStart": 2014,
+    "yearEnd": 2018,
+    "hp": 100,
+    "cc": 1560,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C4 קקטוס 1.6 BlueHDi דיזל 100 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "CACTUS",
+    "yearStart": 2014,
+    "yearEnd": 2020,
+    "hp": 110,
+    "cc": 1199,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן קקטוס 1.2 טורבו 110 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "C4 קקטוס",
+    "yearStart": 2014,
+    "yearEnd": 2020,
+    "hp": 110,
+    "cc": 1199,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C4 קקטוס 110 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "קקטוס",
+    "yearStart": 2014,
+    "yearEnd": 2020,
+    "hp": 110,
+    "cc": 1199,
+    "seconds": 9.3,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן קקטוס 110 כ\"ס)"
+  },
+  {
+    "make": "Citroen",
+    "model": "C4 CACTUS",
+    "yearStart": 2014,
+    "yearEnd": 2020,
+    "hp": 110,
+    "cc": 1199,
+    "seconds": 9.3,
+    "source": "נתון יצרן (Citroen C4 Cactus 1.2 PureTech 110hp)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "C5 X",
+    "yearStart": 2022,
+    "yearEnd": null,
+    "hp": 180,
+    "cc": 1598,
+    "seconds": 8.1,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C5 X קרוס-טורר 1.6 טורבו 180 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "C5 X PHEV",
+    "yearStart": 2022,
+    "yearEnd": null,
+    "hp": 225,
+    "cc": 1598,
+    "seconds": 7.9,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C5 X פלאג-אין PHEV 225 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "SPACETOURER",
+    "yearStart": 2016,
+    "yearEnd": null,
+    "hp": 177,
+    "cc": 1997,
+    "seconds": 8.8,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן ספייסטורר ואן נוסעים VIP 2.0 דיזל 177 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "E-BERLINGO",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "hp": 136,
+    "cc": 0,
+    "seconds": 11.5,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן ë-ברלינגו חשמלי מלא 136 כ\"ס)"
+  },
+  {
     "make": "סוזוקי הונגריה",
     "model": "S-CROSS",
     "yearStart": null,
