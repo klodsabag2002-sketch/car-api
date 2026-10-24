@@ -1302,7 +1302,7 @@
       [["peugeot", "פיג'ו", "פיגו"], "peugeot", "#1c2d4f", "Peugeot"],
       [["ferrari", "פרארי"], "ferrari", "#cc0000", "Ferrari"],
       [["chery", "צריי", "צ'רי"], "chery", "#1c4f9c", "Chery"],
-      [["cadillac", "קאדילק"], "cadillac", "#1c3d6b", "Cadillac"],
+      [["cadillac", "קאדילק", "קאדילאק", "קדילק"], "cadillac", "#1c3d6b", "Cadillac"],
       [["kia", "קיה"], "kia", "#b10c1c", "Kia"],
       [["kg mobility", "קי ג'י מוביליט"], "kgm", "#333", "KG Mobility"],
       [["rolls royce", "רולס רוייס"], "rolls royce", "#111", "Rolls-Royce"],
@@ -2357,18 +2357,20 @@
     const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     const txt = v => (v === null || v === undefined) ? '' : cleanText(String(v)) || '';
     const L = isEn
-      ? { mf: 'Manufacturer', md: 'Model', yr: 'Year', fu: 'Fuel', pl: 'Plate', it: 'Import type', fr: 'First on road', lt: 'Last test', lv: 'License valid until', cc: 'Engine', wt: 'Total weight', na: 'No data', kg: 'kg' }
-      : { mf: 'יצרן', md: 'דגם', yr: 'שנה', fu: 'דלק', pl: 'מספר רכב', it: 'סוג יבוא', fr: 'עלייה לכביש', lt: 'טסט אחרון', lv: 'תוקף רישוי', cc: 'נפח מנוע', wt: 'משקל כולל', na: 'אין נתון', kg: 'ק"ג' };
+      ? { mf: 'Manufacturer', md: 'Model', yr: 'Year', fu: 'Fuel', pl: 'Plate', it: 'Import type', fr: 'First on road', lt: 'Last test', lv: 'License valid until', cc: 'Engine', wt: 'Total weight', hp: 'Horsepower', na: 'No data', kg: 'kg' }
+      : { mf: 'יצרן', md: 'דגם', yr: 'שנה', fu: 'דלק', pl: 'מספר רכב', it: 'סוג יבוא', fr: 'עלייה לכביש', lt: 'טסט אחרון', lv: 'תוקף רישוי', cc: 'נפח מנוע', wt: 'משקל כולל', hp: 'כוח סוס', na: 'אין נתון', kg: 'ק"ג' };
     const make = txt(p.manufacturer) || '-';
     const model = txt(p.model);
     const cc = Number(p.engineCc) || 0;
+    const hp = Number(p.horsepower) || 0;
     const weight = Number(p.totalWeight) || 0;
     const ccW = Math.min(cc / 6000 * 100, 100).toFixed(1);
     const wW = Math.min(weight / 3000 * 100, 100).toFixed(1);
     const tier = txt(p.importType) || L.it;
     const kv = [
       [L.mf, make], [L.md, model], [L.yr, txt(p.year)], [L.fu, txt(p.fuel)], [L.pl, formatPlate(plate)],
-      [L.it, txt(p.importType)], [L.fr, txt(p.firstOnRoad)], [L.lt, txt(p.lastTest)], [L.lv, txt(p.licenseValidUntil)]
+      [L.it, txt(p.importType)], [L.fr, txt(p.firstOnRoad)], [L.lt, txt(p.lastTest)], [L.lv, txt(p.licenseValidUntil)],
+      [L.hp, hp ? `${hp} ${t('uHp')}` : '']
     ];
     const kvHtml = kv.map(([k, v]) => `<div class="bike-kv"><span class="k">${esc(k)}</span><span class="v${v ? '' : ' na'}">${esc(v || L.na)}</span></div>`).join('');
     const brand = findBrand(p.manufacturer, p.model);
@@ -2390,7 +2392,7 @@
                   <span class="pc-tier">${esc(tier)}</span>
                 </div>
               </div>
-              <div class="pc-hp"><b>${cc || '-'}</b><small>CC</small></div>
+              <div class="pc-hp">${hp ? `<b>${hp}</b><small>HP</small>` : `<b>${cc || '-'}</b><small>CC</small>`}</div>
             </div>
             <div class="pc-name">${esc(make)}</div>
             <div class="pc-model">${esc(model || '-')}</div>
