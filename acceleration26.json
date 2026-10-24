@@ -2552,7 +2552,27 @@
   {
     "make": "פורשה גרמניה",
     "model": "911 CARRERA FACELIFT",
-    "yearStart": 2024,
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 394,
+    "cc": 2981,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 קאררה פייסליפט 992.2 3.0T 394 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "Carrera 911",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 394,
+    "cc": 2981,
+    "seconds": 4.1,
+    "source": "רישוי רכב / נתון יצרן (פורשה 911 קאררה פייסליפט 992.2 3.0T 394 כ\"ס)"
+  },
+  {
+    "make": "פורשה גרמניה",
+    "model": "CARRERA 911",
+    "yearStart": null,
     "yearEnd": null,
     "hp": 394,
     "cc": 2981,
