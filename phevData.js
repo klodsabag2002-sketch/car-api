@@ -298,7 +298,8 @@ const PHEV_DATABASE = {
   "jeep_grand_cherokee_4xe": 375,
   "mitsubishi_outlander_phev": 224,
   "mitsubishi_outlander_phev_2024": 252,
-  "mitsubishi_eclipse_cross_phev": 188
+  "mitsubishi_eclipse_cross_phev": 188,
+  "s580e": 510
 };
 
 function getCombinedPHEVPower(carDesc, model, listedHp, engineCc) {
