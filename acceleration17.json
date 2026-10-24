@@ -2468,6 +2468,16 @@
     "cc": 2999,
     "seconds": 5.2,
     "source": "רישוי רכב / נתון יצרן (מרצדס בנץ גרמנ S580E PLAT PLUS)"
+  },
+  {
+    "make": "מרצדס",
+    "model": "S580E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 367,
+    "cc": 2999,
+    "seconds": 5.2,
+    "source": "cars-data.com (Mercedes S 580 e, נתון מערכת 510 כ\"ס)"
   }
 ]
 
