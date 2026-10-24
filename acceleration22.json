@@ -1,5 +1,115 @@
 [
   {
+    "make": "סיטרואן סלובק",
+    "model": "C3",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 101,
+    "cc": 1199,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C3 דור 4 1.2 טורבו PureTech 101 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן סלובק",
+    "model": "C3",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 100,
+    "cc": 1199,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C3 דור 4 1.2 טורבו 100 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן סלובק",
+    "model": "E-C3",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 113,
+    "cc": 0,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן ë-C3 חשמלית מלאה 113 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "C3",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 101,
+    "cc": 1199,
+    "seconds": 10.6,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C3 דור 4 101 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "E-C3",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 113,
+    "cc": 0,
+    "seconds": 11.0,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן e-C3 113 כ\"ס)"
+  },
+  {
+    "make": "Citroen",
+    "model": "C3",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 101,
+    "cc": 1199,
+    "seconds": 10.6,
+    "source": "נתון יצרן (Citroen C3 Gen 4 1.2T 101hp)"
+  },
+  {
+    "make": "Citroen",
+    "model": "E-C3",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 113,
+    "cc": 0,
+    "seconds": 11.0,
+    "source": "נתון יצרן (Citroen e-C3 EV 113hp)"
+  },
+  {
+    "make": "סיטרואן ספרד",
+    "model": "C4 CACTUS",
+    "yearStart": 2018,
+    "yearEnd": 2020,
+    "hp": 120,
+    "cc": 1499,
+    "seconds": 9.7,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C4 קקטוס 1.5 BlueHDi דיזל 120 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "C4 AIRCROSS",
+    "yearStart": 2012,
+    "yearEnd": 2017,
+    "hp": 150,
+    "cc": 1998,
+    "seconds": 10.2,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן C4 איירקרוס 2.0 בנזין 150 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן צרפת",
+    "model": "AMI",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "hp": 8,
+    "cc": 0,
+    "seconds": 25.0,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן עמי Ami מיקרו-קאר חשמלי 8 כ\"ס)"
+  },
+  {
+    "make": "סיטרואן",
+    "model": "עמי",
+    "yearStart": 2020,
+    "yearEnd": null,
+    "hp": 8,
+    "cc": 0,
+    "seconds": 25.0,
+    "source": "רישוי רכב / נתון יצרן (סיטרואן עמי חשמלי 8 כ\"ס)"
+  },
+  {
     "make": "סיטרואן ספרד",
     "model": "C4 CACTUS",
     "yearStart": 2014,
