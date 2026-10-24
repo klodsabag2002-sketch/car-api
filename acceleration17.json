@@ -1061,6 +1061,16 @@
   },
   {
     "make": "מרצדס בנץ הונג",
+    "model": "CLA250E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 160,
+    "cc": 1332,
+    "seconds": 6.8,
+    "source": "רישוי רכב / נתון יצרן (מרצדס בנץ הונג CLA250E EXC PLUS 333-40-803)"
+  },
+  {
+    "make": "מרצדס בנץ הונג",
     "model": "CLA35 AMG",
     "yearStart": null,
     "yearEnd": null,
