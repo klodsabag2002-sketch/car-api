@@ -1,5 +1,275 @@
 [
   {
+    "make": "מקלארן אנגליה",
+    "model": "750S SPIDER",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 750,
+    "cc": 3994,
+    "seconds": 2.8,
+    "source": "רישוי רכב / נתון יצרן (מקלארן 750S ספיידר 4.0 V8 טווין-טורבו 750 כ\"ס)"
+  },
+  {
+    "make": "מקלארן אנגליה",
+    "model": "750S",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 750,
+    "cc": 3994,
+    "seconds": 2.8,
+    "source": "רישוי רכב / נתון יצרן (מקלארן 750S קופה 4.0 V8 טווין-טורבו 750 כ\"ס)"
+  },
+  {
+    "make": "מקלארן",
+    "model": "750S SPIDER",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 750,
+    "cc": 3994,
+    "seconds": 2.8,
+    "source": "רישוי רכב / נתון יצרן (מקלארן 750S ספיידר 750 כ\"ס)"
+  },
+  {
+    "make": "מקלארן",
+    "model": "750S",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 750,
+    "cc": 3994,
+    "seconds": 2.8,
+    "source": "רישוי רכב / נתון יצרן (מקלארן 750S 750 כ\"ס)"
+  },
+  {
+    "make": "McLaren",
+    "model": "750S SPIDER",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 750,
+    "cc": 3994,
+    "seconds": 2.8,
+    "source": "נתון יצרן (McLaren 750S Spider 4.0L 750hp)"
+  },
+  {
+    "make": "McLaren",
+    "model": "750S",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 750,
+    "cc": 3994,
+    "seconds": 2.8,
+    "source": "נתון יצרן (McLaren 750S Coupe 750hp)"
+  },
+  {
+    "make": "מקלארן אנגליה",
+    "model": "720S",
+    "yearStart": 2017,
+    "yearEnd": 2023,
+    "hp": 720,
+    "cc": 3994,
+    "seconds": 2.9,
+    "source": "רישוי רכב / נתון יצרן (מקלארן 720S קופה 4.0 V8 720 כ\"ס)"
+  },
+  {
+    "make": "מקלארן אנגליה",
+    "model": "720S SPIDER",
+    "yearStart": 2018,
+    "yearEnd": 2023,
+    "hp": 720,
+    "cc": 3994,
+    "seconds": 2.9,
+    "source": "רישוי רכב / נתון יצרן (מקלארן 720S ספיידר 720 כ\"ס)"
+  },
+  {
+    "make": "מקלארן",
+    "model": "720S",
+    "yearStart": 2017,
+    "yearEnd": 2023,
+    "hp": 720,
+    "cc": 3994,
+    "seconds": 2.9,
+    "source": "רישוי רכב / נתון יצרן (מקלארן 720S 720 כ\"ס)"
+  },
+  {
+    "make": "McLaren",
+    "model": "720S",
+    "yearStart": 2017,
+    "yearEnd": 2023,
+    "hp": 720,
+    "cc": 3994,
+    "seconds": 2.9,
+    "source": "נתון יצרן (McLaren 720S 720hp)"
+  },
+  {
+    "make": "מקלארן אנגליה",
+    "model": "765LT",
+    "yearStart": 2020,
+    "yearEnd": 2023,
+    "hp": 765,
+    "cc": 3994,
+    "seconds": 2.8,
+    "source": "רישוי רכב / נתון יצרן (מקלארן 765LT לונגטייל 765 כ\"ס)"
+  },
+  {
+    "make": "מקלארן אנגליה",
+    "model": "765LT SPIDER",
+    "yearStart": 2021,
+    "yearEnd": 2023,
+    "hp": 765,
+    "cc": 3994,
+    "seconds": 2.8,
+    "source": "רישוי רכב / נתון יצרן (מקלארן 765LT ספיידר 765 כ\"ס)"
+  },
+  {
+    "make": "מקלארן אנגליה",
+    "model": "ARTURA",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "hp": 680,
+    "cc": 2993,
+    "seconds": 3.0,
+    "source": "רישוי רכב / נתון יצרן (מקלארן ארטורה היברידית פלאג-אין 3.0 V6 טווין-טורבו 680 כ\"ס)"
+  },
+  {
+    "make": "מקלארן אנגליה",
+    "model": "ARTURA SPIDER",
+    "yearStart": 2024,
+    "yearEnd": null,
+    "hp": 700,
+    "cc": 2993,
+    "seconds": 3.0,
+    "source": "רישוי רכב / נתון יצרן (מקלארן ארטורה ספיידר פלאג-אין 700 כ\"ס)"
+  },
+  {
+    "make": "מקלארן",
+    "model": "ארטורה",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "hp": 680,
+    "cc": 2993,
+    "seconds": 3.0,
+    "source": "רישוי רכב / נתון יצרן (מקלארן ארטורה 680 כ\"ס)"
+  },
+  {
+    "make": "McLaren",
+    "model": "ARTURA",
+    "yearStart": 2021,
+    "yearEnd": null,
+    "hp": 680,
+    "cc": 2993,
+    "seconds": 3.0,
+    "source": "נתון יצרן (McLaren Artura PHEV 680hp)"
+  },
+  {
+    "make": "מקלארן אנגליה",
+    "model": "GT",
+    "yearStart": 2019,
+    "yearEnd": 2023,
+    "hp": 620,
+    "cc": 3994,
+    "seconds": 3.2,
+    "source": "רישוי רכב / נתון יצרן (מקלארן GT גראנד טורר 4.0 V8 620 כ\"ס)"
+  },
+  {
+    "make": "מקלארן אנגליה",
+    "model": "GTS",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "hp": 635,
+    "cc": 3994,
+    "seconds": 3.2,
+    "source": "רישוי רכב / נתון יצרן (מקלארן GTS 4.0 V8 635 כ\"ס)"
+  },
+  {
+    "make": "מקלארן אנגליה",
+    "model": "570S",
+    "yearStart": 2015,
+    "yearEnd": 2021,
+    "hp": 570,
+    "cc": 3799,
+    "seconds": 3.2,
+    "source": "רישוי רכב / נתון יצרן (מקלארן 570S 3.8 V8 570 כ\"ס)"
+  },
+  {
+    "make": "מקלארן אנגליה",
+    "model": "600LT",
+    "yearStart": 2018,
+    "yearEnd": 2021,
+    "hp": 600,
+    "cc": 3799,
+    "seconds": 2.9,
+    "source": "רישוי רכב / נתון יצרן (מקלארן 600LT 3.8 V8 600 כ\"ס)"
+  },
+  {
+    "make": "מקלארן אנגליה",
+    "model": "SENNA",
+    "yearStart": 2018,
+    "yearEnd": 2020,
+    "hp": 800,
+    "cc": 3994,
+    "seconds": 2.8,
+    "source": "רישוי רכב / נתון יצרן (מקלארן סנה היפרקאר מסלול 800 כ\"ס)"
+  },
+  {
+    "make": "מקלארן אנגליה",
+    "model": "P1",
+    "yearStart": 2013,
+    "yearEnd": 2015,
+    "hp": 916,
+    "cc": 3799,
+    "seconds": 2.8,
+    "source": "רישוי רכב / נתון יצרן (מקלארן P1 היפרקאר היברידית 916 כ\"ס)"
+  },
+  {
+    "make": "אלפין צרפת",
+    "model": "A110 S",
+    "yearStart": 2019,
+    "yearEnd": 2021,
+    "hp": 292,
+    "cc": 1798,
+    "seconds": 4.4,
+    "source": "רישוי רכב / נתון יצרן (אלפין A110 S דור מוקדם 292 כ\"ס)"
+  },
+  {
+    "make": "אלפין צרפת",
+    "model": "A110 PURE",
+    "yearStart": 2018,
+    "yearEnd": 2021,
+    "hp": 252,
+    "cc": 1798,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (אלפין A110 Pure 252 כ\"ס)"
+  },
+  {
+    "make": "אלפין צרפת",
+    "model": "A110 LEGENDE",
+    "yearStart": 2018,
+    "yearEnd": 2021,
+    "hp": 252,
+    "cc": 1798,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (אלפין A110 Legende 252 כ\"ס)"
+  },
+  {
+    "make": "אלפין",
+    "model": "A110",
+    "yearStart": 2018,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1798,
+    "seconds": 4.5,
+    "source": "רישוי רכב / נתון יצרן (אלפין A110 252 כ\"ס)"
+  },
+  {
+    "make": "Alpine",
+    "model": "A110",
+    "yearStart": 2018,
+    "yearEnd": null,
+    "hp": 252,
+    "cc": 1798,
+    "seconds": 4.5,
+    "source": "נתון יצרן (Alpine A110 252hp)"
+  },
+  {
     "make": "אלפין צרפת",
     "model": "A110",
     "yearStart": 2018,
