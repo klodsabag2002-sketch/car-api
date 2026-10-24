@@ -2458,5 +2458,16 @@
     "cc": 3982,
     "seconds": 4.5,
     "source": "נתון יצרן (Mercedes-Benz G63 AMG)"
+  },
+  {
+    "make": "מרצדס בנץ גרמנ",
+    "model": "S580E PLAT PLUS",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 367,
+    "cc": 2999,
+    "seconds": 5.2,
+    "source": "רישוי רכב / נתון יצרן (מרצדס בנץ גרמנ S580E PLAT PLUS)"
   }
 ]
+
