@@ -1310,8 +1310,21 @@
       [["renault", "רנו"], "renault", "#e8c200", "Renault"],
       [["מאן", "man "], "man", "#1c3d6b", "MAN"]
     ];
+    // מילה עברית תתאים רק כמילה שלמה: למשל "קיה" לא יתאים בתוך "טורקיה"
+    const isHe = c => /[֐-׿]/.test(c);
+    const hasWord = (text, k) => {
+      let i = text.indexOf(k);
+      while (i !== -1) {
+        const before = text[i - 1] || ' ', after = text[i + k.length] || ' ';
+        const okBefore = !(isHe(k[0]) && isHe(before));
+        const okAfter = !(isHe(k[k.length - 1]) && isHe(after));
+        if (okBefore && okAfter) return true;
+        i = text.indexOf(k, i + 1);
+      }
+      return false;
+    };
     for (const [keys, slug, color, en] of rules) {
-      if (keys.some(k => k instanceof RegExp ? k.test(raw) : raw.includes(k))) return { slug, color, en };
+      if (keys.some(k => k instanceof RegExp ? k.test(raw) : hasWord(raw, k))) return { slug, color, en };
     }
     return null;
   }
