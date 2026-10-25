@@ -85,10 +85,7 @@ const HEV_DATABASE = {
   "dacia_jogger": 140,
   "nissan_qashqai": 190,
   "nissan_xtrail": 213,
-  "nissan_x_trail": 213,
-
-  // --- MG ---
-  "mg_3_luxury": 192
+  "nissan_x_trail": 213
 };
 
 const SORTED_HEV_KEYS = Object.keys(HEV_DATABASE).sort((a, b) => b.length - a.length);
@@ -115,8 +112,10 @@ function getCombinedHEVPower(manufacturer, model, listedHp, engineCc, fuelType) 
 
   const cleanStr = normalized.replace(/[^a-z0-9]/g, '');
 
-  // 3. חיפוש במאגר
+  // 3. חיפוש במאגר (רק לרכבים שהוצהרו כהיברידיים)
+  const declaredHybrid = HYBRID_KEYWORDS.some(kw => fullText.includes(kw));
   for (const key of SORTED_HEV_KEYS) {
+    if (!declaredHybrid) break;
     const keyClean = key.replace(/_/g, '');
     const keyParts = key.split('_');
 
