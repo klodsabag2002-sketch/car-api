@@ -2638,6 +2638,26 @@
   "cc": 2981,
   "seconds": 4.5,
   "source": "רישוי רכב / נתון יצרן (פורשה גרמניה CARRERA 911 T 3.0T 370 כ\"ס)"
+},
+{
+  "make": "פורשה גרמניה",
+  "model": "911 CARRERA T",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 370,
+  "cc": 2981,
+  "seconds": 4.5,
+  "source": "רישוי רכב / נתון יצרן (פורשה גרמניה 911 CARRERA T 3.0T 370 כ\"ס)"
+},
+{
+  "make": "פורשה גרמניה",
+  "model": "CARRERA T 911",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 370,
+  "cc": 2981,
+  "seconds": 4.5,
+  "source": "רישוי רכב / נתון יצרן (פורשה גרמניה CARRERA T 911 3.0T 370 כ\"ס)"
 }
 
 ]
