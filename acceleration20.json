@@ -2068,5 +2068,16 @@
     "cc": 1197,
     "seconds": 10.7,
     "source": "נתון יצרן (Nissan Pulsar 1.2T)"
-  }
+  },
+{
+  "make": "ניסאן יפן",
+  "model": "GT-R",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 565,
+  "cc": 3799,
+  "seconds": 2.8,
+  "source": "רישוי רכב / נתון יצרן (ניסאן יפן GT-R Black Edition 3.8 V6 565 כ\"ס)"
+}
+
 ]
