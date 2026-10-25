@@ -2618,5 +2618,16 @@
     "cc": 3199,
     "seconds": 6.5,
     "source": "נתון יצרן (Chrysler Crossfire 3.2 V6 218hp)"
-  }
+  },
+{
+  "make": "קיה סלובקיה",
+  "model": "SPORTAGE",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 160,
+  "cc": 1598,
+  "seconds": 9.4,
+  "source": "רישוי רכב / נתון יצרן (קיה סלובקיה SPORTAGE 1.6T 160 כ\"ס)"
+}
+
 ]
