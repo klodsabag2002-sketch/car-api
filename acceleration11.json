@@ -1529,4 +1529,45 @@
     "seconds": 4.3,
     "source": "נתון יצרן (Toyota GR Supra 3.0 Turbo)"
   }
+{
+  "make": "טויוטה אוסטריה",
+  "model": "GR SUPRA",
+  "yearStart": 2020,
+  "yearEnd": null,
+  "hp": 382,
+  "cc": 2998,
+  "seconds": 4.1,
+  "source": "רישוי רכב / נתון יצרן (טויוטה GR סופרה 3.0 טורבו 382 כ\"ס)"
+},
+{
+  "make": "טויוטה",
+  "model": "GR SUPRA",
+  "yearStart": 2020,
+  "yearEnd": null,
+  "hp": 382,
+  "cc": 2998,
+  "seconds": 4.1,
+  "source": "רישוי רכב / נתון יצרן (טויוטה GR סופרה 382 כ\"ס)"
+},
+{
+  "make": "טויוטה",
+  "model": "סופרה",
+  "yearStart": 2020,
+  "yearEnd": null,
+  "hp": 382,
+  "cc": 2998,
+  "seconds": 4.1,
+  "source": "רישוי רכב / נתון יצרן (טויוטה סופרה 382 כ\"ס)"
+},
+{
+  "make": "Toyota",
+  "model": "GR SUPRA",
+  "yearStart": 2020,
+  "yearEnd": null,
+  "hp": 382,
+  "cc": 2998,
+  "seconds": 4.1,
+  "source": "נתון יצרן (Toyota GR Supra 3.0 382hp)"
+}
+
 ]
