@@ -1688,5 +1688,16 @@
     "cc": 1595,
     "seconds": 14.8,
     "source": "נתון יצרן (Subaru Brat Pickup)"
-  }
+  },
+{
+  "make": "סובארו יפן",
+  "model": "IMPREZA",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 160,
+  "cc": 1994,
+  "seconds": 10.5,
+  "source": "רישוי רכב / נתון יצרן (סובארו יפן IMPREZA 2.0 R 160 כ\"ס)"
+}
+
 ]
