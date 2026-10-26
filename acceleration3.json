@@ -1648,5 +1648,16 @@
     "cc": 0,
     "seconds": 4.4,
     "source": "נתון יצרן (ORA 07 GT AWD)"
-  }
+  },
+{
+  "make": "ניסאן יפן",
+  "model": "INFINITI Q50",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 400,
+  "cc": 2997,
+  "seconds": 5.1,
+  "source": "רישוי רכב / נתון יצרן (אינפיניטי Q50 3.0T Red Sport 400 כ\"ס)"
+}
+
 ]
