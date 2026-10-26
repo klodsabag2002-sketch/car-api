@@ -682,6 +682,8 @@ app.get('/api/bike/:plate', async (req, res) => {
 });
 
 const HEAVY_REGISTRY_ID = "cd3acc5c-03c3-4c89-9c54-d40f93c0d790";
+// מאגר רכב כבד חדש (כולל יצרן, דגם, שנה, משקל) - נבדק קודם
+const HEAVY_REGISTRY_ID_V2 = "6f6acd03-f351-4a8f-8ecf-df792f4f573a";
 
 app.get('/api/heavy/inspect', async (req, res) => {
     try {
@@ -707,19 +709,48 @@ app.get('/api/heavy/inspect', async (req, res) => {
 const HEAVY_ALLOWED_FIELDS = [
     "mispar_rechev", "tozeret_nm", "tozeret_eretz_nm", "degem_nm", "shnat_yitzur",
     "sug_delek_nm", "nefach_manoa", "mishkal_kolel", "hanaa_nm", "grira_nm",
-    "zmig_kidmi", "zmig_ahori", "moed_aliya_lakvish", "kvutzat_sug_rechev"
+    "zmig_kidmi", "zmig_ahori", "moed_aliya_lakvish", "kvutzat_sug_rechev",
+    "degem_manoa", "mishkal_azmi", "tkina_EU", "mispar_shilda", "horaat_rishum", "hanaa_nm", "mishkal_mitan_harama"
 ];
+
+// קובץ heavy_eu.csv (מספר רכב|סוג EU|משקל כולל) - גיבוי לרכבי משא שלא במאגר הכבד
+let heavyEuMap = null;
+function loadHeavyEu() {
+    if (heavyEuMap) return heavyEuMap;
+    heavyEuMap = new Map();
+    try {
+        const lines = fs.readFileSync(path.join(__dirname, 'heavy_eu.csv'), 'utf8').split(/\r?\n/);
+        for (let i = 1; i < lines.length; i++) {
+            if (!lines[i]) continue;
+            const parts = lines[i].split('|').map(p => p.replace(/^"|"$/g, '').trim());
+            if (parts.length < 3) continue;
+            const key = parts[0].replace(/\D/g, '').padStart(8, '0');
+            heavyEuMap.set(key, { sug_rechev_EU_cd: parts[1], mishkal_kolel: parts[2] });
+        }
+    } catch (e) {
+        console.error('heavy_eu.csv not loaded:', e.message);
+    }
+    return heavyEuMap;
+}
 
 app.get('/api/heavy/:plate', async (req, res) => {
     const plate = req.params.plate.replace(/\D/g, '');
     if (plate.length < 5) return res.json({ success: false, message: 'מספר לא תקין' });
     try {
-        const filters = encodeURIComponent(JSON.stringify({ mispar_rechev: Number(plate) }));
-        const url = `https://data.gov.il/api/3/action/datastore_search?resource_id=${HEAVY_REGISTRY_ID}&filters=${filters}&limit=1`;
-        const r = await fetch(url);
-        const j = await r.json();
-        const rec = j?.success ? j.result.records[0] : null;
-        if (!rec) return res.json({ success: false, message: 'לא נמצא רכב כבד במספר זה' });
+        let rec = null;
+        for (const rid of [HEAVY_REGISTRY_ID_V2, HEAVY_REGISTRY_ID]) {
+            const filters = encodeURIComponent(JSON.stringify({ mispar_rechev: Number(plate) }));
+            const url = `https://data.gov.il/api/3/action/datastore_search?resource_id=${rid}&filters=${filters}&limit=1`;
+            const r = await fetch(url);
+            const j = await r.json();
+            rec = j?.success ? j.result.records[0] : null;
+            if (rec) break;
+        }
+        if (!rec) {
+            const eu = loadHeavyEu().get(plate.padStart(8, '0'));
+            if (eu) return res.json({ success: true, source: 'eu_csv', data: { mispar_rechev: plate, ...eu } });
+            return res.json({ success: false, message: 'לא נמצא רכב כבד במספר זה' });
+        }
         const out = {};
         for (const key of HEAVY_ALLOWED_FIELDS) {
             const v = rec[key];
