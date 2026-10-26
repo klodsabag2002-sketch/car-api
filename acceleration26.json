@@ -2688,6 +2688,46 @@
   "cc": 3800,
   "seconds": 4.5,
   "source": "רישוי רכב / נתון יצרן (פורשה 911 קאררה S דור 997.2 3.8L 385 כ\"ס)"
+},
+{
+  "make": "פורשה גרמניה",
+  "model": "911 CARRERA S",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 385,
+  "cc": 3800,
+  "seconds": 4.5,
+  "source": "רישוי רכב / נתון יצרן (פורשה גרמניה 911 CARRERA S 385 כ\"ס)"
+},
+{
+  "make": "פורשה גרמניה",
+  "model": "911 CARRERA",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 385,
+  "cc": 3800,
+  "seconds": 4.5,
+  "source": "רישוי רכב / נתון יצרן (פורשה גרמניה 911 CARRERA 385 כ\"ס)"
+},
+{
+  "make": "פורשה",
+  "model": "911",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 385,
+  "cc": 3800,
+  "seconds": 4.5,
+  "source": "רישוי רכב / נתון יצרן (פורשה 911 קאררה S 385 כ\"ס)"
+},
+{
+  "make": "פורשה גרמניה",
+  "model": "CARRERA 911",
+  "yearStart": 2008,
+  "yearEnd": 2012,
+  "hp": 385,
+  "cc": 3800,
+  "seconds": 4.5,
+  "source": "רישוי רכב / נתון יצרן (פורשה 911 קאררה S דור 997.2 3.8L 385 כ\"ס)"
 }
 
 ]
