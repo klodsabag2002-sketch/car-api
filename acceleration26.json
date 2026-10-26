@@ -2658,6 +2658,36 @@
   "cc": 2981,
   "seconds": 4.5,
   "source": "רישוי רכב / נתון יצרן (פורשה גרמניה CARRERA T 911 3.0T 370 כ\"ס)"
+},
+{
+  "make": "פורשה גרמניה",
+  "model": "CARRERA 911",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 385,
+  "cc": 3800,
+  "seconds": 4.5,
+  "source": "רישוי רכב / נתון יצרן (פורשה 911 קאררה S דור 997.2 3.8L 385 כ\"ס)"
+},
+{
+  "make": "פורשה גרמניה",
+  "model": "CARRERA 911 S",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 385,
+  "cc": 3800,
+  "seconds": 4.5,
+  "source": "רישוי רכב / נתון יצרן (פורשה 911 קאררה S דור 997.2 3.8L 385 כ\"ס)"
+},
+{
+  "make": "פורשה גרמניה",
+  "model": "CARRERA S 911",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 385,
+  "cc": 3800,
+  "seconds": 4.5,
+  "source": "רישוי רכב / נתון יצרן (פורשה 911 קאררה S דור 997.2 3.8L 385 כ\"ס)"
 }
 
 ]
