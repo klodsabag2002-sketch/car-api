@@ -2048,5 +2048,16 @@
     "cc": 1987,
     "seconds": 8.5,
     "source": "נתון יצרן (Lexus UX250h)"
-  }
+  },
+{
+  "make": "מזדה יפן",
+  "model": "MX-5 RHT",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 160,
+  "cc": 1999,
+  "seconds": 7.9,
+  "source": "רישוי רכב / נתון יצרן (מאזדה MX-5 RHT גג קשיח 2.0 160 כ\"ס)"
+}
+
 ]
