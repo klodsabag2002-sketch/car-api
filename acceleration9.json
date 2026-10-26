@@ -1268,5 +1268,16 @@
     "cc": 1989,
     "seconds": 7.8,
     "source": "נתון יצרן (Hongqi H5 2.0T)"
-  }
+  },
+{
+  "make": "הונדה יפן",
+  "model": "CIVIC",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 90,
+  "cc": 1396,
+  "seconds": 13.0,
+  "source": "רישוי רכב / נתון יצרן (הונדה סיוויק 1.4 90 כ\"ס)"
+}
+
 ]
