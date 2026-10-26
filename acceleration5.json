@@ -2358,5 +2358,16 @@
     "cc": 0,
     "seconds": 6.8,
     "source": "נתון יצרן (BMW iX3 286)"
-  }
+  },
+{
+  "make": "ב מ וו גרמניה",
+  "model": "328CI",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 193,
+  "cc": 2793,
+  "seconds": 7.7,
+  "source": "רישוי רכב / נתון יצרן (BMW 328Ci קופה E46 2.8 193 כ\"ס)"
+}
+
 ]
