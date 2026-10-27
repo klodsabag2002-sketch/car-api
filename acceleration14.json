@@ -1498,5 +1498,16 @@
     "cc": 1499,
     "seconds": 4.6,
     "source": "נתון יצרן (Lynk & Co 08 EM-P AWD)"
-  }
+  },
+{
+  "make": "רובר אנגליה",
+  "model": "DISCOVERY 3",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 190,
+  "cc": 2720,
+  "seconds": 12.8,
+  "source": "רישוי רכב / נתון יצרן (לנד רובר דיסקברי 3 2.7 TDV6 דיזל 190 כ\"ס)"
+}
+
 ]
