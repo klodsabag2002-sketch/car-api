@@ -90,6 +90,8 @@ const HEV_DATABASE = {
 
 const SORTED_HEV_KEYS = Object.keys(HEV_DATABASE).sort((a, b) => b.length - a.length);
 const HYBRID_KEYWORDS = ['hybrid', 'hev', 'mhev', 'היברידי', 'היברידית', 'משולב', 'epower', 'e-power', 'etsi', 'e:hev', 'ehev'];
+// דגמים שנמכרים בישראל כהיברידיים בלבד - נבדקים גם בלי מילת מפתח בנתונים
+const ALWAYS_HYBRID_KEYS = ['toyota_corolla_cross'];
 
 function getCombinedHEVPower(manufacturer, model, listedHp, engineCc, fuelType) {
   if (!listedHp) return listedHp;
@@ -115,7 +117,7 @@ function getCombinedHEVPower(manufacturer, model, listedHp, engineCc, fuelType) 
   // 3. חיפוש במאגר (רק לרכבים שהוצהרו כהיברידיים)
   const declaredHybrid = HYBRID_KEYWORDS.some(kw => fullText.includes(kw));
   for (const key of SORTED_HEV_KEYS) {
-    if (!declaredHybrid) break;
+    if (!declaredHybrid && !ALWAYS_HYBRID_KEYS.includes(key)) continue;
     const keyClean = key.replace(/_/g, '');
     const keyParts = key.split('_');
 
