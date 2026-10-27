@@ -998,5 +998,16 @@
     "cc": 0,
     "seconds": 7.3,
     "source": "נתון יצרן (BYD Atto 3 EV 204)"
-  }
+  },
+{
+  "make": "בי ווי די סין",
+  "model": "SEAL U",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 218,
+  "cc": 1498,
+  "seconds": 8.9,
+  "source": "רישוי רכב / נתון יצרן (BYD Seal U DM-i Boost פלאג-אין 218 כ\"ס)"
+}
+
 ]
