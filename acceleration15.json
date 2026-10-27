@@ -2058,6 +2058,16 @@
   "cc": 1999,
   "seconds": 7.9,
   "source": "רישוי רכב / נתון יצרן (מאזדה MX-5 RHT גג קשיח 2.0 160 כ\"ס)"
+},
+{
+  "make": "מזדה יפן",
+  "model": "MAZDA 6",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 192,
+  "cc": 2488,
+  "seconds": 7.8,
+  "source": "רישוי רכב / נתון יצרן (מאזדה 6 2.5 ליטר SkyActiv-G 192 כ\"ס)"
 }
 
 ]
