@@ -328,5 +328,16 @@
     "cc": 0,
     "seconds": 6.4,
     "source": "רישוי רכב / נתון יצרן (אלפין A290 GTS חשמלי 218 כ\"ס)"
-  }
+  },
+{
+  "make": "אודי גרמניה",
+  "model": "E-TRON GT",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 469,
+  "cc": 0,
+  "seconds": 4.1,
+  "source": "רישוי רכב / נתון יצרן (אאודי e-tron GT קוואטרו חשמלי 469 כ\"ס)"
+}
+
 ]
