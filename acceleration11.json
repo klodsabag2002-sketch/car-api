@@ -1568,6 +1568,16 @@
   "cc": 2998,
   "seconds": 4.1,
   "source": "נתון יצרן (Toyota GR Supra 3.0 382hp)"
+},
+{
+  "make": "טויוטה ארהב\"",
+  "model": "GRAND HIGHLANDE",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 265,
+  "cc": 2393,
+  "seconds": 7.5,
+  "source": "רישוי רכב / נתון יצרן (טויוטה גרנד היילנדר 2.4T טורבו 265 כ\"ס)"
 }
 
 ]
