@@ -1778,5 +1778,16 @@
     "cc": 0,
     "seconds": 5.85,
     "source": "רישוי רכב / נתון יצרן (Abarth 600e Scorpionissima 280)"
-  }
+  },
+{
+  "make": "אופל אנגליה",
+  "model": "ASTRA ST",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 140,
+  "cc": 1362,
+  "seconds": 10.3,
+  "source": "רישוי רכב / נתון יצרן (אופל אסטרה סטיישן Sports Tourer 1.4T 140 כ\"ס)"
+}
+
 ]
