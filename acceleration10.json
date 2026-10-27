@@ -2378,5 +2378,16 @@
     "cc": 2922,
     "seconds": 8.9,
     "source": "נתון יצרן (Volvo 960 3.0 24V)"
-  }
+  },
+{
+  "make": "וולבו שבדיה",
+  "model": "XC60 T6",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 253,
+  "cc": 1969,
+  "seconds": 5.7,
+  "source": "רישוי רכב / נתון יצרן (וולוו XC60 T6 Recharge פלאג-אין 1969 סמ\"ק)"
+}
+
 ]
