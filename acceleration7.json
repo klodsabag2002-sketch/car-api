@@ -2368,5 +2368,16 @@
     "cc": 2993,
     "seconds": 5.5,
     "source": "נתון יצרן (Jeep Wagoneer Hurricane)"
-  }
+  },
+{
+  "make": "דאציה מרוקו",
+  "model": "SANDERO STEPWAY",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 91,
+  "cc": 999,
+  "seconds": 14.2,
+  "source": "רישוי רכב / נתון יצרן (דאצ'יה סנדרו סטפוויי 1.0 TCe אוטומטית CVT עם 91 כ\"ס)"
+}
+
 ]
