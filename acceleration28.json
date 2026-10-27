@@ -1258,5 +1258,16 @@
     "cc": 5733,
     "seconds": 8.5,
     "source": "נתון יצרן (Cadillac Fleetwood 5.7 V8)"
-  }
+  },
+{
+  "make": "צ'רי סין",
+  "model": "TIGGO 7 HEV",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 246,
+  "cc": 1499,
+  "seconds": 7.5,
+  "source": "רישוי רכב / נתון יצרן (צ'רי טיגו 7 פרו היברידי/פלאג-אין 1.5 246 כ\"ס)"
+}
+
 ]
