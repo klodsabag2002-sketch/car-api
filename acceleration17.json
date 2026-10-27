@@ -2498,6 +2498,16 @@
   "cc": 2996,
   "seconds": 4.7,
   "source": "רישוי רכב / נתון יצרן (מרצדס C43 AMG 4MATIC 3.0 V6 367 כ\"ס)"
+},
+{
+  "make": "מרצדס בנץ ארהב",
+  "model": "GLE53 4MATIC",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 429,
+  "cc": 2999,
+  "seconds": 5.3,
+  "source": "רישוי רכב / נתון יצרן (מרצדס GLE 53 AMG 4MATIC+ 3.0T 429 כ\"ס)"
 }
 
 ]
