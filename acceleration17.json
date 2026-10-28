@@ -2508,6 +2508,16 @@
   "cc": 2999,
   "seconds": 5.3,
   "source": "רישוי רכב / נתון יצרן (מרצדס GLE 53 AMG 4MATIC+ 3.0T 429 כ\"ס)"
+},
+{
+  "make": "מרצדס בנץ גרמנ",
+  "model": "AMG GT43",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 367,
+  "cc": 2999,
+  "seconds": 4.9,
+  "source": "רישוי רכב נתון יצרן מרצדס AMG GT 43 4MATIC 4Door 367 כוח סוס"
 }
 
 ]
