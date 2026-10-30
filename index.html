@@ -2372,42 +2372,6 @@
     return `הרכב נרשם כרכב שירד מהכביש${date}.`;
   }
 
-  async function loadModelStats(model, year) {
-    document.querySelectorAll('.model-stats').forEach(n => n.remove());
-    if (!model || model === 'לא ידוע') return;
-    let s = null;
-    try {
-      const q = '/api/model-stats?model=' + encodeURIComponent(model) + (Number.isInteger(year) ? '&year=' + year : '');
-      const r = await fetch(API_BASE + q);
-      const j = await r.json();
-      if (j && j.success) s = j.data;
-    } catch (e) {}
-    if (!s) return;
-    const box = document.createElement('div');
-    box.className = 'model-stats';
-    box.style.cssText = 'margin:14px 16px 24px;padding:14px 16px;border-radius:14px;background:rgba(56,189,248,.06);border:1px solid rgba(56,189,248,.25);color:#e2e8f0;font-size:13px;line-height:1.7;';
-    const yearLine = s.year && s.totalYear !== null
-      ? `<div style="margin-top:4px;">מתוכם משנת ${s.year}: <b style="color:#38bdf8;">${s.totalYear}</b> רכבים פעילים</div>`
-      : '';
-    box.innerHTML = `
-      <div style="font-weight:800;color:#38bdf8;font-size:15px;margin-bottom:6px;">סטטיסטיקה של הדגם</div>
-      <div>מספר רכבים פעילים מדגם <b>${s.model}</b>: <b style="color:#38bdf8;">${s.totalModel}</b></div>
-      ${yearLine}
-      <div style="margin-top:8px;">רכבים שירדו מהכביש מאותו דגם: <b style="color:#fca5a5;">${s.inactiveModel ?? 0}</b></div>
-      ${s.year && s.inactiveYear !== null && s.inactiveYear !== undefined
-        ? `<div style="margin-top:4px;">מתוכם משנת ${s.year}: <b style="color:#fca5a5;">${s.inactiveYear}</b></div>`
-        : ''}
-      <div style="margin-top:12px;padding-top:10px;border-top:1px solid rgba(255,255,255,.08);color:#94a3b8;font-size:12px;">
-        המספרים מחושבים ממאגר הרכבים הפעילים של משרד התחבורה (data.gov.il), לפי שם מסחרי ושנת ייצור. הם מייצגים כמות בזמן העדכון של המאגר בלבד, ואינם מזהים רכב או בעלים מסוים.
-        <br>האפליקציה אינה של משרד התחבורה ואין לה אישור רשמי ממנו.
-        <br>אין להשתמש במספרים אלה לקבלת החלטות כספיות, משפטיות או ביטוחיות בלי לבדוק במקור הרשמי.
-        <br>אין להשתמש בסטטיסטיקה לאיתור רכב או אדם מסוים, או לפגיעה בפרטיות.
-        <br>המידע עשוי להיות לא עדכני, והמפעיל אינו נושא באחריות לנזק משימוש בו.
-      </div>`;
-    // מציגים את הכרטיס מיד מתחת לכפתור היסטוריית הבעלות, כדי שיהיה גלוי
-    $('ownBtnWrap').insertAdjacentElement('afterend', box);
-  }
-
   function showRemovedNotice(rm) {
     document.querySelectorAll('.removed-notice').forEach(n => n.remove());
     if (!rm || !rm.removed || !rm.activeFound) return;
@@ -2501,7 +2465,7 @@
     const btn = $('searchBtn'), loader = $('loader'), err = $('errorMsg');
     err.style.display = 'none';
     $('bikeResult').style.display = 'none';
-    document.querySelectorAll('.model-stats,.removed-notice').forEach(n => n.remove());
+    document.querySelectorAll('.removed-notice').forEach(n => n.remove());
     $('kmLine').style.display = 'none';
     $('importerPriceCard').style.display = 'none';
     $('ownBtnWrap').classList.remove('show');
@@ -2572,7 +2536,6 @@
       currentCarData = d;
       sessionStore.set(LAST_CAR_KEY, JSON.stringify({ plate, d }));
       showRemovedNotice(rm);
-      loadModelStats(d.model, d.year);
       addCarToHunterCollection(plate, d);
       const brand = findBrand(d.manufacturer, d.model);
 
