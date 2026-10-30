@@ -2404,7 +2404,8 @@
         <br>אין להשתמש בסטטיסטיקה לאיתור רכב או אדם מסוים, או לפגיעה בפרטיות.
         <br>המידע עשוי להיות לא עדכני, והמפעיל אינו נושא באחריות לנזק משימוש בו.
       </div>`;
-    $('detailView').appendChild(box);
+    // מציגים את הכרטיס מיד מתחת לכפתור היסטוריית הבעלות, כדי שיהיה גלוי
+    $('ownBtnWrap').insertAdjacentElement('afterend', box);
   }
 
   function showRemovedNotice(rm) {
