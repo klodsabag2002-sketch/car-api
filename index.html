@@ -501,6 +501,7 @@
       <div class="menu-item duel-item" data-menutab="duel" data-i18n="menuDuel">⚔️ קרב 1-1</div>
       <div class="menu-item" data-menutab="card" data-i18n="menuCard">⚡ כרטיס רכב</div>
       <div class="menu-item" data-menutab="hunter" data-i18n="menuHunter">🎯 צייד רכבים</div>
+      <div class="menu-item" data-menutab="lights">💡 נורות אזהרה</div>
     </div>
   </div>
 
@@ -1497,6 +1498,7 @@
       sideMenuDropdown.classList.remove('show');
       const tab = item.dataset.menutab;
       if (tab === 'duel') showDuel();
+      else if (tab === 'lights') window.location.href = 'warning-lights.html';
       else showSection(tab);
     });
   });
