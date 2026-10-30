@@ -836,6 +836,71 @@ app.get('/api/removed/:plate', async (req, res) => {
     }
 });
 
+// ---------- סטטיסטיקה של דגם: רכבים פעילים מול רכבים שירדו מהכביש ----------
+// אותו רכב (לפי שלדה) נספר פעם אחת, ואם הוא ירד מהכביש הוא נספר כלא פעיל בלבד
+async function fetchRegistryRecords(resourceId, filters, cap = 30000) {
+    const out = [];
+    const f = encodeURIComponent(JSON.stringify(filters));
+    for (let offset = 0; offset < cap; offset += 1000) {
+        const url = `https://data.gov.il/api/3/action/datastore_search?resource_id=${resourceId}&filters=${f}&fields=misgeret,mispar_rechev&limit=1000&offset=${offset}`;
+        const response = await fetch(url);
+        const text = await response.text();
+        let data;
+        try { data = JSON.parse(text); } catch (e) { break; }
+        if (!data?.success) break;
+        const recs = data.result?.records || [];
+        out.push(...recs);
+        if (recs.length < 1000) break;
+    }
+    return out;
+}
+
+function carKey(r) {
+    const chassis = String(r.misgeret || '').trim().toUpperCase();
+    return chassis ? `s:${chassis}` : `p:${String(r.mispar_rechev || '')}`;
+}
+
+app.get('/api/model-stats', async (req, res) => {
+    const model = String(req.query.model || '').trim().slice(0, 100);
+    const year = Number(req.query.year);
+    if (!model) return res.json({ success: false, message: 'חסר דגם' });
+    try {
+        const yearOk = Number.isInteger(year) && year > 1900;
+
+        // כל הרכבים שירדו מהכביש מהדגם (בכל המאגרים), ללא כפילויות
+        const removedAll = (await Promise.all(REMOVED_RESOURCE_IDS.map(id =>
+            fetchRegistryRecords(id, { kinuy_mishari: model })))).flat();
+        const removedModelKeys = new Set(removedAll.map(carKey));
+
+        // רכבים פעילים מהדגם, בלי רכבים שמופיעים כשירדו מהכביש
+        const activeAll = await fetchRegistryRecords(CAR_REGISTRY_ID, { kinuy_mishari: model });
+        const activeModelKeys = new Set(activeAll.map(carKey).filter(k => !removedModelKeys.has(k)));
+
+        let totalYear = null, inactiveYear = null;
+        if (yearOk) {
+            const removedYear = (await Promise.all(REMOVED_RESOURCE_IDS.map(id =>
+                fetchRegistryRecords(id, { kinuy_mishari: model, shnat_yitzur: String(year) })))).flat();
+            inactiveYear = new Set(removedYear.map(carKey)).size;
+            const activeYear = await fetchRegistryRecords(CAR_REGISTRY_ID, { kinuy_mishari: model, shnat_yitzur: year });
+            totalYear = new Set(activeYear.map(carKey).filter(k => !removedModelKeys.has(k))).size;
+        }
+
+        res.json({
+            success: true,
+            data: {
+                model,
+                year: yearOk ? year : null,
+                totalModel: activeModelKeys.size,
+                totalYear,
+                inactiveModel: removedModelKeys.size,
+                inactiveYear
+            }
+        });
+    } catch (e) {
+        res.status(500).json({ success: false, message: 'שגיאה בשליפת הסטטיסטיקה' });
+    }
+});
+
 app.listen(PORT, () => {
     console.log(`השרת רץ בפורט ${PORT}`);
 });
