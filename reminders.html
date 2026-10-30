@@ -35,7 +35,7 @@
 <div class="wrap">
   <div class="card">
     <div style="font-weight:800;margin-bottom:6px;">הוספת תזכורת</div>
-    <div class="small">נשלח לך התראה בטלפון 30, 14 ו-7 ימים לפני התאריך, וגם ביום עצמו. הפרטים נשמרים אצלנו רק כדי לשלוח את ההתראות.</div>
+    <div class="small" id="infoText">נשלח לך התראה בטלפון 30, 14 ו-7 ימים לפני התאריך, וגם ביום עצמו. הפרטים נשמרים אצלנו רק כדי לשלוח את ההתראות.</div>
     <label for="name">שם לרכב</label>
     <input type="text" id="name" maxlength="40" placeholder="למשל: הרכב של דני">
     <label for="plate">מספר רכב</label>
@@ -49,7 +49,7 @@
     <label class="consent"><input type="checkbox" id="consent" style="margin-top:3px"> <span>אני מאשר ששמירת הפרטים נועדה לשליחת התזכורת בלבד, ויכול למחוק אותם בכל עת מהדף הזה.</span></label>
     <button class="btn" id="saveBtn">הפעל תזכורת</button>
     <div class="msg" id="msg"></div>
-    <div class="small">באייפון יש להוסיף את האתר למסך הבית (שיתוף ← הוסף למסך הבית) כדי לקבל התראות.</div>
+    <div class="small" id="iosNote">באייפון יש להוסיף את האתר למסך הבית (שיתוף ← הוסף למסך הבית) כדי לקבל התראות.</div>
   </div>
 
   <div class="card">
@@ -62,6 +62,14 @@
 const API_BASE = 'https://car-api-huth.onrender.com';
 const VAPID_PUBLIC = 'BFC039BfJ-vgSs3E0tNM5KNkjbGwVNaXZbbznECMUWzUH1FIe3T7hDXfxlTa0DIcxiTy9yd1vj1svyF9ifmqwhE';
 const KEY = 'myReminders';
+// true כשהדף נפתח בתוך האפליקציה: ההתראות נקבעות אז בטלפון עצמו דרך AndroidAPI
+const NATIVE = typeof AndroidAPI !== 'undefined' && !!AndroidAPI && typeof AndroidAPI.scheduleNotification === 'function';
+const OFFSETS = [30, 14, 7, 0];
+const KINDS = [
+  { key: 'test', field: 'testDate', label: 'הטסט' },
+  { key: 'sticker', field: 'stickerDate', label: 'תו החניה' },
+  { key: 'insurance', field: 'insuranceDate', label: 'הביטוח' }
+];
 
 function loadMine() {
   try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch (e) { return []; }
@@ -75,6 +83,34 @@ function urlBase64ToUint8Array(b64) {
   return Uint8Array.from([...raw].map(c => c.charCodeAt(0)));
 }
 function setMsg(t) { document.getElementById('msg').textContent = t; }
+
+// כל ההתראות העתידיות של תזכורת אחת: 9:00 בבוקר, 30/14/7 ימים לפני ויום התאריך
+function dueAlarms(r) {
+  const out = [];
+  const now = Date.now();
+  KINDS.forEach(k => {
+    const d = r[k.field];
+    if (!d) return;
+    const [y, m, day] = d.split('-').map(Number);
+    OFFSETS.forEach(off => {
+      const at = new Date(y, m - 1, day - off, 9, 0, 0).getTime();
+      if (at <= now) return;
+      const msg = off === 0
+        ? `${k.label} של רכב ${r.plate} פג היום`
+        : `${k.label} של רכב ${r.plate} פוקע בעוד ${off} ימים`;
+      out.push({ id: `${r.id}_${k.key}_${off}`, title: `תזכורת: ${r.name}`, message: msg, delay: Math.round(at - now) });
+    });
+  });
+  return out;
+}
+function scheduleNative(r) {
+  if (!NATIVE) return;
+  dueAlarms(r).forEach(a => AndroidAPI.scheduleNotification(a.id, a.title, a.message, a.delay, 0));
+}
+function cancelNative(r) {
+  if (!NATIVE) return;
+  KINDS.forEach(k => OFFSETS.forEach(off => AndroidAPI.cancelScheduledNotification(`${r.id}_${k.key}_${off}`)));
+}
 
 function renderList() {
   const list = loadMine();
@@ -93,16 +129,34 @@ async function removeReminder(i) {
   const r = list[i];
   if (!r) return;
   if (!confirm('למחוק את התזכורת?')) return;
-  try {
-    const res = await fetch(API_BASE + '/api/reminders/' + encodeURIComponent(r.id), {
-      method: 'DELETE', headers: { 'x-token': r.token }
-    });
-    const j = await res.json();
-    if (!j.success) { alert(j.message || 'שגיאה במחיקה'); return; }
-  } catch (e) { alert('אין חיבור לשרת, נסה שוב'); return; }
+  if (r.token) {
+    try {
+      const res = await fetch(API_BASE + '/api/reminders/' + encodeURIComponent(r.id), {
+        method: 'DELETE', headers: { 'x-token': r.token }
+      });
+      const j = await res.json();
+      if (!j.success) { alert(j.message || 'שגיאה במחיקה'); return; }
+    } catch (e) { alert('אין חיבור לשרת, נסה שוב'); return; }
+  }
+  cancelNative(r);
   list.splice(i, 1);
   saveMine(list);
   renderList();
+}
+
+if (!NATIVE) {
+  // בדפדפן אי אפשר להוסיף תזכורות: מסתירים את הטופס ומציגים הודעה
+  document.querySelectorAll('.card')[0].style.display = 'none';
+  document.querySelector('.wrap').insertAdjacentHTML('afterbegin',
+    '<div class="card"><div style="font-weight:800;margin-bottom:6px;">התזכורות זמינות באפליקציה בלבד</div><div class="small">פתח את האפליקציה "לוחית בדיקת רכב לפי מספר" כדי להוסיף תזכורות לטסט, לביטוח ולתו חניה.</div></div>');
+}
+
+if (NATIVE) {
+  document.getElementById('infoText').textContent =
+    'נשלח לך התראה בטלפון 30, 14 ו-7 ימים לפני התאריך, וגם ביום עצמו. התזכורות נשמרות בטלפון הזה בלבד.';
+  document.getElementById('iosNote').style.display = 'none';
+  // קובע מחדש את כל ההתראות כשהדף נפתח, כדי שלא יאבדו
+  loadMine().forEach(scheduleNative);
 }
 
 document.getElementById('saveBtn').addEventListener('click', async () => {
@@ -117,12 +171,31 @@ document.getElementById('saveBtn').addEventListener('click', async () => {
   if (!name) return setMsg('יש להזין שם לרכב');
   if (plate.length < 7 || plate.length > 8) return setMsg('מספר רכב לא תקין');
   if (!testDate && !stickerDate && !insuranceDate) return setMsg('יש להזין לפחות תאריך אחד');
-  if (!('serviceWorker' in navigator) || !('PushManager' in window)) return setMsg('הדפדפן הזה לא תומך בהתראות');
-  if (VAPID_PUBLIC.startsWith('PUT_')) return setMsg('המפתח הציבורי עדיין לא הוגדר');
+  if (!NATIVE) {
+    if (!('serviceWorker' in navigator) || !('PushManager' in window)) return setMsg('הדפדפן הזה לא תומך בהתראות');
+    if (VAPID_PUBLIC.startsWith('PUT_')) return setMsg('המפתח הציבורי עדיין לא הוגדר');
+  }
 
   const btn = document.getElementById('saveBtn');
   btn.disabled = true;
   try {
+    if (NATIVE) {
+      // בתוך האפליקציה: שמירה מקומית וקביעת ההתראות בטלפון
+      AndroidAPI.requestNotificationPermission('reminders');
+      const rec = { id: 'n' + Date.now() + Math.floor(Math.random() * 1000), name, plate, testDate, stickerDate, insuranceDate };
+      const list = loadMine();
+      list.push(rec);
+      saveMine(list);
+      scheduleNative(rec);
+      if (!dueAlarms(rec).length) setMsg('נשמר, אבל כל התאריכים כבר עברו');
+      else setMsg('התזכורת נשמרה. אם לא הופיעה בקשת הרשאה, אשר התראות בהגדרות האפליקציה');
+      ['name', 'plate', 'testDate', 'stickerDate', 'insuranceDate'].forEach(id => document.getElementById(id).value = '');
+      document.getElementById('consent').checked = false;
+      renderList();
+      return;
+    }
+
+    // בדפדפן: שמירה בשרת ו-Web Push, כמו קודם
     const perm = await Notification.requestPermission();
     if (perm !== 'granted') throw new Error('לא אושרו התראות');
     const reg = await navigator.serviceWorker.register('sw.js');
@@ -134,13 +207,9 @@ document.getElementById('saveBtn').addEventListener('click', async () => {
     const j = await res.json();
     if (!j.success) throw new Error(j.message || 'שגיאה בשמירה');
     const list = loadMine();
-    list.push({ id: j.id, token: j.token, name, plate });
+    list.push({ id: j.id, token: j.token, name, plate, testDate, stickerDate, insuranceDate });
     saveMine(list);
-    document.getElementById('name').value = '';
-    document.getElementById('plate').value = '';
-    document.getElementById('testDate').value = '';
-    document.getElementById('stickerDate').value = '';
-    document.getElementById('insuranceDate').value = '';
+    ['name', 'plate', 'testDate', 'stickerDate', 'insuranceDate'].forEach(id => document.getElementById(id).value = '');
     document.getElementById('consent').checked = false;
     setMsg('התזכורת נשמרה');
     renderList();
