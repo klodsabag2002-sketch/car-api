@@ -492,6 +492,7 @@
 
   <div class="topbar">
     <span class="i hidden" id="backBtn">→</span>
+    <span class="i hidden" id="homeBtn" title="דף הבית">⌂</span>
     <span class="i" id="favBtn">♡</span>
     <span class="t" id="topTitle" data-i18n="appTitle">פרטי רכב</span>
     <span class="i" id="menuToggleBtn">☰</span>
@@ -1508,6 +1509,7 @@
     $('duelView').classList.remove('show');
     $('detailView').classList.add('show');
     $('backBtn').classList.remove('hidden');
+    $('homeBtn').classList.remove('hidden');
   }
 
   function showSection(name) {
@@ -1549,6 +1551,7 @@
     $('history').classList.remove('show');
     $('duelView').classList.add('show');
     $('backBtn').classList.remove('hidden');
+    $('homeBtn').classList.remove('hidden');
     sideMenuDropdown.classList.remove('show');
     if (currentPlate && !$('duelPlateA').value) $('duelPlateA').value = formatPlate(currentPlate);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1562,6 +1565,7 @@
     $('detailView').classList.remove('show');
     $('duelView').classList.remove('show');
     $('backBtn').classList.add('hidden');
+    $('homeBtn').classList.add('hidden');
     document.querySelector('.search-box').style.display = '';
     $('errorMsg').style.display = 'none';
     $('phevRevealBtn').style.display = 'none';
@@ -1570,6 +1574,7 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   $('backBtn').addEventListener('click', showHome);
+  $('homeBtn').addEventListener('click', showHome);
 
   /* ================= צייד רכבים ================= */
   function getMyNickname() {
