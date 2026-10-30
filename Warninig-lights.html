@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>נורות אזהרה ברכב</title>
+<style>
+  :root { --bg:#0b1120; --card:#111a2e; --line:rgba(148,163,184,.18); --text:#e2e8f0; --muted:#94a3b8; --red:#ef4444; --amber:#f59e0b; --green:#22c55e; --blue:#3b82f6; }
+  @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --bg:#f8fafc; --card:#ffffff; --line:rgba(15,23,42,.12); --text:#0f172a; --muted:#475569; } }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:system-ui,Arial,sans-serif; }
+  .wrap { max-width:560px; margin:0 auto; padding:16px; }
+  h1 { font-size:22px; margin:8px 0 4px; }
+  .sub { color:var(--muted); font-size:13px; margin:0 0 14px; line-height:1.6; }
+  input[type=search] { width:100%; box-sizing:border-box; padding:12px 14px; border-radius:12px; border:1px solid var(--line); background:var(--card); color:var(--text); font-size:15px; }
+  .filters { display:flex; gap:8px; margin:12px 0; flex-wrap:wrap; }
+  .chip { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:6px 12px; font-size:13px; cursor:pointer; }
+  .chip.on { border-color:currentColor; font-weight:700; }
+  .chip[data-c="all"] { color:var(--text); }
+  .chip[data-c="red"] { color:var(--red); } .chip[data-c="amber"] { color:var(--amber); }
+  .chip[data-c="green"] { color:var(--green); } .chip[data-c="blue"] { color:var(--blue); }
+  .item { display:flex; gap:12px; align-items:flex-start; background:var(--card); border:1px solid var(--line); border-right:4px solid var(--c); border-radius:14px; padding:12px; margin-bottom:10px; }
+  .ico { flex:0 0 52px; height:52px; border-radius:12px; background:#0b1120; display:flex; align-items:center; justify-content:center; }
+  .ico svg { width:42px; height:42px; }
+  .body { flex:1; min-width:0; }
+  .name { font-weight:800; font-size:16px; }
+  .tag { display:inline-block; font-size:11px; font-weight:700; color:var(--c); border:1px solid var(--c); border-radius:999px; padding:1px 8px; margin-inline-start:6px; vertical-align:middle; }
+  .desc { font-size:14px; line-height:1.65; margin-top:4px; }
+  .act { font-size:13px; color:var(--muted); margin-top:4px; line-height:1.6; }
+  .legend { font-size:12px; color:var(--muted); margin:14px 0; line-height:1.8; }
+  .note { font-size:12px; color:var(--muted); border-top:1px solid var(--line); margin-top:16px; padding-top:12px; line-height:1.7; }
+  .empty { color:var(--muted); text-align:center; padding:24px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1 id="t_h1">נורות אזהרה ברכב</h1>
+  <p class="sub" id="t_sub"></p>
+  <div style="display:flex;justify-content:flex-end;margin-bottom:6px"><button class="chip" id="langBtn" type="button">English</button></div>
+  <input type="search" id="q" placeholder="חיפוש לפי שם או משמעות">
+  <div class="filters" id="filters"></div>
+  <div class="legend" id="t_legend"></div>
+  <div id="list"></div>
+  <div class="note" id="t_rule"></div>
+  <div class="note" id="t_note"></div>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="temp" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M21 8v20a5 5 0 1 0 6 0V8a3 3 0 0 0-6 0z"/><path d="M24 33v-8M30 14h5M30 20h5M30 26h5"/><path d="M8 38q4-3 8 0t8 0 8 0 8 0"/></g></symbol>
+    <symbol id="battery" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><rect x="6" y="14" width="36" height="22" rx="3"/><path d="M42 21v8"/><path d="M14 25h6M17 22v6M28 25h6"/></g></symbol>
+    <symbol id="oil" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M6 30h22l6-8h8"/><path d="M28 22l-4-6h-8l2 6"/><path d="M10 30v6h18v-6"/><path d="M40 16q2 4 0 6"/></g></symbol>
+    <symbol id="brake" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M14 13a16 16 0 0 0 0 22M34 13a16 16 0 0 1 0 22"/><path d="M24 16v12"/><circle cx="24" cy="34" r="1.8" fill="currentColor"/></g></symbol>
+    <symbol id="tpms" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M10 14q-4 9 0 18M38 14q4 9 0 18"/><path d="M24 14v12"/><circle cx="24" cy="32" r="1.8" fill="currentColor"/><path d="M14 38h4M22 38h4M30 38h4"/></g></symbol>
+    <symbol id="abs" viewBox="0 0 48 48"><circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="3"/><text x="24" y="29" text-anchor="middle" font-size="12" font-weight="800" font-family="Arial" fill="currentColor">ABS</text></symbol>
+    <symbol id="engine" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M10 18h6v-4h6v4h8v-3h4v3h4v10h-4v4h-4v4h-8v-4h-6v-4h-6z"/><path d="M4 22h6M42 26h2"/></g></symbol>
+    <symbol id="tcs" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8h20l3 10v8l-3 4H11l-3-4v-8z"/><path d="M8 38q4-4 8 0t8 0 8 0 8 0"/></g></symbol>
+    <symbol id="seatbelt" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="10" r="4"/><path d="M18 18l-4 14h10l2 10M18 22l12 6M26 14l-8 22"/></g></symbol>
+    <symbol id="airbag" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="12" r="4"/><path d="M16 20l-3 12h8l2 10"/><path d="M14 24l10 4M32 14l8 8M40 14l-8 8"/></g></symbol>
+    <symbol id="steer" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="20" cy="22" r="12"/><circle cx="20" cy="22" r="3"/><path d="M34 14v14M34 33v1"/></g></symbol>
+    <symbol id="fuel" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="8" y="10" width="20" height="30" rx="2"/><path d="M8 22h20M28 16l6 4v14a3 3 0 0 0 6 0V18l-4-4"/></g></symbol>
+    <symbol id="wiper" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 24q18-16 36 0"/><path d="M24 28l-8-10M24 28l10-6"/><path d="M8 40h32"/></g></symbol>
+    <symbol id="washer" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 30q18-14 36 0"/><path d="M24 10v6M18 12l-2-4M30 12l2-4"/><path d="M14 38q3-3 0-6M24 38q3-3 0-6M34 38q3-3 0-6"/></g></symbol>
+    <symbol id="lowbeam" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 16h10l16-6v28l-16-6H8a4 4 0 0 1 0-8z"/><path d="M40 16v16"/></g></symbol>
+    <symbol id="highbeam" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16h10l14-6v28l-14-6H6a4 4 0 0 1 0-8z"/><path d="M38 12v24M42 16v16"/></g></symbol>
+    <symbol id="fog" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M8 18q10-6 18 0t12 0"/><path d="M8 26q10-6 18 0t12 0"/><path d="M8 34q10-6 18 0t12 0"/></g></symbol>
+    <symbol id="rearfog" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="20" cy="24" r="7"/><path d="M32 16q6 8 0 16M38 12q10 12 0 24"/></g></symbol>
+    <symbol id="parkinglight" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M10 18h8l12-4v22l-12-4h-8z"/><path d="M36 16v16"/></g></symbol>
+    <symbol id="turnl" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 24l16-12v8h24v8H20v8z"/></g></symbol>
+    <symbol id="turnr" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M44 24L28 12v8H4v8h24v8z"/></g></symbol>
+    <symbol id="hazard" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M24 8l18 32H6z"/><path d="M24 20v10M24 34v1"/></g></symbol>
+    <symbol id="door" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 34l4-12q2-4 6-4h16q4 0 6 4l4 12H8z"/><path d="M8 34v4M40 34v4M20 18v-6h8"/></g></symbol>
+    <symbol id="bonnet" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 36l4-10h28l4 10z"/><path d="M10 26L6 14h36l-4 12"/></g></symbol>
+    <symbol id="trunk" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 34l4-12q2-4 6-4h16q4 0 6 4l4 12H8z"/><path d="M14 18l-2-8h24l-2 8"/></g></symbol>
+    <symbol id="parking" viewBox="0 0 48 48"><circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="3"/><text x="24" y="32" text-anchor="middle" font-size="22" font-weight="800" font-family="Arial" fill="currentColor">P</text></symbol>
+    <symbol id="brakefluid" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M14 13a16 16 0 0 0 0 22M34 13a16 16 0 0 1 0 22"/><path d="M24 16v12"/><circle cx="24" cy="34" r="1.8" fill="currentColor"/></g></symbol>
+    <symbol id="ebd" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 10h20l3 10v8l-3 4H11l-3-4v-8z"/><path d="M24 22v-6M24 26v1"/><path d="M6 40h36"/></g></symbol>
+    <symbol id="wrench" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M30 8a9 9 0 0 0-8 12L8 34a4 4 0 0 0 6 6l14-14a9 9 0 0 0 12-8l-6 3-5-5 3-6z"/></g></symbol>
+    <symbol id="skid" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 10h20l3 10v8l-3 4H11l-3-4v-8z"/><path d="M6 40q6-6 12 0M30 40q6-6 12 0"/></g></symbol>
+    <symbol id="plug" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6v10M30 6v10"/><path d="M12 16h24v8a12 12 0 0 1-24 0z"/><path d="M24 36v6"/></g></symbol>
+    <symbol id="adblue" viewBox="0 0 48 48"><text x="24" y="28" text-anchor="middle" font-size="11" font-weight="800" font-family="Arial" fill="currentColor">AdBlue</text><path d="M14 36h20" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+    <symbol id="dpf" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="8" y="14" width="32" height="20" rx="3"/><path d="M14 20v8M20 20v8M26 20v8M32 20v8"/></g></symbol>
+    <symbol id="glow" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 36q-6-8 0-14t0-14"/><path d="M24 36q-6-8 0-14t0-14"/><path d="M34 36q-6-8 0-14t0-14"/></g></symbol>
+    <symbol id="waterfuel" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="6" y="12" width="20" height="28" rx="2"/><path d="M6 24h20"/><path d="M36 10q-5 7 0 11a5 5 0 0 1-10 0q5-4 0-11z"/></g></symbol>
+    <symbol id="cruise" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M8 34a16 16 0 1 1 32 0"/><path d="M24 30l8-10"/><circle cx="24" cy="30" r="2" fill="currentColor"/></g></symbol>
+    <symbol id="acc" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 22l3-7h14l3 7v8h-3v-3H17v3h-3z"/><path d="M8 14q-4 10 0 20M40 14q4 10 0 20"/></g></symbol>
+    <symbol id="lane" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M10 40L16 8M38 40L32 8"/><path d="M24 10v6M24 22v6M24 34v4"/><path d="M14 30h-3M31 22l4-2"/></g></symbol>
+    <symbol id="aeb" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 24l3-7h14l3 7v8h-3v-3H17v3h-3z"/><path d="M8 14q-4 10 0 20M40 14q4 10 0 20"/><path d="M24 4v4"/></g></symbol>
+    <symbol id="hill" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16l12 10 8-6 10 10 10-4"/><path d="M4 40h40"/></g></symbol>
+    <symbol id="autohold" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="17"/><path d="M18 24h12M18 18h12"/><path d="M18 30h12"/></g></symbol>
+    <symbol id="snow" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M24 6v36M8 15l32 18M40 15L8 33"/></g></symbol>
+    <symbol id="eco" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M10 36q0-22 28-28-2 28-28 28z"/><path d="M10 36l14-14"/></g></symbol>
+    <symbol id="immo" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="24" r="8"/><path d="M24 24h18M36 24v6M42 24v6"/></g></symbol>
+    <symbol id="seatheat" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8v20h14l2 12"/><path d="M12 22h10"/><path d="M34 6q-3 4 0 7M40 6q-3 4 0 7"/></g></symbol>
+    <symbol id="heat" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 36h30v-10q0-6-6-6H18q-6 0-6 6z"/><path d="M14 16q-3 3 0 6M22 16q-3 3 0 6M30 16q-3 3 0 6"/></g></symbol>
+    <symbol id="defrostfront" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 32q18-20 36 0"/><path d="M14 40q2-3 0-6M24 40q2-3 0-6M34 40q2-3 0-6"/></g></symbol>
+    <symbol id="defrostrear" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="12" width="36" height="16" rx="2"/><path d="M12 34q2-3 0-6M24 34q2-3 0-6M36 34q2-3 0-6"/></g></symbol>
+    <symbol id="trans" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 10v28M12 26h-6M12 26h6"/><path d="M28 6v10M28 22v4M28 32v10"/><path d="M28 16h10"/></g></symbol>
+    <symbol id="powerst" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="20" cy="22" r="12"/><circle cx="20" cy="22" r="3"/><path d="M34 14v14M34 33v1"/></g></symbol>
+    <symbol id="evcharge" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M26 6L12 26h10l-2 16 14-20H24z"/></g></symbol>
+    <symbol id="ev" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4L10 26h10l-2 16 14-20H24z"/></g></symbol>
+    <symbol id="service" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8h20v32H14z"/><path d="M20 16h8M20 22h8M20 28h4"/></g></symbol>
+    <symbol id="manual" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8h14q4 0 4 4v28q-2-3-4-3H8z"/><path d="M40 8H26q-4 0-4 4v28q2-3 4-3h14z"/></g></symbol>
+    <symbol id="info" viewBox="0 0 48 48"><circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="3"/><path d="M24 22v12M24 14v1" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></symbol>
+    <symbol id="stopgo" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="16"/><path d="M18 24h12M18 24l4-4M18 24l4 4M30 20v8"/></g></symbol>
+    <symbol id="brakepress" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8h8l4 22h-4l-4-14"/><path d="M14 30h14l-4 8h-10z"/><path d="M36 14v16"/></g></symbol>
+    <symbol id="dampers" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8h24M12 40h24"/><path d="M18 8v8M30 8v8M18 32v8M30 32v8"/><rect x="14" y="16" width="20" height="16" rx="2"/><path d="M24 16v16"/></g></symbol>
+    <symbol id="fuelcap" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="26" r="12"/><path d="M22 14v-6h8"/><path d="M16 26h12"/></g></symbol>
+    <symbol id="pads" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="24" cy="24" r="14"/><circle cx="24" cy="24" r="4"/><path d="M6 14h6M6 34h6M36 14h6M36 34h6"/></g></symbol>
+    <symbol id="extbulb" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 30V20a8 8 0 0 1 16 0v10z"/><path d="M18 34h12M20 38h8"/><path d="M24 4v4M8 12l3 3M40 12l-3 3"/></g></symbol>
+    <symbol id="keyout" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="24" r="8"/><path d="M22 24h20M36 24v6M42 24v6"/><path d="M4 42h40" stroke-dasharray="4 4"/></g></symbol>
+    <symbol id="keylow" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="24" r="8"/><path d="M24 24h18M36 24v6M42 24v6"/><path d="M34 12l-4 4 4 4"/></g></symbol>
+    <symbol id="airfilter" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="12" width="32" height="24" rx="3"/><path d="M14 18h20M14 24h20M14 30h20"/></g></symbol>
+    <symbol id="ice" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 34h32"/><path d="M14 30q2-10 10-10t10 10"/><path d="M24 4v10M19 7l5 4 5-4M19 15l5-4 5 4"/></g></symbol>
+    <symbol id="fcw" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 30l3-8h14l3 8v5h-3v-2H17v2h-3z"/><path d="M8 20q-3 6 0 12M40 20q3 6 0 12"/><path d="M24 4v8" /></g></symbol>
+    <symbol id="blindspot" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22l4-6h12l4 6v6H4z"/><path d="M28 22l4-6h8l4 6v6H28z"/><path d="M14 40h20" stroke-dasharray="3 4"/></g></symbol>
+    <symbol id="autolight" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="16"/><path d="M20 30l4-12 4 12M22 26h4"/></g></symbol>
+    <symbol id="sunroof" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 26q4-12 16-12t16 12H8z"/><path d="M14 30h22M14 36h22"/><path d="M24 14v-6" /></g></symbol>
+    <symbol id="childlock" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="22" width="24" height="18" rx="3"/><path d="M18 22v-6a6 6 0 0 1 12 0v6"/><circle cx="24" cy="31" r="2" fill="currentColor"/></g></symbol>
+    <symbol id="airbagoff" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="12" r="4"/><path d="M16 20l-3 12h8l2 10"/><path d="M30 14l10 10M40 14L30 24"/></g></symbol>
+    <symbol id="enginelimit" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M10 18h6v-4h6v4h8v-3h4v3h4v10h-4v4h-4v4h-8v-4h-6v-4h-6z"/><path d="M14 40h20" /></g></symbol>
+    <symbol id="evready" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4L10 26h10l-2 16 14-20H24z"/><path d="M8 44h32" stroke-dasharray="4 4"/></g></symbol>
+    <symbol id="hybbat" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="14" width="34" height="20" rx="3"/><path d="M44 21v6"/><path d="M26 18l-5 7h5l-3 7"/></g></symbol>
+    <symbol id="battemp" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="18" width="30" height="18" rx="3"/><path d="M36 24h6v6h-6"/><path d="M12 8v6M18 6v8M24 8v6"/></g></symbol>
+    <symbol id="airsusp" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M10 18h28l-3 6H13z"/><path d="M14 24q10 8 0 14h20q-10-6 0-14"/><path d="M24 4v10"/></g></symbol>
+    <symbol id="hitch" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h18l6 8h8"/><path d="M28 30v8M24 38h8"/><circle cx="38" cy="30" r="4"/></g></symbol>
+    <symbol id="alarm" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 32V22a10 10 0 0 1 20 0v10l3 4H11z"/><path d="M20 40h8"/><path d="M8 12l4 4M40 12l-4 4"/></g></symbol>
+    <symbol id="clutch" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6h12l-2 22h-8z"/><path d="M24 22h12l-4 14H20z"/></g></symbol>
+    <symbol id="awd" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M10 16h4M34 16h4"/><circle cx="24" cy="24" r="4"/><path d="M24 8v12M24 28v12M8 24h12M28 24h12"/></g></symbol>
+    <symbol id="fan" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="3"/><path d="M24 21c0-8 4-12 10-12-2 6-4 10-10 12zM27 24c8 0 12 4 12 10-6-2-10-4-12-10zM24 27c0 8-4 12-10 12 2-6 4-10 10-12zM21 24c-8 0-12-4-12-10 6 2 10 4 12 10z"/></g></symbol>
+    <symbol id="spoiler" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 14h32l4 6H6z"/><path d="M12 20v10h20V20"/></g></symbol>
+    <symbol id="pedestrian" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="10" r="4"/><path d="M24 16v12M24 22l-7 6M24 22l7 6M24 28l-5 12M24 28l5 12"/></g></symbol>
+  </defs>
+</svg>
+<script>
+// הסברים כלליים. צריך לאמת מול ספר הרכב לפני הפרסום
+const LIGHTS = [
+  { id:'temp', name:'טמפרטורת מנוע', color:'red', desc:'המנוע מתחמם מעבר לטווח הרגיל.', act:'לעצור במקום בטוח ולכבות את המנוע. לבדוק את רמת הנוזל הקירור והמפוח. לא לפתוח את מכסה הרדיאטור כשהוא חם.' , en:["Engine temperature", "The engine is running hotter than normal.", "Stop safely and turn off the engine. Check coolant level, fan, radiator cap and leaks. Never open the radiator cap when hot."] },
+  { id:'battery', name:'טעינת מצבר', color:'red', desc:'מערכת הטעינה לא פועלת כמו שצריך. בדרך כלל מצבר חלש או אלטרנטור.', act:'לבדוק חיבורי מצבר. אם הנורה נשארת דולקת, לפנות למוסך לפני שהמצבר מתרוקן.' , note:'במקור אחד הנורה מופיעה כצהובה ובמקור אחר כאדומה. לפי הכלל, מוצגת כאדומה.' , en:["Battery / charging", "The charging system is not working properly, often a weak battery or alternator.", "Check battery terminals. If it stays on, go to a garage before the battery drains."] },
+  { id:'oil', name:'לחץ שמן מנוע', color:'red', desc:'לחץ השמן נמוך מדי. זו נורה חמורה.', act:'לעצור מיד, לכבות את המנוע ולבדוק את מפלס השמן. אם המפלס תקין, לא להמשיך לנסוע.' , en:["Oil pressure", "Oil pressure is too low. This is a serious warning.", "Stop at once, turn off the engine and check the oil level. Do not keep driving."] },
+  { id:'brake', name:'בלמים', color:'red', desc:'נורת הבלמים דולקת. ייתכן שבלם היד מופעל, או שיש תקלה במערכת הבלמים.', act:'לוודא שבלם היד שחרר. אם הנורה נשארת דולקת או שהבלמים רכים, לעצור ולפנות למוסך.' , en:["Brake system", "The brake warning is on. The parking brake may be on, or there is a brake system fault.", "Make sure the parking brake is released. If it stays on or the pedal feels soft, stop and go to a garage."] },
+  { id:'brakefluid', name:'מפלס נוזל בלמים', color:'red', desc:'מפלס נוזל הבלמים נמוך.', act:'לעצור ולבדוק את המפלס. אם הוא נמוך, לפנות למוסך כי ייתכן דליפה.' , en:["Brake fluid level", "Brake fluid is low.", "Stop and check the level. If it is low, go to a garage because there may be a leak."] },
+  { id:'parking', name:'בלם יד', color:'red', desc:'בלם היד מופעל.', act:'לשחרר את בלם היד לפני הנסיעה.' , en:["Parking brake", "The parking brake is on.", "Release the parking brake before driving."] },
+  { id:'seatbelt', name:'חגורת בטיחות', color:'red', desc:'נהג או נוסע לא חגור.', act:'לחגור את החגורה. אם הנורה נשארת דולקת גם כשחגורים, לבדוק את החיישן.' , en:["Seatbelt", "A driver or passenger is not wearing a seatbelt.", "Fasten the seatbelt. If it stays on while belted, have the sensor checked."] },
+  { id:'airbag', name:'כריות אוויר', color:'amber', desc:'יש תקלה במערכת כריות האוויר, והן עלולות לא להיפתח בתאונה.', act:'לפנות למוסך בהקדם. זו בדיקה שחשוב לא לדחות.' , note:'לפי המקורות זו תקלה לבדיקה, אבל מומלץ לא לדחות.' , en:["Airbag", "There is a fault in the airbag system and the airbags may not deploy in a crash.", "Go to a garage soon. Do not postpone this check."] },
+  { id:'steer', name:'נעילת הגה', color:'red', desc:'ההגה נעול ואי אפשר לסובב אותו.', act:'להזיז את ההגה בזמן שמסובבים את המפתח. אם זה לא עוזר, לפנות למוסך.' , en:["Steering lock", "The steering wheel is locked and cannot be turned.", "Turn the wheel while turning the key. If that does not help, go to a garage."] },
+  { id:'door', name:'דלת פתוחה', color:'red', desc:'אחת הדלתות לא סגורה.', act:'לסגור את כל הדלתות לפני הנסיעה.' , en:["Door open", "One door is not fully closed.", "Close all doors before driving."] },
+  { id:'bonnet', name:'מכסה מנוע פתוח', color:'red', desc:'מכסה המנוע לא סגור.', act:'לסגור את המכסה בחוזקה לפני הנסיעה.' , en:["Bonnet open", "The bonnet is not fully closed.", "Close the bonnet firmly before driving."] },
+  { id:'trunk', name:'תא מטען פתוח', color:'red', desc:'דלת תא המטען לא סגורה.', act:'לסגור את תא המטען לפני הנסיעה.' , en:["Trunk open", "The trunk lid is not fully closed.", "Close the trunk before driving."] },
+  { id:'hazard', name:'אורות אזהרה (מהבהבים)', color:'red', desc:'אורות החירום פועלים.', act:'לכבות כשהסיבה לחירום נפתרה.' , en:["Hazard lights", "The hazard lights are on.", "Turn them off once the reason for them is gone."] },
+  { id:'trans', name:'טמפרטורת תיבת הילוכים', color:'red', desc:'תיבת ההילוכים מתחממת יותר מדי.', act:'להפסיק לנסוע ולתת לרכב להתקרר. לפנות למוסך אם הנורה נשארת דולקת.' , en:["Transmission temperature", "The gearbox is overheating.", "Stop and let the car cool down. Go to a garage if the light stays on."] },
+  { id:'tpms', name:'לחץ אוויר בצמיגים', color:'amber', desc:'לחץ האוויר באחד הצמיגים נמוך מהמומלץ.', act:'לבדוק את לחץ הצמיגים ולהשוות לתווית בדלת הנהג.' , en:["Tire pressure", "Pressure in one tire is below the recommended level.", "Check the tire pressure and compare it with the sticker on the driver door."] },
+  { id:'abs', name:'ABS', color:'red', desc:'מערכת נגד נעילת גלגלים פועלת עם תקלה. הבלמים הרגילים עדיין עובדים.', act:'להיזהר בבלימה חזקה ולפנות למוסך לבדיקה.' , note:'במקור אחד הנורה מופיעה כאדומה ובמקור אחר כצהובה. לפי הכלל, מוצגת בצבע החמור יותר.' , en:["ABS", "The anti-lock braking system has a fault. Normal braking still works.", "Brake gently and have it checked soon. In some sources this light is shown as red, so red is used here."] },
+  { id:'ebd', name:'חלוקת כוח בלימה (EBD)', color:'amber', desc:'מערכת חלוקת הכוח בבלמים בתקלה.', act:'לנהוג בזהירות ולפנות למוסך.' , en:["Electronic brake force distribution", "The brake force distribution system has a fault.", "Drive carefully and go to a garage."] },
+  { id:'engine', name:'בדיקת מנוע', color:'amber', desc:'מחשב הרכב זיהה תקלה במנוע או בפליטה.', act:'אם הנורה מהבהבת, לעצור ולהתקשר למוסך. אם היא דולקת קבוע, לבדוק בקרוב עם קורא תקלות.' , en:["Check engine", "The car computer found a fault in the engine or exhaust.", "If it flashes, stop and call a garage. If it stays on, read the fault code soon."] },
+  { id:'tcs', name:'בקרת משיכה (TCS)', color:'amber', desc:'מערכת בקרת המשיכה פועלת. אם הנורה מהבהבת, המערכת מתערבת כרגע כדי לשמור על יציבות.', act:'לנהוג בזהירות. אם היא דולקת קבוע בלי הבהוב, המערכת כבויה או בתקלה.' , en:["Traction control", "Traction control is active. If it flashes, the system is intervening to keep the car stable.", "Drive carefully. If it stays on steadily, the system is off or faulty."] },
+  { id:'skid', name:'בקרת יציבות (ESP)', color:'amber', desc:'מערכת היציבות פועלת או בתקלה.', act:'אם היא דולקת קבוע, לבדוק בהקדם.' , en:["Stability control (ESP)", "Stability control is active or has a fault.", "If it stays on, have it checked soon."] },
+  { id:'fuel', name:'דלק נמוך', color:'amber', desc:'נותר מעט דלק במיכל.', act:'לתדלק בהקדם.' , en:["Low fuel", "Little fuel is left in the tank.", "Refuel soon."] },
+  { id:'waterfuel', name:'מים בדלק', color:'amber', desc:'יש מים בפילטר הדלק.', act:'לפנות למוסך לניקוז הפילטר.' , en:["Water in fuel", "There is water in the fuel filter.", "Have the filter drained at a garage."] },
+  { id:'glow', name:'מצתים (דיזל)', color:'amber', desc:'המנוע מתחמם לפני ההתנעה, או שיש תקלה במערכת החימום.', act:'לחכות שהנורה תכבה לפני ההתנעה. אם היא דולקת קבוע, לבדוק במוסך.' , en:["Glow plugs (diesel)", "The engine is preheating before start, or the heating system has a fault.", "Wait for it to go off before starting. If it stays on while driving, have it checked."] },
+  { id:'dpf', name:'מסנן חלקיקים (DPF)', color:'amber', desc:'מסנן הפליטה מלא ובעיית ניקיון.', act:'לנסוע בדרך מהירה לכמה דקות כדי לנקות אותו. אם הנורה לא כבית, לפנות למוסך.' , en:["Diesel particulate filter", "The exhaust particulate filter is full or clogged.", "Drive at speed for a few minutes to clean it. If the light stays on, go to a garage."] },
+  { id:'adblue', name:'AdBlue', color:'amber', desc:'רמת נוזל AdBlue נמוכה. זה נוזל לטיפול בפליטה בדיזל.', act:'למלא AdBlue בהקדם, כדי שהרכב לא יגביל את המהירות.' , en:["AdBlue", "AdBlue level is low. AdBlue is the fluid used in diesel exhaust treatment.", "Top up AdBlue soon, or the car will limit its speed."] },
+  { id:'service', name:'טיפול תקופתי', color:'amber', desc:'הגיע הזמן לטיפול תקופתי.', act:'לקבוע תור במוסך.' , en:["Service due", "Scheduled service is due.", "Book a service appointment."] },
+  { id:'immo', name:'אבטחה ומפתח', color:'amber', desc:'מערכת האבטחה מזהה בעיה במפתח או בהתנעה.', act:'לנסות מפתח אחר או לפנות למוסך.' , en:["Immobilizer / key", "The security system detects a problem with the key or the start.", "Try another key or go to a garage."] },
+  { id:'ev', name:'מערכת חשמלית או היברידית', color:'amber', desc:'יש תקלה במערכת ההנעה החשמלית או ההיברידית.', act:'לפנות למוסך מורשה בהקדם.' , en:["Electric or hybrid system", "There is a fault in the electric or hybrid drive system.", "Go to an authorized garage soon."] },
+  { id:'powerst', name:'הגה כוח', color:'amber', desc:'מערכת ההגה בעזרת כוח בתקלה, וההגה כבד יותר.', act:'לנסוע בזהירות ולפנות למוסך.' , en:["Power steering", "The power-assisted steering has a fault, and the steering is heavier.", "Drive carefully and go to a garage."] },
+  { id:'aeb', name:'בלימה אוטומטית (AEB)', color:'amber', desc:'מערכת הבלימה האוטומטית בתקלה.', act:'לא להסתמך עליה ולפנות למוסך.' , en:["Automatic emergency braking", "The automatic emergency braking system has a fault.", "Do not rely on it. Go to a garage."] },
+  { id:'stopgo', name:'עצירה והתנעה אוטומטית', color:'green', desc:'המנוע כבה בעצירה ויתניע שוב לבד.', act:'מידע בלבד. ללחוץ על הבלם כדי להתניע ידנית או לצאת ממצב P.' , en:["Auto stop-start", "The engine turns off at stops and restarts automatically.", "For information. Press the brake to restart manually or to leave P."] },
+  { id:'brakepress', name:'לחיצה על הבלם', color:'green', desc:'המערכת מבקשת ללחוץ על דוושת הבלם, לדוגמה כדי להתניע או לצאת ממצב P.', act:'ללחוץ על הבלם ולנסות שוב.' , en:["Press the brake", "The system asks you to press the brake, for example to start the car or leave P.", "Press the brake and try again."] },
+  { id:'dampers', name:'בולמים אדפטיביים', color:'amber', desc:'יש בעיה במערכת הבולמים המתכווננים.', act:'לנסוע בזהירות ולפנות למוסך לבדיקה.' , en:["Adaptive dampers", "There is a problem with the adjustable dampers.", "Drive carefully and have them checked at a garage."] },
+  { id:'fuelcap', name:'מכסה הדלק', color:'amber', desc:'מכסה מיכל הדלק לא מהודק כראוי.', act:'לסגור את מכסה הדלק עד שנשמע קליק.' , en:["Fuel cap", "The fuel cap is not tightened properly.", "Close the fuel cap until it clicks."] },
+  { id:'pads', name:'רפידות בלם שחוקות', color:'red', desc:'רפידות הבלם הגיעו לסוף חייהן.', act:'לבדוק ולהחליף בהקדם במוסך.' , note:'במקור אחד הנורה מופיעה כאדומה, לכן מוצגת כך.' , en:["Worn brake pads", "The brake pads have reached the end of their life.", "Have them checked and replaced soon at a garage. In some sources this light is shown as red, so red is used here."] },
+  { id:'extbulb', name:'נורה חיצונית שרופה', color:'amber', desc:'אחת הנורות החיצוניות של הרכב לא פועלת.', act:'להחליף את הנורה כמה שיותר מהר.' , en:["Exterior bulb out", "One of the exterior lights is not working.", "Replace the bulb as soon as possible."] },
+  { id:'keyout', name:'המפתח לא ברכב', color:'amber', desc:'מערכת הכניסה ללא מפתח לא מזהה את המפתח בתוך הרכב.', act:'לחפש את המפתח ולהכניס אותו לרכב.' , en:["Key not in the car", "The keyless entry system does not detect the key inside the car.", "Find the key and bring it into the car."] },
+  { id:'keylow', name:'סוללת מפתח חלשה', color:'amber', desc:'הסוללה במפתח הרכב מתרוקנת.', act:'להחליף את הסוללה במפתח.' , en:["Key battery low", "The battery in the car key is running out.", "Replace the battery in the key."] },
+  { id:'airfilter', name:'מסנן אוויר סתום', color:'amber', desc:'מסנן האוויר של המנוע סתום, וזרימת האוויר פחותה.', act:'לבדוק את המסנן ולהחליף אם צריך.' , en:["Air filter clogged", "The engine air filter is blocked, so less air flows in.", "Check the filter and replace it if needed."] },
+  { id:'ice', name:'אזהרת קרח על הכביש', color:'blue', desc:'הטמפרטורה בחוץ נמוכה והכביש עלול להיות חלקלק.', act:'לנהוג בזהירות ולשמור מרחק.' , en:["Ice warning", "The outside temperature is low and the road may be slippery.", "Drive carefully and keep a safe distance."] },
+  { id:'fcw', name:'אזהרת התנגשות קדימה', color:'amber', desc:'המערכת זיהתה סיכון להתנגשות עם רכב או מכשול לפניך.', act:'להגדיל מרחק ולבלום אם צריך.' , en:["Forward collision warning", "The system detected a risk of hitting a vehicle or obstacle ahead.", "Increase the distance and brake if needed."] },
+  { id:'blindspot', name:'אזהרת נקודה עיוורת', color:'amber', desc:'רכב או מכשול זוהה באזור הנקודה העיוורת.', act:'לנהוג בזהירות ולבדוק במראה לפני שמשנים נתיב.' , en:["Blind spot warning", "A vehicle or obstacle was detected in the blind spot.", "Drive carefully and check the mirror before changing lanes."] },
+  { id:'autolight', name:'תאורה אוטומטית', color:'green', desc:'המערכת הפעילה את האורות לפי תנאי התאורה.', act:'מידע בלבד.' , en:["Automatic lights", "The system turned on the lights based on the light conditions.", "For information."] },
+  { id:'sunroof', name:'גג נפתח בתקלה', color:'amber', desc:'הגג הנפתח לא נסגר או לא נפתח כראוי.', act:'לנסות לסגור או לפתוח שוב, ואם לא מצליחים לפנות למוסך.' , en:["Sunroof fault", "The sunroof does not close or open properly.", "Try closing or opening it again. If that fails, go to a garage."] },
+  { id:'childlock', name:'נעילת בטיחות לילדים', color:'green', desc:'נעילת הדלתות האחוריות לילדים פעילה.', act:'מידע בלבד.' , en:["Child safety lock", "The child lock on the rear doors is active.", "For information."] },
+  { id:'airbagoff', name:'כרית אוויר מושבתת', color:'amber', desc:'כרית האוויר של הנוסע או האחורית מושבתת. זה יכול להיות בכוונה, למשל עם כיסא תינוק.', act:'לוודא שהכרית מושבתת בכוונה. אם לא, לפנות למוסך.' , en:["Airbag off", "The passenger or rear airbag is off. This can be intentional, for example with a child seat.", "Make sure it is off on purpose. If not, go to a garage."] },
+  { id:'enginelimit', name:'כוח מנוע מוגבל', color:'red', desc:'המחשב הגביל את הכוח של המנוע בגלל תקלה.', act:'להפסיק לנסוע ולפנות למוסך.' , en:["Engine power limited", "The computer limited engine power because of a fault.", "Stop driving and go to a garage."] },
+  { id:'evready', name:'רכב מוכן לנסיעה', color:'green', desc:'הרכב החשמלי או ההיברידי מוכן לנסיעה.', act:'מידע בלבד. אם הנורה לא מופיעה בהתנעה, לפנות למוסך.' , en:["Ready to drive", "The electric or hybrid car is ready to drive.", "For information. If it does not appear on start, go to a garage."] },
+  { id:'hybbat', name:'סוללת ההנעה חלשה', color:'amber', desc:'רמת הטעינה של סוללת ההנעה ברכב ההיברידי נמוכה.', act:'לנסוע בזהירות ולהטעין כשאפשר.' , en:["Hybrid battery low", "The charge in the hybrid drive battery is low.", "Drive carefully and charge when you can."] },
+  { id:'battemp', name:'חום יתר בסוללה', color:'red', desc:'סוללת ההנעה מתחממת יותר מדי.', act:'לעצור במקום בטוח ולתת לסוללה להתקרר. לפנות למוסך.' , en:["Battery overheating", "The drive battery is overheating.", "Stop in a safe place and let the battery cool down. Go to a garage."] },
+  { id:'airsusp', name:'מתלה אוויר בתקלה', color:'amber', desc:'מערכת המתלה בלחץ אוויר לא פועלת כראוי.', act:'לפנות למוסך לבדיקה.' , en:["Air suspension fault", "The air suspension is not working properly.", "Go to a garage for a check."] },
+  { id:'coldengine', name:'מנוע קר', color:'blue', desc:'המנוע עדיין לא התחמם.', act:'לא לנסוע בקצב גבוה לפני שהמנוע מתחמם.', sym:'temp' , en:["Cold engine", "The engine has not warmed up yet.", "Avoid high speeds until the engine warms up."] },
+  { id:'oillow', name:'מפלס שמן נמוך', color:'amber', desc:'מפלס השמן במנוע נמוך.', act:'לבדוק עם המדיד ולהוסיף שמן במידת הצורך. אם הנורה חוזרת או נשארת דולקת, לפנות למוסך.', sym:'oil' , en:["Oil level low", "The engine oil level is low.", "Check with the dipstick and add oil if needed. If the light returns or stays on, go to a garage."] },
+  { id:'brakeheat', name:'חום במערכת הבלמים', color:'red', desc:'הבלמים התחממו יותר מדי.', act:'לעצור ולתת להם להתקרר. לפנות למוסך.', sym:'brake' , en:["Brake overheating", "The brakes have overheated.", "Stop and let them cool down. Go to a garage."] },
+  { id:'tcsoff', name:'בקרת משיכה כבויה', color:'amber', desc:'מערכת בקרת המשיכה הושבתה.', act:'לנסוע בזהירות. להפעיל מחדש אם רוצים שהמערכת תפעל.', sym:'tcs' , en:["Traction control off", "Traction control has been switched off.", "Drive carefully. Switch it on again if you want the system to work."] },
+  { id:'tcsactive', name:'בקרת משיכה פעילה', color:'green', desc:'מערכת בקרת המשיכה פועלת.', act:'מידע בלבד.', sym:'tcs' , en:["Traction control active", "Traction control is working.", "For information."] },
+  { id:'cruiseoff', name:'בקרת שיוט כבויה', color:'green', desc:'בקרת השיוט כובתה ידנית.', act:'מידע בלבד.', sym:'cruise' , en:["Cruise control off", "Cruise control was switched off manually.", "For information."] },
+  { id:'oilchange', name:'תזכורת להחלפת שמן', color:'blue', desc:'הגיע הזמן להחליף שמן מנוע.', act:'לקבוע תור לטיפול.', sym:'oil' , en:["Oil change reminder", "It is time to change the engine oil.", "Book a service appointment."] },
+  { id:'master', name:'נורת אזהרה ראשית', color:'amber', desc:'זו נורה כללית שמופיעה יחד עם נורות אחרות.', act:'לבדוק אילו נורות נוספות דולקות ולפעול לפי כל אחת מהן.', sym:'wrench' , en:["Master warning", "A general warning that often appears together with other warnings.", "Check which other lights are on and act on each one."] },
+  { id:'epb', name:'בלם יד חשמלי בתקלה', color:'amber', desc:'מערכת בלם היד החשמלי לא פועלת כראוי.', act:'לפנות למוסך לבדיקה.', sym:'parking' , en:["Electric parking brake fault", "The electric parking brake is not working properly.", "Go to a garage for a check."] },
+  { id:'trailer', name:'אזהרת נגרר', color:'amber', desc:'מנגנון הגרירה לא נעול, או שיש תקלה בתאורה של הנגרר.', act:'לבדוק את החיבור והתאורה של הנגרר.', sym:'hitch' , en:["Trailer warning", "The trailer coupling is not locked, or there is a fault in the trailer lights.", "Check the coupling and the trailer lights."] },
+  { id:'alarm', name:'אזעקת אבטחה', color:'amber', desc:'המערכת מדווחת על בעיה באבטחה. לחלק מהרכבים זו נורה שמופיעה לרגע בהתנעה.', act:'אם הנורה דולקת במהלך נסיעה, לפנות למוסך לבדיקה.', sym:'alarm' , en:["Security alarm", "The system reports a security problem. On some cars this light appears briefly at start.", "If it stays on while driving, go to a garage for a check."] },
+  { id:'clutch', name:'דוושת מצמד', color:'green', desc:'מחוון ללחיצה על המצמד.', act:'מידע בלבד.', sym:'clutch' , en:["Clutch pedal", "Indicator that the clutch pedal is pressed.", "For information."] },
+  { id:'awd', name:'תקלה במערכת הנעה לארבעה גלגלים', color:'amber', desc:'יש תקלה במערכת ההנעה.', act:'לפנות למכונאי בהקדם.', sym:'awd' , en:["All-wheel drive fault", "There is a fault in the four-wheel drive system.", "Go to a mechanic soon."] },
+  { id:'lock4wd', name:'נעילת הנעה לארבעה גלגלים', color:'green', desc:'מערכת 4x4 נעולה.', act:'מידע בלבד.', sym:'awd' , en:["Four-wheel drive locked", "The four-wheel drive system is locked.", "For information."] },
+  { id:'catalyst', name:'ממיר קטליטי בתקלה', color:'amber', desc:'הממיר הקטליטי מתחמם מדי או לא פועל כראוי.', act:'לפנות למוסך לבדיקה.', sym:'dpf' , en:["Catalytic converter fault", "The catalytic converter is overheating or not working properly.", "Go to a garage for a check."] },
+  { id:'brakelight', name:'נורת בלם חיצונית שרופה', color:'amber', desc:'אחת מנורות הבלם החיצוניות לא פועלת.', act:'להחליף את הנורה.', sym:'extbulb' , en:["Brake light bulb out", "One of the external brake lights is not working.", "Replace the bulb."] },
+  { id:'lightrange', name:'בקרת טווח פנסים בתקלה', color:'amber', desc:'המערכת שמכוונת את טווח הפנסים בתקלה.', act:'לפנות למוסך לבדיקה.', sym:'lowbeam' , en:["Headlight range control fault", "The system that adjusts headlight range has a fault.", "Go to a garage for a check."] },
+  { id:'autohigh', name:'אור גבוה אוטומטי', color:'blue', desc:'המערכת הדליקה את הפנסים הגבוהים.', act:'מידע בלבד.', sym:'highbeam' , en:["Automatic high beam", "The system turned on the high beams.", "For information."] },
+  { id:'adaptlight', name:'תאורה אדפטיבית', color:'green', desc:'הפנסים האדפטיביים דולקים.', act:'מידע בלבד.', sym:'lowbeam' , en:["Adaptive lights", "The adaptive headlights are on.", "For information."] },
+  { id:'extfault', name:'תקלה בתאורה חיצונית', color:'amber', desc:'כל האורות החיצוניים לא פועלים.', act:'לבדוק את המערכת ואת הנתיכים.', sym:'extbulb' , en:["Exterior lights fault", "All exterior lights are not working.", "Check the system and the fuses."] },
+  { id:'rainsensor', name:'חיישן גשם ואור בתקלה', color:'amber', desc:'המגבים והאורות לא יפעלו אוטומטית.', act:'לפנות למוסך לבדיקה.', sym:'wiper' , en:["Rain / light sensor fault", "The wipers and lights will not work automatically.", "Go to a garage for a check."] },
+  { id:'fan', name:'מאוורר פנימי', color:'green', desc:'המאוורר הפנימי פועל.', act:'מידע בלבד.', sym:'fan' , en:["Interior fan", "The interior fan is running.", "For information."] },
+  { id:'ramp', name:'הרכב על רמפה', color:'green', desc:'הרכב נמצא על רמפה או שקע.', act:'מידע בלבד.', sym:'hill' , en:["Vehicle on ramp", "The car is on a ramp or a lift.", "For information."] },
+  { id:'recirc', name:'אוורור במצב מיחזור', color:'green', desc:'האוורור מחזיר אוויר מתוך הרכב. זה מתאים לתנאי קור.', act:'מידע בלבד.', sym:'heat' , en:["Recirculation mode", "The ventilation is recirculating air from inside the car. This suits cold conditions.", "For information."] },
+  { id:'spoiler', name:'תקלה בספוילר האחורי', color:'amber', desc:'יש תקלה במערכת הספוילר.', act:'לפנות למוסך לבדיקה.', sym:'spoiler' , en:["Rear spoiler fault", "There is a fault in the spoiler system.", "Go to a garage for a check."] },
+  { id:'parkassist', name:'מסייע חניה פעיל', color:'green', desc:'מסייע החניה פעיל.', act:'מידע בלבד.', sym:'parking' , en:["Parking assist active", "The parking assist is active.", "For information."] },
+  { id:'lanedepart', name:'יציאה מנתיב', color:'amber', desc:'הרכב יצא מהנתיב בלי איתות.', act:'לתקן את הכיוון.', sym:'lane' , en:["Lane departure", "The car left the lane without signaling.", "Correct the steering."] },
+  { id:'signs', name:'זיהוי שילוט', color:'green', desc:'מערכת העזרה לנתיבים זיהתה שילוט.', act:'מידע בלבד.', sym:'lane' , en:["Road sign recognition", "The lane assist system recognized road signs.", "For information."] },
+  { id:'ignition', name:'תקלה במתג ההצתה', color:'amber', desc:'יש בעיה במתג ההצתה או במפתח.', act:'לפנות למוסך לבדיקה.', sym:'immo' , en:["Ignition switch fault", "There is a problem with the ignition switch or the key.", "Go to a garage for a check."] },
+  { id:'pedestrian', name:'אזהרת הולכי רגל', color:'red', desc:'זוהתה התנגשות קרובה עם הולך רגל.', act:'לבלום מיד אם צריך.', sym:'pedestrian' , en:["Pedestrian warning", "A close collision with a pedestrian was detected.", "Brake immediately if needed."] },
+  { id:'evmode', name:'מצב נסיעה חשמלי', color:'green', desc:'הרכב נוסע במצב חשמלי בלבד.', act:'מידע בלבד. אפשר להמשיך לנהוג כרגיל.', sym:'ev' , en:["Electric drive mode", "The car is driving in electric mode only.", "For information. You can keep driving normally."] },
+  { id:'evunavail', name:'מצב חשמלי לא זמין', color:'amber', desc:'מצב הנסיעה החשמלי לא זמין כרגע.', act:'להמשיך בנסיעה במהירות נמוכה ולהמתין.', sym:'ev' , en:["Electric mode unavailable", "Electric drive mode is temporarily unavailable.", "Continue at low speed and wait."] },
+  { id:'coast', name:'בקרת גלישה', color:'green', desc:'המערכת מפחיתה את כוח ההאטה לחיסכון בדלק.', act:'מידע בלבד.', sym:'eco' , en:["Coast control", "The system reduces braking force to save fuel.", "For information."] },
+  { id:'speedlim', name:'מגביל מהירות פעיל', color:'green', desc:'מגביל המהירות פעיל.', act:'מידע בלבד.', sym:'cruise' , en:["Speed limiter active", "The speed limiter is active.", "For information."] },
+  { id:'winter', name:'מצב חורף', color:'blue', desc:'הרכב במצב חורף.', act:'מידע בלבד.', sym:'snow' , en:["Winter mode", "The car is in winter mode.", "For information."] },
+  { id:'autowiper', name:'ניגוב אוטומטי', color:'green', desc:'המגבים פועלים במצב אוטומטי.', act:'מידע בלבד.', sym:'wiper' , en:["Automatic wipers", "The wipers are running in automatic mode.", "For information."] },
+  { id:'adblueempty', name:'מיכל AdBlue ריק', color:'amber', desc:'מיכל הנוזל לטיפול בפליטה ריק.', act:'למלא מיד, כדי שהרכב לא יגביל את המהירות.', sym:'adblue' , en:["AdBlue tank empty", "The exhaust treatment fluid tank is empty.", "Fill it immediately, or the car will limit its speed."] },
+  { id:'adbluefault', name:'תקלה במערכת AdBlue', color:'amber', desc:'המערכת לא תקינה, או שהנוזל שמולא אינו הנוזל הנכון.', act:'לפנות למוסך לבדיקה.', sym:'adblue' , en:["AdBlue system fault", "The system is not working properly, or the wrong fluid was added.", "Go to a garage for a check."] },
+  { id:'wrench', name:'תקלה כללית', color:'amber', desc:'מערכת כלשהי ברכב דורשת בדיקה.', act:'לבדוק בספר הרכב מה התקלה, ולפנות למוסך אם צריך.' , en:["General fault", "A system in the car needs checking.", "Check the owner manual for the fault and go to a garage if needed."] },
+  { id:'wiper', name:'מגבים', color:'green', desc:'מערכת המגבים פעילה.', act:'מידע בלבד.' , en:["Wipers", "The wiper system is active.", "For information."] },
+  { id:'washer', name:'נוזל שטיפה', color:'amber', desc:'נוזל השטיפה נמוך.', act:'למלא נוזל שטיפה.' , en:["Washer fluid", "Washer fluid is low.", "Top up the washer fluid."] },
+  { id:'lowbeam', name:'נורות צמודות', color:'green', desc:'נורות הצמודות דולקות.', act:'מידע בלבד.' , en:["Low beams", "The low beams are on.", "For information."] },
+  { id:'highbeam', name:'נורות גבוהות', color:'blue', desc:'נורות הגבוהות דולקות.', act:'לכבות כשרואים מכונית מולכם.' , en:["High beams", "The high beams are on.", "Turn them off when you see an oncoming car."] },
+  { id:'fog', name:'נורות ערפל קדמיות', color:'green', desc:'נורות הערפל הקדמיות דולקות.', act:'להדליק רק בערפל או באבק כבד.' , en:["Front fog lights", "The front fog lights are on.", "Use only in very poor visibility."] },
+  { id:'rearfog', name:'נורות ערפל אחוריות', color:'amber', desc:'נורות הערפל האחוריות דולקות.', act:'לכבות כשהערפל מתפזר, כי הן מסנוורות מאחור.' , en:["Rear fog light", "The rear fog light is on.", "Turn it off when the fog clears, since it can dazzle drivers behind you."] },
+  { id:'parkinglight', name:'אורות חניה', color:'green', desc:'אורות החניה דולקים.', act:'לכבות לפני שיוצאים מהרכב.' , en:["Parking lights", "The parking lights are on.", "Turn them off before leaving the car."] },
+  { id:'turnl', name:'איתות שמאלה', color:'green', desc:'האיתות השמאלי פועל.', act:'מידע בלבד.' , en:["Left indicator", "The left indicator is working.", "For information."] },
+  { id:'turnr', name:'איתות ימינה', color:'green', desc:'האיתות הימני פועל.', act:'מידע בלבד.' , en:["Right indicator", "The right indicator is working.", "For information."] },
+  { id:'defrostfront', name:'הפשרת שמשה קדמית', color:'green', desc:'מערכת ההפשרה של השמשה הקדמית פועלת.', act:'מידע בלבד.' , en:["Front windscreen defrost", "The front windscreen defrost is working.", "For information."] },
+  { id:'defrostrear', name:'הפשרת שמשה אחורית', color:'amber', desc:'מערכת ההפשרה של השמשה האחורית פועלת.', act:'מידע בלבד.' , en:["Rear window defrost", "The rear window defrost is working.", "For information."] },
+  { id:'heat', name:'חימום מושבים או מערכת חימום', color:'green', desc:'מערכת החימום פועלת.', act:'מידע בלבד.' , en:["Heating", "The heating system is running.", "For information."] },
+  { id:'seatheat', name:'חימום מושבים', color:'green', desc:'חימום המושב פועל.', act:'מידע בלבד.' , en:["Seat heating", "Seat heating is on.", "For information."] },
+  { id:'cruise', name:'שיוט אוטומטי', color:'green', desc:'בקרת השיוט פעילה או מוכנה לפעולה.', act:'מידע בלבד.' , en:["Cruise control", "Cruise control is on or ready.", "For information."] },
+  { id:'acc', name:'שיוט אדפטיבי (ACC)', color:'green', desc:'שיוט אדפטיבי פעיל.', act:'מידע בלבד.' , en:["Adaptive cruise control", "Adaptive cruise control is active.", "For information."] },
+  { id:'lane', name:'שמירה על נתיב', color:'green', desc:'מערכת שמירת הנתיב פעילה.', act:'מידע בלבד.' , en:["Lane keeping", "The lane keeping system is active.", "For information."] },
+  { id:'hill', name:'ירידה מהירה במורד (HDC)', color:'green', desc:'מערכת הירידה במורד פעילה.', act:'מידע בלבד.' , en:["Hill descent control", "Hill descent control is active.", "For information."] },
+  { id:'autohold', name:'החזקה אוטומטית', color:'green', desc:'החזקה אוטומטית פעילה.', act:'מידע בלבד.' , en:["Auto hold", "Auto hold is active.", "For information."] },
+  { id:'snow', name:'מצב שלג', color:'blue', desc:'מצב שלג פעיל.', act:'מידע בלבד.' , en:["Snow mode", "Snow mode is active.", "For information."] },
+  { id:'eco', name:'מצב חסכוני', color:'green', desc:'מצב נהיגה חסכוני פעיל.', act:'מידע בלבד.' , en:["Eco mode", "Eco driving mode is active.", "For information."] },
+  { id:'plug', name:'טעינת רכב חשמלי או היברידי', color:'green', desc:'הרכב מחובר לטעינה או נטען.', act:'מידע בלבד.' , en:["Charging electric or hybrid car", "The car is connected to a charger or is charging.", "For information."] },
+  { id:'evcharge', name:'טעינה פעילה', color:'green', desc:'הרכב נטען כרגע.', act:'מידע בלבד.' , en:["Charging in progress", "The car is charging now.", "For information."] },
+  { id:'manual', name:'מדריך למשתמש', color:'blue', desc:'יש הודעה בספר הרכב שכדאי לקרוא.', act:'לפתוח את ספר הרכב.' , en:["Owner manual", "There is a message in the owner manual worth reading.", "Open the owner manual."] },
+  { id:'info', name:'הודעת מידע', color:'blue', desc:'המערכת מציגה הודעה כללית.', act:'לקרוא את ההודעה על המסך או בספר הרכב.', en:["Information message","The system shows a general message.","Read the message on the screen or in the owner manual."] },
+];
+
+const T = {
+  he: {
+    title:'נורות אזהרה ברכב', sub:'הסבר על נורות האזהרה הנפוצות בלוח המחוונים. הצבע מראה כמה דחוף לטפל.<br><b>שימו לב:</b> הציורים הם הדמיה כללית לפי התקן הבינלאומי. הסמל ברכב שלכם יכול להיראות שונה לפי היצרן והדגם, ולכן יש לבדוק את ספר היצרן.',
+    search:'חיפוש לפי שם או משמעות', all:'הכול', red:'אדום', amber:'כתום', green:'ירוק', blue:'כחול',
+    legend:'<b style="color:var(--red)">אדום:</b> לעצור ולבדוק מיד &nbsp; <b style="color:var(--amber)">כתום/צהוב:</b> לטפל בקרוב &nbsp; <b style="color:var(--green)">ירוק:</b> מידע על מצב פעולה &nbsp; <b style="color:var(--blue)">כחול:</b> מידע בלבד',
+    tags:{red:'לעצור מיד', amber:'לטפל בקרוב', green:'מידע', blue:'מידע'},
+    act:'מה לעשות:', none:'לא נמצאה נורה מתאימה', note:'הערה:',
+    rule:'<b>כלל הצבעים:</b> אם מקור אחד מציין נורה בכתום ומקור אחר באדום, היא מוצגת באדום, כי זה הצבע החמור יותר ומסמן סכנה. כתום מסמן שצריך לטפל בזה בקרוב.',
+    disc:'<b>הבהרות חשובות:</b><br>• המידע באתר הוא כללי בלבד, ונועד להסבר ולא לאבחון. לא מדובר בהוראות מקצועיות לתיקון.<br>• סמלי הנורות בדף צוירו בהשראת התקן הבינלאומי ISO 2575, ואינם העתק של סמלים של יצרן מסוים. סמל ברכב שלכם עלול להיראות שונה, ואף לדלוק בצבע אחר.<br>• ייתכן שיש בדף דברים לא מדויקים או לא מעודכנים. לכן יש להסתכל תמיד בספר היצרן של הרכב, שהוא המקור המחייב.<br>• במקרה של ספק, או כשנורה אדומה דולקת, יש לעצור במקום בטוח ולפנות למוסך מורשה או לשירות הדרכים.<br>• האפליקציה אינה קשורה ליצרנים או ליבואנים, ואין לה אישור רשמי מהם. שמות היצרנים מוזכרים לצורך הזיהוי בלבד.<br>• המפעיל לא נושא באחריות לנזק או לתקלה שנובעים משימוש במידע הזה. אין להסתמך על המידע כתחליף לבדיקה במוסך.'
+  },
+  en: {
+    title:'Dashboard warning lights', sub:'An explanation of the most common warning lights on the dashboard. The color shows how urgent it is.<br><b>Note:</b> The drawings are general illustrations based on the international standard. The symbol in your car may look different depending on the manufacturer and model, so check the manufacturer owner manual.',
+    search:'Search by name or meaning', all:'All', red:'Red', amber:'Amber', green:'Green', blue:'Blue',
+    legend:'<b style="color:var(--red)">Red:</b> stop and check now &nbsp; <b style="color:var(--amber)">Amber:</b> attend soon &nbsp; <b style="color:var(--green)">Green:</b> system status &nbsp; <b style="color:var(--blue)">Blue:</b> information only',
+    tags:{red:'Stop now', amber:'Check soon', green:'Info', blue:'Info'},
+    act:'What to do:', none:'No matching light found', note:'Note:',
+    rule:'<b>Color rule:</b> If one source lists a light as amber and another as red, it is shown as red, because that is the more serious color. Amber means it needs attention soon.',
+    disc:'<b>Important notes:</b><br>• The information here is general only, for explanation and not diagnosis. It is not professional repair advice.<br>• The symbols are based on the international standard ISO 2575 and are not copies of any manufacturer symbols. The symbol in your car may look different, and may even light up in another color.<br>• Parts of this page may be inaccurate or out of date. Always check the manufacturer owner manual, which is the binding source.<br>• If in doubt, or when a red light is on, stop in a safe place and contact an authorized garage or roadside service.<br>• This app is not affiliated with car manufacturers or importers and has no official approval from them. Manufacturer names are mentioned only for identification.<br>• The operator is not liable for damage or faults resulting from use of this information. Do not rely on it as a replacement for a garage check.'
+  }
+};
+const NOTE_EN = {
+  battery:'In some sources this light is amber and in others red. Red is shown here.',
+  abs:'In some sources this light is shown as red. Red is shown here.',
+  pads:'In some sources this light is shown as red. Red is shown here.',
+  airbag:'Treat this as a check that should not be postponed.',
+  washer:'Top up when convenient.'
+};
+let lang = 'he';
+try { lang = (localStorage.getItem('appLang') === 'en') ? 'en' : 'he'; } catch (e) {}
+const state = { q:'', c:'all' };
+const $ = id => document.getElementById(id);
+const COLORS = { red:'var(--red)', amber:'var(--amber)', green:'var(--green)', blue:'var(--blue)' };
+
+function setLangUI() {
+  const t = T[lang];
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'en' ? 'ltr' : 'rtl';
+  document.title = t.title;
+  $('t_h1').textContent = t.title;
+  $('t_sub').innerHTML = t.sub;
+  $('q').placeholder = t.search;
+  $('t_legend').innerHTML = t.legend;
+  $('t_note').innerHTML = t.disc;
+  $('langBtn').textContent = lang === 'en' ? 'עברית' : 'English';
+}
+
+function renderFilters() {
+  const t = T[lang];
+  const opts = [['all',t.all],['red',t.red],['amber',t.amber],['green',t.green],['blue',t.blue]];
+  $('filters').innerHTML = opts.map(([k,l]) =>
+    `<button class="chip ${state.c===k?'on':''}" data-c="${k}" style="${k==='all'?'':'color:'+COLORS[k]}">${l}</button>`).join('');
+  $('filters').querySelectorAll('.chip').forEach(b => b.onclick = () => { state.c = b.dataset.c; render(); });
+}
+
+function render() {
+  setLangUI();
+  renderFilters();
+  const t = T[lang];
+  const q = state.q.trim().toLowerCase();
+  const items = LIGHTS.filter(l => {
+    const [name, desc, act] = lang === 'en' ? l.en : [l.name, l.desc, l.act];
+    return (state.c === 'all' || l.color === state.c) &&
+      (!q || name.toLowerCase().includes(q) || desc.toLowerCase().includes(q) || act.toLowerCase().includes(q) || l.name.includes(q));
+  });
+  $('list').innerHTML = items.length ? items.map(l => {
+    const [name, desc, act] = lang === 'en' ? l.en : [l.name, l.desc, l.act];
+    let note = '';
+    if (lang === 'en') { if (NOTE_EN[l.id]) note = NOTE_EN[l.id]; }
+    else if (l.note) note = l.note;
+    return `
+    <div class="item" style="--c:${COLORS[l.color]}">
+      <div class="ico"><svg style="color:${COLORS[l.color]}"><use href="#${l.sym||l.id}"/></svg></div>
+      <div class="body">
+        <div class="name">${name}<span class="tag">${t.tags[l.color]}</span></div>
+        <div class="desc">${desc}</div>
+        <div class="act">${t.act} ${act}${note ? `<br><span style="color:var(--amber)">${t.note} ${note}</span>` : ''}</div>
+      </div>
+    </div>`; }).join('') : `<div class="empty">${t.none}</div>`;
+  $('t_rule').innerHTML = t.rule;
+}
+
+$('q').addEventListener('input', e => { state.q = e.target.value; render(); });
+$('langBtn').addEventListener('click', () => {
+  lang = lang === 'he' ? 'en' : 'he';
+  try { localStorage.setItem('appLang', lang); } catch (e) {}
+  render();
+});
+render();
+</script>
+</body>
+</html>
