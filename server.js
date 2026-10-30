@@ -169,19 +169,33 @@ app.use((req, res, next) => {
     next();
 });
 
+// מטמון לתשובות המאגר: אותו רכב לא נשאל שוב מהמאגר במשך 10 דקות.
+// זה מפחית מאוד את מספר הבקשות, כי מאגר משרד התחבורה מגביל קצב.
+const dsCache = new Map();
+const DS_CACHE_TTL_MS = 10 * 60 * 1000;
+
 async function searchDatastore(resourceId, filters, limit = 100, q = "") {
     const f = filters ? `&filters=${encodeURIComponent(JSON.stringify(filters))}` : "";
     const qq = q ? `&q=${encodeURIComponent(q)}` : "";
     const url = `https://data.gov.il/api/3/action/datastore_search?resource_id=${resourceId}${f}${qq}&limit=${limit}`;
-    const response = await fetch(url);
-    const text = await response.text();
-    let data;
-    try {
-        data = JSON.parse(text);
-    } catch (e) {
+    const cached = dsCache.get(url);
+    if (cached && Date.now() - cached.at < DS_CACHE_TTL_MS) return cached.records;
+
+    // כשמאגר העירוני מגביל קצב או מחזיר דף שגיאה (לא JSON) – מנסים שוב פעם אחת
+    let data = null;
+    for (let attempt = 0; attempt < 2 && !data; attempt++) {
+        if (attempt > 0) await new Promise(r => setTimeout(r, 1500));
+        const response = await fetch(url);
+        const text = await response.text();
+        try { data = JSON.parse(text); } catch (e) { data = null; }
+    }
+    if (!data) {
         throw new Error('DATASTORE_UNAVAILABLE');
     }
-    return data?.success ? (data.result?.records || []) : [];
+    if (!data.success) return [];
+    const records = data.result?.records || [];
+    dsCache.set(url, { at: Date.now(), records });
+    return records;
 }
 
 function toText(value) {
@@ -352,6 +366,10 @@ app.get('/api/car/inspect', async (req, res) => {
 
 app.get('/api/car/:plate', async (req, res) => {
     const plate = req.params.plate.replace(/\D/g, "");
+    // מספר רכב לא תקין לא נשלח למאגר (למשל "0")
+    if (plate.length < 5 || plate.length > 9 || Number(plate) === 0) {
+        return res.status(400).json({ success: false, message: "מספר רכב לא תקין" });
+    }
     try {
         const car = await fetchCarRecord(plate);
         if (!car) {
@@ -781,59 +799,6 @@ app.get('/api/personal-import/:plate', async (req, res) => {
             return res.status(503).json({ success: false, message: 'שירות משרד התחבורה לא זמין כרגע, נסה שוב בעוד דקה' });
         }
         res.status(500).json({ success: false, message: 'שגיאה בשליפה' });
-    }
-});
-
-// ---------- כלי רכב שירדו מהכביש (data.gov.il) ----------
-// להוסיף כאן את מזהי כל המאגרים של "כלי רכב שירדו מהכביש"
-const REMOVED_RESOURCE_IDS = [
-    "4e6b9724-4c1e-43f0-909a-154d4cc4e046", // 2010-2016
-    "ec8cbc34-72e1-4b69-9c48-22821ba0bd6c", // 2000-2009
-    "851ecab1-0622-4dbe-a6c7-f950cf82abf9"
-];
-
-app.get('/api/removed/:plate', async (req, res) => {
-    const plate = req.params.plate.replace(/\D/g, '');
-    if (plate.length < 5) return res.json({ success: false, message: 'מספר לא תקין' });
-    const plainNum = String(Number(plate));
-    // במאגרים מספר הרכב נשמר לפעמים עם אפס מוביל (8 ספרות) ולפעמים בלי
-    // חלק מהמאגרים שומרים את מספר הרכב כמספר (numeric) וחלקם כטקסט, לכן בודקים את שלושת הצורות
-    const filterValues = [plainNum.padStart(8, '0'), plainNum, Number(plainNum)];
-    try {
-        const lists = await Promise.all(REMOVED_RESOURCE_IDS.flatMap(id =>
-            filterValues.map(v => searchDatastore(id, { mispar_rechev: v }, 20).catch(() => []))
-        ));
-        const seen = new Set();
-        const records = [];
-        for (const r of lists.flat()) {
-            const key = `${r.misgeret}|${r.bitul_dt}`;
-            if (seen.has(key)) continue;
-            seen.add(key);
-            records.push({
-                manufacturer: toText(r.tozeret_nm),
-                model: toText(r.kinuy_mishari) || toText(r.degem_nm),
-                year: toText(r.shnat_yitzur),
-                cancelDate: toText(r.bitul_dt),
-                chassis: toText(r.misgeret)
-            });
-        }
-
-        // בודקים אם יש היום רכב פעיל עם אותו מספר, ואם השלדה זהה (כלומר אותו רכב שחזר לכביש)
-        const active = await fetchCarRecord(plainNum).catch(() => null);
-        const activeChassis = active ? String(active.misgeret || '').trim().toUpperCase() : '';
-        const sameChassis = !!activeChassis
-            && records.some(r => (r.chassis || '').trim().toUpperCase() === activeChassis);
-
-        res.json({
-            success: true,
-            removed: records.length > 0,
-            records,
-            activeFound: !!active,
-            sameChassis,
-            returnedToRoad: records.length > 0 && sameChassis
-        });
-    } catch (e) {
-        res.status(500).json({ success: false, message: 'שגיאה בבדיקת מאגר שירדו מהכביש' });
     }
 });
 
