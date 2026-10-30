@@ -797,7 +797,8 @@ app.get('/api/removed/:plate', async (req, res) => {
     if (plate.length < 5) return res.json({ success: false, message: 'מספר לא תקין' });
     const plainNum = String(Number(plate));
     // במאגרים מספר הרכב נשמר לפעמים עם אפס מוביל (8 ספרות) ולפעמים בלי
-    const filterValues = [...new Set([plainNum.padStart(8, '0'), plainNum])];
+    // חלק מהמאגרים שומרים את מספר הרכב כמספר (numeric) וחלקם כטקסט, לכן בודקים את שלושת הצורות
+    const filterValues = [plainNum.padStart(8, '0'), plainNum, Number(plainNum)];
     try {
         const lists = await Promise.all(REMOVED_RESOURCE_IDS.flatMap(id =>
             filterValues.map(v => searchDatastore(id, { mispar_rechev: v }, 20).catch(() => []))
