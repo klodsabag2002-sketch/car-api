@@ -93,7 +93,8 @@ function dueAlarms(r) {
     if (!d) return;
     const [y, m, day] = d.split('-').map(Number);
     OFFSETS.forEach(off => {
-      const at = new Date(y, m - 1, day - off, 9, 0, 0).getTime();
+      if (off !== 0) return; // TEST ONLY
+      const at = now + 60 * 1000; // TEST ONLY: fires in 1 minute
       if (at <= now) return;
       const msg = off === 0
         ? `${k.label} של רכב ${r.plate} פג היום`
