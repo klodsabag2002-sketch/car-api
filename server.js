@@ -853,13 +853,13 @@ function hashToken(token) {
 }
 
 app.post('/api/reminders', async (req, res) => {
-    const { name, plate, testDate, stickerDate, subscription, consent } = req.body || {};
+    const { name, plate, testDate, stickerDate, insuranceDate, subscription, consent } = req.body || {};
     const cleanName = String(name || '').trim().slice(0, 40);
     const cleanPlate = String(plate || '').replace(/\D/g, '');
     if (!consent) return res.status(400).json({ success: false, message: 'יש לאשר את תנאי השמירה' });
     if (!cleanName) return res.status(400).json({ success: false, message: 'יש להזין שם לרכב' });
     if (cleanPlate.length < 7 || cleanPlate.length > 8) return res.status(400).json({ success: false, message: 'מספר רכב לא תקין' });
-    if (!isDate(testDate) && !isDate(stickerDate)) return res.status(400).json({ success: false, message: 'יש להזין לפחות תאריך אחד' });
+    if (!isDate(testDate) && !isDate(stickerDate) && !isDate(insuranceDate)) return res.status(400).json({ success: false, message: 'יש להזין לפחות תאריך אחד' });
     if (!subscription || typeof subscription.endpoint !== 'string') return res.status(400).json({ success: false, message: 'חסרה הרשמה להתראות' });
     try {
         const id = require('crypto').randomBytes(8).toString('hex');
@@ -869,6 +869,7 @@ app.post('/api/reminders', async (req, res) => {
             plate: cleanPlate,
             testDate: isDate(testDate) ? testDate : null,
             stickerDate: isDate(stickerDate) ? stickerDate : null,
+            insuranceDate: isDate(insuranceDate) ? insuranceDate : null,
             subscription,
             tokenHash: hashToken(token),
             sent: {},
@@ -911,7 +912,8 @@ app.post('/api/reminders/run', async (req, res) => {
         for (const [id, rec] of Object.entries(all)) {
             const items = [
                 { key: 'test', date: rec.testDate, label: 'הטסט', kind: 'טסט' },
-                { key: 'sticker', date: rec.stickerDate, label: 'תוקף תו החניה', kind: 'תו חניה' }
+                { key: 'sticker', date: rec.stickerDate, label: 'תוקף תו החניה', kind: 'תו חניה' },
+                { key: 'insurance', date: rec.insuranceDate, label: 'הביטוח', kind: 'ביטוח' }
             ];
             for (const it of items) {
                 if (!it.date) continue;
