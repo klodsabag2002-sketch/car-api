@@ -5,21 +5,24 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>נורות אזהרה ברכב</title>
 <style>
-  :root { --bg:#0b1120; --card:#111a2e; --line:rgba(148,163,184,.18); --text:#e2e8f0; --muted:#94a3b8; --red:#ef4444; --amber:#f59e0b; --green:#22c55e; --blue:#3b82f6; }
-  @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --bg:#f8fafc; --card:#ffffff; --line:rgba(15,23,42,.12); --text:#0f172a; --muted:#475569; } }
-  body { margin:0; background:var(--bg); color:var(--text); font-family:system-ui,Arial,sans-serif; }
+  :root { --bg:#030712; --card:rgba(15,23,42,.7); --line:rgba(56,189,248,.18); --text:#f8fafc; --muted:#94a3b8; --red:#ef4444; --amber:#f59e0b; --green:#22c55e; --blue:#3b82f6; --accent:#38bdf8; }
+  body { font-family:'Segoe UI', Arial, Helvetica, sans-serif; background:var(--bg); color:var(--text); margin:0; min-height:100vh; overflow-x:hidden; }
+  html[dir="ltr"] body { direction:ltr; }
+  .topbar { position:sticky; top:0; z-index:5; display:flex; align-items:center; gap:10px; padding:12px 14px; background:rgba(3,7,18,.92); border-bottom:1px solid rgba(56,189,248,.15); backdrop-filter:blur(6px); }
+  .topbar .t { font-size:18px; flex:1; text-align:center; font-weight:900; letter-spacing:1px; color:var(--accent); }
+  .topbar a, .topbar button.i { font-size:18px; width:36px; height:36px; display:flex; align-items:center; justify-content:center; cursor:pointer; border-radius:50%; background:rgba(56,189,248,.08); border:1px solid rgba(56,189,248,.25); color:var(--accent); text-decoration:none; font-family:inherit; }
+  .topbar button.i.lang-btn { font-size:12px; font-weight:900; letter-spacing:.5px; width:auto; padding:0 12px; border-radius:999px; flex:0 0 auto; }
+  .topbar .t { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
   .wrap { max-width:560px; margin:0 auto; padding:16px; }
-  h1 { font-size:22px; margin:8px 0 4px; }
+  h1 { display:none; }
   .sub { color:var(--muted); font-size:13px; margin:0 0 14px; line-height:1.6; }
-  input[type=search] { width:100%; box-sizing:border-box; padding:12px 14px; border-radius:12px; border:1px solid var(--line); background:var(--card); color:var(--text); font-size:15px; }
+  input[type=search] { width:100%; box-sizing:border-box; padding:12px 14px; border-radius:12px; border:1px solid rgba(56,189,248,.25); background:#030712; color:var(--text); font-size:15px; font-family:inherit; outline:none; }
   .filters { display:flex; gap:8px; margin:12px 0; flex-wrap:wrap; }
-  .chip { border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:999px; padding:6px 12px; font-size:13px; cursor:pointer; }
-  .chip.on { border-color:currentColor; font-weight:700; }
-  .chip[data-c="all"] { color:var(--text); }
-  .chip[data-c="red"] { color:var(--red); } .chip[data-c="amber"] { color:var(--amber); }
-  .chip[data-c="green"] { color:var(--green); } .chip[data-c="blue"] { color:var(--blue); }
-  .item { display:flex; gap:12px; align-items:flex-start; background:var(--card); border:1px solid var(--line); border-right:4px solid var(--c); border-radius:14px; padding:12px; margin-bottom:10px; }
-  .ico { flex:0 0 52px; height:52px; border-radius:12px; background:#0b1120; display:flex; align-items:center; justify-content:center; }
+  .chip { border:1px solid rgba(56,189,248,.25); background:rgba(56,189,248,.06); color:var(--text); border-radius:999px; padding:6px 12px; font-size:13px; cursor:pointer; font-family:inherit; font-weight:700; }
+  .chip.on { border-color:currentColor; box-shadow:0 0 10px rgba(56,189,248,.15); }
+  .item { display:flex; gap:12px; align-items:flex-start; background:var(--card); border:1px solid rgba(56,189,248,.15); border-right:4px solid var(--c); border-radius:16px; padding:12px; margin-bottom:10px; box-shadow:0 0 14px rgba(56,189,248,.05); }
+  html[dir="ltr"] .item { border-right:1px solid rgba(56,189,248,.15); border-left:4px solid var(--c); }
+  .ico { flex:0 0 52px; height:52px; border-radius:12px; background:#030712; border:1px solid rgba(56,189,248,.15); display:flex; align-items:center; justify-content:center; }
   .ico svg { width:42px; height:42px; }
   .body { flex:1; min-width:0; }
   .name { font-weight:800; font-size:16px; }
@@ -27,15 +30,20 @@
   .desc { font-size:14px; line-height:1.65; margin-top:4px; }
   .act { font-size:13px; color:var(--muted); margin-top:4px; line-height:1.6; }
   .legend { font-size:12px; color:var(--muted); margin:14px 0; line-height:1.8; }
-  .note { font-size:12px; color:var(--muted); border-top:1px solid var(--line); margin-top:16px; padding-top:12px; line-height:1.7; }
+  .note { font-size:12px; color:var(--muted); border-top:1px solid rgba(56,189,248,.15); margin-top:16px; padding-top:12px; line-height:1.7; }
   .empty { color:var(--muted); text-align:center; padding:24px 0; }
 </style>
 </head>
 <body>
+<div class="topbar">
+  <a href="index.html" class="i" id="backLink" title="חזרה">→</a>
+  <a href="index.html" class="i" id="homeLink" title="דף הבית">⌂</a>
+  <span class="t" id="t_h1">נורות אזהרה ברכב</span>
+  <button class="i lang-btn" id="langBtn" type="button">English</button>
+</div>
 <div class="wrap">
-  <h1 id="t_h1">נורות אזהרה ברכב</h1>
+  
   <p class="sub" id="t_sub"></p>
-  <div style="display:flex;justify-content:flex-end;margin-bottom:6px"><button class="chip" id="langBtn" type="button">English</button></div>
   <input type="search" id="q" placeholder="חיפוש לפי שם או משמעות">
   <div class="filters" id="filters"></div>
   <div class="legend" id="t_legend"></div>
@@ -287,6 +295,7 @@ function setLangUI() {
   const t = T[lang];
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === 'en' ? 'ltr' : 'rtl';
+  $('backLink').textContent = lang === 'en' ? '←' : '→';
   document.title = t.title;
   $('t_h1').textContent = t.title;
   $('t_sub').innerHTML = t.sub;
