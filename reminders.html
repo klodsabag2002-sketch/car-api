@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#030712">
+<title>תזכורות טסט, ביטוח ותו חניה</title>
+<style>
+  body { font-family:'Segoe UI', Arial, Helvetica, sans-serif; background:#030712; color:#f8fafc; margin:0; min-height:100vh; }
+  .topbar { position:sticky; top:0; z-index:5; display:flex; align-items:center; gap:10px; padding:12px 14px; background:rgba(3,7,18,.92); border-bottom:1px solid rgba(56,189,248,.15); }
+  .topbar .t { flex:1; text-align:center; font-weight:900; color:#38bdf8; font-size:18px; }
+  .topbar a { width:36px; height:36px; display:flex; align-items:center; justify-content:center; border-radius:50%; background:rgba(56,189,248,.08); border:1px solid rgba(56,189,248,.25); color:#38bdf8; text-decoration:none; font-size:18px; }
+  .wrap { max-width:520px; margin:0 auto; padding:16px; }
+  .card { background:rgba(15,23,42,.7); border:1px solid rgba(56,189,248,.18); border-radius:16px; padding:16px; margin-bottom:14px; }
+  label { display:block; font-size:13px; color:#94a3b8; margin:10px 0 4px; }
+  input[type=text], input[type=date], input[type=tel] { width:100%; box-sizing:border-box; padding:11px 12px; border-radius:12px; border:1px solid rgba(56,189,248,.25); background:#030712; color:#f8fafc; font-size:15px; font-family:inherit; }
+  .btn { width:100%; margin-top:14px; padding:13px; border:none; border-radius:14px; background:linear-gradient(135deg,#0284c7,#0369a1); color:#fff; font-size:15px; font-weight:900; cursor:pointer; font-family:inherit; }
+  .btn:disabled { opacity:.5; }
+  .small { font-size:12px; color:#94a3b8; line-height:1.7; margin-top:10px; }
+  .consent { display:flex; gap:8px; align-items:flex-start; font-size:12.5px; color:#cbd5e1; line-height:1.6; margin-top:12px; }
+  .msg { margin-top:10px; font-size:13px; color:#fca5a5; min-height:18px; }
+  .item { display:flex; justify-content:space-between; align-items:center; gap:10px; padding:12px; border:1px solid rgba(56,189,248,.15); border-radius:12px; margin-bottom:8px; }
+  .item b { color:#f8fafc; }
+  .item span { color:#94a3b8; font-size:12.5px; }
+  .del { background:transparent; border:1px solid #ef4444; color:#fca5a5; border-radius:10px; padding:7px 12px; cursor:pointer; font-family:inherit; font-weight:700; }
+  .empty { color:#94a3b8; font-size:13px; text-align:center; padding:8px 0; }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a href="index.html" id="backLink" title="חזרה">→</a>
+  <span class="t">תזכורות טסט, ביטוח ותו חניה</span>
+  <a href="index.html" title="דף הבית">⌂</a>
+</div>
+<div class="wrap">
+  <div class="card">
+    <div style="font-weight:800;margin-bottom:6px;">הוספת תזכורת</div>
+    <div class="small">נשלח לך התראה בטלפון 30, 14 ו-7 ימים לפני התאריך, וגם ביום עצמו. הפרטים נשמרים אצלנו רק כדי לשלוח את ההתראות.</div>
+    <label for="name">שם לרכב</label>
+    <input type="text" id="name" maxlength="40" placeholder="למשל: הרכב של דני">
+    <label for="plate">מספר רכב</label>
+    <input type="tel" id="plate" inputmode="numeric" maxlength="10" placeholder="למשל 1234567">
+    <label for="testDate">תוקף הטסט</label>
+    <input type="date" id="testDate">
+    <label for="stickerDate">תוקף תו חניה (אופציונלי)</label>
+    <input type="date" id="stickerDate">
+    <label for="insuranceDate">תוקף ביטוח (אופציונלי)</label>
+    <input type="date" id="insuranceDate">
+    <label class="consent"><input type="checkbox" id="consent" style="margin-top:3px"> <span>אני מאשר ששמירת הפרטים נועדה לשליחת התזכורת בלבד, ויכול למחוק אותם בכל עת מהדף הזה.</span></label>
+    <button class="btn" id="saveBtn">הפעל תזכורת</button>
+    <div class="msg" id="msg"></div>
+    <div class="small">באייפון יש להוסיף את האתר למסך הבית (שיתוף ← הוסף למסך הבית) כדי לקבל התראות.</div>
+  </div>
+
+  <div class="card">
+    <div style="font-weight:800;margin-bottom:6px;">התזכורות שלי במכשיר הזה</div>
+    <div id="list"></div>
+  </div>
+</div>
+
+<script>
+const API_BASE = 'https://car-api-huth.onrender.com';
+const VAPID_PUBLIC = 'BFC039BfJ-vgSs3E0tNM5KNkjbGwVNaXZbbznECMUWzUH1FIe3T7hDXfxlTa0DIcxiTy9yd1vj1svyF9ifmqwhE';
+const KEY = 'myReminders';
+
+function loadMine() {
+  try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch (e) { return []; }
+}
+function saveMine(list) {
+  try { localStorage.setItem(KEY, JSON.stringify(list)); } catch (e) {}
+}
+function urlBase64ToUint8Array(b64) {
+  const pad = '='.repeat((4 - b64.length % 4) % 4);
+  const raw = atob((b64 + pad).replace(/-/g, '+').replace(/_/g, '/'));
+  return Uint8Array.from([...raw].map(c => c.charCodeAt(0)));
+}
+function setMsg(t) { document.getElementById('msg').textContent = t; }
+
+function renderList() {
+  const list = loadMine();
+  const box = document.getElementById('list');
+  if (!list.length) { box.innerHTML = '<div class="empty">אין תזכורות שמורות במכשיר הזה</div>'; return; }
+  box.innerHTML = list.map((r, i) => `
+    <div class="item">
+      <div><b>${r.name}</b><br><span>רכב ${r.plate}</span></div>
+      <button class="del" data-i="${i}">מחק תזכורת</button>
+    </div>`).join('');
+  box.querySelectorAll('.del').forEach(btn => btn.onclick = () => removeReminder(Number(btn.dataset.i)));
+}
+
+async function removeReminder(i) {
+  const list = loadMine();
+  const r = list[i];
+  if (!r) return;
+  if (!confirm('למחוק את התזכורת?')) return;
+  try {
+    const res = await fetch(API_BASE + '/api/reminders/' + encodeURIComponent(r.id), {
+      method: 'DELETE', headers: { 'x-token': r.token }
+    });
+    const j = await res.json();
+    if (!j.success) { alert(j.message || 'שגיאה במחיקה'); return; }
+  } catch (e) { alert('אין חיבור לשרת, נסה שוב'); return; }
+  list.splice(i, 1);
+  saveMine(list);
+  renderList();
+}
+
+document.getElementById('saveBtn').addEventListener('click', async () => {
+  setMsg('');
+  const name = document.getElementById('name').value.trim();
+  const plate = document.getElementById('plate').value.replace(/\D/g, '');
+  const testDate = document.getElementById('testDate').value;
+  const stickerDate = document.getElementById('stickerDate').value;
+  const insuranceDate = document.getElementById('insuranceDate').value;
+  const consent = document.getElementById('consent').checked;
+  if (!consent) return setMsg('יש לאשר את תנאי השמירה');
+  if (!name) return setMsg('יש להזין שם לרכב');
+  if (plate.length < 7 || plate.length > 8) return setMsg('מספר רכב לא תקין');
+  if (!testDate && !stickerDate && !insuranceDate) return setMsg('יש להזין לפחות תאריך אחד');
+  if (!('serviceWorker' in navigator) || !('PushManager' in window)) return setMsg('הדפדפן הזה לא תומך בהתראות');
+  if (VAPID_PUBLIC.startsWith('PUT_')) return setMsg('המפתח הציבורי עדיין לא הוגדר');
+
+  const btn = document.getElementById('saveBtn');
+  btn.disabled = true;
+  try {
+    const perm = await Notification.requestPermission();
+    if (perm !== 'granted') throw new Error('לא אושרו התראות');
+    const reg = await navigator.serviceWorker.register('sw.js');
+    const sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC) });
+    const res = await fetch(API_BASE + '/api/reminders', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, plate, testDate, stickerDate, insuranceDate, subscription: sub.toJSON(), consent })
+    });
+    const j = await res.json();
+    if (!j.success) throw new Error(j.message || 'שגיאה בשמירה');
+    const list = loadMine();
+    list.push({ id: j.id, token: j.token, name, plate });
+    saveMine(list);
+    document.getElementById('name').value = '';
+    document.getElementById('plate').value = '';
+    document.getElementById('testDate').value = '';
+    document.getElementById('stickerDate').value = '';
+    document.getElementById('insuranceDate').value = '';
+    document.getElementById('consent').checked = false;
+    setMsg('התזכורת נשמרה');
+    renderList();
+  } catch (e) {
+    setMsg(e.message || 'שגיאה');
+  } finally {
+    btn.disabled = false;
+  }
+});
+
+document.getElementById('backLink').addEventListener('click', e => {
+  if (history.length > 1) { e.preventDefault(); history.back(); }
+});
+
+renderList();
+</script>
+</body>
+</html>
