@@ -1008,6 +1008,16 @@
   "cc": 1498,
   "seconds": 8.9,
   "source": "רישוי רכב / נתון יצרן (BYD Seal U DM-i Boost פלאג-אין 218 כ\"ס)"
+},
+{
+  "make": "בי ווי די סין",
+  "model": "TANG",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 516,
+  "cc": 0,
+  "seconds": 4.6,
+  "source": "רישוי רכב נתון יצרן בי ווי די טאנג חשמלי 516 כוח סוס"
 }
 
 ]
