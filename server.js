@@ -802,6 +802,150 @@ app.get('/api/personal-import/:plate', async (req, res) => {
     }
 });
 
+
+// ---------- תזכורות טסט ותו חניה (התראות דחיפה) ----------
+// הרשומות נשמרות ב-Firebase. לכל רשומה יש מזהה וטוקן מחיקה, והטוקן נשמר רק כהאש.
+let webpush = null;
+try { webpush = require('web-push'); } catch (e) { console.log('web-push לא מותקן, התראות לא יישלחו'); }
+if (webpush && process.env.VAPID_PUBLIC && process.env.VAPID_PRIVATE) {
+    webpush.setVapidDetails('mailto:support@example.com', process.env.VAPID_PUBLIC, process.env.VAPID_PRIVATE);
+}
+const REMINDERS_PATH = 'reminders';
+const REMINDER_STAGES = [30, 14, 7, 0];
+
+// גישה למסד בעזרת חשבון שירות (FIREBASE_SERVICE_ACCOUNT ב-Render)
+let dbTokenCache = { token: null, exp: 0 };
+async function getDbToken() {
+    if (dbTokenCache.token && Date.now() < dbTokenCache.exp - 60000) return dbTokenCache.token;
+    const sa = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT || '{}');
+    if (!sa.client_email || !sa.private_key) throw new Error('FIREBASE_SERVICE_ACCOUNT חסר');
+    const crypto = require('crypto');
+    const now = Math.floor(Date.now() / 1000);
+    const b64 = (o) => Buffer.from(JSON.stringify(o)).toString('base64url');
+    const unsigned = `${b64({ alg: 'RS256', typ: 'JWT' })}.${b64({
+        iss: sa.client_email,
+        scope: 'https://www.googleapis.com/auth/firebase.database https://www.googleapis.com/auth/userinfo.email',
+        aud: 'https://oauth2.googleapis.com/token',
+        iat: now,
+        exp: now + 3600
+    })}`;
+    const sig = crypto.sign('RSA-SHA256', Buffer.from(unsigned), sa.private_key).toString('base64url');
+    const r = await fetch('https://oauth2.googleapis.com/token', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({ grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer', assertion: `${unsigned}.${sig}` })
+    });
+    const data = await r.json();
+    if (!data.access_token) throw new Error('קבלת טוקן מ-Google נכשלה');
+    dbTokenCache = { token: data.access_token, exp: Date.now() + (data.expires_in || 3600) * 1000 };
+    return data.access_token;
+}
+
+async function rdbFetch(path, opts = {}) {
+    const headers = { ...(opts.headers || {}), Authorization: `Bearer ${await getDbToken()}` };
+    return fetch(`${FIREBASE_DB_URL}/${path}.json`, { ...opts, headers });
+}
+
+function isDate(v) { return typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v); }
+
+function hashToken(token) {
+    return require('crypto').createHash('sha256').update(String(token)).digest('hex');
+}
+
+app.post('/api/reminders', async (req, res) => {
+    const { name, plate, testDate, stickerDate, subscription, consent } = req.body || {};
+    const cleanName = String(name || '').trim().slice(0, 40);
+    const cleanPlate = String(plate || '').replace(/\D/g, '');
+    if (!consent) return res.status(400).json({ success: false, message: 'יש לאשר את תנאי השמירה' });
+    if (!cleanName) return res.status(400).json({ success: false, message: 'יש להזין שם לרכב' });
+    if (cleanPlate.length < 7 || cleanPlate.length > 8) return res.status(400).json({ success: false, message: 'מספר רכב לא תקין' });
+    if (!isDate(testDate) && !isDate(stickerDate)) return res.status(400).json({ success: false, message: 'יש להזין לפחות תאריך אחד' });
+    if (!subscription || typeof subscription.endpoint !== 'string') return res.status(400).json({ success: false, message: 'חסרה הרשמה להתראות' });
+    try {
+        const id = require('crypto').randomBytes(8).toString('hex');
+        const token = require('crypto').randomBytes(16).toString('hex');
+        const record = {
+            name: cleanName,
+            plate: cleanPlate,
+            testDate: isDate(testDate) ? testDate : null,
+            stickerDate: isDate(stickerDate) ? stickerDate : null,
+            subscription,
+            tokenHash: hashToken(token),
+            sent: {},
+            createdAt: new Date().toISOString()
+        };
+        const r = await rdbFetch(`${REMINDERS_PATH}/${id}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(record) });
+        if (!r.ok) throw new Error('DB');
+        res.json({ success: true, id, token });
+    } catch (e) {
+        res.status(500).json({ success: false, message: 'שגיאה בשמירת התזכורת' });
+    }
+});
+
+app.delete('/api/reminders/:id', async (req, res) => {
+    const id = String(req.params.id || '').replace(/[^a-f0-9]/g, '');
+    const token = String(req.headers['x-token'] || '');
+    if (!id || !token) return res.status(400).json({ success: false, message: 'חסר מזהה או טוקן' });
+    try {
+        const r = await rdbFetch(`${REMINDERS_PATH}/${id}`);
+        const rec = await r.json();
+        if (!rec || rec.tokenHash !== hashToken(token)) return res.status(403).json({ success: false, message: 'לא נמצאה תזכורת מתאימה' });
+        await rdbFetch(`${REMINDERS_PATH}/${id}`, { method: 'DELETE' });
+        res.json({ success: true });
+    } catch (e) {
+        res.status(500).json({ success: false, message: 'שגיאה במחיקת התזכורת' });
+    }
+});
+
+// נקרא פעם ביום ממשימה מתוזמנת (Render Cron Job), עם סוד בכותרת
+app.post('/api/reminders/run', async (req, res) => {
+    if (!process.env.CRON_SECRET || req.headers['x-cron-secret'] !== process.env.CRON_SECRET) {
+        return res.status(401).json({ success: false });
+    }
+    if (!webpush) return res.status(500).json({ success: false, message: 'web-push לא מותקן' });
+    let sentCount = 0, removed = 0;
+    try {
+        const r = await rdbFetch(REMINDERS_PATH);
+        const all = (await r.json()) || {};
+        const today = Date.UTC(...new Date().toISOString().slice(0, 10).split('-').map((x, i) => i === 1 ? Number(x) - 1 : Number(x)));
+        for (const [id, rec] of Object.entries(all)) {
+            const items = [
+                { key: 'test', date: rec.testDate, label: 'הטסט', kind: 'טסט' },
+                { key: 'sticker', date: rec.stickerDate, label: 'תוקף תו החניה', kind: 'תו חניה' }
+            ];
+            for (const it of items) {
+                if (!it.date) continue;
+                const [y, m, d] = it.date.split('-').map(Number);
+                const daysLeft = Math.round((Date.UTC(y, m - 1, d) - today) / 86400000);
+                if (daysLeft < 0) continue;
+                const due = REMINDER_STAGES.filter(st => daysLeft <= st && !(rec.sent || {})[`${it.key}${st}`]);
+                if (!due.length) continue;
+                const body = daysLeft === 0
+                    ? `${it.label} של ${rec.name} (${rec.plate}) פג היום`
+                    : `${it.label} של ${rec.name} (${rec.plate}) יפוג בעוד ${daysLeft} ימים`;
+                try {
+                    await webpush.sendNotification(rec.subscription, JSON.stringify({ title: `תזכורת ${it.kind}`, body, url: '/reminders.html' }));
+                    sentCount++;
+                    const sent = { ...(rec.sent || {}) };
+                    for (const st of due) sent[`${it.key}${st}`] = true;
+                    await rdbFetch(`${REMINDERS_PATH}/${id}/sent`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(sent) });
+                    rec.sent = sent;
+                } catch (e) {
+                    // הרשמה שפגה (410/404) נמחקת כדי לא לשלוח אליה שוב
+                    if (e && (e.statusCode === 404 || e.statusCode === 410)) {
+                        await rdbFetch(`${REMINDERS_PATH}/${id}`, { method: 'DELETE' });
+                        removed++;
+                        break;
+                    }
+                }
+            }
+        }
+        res.json({ success: true, sent: sentCount, removed });
+    } catch (e) {
+        res.status(500).json({ success: false, message: 'שגיאה בשליחת התזכורות' });
+    }
+});
+
 app.listen(PORT, () => {
     console.log(`השרת רץ בפורט ${PORT}`);
 });
