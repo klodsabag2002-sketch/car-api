@@ -534,7 +534,7 @@ app.get('/api/car/:plate', async (req, res) => {
                 testExpiry,
                 testValid: testStatus(testExpiry),
                 ownership: ownershipList.length ? ownershipList[ownershipList.length - 1].type : labelOwnership(car.baalut),
-                owners: ownershipList.filter(o => o.type !== "סוחר").length || null,
+                owners: ownershipList.length || null,
                 disabled: Boolean(disabledResult?.hasBadge),
                 bodyType, merkav: bodyType,
                 kmSinceTest: history?.kmSinceTest ?? null,
@@ -682,8 +682,6 @@ app.get('/api/bike/:plate', async (req, res) => {
 });
 
 const HEAVY_REGISTRY_ID = "cd3acc5c-03c3-4c89-9c54-d40f93c0d790";
-// מאגר רכב כבד חדש (כולל יצרן, דגם, שנה, משקל) - נבדק קודם
-const HEAVY_REGISTRY_ID_V2 = "6f6acd03-f351-4a8f-8ecf-df792f4f573a";
 
 app.get('/api/heavy/inspect', async (req, res) => {
     try {
@@ -709,48 +707,19 @@ app.get('/api/heavy/inspect', async (req, res) => {
 const HEAVY_ALLOWED_FIELDS = [
     "mispar_rechev", "tozeret_nm", "tozeret_eretz_nm", "degem_nm", "shnat_yitzur",
     "sug_delek_nm", "nefach_manoa", "mishkal_kolel", "hanaa_nm", "grira_nm",
-    "zmig_kidmi", "zmig_ahori", "moed_aliya_lakvish", "kvutzat_sug_rechev",
-    "degem_manoa", "mishkal_azmi", "tkina_EU", "mispar_shilda", "horaat_rishum", "hanaa_nm", "mishkal_mitan_harama"
+    "zmig_kidmi", "zmig_ahori", "moed_aliya_lakvish", "kvutzat_sug_rechev"
 ];
-
-// קובץ heavy_eu.csv (מספר רכב|סוג EU|משקל כולל) - גיבוי לרכבי משא שלא במאגר הכבד
-let heavyEuMap = null;
-function loadHeavyEu() {
-    if (heavyEuMap) return heavyEuMap;
-    heavyEuMap = new Map();
-    try {
-        const lines = fs.readFileSync(path.join(__dirname, 'heavy_eu.csv'), 'utf8').split(/\r?\n/);
-        for (let i = 1; i < lines.length; i++) {
-            if (!lines[i]) continue;
-            const parts = lines[i].split('|').map(p => p.replace(/^"|"$/g, '').trim());
-            if (parts.length < 3) continue;
-            const key = parts[0].replace(/\D/g, '').padStart(8, '0');
-            heavyEuMap.set(key, { sug_rechev_EU_cd: parts[1], mishkal_kolel: parts[2] });
-        }
-    } catch (e) {
-        console.error('heavy_eu.csv not loaded:', e.message);
-    }
-    return heavyEuMap;
-}
 
 app.get('/api/heavy/:plate', async (req, res) => {
     const plate = req.params.plate.replace(/\D/g, '');
     if (plate.length < 5) return res.json({ success: false, message: 'מספר לא תקין' });
     try {
-        let rec = null;
-        for (const rid of [HEAVY_REGISTRY_ID_V2, HEAVY_REGISTRY_ID]) {
-            const filters = encodeURIComponent(JSON.stringify({ mispar_rechev: Number(plate) }));
-            const url = `https://data.gov.il/api/3/action/datastore_search?resource_id=${rid}&filters=${filters}&limit=1`;
-            const r = await fetch(url);
-            const j = await r.json();
-            rec = j?.success ? j.result.records[0] : null;
-            if (rec) break;
-        }
-        if (!rec) {
-            const eu = loadHeavyEu().get(plate.padStart(8, '0'));
-            if (eu) return res.json({ success: true, source: 'eu_csv', data: { mispar_rechev: plate, ...eu } });
-            return res.json({ success: false, message: 'לא נמצא רכב כבד במספר זה' });
-        }
+        const filters = encodeURIComponent(JSON.stringify({ mispar_rechev: Number(plate) }));
+        const url = `https://data.gov.il/api/3/action/datastore_search?resource_id=${HEAVY_REGISTRY_ID}&filters=${filters}&limit=1`;
+        const r = await fetch(url);
+        const j = await r.json();
+        const rec = j?.success ? j.result.records[0] : null;
+        if (!rec) return res.json({ success: false, message: 'לא נמצא רכב כבד במספר זה' });
         const out = {};
         for (const key of HEAVY_ALLOWED_FIELDS) {
             const v = rec[key];
@@ -775,10 +744,23 @@ app.get('/api/personal-import/:plate', async (req, res) => {
         const records = await searchDatastore(PERSONAL_IMPORT_ID, { mispar_rechev: Number(plate) }, 1);
         const r = records[0];
         if (!r) return res.json({ success: false, message: 'הרכב לא נמצא במאגר יבוא אישי' });
+
+        // למאגר יבוא אישי אין כוח סוס. מנסים למצוא אותו במאגר הדגמים הרשמי לפי שם דגם, שנה ונפח מנוע
+        let horsepower = null;
+        try {
+            const year = toNumber(r.shnat_yitzur);
+            const cc = toNumber(r.nefach_manoa);
+            const rows = await searchDatastore(MODELS_ID, { degem_nm: String(r.degem_nm || ''), shnat_yitzur: year }, 100);
+            const match = rows.find(x => toNumber(x.koah_sus) != null
+                && (cc == null || toNumber(x.nefah_manoa) == null || Math.abs(toNumber(x.nefah_manoa) - cc) <= 30));
+            if (match) horsepower = toNumber(match.koah_sus);
+        } catch (e) {}
+
         res.json({
             success: true,
             data: {
                 plate,
+                horsepower,
                 manufacturer: toText(r.tozeret_nm),
                 manufacturerCountry: toText(r.tozeret_eretz_nm),
                 model: toText(r.degem_nm),
@@ -799,6 +781,58 @@ app.get('/api/personal-import/:plate', async (req, res) => {
             return res.status(503).json({ success: false, message: 'שירות משרד התחבורה לא זמין כרגע, נסה שוב בעוד דקה' });
         }
         res.status(500).json({ success: false, message: 'שגיאה בשליפה' });
+    }
+});
+
+// ---------- כלי רכב שירדו מהכביש (data.gov.il) ----------
+// להוסיף כאן את מזהי כל המאגרים של "כלי רכב שירדו מהכביש"
+const REMOVED_RESOURCE_IDS = [
+    "4e6b9724-4c1e-43f0-909a-154d4cc4e046", // 2010-2016
+    "ec8cbc34-72e1-4b69-9c48-22821ba0bd6c", // 2000-2009
+    "851ecab1-0622-4dbe-a6c7-f950cf82abf9"
+];
+
+app.get('/api/removed/:plate', async (req, res) => {
+    const plate = req.params.plate.replace(/\D/g, '');
+    if (plate.length < 5) return res.json({ success: false, message: 'מספר לא תקין' });
+    const plainNum = String(Number(plate));
+    // במאגרים מספר הרכב נשמר לפעמים עם אפס מוביל (8 ספרות) ולפעמים בלי
+    const filterValues = [...new Set([plainNum.padStart(8, '0'), plainNum])];
+    try {
+        const lists = await Promise.all(REMOVED_RESOURCE_IDS.flatMap(id =>
+            filterValues.map(v => searchDatastore(id, { mispar_rechev: v }, 20).catch(() => []))
+        ));
+        const seen = new Set();
+        const records = [];
+        for (const r of lists.flat()) {
+            const key = `${r.misgeret}|${r.bitul_dt}`;
+            if (seen.has(key)) continue;
+            seen.add(key);
+            records.push({
+                manufacturer: toText(r.tozeret_nm),
+                model: toText(r.kinuy_mishari) || toText(r.degem_nm),
+                year: toText(r.shnat_yitzur),
+                cancelDate: toText(r.bitul_dt),
+                chassis: toText(r.misgeret)
+            });
+        }
+
+        // בודקים אם יש היום רכב פעיל עם אותו מספר, ואם השלדה זהה (כלומר אותו רכב שחזר לכביש)
+        const active = await fetchCarRecord(plainNum).catch(() => null);
+        const activeChassis = active ? String(active.misgeret || '').trim().toUpperCase() : '';
+        const sameChassis = !!activeChassis
+            && records.some(r => (r.chassis || '').trim().toUpperCase() === activeChassis);
+
+        res.json({
+            success: true,
+            removed: records.length > 0,
+            records,
+            activeFound: !!active,
+            sameChassis,
+            returnedToRoad: records.length > 0 && sameChassis
+        });
+    } catch (e) {
+        res.status(500).json({ success: false, message: 'שגיאה בבדיקת מאגר שירדו מהכביש' });
     }
 });
 
