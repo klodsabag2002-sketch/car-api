@@ -1574,7 +1574,23 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   $('backBtn').addEventListener('click', showHome);
-  $('homeBtn').addEventListener('click', showHome);
+  // כפתור הבית מחזיר לדף הראשי של הרכב הנוכחי (הלשונית הכללית), ואם אין רכב פתוח – לדף החיפוש
+  function goToCarMain() {
+    if (!currentPlate) return showHome();
+    if (!currentCarData) return showDetail();
+    hideAllMainViews();
+    $('detailHint').style.display = '';
+    $('cardCardTab').style.display = 'none';
+    $('cardHunter').style.display = 'none';
+    ['cardTech', 'cardEnv', 'cardCompare'].forEach(id => $(id).style.display = 'none');
+    $('cardGeneral').style.display = '';
+    $('tabs').classList.add('show');
+    document.querySelectorAll('.tab').forEach(tb => tb.classList.remove('active'));
+    document.querySelector('.tab[data-tab="general"]').classList.add('active');
+    sideMenuDropdown.classList.remove('show');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  $('homeBtn').addEventListener('click', goToCarMain);
 
   /* ================= צייד רכבים ================= */
   function getMyNickname() {
