@@ -838,12 +838,14 @@ app.get('/api/removed/:plate', async (req, res) => {
 });
 
 // ---------- סטטיסטיקה של דגם: רכבים פעילים מול רכבים שירדו מהכביש ----------
-// אותו רכב (לפי שלדה) נספר פעם אחת, ואם הוא ירד מהכביש הוא נספר כלא פעיל בלבד
-async function fetchRegistryRecords(resourceId, filters, cap = 30000) {
+// ספירה פעילה לפי "total" של CKAN (בלי הגבלת עמודים, כדי שלא ייחתך במספר קבוע).
+// רכב שירד מהכביש ואז חזר נספר רק כפעיל: מנכים מהפעילים את השלדות שמופיעות גם ברשימת הירידות.
+
+async function fetchRegistryRecords(resourceId, filters, cap = 30000, fields = "misgeret,mispar_rechev,shnat_yitzur") {
     const out = [];
     const f = encodeURIComponent(JSON.stringify(filters));
     for (let offset = 0; offset < cap; offset += 1000) {
-        const url = `https://data.gov.il/api/3/action/datastore_search?resource_id=${resourceId}&filters=${f}&fields=misgeret,mispar_rechev&limit=1000&offset=${offset}`;
+        const url = `https://data.gov.il/api/3/action/datastore_search?resource_id=${resourceId}&filters=${f}&fields=${fields}&limit=1000&offset=${offset}`;
         const response = await fetch(url);
         const text = await response.text();
         let data;
@@ -852,6 +854,47 @@ async function fetchRegistryRecords(resourceId, filters, cap = 30000) {
         const recs = data.result?.records || [];
         out.push(...recs);
         if (recs.length < 1000) break;
+    }
+    return out;
+}
+
+async function countTotal(resourceId, filters) {
+    const f = encodeURIComponent(JSON.stringify(filters));
+    try {
+        const response = await fetch(`https://data.gov.il/api/3/action/datastore_search?resource_id=${resourceId}&filters=${f}&fields=misgeret&limit=1`);
+        const data = JSON.parse(await response.text());
+        return data?.success ? (Number(data.result?.total) || 0) : 0;
+    } catch (e) {
+        return 0;
+    }
+}
+
+// שנת ייצור יכולה להיות שמורה כטקסט או כמספר לפי המאגר, לכן בודקים את שתי הצורות
+async function countTotalByYear(resourceId, base, year) {
+    const [asText, asNumber] = await Promise.all([
+        countTotal(resourceId, { ...base, shnat_yitzur: String(year) }),
+        countTotal(resourceId, { ...base, shnat_yitzur: Number(year) })
+    ]);
+    return Math.max(asText, asNumber);
+}
+
+// האם השלדה הזו קיימת גם ברשימת הרכבים הפעילים (כלומר רכב שחזר לכביש), ומה שנת הייצור שלו
+async function activeRowForChassis(chassis, model) {
+    try {
+        const f = encodeURIComponent(JSON.stringify({ misgeret: chassis, kinuy_mishari: model }));
+        const response = await fetch(`https://data.gov.il/api/3/action/datastore_search?resource_id=${CAR_REGISTRY_ID}&filters=${f}&fields=misgeret,shnat_yitzur&limit=1`);
+        const data = JSON.parse(await response.text());
+        const rec = data?.success ? data.result?.records?.[0] : null;
+        return rec ? { year: toText(rec.shnat_yitzur) } : null;
+    } catch (e) {
+        return null;
+    }
+}
+
+async function mapInChunks(items, size, fn) {
+    const out = [];
+    for (let i = 0; i < items.length; i += size) {
+        out.push(...await Promise.all(items.slice(i, i + size).map(fn)));
     }
     return out;
 }
@@ -868,22 +911,32 @@ app.get('/api/model-stats', async (req, res) => {
     try {
         const yearOk = Number.isInteger(year) && year > 1900;
 
-        // כל הרכבים שירדו מהכביש מהדגם (בכל המאגרים), ללא כפילויות
-        const removedAll = (await Promise.all(REMOVED_RESOURCE_IDS.map(id =>
+        // כל הרכבים שירדו מהכביש מהדגם (בכל המאגרים), ללא כפילויות לפי שלדה/מספר רכב
+        const removedRecs = (await Promise.all(REMOVED_RESOURCE_IDS.map(id =>
             fetchRegistryRecords(id, { kinuy_mishari: model })))).flat();
-        const removedModelKeys = new Set(removedAll.map(carKey));
+        const removedByKey = new Map();
+        for (const r of removedRecs) {
+            const k = carKey(r);
+            if (!removedByKey.has(k)) removedByKey.set(k, { chassis: String(r.misgeret || '').trim(), year: toText(r.shnat_yitzur) });
+        }
 
-        // רכבים פעילים מהדגם, בלי רכבים שמופיעים כשירדו מהכביש
-        const activeAll = await fetchRegistryRecords(CAR_REGISTRY_ID, { kinuy_mishari: model });
-        const activeModelKeys = new Set(activeAll.map(carKey).filter(k => !removedModelKeys.has(k)));
+        // מאילו שלדות ירדו מהכביש ויש להן היום רשומה פעילה (רכב שחזר לכביש)
+        const withChassis = [...removedByKey.values()].filter(v => v.chassis);
+        const overlaps = (await mapInChunks(withChassis, 20, v => activeRowForChassis(v.chassis, model)))
+            .map((row, i) => row ? withChassis[i] : null)
+            .filter(Boolean);
+        const overlapYearCount = yearOk
+            ? overlaps.filter(v => v.year === String(year)).length
+            : 0;
+
+        const totalActiveModel = await countTotal(CAR_REGISTRY_ID, { kinuy_mishari: model });
+        const activeModel = Math.max(0, totalActiveModel - overlaps.length);
 
         let totalYear = null, inactiveYear = null;
         if (yearOk) {
-            const removedYear = (await Promise.all(REMOVED_RESOURCE_IDS.map(id =>
-                fetchRegistryRecords(id, { kinuy_mishari: model, shnat_yitzur: String(year) })))).flat();
-            inactiveYear = new Set(removedYear.map(carKey)).size;
-            const activeYear = await fetchRegistryRecords(CAR_REGISTRY_ID, { kinuy_mishari: model, shnat_yitzur: year });
-            totalYear = new Set(activeYear.map(carKey).filter(k => !removedModelKeys.has(k))).size;
+            const totalActiveYear = await countTotalByYear(CAR_REGISTRY_ID, { kinuy_mishari: model }, year);
+            totalYear = Math.max(0, totalActiveYear - overlapYearCount);
+            inactiveYear = [...removedByKey.values()].filter(v => v.year === String(year)).length;
         }
 
         res.json({
@@ -891,9 +944,9 @@ app.get('/api/model-stats', async (req, res) => {
             data: {
                 model,
                 year: yearOk ? year : null,
-                totalModel: activeModelKeys.size,
+                totalModel: activeModel,
                 totalYear,
-                inactiveModel: removedModelKeys.size,
+                inactiveModel: removedByKey.size,
                 inactiveYear
             }
         });
