@@ -84,7 +84,8 @@ function urlBase64ToUint8Array(b64) {
 }
 function setMsg(t) { document.getElementById('msg').textContent = t; }
 
-// כל ההתראות העתידיות של תזכורת אחת: 9:00 בבוקר, 30/14/7 ימים לפני ויום התאריך
+// כל ההתראות העתידיות של תזכורת אחת: 8:00 ו-19:00, 30/14/7 ימים לפני ויום התאריך
+const HOURS = [8, 19];
 function dueAlarms(r) {
   const out = [];
   const now = Date.now();
@@ -92,15 +93,14 @@ function dueAlarms(r) {
     const d = r[k.field];
     if (!d) return;
     const [y, m, day] = d.split('-').map(Number);
-    OFFSETS.forEach(off => {
-      if (off !== 0) return; // TEST ONLY
-      const at = now + 60 * 1000; // TEST ONLY: fires in 1 minute
+    OFFSETS.forEach(off => HOURS.forEach(h => {
+      const at = new Date(y, m - 1, day - off, h, 0, 0).getTime();
       if (at <= now) return;
       const msg = off === 0
         ? `${k.label} של רכב ${r.plate} פג היום`
         : `${k.label} של רכב ${r.plate} פוקע בעוד ${off} ימים`;
-      out.push({ id: `${r.id}_${k.key}_${off}`, title: `תזכורת: ${r.name}`, message: msg, delay: Math.round(at - now) });
-    });
+      out.push({ id: `${r.id}_${k.key}_${off}_${h}`, title: `תזכורת: ${r.name}`, message: msg, delay: Math.round(at - now) });
+    }));
   });
   return out;
 }
@@ -110,7 +110,12 @@ function scheduleNative(r) {
 }
 function cancelNative(r) {
   if (!NATIVE) return;
-  KINDS.forEach(k => OFFSETS.forEach(off => AndroidAPI.cancelScheduledNotification(`${r.id}_${k.key}_${off}`)));
+  KINDS.forEach(k => OFFSETS.forEach(off => HOURS.forEach(h => AndroidAPI.cancelScheduledNotification(`${r.id}_${k.key}_${off}_${h}`))));
+}
+
+function fmtDate(d) {
+  const [y, m, day] = d.split('-').map(Number);
+  return `${day}/${m}/${String(y).slice(-2)}`;
 }
 
 function renderList() {
@@ -119,7 +124,7 @@ function renderList() {
   if (!list.length) { box.innerHTML = '<div class="empty">אין תזכורות שמורות במכשיר הזה</div>'; return; }
   box.innerHTML = list.map((r, i) => `
     <div class="item">
-      <div><b>${r.name}</b><br><span>רכב ${r.plate}</span></div>
+      <div><b>${r.name}</b><br><span>רכב ${r.plate}</span>${KINDS.filter(k => r[k.field]).map(k => `<br><span>${k.label} תוקף ${fmtDate(r[k.field])}</span>`).join('')}</div>
       <button class="del" data-i="${i}">מחק תזכורת</button>
     </div>`).join('');
   box.querySelectorAll('.del').forEach(btn => btn.onclick = () => removeReminder(Number(btn.dataset.i)));
@@ -154,7 +159,7 @@ if (!NATIVE) {
 
 if (NATIVE) {
   document.getElementById('infoText').textContent =
-    'נשלח לך התראה בטלפון 30, 14 ו-7 ימים לפני התאריך, וגם ביום עצמו. התזכורות נשמרות בטלפון הזה בלבד.';
+    'נשלחת לך התראה בטלפון 30, 14 ו-7 ימים לפני התאריך, וגם ביום עצמו, בשעה 08:00 ובשעה 19:00. התזכורות נשמרות בטלפון הזה בלבד.';
   document.getElementById('iosNote').style.display = 'none';
   // קובע מחדש את כל ההתראות כשהדף נפתח, כדי שלא יאבדו
   loadMine().forEach(scheduleNative);
@@ -226,18 +231,6 @@ document.getElementById('backLink').addEventListener('click', e => {
 });
 
 renderList();
-</script>
-<div id="dbg" style="position:fixed;bottom:0;left:0;right:0;background:#000;color:#0f0;font:12px monospace;padding:6px;max-height:35vh;overflow:auto;z-index:9999;direction:ltr;white-space:pre-wrap"></div>
-<script>
-// TEST ONLY: show bridge results on screen
-function dbgLog(t){ const d=document.getElementById('dbg'); if(d) d.textContent += new Date().toLocaleTimeString() + ' ' + t + '\n'; }
-dbgLog('native=' + (typeof AndroidAPI !== 'undefined' && !!AndroidAPI && typeof AndroidAPI.scheduleNotification === 'function'));
-['scheduledNotificationResult'].forEach(n => {
-  window.addEventListener(n, e => dbgLog('EVENT ' + JSON.stringify(e.detail)));
-  document.addEventListener(n, e => dbgLog('DOC EVENT ' + JSON.stringify(e.detail)));
-});
-const _origSched = (typeof AndroidAPI !== 'undefined' && AndroidAPI) ? AndroidAPI.scheduleNotification : null;
-if (_origSched) { AndroidAPI.scheduleNotification = function(...a){ dbgLog('schedule called ' + JSON.stringify(a)); const r = _origSched.apply(this, a); dbgLog('schedule returned ' + JSON.stringify(r)); return r; }; }
 </script>
 </body>
 </html>
