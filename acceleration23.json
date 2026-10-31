@@ -1188,5 +1188,16 @@
     "cc": 0,
     "seconds": 7.9,
     "source": "נתון יצרן (Skywell ET5 EV 204 hp)"
-  }
+  },
+{
+  "make": "סקודה צ'כיה",
+  "model": "KAROQ",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 115,
+  "cc": 1598,
+  "seconds": 11.0,
+  "source": "רישוי רכב נתון יצרן סקודה קארוק 1.6 TDI דיזל 115 כוח סוס"
+}
+
 ]
