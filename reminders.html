@@ -236,8 +236,33 @@ function parseAny(raw) {
   });
 });
 
+// קופסה שמופיעה כש-ההתראות כבויות באפליקציה, עם כפתור שפותח את הגדרות ההתראות
+function showPermBox(show) {
+  let box = document.getElementById('permBox');
+  if (!box) {
+    box = document.createElement('div');
+    box.id = 'permBox';
+    box.className = 'card';
+    box.style.cssText = 'margin-top:12px;border-color:#a33;';
+    box.innerHTML = '<div style="font-weight:800;margin-bottom:6px;">ההתראות כבויות באפליקציה</div>' +
+      '<div class="small">התזכורת נשמרה, אבל לא תופיע התראה עד שתאשר התראות לאפליקציה.</div>' +
+      '<button type="button" id="openNotifBtn" style="margin-top:10px;padding:10px 14px;border-radius:10px;border:none;background:#0a6fb5;color:#fff;font-weight:700;">פתח הגדרות התראות</button>';
+    document.getElementById('saveBtn').insertAdjacentElement('afterend', box);
+    document.getElementById('openNotifBtn').addEventListener('click', () => {
+      if (NATIVE) AndroidAPI.openNotificationSettings();
+    });
+  }
+  box.style.display = show ? '' : 'none';
+}
+// האפליקציה מחזירה אזהרה "notification_permission_missing" כשההתראות כבויות
+window.addEventListener('scheduledNotificationResult', e => {
+  const d = e.detail || {};
+  if (typeof d.warning === 'string' && d.warning.indexOf('notification_permission_missing') !== -1) showPermBox(true);
+});
+
 document.getElementById('saveBtn').addEventListener('click', async () => {
   setMsg('');
+  showPermBox(false);
   const name = document.getElementById('name').value.trim();
   const plate = document.getElementById('plate').value.replace(/\D/g, '');
   const testDate = parseAny(document.getElementById('testDate').value);
