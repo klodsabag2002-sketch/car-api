@@ -204,6 +204,28 @@ function parseAny(raw) {
   return null;
 }
 // אחרי שיוצאים מהשדה, מסדר את התאריך לפורמט dd.mm.yyyy
+// כפתור "בחר מלוח שנה" לכל שדה תאריך: פותח את לוח השנה של הטלפון ומעתיק את הבחירה לשדה
+['testDate', 'stickerDate', 'insuranceDate'].forEach(id => {
+  const el = document.getElementById(id);
+  const picker = document.createElement('input');
+  picker.type = 'date';
+  picker.style.cssText = 'position:absolute;opacity:0;pointer-events:none;width:1px;height:1px;';
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.textContent = '📅 בחר מלוח שנה';
+  btn.style.cssText = 'margin:4px 0 10px;padding:6px 10px;border-radius:8px;border:1px solid #2a4a6a;background:transparent;color:#9fd3ff;font-size:14px;';
+  el.insertAdjacentElement('afterend', picker);
+  picker.insertAdjacentElement('afterend', btn);
+  btn.addEventListener('click', () => {
+    if (picker.showPicker) picker.showPicker(); else picker.click();
+  });
+  picker.addEventListener('change', () => {
+    if (!picker.value) return;
+    const [y, m, d] = picker.value.split('-');
+    el.value = `${d}.${m}.${y}`;
+  });
+});
+
 ['testDate', 'stickerDate', 'insuranceDate'].forEach(id => {
   const el = document.getElementById(id);
   el.addEventListener('blur', () => {
