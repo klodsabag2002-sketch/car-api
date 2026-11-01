@@ -1558,14 +1558,30 @@
     $('homeBtn').classList.remove('hidden');
   }
 
+  let recallFromDetail = false;
   function openRecallsSection() {
+    recallFromDetail = $('detailView').classList.contains('show');
     hideAllMainViews();
     $('detailView').classList.remove('show');
     $('recallView').style.display = 'block';
-    $('recallCard').style.display = 'none';
-    $('recallCard').innerHTML = '';
     $('backBtn').classList.remove('hidden');
     $('homeBtn').classList.add('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (currentPlate) {
+      $('recallPlateInput').value = formatPlate(currentPlate);
+      searchRecallPlate();
+    } else {
+      $('recallPlateInput').value = '';
+      $('recallCard').style.display = 'none';
+      $('recallCard').innerHTML = '';
+    }
+  }
+  function closeRecallToDetail() {
+    $('recallView').style.display = 'none';
+    $('detailView').classList.add('show');
+    inDetail = true;
+    $('backBtn').classList.remove('hidden');
+    $('homeBtn').classList.remove('hidden');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   function showSection(name) {
@@ -1631,7 +1647,10 @@
     renderHistory();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-  $('backBtn').addEventListener('click', showHome);
+  $('backBtn').addEventListener('click', () => {
+    if ($('recallView').style.display === 'block' && recallFromDetail) closeRecallToDetail();
+    else showHome();
+  });
   // כפתור הבית מחזיר לדף הראשי של הרכב הנוכחי (הלשונית הכללית), ואם אין רכב פתוח – לדף החיפוש
   function goToCarMain() {
     if (!currentPlate) return showHome();
