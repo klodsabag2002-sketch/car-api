@@ -2420,14 +2420,15 @@
     "source": "נתון יצרן (Dodge Durango SRT Hellcat)"
   },
   {
-  "make": "דיפאל סין",
+  "make": "דיפאל",
   "model": "S05 PRO",
-  "yearStart": null,
-  "yearEnd": null,
+  "yearStart": 0,
+  "yearEnd": 0,
   "hp": 320,
   "cc": 1497,
   "seconds": 7.9,
   "source": "רישוי רכב נתון יצרן דיפאל סין S05 PRO 1497 סמ\"ק 320 כוח סוס"
 }
+
 
 ]
