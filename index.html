@@ -472,6 +472,26 @@
   .report-status.success { display: block; background: rgba(34,197,94,.12); color: #4ade80; border: 1px solid rgba(34,197,94,.35); }
   .report-status.error { display: block; background: rgba(239,68,68,.12); color: #f87171; border: 1px solid rgba(239,68,68,.35); }
 
+  /* ---------- ריקולים פתוחים ---------- */
+  .recall-card { margin: 14px 14px 0; border-radius: 18px; padding: 16px; background: rgba(15,23,42,.85); border: 1px solid rgba(56,189,248,.18); display: none; }
+  .recall-card.ok { border-color: rgba(34,197,94,.35); }
+  .recall-card.warn { border-color: rgba(245,158,11,.45); box-shadow: 0 0 22px rgba(245,158,11,.12); }
+  .recall-head { display: flex; align-items: center; gap: 12px; }
+  .recall-ic { font-size: 26px; line-height: 1; flex-shrink: 0; }
+  .recall-title { font-size: 15px; font-weight: 900; color: #f8fafc; }
+  .recall-sub { font-size: 11.5px; color: #94a3b8; font-weight: 700; margin-top: 3px; line-height: 1.5; }
+  .recall-list { margin-top: 12px; display: flex; flex-direction: column; gap: 10px; }
+  .recall-item { background: rgba(3,7,18,.55); border-radius: 14px; padding: 12px 14px; border: 1px solid rgba(255,255,255,.06); }
+  .recall-item-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .recall-type { font-size: 13px; font-weight: 900; color: #f8fafc; }
+  .recall-badge { font-size: 10.5px; font-weight: 900; border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
+  .recall-badge.late { color: #f87171; border: 1px solid rgba(239,68,68,.55); background: rgba(239,68,68,.1); }
+  .recall-badge.soon { color: #fbbf24; border: 1px solid rgba(245,158,11,.5); background: rgba(245,158,11,.08); }
+  .recall-cat { font-size: 12px; color: #38bdf8; font-weight: 800; margin-top: 6px; }
+  .recall-desc { font-size: 12px; color: #cbd5e1; font-weight: 600; margin-top: 6px; line-height: 1.6; }
+  .recall-meta { font-size: 11px; color: #64748b; font-weight: 700; margin-top: 8px; direction: rtl; }
+  .recall-note { font-size: 11px; color: #94a3b8; line-height: 1.6; margin-top: 12px; font-weight: 600; }
+
   /* ---------- English (LTR) layout adjustments ---------- */
   html[dir="ltr"] body { direction: ltr; }
   html[dir="ltr"] .menu-dropdown { left: auto; right: 12px; }
@@ -503,6 +523,7 @@
       <div class="menu-item" data-menutab="hunter" data-i18n="menuHunter">🎯 צייד רכבים</div>
       <div class="menu-item" data-menutab="lights">💡 נורות אזהרה</div>
       <div class="menu-item" data-menutab="reminders">⏰ תזכורות טסט וביטוח</div>
+      <div class="menu-item" data-menutab="recalls">🔧 בדיקת ריקולים</div>
     </div>
   </div>
 
@@ -522,6 +543,18 @@
     <div id="loader" class="msg" data-i18n="loading">מחפש במאגר משרד התחבורה...</div>
     <div id="errorMsg" class="msg err"></div>
     <div id="candidatesList" class="candidates"></div>
+  </div>
+
+  <div id="recallView" style="display:none;padding:16px 14px 30px;">
+    <div class="compare-banner">
+      <h2>🔧 בדיקת ריקולים</h2>
+      <p>בדיקה לפי מספר רכב מול מאגר משרד התחבורה</p>
+    </div>
+    <div class="compare-inputs">
+      <input type="text" id="recallPlateInput" class="compare-input" inputmode="numeric" placeholder="מספר רכב" autocomplete="off" style="flex:1;">
+      <button id="recallSearchBtn" class="compare-btn">בדוק</button>
+    </div>
+    <div id="recallCard" class="recall-card"></div>
   </div>
 
   <div id="history" class="history">
@@ -1501,6 +1534,7 @@
       if (tab === 'duel') showDuel();
       else if (tab === 'lights') window.location.href = 'warning-lights.html';
       else if (tab === 'reminders') window.location.href = 'reminders.html';
+      else if (tab === 'recalls') openRecallsSection();
       else showSection(tab);
     });
   });
@@ -1509,6 +1543,7 @@
     inDetail = true;
     $('homeHero').style.display = 'none';
     document.querySelector('.search-box').style.display = 'none';
+    $('recallView').style.display = 'none';
     $('history').classList.remove('show');
     $('duelView').classList.remove('show');
     $('detailView').classList.add('show');
@@ -1516,6 +1551,16 @@
     $('homeBtn').classList.remove('hidden');
   }
 
+  function openRecallsSection() {
+    hideAllMainViews();
+    $('detailView').classList.remove('show');
+    $('recallView').style.display = 'block';
+    $('recallCard').style.display = 'none';
+    $('recallCard').innerHTML = '';
+    $('backBtn').classList.remove('hidden');
+    $('homeBtn').classList.add('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
   function showSection(name) {
     hideAllMainViews();
     $('detailHint').style.display = 'none';
@@ -1552,6 +1597,7 @@
     $('homeHero').style.display = 'none';
     $('detailView').classList.remove('show');
     document.querySelector('.search-box').style.display = 'none';
+    $('recallView').style.display = 'none';
     $('history').classList.remove('show');
     $('duelView').classList.add('show');
     $('backBtn').classList.remove('hidden');
@@ -1571,6 +1617,7 @@
     $('backBtn').classList.add('hidden');
     $('homeBtn').classList.add('hidden');
     document.querySelector('.search-box').style.display = '';
+    $('recallView').style.display = 'none';
     $('errorMsg').style.display = 'none';
     $('phevRevealBtn').style.display = 'none';
     closeOwnPanel();
@@ -2456,6 +2503,79 @@
     box.className = 'pc-section';
     box.style.display = 'block';
   }
+
+  // ---------- ריקולים פתוחים (קריאת שירות, משרד התחבורה) ----------
+  function escHtml(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
+  function fmtRecallDate(s) {
+    const m = String(s || '').match(/^(\d{4})-(\d{2})-(\d{2})/);
+    return m ? `${m[3]}.${m[2]}.${m[1]}` : (s || '');
+  }
+  function recallMonthsLabel(m) {
+    if (m == null) return '';
+    if (m < 1) return 'נפתח החודש';
+    return `נפתח לפני ${m} ${m === 1 ? 'חודש' : 'חודשים'}`;
+  }
+  function renderRecalls(list) {
+    const box = $('recallCard');
+    if (!list.length) {
+      box.className = 'recall-card ok';
+      box.innerHTML = `<div class="recall-head"><span class="recall-ic">✅</span><div><div class="recall-title">אין קריאות לתיקון פתוחות</div><div class="recall-sub">לא נמצאה לרכב זה קריאה לתיקון פתוחה במאגר משרד התחבורה</div></div></div>`;
+      box.style.display = 'block';
+      return;
+    }
+    const lateCount = list.filter(r => r.overSixMonths).length;
+    const items = list.map(r => {
+      const badge = r.overSixMonths
+        ? '<span class="recall-badge late">מעל חצי שנה</span>'
+        : '<span class="recall-badge soon">פחות מחצי שנה</span>';
+      return `
+        <div class="recall-item">
+          <div class="recall-item-top">
+            <span class="recall-type">${escHtml(r.type || 'קריאה לתיקון')}</span>
+            ${badge}
+          </div>
+          ${r.category ? `<div class="recall-cat">${escHtml(r.category)}</div>` : ''}
+          ${r.description ? `<div class="recall-desc">${escHtml(r.description)}</div>` : ''}
+          <div class="recall-meta">${escHtml(fmtRecallDate(r.openedAt))}${r.monthsOpen != null ? ' · ' + escHtml(recallMonthsLabel(r.monthsOpen)) : ''}</div>
+        </div>`;
+    }).join('');
+    box.className = 'recall-card warn';
+    box.innerHTML = `
+      <div class="recall-head">
+        <span class="recall-ic">⚠️</span>
+        <div>
+          <div class="recall-title">נמצאו ${list.length} קריאות לתיקון פתוחות</div>
+          <div class="recall-sub">${lateCount ? `${lateCount} מהן פתוחות מעל חצי שנה` : 'כולן פתוחות פחות מחצי שנה'}</div>
+        </div>
+      </div>
+      <div class="recall-list">${items}</div>
+      <div class="recall-note">לפי התקנות, אם לא מבצעים את התיקון תוך חצי שנה מההודעה של היבואן, רישיון הרכב לא מחודש ולא ניתן להעביר בעלות. התיקון נעשה במוסך מורשה של היבואן, ובדרך כלל ללא תשלום.<br>המידע ממאגר משרד התחבורה ב-data.gov.il ועשוי שלא להיות מעודכן לגמרי.</div>`;
+    box.style.display = 'block';
+  }
+  let lastRecallList = null;
+  async function searchRecallPlate() {
+    const plate = $('recallPlateInput').value.replace(/\D/g, '');
+    const box = $('recallCard');
+    if (plate.length < 5) { box.style.display = 'none'; box.innerHTML = ''; return; }
+    box.className = 'recall-card';
+    box.innerHTML = '<div class="recall-sub" style="text-align:center">בודק במאגר משרד התחבורה...</div>';
+    box.style.display = 'block';
+    try {
+      const r = await fetch(API_BASE + '/api/recalls/' + encodeURIComponent(plate));
+      const j = await r.json();
+      if (!j.success) throw new Error(j.message || 'שגיאה בבדיקה, נסה שוב');
+      renderRecalls(j.recalls || []);
+    } catch (e) {
+      box.className = 'recall-card';
+      box.innerHTML = `<div class="recall-sub" style="color:#f87171;text-align:center">${escHtml(e.message || 'שגיאה בבדיקה, נסה שוב')}</div>`;
+      box.style.display = 'block';
+    }
+  }
+  $('recallSearchBtn').addEventListener('click', searchRecallPlate);
+  $('recallPlateInput').addEventListener('input', e => { e.target.value = formatPlate(e.target.value); });
+  $('recallPlateInput').addEventListener('keydown', e => { if (e.key === 'Enter') searchRecallPlate(); });
 
   async function searchCar() {
     const plate = $('plateInput').value.replace(/\D/g, '');
