@@ -948,6 +948,42 @@ app.post('/api/reminders/run', async (req, res) => {
     }
 });
 
+// ---------- ריקולים פתוחים (קריאת שירות, data.gov.il) ----------
+const RECALLS_RESOURCE_ID = "36bf1404-0be4-49d2-82dc-2f1ead4a8b93";
+
+app.get('/api/recalls/:plate', async (req, res) => {
+    const plate = req.params.plate.replace(/\D/g, "");
+    if (plate.length < 5 || plate.length > 9 || Number(plate) === 0) {
+        return res.status(400).json({ success: false, message: "מספר רכב לא תקין" });
+    }
+    try {
+        const rows = await searchDatastore(RECALLS_RESOURCE_ID, { MISPAR_RECHEV: Number(plate) }, 100);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const recalls = rows.map(r => {
+            const openedAt = toText(r.TAARICH_PTICHA);
+            const d = openedAt ? new Date(openedAt) : null;
+            const validDate = d !== null && !isNaN(d);
+            const monthsOpen = validDate ? Math.floor((today - d) / (30.44 * 86400000)) : null;
+            return {
+                recallId: toText(r.RECALL_ID),
+                type: toText(r.SUG_RECALL),
+                category: toText(r.SUG_TAKALA),
+                description: toText(r.TEUR_TAKALA),
+                openedAt,
+                monthsOpen,
+                overSixMonths: validDate ? monthsOpen >= 6 : null
+            };
+        });
+        res.json({ success: true, count: recalls.length, recalls });
+    } catch (e) {
+        if (e.message === 'DATASTORE_UNAVAILABLE') {
+            return res.status(503).json({ success: false, message: 'שירות משרד התחבורה לא זמין כרגע, נסה שוב בעוד דקה' });
+        }
+        res.status(500).json({ success: false, message: 'שגיאה בשליפת הריקולים' });
+    }
+});
+
 app.listen(PORT, () => {
     console.log(`השרת רץ בפורט ${PORT}`);
 });
