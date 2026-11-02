@@ -1598,5 +1598,16 @@
     "cc": 0,
     "seconds": 2.7,
     "source": "נתון יצרן (Tesla Cybertruck Cyberbeast)"
-  }
+  },
+{
+  "make": "טסלה גרמניה",
+  "model": "MODEL Y",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 299,
+  "cc": 0,
+  "seconds": 6.9,
+  "source": "רישוי רכב נתון יצרן טסלה מודל Y הנעה אחורית RWD חשמלי 299 כוח סוס"
+}
+
 ]
