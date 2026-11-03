@@ -21,6 +21,7 @@
 </script>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
+  .nick-note { font-size:0.85rem; color:#c7d2e0; margin:8px 0 0; }
   .restoring #homeHero, .restoring .search-box, .restoring #history { display: none !important; }
   body { font-family: 'Segoe UI', Arial, Helvetica, sans-serif; background: #030712; color: #f8fafc; direction: rtl; min-height: 100vh; overflow-x: hidden; }
 
@@ -760,6 +761,7 @@
           <input type="text" id="hunterNickInput" class="nick-input" data-i18n-ph="hunterNickPh" placeholder="כינוי חדש" maxlength="16">
           <button id="hunterSaveNickBtn" class="nick-save-btn" data-i18n="saveNick">שמור כינוי</button>
         </div>
+        <p class="nick-note">הכינוי משתחרר אם לא פתחת את האפליקציה או חיפשת רכב במשך 30 יום, ואז מישהו אחר יכול לקחת אותו.</p>
         <div id="nickMsg" class="nick-msg"></div>
       </div>
       <div class="hunter-stats-grid">
@@ -1318,7 +1320,8 @@
       [["jaguar", "יגואר"], "jaguar", "#01653b", "Jaguar"],
       [["tesla", "טסלה"], "tesla", "#c0392b", "Tesla"],
       [["hyundai", "יונדאי", "הונדאי"], "hyundai", "#1d3a6e", "Hyundai"],
-      [["land rover", "לנד רובר"], "land rover", "#01653b", "Land Rover"],
+      [["range rover", "רנג רובר", "רנג'רובר", "רובר אנגליה", /\br\.?\s?rover\b/], "rang rover", "#01653b", "Range Rover"],
+      [["land rover", "לנד רובר", "לנדרובר"], "land rover", "#01653b", "Land Rover"],
       [["lamborghini", "למבורגיני"], "lamborghini", "#d4ac0d", "Lamborghini"],
       [["leapmotor", "ליפמוטור"], "leapmotor", "#1c4f9c", "Leapmotor"],
       [["lynk", "לינק אנד קו"], "linkco", "#111", "Lynk & Co"],
