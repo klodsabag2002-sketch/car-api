@@ -1,0 +1,60 @@
+/* נגישות בלי לשנות את העיצוב הכהה.
+   נטען מתוך האתר עם שורה אחת בתוך <head>:
+   <link rel="stylesheet" href="accessibility.css">
+   הכללים כאן כלליים, כי אין לי גישה למחלקות ולצבעים של האתר עצמו. */
+
+/* מיקוד מקלדת נראה על רקע כהה */
+:focus-visible {
+  outline: 3px solid #ffd60a;
+  outline-offset: 3px;
+}
+
+/* קישורים ניתנים לזיהוי גם בלי צבע */
+a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* שטח לחיצה מינימלי לכפתורים וקישורים (כ-44 פיקסלים) */
+button,
+a,
+[role="button"],
+input[type="submit"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* קישור דילוג לתוכן, מוסתר עד שמקבלים אליו מיקוד */
+.skip-link {
+  position: absolute;
+  top: -48px;
+  right: 8px;
+  background: #ffd60a;
+  color: #000;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  z-index: 1000;
+}
+.skip-link:focus {
+  top: 8px;
+}
+
+/* למי שביקש לבטל אנימציות ומעברים */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ניגודיות טקסט: טקסט משני בהיר יותר ברקע כהה */
+.muted,
+.small,
+small {
+  color: #c7d2e0;
+}
