@@ -23,7 +23,7 @@
   }
 
   var css = [
-    '#a11y-btn{position:fixed;bottom:16px;left:16px;z-index:9998;width:52px;height:52px;border-radius:50%;border:2px solid #8fd0ff;background:#0a1628;color:#8fd0ff;font-size:26px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.4);}',
+    '#a11y-btn{position:fixed;bottom:16px;left:16px;z-index:9998;width:44px;height:44px;border-radius:50%;border:2px solid #8fd0ff;background:#0a1628;color:#8fd0ff;font-size:20px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.4);}',
     '#a11y-btn:focus-visible,#a11y-panel button:focus-visible,#a11y-panel select:focus-visible{outline:3px solid #ffd60a;outline-offset:2px;}',
     '#a11y-panel{position:fixed;bottom:76px;left:16px;z-index:9999;width:300px;max-width:calc(100vw - 32px);max-height:70vh;overflow-y:auto;background:#0a1628;color:#f2f5f9;border:1px solid #1e2c44;border-radius:14px;padding:14px;box-shadow:0 8px 24px rgba(0,0,0,.5);font-family:system-ui,Arial,sans-serif;direction:rtl;display:none;}',
     '#a11y-panel.open{display:block;}',
