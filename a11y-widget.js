@@ -4,6 +4,9 @@
 (function () {
   'use strict';
 
+  // באפליקציה (נטען דרך AndroidAPI) הווידג'ט מוסתר. באתר רגיל הוא פועל כרגיל.
+  if (window.AndroidAPI) return;
+
   var KEY = 'a11yPrefs';
   var defaults = {
     size: 0, lineSpacing: false, letterSpacing: false, readableFont: false,
