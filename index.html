@@ -1266,8 +1266,6 @@
     const raw = ((manufacturer || '') + ' ' + (model || '')).toLowerCase();
     const rules = [
       [["cupra", "קופרה"], "cupra", "#8c6a3d", "Cupra"],
-      [["morgan", "מורגן"], "morgan", "#0f4d2e", "Morgan"],
-      [["yamaha", "ימאהה", "ימהה", "יאמאהה", "יאמאהא"], "yamaha", "#1c2f5c", "Yamaha"],
       [["audi", "אאודי", "אודי"], "audi", "#444", "Audi"],
       [["opel", "אופל"], "opel", "#f2a900", "Opel"],
       [["omoda", "אומודה"], "omoda", "#c0392b", "Omoda"],
@@ -1291,13 +1289,13 @@
       [["buick", "ביואיק"], "buick", "#1c4f9c", "Buick"],
       [["byd", "בי וי די", "בי ווי די", "ב.י.די"], "byd", "#c0392b", "BYD"],
       [["dacia", "דאציה"], "dacia", "#1c3d6b", "Dacia"],
-      [["geely", "ג'י לי", "ג'ילי", "גילי"], "geely", "#1c4f9c", "Geely"],
+      [["geely", "ג'י לי", "גילי"], "geely", "#1c4f9c", "Geely"],
       [["geometry", "גיאון"], "geometry", "#1c4f9c", "Geometry"],
       [["genesis", "ג'נסיס"], "genesis", "#111", "Genesis"],
       [["jeep", "ג'יפ", "גיפ"], "jeep", "#556b2f", "Jeep"],
       [["chrysler", "קרייזלר"], "chrysler", "#1c4f9c", "Chrysler"],
       [["deepal", "דיפאל"], "deepal", "#333", "Deepal"],
-      [["daihatsu", "דיהטסו", "דייהטסו", "דאיהטסו"], "daihatsu", "#cc0000", "Daihatsu"],
+      [["daihatsu", "דיהטסו"], "daihatsu", "#cc0000", "Daihatsu"],
       [[/(^|[^\w])ds([^\w]|$)/i, "די אס", "ds automobiles"], "ds", "#111", "DS"],
       [["dongfeng", "דונגפנג"], "dongfeng", "#1c4f9c", "Dongfeng"],
       [["dodge", "דודג"], "dodge", "#cc0000", "Dodge"],
@@ -1560,30 +1558,14 @@
     $('homeBtn').classList.remove('hidden');
   }
 
-  let recallFromDetail = false;
   function openRecallsSection() {
-    recallFromDetail = $('detailView').classList.contains('show');
     hideAllMainViews();
     $('detailView').classList.remove('show');
     $('recallView').style.display = 'block';
+    $('recallCard').style.display = 'none';
+    $('recallCard').innerHTML = '';
     $('backBtn').classList.remove('hidden');
     $('homeBtn').classList.add('hidden');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    if (currentPlate) {
-      $('recallPlateInput').value = formatPlate(currentPlate);
-      searchRecallPlate();
-    } else {
-      $('recallPlateInput').value = '';
-      $('recallCard').style.display = 'none';
-      $('recallCard').innerHTML = '';
-    }
-  }
-  function closeRecallToDetail() {
-    $('recallView').style.display = 'none';
-    $('detailView').classList.add('show');
-    inDetail = true;
-    $('backBtn').classList.remove('hidden');
-    $('homeBtn').classList.remove('hidden');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   function showSection(name) {
@@ -1649,10 +1631,7 @@
     renderHistory();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-  $('backBtn').addEventListener('click', () => {
-    if ($('recallView').style.display === 'block' && recallFromDetail) closeRecallToDetail();
-    else showHome();
-  });
+  $('backBtn').addEventListener('click', showHome);
   // כפתור הבית מחזיר לדף הראשי של הרכב הנוכחי (הלשונית הכללית), ואם אין רכב פתוח – לדף החיפוש
   function goToCarMain() {
     if (!currentPlate) return showHome();
