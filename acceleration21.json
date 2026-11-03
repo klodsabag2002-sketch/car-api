@@ -1698,6 +1698,16 @@
   "cc": 1994,
   "seconds": 10.5,
   "source": "רישוי רכב / נתון יצרן (סובארו יפן IMPREZA 2.0 R 160 כ\"ס)"
+},
+{
+  "make": "סובארו יפן",
+  "model": "IMPREZA TUR NEW",
+  "yearStart": null,
+  "yearEnd": null,
+  "hp": 224,
+  "cc": 1994,
+  "seconds": 5.9,
+  "source": "רישוי רכב נתון יצרן סובארו אימפרזה טורבו WRX (דור New Age / Bugeye-Blobeye) מנוע 2.0 ליטר טורבו בוקסר EJ205 עם 224 כוח סוס (225 כ\"ס מטרי)"
 }
 
 ]
