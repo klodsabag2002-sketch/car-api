@@ -65,29 +65,74 @@ async function saveCloudLeaderboard(leaderboardData) {
     } catch (e) {}
 }
 
+
+// ---- כללי כינוי: לכל טלפון מזהה קבוע; כינוי שייך למזהה הזה ----
+// רשומה: { count, owner (האש של המזהה, או null לנתונים ישנים), seen (מועד פעילות אחרון) }
+const HUNTER_EXPIRE_MS = 30 * 86400000; // שם שלא היה לו סימן חיים 30 יום משתחרר
+const HUNTER_NAME_RE = /^[\w֐-׿_-]{2,20}$/;
+
+function hashDevice(id) { return require('crypto').createHash('sha256').update(String(id)).digest('hex'); }
+
+// מחזיר null כשהקריאה נכשלה, כדי שלא נכתוב רשימה ריקה במקום הרשימה האמיתית
+async function readHunterBoard() {
+    try {
+        const r = await fetch(`${FIREBASE_DB_URL}/leaderboard.json`);
+        if (!r.ok) return null;
+        const data = await r.json();
+        return data || {};
+    } catch (e) { return null; }
+}
+
+function normEntry(name, v) {
+    if (typeof v === 'number') return { name, count: v, owner: null, seen: 0 };
+    if (v && typeof v === 'object') return { name, count: Number(v.count) || 0, owner: v.owner || null, seen: Number(v.seen) || 0 };
+    return null;
+}
+
+// שם של משתמש שלא היה פעיל 30 יום נחשב פנוי. שמות ישנים בלי בעלים נשארים גלויים, וכל אחד יכול לתפוס אותם
+function isExpired(e) { return !!(e && e.owner && Date.now() - e.seen > HUNTER_EXPIRE_MS); }
+
 app.get('/api/hunter/leaderboard', async (req, res) => {
-    const hunterLeaderboard = await getCloudLeaderboard();
-    const sorted = Object.entries(hunterLeaderboard)
-        .map(([name, count]) => ({ name, count }))
+    const board = await readHunterBoard();
+    if (board === null) return res.status(503).json({ success: false, leaderboard: [] });
+    const list = Object.entries(board)
+        .map(([name, v]) => normEntry(name, v))
+        .filter(e => e && !isExpired(e))
+        .map(e => ({ name: e.name, count: e.count }))
         .sort((a, b) => b.count - a.count);
-    res.json({ success: true, leaderboard: sorted });
+    res.json({ success: true, leaderboard: list });
 });
 
+// נקרא בפתיחת האפליקציה, בכל חיפוש ובשמירת כינוי. מוסיף/מעדכן רק את השורה של המשתמש
 app.post('/api/hunter/update', async (req, res) => {
-    const { nickname, count } = req.body;
-    if (!nickname) return res.status(400).json({ success: false, message: "Missing nickname" });
+    const { nickname, count, oldNickname, deviceId } = req.body || {};
+    const nick = String(nickname || '').trim();
+    const dev = String(deviceId || '');
+    if (!HUNTER_NAME_RE.test(nick)) return res.status(400).json({ success: false, message: 'כינוי לא תקין' });
+    if (dev.length < 16 || dev.length > 100) return res.status(400).json({ success: false, message: 'מזהה מכשיר לא תקין' });
+    const owner = hashDevice(dev);
 
-    let hunterLeaderboard = await getCloudLeaderboard();
-    hunterLeaderboard[nickname] = Number(count) || 0;
-    await saveCloudLeaderboard(hunterLeaderboard);
+    const board = await readHunterBoard();
+    if (board === null) return res.status(503).json({ success: false, message: 'השרת לא זמין, נסה שוב' });
 
-    res.json({
-        success: true,
-        leaderboard: Object.entries(hunterLeaderboard)
-            .map(([name, count]) => ({ name, count }))
-            .sort((a, b) => b.count - a.count)
-    });
+    const cur = normEntry(nick, board[nick]);
+    if (cur && cur.owner && cur.owner !== owner && !isExpired(cur)) {
+        return res.status(409).json({ success: false, message: 'הכינוי תפוס' });
+    }
+
+    const entry = { count: Math.max(0, Math.floor(Number(count) || 0)), owner, seen: Date.now() };
+    const r = await rdbFetch(`leaderboard/${nick}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(entry) });
+    if (!r.ok) return res.status(500).json({ success: false, message: 'שגיאה בשמירה' });
+
+    // שינוי כינוי: מוחקים רק את הכינוי הישן של אותו מכשיר
+    const old = String(oldNickname || '').trim();
+    if (old && old !== nick && HUNTER_NAME_RE.test(old)) {
+        const oe = normEntry(old, board[old]);
+        if (oe && oe.owner === owner) await rdbFetch(`leaderboard/${old}`, { method: 'DELETE' });
+    }
+    res.json({ success: true });
 });
+
 
 let accelTable = [];
 const ACCEL_FILES = [
