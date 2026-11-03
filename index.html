@@ -1060,6 +1060,8 @@
     hunterNickPh: ['כינוי חדש', 'New nickname'],
     saveNick: ['שמור כינוי', 'Save nickname'],
     nickSaved: ['הכינוי עודכן', 'Nickname updated'],
+    nickTaken: ['הכינוי תפוס, בחר כינוי אחר', 'This nickname is taken, choose another'],
+    nickNetErr: ['לא הצלחנו לשמור, נסה שוב', 'Could not save, try again'],
     nickInvalid: ['נא להזין כינוי תקין (2 תווים לפחות)', 'Please enter a valid nickname (at least 2 characters)'],
     statMy: ['הכינוי שלך', 'Your nickname'],
     statCount: ['רכבים באוסף', 'Vehicles collected'],
@@ -1676,6 +1678,16 @@
   $('homeBtn').addEventListener('click', goToCarMain);
 
   /* ================= צייד רכבים ================= */
+  const HUNTER_DEVICE_KEY = 'hunterDeviceId';
+  function getDeviceId() {
+    let id = store.get(HUNTER_DEVICE_KEY);
+    if (!id) {
+      const a = new Uint8Array(16); crypto.getRandomValues(a);
+      id = Array.from(a, b => b.toString(16).padStart(2, '0')).join('');
+      store.set(HUNTER_DEVICE_KEY, id);
+    }
+    return id;
+  }
   function getMyNickname() {
     let nick = store.get(HUNTER_NICK_KEY);
     if (!nick) {
@@ -1692,13 +1704,7 @@
   }
   function getLocalLeaderboard() {
     try { const lb = JSON.parse(store.get(HUNTER_LOCAL_LB_KEY)); if (Array.isArray(lb)) return lb; } catch (e) {}
-    return [
-      { name: getMyNickname(), count: getHunterCollection().length },
-      { name: "Turbo_Viper77", count: 24 },
-      { name: "Cyber_Driver42", count: 18 },
-      { name: "Nitro_Racer99", count: 12 },
-      { name: "Apex_Pilot11", count: 7 }
-    ];
+    return [{ name: getMyNickname(), count: getHunterCollection().length }];
   }
   function saveLocalLeaderboard(lb) { store.set(HUNTER_LOCAL_LB_KEY, JSON.stringify(lb)); }
 
@@ -1718,12 +1724,22 @@
     try {
       fetch(API_BASE + '/api/hunter/update', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nickname: myNick, count: col.length })
+        body: JSON.stringify({ nickname: myNick, count: col.length, deviceId: getDeviceId() })
+      }).catch(() => {});
+    } catch (e) {}
+  }
+
+  function hunterPing() {
+    try {
+      fetch(API_BASE + '/api/hunter/update', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nickname: getMyNickname(), count: getHunterCollection().length, deviceId: getDeviceId() })
       }).catch(() => {});
     } catch (e) {}
   }
 
   async function updateHunterUI() {
+    hunterPing();
     const col = getHunterCollection();
     const myNick = getMyNickname();
     $('hunterMyName').textContent = myNick;
@@ -1785,8 +1801,25 @@
       return;
     }
     const oldNick = store.get(HUNTER_NICK_KEY);
-    store.set(HUNTER_NICK_KEY, newNick);
     const col = getHunterCollection();
+    let res = null;
+    try {
+      res = await fetch(API_BASE + '/api/hunter/update', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nickname: newNick, count: col.length, oldNickname: oldNick, deviceId: getDeviceId() })
+      });
+    } catch (e) { res = null; }
+    if (res && res.status === 409) {
+      msgEl.className = 'nick-msg err';
+      msgEl.textContent = t('nickTaken');
+      return;
+    }
+    if (!res || !res.ok) {
+      msgEl.className = 'nick-msg err';
+      msgEl.textContent = t('nickNetErr');
+      return;
+    }
+    store.set(HUNTER_NICK_KEY, newNick);
     let lb = getLocalLeaderboard().filter(x => x.name !== oldNick);
     const existing = lb.find(x => x.name === newNick);
     if (existing) existing.count = Math.max(existing.count, col.length);
@@ -1795,12 +1828,6 @@
     saveLocalLeaderboard(lb);
     msgEl.className = 'nick-msg ok';
     msgEl.textContent = t('nickSaved');
-    try {
-      await fetch(API_BASE + '/api/hunter/update', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nickname: newNick, count: col.length, oldNickname: oldNick })
-      });
-    } catch (e) {}
     updateHunterUI();
     setTimeout(() => { msgEl.style.display = 'none'; }, 2500);
   });
@@ -2610,6 +2637,7 @@
   $('recallPlateInput').addEventListener('keydown', e => { if (e.key === 'Enter') searchRecallPlate(); });
 
   async function searchCar() {
+    hunterPing();
     const plate = $('plateInput').value.replace(/\D/g, '');
     const btn = $('searchBtn'), loader = $('loader'), err = $('errorMsg');
     err.style.display = 'none';
