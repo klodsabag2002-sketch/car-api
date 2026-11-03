@@ -2479,77 +2479,76 @@
     "seconds": 5.2,
     "source": "cars-data.com (Mercedes S 580 e, נתון מערכת 510 כ\"ס)"
   },
-{
-  "make": "מרצדס בנץ גרמנ",
-  "model": "AMG GT55",
-  "yearStart": null,
-  "yearEnd": null,
-  "hp": 469,
-  "cc": 3982,
-  "seconds": 3.9,
-  "source": "רישוי רכב / נתון יצרן (מרצדס AMG GT 55 4.0 V8 בי-טורבו 469 כ\"ס)"
-},
-{
-  "make": "מרצדס בנץ גרמנ",
-  "model": "C43 AMG",
-  "yearStart": null,
-  "yearEnd": null,
-  "hp": 367,
-  "cc": 2996,
-  "seconds": 4.7,
-  "source": "רישוי רכב / נתון יצרן (מרצדס C43 AMG 4MATIC 3.0 V6 367 כ\"ס)"
-},
-{
-  "make": "מרצדס בנץ ארהב",
-  "model": "GLE53 4MATIC",
-  "yearStart": null,
-  "yearEnd": null,
-  "hp": 429,
-  "cc": 2999,
-  "seconds": 5.3,
-  "source": "רישוי רכב / נתון יצרן (מרצדס GLE 53 AMG 4MATIC+ 3.0T 429 כ\"ס)"
-},
-{
-  "make": "מרצדס בנץ גרמנ",
-  "model": "AMG GT43",
-  "yearStart": null,
-  "yearEnd": null,
-  "hp": 367,
-  "cc": 2999,
-  "seconds": 4.9,
-  "source": "רישוי רכב נתון יצרן מרצדס AMG GT 43 4MATIC 4Door 367 כוח סוס"
-},
-{
-  "make": "מרצדס בנץ גרמנ",
-  "model": "S500E",
-  "yearStart": null,
-  "yearEnd": null,
-  "hp": 333,
-  "cc": 2996,
-  "seconds": 5.2,
-  "source": "רישוי רכב נתון יצרן מרצדס S500e פלאג אין הייבריד 333 כוח סוס"
-},
-{
-  "make": "מרצדס בנץ ארהב",
-  "model": "GLE350",
-  "yearStart": null,
-  "yearEnd": null,
-  "hp": 255,
-  "cc": 1991,
-  "seconds": 7.1,
-  "source": "רישוי רכב נתון יצרן מרצדס בנץ GLE 350 4MATIC מנוע 2.0 טורבו 255 כוח סוס"
-},
-{
-  "make": "מרצדס בנץ גרמן",
-  "model": "CLE300E",
-  "yearStart": null,
-  "yearEnd": null,
-  "hp": 204,
-  "cc": 1999,
-  "seconds": 6.3,
-  "source": "רישוי רכב נתון יצרן מרצדס CLE 300 e פלאג-אין הייבריד מנוע 2.0 ליטר משולב 313 כוח סוס (מנוע בנזין 204 כוח סוס)"
-},
-[
+  {
+    "make": "מרצדס בנץ גרמנ",
+    "model": "AMG GT55",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 469,
+    "cc": 3982,
+    "seconds": 3.9,
+    "source": "רישוי רכב / נתון יצרן (מרצדס AMG GT 55 4.0 V8 בי-טורבו 469 כ\"ס)"
+  },
+  {
+    "make": "מרצדס בנץ גרמנ",
+    "model": "C43 AMG",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 367,
+    "cc": 2996,
+    "seconds": 4.7,
+    "source": "רישוי רכב / נתון יצרן (מרצדס C43 AMG 4MATIC 3.0 V6 367 כ\"ס)"
+  },
+  {
+    "make": "מרצדס בנץ ארהב",
+    "model": "GLE53 4MATIC",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 429,
+    "cc": 2999,
+    "seconds": 5.3,
+    "source": "רישוי רכב / נתון יצרן (מרצדס GLE 53 AMG 4MATIC+ 3.0T 429 כ\"ס)"
+  },
+  {
+    "make": "מרצדס בנץ גרמנ",
+    "model": "AMG GT43",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 367,
+    "cc": 2999,
+    "seconds": 4.9,
+    "source": "רישוי רכב נתון יצרן מרצדס AMG GT 43 4MATIC 4Door 367 כוח סוס"
+  },
+  {
+    "make": "מרצדס בנץ גרמנ",
+    "model": "S500E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 333,
+    "cc": 2996,
+    "seconds": 5.2,
+    "source": "רישוי רכב נתון יצרן מרצדס S500e פלאג אין הייבריד 333 כוח סוס"
+  },
+  {
+    "make": "מרצדס בנץ ארהב",
+    "model": "GLE350",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 255,
+    "cc": 1991,
+    "seconds": 7.1,
+    "source": "רישוי רכב נתון יצרן מרצדס בנץ GLE 350 4MATIC מנוע 2.0 טורבו 255 כוח סוס"
+  },
+  {
+    "make": "מרצדס בנץ גרמן",
+    "model": "CLE300E",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 204,
+    "cc": 1999,
+    "seconds": 6.3,
+    "source": "רישוי רכב נתון יצרן מרצדס CLE 300 e פלאג-אין הייבריד מנוע 2.0 ליטר משולב 313 כוח סוס (מנוע בנזין 204 כוח סוס)"
+  },
   {
     "make": "מרצדס בנץ גרמן",
     "model": "CLE300E",
@@ -2590,7 +2589,6 @@
     "seconds": 6.3,
     "source": "רישוי רכב נתון יצרן מרצדס CLE 300 e מנוע 2.0 ליטר פלאג-אין הייבריד (204 כ\"ס בנזין / 313 כ\"ס משולב)"
   },
-[
   {
     "make": "מרצדס בנץ גרמן",
     "model": "CLE300E",
@@ -2641,31 +2639,24 @@
     "seconds": 6.3,
     "source": "רישוי רכב נתון יצרן מרצדס CLE 300 e מנוע 2.0 ליטר פלאג-אין הייבריד (204 כ\"ס בנזין / 313 כ\"ס משולב)"
   },
-{
-  "make": "מרצדס בנץ גרמנ",
-  "model": "CLE300E",
-  "yearStart": 2023,
-  "yearEnd": 2026,
-  "hp": 204,
-  "cc": 1999,
-  "seconds": 6.3,
-  "source": "רישוי רכב נתון יצרן מרצדס CLE 300 e מנוע 2.0 ליטר פלאג-אין הייבריד (204 כ\"ס בנזין / 313 כ\"ס משולב)"
-},
-{
-  "make": "מרצדס בנץ גרמנ",
-  "model": "AMG C43",
-  "yearStart": null,
-  "yearEnd": null,
-  "hp": 408,
-  "cc": 1991,
-  "seconds": 4.6,
-  "source": "רישוי רכב נתון יצרן מרצדס AMG C43 4MATIC מנוע 2.0 ליטר טורבו 408 כוח סוס"
-}
-
-
+  {
+    "make": "מרצדס בנץ גרמנ",
+    "model": "CLE300E",
+    "yearStart": 2023,
+    "yearEnd": 2026,
+    "hp": 204,
+    "cc": 1999,
+    "seconds": 6.3,
+    "source": "רישוי רכב נתון יצרן מרצדס CLE 300 e מנוע 2.0 ליטר פלאג-אין הייבריד (204 כ\"ס בנזין / 313 כ\"ס משולב)"
+  },
+  {
+    "make": "מרצדס בנץ גרמנ",
+    "model": "AMG C43",
+    "yearStart": null,
+    "yearEnd": null,
+    "hp": 408,
+    "cc": 1991,
+    "seconds": 4.6,
+    "source": "רישוי רכב נתון יצרן מרצדס AMG C43 4MATIC מנוע 2.0 ליטר טורבו 408 כוח סוס"
+  }
 ]
-
-]
-
-]
-
