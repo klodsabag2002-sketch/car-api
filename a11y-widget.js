@@ -5,7 +5,8 @@
   'use strict';
 
   // באפליקציה (נטען דרך AndroidAPI) הווידג'ט מוסתר. באתר רגיל הוא פועל כרגיל.
-  if (window.AndroidAPI) return;
+  function inApp() { return typeof window.AndroidAPI !== 'undefined' && !!window.AndroidAPI; }
+  if (inApp()) return;
 
   var KEY = 'a11yPrefs';
   var defaults = {
@@ -263,4 +264,11 @@
   }
 
   applyPrefs();
+  // בדיקה שנייה כשהדף נטען במלואו, למקרה ששכבת האפליקציה הופיעה מאוחר יותר
+  window.addEventListener('load', function () {
+    if (!inApp()) return;
+    ['a11y-btn', 'a11y-panel', 'a11y-guide', 'a11y-voice-status'].forEach(function (id) {
+      var el = document.getElementById(id); if (el) el.remove();
+    });
+  });
 })();
