@@ -511,6 +511,24 @@
 </head>
 <body>
 <a class="skip-link" href="#homeHero">דלג לתוכן</a>
+<style>
+#appUpdate{display:none;margin:12px auto 0;max-width:720px;padding:0 16px;box-sizing:border-box}
+#appUpdate.show{display:block}
+#appUpdate .au-card{background:#111b2e;border:1px solid #1e3a5f;border-right:4px solid #f7d13a;border-radius:12px;padding:14px;display:flex;align-items:center;gap:12px;color:#e2e8f0}
+#appUpdate .au-title{font-size:16px;font-weight:bold;color:#fff}
+#appUpdate .au-text{font-size:13px;margin-top:3px;color:#94a3b8;line-height:1.4}
+#appUpdate .au-btn{flex:0 0 auto;background:#f7d13a;color:#0b1220;text-decoration:none;font-weight:bold;font-size:14px;padding:9px 14px;border-radius:8px}
+#appUpdate .au-btn:focus-visible{outline:3px solid #38bdf8;outline-offset:3px}
+</style>
+<div id="appUpdate" role="status" aria-live="polite">
+  <div class="au-card">
+    <div style="flex:1;min-width:0">
+      <div class="au-title">גרסה חדשה זמינה</div>
+      <div class="au-text">עדכן לגרסה האחרונה כדי ליהנות משיפורים ותיקונים</div>
+    </div>
+    <a class="au-btn" id="appUpdateLink" href="#">עדכון</a>
+  </div>
+</div>
 <div class="phone">
 
   <div class="topbar">
@@ -3307,6 +3325,28 @@
   renderHistory();
   updateHunterUI();
   restoreState();
+</script>
+<script>
+// באנר "גרסה חדשה" - מוצג רק בתוך האפליקציה, כשהגרסה המותקנת ישנה מהגרסה האחרונה בשרת
+(function () {
+  try {
+    var params = new URLSearchParams(location.search);
+    var inApp = !!window.AndroidAPI || params.has('appv');
+    if (!inApp) return;
+    var installed = parseInt(params.get('appv'), 10) || 0;
+    fetch('/api/app-version', { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d || !d.latest || installed >= d.latest) return;
+        var box = document.getElementById('appUpdate');
+        var link = document.getElementById('appUpdateLink');
+        if (!box || !link) return;
+        link.href = d.url || '#';
+        box.classList.add('show');
+      })
+      .catch(function () {});
+  } catch (e) {}
+})();
 </script>
 <script src="a11y-widget.js" defer></script>
 </body>
