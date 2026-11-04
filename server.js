@@ -1107,6 +1107,15 @@ app.get('/api/cancelled/:plate', async (req, res) => {
     }
 });
 
+// ===== עדכון אפליקציה =====
+// מספר הגרסה האחרונה שזמינה בגוגל פליי. מעדכנים כאן רק אחרי שהבנייה החדשה כבר זמינה בחנות.
+// 0 = אין באנר עדכון.
+const APP_LATEST_VERSION = 0;
+const APP_PLAY_URL = 'https://play.google.com/store/apps/details?id=com.lohit.carsearch';
+app.get('/api/app-version', (req, res) => {
+    res.json({ latest: APP_LATEST_VERSION, url: APP_PLAY_URL });
+});
+
 app.listen(PORT, () => {
     console.log(`השרת רץ בפורט ${PORT}`);
 });
