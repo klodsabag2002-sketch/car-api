@@ -2514,6 +2514,13 @@
       ['מספר שלדה', val(d.chassis)],
       ['תאריך ירידה מהכביש', date || null]
     ];
+    const make = val(d.manufacturer) || 'לא ידוע';
+    const model = val(d.model) || '';
+    const brand = findBrand(d.manufacturer, d.model);
+    const logoSrc = getLogoSrc(brand);
+    const logoHtml = logoSrc
+      ? `<img src="${esc(logoSrc)}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:6px;" onerror="this.style.display='none';this.nextElementSibling.style.display='inline';"><span class="pc-logo-txt" style="display:none;">${esc(make.charAt(0))}</span>`
+      : `<span class="pc-logo-txt">${esc(make.charAt(0))}</span>`;
     const rowsHtml = rows.map(([k, v]) => `<div class="bike-kv"><span class="k">${esc(k)}</span><span class="v${v ? '' : ' na'}">${esc(v || t('noData'))}</span></div>`).join('');
     box.innerHTML = `
       <div class="pc-wrap">
@@ -2521,10 +2528,13 @@
           <div class="pc-body">
             <div class="pc-sheen"></div>
             <div class="pc-head">
-              <div class="pc-brand"><div>
-                <div class="pc-label">REMOVED FROM ROAD</div>
-              </div></div>
+              <div class="pc-brand">
+                <div class="pc-logo" style="position:relative;">${logoHtml}</div>
+                <div><div class="pc-label">ירד מהכביש</div></div>
+              </div>
             </div>
+            <div class="pc-name">${esc(make)}</div>
+            <div class="pc-model">${esc(model)}</div>
             <div style="position:relative;z-index:2;margin-top:12px;">${rowsHtml}</div>
             <p style="position:relative;z-index:2;margin:14px 0 0;color:#fca5a5;font-size:13px;line-height:1.7;text-align:center;">
               המאגר שלנו לא יודע אם הרכב חזר לכביש מאז. המידע מבוסס על מאגר משרד התחבורה של ביטולי רישום סופיים, וייתכן שהרכב נמכר, הוחלף בו מספר או נגנב.
