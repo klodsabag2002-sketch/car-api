@@ -409,6 +409,44 @@ app.get('/api/car/inspect', async (req, res) => {
     }
 });
 
+// רכב שאינו במאגר הרישום הפעיל אבל נמצא במאגר הביטולים הסופיים: מציגים את אותו עמוד, עם סימון "ירד מהכביש"
+async function fetchCancelledRecord(plate) {
+    try {
+        const records = await searchDatastore(CANCELLED_RESOURCE_ID, { mispar_rechev: Number(plate) }, 1);
+        return records[0] || null;
+    } catch (e) { return null; }
+}
+
+function buildRemovedCarData(plate, rec) {
+    const date = findCancelDate(rec);
+    return {
+        plate,
+        manufacturer: toText(rec.tozeret_nm) || 'לא ידוע',
+        model: toText(rec.kinuy_mishari) || toText(rec.degem_nm) || 'לא ידוע',
+        trim: null,
+        year: toText(rec.shnat_yitzur) || 'לא ידוע',
+        transmission: null,
+        color: toText(rec.tzeva_rechev) || toText(rec.zeva_rechev) || 'לא ידוע',
+        chassis: toText(rec.misgeret),
+        tireFront: null, tireRear: null, lastTest: null,
+        engineCc: toNumber(rec.nefach_manoa) ?? toNumber(rec.nefah_manoa),
+        horsepower: null, combinedHorsepower: null, isPhev: false, isHybridOrPhev: false,
+        acceleration0to100: null, accelerationSource: null,
+        importerPrice: null, importerName: null,
+        testExpiry: null, testValid: null,
+        ownership: labelOwnership(rec.baalut),
+        owners: null, disabled: false,
+        bodyType: null, merkav: null, kmSinceTest: null,
+        pollutionGroup: null, greenScore: null,
+        technical: { drivetrain: null, totalWeight: null, towWithBrakes: null, towWithoutBrakes: null, doors: null, seats: null, windows: null, airbags: null, safetyLevel: null },
+        equipment: { ac: null, abs: null, sunroof: null, alloyWheels: null, powerSteering: null },
+        safety: { laneDeparture: null, pedestrianDetection: null, rearCamera: null, blindSpot: null, adaptiveCruise: null, signRecognition: null, parkingSensorsFront: null, autoBrakeForward: null, autoBrakeReverse: null, autoHighBeam: null, driverDrowsiness: null, tirePressure: null },
+        emissions: { co2Wltp: null, noxWltp: null, hcWltp: null, pmWltp: null, co2City: null, co2Highway: null, source: null },
+        fuel: { type: null, kmPerLiterCity: null, kmPerLiterHighway: null, kmPerLiter: null, kmPerLiterPetrol: null, kmPerLiterDiesel: null, isHybridOrPhev: false, isPhev: false, isElectric: false, note: '' },
+        removedFromRoad: { date: date }
+    };
+}
+
 app.get('/api/car/:plate', async (req, res) => {
     const plate = req.params.plate.replace(/\D/g, "");
     // מספר רכב לא תקין לא נשלח למאגר (למשל "0")
@@ -418,6 +456,8 @@ app.get('/api/car/:plate', async (req, res) => {
     try {
         const car = await fetchCarRecord(plate);
         if (!car) {
+            const removedRec = await fetchCancelledRecord(plate);
+            if (removedRec) return res.json({ success: true, data: buildRemovedCarData(plate, removedRec) });
             return res.json({ success: false, message: "המספר אינו קיים במאגר משרד התחבורה" });
         }
 
@@ -1026,6 +1066,44 @@ app.get('/api/recalls/:plate', async (req, res) => {
             return res.status(503).json({ success: false, message: 'שירות משרד התחבורה לא זמין כרגע, נסה שוב בעוד דקה' });
         }
         res.status(500).json({ success: false, message: 'שגיאה בשליפת הריקולים' });
+    }
+});
+
+// ---------- כלי רכב שירדו מהכביש ובוטלו סופית (data.gov.il) ----------
+const CANCELLED_RESOURCE_ID = "851ecab1-0622-4dbe-a6c7-f950cf82abf9";
+const CANCELLED_NOTE = 'לפי מאגר משרד התחבורה של ביטולי רישום סופיים. המערכת לא יכולה לדעת אם הרכב חזר לכביש מאז, ולכן המידע אינו מדויק ב-100%: ייתכן שהרכב נמכר, הוחלף בו מספר או נגנב.';
+
+function findCancelDate(rec) {
+    const keys = Object.keys(rec).sort((a, b) => (/bitul|ביטול|taarich|dt/i.test(b) ? 1 : 0) - (/bitul|ביטול|taarich|dt/i.test(a) ? 1 : 0));
+    for (const k of keys) {
+        if (!/bitul|ביטול|taarich|dt/i.test(k)) continue;
+        const v = toText(rec[k]);
+        if (!v) continue;
+        const iso = v.match(/^(\d{4})-(\d{2})-(\d{2})/);
+        if (iso) return `${iso[3]}/${iso[2]}/${iso[1]}`;
+        const dmy = v.match(/^(\d{1,2})[\/.-](\d{1,2})[\/.-](\d{2,4})/);
+        if (dmy) return `${dmy[1].padStart(2, '0')}/${dmy[2].padStart(2, '0')}/${dmy[3]}`;
+    }
+    return null;
+}
+
+app.get('/api/cancelled/:plate', async (req, res) => {
+    const plate = req.params.plate.replace(/\D/g, "");
+    if (plate.length < 5 || plate.length > 9 || Number(plate) === 0) {
+        return res.json({ success: true, found: false });
+    }
+    try {
+        const records = await searchDatastore(CANCELLED_RESOURCE_ID, { mispar_rechev: Number(plate) }, 1);
+        const rec = records[0];
+        if (!rec) return res.json({ success: true, found: false });
+        const date = findCancelDate(rec);
+        const message = date
+            ? `הרכב ירד מהכביש בתאריך ${date} ${CANCELLED_NOTE}`
+            : `הרכב מופיע במאגר רכבים שירדו מהכביש ובוטלו סופית ${CANCELLED_NOTE}`;
+        res.json({ success: true, found: true, date, message });
+    } catch (e) {
+        // אם המאגר לא זמין, מחזירים "לא נמצא" כדי שההודעה הרגילה תוצג
+        res.json({ success: true, found: false });
     }
 });
 
