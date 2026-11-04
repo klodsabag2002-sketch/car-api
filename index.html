@@ -2471,7 +2471,7 @@
               <div class="pc-brand">
                 <div class="pc-logo" style="position:relative;">${logoHtml}</div>
                 <div>
-                  <div class="pc-label">${kind === 'heavy' ? 'HEAVY VEHICLE PROFILE' : 'MOTORCYCLE PROFILE'}</div>
+                  <div class="pc-label">${kind === 'heavy' ? 'HEAVY VEHICLE PROFILE' : kind === 'removed' ? 'REMOVED FROM ROAD' : 'MOTORCYCLE PROFILE'}</div>
                   <span class="pc-tier">${esc(tier)}</span>
                 </div>
               </div>
@@ -2494,6 +2494,43 @@
             <div class="pc-foot">
               <div class="pc-plate"><span class="ps">✡IL</span><span class="pn">${esc(formatPlate(plate))}</span></div>
               <span class="pc-serial">MOTO</span>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    box.className = 'pc-section';
+    box.style.display = 'block';
+  }
+
+  function showRemovedResult(plate, d) {
+    const box = $('bikeResult');
+    const esc = v => String(v == null ? '' : v).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    const val = v => (v === null || v === undefined || v === '' || v === 'לא ידוע') ? null : v;
+    const date = d.removedFromRoad && d.removedFromRoad.date;
+    const rows = [
+      ['שנת ייצור', val(d.year)],
+      ['צבע', val(d.color)],
+      ['מספר רכב', formatPlate(plate)],
+      ['מספר שלדה', val(d.chassis)],
+      ['תאריך ירידה מהכביש', date || null]
+    ];
+    const rowsHtml = rows.map(([k, v]) => `<div class="bike-kv"><span class="k">${esc(k)}</span><span class="v${v ? '' : ' na'}">${esc(v || t('noData'))}</span></div>`).join('');
+    box.innerHTML = `
+      <div class="pc-wrap">
+        <div class="pc play" data-r="rare">
+          <div class="pc-body">
+            <div class="pc-sheen"></div>
+            <div class="pc-head">
+              <div class="pc-brand"><div>
+                <div class="pc-label">REMOVED FROM ROAD</div>
+              </div></div>
+            </div>
+            <div style="position:relative;z-index:2;margin-top:12px;">${rowsHtml}</div>
+            <p style="position:relative;z-index:2;margin:14px 0 0;color:#fca5a5;font-size:13px;line-height:1.7;text-align:center;">
+              המאגר שלנו לא יודע אם הרכב חזר לכביש מאז. המידע מבוסס על מאגר משרד התחבורה של ביטולי רישום סופיים, וייתכן שהרכב נמכר, הוחלף בו מספר או נגנב.
+            </p>
+            <div class="pc-foot">
+              <div class="pc-plate"><span class="ps">✡IL</span><span class="pn">${esc(formatPlate(plate))}</span></div>
             </div>
           </div>
         </div>
@@ -2717,6 +2754,20 @@
       }
       loader.style.display = 'none';
       currentPlate = plate;
+      if (d.removedFromRoad) {
+        $('cardGeneral').style.display = 'none';
+        $('tabs').classList.remove('show');
+        $('hero').classList.remove('show');
+        showRemovedResult(plate, d);
+        addToHistory({
+          plate, manufacturer: d.manufacturer || '',
+          name: cleanText((d.manufacturer || '') + ' ' + (d.model || '')),
+          year: d.year ? String(d.year) : '',
+          time: nowTime()
+        });
+        showDetail();
+        return;
+      }
       currentCarData = d;
       sessionStore.set(LAST_CAR_KEY, JSON.stringify({ plate, d }));
       addCarToHunterCollection(plate, d);
