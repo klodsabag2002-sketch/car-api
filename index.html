@@ -1315,6 +1315,7 @@
       [["jac", "ג'ק"], "jac", "#1c4f9c", "JAC"],
       [["jaecoo", "גאקו"], "jaecoo", "#222", "Jaecoo"],
       [["bentley", "בנטלי"], "bentley", "#2c3e50", "Bentley"],
+      [["lotus", "לוטוס", "לוטוס אנגליה"], "lotus", "#c8102e", "Lotus"],
       [["buick", "ביואיק"], "buick", "#1c4f9c", "Buick"],
       [["byd", "בי וי די", "בי ווי די", "ב.י.די"], "byd", "#c0392b", "BYD"],
       [["dacia", "דאציה"], "dacia", "#1c3d6b", "Dacia"],
@@ -3334,7 +3335,7 @@
     var inApp = !!window.AndroidAPI || params.has('appv');
     if (!inApp) return;
     var installed = parseInt(params.get('appv'), 10) || 0;
-    fetch('/api/app-version', { cache: 'no-store' })
+    fetch((typeof API_BASE !== 'undefined' ? API_BASE : '') + '/api/app-version', { cache: 'no-store' })
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (d) {
         if (!d || !d.latest || installed >= d.latest) return;
