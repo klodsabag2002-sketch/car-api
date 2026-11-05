@@ -1288,7 +1288,7 @@
 
   /* ================= מותגים ================= */
   function findBrand(manufacturer, model) {
-    const raw = ((manufacturer || '') + ' ' + (model || '')).toLowerCase();
+    const raw = ((manufacturer || '') + ' ' + (model || '')).toLowerCase().replace(/[\u05F3\u05F4\u2018\u2019\u00B4`]/g, "'");
     const rules = [
       [["cupra", "קופרה"], "cupra", "#8c6a3d", "Cupra"],
       [["morgan", "מורגן"], "morgan", "#0f4d2e", "Morgan"],
@@ -1311,7 +1311,7 @@
       [["aston martin", "אסטון מרטין"], "aston martin", "#111", "Aston Martin"],
       [["hummer", "האמר", "המר"], "hummer", "#c00", "Hummer"],
       [["can-am", "can am", "קן אם", "קאן אם", "קנאם", "ryker"], "can am", "#f5a623", "Can-Am"],
-      [["gmc", "ג'י אמ סי", "ג'י.אם.סי"], "gmc", "#c00", "GMC"],
+      [["gmc", "ג'י אמ סי", "ג'י.אם.סי", "ג'י.אמ.סי", "ג'י אמ סי ארה"], "gmc", "#c00", "GMC"],
       [["jac", "ג'ק"], "jac", "#1c4f9c", "JAC"],
       [["jaecoo", "גאקו"], "jaecoo", "#222", "Jaecoo"],
       [["bentley", "בנטלי"], "bentley", "#2c3e50", "Bentley"],
@@ -1365,7 +1365,7 @@
       [["citroen", "סיטרואן"], "citroen", "#c0392b", "Citroen"],
       [["polestar", "פולאסטר"], "polestar", "#111", "Polestar"],
       [["skoda", "סקודה"], "skoda", "#3c8c3c", "Skoda"],
-      [["skywell", "סקייוול"], "skywell", "#1c4f9c", "Skywell"],
+      [["skywell", "סקייוול", "סקיוול"], "skywell", "#1c4f9c", "Skywell"],
       [["seres", "סרס"], "seres", "#222", "Seres"],
       [["foton", "פוטון"], "foton", "#1c4f9c", "Foton"],
       [["ford", "פורד"], "ford", "#1c4f9c", "Ford"],
@@ -1379,7 +1379,7 @@
       [["cadillac", "קאדילק", "קאדילאק", "קדילק"], "cadillac", "#1c3d6b", "Cadillac"],
       [["kia", "קיה"], "kia", "#b10c1c", "Kia"],
       [["kg mobility", "קי ג'י מוביליט"], "kgm", "#333", "KG Mobility"],
-      [["rolls royce", "רולס רוייס"], "rolls royce", "#111", "Rolls-Royce"],
+      [["rolls royce", "רולס רוייס", "רולס רויס", "רולס רויס אנגל"], "rolls royce", "#111", "Rolls-Royce"],
       [["chevrolet", "שברולט"], "chevrolet", "#c8a000", "Chevrolet"],
       [["renault", "רנו"], "renault", "#e8c200", "Renault"],
       [["מאן", "man "], "man", "#1c3d6b", "MAN"]
