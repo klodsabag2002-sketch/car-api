@@ -637,7 +637,8 @@ app.get('/api/car/:plate', async (req, res) => {
                 testExpiry,
                 testValid: testStatus(testExpiry),
                 ownership: ownershipList.length ? ownershipList[ownershipList.length - 1].type : labelOwnership(car.baalut),
-                owners: ownershipList.length || null,
+                // סוחר לא נחשב ליד: סופרים רק בעלים פרטיים/אחרים
+                owners: (ownershipList.filter(o => !/סוחר/.test(String(o.type))).length) || null,
                 disabled: Boolean(disabledResult?.hasBadge),
                 bodyType, merkav: bodyType,
                 kmSinceTest: history?.kmSinceTest ?? null,
