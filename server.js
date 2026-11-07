@@ -638,7 +638,7 @@ app.get('/api/car/:plate', async (req, res) => {
                 testValid: testStatus(testExpiry),
                 ownership: ownershipList.length ? ownershipList[ownershipList.length - 1].type : labelOwnership(car.baalut),
                 // סוחר לא נחשב ליד: סופרים רק בעלים פרטיים/אחרים
-                owners: (ownershipList.filter(o => !/סוחר/.test(String(o.type))).length) || null,
+                owners: countOwnershipHands(ownershipList) || null,
                 disabled: Boolean(disabledResult?.hasBadge),
                 bodyType, merkav: bodyType,
                 kmSinceTest: history?.kmSinceTest ?? null,
@@ -1113,6 +1113,36 @@ app.get('/api/cancelled/:plate', async (req, res) => {
 // 0 = אין באנר עדכון.
 const APP_LATEST_VERSION = 0;
 const APP_PLAY_URL = 'https://play.google.com/store/apps/details?id=com.lohit.carsearch';
+// יד = בעלות פרטית עם משך זמן (חודש או יותר). סוחר לא נחשב יד, וגם בעלות של 0 חודשים לא נחשבת.
+// החישוב זהה לטבלה באתר: אותו מיון, והמשך הבעלות הוא עד הבעלים הבא (או היום).
+function countOwnershipHands(list) {
+    const parse = (v) => {
+        if (!v) return null;
+        const m = String(v).trim().match(/^(\d{4})(\d{2})$/) || String(v).trim().match(/^(\d{4})-(\d{2})/);
+        if (!m) return null;
+        const y = parseInt(m[1], 10), mo = parseInt(m[2], 10);
+        if (mo < 1 || mo > 12 || y < 1950) return null;
+        return { y, mo };
+    };
+    const now = new Date();
+    const today = { y: now.getFullYear(), mo: now.getMonth() + 1 };
+    const items = list.map(o => ({ type: o.type, p: parse(o.date) }));
+    items.sort((a, b) => {
+        if (!a.p) return 1;
+        if (!b.p) return -1;
+        return a.p.y !== b.p.y ? a.p.y - b.p.y : a.p.mo - b.p.mo;
+    });
+    let hands = 0;
+    items.forEach((it, i) => {
+        if (!it.p || /סוחר/.test(String(it.type))) return;
+        const next = items[i + 1];
+        const end = next && next.p ? next.p : today;
+        const months = (end.y - it.p.y) * 12 + (end.mo - it.p.mo);
+        if (months > 0) hands++;
+    });
+    return hands;
+}
+
 app.get('/api/app-version', (req, res) => {
     res.json({ latest: APP_LATEST_VERSION, url: APP_PLAY_URL });
 });
