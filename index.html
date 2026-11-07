@@ -2875,7 +2875,8 @@
         setupCopyButton(d.chassis);
         setVal('vTireFront', d.tireFront);
         setVal('vTireRear', d.tireRear);
-        setVal('vOwners', d.owners);
+        // פורמט יד: בעלים 1 = יד 1 (00), בעלים 2 = יד 2 (01) וכן הלאה
+        setVal('vOwners', Number(d.owners) > 0 ? 'יד ' + Number(d.owners) + ' (' + String(Number(d.owners) - 1).padStart(2, '0') + ')' : d.owners);
         renderTest(parseDate(d.lastTest), parseDate(d.testExpiry));
 
         $('hero').classList.add('show');
