@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
+const { trackPlate } = require('./plate-tracker');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -457,6 +458,7 @@ app.get('/api/car/:plate', async (req, res) => {
         const car = await fetchCarRecord(plate);
         if (!car) {
             const removedRec = await fetchCancelledRecord(plate);
+            if (removedRec) trackPlate(plate);
             if (removedRec) return res.json({ success: true, data: buildRemovedCarData(plate, removedRec) });
             return res.json({ success: false, message: "המספר אינו קיים במאגר משרד התחבורה" });
         }
@@ -616,6 +618,7 @@ app.get('/api/car/:plate', async (req, res) => {
             note: 'הערכה לפי מבחן מעבדה WLTP ולא לפי נהיגה אמיתית'
         };
 
+        trackPlate(plate);
         res.json({
             success: true,
             data: {
