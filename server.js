@@ -476,6 +476,7 @@ app.get('/api/car/:plate', async (req, res) => {
             return res.json({ success: false, message: "המספר אינו קיים במאגר משרד התחבורה" });
         }
 
+        const liveKmPromise = fetchLiveKm(plate);
         const [row, historyRaw, ownershipList, disabledResult] = await Promise.all([
             findModelRow(car),
             fetchHistoryRecord(plate),
@@ -483,6 +484,7 @@ app.get('/api/car/:plate', async (req, res) => {
             checkDisabled(plate)
         ]);
 
+        const kmLive = await liveKmPromise;
         const importerData = await fetchImporterPriceApi(car, row);
         const history = buildHistory(historyRaw);
 
@@ -660,7 +662,7 @@ app.get('/api/car/:plate', async (req, res) => {
                 kmSinceTest: history?.kmSinceTest ?? null,
                 pollutionGroup: fnum("kvutzat_zihum"),
                 greenScore: fnum("madad_yarok"),
-                technical, equipment, safety, emissions, fuel
+                technical, equipment, safety, emissions, fuel, kmLive
             }
         });
     } catch (error) {
