@@ -598,15 +598,6 @@
   <div id="detailView" class="detail">
     <div id="detailHint" class="detail-hint" data-i18n="backHint">לחיפוש רכב אחר, לחץ על החץ ← למעלה</div>
     <div id="kmLine" class="msg" style="display:none;color:#38bdf8;background:rgba(56,189,248,.10);padding:10px 12px;font-weight:800;"><span id="kmText"></span></div>
-    <div id="kmHistory" style="display:none;margin:10px 0;border:1px solid rgba(56,189,248,.28);border-radius:16px;background:rgba(56,189,248,.05);padding:12px;">
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;">
-        <span id="kmHistBadge" style="font-size:12px;font-weight:700;color:#38bdf8;border:1px solid rgba(56,189,248,.5);border-radius:999px;padding:2px 10px;"></span>
-        <span style="font-weight:800;color:#38bdf8;" data-i18n="kmHistTitle"></span>
-      </div>
-      <div style="font-size:12px;opacity:.7;margin:4px 0 6px;text-align:right;" data-i18n="kmHistSource"></div>
-      <div id="kmHistList"></div>
-    </div>
-
     <div id="bikeResult" class="info-card" style="display:none;"></div>
 
     <div id="tabs" class="tabs">
@@ -654,6 +645,18 @@
 
         <div class="accel-disclaimer" data-i18n="accelDisclaimer">נתוני התאוצה, המהירות המרבית ויחס ההספק-משקל מחושבים לפי מאפייני היצרן ומודל הערכה פיזיקלי, ומשמשים לאינדיקציה בלבד.</div>
         <div class="legal-notice" id="legalNoticeMain"></div>
+
+        <div id="kmHistory" style="display:none;margin:12px 14px;border:1px solid rgba(56,189,248,.28);border-radius:16px;background:rgba(15,23,42,.6);padding:12px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;">
+            <span id="kmHistBadge" style="font-size:12px;font-weight:700;color:#38bdf8;border:1px solid rgba(56,189,248,.5);border-radius:999px;padding:2px 10px;"></span>
+            <span style="font-weight:800;color:#38bdf8;" data-i18n="kmHistTitle"></span>
+          </div>
+          <div style="display:flex;justify-content:flex-end;margin:6px 0 2px;">
+            <span style="font-size:11px;font-weight:700;color:#38bdf8;background:rgba(56,189,248,.12);border-radius:999px;padding:2px 10px;" data-i18n="kmHistTag"></span>
+          </div>
+          <div style="font-size:12px;opacity:.7;margin:4px 0 6px;text-align:right;" data-i18n="kmHistSource"></div>
+          <div id="kmHistList"></div>
+        </div>
 
         <div class="list-card">
           <div class="lrow"><span class="li">🏭</span><span class="ll" data-i18n="fManufacturer">יצרן</span><span class="sp"></span><span class="lv" id="vManufacturer"></span></div>
@@ -996,6 +999,8 @@
     kmHistSource: ['אין דיווחי טסט משנים קודמות · ההיסטוריה מתמלאת מעכשיו', 'No test reports from earlier years · history fills from now on'],
     kmHistCount: ['עדכונים', 'updates'],
     kmHistStart: ['תחילת תיעוד', 'Recording starts'],
+    kmHistTag: ['מהמחשב', 'from PC'],
+    kmHistNow: ['עדכני', 'current'],
     kmHistEmpty: ['ההיסטוריה תתמלא מעכשיו', 'History fills from now on'],
     importer: ['יבואן', 'Importer'],
     unknown: ['לא ידוע', 'Unknown'],
@@ -2856,11 +2861,17 @@
           };
           $('kmHistBadge').textContent = changes.length + ' ' + t('kmHistCount');
           list.textContent = '';
+          if (d.kmLive != null) {
+            const now = new Date();
+            const todayStr = String(now.getDate()).padStart(2, '0') + '.' + String(now.getMonth() + 1).padStart(2, '0') + '.' + now.getFullYear();
+            list.appendChild(mkRow(todayStr, d.kmLive, chipEl(t('kmHistNow'))));
+          }
           if (changes.length === 0) {
-            list.style.cssText = 'text-align:center;padding:10px 0;color:#38bdf8;';
-            list.textContent = t('kmHistEmpty');
+            const msg = document.createElement('div');
+            msg.style.cssText = 'text-align:center;padding:10px 0;color:#38bdf8;';
+            msg.textContent = t('kmHistEmpty');
+            list.appendChild(msg);
           } else {
-            list.style.cssText = '';
             for (let i = changes.length - 1; i >= 0; i--) {
               const c = changes[i];
               const delta = Number(c.newKm) - Number(c.oldKm);
