@@ -390,6 +390,19 @@ async function findModelRow(car) {
     return null;
 }
 
+// ---------- קילומטראז' חי מהמחשב (שרת lookup דרך Tailscale Funnel) ----------
+async function fetchLiveKm(plate) {
+    const base = process.env.LOOKUP_URL, key = process.env.LOOKUP_KEY;
+    if (!base || !key) return null;
+    try {
+        const r = await fetch(`${base}/lookup?plate=${encodeURIComponent(plate)}`,
+            { headers: { 'X-Key': key }, signal: AbortSignal.timeout(3000) });
+        if (!r.ok) return null;
+        const j = await r.json();
+        return j.found && j.km ? Number(j.km) : null;
+    } catch (e) { return null; }
+}
+
 app.get('/', (req, res) => {
     res.status(200).send('Car API is running successfully!');
 });
