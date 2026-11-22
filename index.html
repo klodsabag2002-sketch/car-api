@@ -505,6 +505,32 @@
   html[dir="ltr"] .copy-btn { margin-right: 0; margin-left: 6px; }
   html[dir="ltr"] .bike-kv .v { text-align: right; }
   html[dir="ltr"] .modal-card { direction: ltr; text-align: left; }
+  .kh-card { margin: 12px 14px; border: 1px solid rgba(56,189,248,.28); border-radius: 16px; background: rgba(15,23,42,.6); padding: 12px; }
+  .kh-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .kh-badge { font-size: 12px; font-weight: 700; color: #38bdf8; border: 1px solid rgba(56,189,248,.5); border-radius: 999px; padding: 2px 10px; }
+  .kh-title { font-weight: 800; color: #38bdf8; }
+  .kh-tagrow { display: flex; justify-content: flex-end; margin: 6px 0 2px; }
+  .kh-tag { font-size: 11px; font-weight: 700; color: #38bdf8; background: rgba(56,189,248,.12); border-radius: 999px; padding: 2px 10px; }
+  .kh-src { font-size: 12px; opacity: .75; margin: 4px 0; text-align: right; }
+  .kh-legend { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 11px; opacity: .85; margin: 6px 0; justify-content: flex-end; }
+  .kh-lg { display: inline-flex; align-items: center; gap: 5px; }
+  .kh-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; flex: none; }
+  .kh-warn { border: 1px solid rgba(244,114,182,.5); background: rgba(244,114,182,.10); border-radius: 12px; padding: 10px 12px; margin: 8px 0; }
+  .kh-warn-title { display: flex; align-items: center; gap: 8px; font-weight: 800; color: #f472b6; font-size: 13px; }
+  .kh-warn-body { font-size: 12px; line-height: 1.6; margin-top: 4px; }
+  .kh-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 10px 0; border-top: 1px solid rgba(56,189,248,.15); }
+  .kh-km { font-size: 18px; font-weight: 800; }
+  .kh-date { font-size: 12px; opacity: .7; }
+  .kh-chip { direction: ltr; white-space: nowrap; font-size: 13px; font-weight: 700; border-radius: 999px; padding: 4px 10px; display: inline-block; }
+  .kh-verdict { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; margin-top: 4px; }
+  .kh-pulse { position: relative; display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--c); flex: none; }
+  .kh-pulse::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--c); animation: khRing 1.6s ease-out infinite; }
+  .kh-blink { animation: khBlink 1.2s ease-in-out infinite; }
+  @keyframes khRing { 0% { transform: scale(1); opacity: .7; } 100% { transform: scale(2.8); opacity: 0; } }
+  @keyframes khBlink { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+  @keyframes khIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  .kh-anim { opacity: 0; animation: khIn .45s ease-out forwards; animation-delay: var(--d); }
+  @media (prefers-reduced-motion: reduce) { .kh-anim { opacity: 1; animation: none; } .kh-pulse::after, .kh-blink { animation: none; } }
   html[dir="ltr"] .legal-notice { text-align: left; }
 </style>
 <link rel="stylesheet" href="accessibility.css">
@@ -646,15 +672,24 @@
         <div class="accel-disclaimer" data-i18n="accelDisclaimer">נתוני התאוצה, המהירות המרבית ויחס ההספק-משקל מחושבים לפי מאפייני היצרן ומודל הערכה פיזיקלי, ומשמשים לאינדיקציה בלבד.</div>
         <div class="legal-notice" id="legalNoticeMain"></div>
 
-        <div id="kmHistory" style="display:none;margin:12px 14px;border:1px solid rgba(56,189,248,.28);border-radius:16px;background:rgba(15,23,42,.6);padding:12px;">
-          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;">
-            <span id="kmHistBadge" style="font-size:12px;font-weight:700;color:#38bdf8;border:1px solid rgba(56,189,248,.5);border-radius:999px;padding:2px 10px;"></span>
-            <span style="font-weight:800;color:#38bdf8;" data-i18n="kmHistTitle"></span>
+        <div id="kmHistory" class="kh-card" style="display:none;">
+          <div class="kh-head">
+            <span id="kmHistBadge" class="kh-badge"></span>
+            <span class="kh-title" data-i18n="kmHistTitle"></span>
           </div>
-          <div style="display:flex;justify-content:flex-end;margin:6px 0 2px;">
-            <span style="font-size:11px;font-weight:700;color:#38bdf8;background:rgba(56,189,248,.12);border-radius:999px;padding:2px 10px;" data-i18n="kmHistTag"></span>
+          <div class="kh-tagrow"><span class="kh-tag" data-i18n="kmHistTag"></span></div>
+          <div class="kh-src" data-i18n="kmHistSource"></div>
+          <div class="kh-src" data-i18n="kmHistAvg"></div>
+          <div class="kh-legend">
+            <span class="kh-lg"><span class="kh-dot kh-blink" style="background:#a78bfa;"></span><span data-i18n="kmHistLow"></span></span>
+            <span class="kh-lg"><span class="kh-dot kh-blink" style="background:#fb923c;animation-delay:.4s;"></span><span data-i18n="kmHistMid"></span></span>
+            <span class="kh-lg"><span class="kh-dot kh-blink" style="background:#f87171;animation-delay:.8s;"></span><span data-i18n="kmHistHigh"></span></span>
+            <span class="kh-lg" id="kmHistDropLg" style="display:none;"><span class="kh-dot kh-blink" style="background:#f472b6;animation-delay:1.2s;"></span><span data-i18n="kmHistDrop"></span></span>
           </div>
-          <div style="font-size:12px;opacity:.7;margin:4px 0 6px;text-align:right;" data-i18n="kmHistSource"></div>
+          <div id="kmHistWarn" class="kh-warn" style="display:none;">
+            <div class="kh-warn-title"><span class="kh-pulse" style="--c:#f472b6;"></span><span id="kmHistWarnTitle"></span></div>
+            <div id="kmHistWarnBody" class="kh-warn-body"></div>
+          </div>
           <div id="kmHistList"></div>
         </div>
 
@@ -1001,6 +1036,15 @@
     kmHistStart: ['תחילת תיעוד', 'Recording starts'],
     kmHistTag: ['מהמחשב', 'from PC'],
     kmHistNow: ['עדכני', 'current'],
+    kmHistLow: ['מתחת לממוצע', 'below average'],
+    kmHistMid: ['בממוצע (±10%)', 'about average (±10%)'],
+    kmHistMidV: ['בממוצע', 'about average'],
+    kmHistHigh: ['מעל הממוצע', 'above average'],
+    kmHistDrop: ['ירידה חשודה', 'suspicious drop'],
+    kmHistBefore: ['לפני השינוי הראשון', 'before first change'],
+    kmHistAvg: ['ממוצע ארצי: כ-16,100 ק"מ בשנה לרכב פרטי', 'National average: about 16,100 km a year (private car)'],
+    kmHistWarnTitle: ['נמצאה ירידה בקילומטראז׳ ב-', 'Mileage drop found on '],
+    kmHistWarnBody: ['הק"מ ירד ב-{n} ק"מ, וזה לא צפוי ברכב. ייתכן טעות בנתונים, החלפת מד, או שינוי ידני. כדאי לבדוק את הרכב לפני החלטה.', 'Mileage dropped by {n} km, which is not expected for a car. It may be a data error, an odometer replacement, or a manual change. Check the car before deciding.'],
     kmHistEmpty: ['ההיסטוריה תתמלא מעכשיו', 'History fills from now on'],
     importer: ['יבואן', 'Importer'],
     unknown: ['לא ידוע', 'Unknown'],
@@ -2831,58 +2875,100 @@
           $('kmLine').style.display = 'flex';
         }
         if (Array.isArray(d.kmHistory)) {
-          const list = $('kmHistList');
           const changes = d.kmHistory;
+          const list = $('kmHistList');
           const fmt = n => Number(n).toLocaleString(LOCALE);
           const kmUnit = LOCALE === 'he-IL' ? 'ק"מ' : 'km';
-          const dateOf = s => {
-            const [y, m, dd] = String(s || '').slice(0, 10).split('-');
-            return (y && m && dd) ? dd + '.' + m + '.' + y : String(s || '');
-          };
-          const mkRow = (date, km, chip) => {
+          const AVG_YEAR = 16100;
+          const C = { low: '#a78bfa', mid: '#fb923c', high: '#f87171', drop: '#f472b6', start: '#22c55e', now: '#38bdf8' };
+          const dayOf = s => { const p = String(s || '').slice(0, 10).split('-').map(Number); return p.length === 3 && p[0] ? Date.UTC(p[0], p[1] - 1, p[2]) / 86400000 : null; };
+          const dateOf = s => { const p = String(s || '').slice(0, 10).split('-'); return p.length === 3 && p[0] ? p[2] + '.' + p[1] + '.' + p[0] : String(s || ''); };
+          const now = new Date();
+          const todayStr = String(now.getDate()).padStart(2, '0') + '.' + String(now.getMonth() + 1).padStart(2, '0') + '.' + now.getFullYear();
+          const pulse = color => { const p = document.createElement('span'); p.className = 'kh-pulse'; p.style.setProperty('--c', color); p.setAttribute('aria-hidden', 'true'); return p; };
+          const chipEl = (text, color) => { const c = document.createElement('span'); c.className = 'kh-chip'; c.style.color = color; c.style.background = color + '26'; c.textContent = text; return c; };
+          const mkRow = (o, i) => {
             const row = document.createElement('div');
-            row.style.cssText = 'display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-top:1px solid rgba(56,189,248,.15);';
-            const info = document.createElement('div');
-            const dateEl = document.createElement('div');
-            dateEl.style.cssText = 'font-size:12px;opacity:.7;';
-            dateEl.textContent = date;
-            const kmEl = document.createElement('div');
-            kmEl.style.cssText = 'font-size:18px;font-weight:800;color:#38bdf8;';
-            kmEl.textContent = fmt(km) + ' ' + kmUnit;
-            info.append(dateEl, kmEl);
-            row.append(info, chip);
+            row.className = 'kh-row kh-anim';
+            row.style.setProperty('--d', (i * 0.15) + 's');
+            const left = document.createElement('div');
+            const dEl = document.createElement('div'); dEl.className = 'kh-date'; dEl.textContent = o.date;
+            const kEl = document.createElement('div'); kEl.className = 'kh-km'; kEl.style.color = o.color; kEl.textContent = fmt(o.km) + ' ' + kmUnit;
+            left.append(dEl, kEl);
+            const right = document.createElement('div');
+            if (o.start) {
+              right.style.cssText = 'display:flex;align-items:center;gap:8px;';
+              right.append(pulse(o.color), chipEl(o.chip, o.color));
+            } else {
+              right.append(chipEl(o.chip, o.color));
+              if (o.verdict) {
+                const v = document.createElement('div'); v.className = 'kh-verdict'; v.style.color = o.color;
+                const s = document.createElement('span'); s.textContent = o.verdict;
+                v.append(pulse(o.color), s);
+                right.append(v);
+              }
+            }
+            row.append(left, right);
             return row;
           };
-          const chipEl = (text) => {
-            const c = document.createElement('span');
-            c.style.cssText = 'direction:ltr;white-space:nowrap;font-size:13px;font-weight:700;color:#38bdf8;background:rgba(56,189,248,.15);border-radius:999px;padding:4px 10px;';
-            c.textContent = text;
-            return c;
-          };
-          $('kmHistBadge').textContent = changes.length + ' ' + t('kmHistCount');
-          list.textContent = '';
+          const verdictOf = band => ({ low: t('kmHistLow'), mid: t('kmHistMidV'), high: t('kmHistHigh'), drop: t('kmHistDrop') })[band];
+
+          let warnDate = null, warnAmt = 0;
+          const entries = changes.map((c, i) => {
+            const oldKm = Number(c.oldKm), newKm = Number(c.newKm), delta = newKm - oldKm;
+            const pct = oldKm ? (delta / oldKm * 100).toFixed(1) : null;
+            const days = i > 0 ? dayOf(c.seenAt) - dayOf(changes[i - 1].seenAt) : 0;
+            let band = null;
+            if (delta < 0) band = 'drop';
+            else if (days > 0) {
+              const ratio = (delta / days * 365) / AVG_YEAR;
+              band = ratio < 0.9 ? 'low' : (ratio > 1.1 ? 'high' : 'mid');
+            }
+            if (delta < 0 && warnDate === null) { warnDate = dateOf(c.seenAt); warnAmt = -delta; }
+            const sign = delta >= 0 ? '▲ +' : '▼ −';
+            return { date: dateOf(c.seenAt), km: newKm, band, chip: sign + fmt(Math.abs(delta)) + (pct != null ? ' (' + (delta >= 0 ? '+' : '') + pct + '%)' : '') };
+          });
+
+          const last = changes.length ? Number(changes[changes.length - 1].newKm) : null;
+          const items = [];
           if (d.kmLive != null) {
-            const now = new Date();
-            const todayStr = String(now.getDate()).padStart(2, '0') + '.' + String(now.getMonth() + 1).padStart(2, '0') + '.' + now.getFullYear();
-            list.appendChild(mkRow(todayStr, d.kmLive, chipEl(t('kmHistNow'))));
+            const liveKm = Number(d.kmLive);
+            const dateLabel = todayStr + ' · ' + t('kmHistNow');
+            if (last != null && liveKm < last) {
+              if (warnDate === null) { warnDate = todayStr; warnAmt = last - liveKm; }
+              items.push({ date: dateLabel, km: liveKm, color: C.drop, chip: '▼ −' + fmt(last - liveKm), verdict: t('kmHistDrop') });
+            } else {
+              items.push({ date: dateLabel, km: liveKm, color: C.now, chip: t('kmHistNow') });
+            }
           }
-          if (changes.length === 0) {
+          entries.slice().reverse().forEach(e => {
+            items.push({ date: e.date, km: e.km, color: e.band ? C[e.band] : C.now, chip: e.chip, verdict: e.band ? verdictOf(e.band) : null });
+          });
+          if (changes.length) {
+            items.push({ start: true, date: t('kmHistBefore'), km: changes[0].oldKm, color: C.start, chip: t('kmHistStart') });
+          }
+
+          list.textContent = '';
+          if (items.length === 0) {
             const msg = document.createElement('div');
             msg.style.cssText = 'text-align:center;padding:10px 0;color:#38bdf8;';
             msg.textContent = t('kmHistEmpty');
             list.appendChild(msg);
           } else {
-            for (let i = changes.length - 1; i >= 0; i--) {
-              const c = changes[i];
-              const delta = Number(c.newKm) - Number(c.oldKm);
-              const pct = Number(c.oldKm) ? (delta / Number(c.oldKm) * 100).toFixed(1) : null;
-              const sign = delta >= 0 ? '▲ +' : '▼ ';
-              const text = sign + fmt(Math.abs(delta)) + (pct != null ? ' (' + (delta >= 0 ? '+' : '') + pct + '%)' : '');
-              list.appendChild(mkRow(dateOf(c.seenAt), c.newKm, chipEl(text)));
-            }
-            const first = changes[0];
-            list.appendChild(mkRow(dateOf(first.seenAt), first.oldKm, chipEl(t('kmHistStart'))));
+            items.forEach((o, i) => list.appendChild(mkRow(o, i)));
           }
+
+          const warn = $('kmHistWarn');
+          if (warnDate !== null) {
+            $('kmHistWarnTitle').textContent = t('kmHistWarnTitle') + warnDate;
+            $('kmHistWarnBody').textContent = t('kmHistWarnBody').replace('{n}', fmt(warnAmt));
+            warn.style.display = 'block';
+            $('kmHistDropLg').style.display = 'inline-flex';
+          } else {
+            warn.style.display = 'none';
+            $('kmHistDropLg').style.display = 'none';
+          }
+          $('kmHistBadge').textContent = changes.length + ' ' + t('kmHistCount');
           $('kmHistory').style.display = 'block';
         }
         if (d.importerPrice) {
