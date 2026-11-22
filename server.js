@@ -403,6 +403,18 @@ async function fetchLiveKm(plate) {
     } catch (e) { console.error('[LIVE KM] error', e.name, e.message); return null; }
 }
 
+async function fetchLiveHistory(plate) {
+    const base = process.env.LOOKUP_URL, key = process.env.LOOKUP_KEY;
+    if (!base || !key) return null;
+    try {
+        const r = await fetch(`${base}/history?plate=${encodeURIComponent(plate)}`,
+            { headers: { 'X-Key': key }, signal: AbortSignal.timeout(8000) });
+        if (!r.ok) return null;
+        const j = await r.json();
+        return j.found ? j.changes : [];
+    } catch (e) { return null; }
+}
+
 app.get('/', (req, res) => {
     res.status(200).send('Car API is running successfully!');
 });
@@ -477,6 +489,7 @@ app.get('/api/car/:plate', async (req, res) => {
         }
 
         const liveKmPromise = fetchLiveKm(plate);
+        const liveHistoryPromise = fetchLiveHistory(plate);
         const [row, historyRaw, ownershipList, disabledResult] = await Promise.all([
             findModelRow(car),
             fetchHistoryRecord(plate),
@@ -485,6 +498,7 @@ app.get('/api/car/:plate', async (req, res) => {
         ]);
 
         const kmLive = await liveKmPromise;
+        const kmHistory = await liveHistoryPromise;
         const importerData = await fetchImporterPriceApi(car, row);
         const history = buildHistory(historyRaw);
 
@@ -662,7 +676,7 @@ app.get('/api/car/:plate', async (req, res) => {
                 kmSinceTest: history?.kmSinceTest ?? null,
                 pollutionGroup: fnum("kvutzat_zihum"),
                 greenScore: fnum("madad_yarok"),
-                technical, equipment, safety, emissions, fuel, kmLive
+                technical, equipment, safety, emissions, fuel, kmLive, kmHistory
             }
         });
     } catch (error) {
