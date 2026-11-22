@@ -396,11 +396,11 @@ async function fetchLiveKm(plate) {
     if (!base || !key) return null;
     try {
         const r = await fetch(`${base}/lookup?plate=${encodeURIComponent(plate)}`,
-            { headers: { 'X-Key': key }, signal: AbortSignal.timeout(3000) });
-        if (!r.ok) return null;
+            { headers: { 'X-Key': key }, signal: AbortSignal.timeout(8000) });
+        if (!r.ok) { console.error('[LIVE KM] status', r.status); return null; }
         const j = await r.json();
         return j.found && j.km ? Number(j.km) : null;
-    } catch (e) { return null; }
+    } catch (e) { console.error('[LIVE KM] error', e.name, e.message); return null; }
 }
 
 app.get('/', (req, res) => {
