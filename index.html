@@ -598,7 +598,14 @@
   <div id="detailView" class="detail">
     <div id="detailHint" class="detail-hint" data-i18n="backHint">לחיפוש רכב אחר, לחץ על החץ ← למעלה</div>
     <div id="kmLine" class="msg" style="display:none;color:#38bdf8;background:rgba(56,189,248,.10);padding:10px 12px;font-weight:800;"><span id="kmText"></span></div>
-    <div id="kmHistory" class="msg" style="display:none;color:#38bdf8;background:rgba(56,189,248,.06);padding:10px 12px;"><div style="font-weight:800;margin-bottom:6px;" data-i18n="kmHistTitle"></div><div id="kmHistList"></div></div>
+    <div id="kmHistory" style="display:none;margin:10px 0;border:1px solid rgba(56,189,248,.28);border-radius:16px;background:rgba(56,189,248,.05);padding:12px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;">
+        <span id="kmHistBadge" style="font-size:12px;font-weight:700;color:#38bdf8;border:1px solid rgba(56,189,248,.5);border-radius:999px;padding:2px 10px;"></span>
+        <span style="font-weight:800;color:#38bdf8;" data-i18n="kmHistTitle"></span>
+      </div>
+      <div style="font-size:12px;opacity:.7;margin:4px 0 6px;text-align:right;" data-i18n="kmHistSource"></div>
+      <div id="kmHistList"></div>
+    </div>
 
     <div id="bikeResult" class="info-card" style="display:none;"></div>
 
@@ -985,8 +992,11 @@
     backHint: ['לחיפוש רכב אחר, לחץ על החץ → למעלה', 'To search for another vehicle, tap the ← arrow above'],
     kmSince: ['ק"מ מעודכן מהטסט האחרון', 'km since last test (updated)'],
     kmLive: ['ק"מ נוכחי מהמחשב', 'current km (live from PC)'],
-    kmHistTitle: ['היסטוריית קילומטראז׳ (מהמחשב)', 'Mileage history (from PC)'],
-    kmHistEmpty: ['ההיסטוריה מתחילה מהיום', 'History starts today'],
+    kmHistTitle: ['היסטוריית קילומטראז׳', 'Mileage history'],
+    kmHistSource: ['אין דיווחי טסט משנים קודמות · ההיסטוריה מתמלאת מעכשיו', 'No test reports from earlier years · history fills from now on'],
+    kmHistCount: ['עדכונים', 'updates'],
+    kmHistStart: ['תחילת תיעוד', 'Recording starts'],
+    kmHistEmpty: ['ההיסטוריה תתמלא מעכשיו', 'History fills from now on'],
     importer: ['יבואן', 'Importer'],
     unknown: ['לא ידוע', 'Unknown'],
     menuDuel: ['⚔️ קרב 1-1', '⚔️ 1-on-1 duel'],
@@ -2817,21 +2827,50 @@
         }
         if (Array.isArray(d.kmHistory)) {
           const list = $('kmHistList');
+          const changes = d.kmHistory;
+          const fmt = n => Number(n).toLocaleString(LOCALE);
+          const kmUnit = LOCALE === 'he-IL' ? 'ק"מ' : 'km';
+          const dateOf = s => {
+            const [y, m, dd] = String(s || '').slice(0, 10).split('-');
+            return (y && m && dd) ? dd + '.' + m + '.' + y : String(s || '');
+          };
+          const mkRow = (date, km, chip) => {
+            const row = document.createElement('div');
+            row.style.cssText = 'display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-top:1px solid rgba(56,189,248,.15);';
+            const info = document.createElement('div');
+            const dateEl = document.createElement('div');
+            dateEl.style.cssText = 'font-size:12px;opacity:.7;';
+            dateEl.textContent = date;
+            const kmEl = document.createElement('div');
+            kmEl.style.cssText = 'font-size:18px;font-weight:800;color:#38bdf8;';
+            kmEl.textContent = fmt(km) + ' ' + kmUnit;
+            info.append(dateEl, kmEl);
+            row.append(info, chip);
+            return row;
+          };
+          const chipEl = (text) => {
+            const c = document.createElement('span');
+            c.style.cssText = 'direction:ltr;white-space:nowrap;font-size:13px;font-weight:700;color:#38bdf8;background:rgba(56,189,248,.15);border-radius:999px;padding:4px 10px;';
+            c.textContent = text;
+            return c;
+          };
+          $('kmHistBadge').textContent = changes.length + ' ' + t('kmHistCount');
           list.textContent = '';
-          if (d.kmHistory.length === 0) {
+          if (changes.length === 0) {
+            list.style.cssText = 'text-align:center;padding:10px 0;color:#38bdf8;';
             list.textContent = t('kmHistEmpty');
           } else {
-            d.kmHistory.forEach(c => {
-              const row = document.createElement('div');
-              row.style.cssText = 'display:flex;justify-content:space-between;gap:10px;padding:3px 0;font-weight:600;';
-              const when = document.createElement('span');
-              when.textContent = String(c.seenAt || '').slice(0, 16);
-              const change = document.createElement('span');
-              change.style.direction = 'ltr';
-              change.textContent = Number(c.oldKm).toLocaleString(LOCALE) + ' ← ' + Number(c.newKm).toLocaleString(LOCALE);
-              row.append(when, change);
-              list.appendChild(row);
-            });
+            list.style.cssText = '';
+            for (let i = changes.length - 1; i >= 0; i--) {
+              const c = changes[i];
+              const delta = Number(c.newKm) - Number(c.oldKm);
+              const pct = Number(c.oldKm) ? (delta / Number(c.oldKm) * 100).toFixed(1) : null;
+              const sign = delta >= 0 ? '▲ +' : '▼ ';
+              const text = sign + fmt(Math.abs(delta)) + (pct != null ? ' (' + (delta >= 0 ? '+' : '') + pct + '%)' : '');
+              list.appendChild(mkRow(dateOf(c.seenAt), c.newKm, chipEl(text)));
+            }
+            const first = changes[0];
+            list.appendChild(mkRow(dateOf(first.seenAt), first.oldKm, chipEl(t('kmHistStart'))));
           }
           $('kmHistory').style.display = 'block';
         }
