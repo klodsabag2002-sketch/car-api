@@ -814,7 +814,8 @@ app.get('/api/search/chassis/:chassis', async (req, res) => {
         return res.status(400).json({ success: false, results: [], message: 'מספר שלדה קצר מדי' });
     }
     try {
-        const records = await searchDatastore(CAR_REGISTRY_ID, { misgeret: chassis }, 50);
+        let records = await fetchLocalQuery('registry_full', { misgeret: chassis });
+        if (!records || !records.length) records = await searchDatastore(CAR_REGISTRY_ID, { misgeret: chassis }, 50);
         res.json({ success: true, results: records.map(mapCandidate) });
     } catch (e) {
         console.error('[CHASSIS SEARCH ERROR]', e);
@@ -902,6 +903,8 @@ app.get('/api/bike/:plate', async (req, res) => {
     const plate = req.params.plate.replace(/\D/g, '');
     if (plate.length < 5) return res.json({ success: false, message: 'מספר לא תקין' });
     try {
+        const localBike = await fetchLocalTable('bikes', plate);
+        if (localBike) return res.json({ success: true, data: pickBikeFields(localBike[0]) });
         const filters = encodeURIComponent(JSON.stringify({ mispar_rechev: Number(plate) }));
         const url = `https://data.gov.il/api/3/action/datastore_search?resource_id=${BIKE_REGISTRY_ID}&filters=${filters}&limit=1`;
         const r = await fetch(url);
@@ -947,6 +950,18 @@ app.get('/api/heavy/:plate', async (req, res) => {
     const plate = req.params.plate.replace(/\D/g, '');
     if (plate.length < 5) return res.json({ success: false, message: 'מספר לא תקין' });
     try {
+        const localHeavy = await fetchLocalTable('heavy', plate);
+        if (localHeavy) {
+            const outLocal = {};
+            for (const key of HEAVY_ALLOWED_FIELDS) {
+                const v = localHeavy[0][key];
+                if (v === null || v === undefined) continue;
+                const sv = String(v).trim();
+                if (sv === "" || /^dnf$/i.test(sv)) continue;
+                outLocal[key] = sv;
+            }
+            return res.json({ success: true, data: outLocal });
+        }
         const filters = encodeURIComponent(JSON.stringify({ mispar_rechev: Number(plate) }));
         const url = `https://data.gov.il/api/3/action/datastore_search?resource_id=${HEAVY_REGISTRY_ID}&filters=${filters}&limit=1`;
         const r = await fetch(url);
