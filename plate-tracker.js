@@ -40,4 +40,51 @@ async function trackPlate(plate) {
   }
 }
 
-module.exports = { trackPlate };
+
+const COLOR_FILE = 'plate-colors.json';
+
+async function trackColor(plate, color) {
+  const token = process.env.GITHUB_TOKEN;
+  const p = String(plate || '');
+  if (!token || !/^\d{5,9}$/.test(p) || !['green', 'red'].includes(color)) return;
+
+  const api = `https://api.github.com/repos/${REPO}/contents/${COLOR_FILE}`;
+  const headers = {
+    Authorization: `Bearer ${token}`,
+    Accept: 'application/vnd.github+json',
+    'User-Agent': 'car-api',
+    'X-GitHub-Api-Version': '2022-11-28'
+  };
+  try {
+    for (let attempt = 0; attempt < 3; attempt++) {
+      const getRes = await fetch(api, { headers });
+      let map = {};
+      let sha;
+      if (getRes.ok) {
+        const file = await getRes.json();
+        sha = file.sha;
+        map = JSON.parse(Buffer.from(file.content, 'base64').toString('utf8'));
+      } else if (getRes.status !== 404) {
+        return;
+      }
+      if (map[p] === color) return;
+      map[p] = color;
+      const body = {
+        message: `color ${p} ${color}`,
+        content: Buffer.from(JSON.stringify(map, null, 2) + '\n').toString('base64')
+      };
+      if (sha) body.sha = sha;
+      const putRes = await fetch(api, {
+        method: 'PUT',
+        headers: { ...headers, 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      });
+      if (putRes.ok) return;
+      if (putRes.status !== 409 && putRes.status !== 422) return;
+    }
+  } catch (e) {
+    console.error('[COLOR TRACK ERROR]', e.message);
+  }
+}
+
+module.exports = { trackPlate, trackColor };
