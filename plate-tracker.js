@@ -67,8 +67,9 @@ async function trackColor(plate, color) {
       } else if (getRes.status !== 404) {
         return;
       }
-      if (map[p] === color) return;
-      map[p] = color;
+      const value = color === 'green' ? '🟢 green' : '🔴 red';
+      if (map[p] === value) return;
+      map[p] = value;
       const body = {
         message: `color ${p} ${color}`,
         content: Buffer.from(JSON.stringify(map, null, 2) + '\n').toString('base64')
