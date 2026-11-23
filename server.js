@@ -539,7 +539,9 @@ app.get('/api/car/:plate', async (req, res) => {
         return res.status(400).json({ success: false, message: "מספר רכב לא תקין" });
     }
     try {
-        const car = await fetchCarRecord(plate);
+        const localCar = await fetchLocalTable('registry_full', plate);
+        const car = localCar ? localCar[0] : await fetchCarRecord(plate);
+        const source = localCar ? 'pc' : 'api';
         if (!car) {
             const removedRec = await fetchCancelledRecord(plate);
             if (removedRec) trackPlate(plate);
@@ -711,7 +713,7 @@ app.get('/api/car/:plate', async (req, res) => {
         res.json({
             success: true,
             data: {
-                plate, manufacturer, model, trim, year, transmission,
+                plate, source, manufacturer, model, trim, year, transmission,
                 color: car.zeva_rechev || car.tzeva_rechev || "לא ידוע",
                 chassis: toText(car.misgeret),
                 tireFront: toText(car.zmig_kidmi),
