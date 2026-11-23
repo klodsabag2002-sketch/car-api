@@ -221,7 +221,65 @@ app.use((req, res, next) => {
 const dsCache = new Map();
 const DS_CACHE_TTL_MS = 10 * 60 * 1000;
 
+// ---------- מאגרים מקומיים במחשב (שרת lookup, נתיב /datasets) ----------
+// מזהה מאגר של data.gov.il -> שם הטבלה במחשב
+const LOCAL_TABLE = {
+    "053cea08-09bc-40ec-8f7a-156f0677aff3": "registry_full",
+    "56063a99-8a3e-4ff4-912e-5966c0279bad": "km_history",
+    "bb2355dc-9ec7-4f06-9c3f-3344672171da": "ownership",
+    "c8b9f9c8-4612-4068-934f-d4acd2e3c06e": "disabled",
+    "851ecab1-0622-4dbe-a6c7-f950cf82abf9": "cancelled",
+    "36bf1404-0be4-49d2-82dc-2f1ead4a8b93": "recalls",
+    "03adc637-b6fe-402b-9937-7c3d3afc9140": "personal_import"
+};
+// כל הבקשות לאותו רכב בזמן קצר משתמשות באותה תשובה מהמחשב
+const localCache = new Map();
+const LOCAL_CACHE_MS = 5 * 60 * 1000;   // תשובה מוצלחת: 5 דקות
+const LOCAL_FAIL_MS = 30 * 1000;        // מחשב לא זמין: לא מנסים שוב 30 שניות
+const LOCAL_TIMEOUT_MS = 3000;
+
+async function fetchLocalDatasets(plate) {
+    const base = process.env.LOOKUP_URL, key = process.env.LOOKUP_KEY;
+    if (!base || !key) return null;
+    const hit = localCache.get(plate);
+    if (hit && Date.now() - hit.at < hit.ttl) return hit.data;
+    let data = null;
+    try {
+        const r = await fetch(`${base}/datasets?plate=${encodeURIComponent(plate)}`,
+            { headers: { 'X-Key': key }, signal: AbortSignal.timeout(LOCAL_TIMEOUT_MS) });
+        if (r.ok) {
+            const j = await r.json();
+            data = j.found ? (j.tables || {}) : {};
+        }
+    } catch (e) { data = null; }
+    localCache.set(plate, { at: Date.now(), ttl: data === null ? LOCAL_FAIL_MS : LOCAL_CACHE_MS, data });
+    return data;
+}
+
+// מחזיר את השורות מהמחשב, או null אם אין מה לקחת משם (אז שואלים את מאגר הממשלה)
+async function fetchLocalTable(table, plate) {
+    const tables = await fetchLocalDatasets(plate);
+    if (!tables || !tables[table] || !tables[table].length) return null;
+    return tables[table];
+}
+
+// חיפוש לפי מספר רכב בלבד. חיפושים אחרים (שלדה, דגם, מחירון) נשארים במאגר הממשלה
+function plateFromFilters(f) {
+    const v = f.mispar_rechev ?? f.MISPAR_RECHEV ?? f['MISPAR RECHEV'];
+    if (v === undefined || v === null) return null;
+    const digits = String(v).replace(/\D/g, '');
+    return digits || null;
+}
+
 async function searchDatastore(resourceId, filters, limit = 100, q = "") {
+    // קודם מנסים את המחשב. אם הוא לא זמין, או שאין בו את הרכב, שואלים את מאגר הממשלה כמו קודם
+    const localTable = LOCAL_TABLE[resourceId];
+    const localPlate = (!q && filters) ? plateFromFilters(filters) : null;
+    if (localTable && localPlate) {
+        const localRows = await fetchLocalTable(localTable, localPlate);
+        if (localRows) return localRows.slice(0, limit);
+    }
+
     const f = filters ? `&filters=${encodeURIComponent(JSON.stringify(filters))}` : "";
     const qq = q ? `&q=${encodeURIComponent(q)}` : "";
     const url = `https://data.gov.il/api/3/action/datastore_search?resource_id=${resourceId}${f}${qq}&limit=${limit}`;
