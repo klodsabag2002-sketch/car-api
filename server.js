@@ -263,6 +263,32 @@ async function fetchLocalTable(table, plate) {
     return tables[table];
 }
 
+// חיפוש לפי כמה שדות בטבלה אחת במחשב (מאגר דגמים, מחירון יבואן). מחזיר null אם המחשב לא זמין
+async function fetchLocalQuery(table, filters) {
+    const base = process.env.LOOKUP_URL, key = process.env.LOOKUP_KEY;
+    if (!base || !key) return null;
+    const clean = {};
+    for (const [k, v] of Object.entries(filters)) {
+        if (v === undefined || v === null || String(v) === '') return null;
+        clean[k] = String(v);
+    }
+    const cacheKey = table + '|' + JSON.stringify(clean);
+    const hit = localCache.get(cacheKey);
+    if (hit && Date.now() - hit.at < hit.ttl) return hit.data;
+    let data = null;
+    try {
+        const qs = new URLSearchParams({ table, ...clean }).toString();
+        const r = await fetch(`${base}/query?${qs}`,
+            { headers: { 'X-Key': key }, signal: AbortSignal.timeout(LOCAL_TIMEOUT_MS) });
+        if (r.ok) {
+            const j = await r.json();
+            data = j.found ? (j.rows || []) : [];
+        }
+    } catch (e) { data = null; }
+    localCache.set(cacheKey, { at: Date.now(), ttl: data === null ? LOCAL_FAIL_MS : LOCAL_CACHE_MS, data });
+    return data;
+}
+
 // חיפוש לפי מספר רכב בלבד. חיפושים אחרים (שלדה, דגם, מחירון) נשארים במאגר הממשלה
 function plateFromFilters(f) {
     const v = f.mispar_rechev ?? f.MISPAR_RECHEV ?? f['MISPAR RECHEV'];
@@ -400,7 +426,9 @@ async function fetchImporterPriceApi(car, row) {
             return { importerPrice: null, importerName: null };
         }
 
-        const records = await searchDatastore(IMPORTER_PRICE_ID, { tozeret_cd: tozeretCd, degem_cd: degemCd }, 20);
+        const impFilters = { tozeret_cd: tozeretCd, degem_cd: degemCd };
+        let records = await fetchLocalQuery('importer_prices', impFilters);
+        if (!records || !records.length) records = await searchDatastore(IMPORTER_PRICE_ID, impFilters, 20);
 
         if (records && records.length > 0) {
             const match = records.find(r => !year || Number(r.shnat_yitzur) === year) || records[0];
@@ -430,6 +458,13 @@ function buildHistory(h) {
     };
 }
 
+async function getModelRows(filters) {
+    const local = await fetchLocalQuery('models', filters);
+    if (local && local.length) return local;
+    try { return await searchDatastore(MODELS_ID, filters, 100); }
+    catch (e) { return []; }
+}
+
 async function findModelRow(car) {
     const year = car.shnat_yitzur != null ? Number(car.shnat_yitzur) : null;
     const attempts = [];
@@ -440,7 +475,7 @@ async function findModelRow(car) {
         attempts.push({ degem_nm: String(car.degem_nm), shnat_yitzur: year });
     }
     for (const filters of attempts) {
-        const rows = await searchDatastore(MODELS_ID, filters, 100);
+        const rows = await getModelRows(filters);
         if (rows.length === 0) continue;
         return rows.find(r => toNumber(r.koah_sus) != null && toNumber(r.CO2_WLTP) != null)
             || rows.find(r => toNumber(r.koah_sus) != null)
