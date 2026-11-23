@@ -4,6 +4,7 @@ const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
 const { trackPlate } = require('./plate-tracker');
+const { trackColor } = require('./plate-tracker');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -648,6 +649,7 @@ app.get('/api/car/:plate', async (req, res) => {
         };
 
         trackPlate(plate);
+        trackColor(plate, acceleration ? 'green' : 'red');
         res.json({
             success: true,
             data: {
