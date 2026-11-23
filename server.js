@@ -423,24 +423,29 @@ async function fetchImporterPriceApi(car, row) {
         const year = toNumber(car.shnat_yitzur);
 
         if (tozeretCd == null || degemCd == null) {
-            return { importerPrice: null, importerName: null };
+            return { importerPrice: null, importerName: null, source: 'none' };
         }
 
         const impFilters = { tozeret_cd: tozeretCd, degem_cd: degemCd };
         let records = await fetchLocalQuery('importer_prices', impFilters);
-        if (!records || !records.length) records = await searchDatastore(IMPORTER_PRICE_ID, impFilters, 20);
+        let source = 'pc';
+        if (!records || !records.length) {
+            records = await searchDatastore(IMPORTER_PRICE_ID, impFilters, 20);
+            source = 'api';
+        }
 
         if (records && records.length > 0) {
             const match = records.find(r => !year || Number(r.shnat_yitzur) === year) || records[0];
             return {
                 importerPrice: toNumber(match.mehir) || null,
-                importerName: toText(match.shem_yevuan) || null
+                importerName: toText(match.shem_yevuan) || null,
+                source
             };
         }
     } catch (e) {
         console.error('[IMPORTER API ERROR]', e.message);
     }
-    return { importerPrice: null, importerName: null };
+    return { importerPrice: null, importerName: null, source: 'none' };
 }
 
 function buildHistory(h) {
@@ -460,8 +465,8 @@ function buildHistory(h) {
 
 async function getModelRows(filters) {
     const local = await fetchLocalQuery('models', filters);
-    if (local && local.length) return local;
-    try { return await searchDatastore(MODELS_ID, filters, 100); }
+    if (local && local.length) return local.map(r => ({ ...r, _src: 'pc' }));
+    try { return (await searchDatastore(MODELS_ID, filters, 100)).map(r => ({ ...r, _src: 'api' })); }
     catch (e) { return []; }
 }
 
@@ -743,6 +748,18 @@ app.get('/api/car/:plate', async (req, res) => {
             note: 'הערכה לפי מבחן מעבדה WLTP ולא לפי נהיגה אמיתית'
         };
 
+        // מקור לכל פריט: pc = מהמחשב, api = ממאגר הממשלה, github = קבצים, none = אין נתון
+        const sources = {
+            registry: localCar ? 'pc' : 'api',
+            model: row ? (row._src || 'none') : 'none',
+            importer: importerData.source || 'none',
+            ownership: (await fetchLocalTable('ownership', plate)) ? 'pc' : 'api',
+            history: (await fetchLocalTable('km_history', plate)) ? 'pc' : 'api',
+            disabled: (await fetchLocalTable('disabled', plate)) ? 'pc' : 'api',
+            km: (kmLive !== null && kmLive !== undefined) ? 'pc' : 'none',
+            acceleration: acceleration ? 'github' : 'none'
+        };
+
         trackPlate(plate);
         trackColor(plate, acceleration ? 'green' : 'red');
         res.json({
@@ -773,7 +790,7 @@ app.get('/api/car/:plate', async (req, res) => {
                 kmSinceTest: history?.kmSinceTest ?? null,
                 pollutionGroup: fnum("kvutzat_zihum"),
                 greenScore: fnum("madad_yarok"),
-                technical, equipment, safety, emissions, fuel, kmLive, kmHistory
+                technical, equipment, safety, emissions, fuel, kmLive, kmHistory, sources
             }
         });
     } catch (error) {
