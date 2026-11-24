@@ -680,13 +680,6 @@
           </div>
           <div class="kh-tagrow"><span class="kh-tag" data-i18n="kmHistTag"></span></div>
           <div class="kh-src" data-i18n="kmHistSource"></div>
-          <div class="kh-src" data-i18n="kmHistAvg"></div>
-          <div class="kh-legend">
-            <span class="kh-lg"><span class="kh-dot kh-blink" style="background:#a78bfa;"></span><span data-i18n="kmHistLow"></span></span>
-            <span class="kh-lg"><span class="kh-dot kh-blink" style="background:#fb923c;animation-delay:.4s;"></span><span data-i18n="kmHistMid"></span></span>
-            <span class="kh-lg"><span class="kh-dot kh-blink" style="background:#f87171;animation-delay:.8s;"></span><span data-i18n="kmHistHigh"></span></span>
-            <span class="kh-lg" id="kmHistDropLg" style="display:none;"><span class="kh-dot kh-blink" style="background:#f472b6;animation-delay:1.2s;"></span><span data-i18n="kmHistDrop"></span></span>
-          </div>
           <div id="kmHistWarn" class="kh-warn" style="display:none;">
             <div class="kh-warn-title"><span class="kh-pulse" style="--c:#f472b6;"></span><span id="kmHistWarnTitle"></span></div>
             <div id="kmHistWarnBody" class="kh-warn-body"></div>
@@ -1049,6 +1042,9 @@
     kmHistWarnTitle: ['נמצאה ירידה בקילומטראז׳ ב-', 'Mileage drop found on '],
     kmHistWarnBody: ['הק"מ ירד ב-{n} ק"מ, וזה לא צפוי ברכב. ייתכן טעות בנתונים, החלפת מד, או שינוי ידני. כדאי לבדוק את הרכב לפני החלטה.', 'Mileage dropped by {n} km, which is not expected for a car. It may be a data error, an odometer replacement, or a manual change. Check the car before deciding.'],
     kmHistEmpty: ['ההיסטוריה תתמלא מעכשיו', 'History fills from now on'],
+    kmHistTest: ['טסט', 'Test'],
+    kmHistTestNow: ['טסט עדכני', 'Current test'],
+    kmHistUnknownDate: ['תאריך לא ידוע', 'date unknown'],
     importer: ['יבואן', 'Importer'],
     unknown: ['לא ידוע', 'Unknown'],
     menuDuel: ['⚔️ קרב 1-1', '⚔️ 1-on-1 duel'],
@@ -2935,22 +2931,17 @@
           });
 
           const last = changes.length ? Number(changes[changes.length - 1].newKm) : null;
+          // simple view: טסט 1, טסט 2 ... (km before each change), then טסט עדכני
           const items = [];
+          changes.forEach((c, i) => items.push({ label: t('kmHistTest') + ' ' + (i + 1), km: Number(c.oldKm), date: c.oldTestDt ? dateOf(c.oldTestDt) : t('kmHistUnknownDate') }));
           if (d.kmLive != null) {
             const liveKm = Number(d.kmLive);
-            const dateLabel = todayStr + ' · ' + t('kmHistNow');
             if (last != null && liveKm < last) {
               if (warnDate === null) { warnDate = todayStr; warnAmt = last - liveKm; }
-              items.push({ date: dateLabel, km: liveKm, color: C.drop, chip: '▼ −' + fmt(last - liveKm), verdict: t('kmHistDrop') });
-            } else {
-              items.push({ date: dateLabel, km: liveKm, color: C.now, chip: t('kmHistNow') });
             }
-          }
-          entries.slice().reverse().forEach(e => {
-            items.push({ date: e.date, km: e.km, color: e.band ? C[e.band] : C.neutral, chip: e.chip, verdict: e.band ? verdictOf(e.band) : t('kmHistNoRef') });
-          });
-          if (changes.length) {
-            items.push({ start: true, date: t('kmHistBefore'), km: changes[0].oldKm, color: C.start, chip: t('kmHistStart') });
+            items.push({ label: t('kmHistTestNow'), km: liveKm, date: todayStr, current: true });
+          } else if (last != null) {
+            items.push({ label: t('kmHistTestNow'), km: last, date: changes[changes.length - 1].newTestDt ? dateOf(changes[changes.length - 1].newTestDt) : t('kmHistUnknownDate'), current: true });
           }
 
           list.textContent = '';
@@ -2960,7 +2951,17 @@
             msg.textContent = t('kmHistEmpty');
             list.appendChild(msg);
           } else {
-            items.forEach((o, i) => list.appendChild(mkRow(o, i)));
+            items.forEach((o, i) => {
+              const row = document.createElement('div');
+              row.className = 'kh-row kh-anim';
+              row.style.setProperty('--d', (i * 0.15) + 's');
+              const left = document.createElement('div');
+              const dEl = document.createElement('div'); dEl.className = 'kh-date'; dEl.textContent = o.label + ' · ' + o.date;
+              const kEl = document.createElement('div'); kEl.className = 'kh-km'; kEl.style.color = o.current ? C.now : '#e2e8f0'; kEl.textContent = fmt(o.km) + ' ' + kmUnit;
+              left.append(dEl, kEl);
+              row.append(left);
+              list.appendChild(row);
+            });
           }
 
           const warn = $('kmHistWarn');
@@ -2968,10 +2969,8 @@
             $('kmHistWarnTitle').textContent = t('kmHistWarnTitle') + warnDate;
             $('kmHistWarnBody').textContent = t('kmHistWarnBody').replace('{n}', fmt(warnAmt));
             warn.style.display = 'block';
-            $('kmHistDropLg').style.display = 'inline-flex';
           } else {
             warn.style.display = 'none';
-            $('kmHistDropLg').style.display = 'none';
           }
           $('kmHistBadge').textContent = changes.length + ' ' + t('kmHistCount');
           $('kmHistory').style.display = 'block';
