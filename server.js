@@ -463,6 +463,31 @@ function buildHistory(h) {
     };
 }
 
+// תאריך רישום ראשון: תומך בפורמט ISO ובפורמט dd/mm/yyyy
+function parseRegDate(s) {
+    if (!s) return null;
+    const iso = new Date(s);
+    if (!isNaN(iso)) return iso;
+    const m = /^(\d{1,2})[\/.-](\d{1,2})[\/.-](\d{4})/.exec(s);
+    if (m) return new Date(Number(m[3]), Number(m[2]) - 1, Number(m[1]));
+    return null;
+}
+
+// הודעה לרכב שנרשם לפני פחות מ-3 שנים ואין לו דיווח קילומטראז' מטסט
+function kmNoteFor(history) {
+    if (!history) return null;
+    const first = parseRegDate(history.firstRegistration);
+    if (!first) return null;
+    const threeYearsAgo = new Date();
+    threeYearsAgo.setFullYear(threeYearsAgo.getFullYear() - 3);
+    const underThreeYears = first > threeYearsAgo;
+    const noTestKm = !history.kmSinceTest; // null או 0
+    if (underThreeYears && noTestKm) {
+        return "ברכב חדש בישראל הטסט הראשון נערך רק אחרי 3 שנים, ולכן עד אז אין דיווח קילומטראז' ממאגר הטסטים.";
+    }
+    return null;
+}
+
 async function getModelRows(filters) {
     const local = await fetchLocalQuery('models', filters);
     if (local && local.length) return local.map(r => ({ ...r, _src: 'pc' }));
@@ -790,7 +815,8 @@ app.get('/api/car/:plate', async (req, res) => {
                 kmSinceTest: history?.kmSinceTest ?? null,
                 pollutionGroup: fnum("kvutzat_zihum"),
                 greenScore: fnum("madad_yarok"),
-                technical, equipment, safety, emissions, fuel, kmLive, kmHistory, sources
+                technical, equipment, safety, emissions, fuel, kmLive, kmHistory, sources,
+                kmNote: kmNoteFor(history)
             }
         });
     } catch (error) {
