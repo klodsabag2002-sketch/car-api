@@ -3613,15 +3613,6 @@
     z-index: 2;
   }
 
-  #help-video-modal {
-    position: fixed; inset: 0; z-index: 100000; display: none;
-    align-items: center; justify-content: center; flex-direction: column;
-    background: rgba(4, 10, 20, 0.88); padding: 16px; direction: rtl;
-  }
-  #help-video-modal.open { display: flex; }
-  #help-video-modal video { width: 100%; max-width: 360px; max-height: 70vh; border-radius: 12px; border: 1px solid rgba(56,189,248,.5); background: #000; }
-  #help-video-close { margin-top: 12px; background: #0B192C; color: #F8FAFC; border: 1px solid rgba(56,189,248,.65); border-radius: 10px; padding: 8px 16px; font-size: 14px; font-weight: 700; cursor: pointer; }
-
   #lohit-bot-trigger {
     margin-top: 2px;
     max-width: 82px;
@@ -4015,12 +4006,6 @@
   <button id="lohit-bot-trigger" type="button">עזרה מהירה לחץ כאן</button>
 </div>
 
-<!-- חלון סרטון ההסבר -->
-<div id="help-video-modal" role="dialog" aria-modal="true" aria-label="סרטון הסבר">
-  <video id="help-video" src="help-video.mp4" controls playsinline preload="metadata"></video>
-  <button id="help-video-close" type="button">סגור</button>
-</div>
-
 <!-- חלונית 6 האפשרויות של עזרה מהירה -->
 <div id="lohit-quick-modal" role="dialog" aria-modal="true" aria-label="עזרה מהירה">
   <div class="lohit-modal-card">
@@ -4069,10 +4054,10 @@
         <div class="lohit-action-desc">קריאות שירות פתוחות מהיצרן</div>
       </button>
 
-      <button class="lohit-action-card" type="button" data-lohit-action="help_video">
+      <button class="lohit-action-card" type="button" data-lohit-action="help_demo">
         <div class="lohit-action-icon">🎬</div>
-        <div class="lohit-action-name">סרטון הסבר</div>
-        <div class="lohit-action-desc">צפייה חוזרת בהסבר על האפליקציה</div>
+        <div class="lohit-action-name">דמו</div>
+        <div class="lohit-action-desc">מדריך מלא על הרובוט והאפליקציה</div>
       </button>
     </div>
   </div>
@@ -4395,20 +4380,6 @@
     });
   })();
 
-  /* סרטון הסבר: נפתח מתוך עזרה מהירה וניתן לצפות בו שוב ושוב */
-  const helpVideoModal = document.getElementById('help-video-modal');
-  const helpVideo = document.getElementById('help-video');
-  function openHelpVideo() {
-    helpVideoModal.classList.add('open');
-    try { helpVideo.currentTime = 0; helpVideo.play().catch(() => {}); } catch (e) {}
-  }
-  function closeHelpVideo() {
-    helpVideo.pause();
-    helpVideoModal.classList.remove('open');
-  }
-  document.getElementById('help-video-close').addEventListener('click', closeHelpVideo);
-  helpVideoModal.addEventListener('click', (e) => { if (e.target === helpVideoModal) closeHelpVideo(); });
-
   /* הסתרה של הרובוט הצף */
   const hideBtn = document.getElementById('lohit-bot-hide');
   hideBtn.addEventListener('click', (e) => {
@@ -4505,7 +4476,7 @@
         case 'recalls': go(() => openRecallsSection()); break;
         case 'warning_lights': window.location.href = 'warning-lights.html'; break;
         case 'reminders': window.location.href = 'reminders.html'; break;
-        case 'help_video': openHelpVideo(); break;
+        case 'help_demo': window.location.href = 'demo.html'; break;
       }
 
       // ניווט פנימי בתוך האפליקציה (ללא פתיחת דפדפן חיצוני)
