@@ -3917,7 +3917,7 @@
         <!-- אביזרים מוחזקים בצורה נקייה בלי להסתיר טקסט -->
         <!-- 1. כרטיס רכב דינמי (היד אוחזת בידית התחתונה) -->
         <g id="lbot-prop-card" opacity="0">
-          <line x1="146" y1="82" x2="151" y2="95" stroke="#6B7280" stroke-width="4" stroke-linecap="round"/>
+          <line x1="146" y1="82" x2="151" y2="95" stroke="#6B7280" stroke-width="6" stroke-linecap="round"/>
           <rect x="116" y="42" width="60" height="40" rx="7" fill="#0B192C" stroke="#38BDF8" stroke-width="2"/>
           <text x="146" y="53" text-anchor="middle" fill="#38BDF8" font-size="7" font-weight="800">כרטיס רכב</text>
           <rect x="122" y="57" width="48" height="13" rx="3" fill="#FBBF24"/>
@@ -3929,7 +3929,7 @@
 
         <!-- 2. מצלמה לצייד רכבים (היד אוחזת בידית התחתונה) -->
         <g id="lbot-prop-camera" opacity="0">
-          <line x1="144" y1="82" x2="151" y2="95" stroke="#6B7280" stroke-width="4" stroke-linecap="round"/>
+          <line x1="144" y1="82" x2="151" y2="95" stroke="#6B7280" stroke-width="6" stroke-linecap="round"/>
           <rect x="120" y="50" width="48" height="32" rx="7" fill="#1E293B" stroke="#FBBF24" stroke-width="2"/>
           <rect x="128" y="45" width="14" height="5" rx="2" fill="#FBBF24"/>
           <circle cx="144" cy="66" r="10" fill="#091322" stroke="#38BDF8" stroke-width="2.5"/>
@@ -3940,7 +3940,7 @@
 
         <!-- 3. מגן ריקולים דינמי (היד אוחזת בידית התחתונה) -->
         <g id="lbot-prop-recall" opacity="0">
-          <line x1="146" y1="89" x2="151" y2="95" stroke="#6B7280" stroke-width="4" stroke-linecap="round"/>
+          <line x1="146" y1="89" x2="151" y2="95" stroke="#6B7280" stroke-width="6" stroke-linecap="round"/>
           <path d="M 116 44 L 176 44 L 176 68 Q 146 84 116 68 Z" fill="#0B192C" stroke="#22C55E" stroke-width="2.2"/>
           <text x="146" y="55" text-anchor="middle" fill="#94A3B8" font-size="6.5" font-weight="700">בדיקת ריקולים</text>
           <text id="lbot-recall-status" x="146" y="67" text-anchor="middle" fill="#22C55E" font-size="7.2" font-weight="900">0 ריקולים ✓</text>
@@ -3949,14 +3949,14 @@
 
         <!-- 4. תג קרב 1vs1 -->
         <g id="lbot-prop-battle" opacity="0">
-          <line x1="145" y1="78" x2="151" y2="95" stroke="#6B7280" stroke-width="4" stroke-linecap="round"/>
+          <line x1="145" y1="78" x2="151" y2="95" stroke="#6B7280" stroke-width="6" stroke-linecap="round"/>
           <rect x="118" y="48" width="54" height="30" rx="8" fill="#3B0764" stroke="#F43F5E" stroke-width="2"/>
           <text x="145" y="67" text-anchor="middle" fill="#FBBF24" font-size="11" font-weight="900">1vs1</text>
         </g>
 
         <!-- 5. ספר נורות אזהרה -->
         <g id="lbot-prop-book" opacity="0">
-          <line x1="144" y1="84" x2="151" y2="95" stroke="#6B7280" stroke-width="4" stroke-linecap="round"/>
+          <line x1="144" y1="84" x2="151" y2="95" stroke="#6B7280" stroke-width="6" stroke-linecap="round"/>
           <rect x="120" y="50" width="48" height="34" rx="5" fill="#1E3A8A" stroke="#FBBF24" stroke-width="2"/>
           <line x1="144" y1="50" x2="144" y2="84" stroke="#FBBF24" stroke-width="1.8"/>
           <circle cx="132" cy="65" r="5" fill="#FBBF24"/>
@@ -3965,7 +3965,7 @@
 
         <!-- 6. לוח שנה טסט וביטוח -->
         <g id="lbot-prop-calendar" opacity="0">
-          <line x1="144" y1="84" x2="151" y2="95" stroke="#6B7280" stroke-width="4" stroke-linecap="round"/>
+          <line x1="144" y1="84" x2="151" y2="95" stroke="#6B7280" stroke-width="6" stroke-linecap="round"/>
           <rect x="122" y="48" width="44" height="36" rx="6" fill="#F8FAFC" stroke="#38BDF8" stroke-width="2"/>
           <rect x="122" y="48" width="44" height="11" rx="4" fill="#EF4444"/>
           <text x="144" y="75" text-anchor="middle" fill="#16A34A" font-size="13" font-weight="900">✓</text>
@@ -4400,6 +4400,22 @@
       const action = btn.getAttribute('data-lohit-action');
       closeQuickModal();
       runAnimation(action);
+
+      // ניווט אמיתי לפי הפונקציות הקיימות באפליקציה
+      const go = (fn) => { try { fn(); } catch (err) { console.warn('lohit nav', err); } };
+      const hasCar = (typeof currentCarData !== 'undefined') && !!currentCarData;
+      const openTab = (t) => setTimeout(() => {
+        const el = document.querySelector('.tab[data-tab="' + t + '"]');
+        if (el) el.click();
+      }, 60);
+      switch (action) {
+        case 'battle_1v1': go(() => showDuel()); break;
+        case 'car_card': go(() => showSection('card')); break;
+        case 'car_hunter': go(() => showSection('hunter')); break;
+        case 'recalls': go(() => openRecallsSection()); break;
+        case 'warning_lights': go(() => { if (hasCar) { showDetail(); openTab('tech'); } else { showSection('card'); } }); break;
+        case 'reminders': go(() => { if (hasCar) { showDetail(); openTab('general'); } else { showSection('card'); } }); break;
+      }
 
       // ניווט פנימי בתוך האפליקציה (ללא פתיחת דפדפן חיצוני)
       window.dispatchEvent(new CustomEvent('lohit:navigate', {
