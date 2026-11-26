@@ -4413,8 +4413,8 @@
         case 'car_card': go(() => showSection('card')); break;
         case 'car_hunter': go(() => showSection('hunter')); break;
         case 'recalls': go(() => openRecallsSection()); break;
-        case 'warning_lights': go(() => { if (hasCar) { showDetail(); openTab('tech'); } else { showSection('card'); } }); break;
-        case 'reminders': go(() => { if (hasCar) { showDetail(); openTab('general'); } else { showSection('card'); } }); break;
+        case 'warning_lights': window.location.href = 'warning-lights.html'; break;
+        case 'reminders': window.location.href = 'reminders.html'; break;
       }
 
       // ניווט פנימי בתוך האפליקציה (ללא פתיחת דפדפן חיצוני)
