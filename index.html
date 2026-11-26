@@ -19,6 +19,18 @@
     } catch (e) {}
   })();
 </script>
+<script>
+(function () {
+  // מי שנכנס לאפליקציה בפעם הראשונה מועבר פעם אחת לדמו. הסימון נשמר לפני ההפניה, כדי שלא תהיה לולאה
+  try {
+    var inApp = !!window.AndroidAPI || new URLSearchParams(location.search).has('appv');
+    if (!inApp) return;
+    if (localStorage.getItem('appDemoRedirectDone') === '1') return;
+    localStorage.setItem('appDemoRedirectDone', '1');
+    location.replace('demo.html');
+  } catch (e) {}
+})();
+</script>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   .nick-note { font-size:0.85rem; color:#c7d2e0; margin:8px 0 0; }
