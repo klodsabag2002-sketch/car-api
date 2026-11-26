@@ -670,13 +670,14 @@
                     </div>
 
                     <div class="spec-card" id="specCard">
-                      <div class="spec"><div class="sp-ic">⚡</div><div class="sp-lbl">כוח סוס</div><div class="sp-val">300 כ"ס</div></div>
+                      <div class="spec" id="hpSpec"><div class="sp-ic">⚡</div><div class="sp-lbl">כוח סוס</div><div class="sp-val" id="hpVal">300 כ"ס</div></div>
                       <div class="spec"><div class="sp-ic">⏱️</div><div class="sp-lbl">0-100 קמ"ש</div><div class="sp-val">5.7 שנ׳</div></div>
                       <div class="spec"><div class="sp-ic">🚀</div><div class="sp-lbl">מהירות מרבית</div><div class="sp-val">250 קמ"ש</div></div>
                       <div class="spec"><div class="sp-ic">⚖️</div><div class="sp-lbl">הספק-משקל</div><div class="sp-val">6.6 ק"ג/כ"ס</div></div>
                       <div class="spec"><div class="sp-ic">⚙️</div><div class="sp-lbl">נפח מנוע</div><div class="sp-val">1984 סמ"ק</div></div>
                       <div class="spec"><div class="sp-ic">⛽</div><div class="sp-lbl">צריכה משוערת</div><div class="sp-val">13.4 ק"מ/ל׳</div></div>
                     </div>
+                    <div id="hpRevealBtn" class="phev-reveal-btn" style="display:block;"><span class="phev-tag">HEV</span><span id="hpBtnText">לחשיפת ההספק המשולב (מנוע + חשמל)</span></div>
 
                                       <div class="info-card" id="odoCard"><h4>היסטוריית קילומטראז׳ <span style="font-size:13px;color:#38bdf8;border:1px solid #38bdf8;border-radius:999px;padding:1px 8px;margin-right:6px;">0 עדכונים</span></h4>
                     <div style="font-size:13px;color:#cbd5e1;margin:6px 0 10px;">מהמחשב · ההיסטוריה מתמלאת מעכשיו. המערכת בודקת כל יום אם נוספו קילומטרים חדשים למערכת, וזה מגיע ממספר סוגי מקורות.</div>
@@ -1025,7 +1026,7 @@
   async function explain(text) {
     if (skipTour) return;
     say(text);
-    await wait(Math.max(4500, text.length * 120));
+    await wait(Math.min(10000, Math.max(3000, text.length * 60)));
     quiet();
     await wait(300);
   }
@@ -1241,11 +1242,11 @@
     bot.style.display = 'none';
     unlockDemo();
   }
-  function inAppShell() {
-    try { return !!window.AndroidAPI || new URLSearchParams(location.search).has('appv'); } catch (e) { return false; }
-  }
   function markTourSeen() {
     try { localStorage.setItem('botDemoTourSeen', '1'); } catch (e) {}
+  }
+  function inAppShell() {
+    try { return !!window.AndroidAPI || new URLSearchParams(location.search).has('appv'); } catch (e) { return false; }
   }
 
   const tour = [
@@ -1296,6 +1297,21 @@
       await explain('שולחים את הדיווח.');
       await clickEl('#sendReport');
       await wait(400);
+    },
+    async () => {
+      // קופרה לאון עם HEV: הספק משולב מעלה את ההספק ב-100 כ"ס. זו תמונה להדגמה בלבד
+      await moveTo('#hpRevealBtn');
+      await clickEl('#hpRevealBtn');
+      $('hpVal').textContent = '400 כ"ס';
+      $('hpSpec').classList.add('phev-highlight');
+      $('hpRevealBtn').classList.add('active');
+      $('hpBtnText').textContent = 'מוצג הספק משולב: 400 כ"ס (+100 חשמל) - לחץ לחזרה';
+      await explain('זו תמונה להדגמה בלבד, ואין רכב כזה. לא לכל הרכבים יש הספק משולב, כי המערכת עובדת על זה ידנית. נשמח שתעדכנו אותנו מתי חסר, דרך כפתור הדיווח.');
+      $('hpVal').textContent = '300 כ"ס';
+      $('hpSpec').classList.remove('phev-highlight');
+      $('hpRevealBtn').classList.remove('active');
+      $('hpBtnText').textContent = 'לחשיפת ההספק המשולב (מנוע + חשמל)';
+      await moveTo('#heroName');
     },
     async () => {
       await clickEl('.tab[data-tab="tech"]');
