@@ -3595,6 +3595,39 @@
     transform: scale(0.94);
   }
 
+  #lohit-bot-hide {
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(56, 189, 248, 0.7);
+    background: #0B192C;
+    color: #F8FAFC;
+    font-size: 11px;
+    line-height: 1;
+    padding: 0;
+    cursor: pointer;
+    z-index: 2;
+  }
+  #lohit-bot-restore {
+    position: fixed;
+    top: 60px;
+    right: 14px;
+    z-index: 99998;
+    display: none;
+    background: #0B192C;
+    color: #F8FAFC;
+    border: 1px solid rgba(56, 189, 248, 0.65);
+    border-radius: 10px;
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  #lohit-bot-restore.show { display: block; }
+
   #lohit-bot-trigger {
     margin-top: 2px;
     max-width: 82px;
@@ -3792,6 +3825,7 @@
 
 <div id="lohit-bot-wrap" aria-label="עוזר לוחית">
   <div id="lohit-bot-bubble"></div>
+  <button id="lohit-bot-hide" type="button" title="הסתר את הרובוט" aria-label="הסתר את הרובוט">✕</button>
 
   <div id="lohit-bot-avatar" title="גרור להזזה או לחץ לעזרה מהירה">
     <svg id="lohit-bot-svg" viewBox="0 0 180 185" width="64" height="64" overflow="visible">
@@ -3987,6 +4021,7 @@
   <button id="lohit-bot-trigger" type="button">עזרה מהירה לחץ כאן</button>
 </div>
 
+<button id="lohit-bot-restore" type="button">הצג את בוט לוחית</button>
 <!-- חלונית 6 האפשרויות של עזרה מהירה -->
 <div id="lohit-quick-modal" role="dialog" aria-modal="true" aria-label="עזרה מהירה">
   <div class="lohit-modal-card">
@@ -4325,6 +4360,23 @@
       runAnimation(autoPlaylist[idx]);
     }, 25000);
   }
+
+  /* הסתרה והחזרה של הרובוט */
+  const hideBtn = document.getElementById('lohit-bot-hide');
+  const restoreBtn = document.getElementById('lohit-bot-restore');
+  hideBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    wrap.style.display = 'none';
+    restoreBtn.classList.add('show');
+  });
+  restoreBtn.addEventListener('click', () => {
+    wrap.style.display = '';
+    wrap.style.left = '';
+    wrap.style.top = '';
+    wrap.style.right = '14px';
+    wrap.style.bottom = '92px';
+    restoreBtn.classList.remove('show');
+  });
 
   /* גרירה חופשית באצבע ובעכבר על כל המסך */
   let isDragging = false;
