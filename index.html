@@ -4376,6 +4376,13 @@
     fav.setAttribute('aria-label', 'עזרה מהירה');
     fav.addEventListener('click', (e) => {
       e.stopPropagation();
+      if (wrap.style.display === 'none') {
+        wrap.style.display = '';
+        wrap.style.left = '';
+        wrap.style.top = '';
+        wrap.style.right = '14px';
+        wrap.style.bottom = '92px';
+      }
       document.getElementById('lohit-quick-modal').classList.add('open');
     });
   })();
@@ -4476,7 +4483,7 @@
         case 'recalls': go(() => openRecallsSection()); break;
         case 'warning_lights': window.location.href = 'warning-lights.html'; break;
         case 'reminders': window.location.href = 'reminders.html'; break;
-        case 'help_demo': window.location.href = 'demo.html'; break;
+        case 'help_demo': window.location.href = 'demo.html?reset=1'; break;
       }
 
       // ניווט פנימי בתוך האפליקציה (ללא פתיחת דפדפן חיצוני)
