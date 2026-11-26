@@ -3530,5 +3530,941 @@
 })();
 </script>
 <script src="a11y-widget.js" defer></script>
+<!-- ==================== LOHIT FLOATING BOT WIDGET START ==================== -->
+<style>
+  #lohit-bot-wrap {
+    position: fixed;
+    right: 14px;
+    bottom: 92px;
+    z-index: 99998;
+    width: 84px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;
+    direction: rtl;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  #lohit-bot-bubble {
+    position: absolute;
+    bottom: calc(100% + 6px);
+    right: 0;
+    width: 162px;
+    background: rgba(11, 22, 38, 0.96);
+    border: 1px solid rgba(56, 189, 248, 0.55);
+    border-radius: 11px;
+    padding: 6px 8px;
+    color: #F8FAFC;
+    font-size: 10.5px;
+    line-height: 1.35;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(4px) scale(0.95);
+    transition: opacity 0.22s ease, transform 0.22s ease;
+  }
+
+  #lohit-bot-bubble.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  #lohit-bot-bubble.flip-down {
+    bottom: auto;
+    top: calc(100% + 6px);
+  }
+
+  #lohit-bot-avatar {
+    width: 64px;
+    height: 64px;
+    cursor: grab;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.45));
+    transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  #lohit-bot-avatar:active {
+    cursor: grabbing;
+    transform: scale(0.94);
+  }
+
+  #lohit-bot-trigger {
+    margin-top: 2px;
+    max-width: 82px;
+    background: linear-gradient(135deg, #0B192C 0%, #132A4A 100%);
+    border: 1px solid rgba(56, 189, 248, 0.65);
+    border-radius: 10px;
+    padding: 3px 6px;
+    color: #F8FAFC;
+    font-size: 8.5px;
+    font-weight: 700;
+    line-height: 1.15;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(2, 132, 199, 0.35);
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+
+  #lohit-bot-trigger:active {
+    transform: scale(0.93);
+    border-color: #FBBF24;
+  }
+
+  /* חלונית עזרה מהירה */
+  #lohit-quick-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(4, 10, 20, 0.72);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: none;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 14px;
+    direction: rtl;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  #lohit-quick-modal.open {
+    display: flex;
+  }
+
+  .lohit-modal-card {
+    width: 100%;
+    max-width: 390px;
+    background: linear-gradient(180deg, #0F2038 0%, #091322 100%);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 20px;
+    padding: 14px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65);
+    animation: lohitSheetUp 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  @keyframes lohitSheetUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .lohit-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+  }
+
+  .lohit-modal-title {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #F8FAFC;
+    font-size: 13.5px;
+    font-weight: 800;
+  }
+
+  .lohit-badge {
+    background: #FBBF24;
+    color: #091322;
+    font-size: 10.5px;
+    font-weight: 900;
+    padding: 2px 7px;
+    border-radius: 6px;
+  }
+
+  .lohit-close-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    background: rgba(15, 32, 56, 0.9);
+    color: #CBD5E1;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lohit-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px;
+  }
+
+  .lohit-action-card {
+    background: rgba(15, 31, 54, 0.85);
+    border: 1px solid rgba(56, 189, 248, 0.22);
+    border-radius: 13px;
+    padding: 10px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: transform 0.14s ease, border-color 0.14s ease, background 0.14s ease;
+  }
+
+  .lohit-action-card:active {
+    transform: scale(0.95);
+    border-color: #FBBF24;
+    background: rgba(24, 48, 82, 0.95);
+  }
+
+  .lohit-action-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.28);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  .lohit-action-name {
+    color: #F8FAFC;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .lohit-action-desc {
+    color: #94A3B8;
+    font-size: 9.5px;
+    line-height: 1.25;
+  }
+
+  /* אנימציות פנימיות של הבוט */
+  @keyframes lohitIdleFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-3px); }
+  }
+  @keyframes lohitWheelSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  @keyframes lohitWaveArm {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-32deg); }
+    50% { transform: rotate(12deg); }
+    75% { transform: rotate(-28deg); }
+  }
+  @keyframes lohitEngineShake {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(-1.5px, 1px); }
+    50% { transform: translate(1.5px, -1px); }
+    75% { transform: translate(-1px, -1.5px); }
+  }
+  @keyframes lohitSpin3D {
+    0% { transform: rotateY(0deg) scale(1); }
+    50% { transform: rotateY(180deg) scale(1.06); }
+    100% { transform: rotateY(360deg) scale(1); }
+  }
+  @keyframes lohitDance {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-5px) rotate(-7deg); }
+    50% { transform: translateY(0) rotate(0deg); }
+    75% { transform: translateY(-5px) rotate(7deg); }
+  }
+  @keyframes lohitFlashPulse {
+    0%, 100% { opacity: 0; transform: scale(0.4); }
+    50% { opacity: 1; transform: scale(1.35); }
+  }
+
+  .lbot-idle { animation: lohitIdleFloat 2.8s ease-in-out infinite; }
+  .lbot-shake { animation: lohitEngineShake 0.16s linear infinite; }
+  .lbot-spin3d { animation: lohitSpin3D 1.1s ease-in-out; }
+  .lbot-dance { animation: lohitDance 0.55s ease-in-out infinite; }
+  .lbot-wave { transform-origin: 26px 88px; animation: lohitWaveArm 0.75s ease-in-out 3; }
+  .lbot-wheel-fast { transform-box: fill-box; transform-origin: center; animation: lohitWheelSpin 0.45s linear infinite; }
+  .lbot-flash { transform-box: fill-box; transform-origin: center; animation: lohitFlashPulse 0.45s ease-out 2; }
+</style>
+
+<div id="lohit-bot-wrap" aria-label="עוזר לוחית">
+  <div id="lohit-bot-bubble"></div>
+
+  <div id="lohit-bot-avatar" title="גרור להזזה או לחץ לעזרה מהירה">
+    <svg id="lohit-bot-svg" viewBox="0 0 180 185" width="64" height="64" overflow="visible">
+      <defs>
+        <radialGradient id="lbotBodyGrad" cx="38%" cy="30%" r="70%">
+          <stop offset="0%" stop-color="#38BDF8"/>
+          <stop offset="48%" stop-color="#0284C7"/>
+          <stop offset="100%" stop-color="#0B192C"/>
+        </radialGradient>
+        <linearGradient id="lbotVisorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#06101E"/>
+          <stop offset="100%" stop-color="#0F2542"/>
+        </linearGradient>
+        <linearGradient id="lbotCapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#1E3A8A"/>
+          <stop offset="100%" stop-color="#0B192C"/>
+        </linearGradient>
+      </defs>
+
+      <!-- הילת מגן (בטיחות) -->
+      <circle id="lbot-safety-aura" cx="90" cy="95" r="64" fill="none" stroke="#38BDF8" stroke-width="3" stroke-dasharray="10 6" opacity="0"/>
+
+      <!-- זרועות ליפט מוסך -->
+      <g id="lbot-lift-arms" opacity="0">
+        <path d="M 14 155 L 42 155 L 48 142" fill="none" stroke="#EF4444" stroke-width="5" stroke-linecap="round"/>
+        <path d="M 166 155 L 138 155 L 132 142" fill="none" stroke="#EF4444" stroke-width="5" stroke-linecap="round"/>
+      </g>
+
+      <!-- קבוצת גוף ראשית -->
+      <g id="lbot-main-group" class="lbot-idle">
+        <!-- צל רצפה -->
+        <ellipse cx="90" cy="174" rx="36" ry="6" fill="rgba(2, 6, 23, 0.45)"/>
+
+        <!-- רגליים מכניות עם קפיצים וגלגלים -->
+        <g id="lbot-leg-left">
+          <rect x="64" y="133" width="8" height="17" rx="3" fill="#334155"/>
+          <path d="M 62 137 L 74 140 L 62 143 L 74 146" fill="none" stroke="#FBBF24" stroke-width="2" stroke-linecap="round"/>
+          <g id="lbot-wheel-l">
+            <circle cx="68" cy="158" r="13" fill="#0F172A" stroke="#38BDF8" stroke-width="2"/>
+            <circle cx="68" cy="158" r="6.5" fill="#FBBF24"/>
+            <circle cx="68" cy="158" r="2.5" fill="#0F172A"/>
+          </g>
+        </g>
+
+        <g id="lbot-leg-right">
+          <rect x="108" y="133" width="8" height="17" rx="3" fill="#334155"/>
+          <path d="M 106 137 L 118 140 L 106 143 L 118 146" fill="none" stroke="#FBBF24" stroke-width="2" stroke-linecap="round"/>
+          <g id="lbot-wheel-r">
+            <circle cx="112" cy="158" r="13" fill="#0F172A" stroke="#38BDF8" stroke-width="2"/>
+            <circle cx="112" cy="158" r="6.5" fill="#FBBF24"/>
+            <circle cx="112" cy="158" r="2.5" fill="#0F172A"/>
+          </g>
+        </g>
+
+        <!-- ג'ק מוסך להחלפת גלגל -->
+        <g id="lbot-jack" opacity="0">
+          <rect x="100" y="167" width="26" height="5" rx="2" fill="#FBBF24"/>
+          <path d="M 107 167 L 113 156 L 119 167" fill="none" stroke="#F59E0B" stroke-width="3"/>
+        </g>
+
+        <!-- אגזוז צדדי + להבות -->
+        <g id="lbot-exhaust" opacity="0">
+          <rect x="134" y="108" width="14" height="8" rx="2" fill="#475569"/>
+          <path d="M 148 112 Q 165 102 174 112 Q 165 122 148 112 Z" fill="#F97316"/>
+          <path d="M 148 112 Q 159 107 165 112 Q 159 117 148 112 Z" fill="#38BDF8"/>
+        </g>
+
+        <!-- תא מנוע V6 פנימי (נחשף כשהמשקף עולה) -->
+        <g id="lbot-engine-bay" opacity="0">
+          <rect x="52" y="68" width="76" height="44" rx="12" fill="#091322" stroke="#38BDF8" stroke-width="2"/>
+          <rect x="64" y="75" width="52" height="28" rx="6" fill="#475569"/>
+          <rect x="70" y="72" width="10" height="8" rx="2" fill="#EF4444"/>
+          <rect x="85" y="72" width="10" height="8" rx="2" fill="#EF4444"/>
+          <rect x="100" y="72" width="10" height="8" rx="2" fill="#EF4444"/>
+          <circle cx="90" cy="91" r="8" fill="#FBBF24" stroke="#0F172A" stroke-width="2"/>
+          <text x="90" y="94" text-anchor="middle" fill="#0F172A" font-size="7" font-weight="900">V6</text>
+        </g>
+
+        <!-- גוף כדורי ראשי -->
+        <circle cx="90" cy="92" r="48" fill="url(#lbotBodyGrad)" stroke="#38BDF8" stroke-width="2.5"/>
+        <ellipse cx="74" cy="64" rx="18" ry="8" transform="rotate(-22 74 64)" fill="rgba(255,255,255,0.22)"/>
+
+        <!-- גריל רמקול תחתון -->
+        <g fill="#38BDF8" opacity="0.55">
+          <circle cx="76" cy="119" r="1.7"/><circle cx="83" cy="119" r="1.7"/><circle cx="90" cy="119" r="1.7"/><circle cx="97" cy="119" r="1.7"/><circle cx="104" cy="119" r="1.7"/>
+          <circle cx="79.5" cy="124" r="1.7"/><circle cx="86.5" cy="124" r="1.7"/><circle cx="93.5" cy="124" r="1.7"/><circle cx="100.5" cy="124" r="1.7"/>
+        </g>
+
+        <!-- משקף LED קדמי -->
+        <g id="lbot-visor-group" style="transition: transform 0.35s ease;">
+          <rect x="50" y="71" width="80" height="38" rx="16" fill="url(#lbotVisorGrad)" stroke="#38BDF8" stroke-width="2.2"/>
+          <!-- עיניים רגילות -->
+          <g id="lbot-eyes-normal">
+            <rect x="64" y="83" width="16" height="12" rx="5" fill="#38BDF8"/>
+            <rect x="100" y="83" width="16" height="12" rx="5" fill="#38BDF8"/>
+            <circle cx="69" cy="87" r="2.5" fill="#FFFFFF"/>
+            <circle cx="105" cy="87" r="2.5" fill="#FFFFFF"/>
+          </g>
+          <!-- תצוגת סטטוס LED דינמית על המשקף -->
+          <text id="lbot-visor-text" x="90" y="94" text-anchor="middle" fill="#FBBF24" font-size="11.5" font-weight="900" opacity="0"></text>
+          <!-- פס חיוך LED -->
+          <path id="lbot-mouth" d="M 76 101 Q 90 106 104 101" fill="none" stroke="#FBBF24" stroke-width="2.4" stroke-linecap="round"/>
+        </g>
+
+        <!-- משקפי חיפוש/קריאה -->
+        <g id="lbot-glasses" opacity="0">
+          <rect x="58" y="80" width="26" height="18" rx="5" fill="rgba(56,189,248,0.18)" stroke="#FBBF24" stroke-width="2.5"/>
+          <rect x="96" y="80" width="26" height="18" rx="5" fill="rgba(56,189,248,0.18)" stroke="#FBBF24" stroke-width="2.5"/>
+          <line x1="84" y1="88" x2="96" y2="88" stroke="#FBBF24" stroke-width="2.5"/>
+        </g>
+
+        <!-- כובע מכונאי עם סמל האפליקציה "לוחית" -->
+        <g id="lbot-cap-group" style="transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);">
+          <path d="M 54 52 C 54 27, 126 27, 126 52 Z" fill="url(#lbotCapGrad)" stroke="#38BDF8" stroke-width="2"/>
+          <path d="M 46 52 Q 90 45 134 52 Q 90 58 46 52 Z" fill="#0284C7" stroke="#FBBF24" stroke-width="1.8"/>
+          <!-- סמל לוחית על הכובע -->
+          <rect x="69" y="32" width="42" height="16" rx="5" fill="#091322" stroke="#FBBF24" stroke-width="1.3"/>
+          <text x="93" y="43" text-anchor="middle" fill="#FBBF24" font-size="8.5" font-weight="900">לוחית</text>
+          <circle cx="74" cy="40" r="2.5" fill="none" stroke="#38BDF8" stroke-width="1.2"/>
+          <line x1="72" y1="42" x2="70" y2="44" stroke="#38BDF8" stroke-width="1.2"/>
+        </g>
+
+        <!-- אביזרים מוחזקים בצורה נקייה בלי להסתיר טקסט -->
+        <!-- 1. כרטיס רכב דינמי (היד אוחזת בידית התחתונה) -->
+        <g id="lbot-prop-card" opacity="0">
+          <line x1="146" y1="82" x2="151" y2="95" stroke="#6B7280" stroke-width="4" stroke-linecap="round"/>
+          <rect x="116" y="42" width="60" height="40" rx="7" fill="#0B192C" stroke="#38BDF8" stroke-width="2"/>
+          <text x="146" y="53" text-anchor="middle" fill="#38BDF8" font-size="7" font-weight="800">כרטיס רכב</text>
+          <rect x="122" y="57" width="48" height="13" rx="3" fill="#FBBF24"/>
+          <text id="lbot-card-plate" x="146" y="66.5" text-anchor="middle" fill="#091322" font-size="7.5" font-weight="900">--- -- ---</text>
+          <text x="146" y="78" text-anchor="middle" fill="#22C55E" font-size="7" font-weight="900">מאומת ✓</text>
+          <!-- ידית אחיזה תחתונה -->
+          <rect x="141" y="82" width="10" height="10" rx="2" fill="#475569"/>
+        </g>
+
+        <!-- 2. מצלמה לצייד רכבים (היד אוחזת בידית התחתונה) -->
+        <g id="lbot-prop-camera" opacity="0">
+          <line x1="144" y1="82" x2="151" y2="95" stroke="#6B7280" stroke-width="4" stroke-linecap="round"/>
+          <rect x="120" y="50" width="48" height="32" rx="7" fill="#1E293B" stroke="#FBBF24" stroke-width="2"/>
+          <rect x="128" y="45" width="14" height="5" rx="2" fill="#FBBF24"/>
+          <circle cx="144" cy="66" r="10" fill="#091322" stroke="#38BDF8" stroke-width="2.5"/>
+          <circle cx="144" cy="66" r="4.5" fill="#38BDF8"/>
+          <circle id="lbot-cam-flash" cx="159" cy="56" r="6" fill="#FFFFFF" opacity="0"/>
+          <rect x="139" y="82" width="10" height="10" rx="2" fill="#475569"/>
+        </g>
+
+        <!-- 3. מגן ריקולים דינמי (היד אוחזת בידית התחתונה) -->
+        <g id="lbot-prop-recall" opacity="0">
+          <line x1="146" y1="89" x2="151" y2="95" stroke="#6B7280" stroke-width="4" stroke-linecap="round"/>
+          <path d="M 116 44 L 176 44 L 176 68 Q 146 84 116 68 Z" fill="#0B192C" stroke="#22C55E" stroke-width="2.2"/>
+          <text x="146" y="55" text-anchor="middle" fill="#94A3B8" font-size="6.5" font-weight="700">בדיקת ריקולים</text>
+          <text id="lbot-recall-status" x="146" y="67" text-anchor="middle" fill="#22C55E" font-size="7.2" font-weight="900">0 ריקולים ✓</text>
+          <rect x="141" y="78" width="10" height="11" rx="2" fill="#475569"/>
+        </g>
+
+        <!-- 4. תג קרב 1vs1 -->
+        <g id="lbot-prop-battle" opacity="0">
+          <line x1="145" y1="78" x2="151" y2="95" stroke="#6B7280" stroke-width="4" stroke-linecap="round"/>
+          <rect x="118" y="48" width="54" height="30" rx="8" fill="#3B0764" stroke="#F43F5E" stroke-width="2"/>
+          <text x="145" y="67" text-anchor="middle" fill="#FBBF24" font-size="11" font-weight="900">1vs1</text>
+        </g>
+
+        <!-- 5. ספר נורות אזהרה -->
+        <g id="lbot-prop-book" opacity="0">
+          <line x1="144" y1="84" x2="151" y2="95" stroke="#6B7280" stroke-width="4" stroke-linecap="round"/>
+          <rect x="120" y="50" width="48" height="34" rx="5" fill="#1E3A8A" stroke="#FBBF24" stroke-width="2"/>
+          <line x1="144" y1="50" x2="144" y2="84" stroke="#FBBF24" stroke-width="1.8"/>
+          <circle cx="132" cy="65" r="5" fill="#FBBF24"/>
+          <text x="132" y="68" text-anchor="middle" fill="#091322" font-size="7.5" font-weight="900">!</text>
+        </g>
+
+        <!-- 6. לוח שנה טסט וביטוח -->
+        <g id="lbot-prop-calendar" opacity="0">
+          <line x1="144" y1="84" x2="151" y2="95" stroke="#6B7280" stroke-width="4" stroke-linecap="round"/>
+          <rect x="122" y="48" width="44" height="36" rx="6" fill="#F8FAFC" stroke="#38BDF8" stroke-width="2"/>
+          <rect x="122" y="48" width="44" height="11" rx="4" fill="#EF4444"/>
+          <text x="144" y="75" text-anchor="middle" fill="#16A34A" font-size="13" font-weight="900">✓</text>
+        </g>
+
+        <!-- יד שמאל -->
+        <g id="lbot-arm-left">
+          <rect x="18" y="84" width="22" height="20" rx="9" fill="#0284C7" stroke="#FBBF24" stroke-width="2"/>
+        </g>
+
+        <!-- יד ימין (ממוקמת כך שלעולם לא תסתיר כרטיס, מצלמה או מגן) -->
+        <g id="lbot-arm-right" style="transition: transform 0.25s ease;">
+          <rect x="140" y="84" width="22" height="20" rx="9" fill="#0284C7" stroke="#FBBF24" stroke-width="2"/>
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <button id="lohit-bot-trigger" type="button">עזרה מהירה לחץ כאן</button>
+</div>
+
+<!-- חלונית 6 האפשרויות של עזרה מהירה -->
+<div id="lohit-quick-modal" role="dialog" aria-modal="true" aria-label="עזרה מהירה">
+  <div class="lohit-modal-card">
+    <div class="lohit-modal-header">
+      <div class="lohit-modal-title">
+        <span class="lohit-badge">לוחית</span>
+        <span>עזרה מהירה</span>
+      </div>
+      <button id="lohit-modal-close" class="lohit-close-btn" type="button" aria-label="סגור">✕</button>
+    </div>
+
+    <div class="lohit-actions-grid">
+      <button class="lohit-action-card" type="button" data-lohit-action="battle_1v1">
+        <div class="lohit-action-icon">⚔️</div>
+        <div class="lohit-action-name">קרב 1vs1</div>
+        <div class="lohit-action-desc">השוואת ביצועים ראש בראש</div>
+      </button>
+
+      <button class="lohit-action-card" type="button" data-lohit-action="car_card">
+        <div class="lohit-action-icon">🪪</div>
+        <div class="lohit-action-name">כרטיס רכב</div>
+        <div class="lohit-action-desc">תעודת זהות ומפרט הרכב</div>
+      </button>
+
+      <button class="lohit-action-card" type="button" data-lohit-action="car_hunter">
+        <div class="lohit-action-icon">📸</div>
+        <div class="lohit-action-name">צייד רכבים</div>
+        <div class="lohit-action-desc">זיהוי ותפיסת רכבים מיוחדים</div>
+      </button>
+
+      <button class="lohit-action-card" type="button" data-lohit-action="warning_lights">
+        <div class="lohit-action-icon">💡</div>
+        <div class="lohit-action-name">נורות אזהרה</div>
+        <div class="lohit-action-desc">פיענוח נורות בלוח המחוונים</div>
+      </button>
+
+      <button class="lohit-action-card" type="button" data-lohit-action="reminders">
+        <div class="lohit-action-icon">📅</div>
+        <div class="lohit-action-name">תזכורת טסט וביטוח</div>
+        <div class="lohit-action-desc">מעקב תוקף רישוי וטיפולים</div>
+      </button>
+
+      <button class="lohit-action-card" type="button" data-lohit-action="recalls">
+        <div class="lohit-action-icon">📢</div>
+        <div class="lohit-action-name">בדיקת ריקולים</div>
+        <div class="lohit-action-desc">קריאות שירות פתוחות מהיצרן</div>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  if (window.LohitBot) return;
+
+  const wrap = document.getElementById('lohit-bot-wrap');
+  const avatar = document.getElementById('lohit-bot-avatar');
+  const bubble = document.getElementById('lohit-bot-bubble');
+  const triggerBtn = document.getElementById('lohit-bot-trigger');
+  const modal = document.getElementById('lohit-quick-modal');
+  const closeBtn = document.getElementById('lohit-modal-close');
+
+  const mainGroup = document.getElementById('lbot-main-group');
+  const visorGroup = document.getElementById('lbot-visor-group');
+  const eyesNormal = document.getElementById('lbot-eyes-normal');
+  const visorText = document.getElementById('lbot-visor-text');
+  const capGroup = document.getElementById('lbot-cap-group');
+  const armRight = document.getElementById('lbot-arm-right');
+  const wheelL = document.getElementById('lbot-wheel-l');
+  const wheelR = document.getElementById('lbot-wheel-r');
+  const glasses = document.getElementById('lbot-glasses');
+  const safetyAura = document.getElementById('lbot-safety-aura');
+  const liftArms = document.getElementById('lbot-lift-arms');
+  const jackProp = document.getElementById('lbot-jack');
+  const exhaustProp = document.getElementById('lbot-exhaust');
+  const engineBay = document.getElementById('lbot-engine-bay');
+
+  const propCard = document.getElementById('lbot-prop-card');
+  const cardPlateText = document.getElementById('lbot-card-plate');
+  const propCamera = document.getElementById('lbot-prop-camera');
+  const camFlash = document.getElementById('lbot-cam-flash');
+  const propRecall = document.getElementById('lbot-prop-recall');
+  const recallStatusText = document.getElementById('lbot-recall-status');
+  const propBattle = document.getElementById('lbot-prop-battle');
+  const propBook = document.getElementById('lbot-prop-book');
+  const propCalendar = document.getElementById('lbot-prop-calendar');
+
+  let currentPlate = '';
+  let currentRecallText = '';
+  let bubbleTimer = null;
+  let resetTimer = null;
+  let autoLoopTimer = null;
+  let lastAutoIdx = -1;
+
+  function detectLivePlate() {
+    if (currentPlate) return currentPlate;
+    const inputs = document.querySelectorAll('input[type="text"], input[type="tel"], input[type="search"], input:not([type])');
+    for (const inp of inputs) {
+      const val = (inp.value || '').trim();
+      const digits = val.replace(/\D/g, '');
+      if (digits.length >= 7 && digits.length <= 8) return val;
+    }
+    const bodyMatch = document.body.innerText.match(/\b\d{2,3}-\d{2}-\d{3}\b/);
+    return bodyMatch ? bodyMatch[0] : '';
+  }
+
+  function detectLiveRecall() {
+    if (currentRecallText) return currentRecallText;
+    const txt = document.body.innerText || '';
+    if (/אין ריקולים|0 ריקולים|ללא ריקולים/i.test(txt)) return '0 ריקולים ✓';
+    const match = txt.match(/(\d+)\s*ריקולים/);
+    if (match) return Number(match[1]) === 0 ? '0 ריקולים ✓' : `${match[1]} ריקולים!`;
+    return '0 ריקולים ✓';
+  }
+
+  function positionBubble() {
+    const rect = wrap.getBoundingClientRect();
+    if (rect.top < 110) {
+      bubble.classList.add('flip-down');
+    } else {
+      bubble.classList.remove('flip-down');
+    }
+    if (rect.left < 95) {
+      bubble.style.right = 'auto';
+      bubble.style.left = '0';
+    } else {
+      bubble.style.left = 'auto';
+      bubble.style.right = '0';
+    }
+  }
+
+  function say(text, duration = 4200) {
+    return; /* ללא בועות טקסט */
+    clearTimeout(bubbleTimer);
+    positionBubble();
+    bubble.textContent = text;
+    bubble.classList.add('visible');
+    bubbleTimer = setTimeout(() => {
+      bubble.classList.remove('visible');
+    }, duration);
+  }
+
+  function resetVisuals() {
+    mainGroup.className.baseVal = 'lbot-idle';
+    visorGroup.style.transform = 'translateY(0px)';
+    eyesNormal.style.opacity = '1';
+    visorText.style.opacity = '0';
+    visorText.textContent = '';
+    capGroup.style.transform = 'translateY(0px) rotate(0deg)';
+    armRight.classList.remove('lbot-wave');
+    armRight.style.transform = 'translate(0px, 0px)';
+    wheelL.classList.remove('lbot-wheel-fast');
+    wheelR.classList.remove('lbot-wheel-fast');
+    glasses.style.opacity = '0';
+    safetyAura.style.opacity = '0';
+    liftArms.style.opacity = '0';
+    jackProp.style.opacity = '0';
+    exhaustProp.style.opacity = '0';
+    engineBay.style.opacity = '0';
+    propCard.style.opacity = '0';
+    propCamera.style.opacity = '0';
+    camFlash.classList.remove('lbot-flash');
+    propRecall.style.opacity = '0';
+    propBattle.style.opacity = '0';
+    propBook.style.opacity = '0';
+    propCalendar.style.opacity = '0';
+  }
+
+  function showVisorLabel(label, color = '#FBBF24') {
+    eyesNormal.style.opacity = '0';
+    visorText.textContent = label;
+    visorText.setAttribute('fill', color);
+    visorText.style.opacity = '1';
+  }
+
+  function runAnimation(type, customMessage) {
+    clearTimeout(resetTimer);
+    resetVisuals();
+
+    const plate = detectLivePlate();
+    const recallRes = detectLiveRecall();
+
+    switch (type) {
+      case 'welcome':
+        armRight.classList.add('lbot-wave');
+        /* ללא בועת טקסט */
+        break;
+
+      case 'battle_1v1':
+        propBattle.style.opacity = '1';
+        armRight.style.transform = 'translate(-4px, 6px)';
+        mainGroup.className.baseVal = 'lbot-shake';
+        showVisorLabel('1vs1', '#F43F5E');
+        say(customMessage || 'קרב 1vs1: משווה כוח סוס ותאוצה ראש בראש!', 4500);
+        break;
+
+      case 'car_card':
+        cardPlateText.textContent = plate || 'הזן מספר';
+        propCard.style.opacity = '1';
+        armRight.style.transform = 'translate(-4px, 8px)';
+        showVisorLabel('ID ✓', '#22C55E');
+        say(customMessage || (plate ? `כרטיס רכב מוכן עבור ${plate}!` : 'כרטיס רכב דיגיטלי מוכן!'), 4500);
+        break;
+
+      case 'car_hunter':
+        propCamera.style.opacity = '1';
+        armRight.style.transform = 'translate(-5px, 8px)';
+        camFlash.classList.add('lbot-flash');
+        showVisorLabel('SNAP!', '#38BDF8');
+        say(customMessage || 'צייד רכבים פעיל! מצלם רכבים נדירים בכביש!', 4500);
+        break;
+
+      case 'warning_lights':
+        propBook.style.opacity = '1';
+        armRight.style.transform = 'translate(-4px, 8px)';
+        glasses.style.opacity = '1';
+        showVisorLabel('INFO !', '#FBBF24');
+        say(customMessage || 'מדריך נורות אזהרה: בוא נבדוק מה הנורה אומרת.', 4500);
+        break;
+
+      case 'reminders':
+        propCalendar.style.opacity = '1';
+        armRight.style.transform = 'translate(-4px, 8px)';
+        showVisorLabel('טסט ✓', '#22C55E');
+        say(customMessage || 'תזכורת טסט וביטוח: עוקב אחרי התוקף בשבילך!', 4500);
+        break;
+
+      case 'recalls':
+        recallStatusText.textContent = recallRes;
+        const hasRecall = !recallRes.includes('0') && !recallRes.includes('אין');
+        recallStatusText.setAttribute('fill', hasRecall ? '#EF4444' : '#22C55E');
+        propRecall.style.opacity = '1';
+        armRight.style.transform = 'translate(-4px, 8px)';
+        showVisorLabel(hasRecall ? 'ריקול!' : 'נקי ✓', hasRecall ? '#EF4444' : '#22C55E');
+        say(customMessage || (plate ? `בדיקת ריקולים ל-${plate}: ${recallRes}` : `תוצאת ריקולים: ${recallRes}`), 5000);
+        break;
+
+      case 'search':
+        glasses.style.opacity = '1';
+        wheelL.classList.add('lbot-wheel-fast');
+        wheelR.classList.add('lbot-wheel-fast');
+        showVisorLabel('סורק...', '#38BDF8');
+        say(customMessage || (plate ? `שולף נתוני משרד התחבורה עבור ${plate}...` : 'מחפש פרטי רכב במאגר...'), 4000);
+        break;
+
+      case 'general':
+        cardPlateText.textContent = plate || 'כללי';
+        propCard.style.opacity = '1';
+        armRight.style.transform = 'translate(-4px, 8px)';
+        say(customMessage || 'לשונית כללי: רישוי, בעלות ונתוני בסיס.', 3800);
+        break;
+
+      case 'specs':
+        visorGroup.style.transform = 'translateY(-24px)';
+        engineBay.style.opacity = '1';
+        glasses.style.opacity = '1';
+        say(customMessage || 'מפרט טכני: בודק נפח מנוע, כ"ס ותאוצה!', 4200);
+        break;
+
+      case 'safety':
+        safetyAura.style.opacity = '1';
+        showVisorLabel('★★★★★', '#FBBF24');
+        say(customMessage || 'בטיחות ואבזור: בודק מערכות הגנה וכריות אוויר.', 4200);
+        break;
+
+      case 'environment':
+        showVisorLabel('ECO 🌿', '#22C55E');
+        say(customMessage || 'נתוני סביבה: פליטת מזהמים וציון ירוק.', 4000);
+        break;
+
+      /* אנימציות מוסך אוטומטיות (כל 25 שניות) */
+      case 'engine_swap':
+        visorGroup.style.transform = 'translateY(-25px)';
+        engineBay.style.opacity = '1';
+        mainGroup.className.baseVal = 'lbot-shake';
+        say('טיפול מוסך: מרכיב מנוע V6 טורבו משופר!', 4200);
+        break;
+
+      case 'tire_change':
+        jackProp.style.opacity = '1';
+        wheelR.classList.add('lbot-wheel-fast');
+        showVisorLabel('36 PSI', '#38BDF8');
+        say('החלפת גלגל ואיזון לחץ אוויר!', 4000);
+        break;
+
+      case 'turbo_exhaust':
+        exhaustProp.style.opacity = '1';
+        mainGroup.className.baseVal = 'lbot-shake';
+        showVisorLabel('TURBO!', '#F97316');
+        say('בדיקת גדישה ואגזוז טורבו!', 4000);
+        break;
+
+      case 'car_lift':
+        liftArms.style.opacity = '1';
+        mainGroup.style.transform = 'translateY(-10px)';
+        showVisorLabel('LIFT OK', '#22C55E');
+        say('מרים על הליפט לבדיקת מרכב תחתון!', 4000);
+        break;
+
+      case 'spin_3d':
+        mainGroup.className.baseVal = 'lbot-spin3d';
+        say('בדיקת 360 מעלות מסביב לרכב!', 3500);
+        break;
+
+      case 'dance':
+        mainGroup.className.baseVal = 'lbot-dance';
+        showVisorLabel('♫ ♪ ♫', '#38BDF8');
+        say('הפסקה קצרה במוסך!', 3500);
+        break;
+    }
+
+    resetTimer = setTimeout(() => {
+      mainGroup.style.transform = '';
+      resetVisuals();
+    }, 4600);
+  }
+
+  const autoPlaylist = [
+    'engine_swap',
+    'tire_change',
+    'turbo_exhaust',
+    'car_lift',
+    'spin_3d',
+    'dance',
+    'specs',
+    'safety'
+  ];
+
+  function startAutoLoop() {
+    clearInterval(autoLoopTimer);
+    autoLoopTimer = setInterval(() => {
+      if (modal.classList.contains('open')) return;
+      let idx = Math.floor(Math.random() * autoPlaylist.length);
+      if (idx === lastAutoIdx) idx = (idx + 1) % autoPlaylist.length;
+      lastAutoIdx = idx;
+      runAnimation(autoPlaylist[idx]);
+    }, 25000);
+  }
+
+  /* גרירה חופשית באצבע ובעכבר על כל המסך */
+  let isDragging = false;
+  let hasMoved = false;
+  let startX = 0, startY = 0, origLeft = 0, origTop = 0;
+
+  function onPointerDown(e) {
+    if (e.target === triggerBtn) return;
+    isDragging = true;
+    hasMoved = false;
+    const rect = wrap.getBoundingClientRect();
+    origLeft = rect.left;
+    origTop = rect.top;
+    startX = e.clientX;
+    startY = e.clientY;
+    wrap.style.right = 'auto';
+    wrap.style.bottom = 'auto';
+    wrap.style.left = origLeft + 'px';
+    wrap.style.top = origTop + 'px';
+    avatar.setPointerCapture(e.pointerId);
+  }
+
+  function onPointerMove(e) {
+    if (!isDragging) return;
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+    if (Math.abs(dx) > 5 || Math.abs(dy) > 5) hasMoved = true;
+    if (!hasMoved) return;
+
+    const maxX = window.innerWidth - wrap.offsetWidth - 4;
+    const maxY = window.innerHeight - wrap.offsetHeight - 4;
+    const nextLeft = Math.max(4, Math.min(maxX, origLeft + dx));
+    const nextTop = Math.max(4, Math.min(maxY, origTop + dy));
+    wrap.style.left = nextLeft + 'px';
+    wrap.style.top = nextTop + 'px';
+    positionBubble();
+  }
+
+  function onPointerUp(e) {
+    if (!isDragging) return;
+    isDragging = false;
+    try { avatar.releasePointerCapture(e.pointerId); } catch (_) {}
+    if (!hasMoved) {
+      openQuickModal();
+    }
+  }
+
+  avatar.addEventListener('pointerdown', onPointerDown);
+  avatar.addEventListener('pointermove', onPointerMove);
+  avatar.addEventListener('pointerup', onPointerUp);
+
+  /* פתיחה וסגירה של עזרה מהירה (ניווט פנימי ללא דפדפן חיצוני) */
+  function openQuickModal() {
+    modal.classList.add('open');
+  }
+
+  function closeQuickModal() {
+    modal.classList.remove('open');
+  }
+
+  triggerBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    openQuickModal();
+  });
+
+  closeBtn.addEventListener('click', closeQuickModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeQuickModal();
+  });
+
+  modal.querySelectorAll('[data-lohit-action]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const action = btn.getAttribute('data-lohit-action');
+      closeQuickModal();
+      runAnimation(action);
+
+      // ניווט פנימי בתוך האפליקציה (ללא פתיחת דפדפן חיצוני)
+      window.dispatchEvent(new CustomEvent('lohit:navigate', {
+        detail: { feature: action, plate: detectLivePlate() }
+      }));
+      if (typeof window.onLohitQuickAction === 'function') {
+        window.onLohitQuickAction(action, detectLivePlate());
+      }
+    });
+  });
+
+  /* זיהוי אוטומטי של לשוניות, חיפושים וריקולים באפליקציה */
+  document.addEventListener('input', (e) => {
+    const val = (e.target && e.target.value || '').trim();
+    const digits = val.replace(/\D/g, '');
+    if (digits.length >= 7 && digits.length <= 8) {
+      currentPlate = val;
+      cardPlateText.textContent = currentPlate;
+    }
+  }, true);
+
+  document.addEventListener('click', (e) => {
+    if (wrap.contains(e.target) || modal.contains(e.target)) return;
+    const el = e.target.closest('button, a, [role="tab"], .tab, li, div');
+    if (!el) return;
+    const label = (el.innerText || el.getAttribute('aria-label') || '').trim();
+    if (!label || label.length > 35) return;
+
+    if (/חפש|חיפוש/i.test(label)) runAnimation('search');
+    else if (/כללי/i.test(label)) runAnimation('general');
+    else if (/מפרט/i.test(label)) runAnimation('specs');
+    else if (/בטיחות/i.test(label)) runAnimation('safety');
+    else if (/סביבה/i.test(label)) runAnimation('environment');
+    else if (/השוואה|1vs1|קרב/i.test(label)) runAnimation('battle_1v1');
+    else if (/ריקול/i.test(label)) runAnimation('recalls');
+    else if (/נורות|אזהרה/i.test(label)) runAnimation('warning_lights');
+    else if (/טסט|ביטוח|תזכורת/i.test(label)) runAnimation('reminders');
+    else if (/צייד/i.test(label)) runAnimation('car_hunter');
+    else if (/כרטיס/i.test(label)) runAnimation('car_card');
+  }, true);
+
+  /* API לחיבור ישיר מהקוד שלך באפליקציה */
+  window.LohitBot = {
+    setCurrentPlate(plate) {
+      currentPlate = (plate || '').trim();
+      cardPlateText.textContent = currentPlate || '--- -- ---';
+    },
+    setRecallResult(text) {
+      currentRecallText = (text || '').trim();
+      if (currentRecallText) recallStatusText.textContent = currentRecallText;
+    },
+    onScreenEnter(screenName, customMessage) {
+      runAnimation(screenName, customMessage);
+    },
+    say
+  };
+
+  /* ברכת שלום בכל כניסה לאפליקציה + הפעלת לולאת 25 שניות */
+  setTimeout(() => runAnimation('welcome'), 450);
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) runAnimation('welcome');
+  });
+  startAutoLoop();
+})();
+</script>
+<!-- ==================== LOHIT FLOATING BOT WIDGET END ==================== -->
 </body>
 </html>
