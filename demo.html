@@ -1474,7 +1474,8 @@
       if (new URLSearchParams(location.search).has('reset')) localStorage.removeItem('botDemoTourSeen');
       seen = localStorage.getItem('botDemoTourSeen') === '1';
     } catch (e) {}
-    if (seen) { hideTourUi(); }
+    // כל כניסה לדמו מפעילה את הסיור מחדש, בלי קשר למה שנראה בעבר
+    setTimeout(() => { run(); }, 600);
   })();
 </script>
 <script>
