@@ -555,6 +555,17 @@
   .tl-km { font-size:20px; font-weight:900; direction:ltr; text-align:right; color:#e2e8f0; }
   .tl-km.now { color:#22c55e; }
   @media (prefers-reduced-motion: reduce) { .tl-now-blink { animation:none; } }
+  .tl-item { display:flex; gap:12px; padding-bottom:18px; animation: tlIn .5s ease both; animation-delay: var(--d, 0s); }
+  .tl-rail { position:relative; width:14px; flex-shrink:0; }
+  .tl-dot { position:absolute; top:4px; left:50%; width:12px; height:12px; margin-left:-6px; border-radius:50%; background:#94a3b8; border:2px solid #0f172a; box-sizing:border-box; z-index:1; }
+  .tl-dot-now { background:#22c55e; animation: tlPulse 1.4s ease-out infinite; }
+  .tl-line { position:absolute; top:16px; bottom:-18px; left:50%; width:2px; margin-left:-1px; background:linear-gradient(#22c55e66,#94a3b855); transform-origin:top; animation: tlDraw .6s ease both; animation-delay: var(--d, 0s); }
+  .tl-body { flex:1; min-width:0; }
+  .tl-head { display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap; }
+  @keyframes tlIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
+  @keyframes tlDraw { from { transform:scaleY(0); } to { transform:scaleY(1); } }
+  @keyframes tlPulse { 0% { box-shadow:0 0 0 0 rgba(34,197,94,.6); } 100% { box-shadow:0 0 0 9px rgba(34,197,94,0); } }
+  @media (prefers-reduced-motion: reduce) { .tl-item, .tl-line, .tl-dot-now { animation:none; } }
 </style>
 <link rel="stylesheet" href="accessibility.css">
 </head>
@@ -2983,36 +2994,62 @@
               if (y && last && yearOf(last.date) === y) byYear[byYear.length - 1] = o;
               else byYear.push(o);
             });
+            // העדכני תמיד למעלה, ואחריו השנים מהחדשה לישנה. ההפרש מוצג בין שורה לשורה שמתחתיה.
             const tl = document.createElement('div');
             tl.className = 'tl-wrap';
-            byYear.forEach((o, i) => {
-              const prev = i > 0 ? byYear[i - 1] : null;
-              if (prev) {
-                const delta = o.km - prev.km;
+            const newestFirst = byYear.slice().reverse();
+            const rows = newestFirst.filter(o => o.current).concat(newestFirst.filter(o => !o.current));
+            rows.forEach((o, i) => {
+              const older = rows[i + 1] || null;
+              const item = document.createElement('div');
+              item.className = 'tl-item';
+              item.style.setProperty('--d', (i * 0.12) + 's');
+              const rail = document.createElement('div');
+              rail.className = 'tl-rail';
+              const dot = document.createElement('span');
+              dot.className = 'tl-dot' + (o.current ? ' tl-dot-now' : '');
+              rail.appendChild(dot);
+              if (older) {
+                const line = document.createElement('span');
+                line.className = 'tl-line';
+                line.style.setProperty('--d', (i * 0.12 + 0.25) + 's');
+                rail.appendChild(line);
+              }
+              const body = document.createElement('div');
+              body.className = 'tl-body';
+              const head = document.createElement('div');
+              head.className = 'tl-head';
+              const chip = document.createElement('span');
+              chip.className = 'tl-chip';
+              chip.textContent = '🏛 ' + t('kmHistTest');
+              head.appendChild(chip);
+              if (o.current) {
+                const nowEl = document.createElement('span');
+                nowEl.className = 'tl-now tl-now-blink';
+                nowEl.textContent = t('kmHistNow');
+                head.appendChild(nowEl);
+              }
+              const dEl = document.createElement('div');
+              dEl.className = 'tl-date';
+              dEl.textContent = yearOf(o.date) || o.date;
+              head.appendChild(dEl);
+              const kEl = document.createElement('div');
+              kEl.className = 'tl-km' + (o.current ? ' now' : '');
+              kEl.textContent = fmt(o.km) + ' ' + kmUnit;
+              body.append(head, kEl);
+              if (older) {
+                const delta = o.km - older.km;
                 const up = delta >= 0;
-                const col = up ? '#15803d' : '#dc2626';
+                const pct = older.km ? (Math.abs(delta) / older.km * 100).toFixed(1) : null;
                 const dl = document.createElement('div');
                 dl.className = 'tl-delta';
-                dl.style.color = col;
+                dl.style.color = up ? '#15803d' : '#dc2626';
                 dl.style.background = up ? 'rgba(34,197,94,.12)' : 'rgba(239,68,68,.12)';
-                dl.textContent = (up ? '↑ +' : '↓ −') + fmt(Math.abs(delta)) + ' ' + kmUnit + (up ? '' : ' · ' + t('kmHistDrop'));
-                tl.appendChild(dl);
+                dl.textContent = (up ? '↑ +' : '↓ −') + fmt(Math.abs(delta)) + ' ' + kmUnit + (pct != null ? ' (' + pct + '%)' : '') + (up ? '' : ' · ' + t('kmHistDrop'));
+                body.appendChild(dl);
               }
-              const row = document.createElement('div');
-              row.className = 'tl-row';
-              const left = document.createElement('div');
-              const chip = document.createElement('span'); chip.className = 'tl-chip'; chip.textContent = '🏛 ' + t('kmHistTest');
-              left.append(chip);
-              if (o.current) {
-                const now = document.createElement('span'); now.className = 'tl-now tl-now-blink'; now.textContent = t('kmHistNow');
-                left.append(now);
-              }
-              const right = document.createElement('div');
-              const dEl = document.createElement('div'); dEl.className = 'tl-date'; dEl.textContent = yearOf(o.date) || o.date;
-              const kEl = document.createElement('div'); kEl.className = 'tl-km' + (o.current ? ' now' : ''); kEl.textContent = fmt(o.km) + ' ' + kmUnit;
-              right.append(dEl, kEl);
-              row.append(left, right);
-              tl.appendChild(row);
+              item.append(rail, body);
+              tl.appendChild(item);
             });
             list.appendChild(tl);
           }
