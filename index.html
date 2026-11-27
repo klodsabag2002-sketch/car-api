@@ -544,6 +544,17 @@
   .kh-anim { opacity: 0; animation: khIn .45s ease-out forwards; animation-delay: var(--d); }
   @media (prefers-reduced-motion: reduce) { .kh-anim { opacity: 1; animation: none; } .kh-pulse::after, .kh-blink { animation: none; } }
   html[dir="ltr"] .legal-notice { text-align: left; }
+  .tl-wrap { position:relative; padding:4px 0 4px 0; }
+  .tl-delta { display:inline-block; margin:4px 0 4px 0; font-size:12px; font-weight:800; border-radius:999px; padding:3px 10px; direction:ltr; }
+  .tl-row { display:flex; justify-content:space-between; align-items:flex-start; gap:10px; padding:6px 0; }
+  .tl-chip { display:inline-block; font-size:11px; font-weight:800; color:#334155; background:#e2e8f0; border-radius:999px; padding:3px 10px; margin-left:6px; }
+  .tl-now { display:inline-block; font-size:11px; font-weight:900; color:#052e16; background:#22c55e; border-radius:999px; padding:3px 10px; margin-left:6px; }
+  @keyframes tlGreenBlink { 0%,100% { opacity:1; box-shadow:0 0 0 0 rgba(34,197,94,.7); } 50% { opacity:.35; box-shadow:0 0 0 6px rgba(34,197,94,0); } }
+  .tl-now-blink { animation: tlGreenBlink 1s ease-in-out infinite; }
+  .tl-date { font-size:12px; color:#94a3b8; direction:ltr; text-align:right; }
+  .tl-km { font-size:20px; font-weight:900; direction:ltr; text-align:right; color:#e2e8f0; }
+  .tl-km.now { color:#22c55e; }
+  @media (prefers-reduced-motion: reduce) { .tl-now-blink { animation:none; } }
 </style>
 <link rel="stylesheet" href="accessibility.css">
 </head>
@@ -2963,19 +2974,46 @@
             msg.textContent = t('kmHistEmpty');
             list.appendChild(msg);
           } else {
+            const tl = document.createElement('div');
+            tl.className = 'tl-wrap';
             items.forEach((o, i) => {
+              const prev = i > 0 ? items[i - 1] : null;
+              if (prev) {
+                const delta = o.km - prev.km;
+                const up = delta >= 0;
+                const col = up ? '#15803d' : '#dc2626';
+                const dl = document.createElement('div');
+                dl.className = 'tl-delta';
+                dl.style.color = col;
+                dl.style.background = up ? 'rgba(34,197,94,.12)' : 'rgba(239,68,68,.12)';
+                dl.textContent = (up ? '↑ +' : '↓ −') + fmt(Math.abs(delta)) + ' ' + kmUnit + (up ? '' : ' · ' + t('kmHistDrop'));
+                tl.appendChild(dl);
+              }
               const row = document.createElement('div');
-              row.className = 'kh-row kh-anim';
-              row.style.setProperty('--d', (i * 0.15) + 's');
+              row.className = 'tl-row';
               const left = document.createElement('div');
-              const dEl = document.createElement('div'); dEl.className = 'kh-date'; dEl.textContent = o.label + ' · ' + o.date;
-              const kEl = document.createElement('div'); kEl.className = 'kh-km'; kEl.style.color = o.current ? C.now : '#e2e8f0'; kEl.textContent = fmt(o.km) + ' ' + kmUnit;
-              left.append(dEl, kEl);
-              row.append(left);
-              list.appendChild(row);
+              const chip = document.createElement('span'); chip.className = 'tl-chip'; chip.textContent = '🏛 ' + t('kmHistTest');
+              left.append(chip);
+              if (o.current) {
+                const now = document.createElement('span'); now.className = 'tl-now tl-now-blink'; now.textContent = t('kmHistNow');
+                left.append(now);
+              }
+              const right = document.createElement('div');
+              const dEl = document.createElement('div'); dEl.className = 'tl-date'; dEl.textContent = o.date;
+              const kEl = document.createElement('div'); kEl.className = 'tl-km' + (o.current ? ' now' : ''); kEl.textContent = fmt(o.km) + ' ' + kmUnit;
+              right.append(dEl, kEl);
+              row.append(left, right);
+              tl.appendChild(row);
             });
+            list.appendChild(tl);
           }
 
+          if (changes.length === 0 && items.length > 0) {
+            const note = document.createElement('div');
+            note.style.cssText = 'font-size:12px;color:#94a3b8;text-align:center;padding:8px 0 0;';
+            note.textContent = 'עדיין אין מדידה קודמת להשוואה. ההיסטוריה התחילה עכשיו ותתמלא עם הזמן.';
+            list.appendChild(note);
+          }
           const warn = $('kmHistWarn');
           if (warnDate !== null) {
             $('kmHistWarnTitle').textContent = t('kmHistWarnTitle') + warnDate;
