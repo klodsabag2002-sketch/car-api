@@ -2997,6 +2997,10 @@
             // העדכני תמיד למעלה, ואחריו השנים מהחדשה לישנה. ההפרש מוצג בין שורה לשורה שמתחתיה.
             const tl = document.createElement('div');
             tl.className = 'tl-wrap';
+            // מספור לפי סדר כרונולוגי: הראשון הוא הישן ביותר
+            const heOrd = ['ראשון', 'שני', 'שלישי', 'רביעי', 'חמישי', 'שישי', 'שביעי', 'שמיני', 'תשיעי', 'עשירי'];
+            const testName = o => (LOCALE === 'he-IL' && o._n <= heOrd.length) ? 'טסט ' + heOrd[o._n - 1] : t('kmHistTest') + ' ' + o._n;
+            byYear.forEach((o, idx) => { o._n = idx + 1; });
             const newestFirst = byYear.slice().reverse();
             const rows = newestFirst.filter(o => o.current).concat(newestFirst.filter(o => !o.current));
             rows.forEach((o, i) => {
@@ -3021,7 +3025,7 @@
               head.className = 'tl-head';
               const chip = document.createElement('span');
               chip.className = 'tl-chip';
-              chip.textContent = '🏛 ' + t('kmHistTest');
+              chip.textContent = '🏛 ' + testName(o);
               head.appendChild(chip);
               if (o.current) {
                 const nowEl = document.createElement('span');
