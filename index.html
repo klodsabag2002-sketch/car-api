@@ -2974,10 +2974,19 @@
             msg.textContent = t('kmHistEmpty');
             list.appendChild(msg);
           } else {
+            // תצוגה לפי שנים: שורה אחת לכל שנה, והערך האחרון באותה שנה הוא שנשאר
+            const yearOf = s => { const m = String(s || '').match(/(\d{4})/); return m ? m[1] : null; };
+            const byYear = [];
+            items.forEach(o => {
+              const y = yearOf(o.date);
+              const last = byYear[byYear.length - 1];
+              if (y && last && yearOf(last.date) === y) byYear[byYear.length - 1] = o;
+              else byYear.push(o);
+            });
             const tl = document.createElement('div');
             tl.className = 'tl-wrap';
-            items.forEach((o, i) => {
-              const prev = i > 0 ? items[i - 1] : null;
+            byYear.forEach((o, i) => {
+              const prev = i > 0 ? byYear[i - 1] : null;
               if (prev) {
                 const delta = o.km - prev.km;
                 const up = delta >= 0;
@@ -2999,7 +3008,7 @@
                 left.append(now);
               }
               const right = document.createElement('div');
-              const dEl = document.createElement('div'); dEl.className = 'tl-date'; dEl.textContent = o.date;
+              const dEl = document.createElement('div'); dEl.className = 'tl-date'; dEl.textContent = yearOf(o.date) || o.date;
               const kEl = document.createElement('div'); kEl.className = 'tl-km' + (o.current ? ' now' : ''); kEl.textContent = fmt(o.km) + ' ' + kmUnit;
               right.append(dEl, kEl);
               row.append(left, right);
